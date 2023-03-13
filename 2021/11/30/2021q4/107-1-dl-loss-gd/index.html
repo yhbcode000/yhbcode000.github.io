@@ -1,0 +1,972 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>【深度学习】基础 贰：损失函数与梯度下降 | Yang's Harbor</title><meta name="keywords" content="学习,记录,Python,笔记,深度学习"><meta name="author" content="✨YangSier✨,hobart.yang@qq.com"><meta name="copyright" content="✨YangSier✨"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="注：封面画师：新雨林-触站 说明 本页面无手机端适配，强制缩放阅读。 使用纯html格式，保存教学用ppt，添加了部分个人笔记。 目录工作正常，可以跳转。       b{color:rgba(0,0,0,0.75)}                  损失函数与梯度下降 损失函数与梯度下降 损失函数 损失函数的作用 什么是损失函数 梯度下降 常用的损失函数 什么是梯度 梯度下降 导数与偏导数 学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【深度学习】基础 贰：损失函数与梯度下降">
+<meta property="og:url" content="https://discover304.top/2021/11/30/2021q4/107-1-dl-loss-gd/index.html">
+<meta property="og:site_name" content="Yang&#39;s Harbor">
+<meta property="og:description" content="注：封面画师：新雨林-触站 说明 本页面无手机端适配，强制缩放阅读。 使用纯html格式，保存教学用ppt，添加了部分个人笔记。 目录工作正常，可以跳转。       b{color:rgba(0,0,0,0.75)}                  损失函数与梯度下降 损失函数与梯度下降 损失函数 损失函数的作用 什么是损失函数 梯度下降 常用的损失函数 什么是梯度 梯度下降 导数与偏导数 学">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300">
+<meta property="article:published_time" content="2021-11-30T11:43:05.000Z">
+<meta property="article:modified_time" content="2021-12-25T06:48:18.000Z">
+<meta property="article:author" content="✨YangSier✨">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="记录">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="深度学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://discover304.top/2021/11/30/2021q4/107-1-dl-loss-gd/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><meta name="google-site-verification" content="ilqpfk3vkgzDNNikz_V37-DOvRyi5wv4Hoi_eyBqvTg"/><meta name="msvalidate.01" content="49D9A50CCF9744E17274791468EDB517"/><meta name="baidu-site-verification" content="code-V24KosyVh1"/><meta name="360-site-verification" content="bd8859c3d74dfa3e8aeee9db30c94bd2"/><meta name="yandex-verification" content="f28ec9bbd50c56f5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?8030f6052f2fed6a4704d96619f090d6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="stylesheet" href="/css/font.css" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":200,"languages":{"author":"Author: ✨YangSier✨","link":"Link: ","source":"Source: Yang's Harbor","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#ffc910","bgDark":"#02c3f6","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: true
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
+
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-12-25 14:48:18'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Yang's Harbor" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">243</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">88</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">23</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Links</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Articles</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Yang's Harbor</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Links</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Articles</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">【深度学习】基础 贰：损失函数与梯度下降</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-11-30T11:43:05.000Z" title="Created 2021-11-30 19:43:05">2021-11-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-12-25T06:48:18.000Z" title="Updated 2021-12-25 14:48:18">2021-12-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/NoteBook/">NoteBook</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/NoteBook/PythonNote/">PythonNote</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word count:</span><span class="word-count">2.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading time:</span><span>7min</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>注：封面画师：<a target="_blank" rel="noopener" href="https://www.huashi6.com/painter/27243">新雨林-触站</a></p>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
+<li>本页面无手机端适配，强制缩放阅读。</li>
+<li>使用纯html格式，保存教学用ppt，添加了部分个人笔记。</li>
+<li>目录工作正常，可以跳转。</li>
+</ul>
+<style>
+    b{color:rgba(0,0,0,0.75)}
+</style>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft760{font-size:28px;font-family:Times;color:#404040;}
+    .ft761{font-size:21px;font-family:Times;color:#ffffff;}
+    .ft762{font-size:19px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page76-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target076.png" alt=""/>
+<p style="position:absolute;top:35px;left:44px;white-space:nowrap" class="ft760">损失函数与梯度下降</p>
+<p style="position:absolute;top:275px;left:66px;white-space:nowrap" class="ft761">损失函数与梯度下降</p>
+<p style="position:absolute;top:126px;left:454px;white-space:nowrap" class="ft762">损失函数</p>
+<p style="position:absolute;top:165px;left:749px;white-space:nowrap" class="ft762">损失函数的作用</p>
+<p style="position:absolute;top:126px;left:749px;white-space:nowrap" class="ft762">什么是损失函数</p>
+<p style="position:absolute;top:268px;left:454px;white-space:nowrap" class="ft762">梯度下降</p>
+<p style="position:absolute;top:204px;left:749px;white-space:nowrap" class="ft762">常用的损失函数</p>
+<p style="position:absolute;top:268px;left:770px;white-space:nowrap" class="ft762">什么是梯度</p>
+<p style="position:absolute;top:311px;left:780px;white-space:nowrap" class="ft762">梯度下降</p>
+<p style="position:absolute;top:353px;left:759px;white-space:nowrap" class="ft762">导数与偏导数</p>
+<p style="position:absolute;top:394px;left:791px;white-space:nowrap" class="ft762">学习率</p>
+<p style="position:absolute;top:437px;left:738px;white-space:nowrap" class="ft762">梯度递减训练法则</p>
+<p style="position:absolute;top:482px;left:759px;white-space:nowrap" class="ft762">梯度下降算法</p>
+</div>
+</body>
+</html>
+
+
+
+<h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft780{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft781{font-size:46px;font-family:Times;color:#000000;}
+    .ft782{font-size:25px;font-family:Times;color:#000000;}
+    .ft783{font-size:25px;font-family:Times;color:#000099;}
+    .ft784{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page78-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target078.png" alt=""/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft784">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft781">什么是损失函数</p>
+<p style="position:absolute;top:125px;left:66px;white-space:nowrap" class="ft782">•&#160;损失函数（Loss&#160;Function），也有称之为代价函数（Cost&#160;Function），</p>
+<p style="position:absolute;top:124px;left:974px;white-space:nowrap" class="ft783"><b>用</b></p>
+<p style="position:absolute;top:173px;left:107px;white-space:nowrap" class="ft783"><b>来度量预测值和实际值之间的差异。</b></p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft790{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft791{font-size:46px;font-family:Times;color:#000000;}
+    .ft792{font-size:25px;font-family:Times;color:#000000;}
+    .ft793{font-size:25px;font-family:Times;color:#0000ef;}
+    .ft794{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft795{font-size:25px;line-height:48px;font-family:Times;color:#000000;}
+    .ft796{font-size:25px;line-height:48px;font-family:Times;color:#0000ef;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page79-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target079.png" alt=""/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft794">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft791">损失函数的作用</p>
+<p style="position:absolute;top:125px;left:66px;white-space:nowrap" class="ft795">•&#160;度量决策函数f（x）和实际值之间的差异。<br/>•&#160;作为模型性能参考。损失函数值越小，说明预测输出和实际结果（也称期望</p>
+<p style="position:absolute;top:222px;left:107px;white-space:nowrap" class="ft792">输出）之间的差值就越小，也就说明我们构建的模型越好。</p>
+<p style="position:absolute;top:222px;left:809px;white-space:nowrap" class="ft793"><b>学习的过程，就</b></p>
+<p style="position:absolute;top:270px;left:107px;white-space:nowrap" class="ft796"><b>是不断通过训练数据进行预测，不断调整预测输出与实际输出差异，使的损<br/>失值最小的过程。</b></p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft800{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft801{font-size:46px;font-family:Times;color:#252525;}
+    .ft802{font-size:25px;font-family:Times;color:#000000;}
+    .ft803{font-size:25px;font-family:Times;color:#000099;}
+    .ft804{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page80-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target080.png" alt=""/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft804">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft801">常用损失函数</p>
+<p style="position:absolute;top:142px;left:66px;white-space:nowrap" class="ft802">•&#160;均方误差（Mean&#160;square&#160;error）损失函数。均方误差是</p>
+<p style="position:absolute;top:141px;left:777px;white-space:nowrap" class="ft803"><b>回归问题常用的损</b></p>
+<p style="position:absolute;top:190px;left:107px;white-space:nowrap" class="ft803"><b>失函数</b></p>
+<p style="position:absolute;top:190px;left:188px;white-space:nowrap" class="ft802">，它是预测值与目标值之间差值的平方和，其公式和图像如下所示：</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft810{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft811{font-size:46px;font-family:Times;color:#252525;}
+    .ft812{font-size:25px;font-family:Times;color:#000000;}
+    .ft813{font-size:19px;font-family:Times;color:#000000;}
+    .ft814{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft815{font-size:19px;line-height:37px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page81-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target081.png" alt=""/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft814">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft811">常用损失函数（续1）</p>
+<p style="position:absolute;top:109px;left:117px;white-space:nowrap" class="ft812">为什么使用误差的平方</p>
+<p style="position:absolute;top:154px;left:117px;white-space:nowrap" class="ft815">•&#160;曲线的最低点是可导的<br/>•&#160;越接近最低点，曲线的坡度逐渐放缓，有助于通过当前的梯度来判断接近最低点的程</p>
+<p style="position:absolute;top:230px;left:151px;white-space:nowrap" class="ft813">度（是否逐渐减少步长，以免错过最低点）</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft820{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft821{font-size:46px;font-family:Times;color:#252525;}
+    .ft822{font-size:25px;font-family:Times;color:#000000;}
+    .ft823{font-size:25px;font-family:Times;color:#000099;}
+    .ft824{font-size:15px;font-family:Times;color:#000000;}
+    .ft825{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page82-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target082.png" alt=""/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft825">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft821">常用损失函数（续2）</p>
+<p style="position:absolute;top:116px;left:66px;white-space:nowrap" class="ft822">•&#160;交叉熵（Cross&#160;Entropy）。交叉熵是Shannon信息论中一个重要概念，</p>
+<p style="position:absolute;top:165px;left:107px;white-space:nowrap" class="ft822">主要用于</p>
+<p style="position:absolute;top:164px;left:215px;white-space:nowrap" class="ft823"><b>度量两个概率分布间的差异性信息</b></p>
+<p style="position:absolute;top:165px;left:620px;white-space:nowrap" class="ft822">，在机器学习中用来作为分类</p>
+<p style="position:absolute;top:213px;left:107px;white-space:nowrap" class="ft822">问题的损失函数。假设有两个概率分布，t</p>
+<p style="position:absolute;top:229px;left:603px;white-space:nowrap" class="ft824">k</p>
+<p style="position:absolute;top:213px;left:612px;white-space:nowrap" class="ft822">与y</p>
+<p style="position:absolute;top:229px;left:653px;white-space:nowrap" class="ft824">k&#160;</p>
+<p style="position:absolute;top:213px;left:668px;white-space:nowrap" class="ft822">,其交叉熵函数公式及图形</p>
+<p style="position:absolute;top:262px;left:107px;white-space:nowrap" class="ft822">如下所示：</p>
+</div>
+</body>
+</html>
+
+
+
+<h2 id="梯度下降"><a href="#梯度下降" class="headerlink" title="梯度下降"></a>梯度下降</h2><!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft840{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft841{font-size:46px;font-family:Times;color:#252525;}
+    .ft842{font-size:21px;font-family:Times;color:#000000;}
+    .ft843{font-size:21px;font-family:Times;color:#000099;}
+    .ft844{font-size:21px;font-family:Times;color:#ff0000;}
+    .ft845{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft846{font-size:21px;line-height:43px;font-family:Times;color:#000099;}
+    .ft847{font-size:21px;line-height:43px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page84-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target084.png" alt=""/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft845">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft841">什么是梯度</p>
+<p style="position:absolute;top:98px;left:66px;white-space:nowrap" class="ft842">•&#160;梯度（gradient）是一个向量（矢量，有方向），表示</p>
+<p style="position:absolute;top:98px;left:683px;white-space:nowrap" class="ft843"><b>某一函数在该点处的方向导</b></p>
+<p style="position:absolute;top:141px;left:107px;white-space:nowrap" class="ft846"><b>数沿着该方向取得最大值，即函数在该点处沿着该方向（此梯度的方向）变化最快，<br/>变化率最大。</b></p>
+<p style="position:absolute;top:184px;left:251px;white-space:nowrap" class="ft842">损失函数沿梯度相反方向收敛最快（即能最快找到极值点）。当梯度</p>
+<p style="position:absolute;top:228px;left:107px;white-space:nowrap" class="ft847">向量为零（或接近于零），说明损失函数到达一个极小值点，模型准确度达到一个<br/>极大值点。</p>
+<p style="position:absolute;top:357px;left:459px;white-space:nowrap" class="ft844">快</p>
+<p style="position:absolute;top:334px;left:299px;white-space:nowrap" class="ft844">慢</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft850{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft851{font-size:46px;font-family:Times;color:#000000;}
+    .ft852{font-size:25px;font-family:Times;color:#000099;}
+    .ft853{font-size:25px;font-family:Times;color:#000099;}
+    .ft854{font-size:25px;font-family:Times;color:#000000;}
+    .ft855{font-size:21px;font-family:Times;color:#000000;}
+    .ft856{font-size:23px;font-family:Times;color:#000099;}
+    .ft857{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft858{font-size:21px;line-height:43px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page85-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target085.png" alt=""/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft857">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft851">梯度下降</p>
+<p style="position:absolute;top:125px;left:66px;white-space:nowrap" class="ft852">•&#160;<b>通过损失函数，我们将“寻找最优参数”问题，转换为了“寻找损失函数</b></p>
+<p style="position:absolute;top:173px;left:107px;white-space:nowrap" class="ft853"><b>最小值”问题。</b></p>
+<p style="position:absolute;top:173px;left:296px;white-space:nowrap" class="ft854">寻找步骤：</p>
+<p style="position:absolute;top:237px;left:104px;white-space:nowrap" class="ft858">（1）损失是否足够小？如果不是，计算损失函数的梯度。<br/>（2）按梯度的反方向走一小步，以缩小损失。<br/>（3）循环到（1）。</p>
+<p style="position:absolute;top:391px;left:104px;white-space:nowrap" class="ft855">这种按照负梯度不停地调整函数权值的过程就叫作“</p>
+<p style="position:absolute;top:390px;left:656px;white-space:nowrap" class="ft856"><b>梯度下降法</b></p>
+<p style="position:absolute;top:391px;left:776px;white-space:nowrap" class="ft855">”。通过这样的方法，</p>
+<p style="position:absolute;top:435px;left:104px;white-space:nowrap" class="ft858">改变每个神经元与其他神经元的连接权重及自身的偏置，让损失函数的值下降得更快，<br/>进而将值收敛到损失函数的某个极小值。</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft860{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft861{font-size:46px;font-family:Times;color:#252525;}
+    .ft862{font-size:34px;font-family:Times;color:#000000;}
+    .ft863{font-size:25px;font-family:Times;color:#000000;}
+    .ft864{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page86-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target086.png" alt=""/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft864">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft861">导数与偏导数</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft862">•&#160;导数的定义</p>
+<p style="position:absolute;top:174px;left:99px;white-space:nowrap" class="ft863">所谓导数，就是用来分析函数“变化率”的一种度量。其公式为：</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft870{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft871{font-size:46px;font-family:Times;color:#252525;}
+    .ft872{font-size:34px;font-family:Times;color:#000000;}
+    .ft873{font-size:28px;font-family:Times;color:#000000;}
+    .ft874{font-size:17px;font-family:Times;color:#000000;}
+    .ft875{font-size:25px;font-family:Times;color:#000000;}
+    .ft876{font-size:16px;font-family:Times;color:#000000;}
+    .ft877{font-size:21px;font-family:Times;color:#000099;}
+    .ft878{font-size:13px;font-family:Times;color:#000099;}
+    .ft879{font-size:19px;font-family:Times;color:#000000;}
+    .ft8710{font-size:11px;font-family:Times;color:#000000;}
+    .ft8711{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page87-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target087.png" alt=""/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft8711">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft871">导数与偏导数（续1）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft872">•&#160;导数的含义：反映变化的剧烈程度（变化率）</p>
+<p style="position:absolute;top:429px;left:461px;white-space:nowrap" class="ft873"><i>x</i></p>
+<p style="position:absolute;top:229px;left:111px;white-space:nowrap" class="ft873"><i>y</i></p>
+<p style="position:absolute;top:453px;left:295px;white-space:nowrap" class="ft873"><i>x</i></p>
+<p style="position:absolute;top:470px;left:308px;white-space:nowrap" class="ft874"><i>0</i></p>
+<p style="position:absolute;top:453px;left:377px;white-space:nowrap" class="ft873"><i>x</i></p>
+<p style="position:absolute;top:470px;left:391px;white-space:nowrap" class="ft874"><i>1</i></p>
+<p style="position:absolute;top:331px;left:329px;white-space:nowrap" class="ft875"><i>Δx</i></p>
+<p style="position:absolute;top:373px;left:271px;white-space:nowrap" class="ft875"><i>Δy</i></p>
+<p style="position:absolute;top:343px;left:465px;white-space:nowrap" class="ft876">切线斜率</p>
+<p style="position:absolute;top:365px;left:447px;white-space:nowrap" class="ft876">即为该点导数</p>
+<p style="position:absolute;top:406px;left:106px;white-space:nowrap" class="ft873"><i>y</i></p>
+<p style="position:absolute;top:423px;left:119px;white-space:nowrap" class="ft874"><i>0</i></p>
+<p style="position:absolute;top:342px;left:106px;white-space:nowrap" class="ft873"><i>y</i></p>
+<p style="position:absolute;top:359px;left:119px;white-space:nowrap" class="ft874"><i>1</i></p>
+<p style="position:absolute;top:205px;left:650px;white-space:nowrap" class="ft877"><b>例如：y&#160;=&#160;x</b></p>
+<p style="position:absolute;top:207px;left:782px;white-space:nowrap" class="ft878"><b>2</b></p>
+<p style="position:absolute;top:205px;left:792px;white-space:nowrap" class="ft877"><b>&#160;+&#160;1</b></p>
+<p style="position:absolute;top:264px;left:660px;white-space:nowrap" class="ft879"><i>x</i></p>
+<p style="position:absolute;top:276px;left:669px;white-space:nowrap" class="ft8710"><i>0</i></p>
+<p style="position:absolute;top:264px;left:676px;white-space:nowrap" class="ft879"><i>=1&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;y</i></p>
+<p style="position:absolute;top:276px;left:805px;white-space:nowrap" class="ft8710"><i>0</i></p>
+<p style="position:absolute;top:264px;left:812px;white-space:nowrap" class="ft879"><i>=2&#160;&#160;&#160;</i></p>
+<p style="position:absolute;top:302px;left:660px;white-space:nowrap" class="ft879"><i>x</i></p>
+<p style="position:absolute;top:313px;left:669px;white-space:nowrap" class="ft8710"><i>1</i></p>
+<p style="position:absolute;top:302px;left:676px;white-space:nowrap" class="ft879"><i>=&#160;1.0001&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;y</i></p>
+<p style="position:absolute;top:313px;left:805px;white-space:nowrap" class="ft8710"><i>1</i></p>
+<p style="position:absolute;top:302px;left:812px;white-space:nowrap" class="ft879"><i>=2.00020001</i></p>
+<p style="position:absolute;top:339px;left:660px;white-space:nowrap" class="ft879"><i>∆y&#160;/&#160;∆x&#160;≈&#160;&#160;&#160;0.0002&#160;/&#160;0.0001&#160;=&#160;2</i></p>
+<p style="position:absolute;top:407px;left:660px;white-space:nowrap" class="ft879"><i>x</i></p>
+<p style="position:absolute;top:419px;left:669px;white-space:nowrap" class="ft8710"><i>0</i></p>
+<p style="position:absolute;top:407px;left:676px;white-space:nowrap" class="ft879"><i>=2&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;y</i></p>
+<p style="position:absolute;top:419px;left:805px;white-space:nowrap" class="ft8710"><i>0</i></p>
+<p style="position:absolute;top:407px;left:812px;white-space:nowrap" class="ft879"><i>=5&#160;&#160;&#160;</i></p>
+<p style="position:absolute;top:445px;left:660px;white-space:nowrap" class="ft879"><i>x</i></p>
+<p style="position:absolute;top:457px;left:669px;white-space:nowrap" class="ft8710"><i>1</i></p>
+<p style="position:absolute;top:445px;left:676px;white-space:nowrap" class="ft879"><i>=&#160;2.0001&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;y</i></p>
+<p style="position:absolute;top:457px;left:805px;white-space:nowrap" class="ft8710"><i>1</i></p>
+<p style="position:absolute;top:445px;left:812px;white-space:nowrap" class="ft879"><i>=5.00040001</i></p>
+<p style="position:absolute;top:483px;left:660px;white-space:nowrap" class="ft879"><i>∆y&#160;/&#160;∆x&#160;≈&#160;&#160;&#160;0.0004&#160;/&#160;0.0001&#160;=&#160;4</i></p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft880{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft881{font-size:46px;font-family:Times;color:#252525;}
+    .ft882{font-size:34px;font-family:Times;color:#000000;}
+    .ft883{font-size:21px;font-family:Times;color:#000000;}
+    .ft884{font-size:28px;font-family:Times;color:#000000;}
+    .ft885{font-size:17px;font-family:Times;color:#000000;}
+    .ft886{font-size:34px;font-family:Times;color:#000000;}
+    .ft887{font-size:19px;font-family:Times;color:#000099;}
+    .ft888{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft889{font-size:21px;line-height:43px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page88-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target088.png" alt=""/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft888">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft881">导数与偏导数（续2）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft882">•&#160;偏导数</p>
+<p style="position:absolute;top:166px;left:91px;white-space:nowrap" class="ft889">“偏导”的英文本意是“partial&#160;derivatives“（表示局部导数）。对于多维变量函数<br/>而言，当求某个变量的导数时，就是把其他变量视为常量，然后对整个函数求其导数<br/>（相比于全部变量，这里只求一个变量，即为“局部”）。例如有函数：</p>
+<p style="position:absolute;top:297px;left:425px;white-space:nowrap" class="ft884"><i>f&#160;=&#160;x</i></p>
+<p style="position:absolute;top:301px;left:482px;white-space:nowrap" class="ft885"><i>2&#160;</i></p>
+<p style="position:absolute;top:297px;left:497px;white-space:nowrap" class="ft884"><i>+&#160;3xy&#160;+&#160;y</i></p>
+<p style="position:absolute;top:301px;left:615px;white-space:nowrap" class="ft885"><i>2&#160;</i></p>
+<p style="position:absolute;top:297px;left:630px;white-space:nowrap" class="ft884"><i>+&#160;z</i></p>
+<p style="position:absolute;top:301px;left:669px;white-space:nowrap" class="ft885"><i>3</i></p>
+<p style="position:absolute;top:354px;left:91px;white-space:nowrap" class="ft886"><i>&#160;&#160;&#160;&#160;</i></p>
+<p style="position:absolute;top:366px;left:127px;white-space:nowrap" class="ft883">则，对x,&#160;y,&#160;z分别求偏导公式为：</p>
+<p style="position:absolute;top:540px;left:187px;white-space:nowrap" class="ft887">y,&#160;z为常量</p>
+<p style="position:absolute;top:540px;left:440px;white-space:nowrap" class="ft887">x,&#160;z为常量</p>
+<p style="position:absolute;top:540px;left:693px;white-space:nowrap" class="ft887">x,&#160;y为常量</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft890{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft891{font-size:46px;font-family:Times;color:#000000;}
+    .ft892{font-size:25px;font-family:Times;color:#000000;}
+    .ft893{font-size:16px;font-family:Times;color:#000000;}
+    .ft894{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page89-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target089.png" alt=""/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft894">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft891">学习率</p>
+<p style="position:absolute;top:116px;left:66px;white-space:nowrap" class="ft892">•&#160;学习率是梯度下降过程中，在梯度值前面的系数，用来控制调整的步幅大小</p>
+<p style="position:absolute;top:476px;left:270px;white-space:nowrap" class="ft893">收敛步幅过大</p>
+<p style="position:absolute;top:476px;left:671px;white-space:nowrap" class="ft893">通过学习率控制收敛步幅</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft900{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft901{font-size:46px;font-family:Times;color:#000000;}
+    .ft902{font-size:21px;font-family:Times;color:#000000;}
+    .ft903{font-size:13px;font-family:Times;color:#000000;}
+    .ft904{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft905{font-size:21px;line-height:43px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page90-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target090.png" alt=""/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft904">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft901">梯度递减训练法则</p>
+<p style="position:absolute;top:115px;left:66px;white-space:nowrap" class="ft902">•&#160;神经网络中的权值参数是非常多的，因此针对损失函数E的权值向量的梯度如以下公</p>
+<p style="position:absolute;top:158px;left:107px;white-space:nowrap" class="ft902">式所示：</p>
+<p style="position:absolute;top:313px;left:107px;white-space:nowrap" class="ft905">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;表示损失函数E的梯度，它本身也是一个向量，它的多个维度分别由损失函数<br/>E对多个权值参数w</p>
+<p style="position:absolute;top:369px;left:307px;white-space:nowrap" class="ft903">i</p>
+<p style="position:absolute;top:356px;left:311px;white-space:nowrap" class="ft902">求偏导所得。当梯度被解释为权值空间中的一个向量时，它就确</p>
+<p style="position:absolute;top:399px;left:107px;white-space:nowrap" class="ft902">定了E陡峭上升的方向，那么梯度递减的训练法则就如下公式所示：</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft910{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft911{font-size:46px;font-family:Times;color:#252525;}
+    .ft912{font-size:34px;font-family:Times;color:#252525;}
+    .ft913{font-size:21px;font-family:Times;color:#000000;}
+    .ft914{font-size:20px;font-family:Times;color:#000000;}
+    .ft915{font-size:19px;font-family:Times;color:#000000;}
+    .ft916{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft917{font-size:21px;line-height:43px;font-family:Times;color:#000000;}
+    .ft918{font-size:20px;line-height:39px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page91-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target091.png" alt=""/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft916">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft911">梯度下降算法</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft912">•&#160;批量梯度下降</p>
+<p style="position:absolute;top:172px;left:101px;white-space:nowrap" class="ft917">批量梯度下降法（Batch&#160;Gradient&#160;Descent，BGD）是最原始的形式，它是指在每一次<br/>迭代时使用所有样本来进行梯度的更新。</p>
+<p style="position:absolute;top:262px;left:101px;white-space:nowrap" class="ft913">Ø</p>
+<p style="position:absolute;top:259px;left:142px;white-space:nowrap" class="ft913">优点：</p>
+<p style="position:absolute;top:304px;left:155px;white-space:nowrap" class="ft914">ü</p>
+<p style="position:absolute;top:301px;left:189px;white-space:nowrap" class="ft914">一次迭代是对所有样本进行计算，此时利用矩阵进行操作，实现了并行。</p>
+<p style="position:absolute;top:344px;left:155px;white-space:nowrap" class="ft914">ü</p>
+<p style="position:absolute;top:341px;left:189px;white-space:nowrap" class="ft918">由全数据集确定的方向能够更好地代表样本总体，从而更准确地朝向极值所在的方向。<br/>当目标函数为凸函数时，BGD一定能够得到全局最优。</p>
+<p style="position:absolute;top:424px;left:101px;white-space:nowrap" class="ft913">Ø</p>
+<p style="position:absolute;top:421px;left:142px;white-space:nowrap" class="ft913">缺点：</p>
+<p style="position:absolute;top:466px;left:155px;white-space:nowrap" class="ft915">ü</p>
+<p style="position:absolute;top:463px;left:189px;white-space:nowrap" class="ft915">当样本数目&#160;m&#160;很大时，每迭代一步都需要对所有样本计算，训练过程会很慢。</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft920{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft921{font-size:46px;font-family:Times;color:#252525;}
+    .ft922{font-size:34px;font-family:Times;color:#000000;}
+    .ft923{font-size:21px;font-family:Times;color:#000000;}
+    .ft924{font-size:19px;font-family:Times;color:#000000;}
+    .ft925{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft926{font-size:21px;line-height:43px;font-family:Times;color:#000000;}
+    .ft927{font-size:19px;line-height:39px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page92-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target092.png" alt=""/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft925">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft921">梯度下降算法（续1）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft922">•&#160;随机梯度下降</p>
+<p style="position:absolute;top:174px;left:100px;white-space:nowrap" class="ft926">随机梯度下降法（Stochastic&#160;Gradient&#160;Descent，SGD）每次迭代使用一个样本来对<br/>参数进行更新，使得训练速度加快。</p>
+<p style="position:absolute;top:264px;left:100px;white-space:nowrap" class="ft923">Ø</p>
+<p style="position:absolute;top:260px;left:141px;white-space:nowrap" class="ft923">优点：</p>
+<p style="position:absolute;top:306px;left:154px;white-space:nowrap" class="ft924">ü</p>
+<p style="position:absolute;top:303px;left:188px;white-space:nowrap" class="ft927">由于不是在全部训练数据上的损失函数，而是在每轮迭代中，随机优化某一条训练数<br/>据上的损失函数，这样每一轮参数的更新速度大大加快。</p>
+<p style="position:absolute;top:386px;left:100px;white-space:nowrap" class="ft923">Ø</p>
+<p style="position:absolute;top:382px;left:141px;white-space:nowrap" class="ft923">缺点：</p>
+<p style="position:absolute;top:427px;left:154px;white-space:nowrap" class="ft924">ü</p>
+<p style="position:absolute;top:424px;left:188px;white-space:nowrap" class="ft924">准确度下降。由于即使在目标函数为强凸函数的情况下，SGD仍旧无法做到线性收敛。</p>
+<p style="position:absolute;top:467px;left:154px;white-space:nowrap" class="ft924">ü</p>
+<p style="position:absolute;top:464px;left:188px;white-space:nowrap" class="ft924">可能会收敛到局部最优，由于单个样本并不能代表全体样本的趋势。</p>
+<p style="position:absolute;top:506px;left:154px;white-space:nowrap" class="ft924">ü</p>
+<p style="position:absolute;top:503px;left:188px;white-space:nowrap" class="ft924">不易于并行实现。</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft930{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft931{font-size:46px;font-family:Times;color:#252525;}
+    .ft932{font-size:34px;font-family:Times;color:#252525;}
+    .ft933{font-size:21px;font-family:Times;color:#000000;}
+    .ft934{font-size:19px;font-family:Times;color:#000000;}
+    .ft935{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft936{font-size:21px;line-height:43px;font-family:Times;color:#000000;}
+    .ft937{font-size:19px;line-height:39px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page93-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target093.png" alt=""/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft935">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft931">梯度下降算法（续2）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft932">•&#160;小批量梯度下降</p>
+<p style="position:absolute;top:174px;left:100px;white-space:nowrap" class="ft936">小批量梯度下降（Mini-Batch&#160;Gradient&#160;Descent,&#160;MBGD）是对批量梯度下降以及随<br/>机梯度下降的一个折中办法。其思想是：每次迭代&#160;使用指定个（batch_size）样本来对<br/>参数进行更新。</p>
+<p style="position:absolute;top:307px;left:100px;white-space:nowrap" class="ft933">Ø</p>
+<p style="position:absolute;top:304px;left:140px;white-space:nowrap" class="ft933">优点：</p>
+<p style="position:absolute;top:349px;left:154px;white-space:nowrap" class="ft934">ü</p>
+<p style="position:absolute;top:346px;left:188px;white-space:nowrap" class="ft934">通过矩阵运算，每次在一个batch上优化神经网络参数并不会比单个数据慢太多。</p>
+<p style="position:absolute;top:388px;left:154px;white-space:nowrap" class="ft934">ü</p>
+<p style="position:absolute;top:385px;left:188px;white-space:nowrap" class="ft937">每次使用一个batch可以大大减小收敛所需要的迭代次数，同时可以使收敛到的结果更<br/>加接近梯度下降的效果。</p>
+<p style="position:absolute;top:469px;left:100px;white-space:nowrap" class="ft933">Ø</p>
+<p style="position:absolute;top:465px;left:140px;white-space:nowrap" class="ft933">缺点：</p>
+<p style="position:absolute;top:510px;left:154px;white-space:nowrap" class="ft934">ü</p>
+<p style="position:absolute;top:507px;left:188px;white-space:nowrap" class="ft934">batch_size的不当选择可能会带来一些问题。</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft940{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft941{font-size:46px;font-family:Times;color:#252525;}
+    .ft942{font-size:34px;font-family:Times;color:#252525;}
+    .ft943{font-size:25px;font-family:Times;color:#000000;}
+    .ft944{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft945{font-size:25px;line-height:48px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page94-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target094.png" alt=""/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft944">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft941">梯度下降算法（续3）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft942">•&#160;几种梯度下降算法收敛比较</p>
+<p style="position:absolute;top:192px;left:106px;white-space:nowrap" class="ft943">Ø</p>
+<p style="position:absolute;top:188px;left:147px;white-space:nowrap" class="ft945">批量梯度下降稳健地向着最低点前进<br/>的</p>
+<p style="position:absolute;top:289px;left:106px;white-space:nowrap" class="ft943">Ø</p>
+<p style="position:absolute;top:285px;left:147px;white-space:nowrap" class="ft945">随机梯度下降震荡明显，但总体上向<br/>最低点逼近</p>
+<p style="position:absolute;top:386px;left:106px;white-space:nowrap" class="ft943">Ø</p>
+<p style="position:absolute;top:383px;left:147px;white-space:nowrap" class="ft943">小批量梯度下降位于两者之间</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft950{font-size:43px;font-family:Times;color:#252525;}
+    .ft951{font-size:28px;font-family:Times;color:#252525;}
+    .ft952{font-size:21px;font-family:Times;color:#000099;}
+    .ft953{font-size:21px;font-family:Times;color:#000099;}
+    .ft954{font-size:21px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page95-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target095.png" alt=""/>
+<p style="position:absolute;top:42px;left:66px;white-space:nowrap" class="ft950"><b>小结</b></p>
+<p style="position:absolute;top:143px;left:66px;white-space:nowrap" class="ft951">•&#160;本章节介绍了损失函数与梯度下降概念与算法</p>
+<p style="position:absolute;top:198px;left:120px;white-space:nowrap" class="ft952">ü</p>
+<p style="position:absolute;top:194px;left:154px;white-space:nowrap" class="ft953"><b>损失函数。</b></p>
+<p style="position:absolute;top:194px;left:274px;white-space:nowrap" class="ft954">用于度量预测值和期望值之间的差异，根据该差异值进行参数调整</p>
+<p style="position:absolute;top:241px;left:120px;white-space:nowrap" class="ft952">ü</p>
+<p style="position:absolute;top:237px;left:154px;white-space:nowrap" class="ft953"><b>梯度下降。</b></p>
+<p style="position:absolute;top:238px;left:274px;white-space:nowrap" class="ft954">用于以最快的速度、最少的步骤快速找到损失函数的极小值</p>
+</div>
+</body>
+</html>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><a class="post-meta__tags" href="/tags/%E8%AE%B0%E5%BD%95/">记录</a><a class="post-meta__tags" href="/tags/Python/">Python</a><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><a class="post-meta__tags" href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a></div><div class="post_share"><div class="social-share" data-image="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" data-sites="facebook,twitter,wechat,weibo,qzone,qq,linkedin"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/11/30/2021q4/107-1-dl-back/"><img class="prev-cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" onerror="onerror=null;src='/img/404.png'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">【深度学习】基础 叁：反向传播算法</div></div></a></div><div class="next-post pull-right"><a href="/2021/11/30/2021q4/107-1-dl-perceptron/"><img class="next-cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" onerror="onerror=null;src='/img/404.png'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">【深度学习】基础 壹：感知机与神经网络</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2021/11/30/2021q4/107-0-dl/" title="【深度学习】概述"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】概述</div></div></a></div><div><a href="/2021/11/30/2021q4/107-1-dl-back/" title="【深度学习】基础 叁：反向传播算法"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】基础 叁：反向传播算法</div></div></a></div><div><a href="/2021/11/30/2021q4/107-1-dl-cnn/" title="【深度学习】基础 肆：卷积神经网络"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】基础 肆：卷积神经网络</div></div></a></div><div><a href="/2021/11/30/2021q4/107-1-dl-perceptron/" title="【深度学习】基础 壹：感知机与神经网络"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】基础 壹：感知机与神经网络</div></div></a></div><div><a href="/2021/12/02/2021q4/107-2-dl/" title="【深度学习】图像操作：OpenCV"><img class="cover" src="https://image.discover304.top/ai/dl/02/dog-end-world.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】图像操作：OpenCV</div></div></a></div><div><a href="/2021/12/01/2021q4/108-0-dl-ex/" title="【深度学习】实例第一部分：基础理论"><img class="cover" src="https://image.discover304.top/ai/dl/space_work.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】实例第一部分：基础理论</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">✨YangSier✨</div><div class="author-info__description">Love Everything You Like.</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">243</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">88</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">23</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/98639326"><i class="fab fa-bilibili"></i><span>Bilibili Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Discover304" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://twitter.com/Discover304" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.youtube.com/channel/UCuQQr55i3VCQuCPMTQnpzDA" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a><a class="social-icon" href="mailto:hobart.yang@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">✨动态更新：<p style="text-align:center">享受精彩大学生活中。</p>✨聊天划水QQ群：<p style="text-align:center"><strong>兔叽の魔术工房</strong><br>942-848-525</p>✨我们的口号是：<p style="text-align:center; color:#39C5BB">人工降神，机械飞升！</p><a target="_blank" rel="noopener" href='https://space.bilibili.com/98639326'><img src='/img/mikulittletrans.png'></a></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E"><span class="toc-text">说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0"><span class="toc-text">损失函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D"><span class="toc-text">梯度下降</span></a></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/2022q4/172-design-idea/" title="【思考】创新点子"><img src="https://image.discover304.top/blog-img/s19313212112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【思考】创新点子"/></a><div class="content"><a class="title" href="/2022/12/11/2022q4/172-design-idea/" title="【思考】创新点子">【思考】创新点子</a><time datetime="2022-12-11T11:08:37.000Z" title="Created 2022-12-11 19:08:37">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/2022q4/171-other-thought/" title="【思考】其他思考"><img src="https://image.discover304.top/blog-img/s19305112112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【思考】其他思考"/></a><div class="content"><a class="title" href="/2022/12/11/2022q4/171-other-thought/" title="【思考】其他思考">【思考】其他思考</a><time datetime="2022-12-11T11:08:17.000Z" title="Created 2022-12-11 19:08:17">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/2022q4/170-key-thought/" title="【思考】核心思考"><img src="https://image.discover304.top/blog-img/s19294112112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【思考】核心思考"/></a><div class="content"><a class="title" href="/2022/12/11/2022q4/170-key-thought/" title="【思考】核心思考">【思考】核心思考</a><time datetime="2022-12-11T11:08:06.000Z" title="Created 2022-12-11 19:08:06">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/09/2022q4/169-new-r/" title="R: Getting Into Project of R"><img src="https://image.discover304.top/blog-img/s18350812112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="R: Getting Into Project of R"/></a><div class="content"><a class="title" href="/2022/12/09/2022q4/169-new-r/" title="R: Getting Into Project of R">R: Getting Into Project of R</a><time datetime="2022-12-09T09:44:06.000Z" title="Created 2022-12-09 17:44:06">2022-12-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/08/000-some-words/" title="【整理】一些思考"><img src="https://image.discover304.top/blog-img/s18365512112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【整理】一些思考"/></a><div class="content"><a class="title" href="/2022/12/08/000-some-words/" title="【整理】一些思考">【整理】一些思考</a><time datetime="2022-12-08T04:27:28.000Z" title="Created 2022-12-08 12:27:28">2022-12-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/28/2022q3/167-2-sp-review/" title="SP Modules Review Contents (3)"><img src="https://image.discover304.top/blog-img/s11220010012022.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="SP Modules Review Contents (3)"/></a><div class="content"><a class="title" href="/2022/11/28/2022q3/167-2-sp-review/" title="SP Modules Review Contents (3)">SP Modules Review Contents (3)</a><time datetime="2022-11-28T07:24:39.000Z" title="Created 2022-11-28 15:24:39">2022-11-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/17/2022q3/166-10-connected-speech-hidden-markov-model/" title="SP Module 10 Connected Speech &amp; HMM Training"><img src="https://image.discover304.top/blog-img/s11220010012022.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="SP Module 10 Connected Speech &amp; HMM Training"/></a><div class="content"><a class="title" href="/2022/11/17/2022q3/166-10-connected-speech-hidden-markov-model/" title="SP Module 10 Connected Speech &amp; HMM Training">SP Module 10 Connected Speech &amp; HMM Training</a><time datetime="2022-11-17T01:47:12.000Z" title="Created 2022-11-17 09:47:12">2022-11-17</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By ✨YangSier✨</div><div><a target="_blank" href="https://beian.miit.gov.cn/" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;"> 冀ICP备2021025381号-1</p></a></div><div><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=13060602001430" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/img/beian.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">冀公网安备 13060602001430号</p></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.spacingElementById('content-inner')
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.spacingElementById('content-inner')
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'neutral',
+      })
+      false && mermaid.init()
+    })
+  }
+}</script><script>function loadValine () {
+  function initValine () {
+    let initData = {
+      el: '#vcomment',
+      appId: 'A9RWVELPcIotgfbpp9KLGXQM-gzGzoHsz',
+      appKey: 'MLgPQW5h0DPgE8jNkeREKubU',
+      placeholder: '欢迎留言呀。（网址是选填，可以留空）',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: true,
+      serverURLs: 'https://a9rwvelp.lc-cn-n1-shared.com',
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/',
+      emojiMaps: {"QQ1":"QQ/aini.gif","QQ2":"QQ/aixin.gif","QQ3":"QQ/aoman.gif","QQ4":"QQ/baiyan.gif","QQ5":"QQ/bangbangtang.gif","QQ6":"QQ/baojin.gif","QQ7":"QQ/baoquan.gif","QQ8":"QQ/bishi.gif","QQ9":"QQ/bizui.gif","QQ11":"QQ/cahan.gif","QQ12":"QQ/caidao.gif","QQ13":"QQ/chi.gif","QQ14":"QQ/ciya.gif","QQ15":"QQ/dabing.gif","QQ16":"QQ/daku.gif","QQ17":"QQ/dan.gif","QQ18":"QQ/deyi.gif","QQ19":"QQ/doge.gif","QQ20":"QQ/fadai.gif","QQ21":"QQ/fanu.gif","QQ22":"QQ/fendou.gif","QQ23":"QQ/ganga.gif","QQ24":"QQ/gouyin.gif","QQ25":"QQ/guzhang.gif","QQ26":"QQ/haixiu.gif","QQ27":"QQ/hanxiao.gif","QQ28":"QQ/haobang.gif","QQ29":"QQ/haqian.gif","QQ30":"QQ/hecai.gif","QQ31":"QQ/hexie.gif","QQ32":"QQ/huaixiao.gif","QQ33":"QQ/jie.gif","QQ34":"QQ/jingkong.gif","QQ35":"QQ/jingxi.gif","QQ36":"QQ/jingya.gif","QQ37":"QQ/juhua.gif","QQ38":"QQ/keai.gif","QQ39":"QQ/kelian.gif","QQ40":"QQ/koubi.gif","QQ41":"QQ/ku.gif","QQ42":"QQ/kuaikule.gif","QQ43":"QQ/kulou.gif","QQ44":"QQ/kun.gif","QQ45":"QQ/lanqiu.gif","QQ46":"QQ/leiben.gif","QQ47":"QQ/lenghan.gif","QQ48":"QQ/liuhan.gif","QQ49":"QQ/liulei.gif","QQ50":"QQ/nanguo.gif","QQ51":"QQ/OK.gif","QQ52":"QQ/penxue.gif","QQ53":"QQ/piezui.gif","QQ54":"QQ/pijiu.gif","QQ55":"QQ/qiang.gif","QQ56":"QQ/qiaoda.gif","QQ57":"QQ/qinqin.gif","QQ58":"QQ/qiudale.gif","QQ59":"QQ/quantou.gif","QQ60":"QQ/saorao.gif","QQ61":"QQ/se.gif","QQ62":"QQ/shengli.gif","QQ63":"QQ/shouqiang.gif","QQ64":"QQ/shuai.gif","QQ65":"QQ/shui.gif","QQ66":"QQ/tiaopi.gif","QQ67":"QQ/touxiao.gif","QQ68":"QQ/tu.gif","QQ69":"QQ/tuosai.gif","QQ70":"QQ/weiqu.gif","QQ71":"QQ/weixiao.gif","QQ72":"QQ/woshou.gif","QQ73":"QQ/wozuimei.gif","QQ74":"QQ/wunai.gif","QQ75":"QQ/xia.gif","QQ76":"QQ/xiaojiujie.gif","QQ77":"QQ/xiaoku.gif","QQ78":"QQ/xiaoyanger.gif","QQ79":"QQ/xieyanxiao.gif","QQ80":"QQ/xigua.gif","QQ81":"QQ/xu.gif","QQ82":"QQ/yangtuo.gif","QQ83":"QQ/yinxian.gif","QQ84":"QQ/yiwen.gif","QQ85":"QQ/youhengheng.gif","QQ86":"QQ/youling.gif","QQ87":"QQ/yun.gif","QQ88":"QQ/zaijian.gif","QQ89":"QQ/zhayanjian.gif","QQ90":"QQ/zhemo.gif","QQ91":"QQ/zhouma.gif","QQ92":"QQ/zhuakuang.gif","QQ93":"QQ/zuohengheng.gif","bilibiliHotKey1":"bilibiliHotKey/1.jpg","bilibiliHotKey2":"bilibiliHotKey/10.jpg","bilibiliHotKey3":"bilibiliHotKey/11.jpg","bilibiliHotKey4":"bilibiliHotKey/12.jpg","bilibiliHotKey5":"bilibiliHotKey/13.jpg","bilibiliHotKey6":"bilibiliHotKey/14.jpg","bilibiliHotKey7":"bilibiliHotKey/15.jpg","bilibiliHotKey8":"bilibiliHotKey/16.jpg","bilibiliHotKey9":"bilibiliHotKey/17.jpg","bilibiliHotKey10":"bilibiliHotKey/18.jpg","bilibiliHotKey11":"bilibiliHotKey/19.jpg","bilibiliHotKey12":"bilibiliHotKey/2.jpg","bilibiliHotKey13":"bilibiliHotKey/20.jpg","bilibiliHotKey14":"bilibiliHotKey/21.jpg","bilibiliHotKey15":"bilibiliHotKey/22.jpg","bilibiliHotKey16":"bilibiliHotKey/23.jpg","bilibiliHotKey17":"bilibiliHotKey/24.jpg","bilibiliHotKey18":"bilibiliHotKey/25.jpg","bilibiliHotKey19":"bilibiliHotKey/26.jpg","bilibiliHotKey20":"bilibiliHotKey/27.jpg","bilibiliHotKey21":"bilibiliHotKey/28.jpg","bilibiliHotKey22":"bilibiliHotKey/29.jpg","bilibiliHotKey23":"bilibiliHotKey/3.jpg","bilibiliHotKey24":"bilibiliHotKey/30.jpg","bilibiliHotKey25":"bilibiliHotKey/31.jpg","bilibiliHotKey26":"bilibiliHotKey/32.jpg","bilibiliHotKey27":"bilibiliHotKey/4.jpg","bilibiliHotKey28":"bilibiliHotKey/5.jpg","bilibiliHotKey29":"bilibiliHotKey/6.jpg","bilibiliHotKey30":"bilibiliHotKey/7.jpg","bilibiliHotKey31":"bilibiliHotKey/8.jpg","bilibiliHotKey32":"bilibiliHotKey/9.jpg","Menhera-chan1":"Menhera-chan/1.jpg","Menhera-chan2":"Menhera-chan/10.jpg","Menhera-chan3":"Menhera-chan/100.jpg","Menhera-chan4":"Menhera-chan/101.jpg","Menhera-chan5":"Menhera-chan/102.jpg","Menhera-chan6":"Menhera-chan/103.jpg","Menhera-chan7":"Menhera-chan/104.jpg","Menhera-chan8":"Menhera-chan/105.jpg","Menhera-chan9":"Menhera-chan/106.jpg","Menhera-chan10":"Menhera-chan/107.jpg","Menhera-chan11":"Menhera-chan/108.jpg","Menhera-chan12":"Menhera-chan/109.jpg","Menhera-chan13":"Menhera-chan/11.jpg","Menhera-chan14":"Menhera-chan/110.jpg","Menhera-chan15":"Menhera-chan/111.jpg","Menhera-chan16":"Menhera-chan/112.jpg","Menhera-chan17":"Menhera-chan/113.jpg","Menhera-chan18":"Menhera-chan/114.jpg","Menhera-chan19":"Menhera-chan/115.jpg","Menhera-chan20":"Menhera-chan/116.jpg","Menhera-chan21":"Menhera-chan/117.jpg","Menhera-chan22":"Menhera-chan/118.jpg","Menhera-chan23":"Menhera-chan/119.jpg","Menhera-chan24":"Menhera-chan/12.jpg","Menhera-chan25":"Menhera-chan/120.jpg","Menhera-chan26":"Menhera-chan/13.jpg","Menhera-chan27":"Menhera-chan/14.jpg","Menhera-chan28":"Menhera-chan/15.jpg","Menhera-chan29":"Menhera-chan/16.jpg","Menhera-chan30":"Menhera-chan/17.jpg","Menhera-chan31":"Menhera-chan/18.jpg","Menhera-chan32":"Menhera-chan/19.jpg","Menhera-chan33":"Menhera-chan/2.jpg","Menhera-chan34":"Menhera-chan/20.jpg","Menhera-chan35":"Menhera-chan/21.jpg","Menhera-chan36":"Menhera-chan/22.jpg","Menhera-chan37":"Menhera-chan/23.jpg","Menhera-chan38":"Menhera-chan/24.jpg","Menhera-chan39":"Menhera-chan/25.jpg","Menhera-chan40":"Menhera-chan/26.jpg","Menhera-chan41":"Menhera-chan/27.jpg","Menhera-chan42":"Menhera-chan/28.jpg","Menhera-chan43":"Menhera-chan/29.jpg","Menhera-chan44":"Menhera-chan/3.jpg","Menhera-chan45":"Menhera-chan/30.jpg","Menhera-chan46":"Menhera-chan/31.jpg","Menhera-chan47":"Menhera-chan/32.jpg","Menhera-chan48":"Menhera-chan/33.jpg","Menhera-chan49":"Menhera-chan/34.jpg","Menhera-chan50":"Menhera-chan/35.jpg","Menhera-chan51":"Menhera-chan/36.jpg","Menhera-chan52":"Menhera-chan/37.jpg","Menhera-chan53":"Menhera-chan/38.jpg","Menhera-chan54":"Menhera-chan/39.jpg","Menhera-chan55":"Menhera-chan/4.jpg","Menhera-chan56":"Menhera-chan/40.jpg","Menhera-chan57":"Menhera-chan/41.jpg","Menhera-chan58":"Menhera-chan/42.jpg","Menhera-chan59":"Menhera-chan/43.jpg","Menhera-chan60":"Menhera-chan/44.jpg","Menhera-chan61":"Menhera-chan/45.jpg","Menhera-chan62":"Menhera-chan/46.jpg","Menhera-chan63":"Menhera-chan/47.jpg","Menhera-chan64":"Menhera-chan/48.jpg","Menhera-chan65":"Menhera-chan/49.jpg","Menhera-chan66":"Menhera-chan/5.jpg","Menhera-chan67":"Menhera-chan/50.jpg","Menhera-chan68":"Menhera-chan/51.jpg","Menhera-chan69":"Menhera-chan/52.jpg","Menhera-chan70":"Menhera-chan/53(1).jpg","Menhera-chan71":"Menhera-chan/53.jpg","Menhera-chan72":"Menhera-chan/54.jpg","Menhera-chan73":"Menhera-chan/55.jpg","Menhera-chan74":"Menhera-chan/56.jpg","Menhera-chan75":"Menhera-chan/57.jpg","Menhera-chan76":"Menhera-chan/58.jpg","Menhera-chan77":"Menhera-chan/59.jpg","Menhera-chan78":"Menhera-chan/6.jpg","Menhera-chan79":"Menhera-chan/60.jpg","Menhera-chan80":"Menhera-chan/61.jpg","Menhera-chan81":"Menhera-chan/62.jpg","Menhera-chan82":"Menhera-chan/63.jpg","Menhera-chan83":"Menhera-chan/64.jpg","Menhera-chan84":"Menhera-chan/65.jpg","Menhera-chan85":"Menhera-chan/66.jpg","Menhera-chan86":"Menhera-chan/67.jpg","Menhera-chan87":"Menhera-chan/68.jpg","Menhera-chan88":"Menhera-chan/69.jpg","Menhera-chan89":"Menhera-chan/7.jpg","Menhera-chan90":"Menhera-chan/70.jpg","Menhera-chan91":"Menhera-chan/71.jpg","Menhera-chan92":"Menhera-chan/72.jpg","Menhera-chan93":"Menhera-chan/73.jpg","Menhera-chan94":"Menhera-chan/74.jpg","Menhera-chan95":"Menhera-chan/75.jpg","Menhera-chan96":"Menhera-chan/76.jpg","Menhera-chan97":"Menhera-chan/77.jpg","Menhera-chan98":"Menhera-chan/78.jpg","Menhera-chan99":"Menhera-chan/79.jpg","Menhera-chan100":"Menhera-chan/8.jpg","Menhera-chan101":"Menhera-chan/80.jpg","Menhera-chan102":"Menhera-chan/81.jpg","Menhera-chan103":"Menhera-chan/82.jpg","Menhera-chan104":"Menhera-chan/83.jpg","Menhera-chan105":"Menhera-chan/84.jpg","Menhera-chan106":"Menhera-chan/85.jpg","Menhera-chan107":"Menhera-chan/86.jpg","Menhera-chan108":"Menhera-chan/87.jpg","Menhera-chan109":"Menhera-chan/88.jpg","Menhera-chan110":"Menhera-chan/89.jpg","Menhera-chan111":"Menhera-chan/9.jpg","Menhera-chan112":"Menhera-chan/90.jpg","Menhera-chan113":"Menhera-chan/91.jpg","Menhera-chan114":"Menhera-chan/92.jpg","Menhera-chan115":"Menhera-chan/93.jpg","Menhera-chan116":"Menhera-chan/94.jpg","Menhera-chan117":"Menhera-chan/95.jpg","Menhera-chan118":"Menhera-chan/96.jpg","Menhera-chan119":"Menhera-chan/97.jpg","Menhera-chan120":"Menhera-chan/98.jpg","Menhera-chan121":"Menhera-chan/99.jpg","Sweetie-Bunny1":"Sweetie-Bunny/12311678.png","Sweetie-Bunny2":"Sweetie-Bunny/12311679.png","Sweetie-Bunny3":"Sweetie-Bunny/12311680.png","Sweetie-Bunny4":"Sweetie-Bunny/12311681.png","Sweetie-Bunny5":"Sweetie-Bunny/12311682.png","Sweetie-Bunny6":"Sweetie-Bunny/12311683.png","Sweetie-Bunny7":"Sweetie-Bunny/12311684.png","Sweetie-Bunny8":"Sweetie-Bunny/12311685.png","Sweetie-Bunny9":"Sweetie-Bunny/12311686.png","Sweetie-Bunny10":"Sweetie-Bunny/12311687.png","Sweetie-Bunny11":"Sweetie-Bunny/12311688.png","Sweetie-Bunny12":"Sweetie-Bunny/12311689.png","Sweetie-Bunny13":"Sweetie-Bunny/12311690.png","Sweetie-Bunny14":"Sweetie-Bunny/12311691.png","Sweetie-Bunny15":"Sweetie-Bunny/12311692.png","Sweetie-Bunny16":"Sweetie-Bunny/12311693.png","Sweetie-Bunny17":"Sweetie-Bunny/12311694.png","Sweetie-Bunny18":"Sweetie-Bunny/12311695.png","Sweetie-Bunny19":"Sweetie-Bunny/12311696.png","Sweetie-Bunny20":"Sweetie-Bunny/12311697.png","Sweetie-Bunny21":"Sweetie-Bunny/12311698.png","Sweetie-Bunny22":"Sweetie-Bunny/12311699.png","Sweetie-Bunny23":"Sweetie-Bunny/12311700.png","Sweetie-Bunny24":"Sweetie-Bunny/12311701.png","Sweetie-Bunny25":"Sweetie-Bunny/12311702.png","Sweetie-Bunny26":"Sweetie-Bunny/12311703.png","Sweetie-Bunny27":"Sweetie-Bunny/12311704.png","Sweetie-Bunny28":"Sweetie-Bunny/12311705.png","Sweetie-Bunny29":"Sweetie-Bunny/12311706.png","Sweetie-Bunny30":"Sweetie-Bunny/12311707.png","Sweetie-Bunny31":"Sweetie-Bunny/12311708.png","Sweetie-Bunny32":"Sweetie-Bunny/12311709.png","Sweetie-Bunny33":"Sweetie-Bunny/12311710.png","Sweetie-Bunny34":"Sweetie-Bunny/12311711.png","Sweetie-Bunny35":"Sweetie-Bunny/12311712.png","Sweetie-Bunny36":"Sweetie-Bunny/12311713.png","Sweetie-Bunny37":"Sweetie-Bunny/12311714.png","Sweetie-Bunny38":"Sweetie-Bunny/12311715.png","Sweetie-Bunny39":"Sweetie-Bunny/12311716.png","Sweetie-Bunny40":"Sweetie-Bunny/12311717.png","Majotabi1":"Majotabi/367516718.png","Majotabi2":"Majotabi/367516719.png","Majotabi3":"Majotabi/367516720.png","Majotabi4":"Majotabi/367516721.png","Majotabi5":"Majotabi/367516722.png","Majotabi6":"Majotabi/367516723.png","Majotabi7":"Majotabi/367516724.png","Majotabi8":"Majotabi/367516725.png","Majotabi9":"Majotabi/367516726.png","Majotabi10":"Majotabi/367516727.png","Majotabi11":"Majotabi/367516728.png","Majotabi12":"Majotabi/367516729.png","Majotabi13":"Majotabi/367516730.png","Majotabi14":"Majotabi/367516731.png","Majotabi15":"Majotabi/367516732.png","Majotabi16":"Majotabi/367516733.png","Majotabi17":"Majotabi/367516734.png","Majotabi18":"Majotabi/367516735.png","Majotabi19":"Majotabi/367516736.png","Majotabi20":"Majotabi/367516737.png","Majotabi21":"Majotabi/367516738.png","Majotabi22":"Majotabi/367516739.png","Majotabi23":"Majotabi/367516740.png","Majotabi24":"Majotabi/367516741.png","Majotabi25":"Majotabi/367516742.png","Majotabi26":"Majotabi/367516743.png","Majotabi27":"Majotabi/367516744.png","Majotabi28":"Majotabi/367516745.png","Majotabi29":"Majotabi/367516746.png","Majotabi30":"Majotabi/367516747.png","Majotabi31":"Majotabi/367516748.png","Majotabi32":"Majotabi/367516749.png","Majotabi33":"Majotabi/367516750.png","Majotabi34":"Majotabi/367516751.png","Majotabi35":"Majotabi/367516752.png","Majotabi36":"Majotabi/367516753.png","Majotabi37":"Majotabi/367516754.png","Majotabi38":"Majotabi/367516755.png","Majotabi39":"Majotabi/367516756.png","Majotabi40":"Majotabi/367516757.png","Snow-Miku1":"Snow-Miku/3583066@2x.png","Snow-Miku2":"Snow-Miku/3583067@2x.png","Snow-Miku3":"Snow-Miku/3583068@2x.png","Snow-Miku4":"Snow-Miku/3583069@2x.png","Snow-Miku5":"Snow-Miku/3583070@2x.png","Snow-Miku6":"Snow-Miku/3583071@2x.png","Snow-Miku7":"Snow-Miku/3583072@2x.png","Snow-Miku8":"Snow-Miku/3583073@2x.png","Snow-Miku9":"Snow-Miku/3583074@2x.png","Snow-Miku10":"Snow-Miku/3583075@2x.png","Snow-Miku11":"Snow-Miku/3583076@2x.png","Snow-Miku12":"Snow-Miku/3583077@2x.png","Snow-Miku13":"Snow-Miku/3583078@2x.png","Snow-Miku14":"Snow-Miku/3583079@2x.png","Snow-Miku15":"Snow-Miku/3583080@2x.png","Snow-Miku16":"Snow-Miku/3583081@2x.png","Snow-Miku17":"Snow-Miku/3583082@2x.png","Snow-Miku18":"Snow-Miku/3583083@2x.png","Snow-Miku19":"Snow-Miku/3583084@2x.png","Snow-Miku20":"Snow-Miku/3583085@2x.png","Snow-Miku21":"Snow-Miku/3583086@2x.png","Snow-Miku22":"Snow-Miku/3583087@2x.png","Snow-Miku23":"Snow-Miku/3583088@2x.png","Snow-Miku24":"Snow-Miku/3583089@2x.png","Snow-Miku25":"Snow-Miku/3583090@2x.png","Snow-Miku26":"Snow-Miku/3583091@2x.png","Snow-Miku27":"Snow-Miku/3583092@2x.png","Snow-Miku28":"Snow-Miku/3583093@2x.png","Snow-Miku29":"Snow-Miku/3583094@2x.png","Snow-Miku30":"Snow-Miku/3583095@2x.png","Snow-Miku31":"Snow-Miku/3583096@2x.png","Snow-Miku32":"Snow-Miku/3583097@2x.png","Snow-Miku33":"Snow-Miku/3583098@2x.png","Snow-Miku34":"Snow-Miku/3583099@2x.png","Snow-Miku35":"Snow-Miku/3583100@2x.png","Snow-Miku36":"Snow-Miku/3583101@2x.png","Snow-Miku37":"Snow-Miku/3583102@2x.png","Snow-Miku38":"Snow-Miku/3583103@2x.png","Snow-Miku39":"Snow-Miku/3583104@2x.png","Snow-Miku40":"Snow-Miku/3583105@2x.png"},
+      enableQQ: true,
+      path: window.location.pathname,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+    
+    if (false) {
+      const otherData = false
+      initData = Object.assign({}, initData, otherData)
+    }
+    
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script>(function(){
+  const bp = document.createElement('script');
+  const curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  bp.dataset.pjax = ''
+  const s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})()</script></div></body></html>

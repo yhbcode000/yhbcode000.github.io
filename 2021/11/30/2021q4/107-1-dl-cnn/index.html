@@ -1,0 +1,1936 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>【深度学习】基础 肆：卷积神经网络 | Yang's Harbor</title><meta name="keywords" content="学习,记录,Python,笔记,深度学习"><meta name="author" content="✨YangSier✨,hobart.yang@qq.com"><meta name="copyright" content="✨YangSier✨"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="注：封面画师：新雨林-触站 说明 本页面无手机端适配，强制缩放阅读。 使用纯html格式，保存教学用ppt，添加了部分个人笔记。 目录工作正常，可以跳转。       b{color:rgba(0,0,0,0.75)}                   卷积神经网络 卷积神经网络 卷积函数 离散卷积与多维卷积 什么是卷积神经网络 什么是卷积 卷积神经网络 卷积神经网络的用途 卷积运算 卷积运算的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【深度学习】基础 肆：卷积神经网络">
+<meta property="og:url" content="https://discover304.top/2021/11/30/2021q4/107-1-dl-cnn/index.html">
+<meta property="og:site_name" content="Yang&#39;s Harbor">
+<meta property="og:description" content="注：封面画师：新雨林-触站 说明 本页面无手机端适配，强制缩放阅读。 使用纯html格式，保存教学用ppt，添加了部分个人笔记。 目录工作正常，可以跳转。       b{color:rgba(0,0,0,0.75)}                   卷积神经网络 卷积神经网络 卷积函数 离散卷积与多维卷积 什么是卷积神经网络 什么是卷积 卷积神经网络 卷积神经网络的用途 卷积运算 卷积运算的">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300">
+<meta property="article:published_time" content="2021-11-30T11:43:07.000Z">
+<meta property="article:modified_time" content="2021-12-25T06:48:18.000Z">
+<meta property="article:author" content="✨YangSier✨">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="记录">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="深度学习">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://discover304.top/2021/11/30/2021q4/107-1-dl-cnn/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><meta name="google-site-verification" content="ilqpfk3vkgzDNNikz_V37-DOvRyi5wv4Hoi_eyBqvTg"/><meta name="msvalidate.01" content="49D9A50CCF9744E17274791468EDB517"/><meta name="baidu-site-verification" content="code-V24KosyVh1"/><meta name="360-site-verification" content="bd8859c3d74dfa3e8aeee9db30c94bd2"/><meta name="yandex-verification" content="f28ec9bbd50c56f5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?8030f6052f2fed6a4704d96619f090d6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="stylesheet" href="/css/font.css" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":200,"languages":{"author":"Author: ✨YangSier✨","link":"Link: ","source":"Source: Yang's Harbor","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#ffc910","bgDark":"#02c3f6","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: true
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
+
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-12-25 14:48:18'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Yang's Harbor" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">243</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">88</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">23</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Links</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Articles</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Yang's Harbor</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Links</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Articles</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">【深度学习】基础 肆：卷积神经网络</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-11-30T11:43:07.000Z" title="Created 2021-11-30 19:43:07">2021-11-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-12-25T06:48:18.000Z" title="Updated 2021-12-25 14:48:18">2021-12-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/NoteBook/">NoteBook</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/NoteBook/PythonNote/">PythonNote</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word count:</span><span class="word-count">3.8k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading time:</span><span>13min</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>注：封面画师：<a target="_blank" rel="noopener" href="https://www.huashi6.com/painter/27243">新雨林-触站</a></p>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
+<li>本页面无手机端适配，强制缩放阅读。</li>
+<li>使用纯html格式，保存教学用ppt，添加了部分个人笔记。</li>
+<li>目录工作正常，可以跳转。</li>
+</ul>
+<style>
+    b{color:rgba(0,0,0,0.75)}
+</style>
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1160{font-size:28px;font-family:Times;color:#404040;}
+    .ft1161{font-size:21px;font-family:Times;color:#ffffff;}
+    .ft1162{font-size:19px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page116-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target116.png" alt="background image"/>
+<p style="position:absolute;top:35px;left:84px;white-space:nowrap" class="ft1160">卷积神经网络</p>
+<p style="position:absolute;top:275px;left:102px;white-space:nowrap" class="ft1161">卷积神经网络</p>
+<p style="position:absolute;top:88px;left:445px;white-space:nowrap" class="ft1162">卷积函数</p>
+<p style="position:absolute;top:132px;left:719px;white-space:nowrap" class="ft1162">离散卷积与多维卷积</p>
+<p style="position:absolute;top:259px;left:719px;white-space:nowrap" class="ft1162">什么是卷积神经网络</p>
+<p style="position:absolute;top:88px;left:761px;white-space:nowrap" class="ft1162">什么是卷积</p>
+<p style="position:absolute;top:215px;left:424px;white-space:nowrap" class="ft1162">卷积神经网络</p>
+<p style="position:absolute;top:302px;left:719px;white-space:nowrap" class="ft1162">卷积神经网络的用途</p>
+<p style="position:absolute;top:345px;left:771px;white-space:nowrap" class="ft1162">卷积运算</p>
+<p style="position:absolute;top:391px;left:740px;white-space:nowrap" class="ft1162">卷积运算的效果</p>
+<p style="position:absolute;top:437px;left:714px;white-space:nowrap" class="ft1162">案例2：图像卷积运算</p>
+<p style="position:absolute;top:482px;left:708px;white-space:nowrap" class="ft1162">卷积运算神经网络结构</p>
+<p style="position:absolute;top:526px;left:756px;white-space:nowrap" class="ft1162">典型CNN介绍</p>
+<p style="position:absolute;top:174px;left:750px;white-space:nowrap" class="ft1162">生活中的卷积</p>
+<p style="position:absolute;top:215px;left:708px;white-space:nowrap" class="ft1162">全连接神经网络的局限</p>
+</div>
+</body>
+</html>
+
+
+<h2 id="卷积函数"><a href="#卷积函数" class="headerlink" title="卷积函数"></a>卷积函数</h2><!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1180{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1181{font-size:46px;font-family:Times;color:#252525;}
+    .ft1182{font-size:25px;font-family:Times;color:#000000;}
+    .ft1183{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft1184{font-size:25px;line-height:48px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page118-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target118.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1183">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1181">什么是卷积</p>
+<p style="position:absolute;top:142px;left:66px;white-space:nowrap" class="ft1182">•&#160;“卷积”其实是一个数学概念，它描述一个函数和另一个函数在某个维度上</p>
+<p style="position:absolute;top:190px;left:107px;white-space:nowrap" class="ft1182">的加权“叠加”作用。函数定义如下：</p>
+<p style="position:absolute;top:339px;left:111px;white-space:nowrap" class="ft1184">其中，函数&#160;f&#160;和函数&#160;g&#160;是卷积对象，a&#160;为积分变量，星号“*”表示卷积。<br/>公式所示的操作，被称为连续域上的卷积操作。这种操作通常也被简记为如<br/>下公式：</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1190{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1191{font-size:46px;font-family:Times;color:#252525;}
+    .ft1192{font-size:25px;font-family:Times;color:#000000;}
+    .ft1193{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft1194{font-size:25px;line-height:48px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page119-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target119.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1193">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1191">离散卷积与多维卷积</p>
+<p style="position:absolute;top:142px;left:66px;white-space:nowrap" class="ft1192">•&#160;一般情况下，我们并不需要记录任意时刻的数据，而是以一定的时间间隔</p>
+<p style="position:absolute;top:190px;left:107px;white-space:nowrap" class="ft1192">（也即频率）进行采样即可。对于离散信号，卷积操作可用如下表示：</p>
+<p style="position:absolute;top:339px;left:111px;white-space:nowrap" class="ft1194">当然，对于离散卷积的定义可推广到更高维度的空间上。例如，二维的公式<br/>可表示为公式：</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1200{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1201{font-size:46px;font-family:Times;color:#252525;}
+    .ft1202{font-size:25px;font-family:Times;color:#000000;}
+    .ft1203{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page120-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target120.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1203">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1201">生活中的卷积</p>
+<p style="position:absolute;top:116px;left:66px;white-space:nowrap" class="ft1202">•&#160;在一根铁丝某处不停地弯曲，假设发热函数是f(t)，散热函数是g(t)，此时此</p>
+<p style="position:absolute;top:165px;left:107px;white-space:nowrap" class="ft1202">刻的温度就是f(t)&#160;跟g(t)&#160;的卷积</p>
+<p style="position:absolute;top:213px;left:66px;white-space:nowrap" class="ft1202">•&#160;在一个特定环境下，发声体的声源函数是f(t)，该环境下对声源的反射效应函</p>
+<p style="position:absolute;top:262px;left:107px;white-space:nowrap" class="ft1202">数是g(t)，那么在这个环境下感受到的声音就是f(t)&#160;的和g(t)&#160;的卷积</p>
+<p style="position:absolute;top:311px;left:66px;white-space:nowrap" class="ft1202">•&#160;记忆也是一种卷积</p>
+</div>
+</body>
+</html>
+
+
+
+<h2 id="卷积神经网络"><a href="#卷积神经网络" class="headerlink" title="卷积神经网络"></a>卷积神经网络</h2><!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1220{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1221{font-size:46px;font-family:Times;color:#252525;}
+    .ft1222{font-size:25px;font-family:Times;color:#000000;}
+    .ft1223{font-size:21px;font-family:Times;color:#000000;}
+    .ft1224{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft1225{font-size:21px;line-height:43px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page122-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target122.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1224">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1221">全连接神经网络的局限</p>
+<p style="position:absolute;top:142px;left:66px;white-space:nowrap" class="ft1222">•&#160;之前介绍的神经网络，相邻层所有神经元之间都有连接，这称为全连接</p>
+<p style="position:absolute;top:190px;left:107px;white-space:nowrap" class="ft1222">（fully-connected）。全连接神经网络有以下几个问题：</p>
+<p style="position:absolute;top:256px;left:94px;white-space:nowrap" class="ft1225">1）未考虑数据的“形状”，会破坏数据空间结构。<br/>例如，输入数据是图像时，图像通常是高长通道<br/>方向上的3维形状。但是，向全连接层输入时，需<br/>要将3维数据拉平为1维数据。<br/>2）全连接网络层次深度受限，一般不超过七层。<br/>3）全连接网络参数量庞大，需要降低参数量。</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1230{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1231{font-size:46px;font-family:Times;color:#252525;}
+    .ft1232{font-size:25px;font-family:Times;color:#000000;}
+    .ft1233{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft1234{font-size:25px;line-height:48px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page123-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target123.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1233">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1231">什么是卷积神经网络</p>
+<p style="position:absolute;top:142px;left:66px;white-space:nowrap" class="ft1232">•&#160;卷积神经网络（Convolutional&#160;Neural&#160;Network，CNN）针对全连接网络</p>
+<p style="position:absolute;top:190px;left:107px;white-space:nowrap" class="ft1234">的局限做出了修正，加入了卷积层（Convolution层）和池化层（Pooling<br/>层）。</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1240{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1241{font-size:46px;font-family:Times;color:#252525;}
+    .ft1242{font-size:25px;font-family:Times;color:#000000;}
+    .ft1243{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft1244{font-size:25px;line-height:48px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page124-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target124.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1243">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1241">卷积神经网络的用途</p>
+<p style="position:absolute;top:142px;left:66px;white-space:nowrap" class="ft1242">•&#160;CNN被广泛应用于图像识别、语音识别等各种场合，在图像识别的比赛中，</p>
+<p style="position:absolute;top:190px;left:107px;white-space:nowrap" class="ft1244">基于深度学习的方法几乎都以CNN为基础（比如，AlexNet、VGGNet、<br/>Google&#160;Inception&#160;Net及微软的ResNet等）上。近几年深度学习大放异彩，<br/>CNN功不可没。</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1250{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1251{font-size:46px;font-family:Times;color:#000000;}
+    .ft1252{font-size:18px;font-family:Times;color:#000000;}
+    .ft1253{font-size:25px;font-family:Times;color:#000000;}
+    .ft1254{font-size:21px;font-family:Times;color:#000000;}
+    .ft1255{font-size:34px;font-family:Times;color:#000000;}
+    .ft1256{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page125-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target125.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1256">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1251">卷积运算</p>
+<p style="position:absolute;top:240px;left:156px;white-space:nowrap" class="ft1252">1</p>
+<p style="position:absolute;top:240px;left:217px;white-space:nowrap" class="ft1252">2</p>
+<p style="position:absolute;top:240px;left:278px;white-space:nowrap" class="ft1252">3</p>
+<p style="position:absolute;top:240px;left:339px;white-space:nowrap" class="ft1252">0</p>
+<p style="position:absolute;top:284px;left:156px;white-space:nowrap" class="ft1252">0</p>
+<p style="position:absolute;top:284px;left:217px;white-space:nowrap" class="ft1252">1</p>
+<p style="position:absolute;top:284px;left:278px;white-space:nowrap" class="ft1252">2</p>
+<p style="position:absolute;top:284px;left:339px;white-space:nowrap" class="ft1252">3</p>
+<p style="position:absolute;top:329px;left:156px;white-space:nowrap" class="ft1252">3</p>
+<p style="position:absolute;top:329px;left:217px;white-space:nowrap" class="ft1252">0</p>
+<p style="position:absolute;top:329px;left:278px;white-space:nowrap" class="ft1252">1</p>
+<p style="position:absolute;top:329px;left:339px;white-space:nowrap" class="ft1252">2</p>
+<p style="position:absolute;top:373px;left:156px;white-space:nowrap" class="ft1252">2</p>
+<p style="position:absolute;top:373px;left:217px;white-space:nowrap" class="ft1252">3</p>
+<p style="position:absolute;top:373px;left:278px;white-space:nowrap" class="ft1252">0</p>
+<p style="position:absolute;top:373px;left:339px;white-space:nowrap" class="ft1252">1</p>
+<p style="position:absolute;top:262px;left:498px;white-space:nowrap" class="ft1252">2</p>
+<p style="position:absolute;top:262px;left:557px;white-space:nowrap" class="ft1252">0</p>
+<p style="position:absolute;top:262px;left:616px;white-space:nowrap" class="ft1252">1</p>
+<p style="position:absolute;top:307px;left:498px;white-space:nowrap" class="ft1252">0</p>
+<p style="position:absolute;top:307px;left:557px;white-space:nowrap" class="ft1252">1</p>
+<p style="position:absolute;top:307px;left:616px;white-space:nowrap" class="ft1252">2</p>
+<p style="position:absolute;top:351px;left:498px;white-space:nowrap" class="ft1252">1</p>
+<p style="position:absolute;top:351px;left:557px;white-space:nowrap" class="ft1252">0</p>
+<p style="position:absolute;top:351px;left:616px;white-space:nowrap" class="ft1252">2</p>
+<p style="position:absolute;top:306px;left:415px;white-space:nowrap" class="ft1253">×</p>
+<p style="position:absolute;top:284px;left:801px;white-space:nowrap" class="ft1252">15</p>
+<p style="position:absolute;top:441px;left:204px;white-space:nowrap" class="ft1254"><b>输入数据</b></p>
+<p style="position:absolute;top:441px;left:466px;white-space:nowrap" class="ft1254"><b>滤波器（卷积核）</b></p>
+<p style="position:absolute;top:441px;left:794px;white-space:nowrap" class="ft1254"><b>输出数据</b></p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1255">•&#160;单通道、二维卷积运算示例</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1260{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1261{font-size:46px;font-family:Times;color:#000000;}
+    .ft1262{font-size:18px;font-family:Times;color:#000000;}
+    .ft1263{font-size:25px;font-family:Times;color:#000000;}
+    .ft1264{font-size:21px;font-family:Times;color:#000000;}
+    .ft1265{font-size:34px;font-family:Times;color:#000000;}
+    .ft1266{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page126-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target126.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1266">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1261">卷积运算（续1）</p>
+<p style="position:absolute;top:240px;left:156px;white-space:nowrap" class="ft1262">1</p>
+<p style="position:absolute;top:240px;left:217px;white-space:nowrap" class="ft1262">2</p>
+<p style="position:absolute;top:240px;left:278px;white-space:nowrap" class="ft1262">3</p>
+<p style="position:absolute;top:240px;left:339px;white-space:nowrap" class="ft1262">0</p>
+<p style="position:absolute;top:284px;left:156px;white-space:nowrap" class="ft1262">0</p>
+<p style="position:absolute;top:284px;left:217px;white-space:nowrap" class="ft1262">1</p>
+<p style="position:absolute;top:284px;left:278px;white-space:nowrap" class="ft1262">2</p>
+<p style="position:absolute;top:284px;left:339px;white-space:nowrap" class="ft1262">3</p>
+<p style="position:absolute;top:329px;left:156px;white-space:nowrap" class="ft1262">3</p>
+<p style="position:absolute;top:329px;left:217px;white-space:nowrap" class="ft1262">0</p>
+<p style="position:absolute;top:329px;left:278px;white-space:nowrap" class="ft1262">1</p>
+<p style="position:absolute;top:329px;left:339px;white-space:nowrap" class="ft1262">2</p>
+<p style="position:absolute;top:373px;left:156px;white-space:nowrap" class="ft1262">2</p>
+<p style="position:absolute;top:373px;left:217px;white-space:nowrap" class="ft1262">3</p>
+<p style="position:absolute;top:373px;left:278px;white-space:nowrap" class="ft1262">0</p>
+<p style="position:absolute;top:373px;left:339px;white-space:nowrap" class="ft1262">1</p>
+<p style="position:absolute;top:262px;left:498px;white-space:nowrap" class="ft1262">2</p>
+<p style="position:absolute;top:262px;left:557px;white-space:nowrap" class="ft1262">0</p>
+<p style="position:absolute;top:262px;left:616px;white-space:nowrap" class="ft1262">1</p>
+<p style="position:absolute;top:307px;left:498px;white-space:nowrap" class="ft1262">0</p>
+<p style="position:absolute;top:307px;left:557px;white-space:nowrap" class="ft1262">1</p>
+<p style="position:absolute;top:307px;left:616px;white-space:nowrap" class="ft1262">2</p>
+<p style="position:absolute;top:351px;left:498px;white-space:nowrap" class="ft1262">1</p>
+<p style="position:absolute;top:351px;left:557px;white-space:nowrap" class="ft1262">0</p>
+<p style="position:absolute;top:351px;left:616px;white-space:nowrap" class="ft1262">2</p>
+<p style="position:absolute;top:306px;left:415px;white-space:nowrap" class="ft1263">×</p>
+<p style="position:absolute;top:284px;left:801px;white-space:nowrap" class="ft1262">15</p>
+<p style="position:absolute;top:284px;left:858px;white-space:nowrap" class="ft1262">16</p>
+<p style="position:absolute;top:441px;left:204px;white-space:nowrap" class="ft1264"><b>输入数据</b></p>
+<p style="position:absolute;top:441px;left:466px;white-space:nowrap" class="ft1264"><b>滤波器（卷积核）</b></p>
+<p style="position:absolute;top:441px;left:794px;white-space:nowrap" class="ft1264"><b>输出数据</b></p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1265">•&#160;单通道、二维卷积运算示例</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1270{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1271{font-size:46px;font-family:Times;color:#000000;}
+    .ft1272{font-size:34px;font-family:Times;color:#000000;}
+    .ft1273{font-size:18px;font-family:Times;color:#000000;}
+    .ft1274{font-size:25px;font-family:Times;color:#000000;}
+    .ft1275{font-size:21px;font-family:Times;color:#000000;}
+    .ft1276{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page127-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target127.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1276">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1271">卷积运算（续2）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1272">•&#160;单通道、二维卷积运算示例</p>
+<p style="position:absolute;top:240px;left:156px;white-space:nowrap" class="ft1273">1</p>
+<p style="position:absolute;top:240px;left:217px;white-space:nowrap" class="ft1273">2</p>
+<p style="position:absolute;top:240px;left:278px;white-space:nowrap" class="ft1273">3</p>
+<p style="position:absolute;top:240px;left:339px;white-space:nowrap" class="ft1273">0</p>
+<p style="position:absolute;top:284px;left:156px;white-space:nowrap" class="ft1273">0</p>
+<p style="position:absolute;top:284px;left:217px;white-space:nowrap" class="ft1273">1</p>
+<p style="position:absolute;top:284px;left:278px;white-space:nowrap" class="ft1273">2</p>
+<p style="position:absolute;top:284px;left:339px;white-space:nowrap" class="ft1273">3</p>
+<p style="position:absolute;top:329px;left:156px;white-space:nowrap" class="ft1273">3</p>
+<p style="position:absolute;top:329px;left:217px;white-space:nowrap" class="ft1273">0</p>
+<p style="position:absolute;top:329px;left:278px;white-space:nowrap" class="ft1273">1</p>
+<p style="position:absolute;top:329px;left:339px;white-space:nowrap" class="ft1273">2</p>
+<p style="position:absolute;top:373px;left:156px;white-space:nowrap" class="ft1273">2</p>
+<p style="position:absolute;top:373px;left:217px;white-space:nowrap" class="ft1273">3</p>
+<p style="position:absolute;top:373px;left:278px;white-space:nowrap" class="ft1273">0</p>
+<p style="position:absolute;top:373px;left:339px;white-space:nowrap" class="ft1273">1</p>
+<p style="position:absolute;top:262px;left:498px;white-space:nowrap" class="ft1273">2</p>
+<p style="position:absolute;top:262px;left:557px;white-space:nowrap" class="ft1273">0</p>
+<p style="position:absolute;top:262px;left:616px;white-space:nowrap" class="ft1273">1</p>
+<p style="position:absolute;top:307px;left:498px;white-space:nowrap" class="ft1273">0</p>
+<p style="position:absolute;top:307px;left:557px;white-space:nowrap" class="ft1273">1</p>
+<p style="position:absolute;top:307px;left:616px;white-space:nowrap" class="ft1273">2</p>
+<p style="position:absolute;top:351px;left:498px;white-space:nowrap" class="ft1273">1</p>
+<p style="position:absolute;top:351px;left:557px;white-space:nowrap" class="ft1273">0</p>
+<p style="position:absolute;top:351px;left:616px;white-space:nowrap" class="ft1273">2</p>
+<p style="position:absolute;top:306px;left:415px;white-space:nowrap" class="ft1274">×</p>
+<p style="position:absolute;top:284px;left:801px;white-space:nowrap" class="ft1273">15</p>
+<p style="position:absolute;top:284px;left:858px;white-space:nowrap" class="ft1273">16</p>
+<p style="position:absolute;top:329px;left:806px;white-space:nowrap" class="ft1273">6</p>
+<p style="position:absolute;top:441px;left:204px;white-space:nowrap" class="ft1275"><b>输入数据</b></p>
+<p style="position:absolute;top:441px;left:466px;white-space:nowrap" class="ft1275"><b>滤波器（卷积核）</b></p>
+<p style="position:absolute;top:441px;left:794px;white-space:nowrap" class="ft1275"><b>输出数据</b></p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1280{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1281{font-size:46px;font-family:Times;color:#000000;}
+    .ft1282{font-size:34px;font-family:Times;color:#000000;}
+    .ft1283{font-size:18px;font-family:Times;color:#000000;}
+    .ft1284{font-size:25px;font-family:Times;color:#000000;}
+    .ft1285{font-size:21px;font-family:Times;color:#000000;}
+    .ft1286{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page128-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target128.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1286">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1281">卷积运算（续3）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1282">•&#160;单通道、二维卷积运算示例</p>
+<p style="position:absolute;top:240px;left:156px;white-space:nowrap" class="ft1283">1</p>
+<p style="position:absolute;top:240px;left:217px;white-space:nowrap" class="ft1283">2</p>
+<p style="position:absolute;top:240px;left:278px;white-space:nowrap" class="ft1283">3</p>
+<p style="position:absolute;top:240px;left:339px;white-space:nowrap" class="ft1283">0</p>
+<p style="position:absolute;top:284px;left:156px;white-space:nowrap" class="ft1283">0</p>
+<p style="position:absolute;top:284px;left:217px;white-space:nowrap" class="ft1283">1</p>
+<p style="position:absolute;top:284px;left:278px;white-space:nowrap" class="ft1283">2</p>
+<p style="position:absolute;top:284px;left:339px;white-space:nowrap" class="ft1283">3</p>
+<p style="position:absolute;top:329px;left:156px;white-space:nowrap" class="ft1283">3</p>
+<p style="position:absolute;top:329px;left:217px;white-space:nowrap" class="ft1283">0</p>
+<p style="position:absolute;top:329px;left:278px;white-space:nowrap" class="ft1283">1</p>
+<p style="position:absolute;top:329px;left:339px;white-space:nowrap" class="ft1283">2</p>
+<p style="position:absolute;top:373px;left:156px;white-space:nowrap" class="ft1283">2</p>
+<p style="position:absolute;top:373px;left:217px;white-space:nowrap" class="ft1283">3</p>
+<p style="position:absolute;top:373px;left:278px;white-space:nowrap" class="ft1283">0</p>
+<p style="position:absolute;top:373px;left:339px;white-space:nowrap" class="ft1283">1</p>
+<p style="position:absolute;top:262px;left:498px;white-space:nowrap" class="ft1283">2</p>
+<p style="position:absolute;top:262px;left:557px;white-space:nowrap" class="ft1283">0</p>
+<p style="position:absolute;top:262px;left:616px;white-space:nowrap" class="ft1283">1</p>
+<p style="position:absolute;top:307px;left:498px;white-space:nowrap" class="ft1283">0</p>
+<p style="position:absolute;top:307px;left:557px;white-space:nowrap" class="ft1283">1</p>
+<p style="position:absolute;top:307px;left:616px;white-space:nowrap" class="ft1283">2</p>
+<p style="position:absolute;top:351px;left:498px;white-space:nowrap" class="ft1283">1</p>
+<p style="position:absolute;top:351px;left:557px;white-space:nowrap" class="ft1283">0</p>
+<p style="position:absolute;top:351px;left:616px;white-space:nowrap" class="ft1283">2</p>
+<p style="position:absolute;top:306px;left:415px;white-space:nowrap" class="ft1284">×</p>
+<p style="position:absolute;top:284px;left:801px;white-space:nowrap" class="ft1283">15</p>
+<p style="position:absolute;top:284px;left:858px;white-space:nowrap" class="ft1283">16</p>
+<p style="position:absolute;top:329px;left:806px;white-space:nowrap" class="ft1283">6</p>
+<p style="position:absolute;top:329px;left:858px;white-space:nowrap" class="ft1283">15</p>
+<p style="position:absolute;top:441px;left:204px;white-space:nowrap" class="ft1285"><b>输入数据</b></p>
+<p style="position:absolute;top:441px;left:466px;white-space:nowrap" class="ft1285"><b>滤波器（卷积核）</b></p>
+<p style="position:absolute;top:441px;left:794px;white-space:nowrap" class="ft1285"><b>输出数据</b></p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1290{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1291{font-size:46px;font-family:Times;color:#000000;}
+    .ft1292{font-size:34px;font-family:Times;color:#000000;}
+    .ft1293{font-size:18px;font-family:Times;color:#000000;}
+    .ft1294{font-size:25px;font-family:Times;color:#000000;}
+    .ft1295{font-size:21px;font-family:Times;color:#000000;}
+    .ft1296{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page129-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target129.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1296">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1291">卷积运算（续4）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1292">•&#160;单通道、二维、带偏置的卷积运算示例</p>
+<p style="position:absolute;top:240px;left:122px;white-space:nowrap" class="ft1293">1</p>
+<p style="position:absolute;top:240px;left:183px;white-space:nowrap" class="ft1293">2</p>
+<p style="position:absolute;top:240px;left:244px;white-space:nowrap" class="ft1293">3</p>
+<p style="position:absolute;top:240px;left:305px;white-space:nowrap" class="ft1293">0</p>
+<p style="position:absolute;top:284px;left:122px;white-space:nowrap" class="ft1293">0</p>
+<p style="position:absolute;top:284px;left:183px;white-space:nowrap" class="ft1293">1</p>
+<p style="position:absolute;top:284px;left:244px;white-space:nowrap" class="ft1293">2</p>
+<p style="position:absolute;top:284px;left:305px;white-space:nowrap" class="ft1293">3</p>
+<p style="position:absolute;top:329px;left:122px;white-space:nowrap" class="ft1293">3</p>
+<p style="position:absolute;top:329px;left:183px;white-space:nowrap" class="ft1293">0</p>
+<p style="position:absolute;top:329px;left:244px;white-space:nowrap" class="ft1293">1</p>
+<p style="position:absolute;top:329px;left:305px;white-space:nowrap" class="ft1293">2</p>
+<p style="position:absolute;top:373px;left:122px;white-space:nowrap" class="ft1293">2</p>
+<p style="position:absolute;top:373px;left:183px;white-space:nowrap" class="ft1293">3</p>
+<p style="position:absolute;top:373px;left:244px;white-space:nowrap" class="ft1293">0</p>
+<p style="position:absolute;top:373px;left:305px;white-space:nowrap" class="ft1293">1</p>
+<p style="position:absolute;top:262px;left:439px;white-space:nowrap" class="ft1293">2</p>
+<p style="position:absolute;top:262px;left:498px;white-space:nowrap" class="ft1293">0</p>
+<p style="position:absolute;top:262px;left:557px;white-space:nowrap" class="ft1293">1</p>
+<p style="position:absolute;top:307px;left:439px;white-space:nowrap" class="ft1293">0</p>
+<p style="position:absolute;top:307px;left:498px;white-space:nowrap" class="ft1293">1</p>
+<p style="position:absolute;top:307px;left:557px;white-space:nowrap" class="ft1293">2</p>
+<p style="position:absolute;top:351px;left:439px;white-space:nowrap" class="ft1293">1</p>
+<p style="position:absolute;top:351px;left:498px;white-space:nowrap" class="ft1293">0</p>
+<p style="position:absolute;top:351px;left:557px;white-space:nowrap" class="ft1293">2</p>
+<p style="position:absolute;top:306px;left:364px;white-space:nowrap" class="ft1294">×</p>
+<p style="position:absolute;top:284px;left:852px;white-space:nowrap" class="ft1293">18</p>
+<p style="position:absolute;top:284px;left:909px;white-space:nowrap" class="ft1293">19</p>
+<p style="position:absolute;top:329px;left:857px;white-space:nowrap" class="ft1293">9</p>
+<p style="position:absolute;top:329px;left:909px;white-space:nowrap" class="ft1293">18</p>
+<p style="position:absolute;top:441px;left:171px;white-space:nowrap" class="ft1295"><b>输入数据</b></p>
+<p style="position:absolute;top:441px;left:407px;white-space:nowrap" class="ft1295"><b>滤波器（卷积核）</b></p>
+<p style="position:absolute;top:441px;left:845px;white-space:nowrap" class="ft1295"><b>输出数据</b></p>
+<p style="position:absolute;top:302px;left:626px;white-space:nowrap" class="ft1294">+</p>
+<p style="position:absolute;top:301px;left:701px;white-space:nowrap" class="ft1293">3</p>
+<p style="position:absolute;top:441px;left:688px;white-space:nowrap" class="ft1295"><b>偏置</b></p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1300{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1301{font-size:46px;font-family:Times;color:#000000;}
+    .ft1302{font-size:34px;font-family:Times;color:#000000;}
+    .ft1303{font-size:18px;font-family:Times;color:#ff0000;}
+    .ft1304{font-size:18px;font-family:Times;color:#000000;}
+    .ft1305{font-size:25px;font-family:Times;color:#000000;}
+    .ft1306{font-size:21px;font-family:Times;color:#000000;}
+    .ft1307{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page130-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target130.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1307">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1301">卷积运算（续5）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1302">•&#160;带填充（padding）的单通道、二维卷积运算示例</p>
+<p style="position:absolute;top:211px;left:145px;white-space:nowrap" class="ft1303">0</p>
+<p style="position:absolute;top:211px;left:186px;white-space:nowrap" class="ft1303">0</p>
+<p style="position:absolute;top:211px;left:227px;white-space:nowrap" class="ft1303">0</p>
+<p style="position:absolute;top:211px;left:268px;white-space:nowrap" class="ft1303">0</p>
+<p style="position:absolute;top:211px;left:308px;white-space:nowrap" class="ft1303">0</p>
+<p style="position:absolute;top:211px;left:349px;white-space:nowrap" class="ft1303">0</p>
+<p style="position:absolute;top:247px;left:145px;white-space:nowrap" class="ft1303">0</p>
+<p style="position:absolute;top:247px;left:186px;white-space:nowrap" class="ft1304">1</p>
+<p style="position:absolute;top:247px;left:227px;white-space:nowrap" class="ft1304">2</p>
+<p style="position:absolute;top:247px;left:268px;white-space:nowrap" class="ft1304">3</p>
+<p style="position:absolute;top:247px;left:308px;white-space:nowrap" class="ft1304">0</p>
+<p style="position:absolute;top:247px;left:349px;white-space:nowrap" class="ft1303">0</p>
+<p style="position:absolute;top:284px;left:145px;white-space:nowrap" class="ft1303">0</p>
+<p style="position:absolute;top:284px;left:186px;white-space:nowrap" class="ft1304">0</p>
+<p style="position:absolute;top:284px;left:227px;white-space:nowrap" class="ft1304">1</p>
+<p style="position:absolute;top:284px;left:268px;white-space:nowrap" class="ft1304">2</p>
+<p style="position:absolute;top:284px;left:308px;white-space:nowrap" class="ft1304">3</p>
+<p style="position:absolute;top:284px;left:349px;white-space:nowrap" class="ft1303">0</p>
+<p style="position:absolute;top:320px;left:145px;white-space:nowrap" class="ft1303">0</p>
+<p style="position:absolute;top:320px;left:186px;white-space:nowrap" class="ft1304">3</p>
+<p style="position:absolute;top:320px;left:227px;white-space:nowrap" class="ft1304">0</p>
+<p style="position:absolute;top:320px;left:268px;white-space:nowrap" class="ft1304">1</p>
+<p style="position:absolute;top:320px;left:308px;white-space:nowrap" class="ft1304">2</p>
+<p style="position:absolute;top:320px;left:349px;white-space:nowrap" class="ft1303">0</p>
+<p style="position:absolute;top:356px;left:145px;white-space:nowrap" class="ft1303">0</p>
+<p style="position:absolute;top:356px;left:186px;white-space:nowrap" class="ft1304">2</p>
+<p style="position:absolute;top:356px;left:227px;white-space:nowrap" class="ft1304">3</p>
+<p style="position:absolute;top:356px;left:268px;white-space:nowrap" class="ft1304">0</p>
+<p style="position:absolute;top:356px;left:308px;white-space:nowrap" class="ft1304">1</p>
+<p style="position:absolute;top:356px;left:349px;white-space:nowrap" class="ft1303">0</p>
+<p style="position:absolute;top:393px;left:145px;white-space:nowrap" class="ft1303">0</p>
+<p style="position:absolute;top:393px;left:186px;white-space:nowrap" class="ft1303">0</p>
+<p style="position:absolute;top:393px;left:227px;white-space:nowrap" class="ft1303">0</p>
+<p style="position:absolute;top:393px;left:268px;white-space:nowrap" class="ft1303">0</p>
+<p style="position:absolute;top:393px;left:308px;white-space:nowrap" class="ft1303">0</p>
+<p style="position:absolute;top:393px;left:349px;white-space:nowrap" class="ft1303">0</p>
+<p style="position:absolute;top:262px;left:498px;white-space:nowrap" class="ft1304">2</p>
+<p style="position:absolute;top:262px;left:557px;white-space:nowrap" class="ft1304">0</p>
+<p style="position:absolute;top:262px;left:616px;white-space:nowrap" class="ft1304">1</p>
+<p style="position:absolute;top:307px;left:498px;white-space:nowrap" class="ft1304">0</p>
+<p style="position:absolute;top:307px;left:557px;white-space:nowrap" class="ft1304">1</p>
+<p style="position:absolute;top:307px;left:616px;white-space:nowrap" class="ft1304">2</p>
+<p style="position:absolute;top:351px;left:498px;white-space:nowrap" class="ft1304">1</p>
+<p style="position:absolute;top:351px;left:557px;white-space:nowrap" class="ft1304">0</p>
+<p style="position:absolute;top:351px;left:616px;white-space:nowrap" class="ft1304">2</p>
+<p style="position:absolute;top:306px;left:415px;white-space:nowrap" class="ft1305">×</p>
+<p style="position:absolute;top:478px;left:120px;white-space:nowrap" class="ft1306"><b>输入数据（padding:1）</b></p>
+<p style="position:absolute;top:483px;left:466px;white-space:nowrap" class="ft1306"><b>滤波器（卷积核）</b></p>
+<p style="position:absolute;top:483px;left:794px;white-space:nowrap" class="ft1306"><b>输出数据</b></p>
+<p style="position:absolute;top:245px;left:787px;white-space:nowrap" class="ft1304">7</p>
+<p style="position:absolute;top:245px;left:831px;white-space:nowrap" class="ft1304">12</p>
+<p style="position:absolute;top:245px;left:879px;white-space:nowrap" class="ft1304">10</p>
+<p style="position:absolute;top:245px;left:933px;white-space:nowrap" class="ft1304">2</p>
+<p style="position:absolute;top:286px;left:787px;white-space:nowrap" class="ft1304">4</p>
+<p style="position:absolute;top:286px;left:831px;white-space:nowrap" class="ft1304">15</p>
+<p style="position:absolute;top:286px;left:879px;white-space:nowrap" class="ft1304">16</p>
+<p style="position:absolute;top:286px;left:928px;white-space:nowrap" class="ft1304">10</p>
+<p style="position:absolute;top:327px;left:782px;white-space:nowrap" class="ft1304">10</p>
+<p style="position:absolute;top:327px;left:836px;white-space:nowrap" class="ft1304">6</p>
+<p style="position:absolute;top:327px;left:879px;white-space:nowrap" class="ft1304">15</p>
+<p style="position:absolute;top:327px;left:933px;white-space:nowrap" class="ft1304">6</p>
+<p style="position:absolute;top:369px;left:787px;white-space:nowrap" class="ft1304">8</p>
+<p style="position:absolute;top:369px;left:831px;white-space:nowrap" class="ft1304">10</p>
+<p style="position:absolute;top:369px;left:885px;white-space:nowrap" class="ft1304">4</p>
+<p style="position:absolute;top:369px;left:933px;white-space:nowrap" class="ft1304">3</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1310{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1311{font-size:46px;font-family:Times;color:#000000;}
+    .ft1312{font-size:34px;font-family:Times;color:#000000;}
+    .ft1313{font-size:12px;font-family:Times;color:#000000;}
+    .ft1314{font-size:18px;font-family:Times;color:#000000;}
+    .ft1315{font-size:25px;font-family:Times;color:#000000;}
+    .ft1316{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page131-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target131.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1316">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1311">卷积运算（续6）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1312">•&#160;步幅（stride）为2的卷积运算示例</p>
+<p style="position:absolute;top:215px;left:170px;white-space:nowrap" class="ft1313">1</p>
+<p style="position:absolute;top:215px;left:204px;white-space:nowrap" class="ft1313">2</p>
+<p style="position:absolute;top:215px;left:238px;white-space:nowrap" class="ft1313">3</p>
+<p style="position:absolute;top:215px;left:271px;white-space:nowrap" class="ft1313">0</p>
+<p style="position:absolute;top:215px;left:305px;white-space:nowrap" class="ft1313">1</p>
+<p style="position:absolute;top:244px;left:170px;white-space:nowrap" class="ft1313">0</p>
+<p style="position:absolute;top:244px;left:204px;white-space:nowrap" class="ft1313">1</p>
+<p style="position:absolute;top:244px;left:238px;white-space:nowrap" class="ft1313">2</p>
+<p style="position:absolute;top:244px;left:271px;white-space:nowrap" class="ft1313">3</p>
+<p style="position:absolute;top:244px;left:305px;white-space:nowrap" class="ft1313">0</p>
+<p style="position:absolute;top:273px;left:170px;white-space:nowrap" class="ft1313">3</p>
+<p style="position:absolute;top:273px;left:204px;white-space:nowrap" class="ft1313">0</p>
+<p style="position:absolute;top:273px;left:238px;white-space:nowrap" class="ft1313">1</p>
+<p style="position:absolute;top:273px;left:271px;white-space:nowrap" class="ft1313">2</p>
+<p style="position:absolute;top:273px;left:305px;white-space:nowrap" class="ft1313">3</p>
+<p style="position:absolute;top:302px;left:170px;white-space:nowrap" class="ft1313">2</p>
+<p style="position:absolute;top:302px;left:204px;white-space:nowrap" class="ft1313">3</p>
+<p style="position:absolute;top:302px;left:238px;white-space:nowrap" class="ft1313">0</p>
+<p style="position:absolute;top:302px;left:271px;white-space:nowrap" class="ft1313">1</p>
+<p style="position:absolute;top:302px;left:305px;white-space:nowrap" class="ft1313">2</p>
+<p style="position:absolute;top:332px;left:170px;white-space:nowrap" class="ft1313">1</p>
+<p style="position:absolute;top:332px;left:204px;white-space:nowrap" class="ft1313">2</p>
+<p style="position:absolute;top:332px;left:238px;white-space:nowrap" class="ft1313">3</p>
+<p style="position:absolute;top:332px;left:271px;white-space:nowrap" class="ft1313">0</p>
+<p style="position:absolute;top:332px;left:305px;white-space:nowrap" class="ft1313">1</p>
+<p style="position:absolute;top:235px;left:475px;white-space:nowrap" class="ft1314">2</p>
+<p style="position:absolute;top:235px;left:516px;white-space:nowrap" class="ft1314">0</p>
+<p style="position:absolute;top:235px;left:558px;white-space:nowrap" class="ft1314">1</p>
+<p style="position:absolute;top:270px;left:475px;white-space:nowrap" class="ft1314">0</p>
+<p style="position:absolute;top:270px;left:516px;white-space:nowrap" class="ft1314">1</p>
+<p style="position:absolute;top:270px;left:558px;white-space:nowrap" class="ft1314">2</p>
+<p style="position:absolute;top:306px;left:475px;white-space:nowrap" class="ft1314">1</p>
+<p style="position:absolute;top:306px;left:516px;white-space:nowrap" class="ft1314">0</p>
+<p style="position:absolute;top:306px;left:558px;white-space:nowrap" class="ft1314">2</p>
+<p style="position:absolute;top:270px;left:384px;white-space:nowrap" class="ft1315">×</p>
+<p style="position:absolute;top:250px;left:806px;white-space:nowrap" class="ft1314">15</p>
+<p style="position:absolute;top:409px;left:170px;white-space:nowrap" class="ft1313">1</p>
+<p style="position:absolute;top:409px;left:204px;white-space:nowrap" class="ft1313">2</p>
+<p style="position:absolute;top:409px;left:238px;white-space:nowrap" class="ft1313">3</p>
+<p style="position:absolute;top:409px;left:271px;white-space:nowrap" class="ft1313">0</p>
+<p style="position:absolute;top:409px;left:305px;white-space:nowrap" class="ft1313">1</p>
+<p style="position:absolute;top:438px;left:170px;white-space:nowrap" class="ft1313">0</p>
+<p style="position:absolute;top:438px;left:204px;white-space:nowrap" class="ft1313">1</p>
+<p style="position:absolute;top:438px;left:238px;white-space:nowrap" class="ft1313">2</p>
+<p style="position:absolute;top:438px;left:271px;white-space:nowrap" class="ft1313">3</p>
+<p style="position:absolute;top:438px;left:305px;white-space:nowrap" class="ft1313">0</p>
+<p style="position:absolute;top:466px;left:170px;white-space:nowrap" class="ft1313">3</p>
+<p style="position:absolute;top:466px;left:204px;white-space:nowrap" class="ft1313">0</p>
+<p style="position:absolute;top:466px;left:238px;white-space:nowrap" class="ft1313">1</p>
+<p style="position:absolute;top:466px;left:271px;white-space:nowrap" class="ft1313">2</p>
+<p style="position:absolute;top:466px;left:305px;white-space:nowrap" class="ft1313">3</p>
+<p style="position:absolute;top:495px;left:170px;white-space:nowrap" class="ft1313">2</p>
+<p style="position:absolute;top:495px;left:204px;white-space:nowrap" class="ft1313">3</p>
+<p style="position:absolute;top:495px;left:238px;white-space:nowrap" class="ft1313">0</p>
+<p style="position:absolute;top:495px;left:271px;white-space:nowrap" class="ft1313">1</p>
+<p style="position:absolute;top:495px;left:305px;white-space:nowrap" class="ft1313">2</p>
+<p style="position:absolute;top:526px;left:170px;white-space:nowrap" class="ft1313">1</p>
+<p style="position:absolute;top:526px;left:204px;white-space:nowrap" class="ft1313">2</p>
+<p style="position:absolute;top:526px;left:238px;white-space:nowrap" class="ft1313">3</p>
+<p style="position:absolute;top:526px;left:271px;white-space:nowrap" class="ft1313">0</p>
+<p style="position:absolute;top:526px;left:305px;white-space:nowrap" class="ft1313">1</p>
+<p style="position:absolute;top:429px;left:475px;white-space:nowrap" class="ft1314">2</p>
+<p style="position:absolute;top:429px;left:516px;white-space:nowrap" class="ft1314">0</p>
+<p style="position:absolute;top:429px;left:558px;white-space:nowrap" class="ft1314">1</p>
+<p style="position:absolute;top:464px;left:475px;white-space:nowrap" class="ft1314">0</p>
+<p style="position:absolute;top:464px;left:516px;white-space:nowrap" class="ft1314">1</p>
+<p style="position:absolute;top:464px;left:558px;white-space:nowrap" class="ft1314">2</p>
+<p style="position:absolute;top:499px;left:475px;white-space:nowrap" class="ft1314">1</p>
+<p style="position:absolute;top:499px;left:516px;white-space:nowrap" class="ft1314">0</p>
+<p style="position:absolute;top:499px;left:558px;white-space:nowrap" class="ft1314">2</p>
+<p style="position:absolute;top:464px;left:384px;white-space:nowrap" class="ft1315">×</p>
+<p style="position:absolute;top:443px;left:806px;white-space:nowrap" class="ft1314">15</p>
+<p style="position:absolute;top:443px;left:855px;white-space:nowrap" class="ft1314">17</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1320{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1321{font-size:46px;font-family:Times;color:#000000;}
+    .ft1322{font-size:25px;font-family:Times;color:#000000;}
+    .ft1323{font-size:21px;font-family:Times;color:#000000;}
+    .ft1324{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft1325{font-size:21px;line-height:43px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page132-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target132.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1324">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1321">卷积运算（续7）</p>
+<p style="position:absolute;top:142px;left:66px;white-space:nowrap" class="ft1322">•&#160;卷积运算输出矩阵大小计算公式</p>
+<p style="position:absolute;top:318px;left:112px;white-space:nowrap" class="ft1325">其中，输入大小为(H,&#160;W)，滤波器大小为(FH,&#160;FW)，输出大小为(OH,&#160;OW)，填<br/>充为P，步幅为S。例如：输入大小（28,31）；填充2；步幅3；滤波器大小<br/>(5,5)，则输出矩阵大小为：</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1330{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1331{font-size:46px;font-family:Times;color:#000000;}
+    .ft1332{font-size:25px;font-family:Times;color:#252525;}
+    .ft1333{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page133-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target133.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1333">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1331">卷积运算（续8）</p>
+<p style="position:absolute;top:101px;left:66px;white-space:nowrap" class="ft1332">•&#160;多通道卷积会按通道进行输入数据和滤波器的卷积运算，并将结果相加，</p>
+<p style="position:absolute;top:145px;left:96px;white-space:nowrap" class="ft1332">从而得到输出</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1340{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1341{font-size:46px;font-family:Times;color:#000000;}
+    .ft1342{font-size:34px;font-family:Times;color:#252525;}
+    .ft1343{font-size:19px;font-family:Times;color:#252525;}
+    .ft1344{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft1345{font-size:19px;line-height:37px;font-family:Times;color:#252525;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page134-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target134.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1344">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1341">卷积运算（续9）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1342">•&#160;多通道、多卷积核卷积</p>
+<p style="position:absolute;top:182px;left:110px;white-space:nowrap" class="ft1343">ü</p>
+<p style="position:absolute;top:179px;left:140px;white-space:nowrap" class="ft1345">每个通道先与第一组卷积核执行卷<br/>积，然后多通道结果叠加，产生一<br/>个输出</p>
+<p style="position:absolute;top:296px;left:110px;white-space:nowrap" class="ft1343">ü</p>
+<p style="position:absolute;top:293px;left:140px;white-space:nowrap" class="ft1345">每个通道与下一组卷积核执行卷积，<br/>产生另一个输出</p>
+<p style="position:absolute;top:371px;left:110px;white-space:nowrap" class="ft1343">ü</p>
+<p style="position:absolute;top:368px;left:140px;white-space:nowrap" class="ft1345">有多少组卷积核，就有多少个通道<br/>输出（如右图，两组卷积核，产生<br/>两个通道的输出数据）</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1350{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1351{font-size:46px;font-family:Times;color:#252525;}
+    .ft1352{font-size:25px;font-family:Times;color:#000000;}
+    .ft1353{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page135-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target135.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1353">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1351">卷积运算的效果</p>
+<p style="position:absolute;top:142px;left:66px;white-space:nowrap" class="ft1352">•&#160;通过卷积运算，能对输入数据起到加强或平滑效果。在图像处理中，通过选取</p>
+<p style="position:absolute;top:190px;left:107px;white-space:nowrap" class="ft1352">合适的卷积核（或称算子），可以对图像进行锐化、去噪、模糊、加强边沿。</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1360{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1361{font-size:46px;font-family:Times;color:#252525;}
+    .ft1362{font-size:25px;font-family:Times;color:#000000;}
+    .ft1363{font-size:19px;font-family:Times;color:#000000;}
+    .ft1364{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page136-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target136.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1364">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1361">卷积运算的效果（续1）</p>
+<p style="position:absolute;top:142px;left:66px;white-space:nowrap" class="ft1362">•&#160;卷积运算能提取深层次复杂特征</p>
+<p style="position:absolute;top:469px;left:263px;white-space:nowrap" class="ft1363">纹理相似性</p>
+<p style="position:absolute;top:469px;left:692px;white-space:nowrap" class="ft1363">复杂环境下提取主体</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1370{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1371{font-size:46px;font-family:Times;color:#252525;}
+    .ft1372{font-size:25px;font-family:Times;color:#000000;}
+    .ft1373{font-size:19px;font-family:Times;color:#000000;}
+    .ft1374{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page137-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target137.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1374">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1371">卷积运算的效果（续2）</p>
+<p style="position:absolute;top:142px;left:66px;white-space:nowrap" class="ft1372">•&#160;卷积运算能提取深层次复杂特征</p>
+<p style="position:absolute;top:461px;left:267px;white-space:nowrap" class="ft1373">形态变化</p>
+<p style="position:absolute;top:461px;left:621px;white-space:nowrap" class="ft1373">无关场景，卷积效果集中于草地背景</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1380{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1381{font-size:39px;font-family:Times;color:#000000;}
+    .ft1382{font-size:39px;font-family:Times;color:#252525;}
+    .ft1383{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page138-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target138.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1383">课<br/>堂<br/>练<br/>习</p>
+<p style="position:absolute;top:33px;left:78px;white-space:nowrap" class="ft1381">案例2：</p>
+<p style="position:absolute;top:33px;left:226px;white-space:nowrap" class="ft1382">图像卷积运算</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1390{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1391{font-size:39px;font-family:Times;color:#000000;}
+    .ft1392{font-size:39px;font-family:Times;color:#252525;}
+    .ft1393{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page139-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target139.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1393">课<br/>堂<br/>练<br/>习</p>
+<p style="position:absolute;top:33px;left:86px;white-space:nowrap" class="ft1391">案例2：</p>
+<p style="position:absolute;top:33px;left:233px;white-space:nowrap" class="ft1392">图像卷积运算（续）</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1400{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1401{font-size:46px;font-family:Times;color:#252525;}
+    .ft1402{font-size:34px;font-family:Times;color:#000000;}
+    .ft1403{font-size:25px;font-family:Times;color:#000000;}
+    .ft1404{font-size:21px;font-family:Times;color:#ffffff;}
+    .ft1405{font-size:19px;font-family:Times;color:#000000;}
+    .ft1406{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft1407{font-size:25px;line-height:48px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page140-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target140.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1406">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1401">卷积神经网络结构</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1402">•&#160;总体结构</p>
+<p style="position:absolute;top:170px;left:104px;white-space:nowrap" class="ft1407">通常情况下，卷积神经网络由若干个卷积层（Convolutional&#160;Layer）、激活<br/>层（Activation&#160;Layer）、池化层（Pooling&#160;Layer）及全连接层（Fully&#160;<br/>Connected&#160;Layer）组成。</p>
+<p style="position:absolute;top:388px;left:256px;white-space:nowrap" class="ft1404">卷</p>
+<p style="position:absolute;top:417px;left:256px;white-space:nowrap" class="ft1404">积</p>
+<p style="position:absolute;top:446px;left:256px;white-space:nowrap" class="ft1404">层</p>
+<p style="position:absolute;top:388px;left:332px;white-space:nowrap" class="ft1404">激</p>
+<p style="position:absolute;top:417px;left:332px;white-space:nowrap" class="ft1404">活</p>
+<p style="position:absolute;top:446px;left:332px;white-space:nowrap" class="ft1404">层</p>
+<p style="position:absolute;top:388px;left:407px;white-space:nowrap" class="ft1404">池</p>
+<p style="position:absolute;top:417px;left:407px;white-space:nowrap" class="ft1404">化</p>
+<p style="position:absolute;top:446px;left:407px;white-space:nowrap" class="ft1404">层</p>
+<p style="position:absolute;top:388px;left:540px;white-space:nowrap" class="ft1404">卷</p>
+<p style="position:absolute;top:417px;left:540px;white-space:nowrap" class="ft1404">积</p>
+<p style="position:absolute;top:446px;left:540px;white-space:nowrap" class="ft1404">层</p>
+<p style="position:absolute;top:388px;left:615px;white-space:nowrap" class="ft1404">激</p>
+<p style="position:absolute;top:417px;left:615px;white-space:nowrap" class="ft1404">活</p>
+<p style="position:absolute;top:446px;left:615px;white-space:nowrap" class="ft1404">层</p>
+<p style="position:absolute;top:388px;left:691px;white-space:nowrap" class="ft1404">池</p>
+<p style="position:absolute;top:417px;left:691px;white-space:nowrap" class="ft1404">化</p>
+<p style="position:absolute;top:446px;left:691px;white-space:nowrap" class="ft1404">层</p>
+<p style="position:absolute;top:374px;left:826px;white-space:nowrap" class="ft1404">全</p>
+<p style="position:absolute;top:402px;left:826px;white-space:nowrap" class="ft1404">连</p>
+<p style="position:absolute;top:431px;left:826px;white-space:nowrap" class="ft1404">接</p>
+<p style="position:absolute;top:460px;left:826px;white-space:nowrap" class="ft1404">层</p>
+<p style="position:absolute;top:426px;left:926px;white-space:nowrap" class="ft1405">输出</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1410{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1411{font-size:46px;font-family:Times;color:#252525;}
+    .ft1412{font-size:34px;font-family:Times;color:#000000;}
+    .ft1413{font-size:25px;font-family:Times;color:#000000;}
+    .ft1414{font-size:25px;font-family:Times;color:#006fc0;}
+    .ft1415{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page141-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target141.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1415">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1411">卷积神经网络结构（续1）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1412">•&#160;卷积层</p>
+<p style="position:absolute;top:164px;left:93px;white-space:nowrap" class="ft1413">它是卷积神经网络的核心所在，</p>
+<p style="position:absolute;top:164px;left:471px;white-space:nowrap" class="ft1414"><b>通过卷积运算，达到降维处理和提取特征两个</b></p>
+<p style="position:absolute;top:212px;left:93px;white-space:nowrap" class="ft1414"><b>重要目的</b></p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1420{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1421{font-size:46px;font-family:Times;color:#252525;}
+    .ft1422{font-size:34px;font-family:Times;color:#000000;}
+    .ft1423{font-size:25px;font-family:Times;color:#000000;}
+    .ft1424{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft1425{font-size:25px;line-height:48px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page142-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target142.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1424">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1421">卷积神经网络结构（续2）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1422">•&#160;激活层</p>
+<p style="position:absolute;top:176px;left:100px;white-space:nowrap" class="ft1425">其作用在于将前一层的线性输出，通过非线性的激活函数进行处理，这样用<br/>以模拟任意函数，从而增强网络的表征能力。前面章节中介绍的激活函数，<br/>如挤压函数Sigmoid也是可用的，但效果并不好。在深度学习领域，ReLU<br/>（Rectified-Linear&#160;Unit，修正线性单元）是目前使用较多的激活函数，主<br/>要原因是它收敛更快，次要原因在于它部分解决了梯度消失问题。</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1430{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1431{font-size:46px;font-family:Times;color:#252525;}
+    .ft1432{font-size:34px;font-family:Times;color:#000000;}
+    .ft1433{font-size:21px;font-family:Times;color:#000000;}
+    .ft1434{font-size:21px;font-family:Times;color:#000099;}
+    .ft1435{font-size:18px;font-family:Times;color:#000000;}
+    .ft1436{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft1437{font-size:18px;line-height:35px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page143-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target143.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1436">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1431">卷积神经网络结构（续3）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1432">•&#160;池化层（Pooling&#160;Layer）</p>
+<p style="position:absolute;top:157px;left:100px;white-space:nowrap" class="ft1433">也称子采样层或下采样层（Subsampling&#160;Layer），目的是</p>
+<p style="position:absolute;top:157px;left:725px;white-space:nowrap" class="ft1434"><b>缩小高、长方向上的空间的</b></p>
+<p style="position:absolute;top:200px;left:100px;white-space:nowrap" class="ft1434"><b>运算，以降低计算量，提高泛化能力</b></p>
+<p style="position:absolute;top:201px;left:484px;white-space:nowrap" class="ft1433">。如下的示例，将4*4的矩阵缩小成2*2的矩阵输出</p>
+<p style="position:absolute;top:267px;left:240px;white-space:nowrap" class="ft1437">1&#160;2&#160;1&#160;0<br/>0&#160;1&#160;2&#160;3<br/>3&#160;0&#160;1&#160;2<br/>2&#160;4&#160;0&#160;1</p>
+<p style="position:absolute;top:302px;left:471px;white-space:nowrap" class="ft1435">2</p>
+<p style="position:absolute;top:433px;left:238px;white-space:nowrap" class="ft1437">1&#160;2&#160;1&#160;0<br/>0&#160;1&#160;2&#160;3<br/>3&#160;0&#160;1&#160;2<br/>2&#160;4&#160;0&#160;1</p>
+<p style="position:absolute;top:468px;left:469px;white-space:nowrap" class="ft1435">2&#160;3</p>
+<p style="position:absolute;top:267px;left:679px;white-space:nowrap" class="ft1437">1&#160;2&#160;1&#160;0<br/>0&#160;1&#160;2&#160;3<br/>3&#160;0&#160;1&#160;2<br/>2&#160;4&#160;0&#160;1</p>
+<p style="position:absolute;top:306px;left:910px;white-space:nowrap" class="ft1437">2&#160;3<br/>4</p>
+<p style="position:absolute;top:433px;left:679px;white-space:nowrap" class="ft1437">1&#160;2&#160;1&#160;0<br/>0&#160;1&#160;2&#160;3<br/>3&#160;0&#160;1&#160;2<br/>2&#160;4&#160;0&#160;1</p>
+<p style="position:absolute;top:468px;left:910px;white-space:nowrap" class="ft1437">2&#160;3<br/>4&#160;2</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1440{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1441{font-size:46px;font-family:Times;color:#252525;}
+    .ft1442{font-size:34px;font-family:Times;color:#000000;}
+    .ft1443{font-size:28px;font-family:Times;color:#000000;}
+    .ft1444{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft1445{font-size:28px;line-height:54px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page144-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target144.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1444">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1441">卷积神经网络结构（续4）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1442">•&#160;池化层计算</p>
+<p style="position:absolute;top:179px;left:105px;white-space:nowrap" class="ft1443">Ø</p>
+<p style="position:absolute;top:175px;left:146px;white-space:nowrap" class="ft1445">对于每个输入矩阵，我们将其切割成若干大小相等的正方形小块，<br/>对每一个区块取最大值或者平均值，并将结果组成一个新的矩阵</p>
+<p style="position:absolute;top:287px;left:105px;white-space:nowrap" class="ft1443">Ø</p>
+<p style="position:absolute;top:283px;left:146px;white-space:nowrap" class="ft1445">Max池化：对各个参与池化计算的区域取最大值，形成的新矩阵。<br/>在图像识别领域，主要使用Max池化</p>
+<p style="position:absolute;top:395px;left:105px;white-space:nowrap" class="ft1443">Ø</p>
+<p style="position:absolute;top:391px;left:146px;white-space:nowrap" class="ft1443">Average池化：对各个参与池化计算的区域计算平均值</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1450{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1451{font-size:46px;font-family:Times;color:#252525;}
+    .ft1452{font-size:34px;font-family:Times;color:#000000;}
+    .ft1453{font-size:21px;font-family:Times;color:#000099;}
+    .ft1454{font-size:21px;font-family:Times;color:#000099;}
+    .ft1455{font-size:21px;font-family:Times;color:#000000;}
+    .ft1456{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page145-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target145.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1456">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1451">卷积神经网络结构（续5）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1452">•&#160;池化层的特征</p>
+<p style="position:absolute;top:178px;left:108px;white-space:nowrap" class="ft1453">Ø</p>
+<p style="position:absolute;top:174px;left:149px;white-space:nowrap" class="ft1454"><b>没有要学习的参数。</b></p>
+<p style="position:absolute;top:174px;left:365px;white-space:nowrap" class="ft1455">池化层和卷积层不同，没有要学习的参数。池化只是从目标区</p>
+<p style="position:absolute;top:218px;left:149px;white-space:nowrap" class="ft1455">域中取最大值（或者平均值），所以不存在要学习的参数</p>
+<p style="position:absolute;top:264px;left:108px;white-space:nowrap" class="ft1453">Ø</p>
+<p style="position:absolute;top:260px;left:149px;white-space:nowrap" class="ft1454"><b>通道数不发生变化。</b></p>
+<p style="position:absolute;top:261px;left:365px;white-space:nowrap" class="ft1455">经过池化运算，输入数据和输出数据的通道数不会发生变化</p>
+<p style="position:absolute;top:484px;left:108px;white-space:nowrap" class="ft1453">Ø</p>
+<p style="position:absolute;top:480px;left:149px;white-space:nowrap" class="ft1454"><b>对微小的位置变化具有鲁棒性（健壮）。</b></p>
+<p style="position:absolute;top:481px;left:581px;white-space:nowrap" class="ft1455">输入数据发生微小偏差时，池化仍会返回</p>
+<p style="position:absolute;top:524px;left:149px;white-space:nowrap" class="ft1455">相同的结果</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1460{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1461{font-size:46px;font-family:Times;color:#252525;}
+    .ft1462{font-size:34px;font-family:Times;color:#252525;}
+    .ft1463{font-size:25px;font-family:Times;color:#000000;}
+    .ft1464{font-size:25px;font-family:Times;color:#000099;}
+    .ft1465{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft1466{font-size:25px;line-height:48px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page146-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target146.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1465">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1461">卷积神经网络结构（续6）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1462">•&#160;全连接层</p>
+<p style="position:absolute;top:179px;left:105px;white-space:nowrap" class="ft1463">Ø</p>
+<p style="position:absolute;top:175px;left:146px;white-space:nowrap" class="ft1466">这个网络层相当于多层感知机（Multi-Layer&#160;Perceptron，简称MLP），<br/>其</p>
+<p style="position:absolute;top:224px;left:173px;white-space:nowrap" class="ft1464"><b>在整个卷积神经网络中起到分类器的作用</b></p>
+<p style="position:absolute;top:276px;left:105px;white-space:nowrap" class="ft1463">Ø</p>
+<p style="position:absolute;top:273px;left:146px;white-space:nowrap" class="ft1466">通过前面多个“卷积-激活-池化”层的反复处理，待处理的数据特性已有<br/>了显著提高：一方面，输入数据的维度已下降到可用传统的前馈全连接<br/>网络来处理了；另一方面，此时的全连接层输入的数据已不再是“泥沙<br/>俱下、鱼龙混杂”，而是经过反复提纯过的结果，因此输出的分类品质<br/>要高得多。</p>
+</div>
+</body>
+</html>
+
+
+<h2 id="经典CNN介绍"><a href="#经典CNN介绍" class="headerlink" title="经典CNN介绍"></a>经典CNN介绍</h2><!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1470{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1471{font-size:46px;font-family:Times;color:#252525;}
+    .ft1472{font-size:34px;font-family:Times;color:#000000;}
+    .ft1473{font-size:25px;font-family:Times;color:#000000;}
+    .ft1474{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft1475{font-size:25px;line-height:48px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page147-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target147.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1474">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1471">经典CNN介绍（LeNet）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1472">•&#160;结构</p>
+<p style="position:absolute;top:163px;left:96px;white-space:nowrap" class="ft1475">LeNet是&#160;Yann&#160;LeCun在1998年提出，用于解决手写数字识别的视觉任务。自<br/>那时起，CNN的最基本的架构就定下来了：卷积层、池化层、全连接层。</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1480{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1481{font-size:46px;font-family:Times;color:#252525;}
+    .ft1482{font-size:34px;font-family:Times;color:#000000;}
+    .ft1483{font-size:22px;font-family:Times;color:#000000;}
+    .ft1484{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft1485{font-size:22px;line-height:44px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page148-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target148.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1484">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1481">典型CNN介绍（LeNet）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1482">•&#160;主要参数</p>
+<p style="position:absolute;top:174px;left:120px;white-space:nowrap" class="ft1485">–&#160;输入：输入32*32大小单通道图像<br/>–&#160;两个“卷积-池化层”<br/>–&#160;第一个全连接层神经元数目为500，再接激活函数<br/>–&#160;第二个全连接层神经元数目为10，得到10维的特征向量，用于10个数字的分</p>
+<p style="position:absolute;top:353px;left:154px;white-space:nowrap" class="ft1483">类训练，送入softmaxt分类，得到分类结果的概率</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1490{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1491{font-size:46px;font-family:Times;color:#252525;}
+    .ft1492{font-size:21px;font-family:Times;color:#000000;}
+    .ft1493{font-size:17px;font-family:Times;color:#000000;}
+    .ft1494{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft1495{font-size:17px;line-height:35px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page149-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target149.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1494">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1491">典型CNN介绍（AlexNet）</p>
+<p style="position:absolute;top:107px;left:66px;white-space:nowrap" class="ft1492">•&#160;AlexNet是2012年ImageNet竞赛冠军获得者Hinton和他的学生Alex&#160;Krizhevsky设计的，</p>
+<p style="position:absolute;top:150px;left:96px;white-space:nowrap" class="ft1492">把CNN的基本原理应用到了很深很宽的网络中。其特点有</p>
+<p style="position:absolute;top:211px;left:100px;white-space:nowrap" class="ft1493">ü</p>
+<p style="position:absolute;top:208px;left:141px;white-space:nowrap" class="ft1495">使用ReLU作为激活函数，并验证其效果在较深的网络超过了Sigmoid，成功解决了Sigmoid在网络较深<br/>时的梯度弥散问题</p>
+<p style="position:absolute;top:282px;left:100px;white-space:nowrap" class="ft1493">ü</p>
+<p style="position:absolute;top:279px;left:141px;white-space:nowrap" class="ft1493">使用Dropout（丢弃学习）随机忽略一部分神经元防止过拟合</p>
+<p style="position:absolute;top:317px;left:100px;white-space:nowrap" class="ft1493">ü</p>
+<p style="position:absolute;top:314px;left:141px;white-space:nowrap" class="ft1495">在CNN中使用重叠的最大池化。此前CNN中普遍使用平均池化，AlexNet全部使用最大池化，避免平均<br/>池化的模糊化效果</p>
+<p style="position:absolute;top:388px;left:100px;white-space:nowrap" class="ft1493">ü</p>
+<p style="position:absolute;top:385px;left:141px;white-space:nowrap" class="ft1495">提出了LRN（Local&#160;Response&#160;Normalization，局部正规化）层，对局部神经元的活动创建竞争机制，<br/>使得其中响应比较大的值变得相对更大，并抑制其他反馈较小的神经元，增强了模型的泛化能力</p>
+<p style="position:absolute;top:458px;left:100px;white-space:nowrap" class="ft1493">ü</p>
+<p style="position:absolute;top:456px;left:141px;white-space:nowrap" class="ft1495">使用CUDA加速深度卷积网络的训练，利用GPU强大的并行计算能力，处理神经网络训练时大量的矩阵<br/>运算</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1500{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1501{font-size:46px;font-family:Times;color:#252525;}
+    .ft1502{font-size:34px;font-family:Times;color:#000000;}
+    .ft1503{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page150-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target150.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1503">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1501">典型CNN介绍（AlexNet）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1502">•&#160;网络结构</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1510{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1511{font-size:46px;font-family:Times;color:#252525;}
+    .ft1512{font-size:34px;font-family:Times;color:#000000;}
+    .ft1513{font-size:25px;font-family:Times;color:#000000;}
+    .ft1514{font-size:16px;font-family:Times;color:#000000;}
+    .ft1515{font-size:16px;font-family:Times;color:#2a55db;}
+    .ft1516{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft1517{font-size:25px;line-height:48px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page151-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target151.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1516">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1511">典型CNN介绍（AlexNet）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1512">•&#160;主要参数</p>
+<p style="position:absolute;top:174px;left:98px;white-space:nowrap" class="ft1517">AlexNet网络包含8层，其中前5层为卷积-池化层，后3层为全连接层；输入<br/>224×224×3的图像，第一卷积层用96个11×11×3的卷积核对进行滤波，步<br/>幅4像素；全连接的每层有4096个神经元，最后一个完全连接的层的输出被馈<br/>送到1000路SoftMax，它产生超过1000个类别标签的分布；整个网络共<br/>650000个神经元</p>
+<p style="position:absolute;top:413px;left:98px;white-space:nowrap" class="ft1514">参考论文：</p>
+<p style="position:absolute;top:413px;left:188px;white-space:nowrap" class="ft1515">http://www.cs.toronto.edu/~fritz/absps/imagenet.pdf</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1520{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1521{font-size:46px;font-family:Times;color:#252525;}
+    .ft1522{font-size:34px;font-family:Times;color:#000000;}
+    .ft1523{font-size:25px;font-family:Times;color:#000000;}
+    .ft1524{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft1525{font-size:25px;line-height:48px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page152-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target152.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1524">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1521">典型CNN介绍（VGG）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1522">•&#160;概要介绍</p>
+<p style="position:absolute;top:182px;left:100px;white-space:nowrap" class="ft1525">VGG是Visual&#160;Geometry&#160;Group,&#160;Department&#160;of&#160;Engineering&#160;Science,&#160;<br/>University&#160;of&#160;Oxford（牛津大学工程科学系视觉几何组）的缩写，2014年参<br/>加ILSVRC（ImageNet&#160;Large&#160;Scale&#160;Visual&#160;Recognition&#160;Challenge）&#160;2014大<br/>赛获得亚军（当年冠军为GoogLeNet，但因为VGG结构简单，应用性强，所以<br/>很多技术人员都喜欢使用基于VGG的网络）</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1530{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1531{font-size:46px;font-family:Times;color:#252525;}
+    .ft1532{font-size:34px;font-family:Times;color:#000000;}
+    .ft1533{font-size:21px;font-family:Times;color:#000000;}
+    .ft1534{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+    .ft1535{font-size:21px;line-height:43px;font-family:Times;color:#000000;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page153-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target153.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1534">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1531">典型CNN介绍（VGG）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1532">•&#160;主要参数</p>
+<p style="position:absolute;top:176px;left:94px;white-space:nowrap" class="ft1533">ü</p>
+<p style="position:absolute;top:172px;left:135px;white-space:nowrap" class="ft1533">网络深度：16~19层</p>
+<p style="position:absolute;top:219px;left:94px;white-space:nowrap" class="ft1533">ü</p>
+<p style="position:absolute;top:216px;left:135px;white-space:nowrap" class="ft1533">5组卷积-池化层，3个全连接层</p>
+<p style="position:absolute;top:262px;left:94px;white-space:nowrap" class="ft1533">ü</p>
+<p style="position:absolute;top:259px;left:135px;white-space:nowrap" class="ft1535">三个全连接层，前两层都有4096通道，第三层共1000路及代表1000个标签<br/>类别；最后一层为softmax层</p>
+<p style="position:absolute;top:348px;left:94px;white-space:nowrap" class="ft1533">ü</p>
+<p style="position:absolute;top:345px;left:135px;white-space:nowrap" class="ft1533">所有卷积层有相同的配置，即卷积核大小为3x3，步长为1，填充为1</p>
+<p style="position:absolute;top:392px;left:94px;white-space:nowrap" class="ft1533">ü</p>
+<p style="position:absolute;top:388px;left:135px;white-space:nowrap" class="ft1533">池化层区域大小2x2，步长为2</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1540{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1541{font-size:46px;font-family:Times;color:#252525;}
+    .ft1542{font-size:34px;font-family:Times;color:#000000;}
+    .ft1543{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page154-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target154.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1543">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1541">典型CNN介绍（VGG）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1542">•&#160;模型结构</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1550{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1551{font-size:46px;font-family:Times;color:#252525;}
+    .ft1552{font-size:34px;font-family:Times;color:#252525;}
+    .ft1553{font-size:21px;font-family:Times;color:#000000;}
+    .ft1554{font-size:21px;font-family:Times;color:#2a55db;}
+    .ft1555{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page155-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target155.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1555">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1551">典型CNN介绍（GoogLeNet）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1552">•&#160;GoogLeNet</p>
+<p style="position:absolute;top:478px;left:130px;white-space:nowrap" class="ft1553">请参考论文：</p>
+<p style="position:absolute;top:478px;left:274px;white-space:nowrap" class="ft1554">https://arxiv.org/pdf/1409.4842.pdf</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1560{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1561{font-size:46px;font-family:Times;color:#252525;}
+    .ft1562{font-size:34px;font-family:Times;color:#000000;}
+    .ft1563{font-size:21px;font-family:Times;color:#000000;}
+    .ft1564{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page156-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target156.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1564">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1561">典型CNN介绍（ResNet）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1562">•&#160;介绍</p>
+<p style="position:absolute;top:176px;left:94px;white-space:nowrap" class="ft1563">ü</p>
+<p style="position:absolute;top:172px;left:135px;white-space:nowrap" class="ft1563">ResNet是ILSVRC&#160;2015大赛冠军，在ImageNet测试集上取得了3.57%的错误率</p>
+<p style="position:absolute;top:219px;left:94px;white-space:nowrap" class="ft1563">ü</p>
+<p style="position:absolute;top:216px;left:135px;white-space:nowrap" class="ft1563">更深的网络结构，采用残差结构来缓解深度CNN的梯度消失问题</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1570{font-size:21px;font-family:Times;color:#f8f9fa;}
+    .ft1571{font-size:46px;font-family:Times;color:#252525;}
+    .ft1572{font-size:34px;font-family:Times;color:#000000;}
+    .ft1573{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page157-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target157.png" alt="background image"/>
+<p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft1573">知<br/>识<br/>讲<br/>解</p>
+<p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft1571">典型CNN介绍（ResNet）</p>
+<p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft1572">•&#160;结构</p>
+</div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<title></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <br/>
+<style type="text/css">
+<!--
+    p {margin: 0; padding: 0;}	.ft1580{font-size:43px;font-family:Times;color:#252525;}
+    .ft1581{font-size:28px;font-family:Times;color:#252525;}
+    .ft1582{font-size:21px;font-family:Times;color:#000099;}
+    .ft1583{font-size:21px;font-family:Times;color:#000099;}
+    .ft1584{font-size:21px;font-family:Times;color:#000000;}
+    .ft1585{font-size:21px;font-family:Times;color:#252525;}
+    .ft1586{font-size:28px;line-height:54px;font-family:Times;color:#252525;}
+-->
+</style>
+</head>
+<body bgcolor="#A0A0A0" vlink="blue" link="blue">
+<div id="page158-div" style="position:relative;width:1080px;height:607px;">
+<img width="1080" height="607" src="https://image.discover304.top/ai/dl/01/target158.png" alt="background image"/>
+<p style="position:absolute;top:42px;left:66px;white-space:nowrap" class="ft1580"><b>小结</b></p>
+<p style="position:absolute;top:143px;left:66px;white-space:nowrap" class="ft1581">•&#160;本章节介绍了卷积神经网络（CNN），CNN是深度学习的主要模型，</p>
+<p style="position:absolute;top:197px;left:107px;white-space:nowrap" class="ft1586">在解决复杂工程问题中表现出了良好的性能。卷积神经网络主要由以<br/>下几层构成：</p>
+<p style="position:absolute;top:306px;left:120px;white-space:nowrap" class="ft1582">ü</p>
+<p style="position:absolute;top:302px;left:154px;white-space:nowrap" class="ft1583"><b>卷积层。</b></p>
+<p style="position:absolute;top:302px;left:250px;white-space:nowrap" class="ft1584">执行卷积运算</p>
+<p style="position:absolute;top:349px;left:120px;white-space:nowrap" class="ft1582">ü</p>
+<p style="position:absolute;top:345px;left:154px;white-space:nowrap" class="ft1583"><b>激活层。</b></p>
+<p style="position:absolute;top:346px;left:250px;white-space:nowrap" class="ft1584">对卷积结果执行激活函数运算</p>
+<p style="position:absolute;top:392px;left:120px;white-space:nowrap" class="ft1582">ü</p>
+<p style="position:absolute;top:389px;left:154px;white-space:nowrap" class="ft1583"><b>池化层。</b></p>
+<p style="position:absolute;top:389px;left:250px;white-space:nowrap" class="ft1585">降低数据规模，防止过拟合</p>
+<p style="position:absolute;top:435px;left:120px;white-space:nowrap" class="ft1582">ü</p>
+<p style="position:absolute;top:432px;left:154px;white-space:nowrap" class="ft1583"><b>全连接层。</b></p>
+<p style="position:absolute;top:432px;left:274px;white-space:nowrap" class="ft1585">执行输出计算</p>
+</div>
+</body>
+</html>
+
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><a class="post-meta__tags" href="/tags/%E8%AE%B0%E5%BD%95/">记录</a><a class="post-meta__tags" href="/tags/Python/">Python</a><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><a class="post-meta__tags" href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a></div><div class="post_share"><div class="social-share" data-image="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" data-sites="facebook,twitter,wechat,weibo,qzone,qq,linkedin"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/12/01/2021q4/108-0-dl-ex/"><img class="prev-cover" src="https://image.discover304.top/ai/dl/space_work.jpg?imageView2/2/h/300" onerror="onerror=null;src='/img/404.png'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">【深度学习】实例第一部分：基础理论</div></div></a></div><div class="next-post pull-right"><a href="/2021/11/30/2021q4/107-1-dl-back/"><img class="next-cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" onerror="onerror=null;src='/img/404.png'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">【深度学习】基础 叁：反向传播算法</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2021/11/30/2021q4/107-0-dl/" title="【深度学习】概述"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】概述</div></div></a></div><div><a href="/2021/11/30/2021q4/107-1-dl-back/" title="【深度学习】基础 叁：反向传播算法"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】基础 叁：反向传播算法</div></div></a></div><div><a href="/2021/11/30/2021q4/107-1-dl-loss-gd/" title="【深度学习】基础 贰：损失函数与梯度下降"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】基础 贰：损失函数与梯度下降</div></div></a></div><div><a href="/2021/11/30/2021q4/107-1-dl-perceptron/" title="【深度学习】基础 壹：感知机与神经网络"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】基础 壹：感知机与神经网络</div></div></a></div><div><a href="/2021/12/02/2021q4/107-2-dl/" title="【深度学习】图像操作：OpenCV"><img class="cover" src="https://image.discover304.top/ai/dl/02/dog-end-world.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】图像操作：OpenCV</div></div></a></div><div><a href="/2021/12/01/2021q4/108-0-dl-ex/" title="【深度学习】实例第一部分：基础理论"><img class="cover" src="https://image.discover304.top/ai/dl/space_work.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】实例第一部分：基础理论</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">✨YangSier✨</div><div class="author-info__description">Love Everything You Like.</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">243</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">88</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">23</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/98639326"><i class="fab fa-bilibili"></i><span>Bilibili Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Discover304" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://twitter.com/Discover304" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.youtube.com/channel/UCuQQr55i3VCQuCPMTQnpzDA" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a><a class="social-icon" href="mailto:hobart.yang@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">✨动态更新：<p style="text-align:center">享受精彩大学生活中。</p>✨聊天划水QQ群：<p style="text-align:center"><strong>兔叽の魔术工房</strong><br>942-848-525</p>✨我们的口号是：<p style="text-align:center; color:#39C5BB">人工降神，机械飞升！</p><a target="_blank" rel="noopener" href='https://space.bilibili.com/98639326'><img src='/img/mikulittletrans.png'></a></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E"><span class="toc-text">说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%B7%E7%A7%AF%E5%87%BD%E6%95%B0"><span class="toc-text">卷积函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="toc-text">卷积神经网络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%8F%E5%85%B8CNN%E4%BB%8B%E7%BB%8D"><span class="toc-text">经典CNN介绍</span></a></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/2022q4/172-design-idea/" title="【思考】创新点子"><img src="https://image.discover304.top/blog-img/s19313212112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【思考】创新点子"/></a><div class="content"><a class="title" href="/2022/12/11/2022q4/172-design-idea/" title="【思考】创新点子">【思考】创新点子</a><time datetime="2022-12-11T11:08:37.000Z" title="Created 2022-12-11 19:08:37">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/2022q4/171-other-thought/" title="【思考】其他思考"><img src="https://image.discover304.top/blog-img/s19305112112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【思考】其他思考"/></a><div class="content"><a class="title" href="/2022/12/11/2022q4/171-other-thought/" title="【思考】其他思考">【思考】其他思考</a><time datetime="2022-12-11T11:08:17.000Z" title="Created 2022-12-11 19:08:17">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/2022q4/170-key-thought/" title="【思考】核心思考"><img src="https://image.discover304.top/blog-img/s19294112112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【思考】核心思考"/></a><div class="content"><a class="title" href="/2022/12/11/2022q4/170-key-thought/" title="【思考】核心思考">【思考】核心思考</a><time datetime="2022-12-11T11:08:06.000Z" title="Created 2022-12-11 19:08:06">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/09/2022q4/169-new-r/" title="R: Getting Into Project of R"><img src="https://image.discover304.top/blog-img/s18350812112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="R: Getting Into Project of R"/></a><div class="content"><a class="title" href="/2022/12/09/2022q4/169-new-r/" title="R: Getting Into Project of R">R: Getting Into Project of R</a><time datetime="2022-12-09T09:44:06.000Z" title="Created 2022-12-09 17:44:06">2022-12-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/08/000-some-words/" title="【整理】一些思考"><img src="https://image.discover304.top/blog-img/s18365512112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【整理】一些思考"/></a><div class="content"><a class="title" href="/2022/12/08/000-some-words/" title="【整理】一些思考">【整理】一些思考</a><time datetime="2022-12-08T04:27:28.000Z" title="Created 2022-12-08 12:27:28">2022-12-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/28/2022q3/167-2-sp-review/" title="SP Modules Review Contents (3)"><img src="https://image.discover304.top/blog-img/s11220010012022.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="SP Modules Review Contents (3)"/></a><div class="content"><a class="title" href="/2022/11/28/2022q3/167-2-sp-review/" title="SP Modules Review Contents (3)">SP Modules Review Contents (3)</a><time datetime="2022-11-28T07:24:39.000Z" title="Created 2022-11-28 15:24:39">2022-11-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/17/2022q3/166-10-connected-speech-hidden-markov-model/" title="SP Module 10 Connected Speech &amp; HMM Training"><img src="https://image.discover304.top/blog-img/s11220010012022.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="SP Module 10 Connected Speech &amp; HMM Training"/></a><div class="content"><a class="title" href="/2022/11/17/2022q3/166-10-connected-speech-hidden-markov-model/" title="SP Module 10 Connected Speech &amp; HMM Training">SP Module 10 Connected Speech &amp; HMM Training</a><time datetime="2022-11-17T01:47:12.000Z" title="Created 2022-11-17 09:47:12">2022-11-17</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By ✨YangSier✨</div><div><a target="_blank" href="https://beian.miit.gov.cn/" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;"> 冀ICP备2021025381号-1</p></a></div><div><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=13060602001430" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/img/beian.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">冀公网安备 13060602001430号</p></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.spacingElementById('content-inner')
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.spacingElementById('content-inner')
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'neutral',
+      })
+      false && mermaid.init()
+    })
+  }
+}</script><script>function loadValine () {
+  function initValine () {
+    let initData = {
+      el: '#vcomment',
+      appId: 'A9RWVELPcIotgfbpp9KLGXQM-gzGzoHsz',
+      appKey: 'MLgPQW5h0DPgE8jNkeREKubU',
+      placeholder: '欢迎留言呀。（网址是选填，可以留空）',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: true,
+      serverURLs: 'https://a9rwvelp.lc-cn-n1-shared.com',
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/',
+      emojiMaps: {"QQ1":"QQ/aini.gif","QQ2":"QQ/aixin.gif","QQ3":"QQ/aoman.gif","QQ4":"QQ/baiyan.gif","QQ5":"QQ/bangbangtang.gif","QQ6":"QQ/baojin.gif","QQ7":"QQ/baoquan.gif","QQ8":"QQ/bishi.gif","QQ9":"QQ/bizui.gif","QQ11":"QQ/cahan.gif","QQ12":"QQ/caidao.gif","QQ13":"QQ/chi.gif","QQ14":"QQ/ciya.gif","QQ15":"QQ/dabing.gif","QQ16":"QQ/daku.gif","QQ17":"QQ/dan.gif","QQ18":"QQ/deyi.gif","QQ19":"QQ/doge.gif","QQ20":"QQ/fadai.gif","QQ21":"QQ/fanu.gif","QQ22":"QQ/fendou.gif","QQ23":"QQ/ganga.gif","QQ24":"QQ/gouyin.gif","QQ25":"QQ/guzhang.gif","QQ26":"QQ/haixiu.gif","QQ27":"QQ/hanxiao.gif","QQ28":"QQ/haobang.gif","QQ29":"QQ/haqian.gif","QQ30":"QQ/hecai.gif","QQ31":"QQ/hexie.gif","QQ32":"QQ/huaixiao.gif","QQ33":"QQ/jie.gif","QQ34":"QQ/jingkong.gif","QQ35":"QQ/jingxi.gif","QQ36":"QQ/jingya.gif","QQ37":"QQ/juhua.gif","QQ38":"QQ/keai.gif","QQ39":"QQ/kelian.gif","QQ40":"QQ/koubi.gif","QQ41":"QQ/ku.gif","QQ42":"QQ/kuaikule.gif","QQ43":"QQ/kulou.gif","QQ44":"QQ/kun.gif","QQ45":"QQ/lanqiu.gif","QQ46":"QQ/leiben.gif","QQ47":"QQ/lenghan.gif","QQ48":"QQ/liuhan.gif","QQ49":"QQ/liulei.gif","QQ50":"QQ/nanguo.gif","QQ51":"QQ/OK.gif","QQ52":"QQ/penxue.gif","QQ53":"QQ/piezui.gif","QQ54":"QQ/pijiu.gif","QQ55":"QQ/qiang.gif","QQ56":"QQ/qiaoda.gif","QQ57":"QQ/qinqin.gif","QQ58":"QQ/qiudale.gif","QQ59":"QQ/quantou.gif","QQ60":"QQ/saorao.gif","QQ61":"QQ/se.gif","QQ62":"QQ/shengli.gif","QQ63":"QQ/shouqiang.gif","QQ64":"QQ/shuai.gif","QQ65":"QQ/shui.gif","QQ66":"QQ/tiaopi.gif","QQ67":"QQ/touxiao.gif","QQ68":"QQ/tu.gif","QQ69":"QQ/tuosai.gif","QQ70":"QQ/weiqu.gif","QQ71":"QQ/weixiao.gif","QQ72":"QQ/woshou.gif","QQ73":"QQ/wozuimei.gif","QQ74":"QQ/wunai.gif","QQ75":"QQ/xia.gif","QQ76":"QQ/xiaojiujie.gif","QQ77":"QQ/xiaoku.gif","QQ78":"QQ/xiaoyanger.gif","QQ79":"QQ/xieyanxiao.gif","QQ80":"QQ/xigua.gif","QQ81":"QQ/xu.gif","QQ82":"QQ/yangtuo.gif","QQ83":"QQ/yinxian.gif","QQ84":"QQ/yiwen.gif","QQ85":"QQ/youhengheng.gif","QQ86":"QQ/youling.gif","QQ87":"QQ/yun.gif","QQ88":"QQ/zaijian.gif","QQ89":"QQ/zhayanjian.gif","QQ90":"QQ/zhemo.gif","QQ91":"QQ/zhouma.gif","QQ92":"QQ/zhuakuang.gif","QQ93":"QQ/zuohengheng.gif","bilibiliHotKey1":"bilibiliHotKey/1.jpg","bilibiliHotKey2":"bilibiliHotKey/10.jpg","bilibiliHotKey3":"bilibiliHotKey/11.jpg","bilibiliHotKey4":"bilibiliHotKey/12.jpg","bilibiliHotKey5":"bilibiliHotKey/13.jpg","bilibiliHotKey6":"bilibiliHotKey/14.jpg","bilibiliHotKey7":"bilibiliHotKey/15.jpg","bilibiliHotKey8":"bilibiliHotKey/16.jpg","bilibiliHotKey9":"bilibiliHotKey/17.jpg","bilibiliHotKey10":"bilibiliHotKey/18.jpg","bilibiliHotKey11":"bilibiliHotKey/19.jpg","bilibiliHotKey12":"bilibiliHotKey/2.jpg","bilibiliHotKey13":"bilibiliHotKey/20.jpg","bilibiliHotKey14":"bilibiliHotKey/21.jpg","bilibiliHotKey15":"bilibiliHotKey/22.jpg","bilibiliHotKey16":"bilibiliHotKey/23.jpg","bilibiliHotKey17":"bilibiliHotKey/24.jpg","bilibiliHotKey18":"bilibiliHotKey/25.jpg","bilibiliHotKey19":"bilibiliHotKey/26.jpg","bilibiliHotKey20":"bilibiliHotKey/27.jpg","bilibiliHotKey21":"bilibiliHotKey/28.jpg","bilibiliHotKey22":"bilibiliHotKey/29.jpg","bilibiliHotKey23":"bilibiliHotKey/3.jpg","bilibiliHotKey24":"bilibiliHotKey/30.jpg","bilibiliHotKey25":"bilibiliHotKey/31.jpg","bilibiliHotKey26":"bilibiliHotKey/32.jpg","bilibiliHotKey27":"bilibiliHotKey/4.jpg","bilibiliHotKey28":"bilibiliHotKey/5.jpg","bilibiliHotKey29":"bilibiliHotKey/6.jpg","bilibiliHotKey30":"bilibiliHotKey/7.jpg","bilibiliHotKey31":"bilibiliHotKey/8.jpg","bilibiliHotKey32":"bilibiliHotKey/9.jpg","Menhera-chan1":"Menhera-chan/1.jpg","Menhera-chan2":"Menhera-chan/10.jpg","Menhera-chan3":"Menhera-chan/100.jpg","Menhera-chan4":"Menhera-chan/101.jpg","Menhera-chan5":"Menhera-chan/102.jpg","Menhera-chan6":"Menhera-chan/103.jpg","Menhera-chan7":"Menhera-chan/104.jpg","Menhera-chan8":"Menhera-chan/105.jpg","Menhera-chan9":"Menhera-chan/106.jpg","Menhera-chan10":"Menhera-chan/107.jpg","Menhera-chan11":"Menhera-chan/108.jpg","Menhera-chan12":"Menhera-chan/109.jpg","Menhera-chan13":"Menhera-chan/11.jpg","Menhera-chan14":"Menhera-chan/110.jpg","Menhera-chan15":"Menhera-chan/111.jpg","Menhera-chan16":"Menhera-chan/112.jpg","Menhera-chan17":"Menhera-chan/113.jpg","Menhera-chan18":"Menhera-chan/114.jpg","Menhera-chan19":"Menhera-chan/115.jpg","Menhera-chan20":"Menhera-chan/116.jpg","Menhera-chan21":"Menhera-chan/117.jpg","Menhera-chan22":"Menhera-chan/118.jpg","Menhera-chan23":"Menhera-chan/119.jpg","Menhera-chan24":"Menhera-chan/12.jpg","Menhera-chan25":"Menhera-chan/120.jpg","Menhera-chan26":"Menhera-chan/13.jpg","Menhera-chan27":"Menhera-chan/14.jpg","Menhera-chan28":"Menhera-chan/15.jpg","Menhera-chan29":"Menhera-chan/16.jpg","Menhera-chan30":"Menhera-chan/17.jpg","Menhera-chan31":"Menhera-chan/18.jpg","Menhera-chan32":"Menhera-chan/19.jpg","Menhera-chan33":"Menhera-chan/2.jpg","Menhera-chan34":"Menhera-chan/20.jpg","Menhera-chan35":"Menhera-chan/21.jpg","Menhera-chan36":"Menhera-chan/22.jpg","Menhera-chan37":"Menhera-chan/23.jpg","Menhera-chan38":"Menhera-chan/24.jpg","Menhera-chan39":"Menhera-chan/25.jpg","Menhera-chan40":"Menhera-chan/26.jpg","Menhera-chan41":"Menhera-chan/27.jpg","Menhera-chan42":"Menhera-chan/28.jpg","Menhera-chan43":"Menhera-chan/29.jpg","Menhera-chan44":"Menhera-chan/3.jpg","Menhera-chan45":"Menhera-chan/30.jpg","Menhera-chan46":"Menhera-chan/31.jpg","Menhera-chan47":"Menhera-chan/32.jpg","Menhera-chan48":"Menhera-chan/33.jpg","Menhera-chan49":"Menhera-chan/34.jpg","Menhera-chan50":"Menhera-chan/35.jpg","Menhera-chan51":"Menhera-chan/36.jpg","Menhera-chan52":"Menhera-chan/37.jpg","Menhera-chan53":"Menhera-chan/38.jpg","Menhera-chan54":"Menhera-chan/39.jpg","Menhera-chan55":"Menhera-chan/4.jpg","Menhera-chan56":"Menhera-chan/40.jpg","Menhera-chan57":"Menhera-chan/41.jpg","Menhera-chan58":"Menhera-chan/42.jpg","Menhera-chan59":"Menhera-chan/43.jpg","Menhera-chan60":"Menhera-chan/44.jpg","Menhera-chan61":"Menhera-chan/45.jpg","Menhera-chan62":"Menhera-chan/46.jpg","Menhera-chan63":"Menhera-chan/47.jpg","Menhera-chan64":"Menhera-chan/48.jpg","Menhera-chan65":"Menhera-chan/49.jpg","Menhera-chan66":"Menhera-chan/5.jpg","Menhera-chan67":"Menhera-chan/50.jpg","Menhera-chan68":"Menhera-chan/51.jpg","Menhera-chan69":"Menhera-chan/52.jpg","Menhera-chan70":"Menhera-chan/53(1).jpg","Menhera-chan71":"Menhera-chan/53.jpg","Menhera-chan72":"Menhera-chan/54.jpg","Menhera-chan73":"Menhera-chan/55.jpg","Menhera-chan74":"Menhera-chan/56.jpg","Menhera-chan75":"Menhera-chan/57.jpg","Menhera-chan76":"Menhera-chan/58.jpg","Menhera-chan77":"Menhera-chan/59.jpg","Menhera-chan78":"Menhera-chan/6.jpg","Menhera-chan79":"Menhera-chan/60.jpg","Menhera-chan80":"Menhera-chan/61.jpg","Menhera-chan81":"Menhera-chan/62.jpg","Menhera-chan82":"Menhera-chan/63.jpg","Menhera-chan83":"Menhera-chan/64.jpg","Menhera-chan84":"Menhera-chan/65.jpg","Menhera-chan85":"Menhera-chan/66.jpg","Menhera-chan86":"Menhera-chan/67.jpg","Menhera-chan87":"Menhera-chan/68.jpg","Menhera-chan88":"Menhera-chan/69.jpg","Menhera-chan89":"Menhera-chan/7.jpg","Menhera-chan90":"Menhera-chan/70.jpg","Menhera-chan91":"Menhera-chan/71.jpg","Menhera-chan92":"Menhera-chan/72.jpg","Menhera-chan93":"Menhera-chan/73.jpg","Menhera-chan94":"Menhera-chan/74.jpg","Menhera-chan95":"Menhera-chan/75.jpg","Menhera-chan96":"Menhera-chan/76.jpg","Menhera-chan97":"Menhera-chan/77.jpg","Menhera-chan98":"Menhera-chan/78.jpg","Menhera-chan99":"Menhera-chan/79.jpg","Menhera-chan100":"Menhera-chan/8.jpg","Menhera-chan101":"Menhera-chan/80.jpg","Menhera-chan102":"Menhera-chan/81.jpg","Menhera-chan103":"Menhera-chan/82.jpg","Menhera-chan104":"Menhera-chan/83.jpg","Menhera-chan105":"Menhera-chan/84.jpg","Menhera-chan106":"Menhera-chan/85.jpg","Menhera-chan107":"Menhera-chan/86.jpg","Menhera-chan108":"Menhera-chan/87.jpg","Menhera-chan109":"Menhera-chan/88.jpg","Menhera-chan110":"Menhera-chan/89.jpg","Menhera-chan111":"Menhera-chan/9.jpg","Menhera-chan112":"Menhera-chan/90.jpg","Menhera-chan113":"Menhera-chan/91.jpg","Menhera-chan114":"Menhera-chan/92.jpg","Menhera-chan115":"Menhera-chan/93.jpg","Menhera-chan116":"Menhera-chan/94.jpg","Menhera-chan117":"Menhera-chan/95.jpg","Menhera-chan118":"Menhera-chan/96.jpg","Menhera-chan119":"Menhera-chan/97.jpg","Menhera-chan120":"Menhera-chan/98.jpg","Menhera-chan121":"Menhera-chan/99.jpg","Sweetie-Bunny1":"Sweetie-Bunny/12311678.png","Sweetie-Bunny2":"Sweetie-Bunny/12311679.png","Sweetie-Bunny3":"Sweetie-Bunny/12311680.png","Sweetie-Bunny4":"Sweetie-Bunny/12311681.png","Sweetie-Bunny5":"Sweetie-Bunny/12311682.png","Sweetie-Bunny6":"Sweetie-Bunny/12311683.png","Sweetie-Bunny7":"Sweetie-Bunny/12311684.png","Sweetie-Bunny8":"Sweetie-Bunny/12311685.png","Sweetie-Bunny9":"Sweetie-Bunny/12311686.png","Sweetie-Bunny10":"Sweetie-Bunny/12311687.png","Sweetie-Bunny11":"Sweetie-Bunny/12311688.png","Sweetie-Bunny12":"Sweetie-Bunny/12311689.png","Sweetie-Bunny13":"Sweetie-Bunny/12311690.png","Sweetie-Bunny14":"Sweetie-Bunny/12311691.png","Sweetie-Bunny15":"Sweetie-Bunny/12311692.png","Sweetie-Bunny16":"Sweetie-Bunny/12311693.png","Sweetie-Bunny17":"Sweetie-Bunny/12311694.png","Sweetie-Bunny18":"Sweetie-Bunny/12311695.png","Sweetie-Bunny19":"Sweetie-Bunny/12311696.png","Sweetie-Bunny20":"Sweetie-Bunny/12311697.png","Sweetie-Bunny21":"Sweetie-Bunny/12311698.png","Sweetie-Bunny22":"Sweetie-Bunny/12311699.png","Sweetie-Bunny23":"Sweetie-Bunny/12311700.png","Sweetie-Bunny24":"Sweetie-Bunny/12311701.png","Sweetie-Bunny25":"Sweetie-Bunny/12311702.png","Sweetie-Bunny26":"Sweetie-Bunny/12311703.png","Sweetie-Bunny27":"Sweetie-Bunny/12311704.png","Sweetie-Bunny28":"Sweetie-Bunny/12311705.png","Sweetie-Bunny29":"Sweetie-Bunny/12311706.png","Sweetie-Bunny30":"Sweetie-Bunny/12311707.png","Sweetie-Bunny31":"Sweetie-Bunny/12311708.png","Sweetie-Bunny32":"Sweetie-Bunny/12311709.png","Sweetie-Bunny33":"Sweetie-Bunny/12311710.png","Sweetie-Bunny34":"Sweetie-Bunny/12311711.png","Sweetie-Bunny35":"Sweetie-Bunny/12311712.png","Sweetie-Bunny36":"Sweetie-Bunny/12311713.png","Sweetie-Bunny37":"Sweetie-Bunny/12311714.png","Sweetie-Bunny38":"Sweetie-Bunny/12311715.png","Sweetie-Bunny39":"Sweetie-Bunny/12311716.png","Sweetie-Bunny40":"Sweetie-Bunny/12311717.png","Majotabi1":"Majotabi/367516718.png","Majotabi2":"Majotabi/367516719.png","Majotabi3":"Majotabi/367516720.png","Majotabi4":"Majotabi/367516721.png","Majotabi5":"Majotabi/367516722.png","Majotabi6":"Majotabi/367516723.png","Majotabi7":"Majotabi/367516724.png","Majotabi8":"Majotabi/367516725.png","Majotabi9":"Majotabi/367516726.png","Majotabi10":"Majotabi/367516727.png","Majotabi11":"Majotabi/367516728.png","Majotabi12":"Majotabi/367516729.png","Majotabi13":"Majotabi/367516730.png","Majotabi14":"Majotabi/367516731.png","Majotabi15":"Majotabi/367516732.png","Majotabi16":"Majotabi/367516733.png","Majotabi17":"Majotabi/367516734.png","Majotabi18":"Majotabi/367516735.png","Majotabi19":"Majotabi/367516736.png","Majotabi20":"Majotabi/367516737.png","Majotabi21":"Majotabi/367516738.png","Majotabi22":"Majotabi/367516739.png","Majotabi23":"Majotabi/367516740.png","Majotabi24":"Majotabi/367516741.png","Majotabi25":"Majotabi/367516742.png","Majotabi26":"Majotabi/367516743.png","Majotabi27":"Majotabi/367516744.png","Majotabi28":"Majotabi/367516745.png","Majotabi29":"Majotabi/367516746.png","Majotabi30":"Majotabi/367516747.png","Majotabi31":"Majotabi/367516748.png","Majotabi32":"Majotabi/367516749.png","Majotabi33":"Majotabi/367516750.png","Majotabi34":"Majotabi/367516751.png","Majotabi35":"Majotabi/367516752.png","Majotabi36":"Majotabi/367516753.png","Majotabi37":"Majotabi/367516754.png","Majotabi38":"Majotabi/367516755.png","Majotabi39":"Majotabi/367516756.png","Majotabi40":"Majotabi/367516757.png","Snow-Miku1":"Snow-Miku/3583066@2x.png","Snow-Miku2":"Snow-Miku/3583067@2x.png","Snow-Miku3":"Snow-Miku/3583068@2x.png","Snow-Miku4":"Snow-Miku/3583069@2x.png","Snow-Miku5":"Snow-Miku/3583070@2x.png","Snow-Miku6":"Snow-Miku/3583071@2x.png","Snow-Miku7":"Snow-Miku/3583072@2x.png","Snow-Miku8":"Snow-Miku/3583073@2x.png","Snow-Miku9":"Snow-Miku/3583074@2x.png","Snow-Miku10":"Snow-Miku/3583075@2x.png","Snow-Miku11":"Snow-Miku/3583076@2x.png","Snow-Miku12":"Snow-Miku/3583077@2x.png","Snow-Miku13":"Snow-Miku/3583078@2x.png","Snow-Miku14":"Snow-Miku/3583079@2x.png","Snow-Miku15":"Snow-Miku/3583080@2x.png","Snow-Miku16":"Snow-Miku/3583081@2x.png","Snow-Miku17":"Snow-Miku/3583082@2x.png","Snow-Miku18":"Snow-Miku/3583083@2x.png","Snow-Miku19":"Snow-Miku/3583084@2x.png","Snow-Miku20":"Snow-Miku/3583085@2x.png","Snow-Miku21":"Snow-Miku/3583086@2x.png","Snow-Miku22":"Snow-Miku/3583087@2x.png","Snow-Miku23":"Snow-Miku/3583088@2x.png","Snow-Miku24":"Snow-Miku/3583089@2x.png","Snow-Miku25":"Snow-Miku/3583090@2x.png","Snow-Miku26":"Snow-Miku/3583091@2x.png","Snow-Miku27":"Snow-Miku/3583092@2x.png","Snow-Miku28":"Snow-Miku/3583093@2x.png","Snow-Miku29":"Snow-Miku/3583094@2x.png","Snow-Miku30":"Snow-Miku/3583095@2x.png","Snow-Miku31":"Snow-Miku/3583096@2x.png","Snow-Miku32":"Snow-Miku/3583097@2x.png","Snow-Miku33":"Snow-Miku/3583098@2x.png","Snow-Miku34":"Snow-Miku/3583099@2x.png","Snow-Miku35":"Snow-Miku/3583100@2x.png","Snow-Miku36":"Snow-Miku/3583101@2x.png","Snow-Miku37":"Snow-Miku/3583102@2x.png","Snow-Miku38":"Snow-Miku/3583103@2x.png","Snow-Miku39":"Snow-Miku/3583104@2x.png","Snow-Miku40":"Snow-Miku/3583105@2x.png"},
+      enableQQ: true,
+      path: window.location.pathname,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+    
+    if (false) {
+      const otherData = false
+      initData = Object.assign({}, initData, otherData)
+    }
+    
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script>(function(){
+  const bp = document.createElement('script');
+  const curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  bp.dataset.pjax = ''
+  const s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})()</script></div></body></html>

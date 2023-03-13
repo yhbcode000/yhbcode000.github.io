@@ -1,0 +1,1395 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>【人工智能】面试问题整理 | Yang's Harbor</title><meta name="keywords" content="技术,整理,笔记,人工智能"><meta name="author" content="✨YangSier✨,hobart.yang@qq.com"><meta name="copyright" content="✨YangSier✨"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="机器学习部分一、特征工程1. 特征归一化1）什么是特征归一化对数值类型的特征做归一化可以将所有的特征都统一到一个大致相同的数值区间内。 2）为什么要特征归一化为了消除数据特征之间的量纲影响，我们需要对特征进行归一化处理，使得不同指标之间具有可比性。例如，分析一个人的身高和体重对健康的影响，如果使用米（m）和千克（kg）作为单位，那么身高特征会在1.6～1.8m的数值范围内，体重特征会在50～100">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【人工智能】面试问题整理">
+<meta property="og:url" content="https://discover304.top/2021/12/21/2021q4/123-ai-question-collection/index.html">
+<meta property="og:site_name" content="Yang&#39;s Harbor">
+<meta property="og:description" content="机器学习部分一、特征工程1. 特征归一化1）什么是特征归一化对数值类型的特征做归一化可以将所有的特征都统一到一个大致相同的数值区间内。 2）为什么要特征归一化为了消除数据特征之间的量纲影响，我们需要对特征进行归一化处理，使得不同指标之间具有可比性。例如，分析一个人的身高和体重对健康的影响，如果使用米（m）和千克（kg）作为单位，那么身高特征会在1.6～1.8m的数值范围内，体重特征会在50～100">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://image.discover304.top/pika_majiang.jpg?imageView2/2/h/300">
+<meta property="article:published_time" content="2021-12-21T06:17:49.000Z">
+<meta property="article:modified_time" content="2021-12-25T06:35:24.000Z">
+<meta property="article:author" content="✨YangSier✨">
+<meta property="article:tag" content="技术">
+<meta property="article:tag" content="整理">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="人工智能">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://image.discover304.top/pika_majiang.jpg?imageView2/2/h/300"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://discover304.top/2021/12/21/2021q4/123-ai-question-collection/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><meta name="google-site-verification" content="ilqpfk3vkgzDNNikz_V37-DOvRyi5wv4Hoi_eyBqvTg"/><meta name="msvalidate.01" content="49D9A50CCF9744E17274791468EDB517"/><meta name="baidu-site-verification" content="code-V24KosyVh1"/><meta name="360-site-verification" content="bd8859c3d74dfa3e8aeee9db30c94bd2"/><meta name="yandex-verification" content="f28ec9bbd50c56f5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?8030f6052f2fed6a4704d96619f090d6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="stylesheet" href="/css/font.css" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":200,"languages":{"author":"Author: ✨YangSier✨","link":"Link: ","source":"Source: Yang's Harbor","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#ffc910","bgDark":"#02c3f6","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: true
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
+
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2021-12-25 14:35:24'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Yang's Harbor" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">243</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">88</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">23</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Links</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Articles</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://image.discover304.top/pika_majiang.jpg?imageView2/2/h/300)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Yang's Harbor</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Links</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Articles</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">【人工智能】面试问题整理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-12-21T06:17:49.000Z" title="Created 2021-12-21 14:17:49">2021-12-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-12-25T06:35:24.000Z" title="Updated 2021-12-25 14:35:24">2021-12-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Library/">Library</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Library/Collection/">Collection</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word count:</span><span class="word-count">34.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading time:</span><span>108min</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="机器学习部分"><a href="#机器学习部分" class="headerlink" title="机器学习部分"></a>机器学习部分</h1><h2 id="一、特征工程"><a href="#一、特征工程" class="headerlink" title="一、特征工程"></a>一、特征工程</h2><h3 id="1-特征归一化"><a href="#1-特征归一化" class="headerlink" title="1. 特征归一化"></a>1. 特征归一化</h3><h4 id="1）什么是特征归一化"><a href="#1）什么是特征归一化" class="headerlink" title="1）什么是特征归一化"></a>1）什么是特征归一化</h4><p>对数值类型的特征做归一化可以将所有的特征都统一到一个大致相同的数值区间内。</p>
+<h4 id="2）为什么要特征归一化"><a href="#2）为什么要特征归一化" class="headerlink" title="2）为什么要特征归一化"></a>2）为什么要特征归一化</h4><p>为了消除数据特征之间的量纲影响，我们需要对特征进行归一化处理，使得不同指标之间具有可比性。例如，分析一个人的身高和体重对健康的影响，如果使用米（m）和千克（kg）作为单位，那么身高特征会在1.6～1.8m的数值范围内，体重特征会在50～100kg的范围内，分析出来的结果显然会倾向于数值差别比较大的体重特征。想要得到更为准确的结果，就需要进行特征归一化（Normalization）处理，使各指标处于同一数值量级，以便进行分析。</p>
+<h4 id="3）特征归一化常用的方法"><a href="#3）特征归一化常用的方法" class="headerlink" title="3）特征归一化常用的方法"></a>3）特征归一化常用的方法</h4><ul>
+<li>线性函数归一化（Min-Max Scaling）。它对原始数据进行线性变换，使结果映射到[0，1]的范围，实现对原始数据的等比缩放。</li>
+<li>零均值归一化（Z-Score Normalization）。它会将原始数据映射到均值为0、标准差为1的分布上。</li>
+</ul>
+<h4 id="4）归一化处理适用模型"><a href="#4）归一化处理适用模型" class="headerlink" title="4）归一化处理适用模型"></a>4）归一化处理适用模型</h4><ul>
+<li>应用归一化的模型。在实际应用中，通过梯度下降法求解的模型通常是需要归一化的，包括线性回归、逻辑回归、支持向量机、神经网络等模型。</li>
+<li>不使用归一化的模型。如决策树。</li>
+</ul>
+<h3 id="2-图像样本增强"><a href="#2-图像样本增强" class="headerlink" title="2. 图像样本增强"></a>2. 图像样本增强</h3><p>1）在图像分类任务中，训练数据不足会带来什么问题？</p>
+<p>当训练数据不足时，说明模型从原始数据中获取的信息比较少，这种情况下要想保证模型的效果，就需要更多先验信息。具体到图像分类任务上，训练数据不足带来的问题主要表现在过拟合方面，即模型在训练样本上的效果可能不错，但在测试集上的泛化效果不佳。</p>
+<p>2）如何缓解数据量不足带来的问题？</p>
+<ul>
+<li>一定程度内的随机旋转、平移、缩放、裁剪、填充、左右翻转等，这些变换对应着同一个目标在不同角度的观察结果。</li>
+<li>对图像中的像素添加噪声扰动，比如椒盐噪声、高斯白噪声等。</li>
+<li>颜色变换。</li>
+<li>改变图像的亮度、清晰度、对比度、锐度等。</li>
+</ul>
+<h3 id="3-什么是监督学习、非监督学习"><a href="#3-什么是监督学习、非监督学习" class="headerlink" title="3. 什么是监督学习、非监督学习"></a>3. 什么是监督学习、非监督学习</h3><p>1）监督学习。监督学习是使用已知正确答案的示例来训练网络。已知数据和其一一对应的标签，训练一个预测模型，将输入数据映射到标签的过程。</p>
+<p>2）非监督学习。在非监督式学习中，数据并不被特别标识，适用于你具有数据集但无标签的情况。学习模型是为了推断出数据的一些内在结构。</p>
+<h3 id="4-监督学习、非监督学习主要应用场景"><a href="#4-监督学习、非监督学习主要应用场景" class="headerlink" title="4. 监督学习、非监督学习主要应用场景"></a>4. 监督学习、非监督学习主要应用场景</h3><p>1）监督学习：回归、分类</p>
+<p>2）非监督学习：聚类</p>
+<h2 id="二、模型评估"><a href="#二、模型评估" class="headerlink" title="二、模型评估"></a>二、模型评估</h2><h3 id="1-回归问题模型评估指标？"><a href="#1-回归问题模型评估指标？" class="headerlink" title="1. 回归问题模型评估指标？"></a>1. 回归问题模型评估指标？</h3><ul>
+<li>平均绝对误差（Mean Absolute Deviation）：单个观测值与算术平均值的偏差的绝对值的平均。</li>
+<li>均方误差：单个样本到平均值差值的平方平均值。</li>
+<li>MAD(中位数绝对偏差)：与数据中值绝对偏差的中值。</li>
+<li>R2决定系数：趋向于1，模型越好；趋向于0，模型越差。</li>
+</ul>
+<h3 id="2-分类问题模型评估指标？"><a href="#2-分类问题模型评估指标？" class="headerlink" title="2. 分类问题模型评估指标？"></a>2. 分类问题模型评估指标？</h3><p>查准率（Precision）：分类正确数量 &#x2F; (分类正确数量 + 多分类的数量)，范围[0,1]。简单说来就是“分类对不对”。</p>
+<p>召回率（Precision）：分类正确数量 &#x2F; (分类正确数量 + 少分类的数量)，范围[0,1]。简单说来就是“分类全不全”。</p>
+<p>F1得分：2 * 查询率 * 召回率  &#x2F; (查准率 + 召回率), 范围[0, 1] ，综合考虑了查准率、召回率。</p>
+<h3 id="3-A-x2F-B测试"><a href="#3-A-x2F-B测试" class="headerlink" title="3. A&#x2F;B测试"></a>3. A&#x2F;B测试</h3><h4 id="1）什么是A-x2F-B测试？"><a href="#1）什么是A-x2F-B测试？" class="headerlink" title="1）什么是A&#x2F;B测试？"></a>1）什么是A&#x2F;B测试？</h4><p>A&#x2F;B测试就是两种模型同时运行，并在实际环境中验证其效果的方式。在互联网公司中，A&#x2F;B 测试是验证新模块、新功能、新产品是否有效，新算法、新模型的效果是否有提升，新设计是否受到用户欢迎，新更改是否影响用户体验的主要测试方法。在机器学习领域中，A&#x2F;B 测试是验证模型最终效果的主要手段。</p>
+<h4 id="2）为什么需要A-x2F-B测试？"><a href="#2）为什么需要A-x2F-B测试？" class="headerlink" title="2）为什么需要A&#x2F;B测试？"></a>2）为什么需要A&#x2F;B测试？</h4><ul>
+<li>离线评估无法完全消除模型过拟合的影响，因此，得出的离线评估结果无法完全替代线上评估结果。</li>
+<li>离线评估无法完全还原线上的工程环境。一般来讲，离线评估往往不会考虑线上环境的延迟、数据丢失、标签数据缺失等情况。因此，离线评估的结果是理想工程环境下的结果。</li>
+<li>线上系统的某些商业指标在离线评估中无法计算。</li>
+</ul>
+<h4 id="3）如何进行线上A-x2F-B测试？"><a href="#3）如何进行线上A-x2F-B测试？" class="headerlink" title="3）如何进行线上A&#x2F;B测试？"></a>3）如何进行线上A&#x2F;B测试？</h4><p>进行A&#x2F;B测试的主要手段是进行用户分桶，即将用户分成实验组和对照组，对实验组的用户施以新模型，对对照组的用户施以旧模型。在分桶的过程中，要注意样本的独立性和采样方式的无偏性，确保同一个用户每次只能分到同一个桶中，在分桶过程中所选取的user_id需要是一个随机数，这样才能保证桶中的样本是无偏的。</p>
+<h3 id="4-超参数"><a href="#4-超参数" class="headerlink" title="4. 超参数"></a>4. 超参数</h3><h4 id="1）什么是超参数？"><a href="#1）什么是超参数？" class="headerlink" title="1）什么是超参数？"></a>1）什么是超参数？</h4><p>超参数是在开始学习过程之前设置值的参数，而不是通过训练得到的参数数据。</p>
+<h4 id="2）超参数有哪些调优手段？"><a href="#2）超参数有哪些调优手段？" class="headerlink" title="2）超参数有哪些调优手段？"></a>2）超参数有哪些调优手段？</h4><h5 id="①-网格搜索"><a href="#①-网格搜索" class="headerlink" title="① 网格搜索"></a>① 网格搜索</h5><p>网格搜索指查找搜索范围内的所有的点来确定最优值。如果采用较大的搜索范围以及较小的步长，网格搜索有很大概率找到全局最优值。然而，这种搜索方案十分消耗计算资源和时间，特别是需要调优的超参数比较多的时候。因此，在实际应用中，网格搜索法一般会先使用较广的搜索范围和较大的步长，来寻找全局最优值可能的位置；然后会逐渐缩小搜索范围和步长，来寻找更精确的最优值。这种操作方案可以降低所需的时间和计算量，但由于目标函数一般是非凸的，所以很可能会错过全局最优值。</p>
+<h5 id="②-随机搜索"><a href="#②-随机搜索" class="headerlink" title="② 随机搜索"></a>② 随机搜索</h5><p>随机搜索的思想与网格搜索比较相似，只是不再测试上界和下界之间的所有值，而是在搜索范围中随机选取样本点。它的理论依据是，如果样本点集足够大，那么通过随机采样也能大概率地找到全局最优值，或其近似值。随机搜索一般会比网格搜索要快一些，但是和网格搜索的快速版一样，它的结果也是没法保证的。</p>
+<h5 id="③-验证曲线和学习曲线"><a href="#③-验证曲线和学习曲线" class="headerlink" title="③ 验证曲线和学习曲线"></a>③ 验证曲线和学习曲线</h5><ul>
+<li>验证曲线：根据不同评估系数来确定超参数优劣。</li>
+<li>学习曲线：根据训练数据规模确定算法优劣。</li>
+</ul>
+<h4 id="3）常用超参数对模型的性能影响"><a href="#3）常用超参数对模型的性能影响" class="headerlink" title="3）常用超参数对模型的性能影响"></a>3）常用超参数对模型的性能影响</h4><h5 id="①-学习率"><a href="#①-学习率" class="headerlink" title="① 学习率"></a>① 学习率</h5><p>学习率太大导致无法收敛，太小导致收敛慢</p>
+<h5 id="②-损失函数部分超参数"><a href="#②-损失函数部分超参数" class="headerlink" title="② 损失函数部分超参数"></a>② 损失函数部分超参数</h5><p>对于部分损失函数超参数其变化会对结果十分敏感，而有些则并不会太影响。在调整时，建议参考论文的推荐值，并在该推荐值数量级上进行最大最小值调试该参数对结果的影响。</p>
+<h5 id="③-批样本数量"><a href="#③-批样本数量" class="headerlink" title="③ 批样本数量"></a>③ 批样本数量</h5><p>过大导致训练速度慢，过小导致收敛不稳定</p>
+<h5 id="④-丢弃率"><a href="#④-丢弃率" class="headerlink" title="④ 丢弃率"></a>④ 丢弃率</h5><p>较小的丢弃率可提升准确度，但可能导致过拟合</p>
+<h5 id="⑤-卷积核大小"><a href="#⑤-卷积核大小" class="headerlink" title="⑤ 卷积核大小"></a>⑤ 卷积核大小</h5><p>增加卷积核尺寸意味着参数量的增加，同条件下，模型参数也相应的增加。尽量选取小的卷积核。</p>
+<h5 id="⑥-模型深度"><a href="#⑥-模型深度" class="headerlink" title="⑥ 模型深度"></a>⑥ 模型深度</h5><p>同条件，下增加深度意味着模型具有更多的参数，更强的拟合能力，深度越深意味着参数越多，需要的时间和硬件资源也越高。</p>
+<h3 id="5-欠拟合与过拟合"><a href="#5-欠拟合与过拟合" class="headerlink" title="5. 欠拟合与过拟合"></a>5. 欠拟合与过拟合</h3><h4 id="1）什么是欠拟合、过拟合？"><a href="#1）什么是欠拟合、过拟合？" class="headerlink" title="1）什么是欠拟合、过拟合？"></a>1）什么是欠拟合、过拟合？</h4><p>欠拟合指的是模型在训练和预测时表现都不好的情况；过拟合是指模型对于训练数据拟合呈过当的情况，反映到评估指标上，就是模型在训练集上的表现很好，但在测试集和新数据上的表现较差。</p>
+<h4 id="2）如何避免过拟合？"><a href="#2）如何避免过拟合？" class="headerlink" title="2）如何避免过拟合？"></a>2）如何避免过拟合？</h4><ul>
+<li>扩大样本数据。使用更多的训练数据是解决过拟合问题最有效的手段，因为更多的样本能够让模型学习到更多更有效的特征，减小噪声的影响。</li>
+<li>降低模型复杂度。在数据较少时，模型过于复杂是产生过拟合的主要因素，适当降低模型复杂度可以避免模型拟合过多的采样噪声。例如，在神经网络模型中减少网络层数、神经元个数等；在决策树模型中降低树的深度、进行剪枝等。</li>
+<li>正则化方法。给模型的参数加上一定的正则约束，比如将权值的大小加入到损失函数中。</li>
+<li>集成学习方法。集成学习是把多个模型集成在一起，来降低单一模型的过拟合风险。</li>
+<li>树结构中，对树进行枝剪。</li>
+<li>减少训练迭代次数。</li>
+<li>神经网络中，加入dropout操作层。</li>
+<li>主动加入噪声数据样本。</li>
+</ul>
+<h4 id="3）如何避免欠拟合？"><a href="#3）如何避免欠拟合？" class="headerlink" title="3）如何避免欠拟合？"></a>3）如何避免欠拟合？</h4><ul>
+<li>添加新特征。当特征不足或者现有特征与样本标签的相关性不强时，模型容易出现欠拟合。</li>
+<li>增加模型复杂度。简单模型的学习能力较差，通过增加模型的复杂度可以使模型拥有更强的拟合能力。例如，在线性模型中添加高次项，在神经网络模型中增加网络层数或神经元个数等。</li>
+<li>减小正则化系数。正则化是用来防止过拟合的，但当模型出现欠拟合现象时，则需要有针对性地减小正则化系数。</li>
+</ul>
+<h3 id="6-什么是置信概率？"><a href="#6-什么是置信概率？" class="headerlink" title="6. 什么是置信概率？"></a>6. 什么是置信概率？</h3><p>置信概率（Confidence Probability）是用来衡量推断靠程度的概率，该值越大说明推断结果确定性越大，该值越小说明推断结果不确定性越大。</p>
+<h3 id="7-什么是交叉验证"><a href="#7-什么是交叉验证" class="headerlink" title="7. 什么是交叉验证"></a>7. 什么是交叉验证</h3><p>交叉验证指将含有N个样本的数据集，分成K份，每份含有N&#x2F;K个样本。选择其中1份作为测试集，另外K-1份作为训练集，测试集就有K种情况。将K种情况下，模型的泛化误差取均值，得到模型最终的泛化误差。</p>
+<p>交叉验证的作用是为了得到更为稳健可靠的模型，对模型的泛化误差进行评估。</p>
+<h3 id="8-列举解决类别不均衡问题的方法"><a href="#8-列举解决类别不均衡问题的方法" class="headerlink" title="8. 列举解决类别不均衡问题的方法"></a>8. 列举解决类别不均衡问题的方法</h3><p>1）扩大数据集。增加包含小类样本数据的数据，更多的数据能得到更多的分布信息。</p>
+<p>2）对大类数据欠采样。减少大类数据样本个数，使与小样本个数接近。</p>
+<p>3）使用新评价指标。如果当前评价指标不适用，则应寻找其他具有说服力的评价指标。</p>
+<p>4）选择新算法。不同的算法适用于不同的任务与数据，应该使用不同的算法进行比较。</p>
+<p>5）数据代价加权。例如当分类任务是识别小类，那么可以对分类器的小类样本数据增加权值，降低大类样本的权值，从而使得分类器将重点集中在小类样本身上。</p>
+<h3 id="9-什么是L1，L2正则化"><a href="#9-什么是L1，L2正则化" class="headerlink" title="9. 什么是L1，L2正则化"></a>9. 什么是L1，L2正则化</h3><p>机器学习中几乎都可以看到损失函数后面会添加一个额外项，常用的额外项一般有两种，一般英文称作 L1-norm 和L2-norm，中文称作 L1正则化 和 L2正则化，或者 L1范数 和 L2范数。L1正则化和L2正则化可以看做是损失函数的惩罚项，所谓”惩罚”是指对损失函数中的某些参数做一些限制。范数的表达式为：<br>$$<br>||x||_p&#x3D;(\sum|x_i|^p)^{\frac{1}{p}}<br>$$<br>当p&#x3D;1时，是L1范数，其表示某个向量中所有元素绝对值的和</p>
+<p>当p&#x3D;2时，是L2范数， 表示某个向量中所有元素平方和再开根， 也就是欧几里得距离公式</p>
+<p>正则化通过降低模型的复杂性， 达到避免过拟合的问题，原因是：（1）而加入正则能抑制系数过大的问题；（2）从贝叶斯的角度来分析， 正则化是为模型参数估计增加一个先验知识，先验知识会引导损失函数最小值过程朝着约束方向迭代。</p>
+<h3 id="10-神经网络权重初始值如何设置？"><a href="#10-神经网络权重初始值如何设置？" class="headerlink" title="10. 神经网络权重初始值如何设置？"></a>10. 神经网络权重初始值如何设置？</h3><p>在神经网络的学习中，权重的初始值特别重要。实际上，设定什么样的权重初始值，经常关系到神经网络的学习能否成功。</p>
+<h4 id="1）权重初始值不能设置为0"><a href="#1）权重初始值不能设置为0" class="headerlink" title="1）权重初始值不能设置为0"></a>1）权重初始值不能设置为0</h4><p>如果把权重初始值全部设为0，在误差反向传播法中，所有的权重值都会进行相同的更新，神经网络将无法正常学习。比如，在2层神经网络中，假设第1层和第2层的权重为0。这样一来，正向传播时，因为输入层的权重为0，所以第2层的神经元全部会被传递相同的值。第2层的神经元中全部输入相同的值，这意味着反向传播时第2层的权重全部都会进行相同的更新。因此，权重被更新为相同的值，并拥有了对称的值（重复的值）。这使得神经网络拥有许多不同的权重的意义丧失了。为了防止“权重均一化”（严格地讲，是为了瓦解权重的对称结构），必须随机生成初始值。</p>
+<h4 id="2）隐藏层激活值的分布"><a href="#2）隐藏层激活值的分布" class="headerlink" title="2）隐藏层激活值的分布"></a>2）隐藏层激活值的分布</h4><p>使用一个包含5层的神经网络，每层有100个神经元。然后，用高斯分布随机生成1000个数据作为输入数据，并把它们传给5层神经网络，观察激活值的分布并绘制直方图，从而反映激活值的分布情况。</p>
+<p><strong>① Sigmoid激活函数的参数分布</strong></p>
+<ul>
+<li><strong>高斯权重初始值</strong></li>
+</ul>
+<p><img src="https://image.discover304.top/ai/qc/sigmoid%E6%BF%80%E6%B4%BB%E5%80%BC%E5%88%86%E5%B8%83.png" alt="sigmoid激活值分布"></p>
+<p>上图显示的是标准差为1的随机权重激活值分布。由图可见，各层激活值呈偏向0和1的分布，偏向0和1的数据分布会造成反向传播中梯度的值不断变小，最后消失。这个问题称为梯度消失（gradient vanishing）。将参数初始值的标准差设置为0.01，各层激活值分布如下图所示：</p>
+<p><img src="https://image.discover304.top/ai/qc/sigmoid%E6%BF%80%E6%B4%BB%E5%80%BC%E5%88%86%E5%B8%83_0.01.png" alt="sigmoid激活值分布_0.01"></p>
+<p>由图可见，当初始化权重参数时，标准差为0.01，激活值集中在0.5附近分布。虽然没有出现梯度消失情况，但激活值的分布有所偏向，说明在表现力上会有很大问题。因为如果有多个神经元都输出几乎相同的值，那它们就没有存在的意义了。</p>
+<ul>
+<li><strong>Xavier初始值</strong></li>
+</ul>
+<p>Xavier Glorot和Yushua Bengio等人的论文《Understanding the difficulty of training deep feedforward neural networks》（2010年）中推荐的权重初始值（俗称“Xavier初始值”）。现在，在一般的深度学习框架中，Xavier初始值已被作为标准使用。为了使各层的激活值呈现出具有相同广度的分布，论文建议，如果前一层的节点数为n，则初始值使用$\frac{1}{\sqrt n}$标准差为的分布。使用Xavier初始值后，前一层的节点数越多，要设定为目标节点的初始值的权重尺度就越小。</p>
+<p><img src="https://image.discover304.top/ai/qc/Xavier%E5%88%9D%E5%A7%8B%E5%80%BC%E6%BF%80%E6%B4%BB%E5%88%86%E5%B8%83.png" alt="Xavier初始值激活分布"></p>
+<p>由图可见，Xavier初始值，后面的隐藏层的分布呈稍微歪斜的形状。如果用tanh函数（双曲线函数）代替sigmoid函数，这个稍微歪斜的问题就能得到改善，呈漂亮的吊钟型分布。</p>
+<p><strong>② Relu激活函数参数分布</strong></p>
+<p>Xavier初始值同样适合Relu激活函数，但当激活函数使用ReLU时，一般推荐使用ReLU专用的初始值，也就是Kaiming He等人推荐的初始值，也称为“He初始值”。当前一层的节点数为n时，He初始值使用标准差为$\sqrt{\frac{2}{n}}$的高斯分布。可以直观理解为，ReLU的负值区域的值为0，为了使它更有广度，所以需要2倍的系数。</p>
+<p><img src="https://image.discover304.top/ai/qc/Relu%E9%AB%98%E6%96%AF%E5%88%86%E5%B8%830.01.png" alt="Relu高斯分布0.01"></p>
+<p><img src="https://image.discover304.top/ai/qc/ReluXavier%E5%88%9D%E5%A7%8B%E5%80%BC.png" alt="ReluXavier初始值"></p>
+<p><img src="https://image.discover304.top/ai/qc/ReluHe%E5%88%9D%E5%A7%8B%E5%80%BC.png" alt="ReluHe初始值"></p>
+<p>由上图可知，当“std &#x3D; 0.01”时，各层的激活值非常小。神经网络上传递的是非常小的值，说明逆向传播时权重的梯度也同样很小。使用Xavier初始值，随着层的加深，偏向一点点变大，层次较深时会出现梯度消失问题。而当初始值为He初始值时，各层中分布的广度相同。由于即便层加深，数据的广度也能保持不变，因此逆向传播时，也会传递合适的值。</p>
+<h2 id="三、回归问题"><a href="#三、回归问题" class="headerlink" title="三、回归问题"></a>三、回归问题</h2><h3 id="1-线性回归"><a href="#1-线性回归" class="headerlink" title="1. 线性回归"></a>1. 线性回归</h3><h4 id="1）什么是线性回归"><a href="#1）什么是线性回归" class="headerlink" title="1）什么是线性回归"></a>1）什么是线性回归</h4><p>线性回归是指：通过数据样本，找到一个最佳拟合数据样本的线性模型，并用于预测。线性方程的一般表达形式为：<br>$$<br>y &#x3D; w_0 + w_1x<br>$$<br>其中，$x$和$y$为已知，$w_0, w_1$是要经过学习获得的参数。</p>
+<h4 id="2）什么情况下使用线性回归"><a href="#2）什么情况下使用线性回归" class="headerlink" title="2）什么情况下使用线性回归"></a>2）什么情况下使用线性回归</h4><ul>
+<li>数据样本呈线性分布。在二维平面中，线性分布的特征是，数据呈一个狭长的条状分布，并且没有明显弯曲。</li>
+<li>已知模型为线性模型。</li>
+</ul>
+<h4 id="3）线性回归的特点"><a href="#3）线性回归的特点" class="headerlink" title="3）线性回归的特点"></a>3）线性回归的特点</h4><p>① 优点</p>
+<ul>
+<li>思想简单，实现容易。建模迅速，对于小数据量、简单的关系很有效。</li>
+<li>是许多强大的非线性模型的基础。</li>
+<li>线性回归模型十分容易理解，结果具有很好的可解释性，有利于决策分析。</li>
+<li>蕴含机器学习中的很多重要思想。</li>
+</ul>
+<p>② 缺点</p>
+<ul>
+<li>对于非线性数据或者数据特征间具有相关性多项式回归难以建模。</li>
+<li>难以很好地表达高度复杂的数据。</li>
+</ul>
+<h4 id="4）多元回归"><a href="#4）多元回归" class="headerlink" title="4）多元回归"></a>4）多元回归</h4><p>多元回归是线性回归的推广，含有一个变量称为线性回归，含有多个变量称为多元回归。多元回归的表达式为：<br>$$<br>y &#x3D; w_0 + w_1x_1 + w_2x_2 + … + w_nx_n<br>$$<br>只有一个变量的时候，模型是平面中的一条直线；有两个变量的时候，模型是空间中的一个平面；有更多变量时，模型将是更高维的。</p>
+<h3 id="2-多项式回归"><a href="#2-多项式回归" class="headerlink" title="2. 多项式回归"></a>2. 多项式回归</h3><h4 id="1）什么是多项式回归？"><a href="#1）什么是多项式回归？" class="headerlink" title="1）什么是多项式回归？"></a>1）什么是多项式回归？</h4><p>多项式回归是指使：根据样本数据，用高次多项式模型来最佳程度拟合样本的回归方法。多项式回归中，加入了特征的更高次方（例如平方项或立方项），也相当于增加了模型的自由度，用来捕获数据中非线性的变化。多项式回归模型一般表达式为：<br>$$<br>y &#x3D; w_0 + w_1x + w_2x^2 + w_3x ^ 3 + … + w_nx^n<br>$$</p>
+<h4 id="2）什么情况下使用多项式回归？"><a href="#2）什么情况下使用多项式回归？" class="headerlink" title="2）什么情况下使用多项式回归？"></a>2）什么情况下使用多项式回归？</h4><p>在回归分析中有时会遇到线性回归的直线拟合效果不佳，如果发现散点图中数据点呈多项式曲线时，可以考虑使用多项式回归来分析。</p>
+<h4 id="3）多项式回归的特点"><a href="#3）多项式回归的特点" class="headerlink" title="3）多项式回归的特点"></a>3）多项式回归的特点</h4><p>① 优点 </p>
+<ul>
+<li>添加高阶项的时候，也增加了模型的复杂度。随着模型复杂度的升高，模型的容量以及拟合数据的能力增加</li>
+</ul>
+<p>② 缺点</p>
+<ul>
+<li>需要一些数据的先验知识才能选择最佳指数</li>
+<li>如果指数选择不当容易出现过拟合</li>
+</ul>
+<h3 id="3-决策树回归"><a href="#3-决策树回归" class="headerlink" title="3. 决策树回归"></a>3. 决策树回归</h3><h4 id="1）什么是决策树"><a href="#1）什么是决策树" class="headerlink" title="1）什么是决策树"></a>1）什么是决策树</h4><p>决策树(Decision Tree）的核心思想是：相似的输入必然产生相似的数据（同因同果）。决策树通过把数据样本分配到树状结构的某个叶子节点来确定数据集中样本所属的分类。决策树可用于回归和分类。当用于回归时，预测结果为叶子节点所有样本的均值。</p>
+<p><img src="https://image.discover304.top/ai/qc/%E5%86%B3%E7%AD%96%E5%AD%90%E6%A0%911.png"></p>
+<p>我们使用“熵”来度量系统的混乱或有序程度。随着子表的划分，信息熵越来越小，信息越来越纯，数据越来越有序（同一个子节点下的数据越来越相同或相似）。信息熵表达式为：<br>$$<br>H &#x3D; -\sum_{i&#x3D;1}^{n}{P(x_i)log_2P(x_i)}<br>$$<br>其中，$P(x_i)$是某个分类的概率。当n的分类越大，H的值越大；当n&#x3D;1时，信息熵为0.在构建决策树时，首先选择信息增益率大的属性作为分支判断的依据。</p>
+<h4 id="2）决策树的特点"><a href="#2）决策树的特点" class="headerlink" title="2）决策树的特点"></a>2）决策树的特点</h4><h5 id="①-优点"><a href="#①-优点" class="headerlink" title="① 优点"></a>① 优点</h5><ul>
+<li>简单易懂，容易解释，可视化，适用性广；</li>
+<li>可用于分类、回归问题。</li>
+</ul>
+<h5 id="②-缺点"><a href="#②-缺点" class="headerlink" title="② 缺点"></a>② 缺点</h5><ul>
+<li><p>容易过拟合；</p>
+</li>
+<li><p>数据中的小变化会影响结果，不稳定；</p>
+</li>
+<li><p>每一个节点的选择都是贪婪算法，不能保证全局最优解。</p>
+</li>
+</ul>
+<h4 id="3）什么情况下使用决策树"><a href="#3）什么情况下使用决策树" class="headerlink" title="3）什么情况下使用决策树"></a>3）什么情况下使用决策树</h4><ul>
+<li>适合与标称型（在有限目标集中取值）属性较多的样本数据</li>
+<li>具有较广的适用性，当对模型不确定时可以使用决策树进行验证</li>
+</ul>
+<h4 id="4）随机森林"><a href="#4）随机森林" class="headerlink" title="4）随机森林"></a>4）随机森林</h4><p>随机抽取部分样本和随机抽取部分特征相结合构建多棵决策树，这样不仅削弱了强势样本对预测结果的印象，同时削弱了强势特征的影响，提高了模型的泛化能力。</p>
+<h2 id="四、分类问题"><a href="#四、分类问题" class="headerlink" title="四、分类问题"></a>四、分类问题</h2><h3 id="1-二元分类"><a href="#1-二元分类" class="headerlink" title="1. 二元分类"></a>1. 二元分类</h3><h4 id="1）什么是二元分类"><a href="#1）什么是二元分类" class="headerlink" title="1）什么是二元分类"></a>1）什么是二元分类</h4><p>二元分类又称逻辑回归，是将一组样本划分到两个不同类别的分类方式。</p>
+<h4 id="2）如何实现二元分类"><a href="#2）如何实现二元分类" class="headerlink" title="2）如何实现二元分类"></a>2）如何实现二元分类</h4><p>逻辑回归属于广义线性回归模型（generalized linear model），使用线性模型计算函数值，再通过逻辑函数将连续值进行离散化处理。逻辑函数（又称sigmoid函数）表达式为：<br>$$<br>y&#x3D; \frac{1}{1+e^{-t}}<br>$$<br>该函数能将$（-\infty, +\infty）$的值压缩到(0, 1)区间，通过选取合适的阈值转换为两个离散值（大于0.5为1，小于0.5为0）。</p>
+<h3 id="3-朴素贝叶斯分类"><a href="#3-朴素贝叶斯分类" class="headerlink" title="3. 朴素贝叶斯分类"></a>3. 朴素贝叶斯分类</h3><h4 id="1）贝叶斯定理"><a href="#1）贝叶斯定理" class="headerlink" title="1）贝叶斯定理"></a>1）贝叶斯定理</h4><p>贝叶斯定理描述为：<br>$$<br>P(A|B) &#x3D; \frac{P(A)P(B|A)}{P(B)}<br>$$<br>其中，$P(A)$和$P(B)$是A事件和B事件发生的概率，这两个事件是独立的，不相互影响的（朴素的含义）；$P(A|B)$称为条件概率，表示B事件发生条件下，A事件发生的概率。$P(A)$也称为先验概率，$P(A|B)$也称为后验概率。先验概率主要根据统计获得，后验概率利用贝叶斯定理计算后并根据实际情况进行修正。其公式推导过程：<br>$$<br>P(A,B) &#x3D;P(B)P(A|B)\<br>P(B,A) &#x3D;P(A)P(B|A)<br>$$<br>其中$P(A,B)$称为联合概率，指事件B发生的概率，乘以事件A在事件B发生的条件下发生的概率。因为$P(A,B)&#x3D;P(B,A)$, 所以有：<br>$$<br>P(B)P(A|B)&#x3D;P(A)P(B|A)<br>$$<br>两边同时除以P(B)，则得到贝叶斯定理的表达式。</p>
+<h4 id="2）什么是朴素贝叶斯分类"><a href="#2）什么是朴素贝叶斯分类" class="headerlink" title="2）什么是朴素贝叶斯分类"></a>2）什么是朴素贝叶斯分类</h4><p>朴素贝叶斯法是基于贝叶斯定理与特征条件独立假设的分类方法。“朴素”的含义为：假设问题的特征变量都是相互独立地作用于决策变量的，即问题的特征之间都是互不相关的。</p>
+<h4 id="3）朴素贝叶斯分类的特点"><a href="#3）朴素贝叶斯分类的特点" class="headerlink" title="3）朴素贝叶斯分类的特点"></a>3）朴素贝叶斯分类的特点</h4><h5 id="①-优点-1"><a href="#①-优点-1" class="headerlink" title="① 优点"></a>① 优点</h5><ul>
+<li>逻辑性简单</li>
+<li>算法较为稳定。当数据呈现不同的特点时，朴素贝叶斯的分类性能不会有太大的差异。</li>
+<li>当样本特征之间的关系相对比较独立时，朴素贝叶斯分类算法会有较好的效果。</li>
+</ul>
+<h5 id="②-缺点-1"><a href="#②-缺点-1" class="headerlink" title="② 缺点"></a>② 缺点</h5><ul>
+<li>特征的独立性在很多情况下是很难满足的，因为样本特征之间往往都存在着相互关联，如果在分类过程中出现这种问题，会导致分类的效果大大降低。</li>
+</ul>
+<h4 id="4）什么时候使用朴素贝叶斯"><a href="#4）什么时候使用朴素贝叶斯" class="headerlink" title="4）什么时候使用朴素贝叶斯"></a>4）什么时候使用朴素贝叶斯</h4><ul>
+<li>根据先验概率计算后验概率的情况，且样本特征之间独立性较强。</li>
+</ul>
+<h3 id="4-决策树分类"><a href="#4-决策树分类" class="headerlink" title="4. 决策树分类"></a>4. 决策树分类</h3><p>决策树分类和决策树回归思想基本相同，不同的是，决策树分类器输出为离散值。通过决策树进行分支处理，最后落到叶子节点上，使用投票的方式来决定预测结果属于哪个类别。</p>
+<h3 id="5-支持向量机"><a href="#5-支持向量机" class="headerlink" title="5. 支持向量机"></a>5. 支持向量机</h3><h4 id="1）什么是支持向量机"><a href="#1）什么是支持向量机" class="headerlink" title="1）什么是支持向量机"></a>1）什么是支持向量机</h4><p>支持向量机（Support Vector Machines）是一种二分类模型，它的目的是寻找一个超平面来对样本进行分割，分割的原则是间隔最大化。所谓“支持向量”，就是下图中虚线穿过的边缘点。支持向量机就对应着能将数据正确划分并且间隔最大的直线（下图中红色直线）。</p>
+<p><img src="https://image.discover304.top/ai/qc/%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F.png"></p>
+<h4 id="2）SVM寻找最优边界要求有哪些？"><a href="#2）SVM寻找最优边界要求有哪些？" class="headerlink" title="2）SVM寻找最优边界要求有哪些？"></a>2）SVM寻找最优边界要求有哪些？</h4><p>SVM寻找最优边界时，需满足以下几个要求：</p>
+<p>（1）正确性：对大部分样本都可以正确划分类别；</p>
+<p>（2）安全性：支持向量，即离分类边界最近的样本之间的距离最远；</p>
+<p>（3）公平性：支持向量与分类边界的距离相等；</p>
+<p>（4）简单性：采用线性方程（直线、平面）表示分类边界，也称分割超平面。如果在原始维度中无法做线性划分，那么就通过升维变换，在更高维度空间寻求线性分割超平面. 从低纬度空间到高纬度空间的变换通过核函数进行。</p>
+<h4 id="3）什么是线性可分与线性不可分？"><a href="#3）什么是线性可分与线性不可分？" class="headerlink" title="3）什么是线性可分与线性不可分？"></a>3）什么是线性可分与线性不可分？</h4><h5 id="①-线性可分"><a href="#①-线性可分" class="headerlink" title="① 线性可分"></a>① 线性可分</h5><p>如果一组样本能使用一个线性函数分开，称这些数据样本是线性可分的。那么什么是线性函数呢？在二维空间中就是一条直线，在三维空间中就是一个平面，以此类推，如果不考虑空间维数，这样的线性函数统称为超平面。</p>
+<p><img src="https://image.discover304.top/ai/qc/svm%E7%A4%BA%E6%84%8F%E5%9B%BE.png"></p>
+<p>如图中的A，B两个样本点，B点被预测为正类的确信度要大于A点，所以SVM的目标是寻找一个超平面，使得离超平面较近的异类点之间能有更大的间隔，即不必考虑所有样本点，只需让求得的超平面使得离它近的点间隔最大。</p>
+<h5 id="②-线性不可分"><a href="#②-线性不可分" class="headerlink" title="② 线性不可分"></a>② 线性不可分</h5><p>线性不可分是指无法在样本空间下找到一个线性模型来进行划分类别。以下是一个一维线性不可分的示例，无法找到一条直线，分开两类点：</p>
+<p><img src="https://image.discover304.top/ai/qc/%E4%B8%80%E7%BB%B4%E7%BA%BF%E6%80%A7%E4%B8%8D%E5%8F%AF%E5%88%86.png"></p>
+<center><font size=2>一维线性不可分</font></center>
+以下是一个二维不可分的示例：
+
+<p><img src="https://image.discover304.top/ai/qc/%E4%BA%8C%E7%BB%B4%E7%BA%BF%E6%80%A7%E4%B8%8D%E5%8F%AF%E5%88%86.png"></p>
+<center><font size=2>二维线性不可分</font></center>
+对于该类线性不可分问题，可以通过升维，将低纬度特征空间转换为高纬度特征空间，实现线性可分，如下图所示：
+
+<p><img src="https://image.discover304.top/ai/qc/%E4%B8%80%E7%BB%B4%E6%98%A0%E5%B0%84%E5%88%B0%E4%BA%8C%E7%BB%B4.png"></p>
+<center><font size=2>一维空间升至二维空间实现线性可分</font></center>
+![](https://image.discover304.top/ai/qc/二维升维至三维.png)
+
+<center><font size=2>二维空间升至三维空间实现线性可分</font></center>
+那么如何实现升维？这就需要用到核函数。
+
+<h4 id="4）什么是核函数？"><a href="#4）什么是核函数？" class="headerlink" title="4）什么是核函数？"></a>4）什么是核函数？</h4><p>核函数用来对原还是进行升维和特征变换处理，使得低纬度线性不可分问题变维高纬度线性可分问题。常用的核函数有：</p>
+<ul>
+<li><p>线性核函数。表达式：$k(x，y)&#x3D;x^T·y+c$. 线性核函数是原始输入空间的内积，即特征空间和输入空间的维度是一样的，参数较少，运算速度较快。一般情况下，在特征数量相对于样本数量非常多时，适合采用线性核函数。</p>
+</li>
+<li><p>多项式核函数。多项式核函数（Polynomial Kernel）用增加高次项特征的方法做升维变换，当多项式阶数高时复杂度会很高，其表达式为：<br>$$<br>K(x，y)&#x3D;(αx^T·y+c)d<br>$$<br>其中，α表示调节参数，d表示最高次项次数，c为可选常数。</p>
+</li>
+<li><p>径向基核函数。径向基核函数（Radial Basis Function Kernel）具有很强的灵活性，应用很广泛。与多项式核函数相比，它的参数少，因此大多数情况下，都有比较好的性能。在不确定用哪种核函数时，可优先验证高斯核函数。</p>
+</li>
+</ul>
+<h4 id="5）SVM的特点？"><a href="#5）SVM的特点？" class="headerlink" title="5）SVM的特点？"></a>5）SVM的特点？</h4><h5 id="①-优点-2"><a href="#①-优点-2" class="headerlink" title="① 优点"></a>① 优点</h5><ul>
+<li><p>应用广泛，可以解决高维、复杂特征下的分类问题；</p>
+</li>
+<li><p>具有较好的泛化能力；</p>
+</li>
+</ul>
+<h5 id="②-缺点-2"><a href="#②-缺点-2" class="headerlink" title="② 缺点"></a>② 缺点</h5><ul>
+<li>当样本很多时，效率并不是很高；</li>
+<li>对缺失数据敏感。</li>
+</ul>
+<h2 id="五、聚类问题"><a href="#五、聚类问题" class="headerlink" title="五、聚类问题"></a>五、聚类问题</h2><h3 id="1-基本概念"><a href="#1-基本概念" class="headerlink" title="1. 基本概念"></a>1. 基本概念</h3><h4 id="1）什么是聚类问题"><a href="#1）什么是聚类问题" class="headerlink" title="1）什么是聚类问题"></a>1）什么是聚类问题</h4><p>聚类是指根据数据本身的特征，将样本按照相似度（距离相近）划分为不同的类簇，从而揭示样本之间内在的性质以及相互之间的联系规律。聚类属于无监督学习。</p>
+<h4 id="2）好的聚类算法有哪些特征？"><a href="#2）好的聚类算法有哪些特征？" class="headerlink" title="2）好的聚类算法有哪些特征？"></a>2）好的聚类算法有哪些特征？</h4><ul>
+<li>良好的可伸缩性。不仅能在小数据集上拥有良好性能，得到较好聚类结果，而且在处理大数据集时同样有较好的表现。</li>
+<li>处理不同类型数据的能力。不仅能够对数值型的数据进行聚类，也能够对诸如图像、文档、序列等复杂数据进行聚类，甚至在多种类型的混合数据集中有良好的表现。</li>
+<li>处理噪声数据的能力。实际应用中，数据集的质量往往不理想，包含很多噪声数据。一个良好的聚类算法降低噪声数据对聚类结果的影响，在低质量数据集中同样能够得到不错的聚类结果。</li>
+<li>对样本顺序的不敏感性。良好的聚类算法应当不受输入数据顺序的影响，任意顺序数据输入都能够得到相同的聚类结果。</li>
+<li>约束条件下的表现。实际应用场景中，聚类算法需要受到应用背景的约束。良好的聚类算法在约束条件下同样能够对数据集进行良好的聚类，并且得到高质量聚类结果。</li>
+<li>易解释性和易用性。不是所有的聚类分析使用者都是数据分析专家，对于用户来说，聚类分析算法应该方便使用，且聚类得到的结果容易解释。</li>
+</ul>
+<h4 id="3）聚类模型如何评价？"><a href="#3）聚类模型如何评价？" class="headerlink" title="3）聚类模型如何评价？"></a>3）聚类模型如何评价？</h4><p>理想的聚类可以用四个字概况：内密外疏，即同一聚类内部足够紧密，聚类之间足够疏远. 学科中使用“轮廓系数”来进行度量，见下图：</p>
+<p><img src="https://image.discover304.top/ai/qc/%E8%BD%AE%E5%BB%93%E7%B3%BB%E6%95%B0.jpg"></p>
+<p>假设我们已经通过一定算法，将待分类数据进行了聚类。常用的比如使用K-means将待分类数据分为了 k 个簇 。对于簇中的每个向量。分别计算它们的轮廓系数。对于其中的一个点 i 来说：<br>    a(i) &#x3D; average(i向量到所有它属于的簇中其它点的距离)<br>    b(i) &#x3D; min (i向量到各个非本身所在簇的所有点的平均距离)<br>那么 i 向量轮廓系数就为：<br>$$<br>S(i)&#x3D;\frac{b(i)-a(i)}{max(b(i), a(i))}<br>$$<br>由公式可以得出:</p>
+<p>（1）当$b(i)&gt;&gt;a(i)$时，$S(i)$越接近于1，这种情况聚类效果最好；</p>
+<p>（2）当$b(i)&lt;&lt;a(i)$时，$S(i)$越接近于-1，这种情况聚类效果最差；</p>
+<p>（3）当$b(i)&#x3D;a(i)$时，$S(i)$的值为0，这种情况聚类出现了重叠. </p>
+<h3 id="2-K-Means聚类"><a href="#2-K-Means聚类" class="headerlink" title="2. K-Means聚类"></a>2. K-Means聚类</h3><h4 id="1）什么是K-Means聚类"><a href="#1）什么是K-Means聚类" class="headerlink" title="1）什么是K-Means聚类"></a>1）什么是K-Means聚类</h4><p>K均值聚类算法（k-means clustering algorithm）是一种常用的聚类算法，简单高效。其步骤为：</p>
+<p>第一步：根据事先已知的聚类数，随机选择若干样本作为聚类中心，计算每个样本与每个聚类中心的欧式距离，离哪个聚类中心近，就算哪个聚类中心的聚类，完成一次聚类划分.</p>
+<p>第二步：计算每个聚类的集合中心（平均值），如果几何中心与聚类中心不重合，再以几何中心作为新的聚类中心，重新划分聚类. 重复以上过程，直到某一次聚类划分后，所得到的各个几何中心与其所依据的聚类中心重合或足够接近为止. </p>
+<h4 id="2）K-Means的特点"><a href="#2）K-Means的特点" class="headerlink" title="2）K-Means的特点"></a>2）K-Means的特点</h4><h5 id="①-优点-3"><a href="#①-优点-3" class="headerlink" title="① 优点"></a>① 优点</h5><ul>
+<li>原理简单，实现方便，收敛速度快；</li>
+<li>聚类效果较优；</li>
+<li>模型的可解释性较强；</li>
+</ul>
+<h5 id="②-缺点-3"><a href="#②-缺点-3" class="headerlink" title="② 缺点"></a>② 缺点</h5><ul>
+<li>需要事先知道聚类数量；</li>
+<li>聚类初始中心的选择对聚类结果有影响；</li>
+<li>采用的是迭代的方法，只能得到局部最优解；</li>
+<li>对于噪音和异常点比较敏感。</li>
+</ul>
+<h3 id="3-均值漂移"><a href="#3-均值漂移" class="headerlink" title="3. 均值漂移"></a>3. 均值漂移</h3><h4 id="1）什么是均值漂移"><a href="#1）什么是均值漂移" class="headerlink" title="1）什么是均值漂移"></a>1）什么是均值漂移</h4><p>均值漂移是一种基于聚类中心的聚类算法。其核心思想是：在数据集中选定一个点，然后以这个点为圆心，r为半径，画一个圆(二维下是圆，这里可以推广为高维圆)，求出这个点到所有点的向量的平均值，而圆心与向量均值的和为新的圆心，然后迭代此过程，直到满足一点的条件结束。</p>
+<p>在实际计算时，首先随便选择一个中心点，然后计算该中心点一定范围之内所有点到中心点的距离向量的平均值，计算该平均值得到一个偏移均值，然后将中心点移动到偏移均值位置，通过这种不断重复的移动，可以使中心点逐步逼近到最佳位置。这种思想类似于梯度下降方法，通过不断的往梯度下降的方向移动，可以到达梯度上的局部最优解或全局最优解。</p>
+<p><img src="https://image.discover304.top/ai/qc/%E5%9D%87%E5%80%BC%E5%90%91%E9%87%8F%E4%B8%8E%E5%9D%87%E5%80%BC%E7%A7%BB%E5%8A%A8.png"></p>
+<center><font size=2>均值向量（左）与均值移动（右）示意图</font></center>
+#### 2）均值漂移算法特点
+
+<h5 id="①-优点-4"><a href="#①-优点-4" class="headerlink" title="① 优点"></a>① 优点</h5><ul>
+<li>聚类数量不必已知；</li>
+<li>聚类中心不依赖于初始值选取，聚类划分结果较为稳定。</li>
+</ul>
+<h5 id="②-缺点-4"><a href="#②-缺点-4" class="headerlink" title="② 缺点"></a>② 缺点</h5><ul>
+<li>样本空间服从某种概率分布规则，否则算法准确性会大打折扣。</li>
+</ul>
+<h3 id="4-噪声密度"><a href="#4-噪声密度" class="headerlink" title="4. 噪声密度"></a>4. 噪声密度</h3><h4 id="1）什么是噪声密度"><a href="#1）什么是噪声密度" class="headerlink" title="1）什么是噪声密度"></a>1）什么是噪声密度</h4><p>噪声密度（Density-Based Spatial Clustering of Applications with Noise， 简写DBSCAN）随机选择一个样本做圆心，以事先给定的半径做圆，凡被该圆圈中的样本都被划为与圆心样本同处一个聚类，再以这些被圈中的样本做圆心，以事先给定的半径继续做圆，不断加入新的样本，扩大聚类的规模，知道再无新的样本加入为止，即完成一个聚类的划分. 以同样的方法，在其余样本中继续划分新的聚类，直到样本空间被耗尽为止，即完成整个聚类划分过程. </p>
+<p><img src="https://image.discover304.top/ai/qc/DBSCAN%E7%A4%BA%E6%84%8F%E5%9B%BE.png"></p>
+<ul>
+<li>边界点（Border point）：所处聚类中样本数少于某个阈值，该聚类就不被视为一个聚类，其中的样本则称为边界点；</li>
+<li>噪声点（Noise）：无法划分到某个聚类中的点；</li>
+<li>核心点（Core point）：除了孤立样本和外周样本以外的样本都是核心点.。</li>
+</ul>
+<h4 id="2）DBSCAN的特点"><a href="#2）DBSCAN的特点" class="headerlink" title="2）DBSCAN的特点"></a>2）DBSCAN的特点</h4><h5 id="①-算法优点"><a href="#①-算法优点" class="headerlink" title="① 算法优点"></a>① 算法优点</h5><ul>
+<li>不用人为提前确定聚类类别数K；</li>
+<li>聚类速度快；</li>
+<li>能够有效处理噪声点（因为异常点不会被包含于任意一个簇，则认为是噪声）；</li>
+<li>能够应对任意形状的空间聚类。</li>
+</ul>
+<h5 id="②-算法缺点"><a href="#②-算法缺点" class="headerlink" title="② 算法缺点"></a>② 算法缺点</h5><ul>
+<li>当数据量过大时，要求较大的内存支持I&#x2F;O消耗很大；</li>
+<li>当空间聚类的密度不均匀、聚类间距差别很大时、聚类效果有偏差；</li>
+<li>调参相对复杂，主要调整距离阈值和MinPts（最少个数阈值）。</li>
+</ul>
+<h3 id="5-凝聚层次"><a href="#5-凝聚层次" class="headerlink" title="5. 凝聚层次"></a>5. 凝聚层次</h3><h4 id="1）什么是凝聚层次"><a href="#1）什么是凝聚层次" class="headerlink" title="1）什么是凝聚层次"></a>1）什么是凝聚层次</h4><p>凝聚层次（Agglomerative）算法，首先将每个样本看做独立的聚类，如果聚类数大于预期，则从每个样本出发凝聚离它最近的样本，将样本凝聚所形成的团块作为新的聚类，再不断扩大聚类规模的同时，减少聚类的总数，直到聚类数减少到预期值为止.  这里的关键问题是如何计算聚类之间的距离.</p>
+<p>依据对距离的不同定义，将Agglomerative Clustering的聚类方法分为三种：</p>
+<ul>
+<li>ward：默认选项，挑选两个簇来合并，是的所有簇中的方差增加最小。这通常会得到大小差不多相等的簇。</li>
+<li>average链接：将簇中所有点之间平均距离最小的两个簇合并。</li>
+<li>complete链接：也称为最大链接，将簇中点之间最大距离最小的两个簇合并。</li>
+</ul>
+<p>ward适用于大多数数据集。如果簇中的成员个数非常不同（比如其中一个比其他所有都大得多），那么average或complete可能效果更好。</p>
+<h4 id="2）凝聚层次特点"><a href="#2）凝聚层次特点" class="headerlink" title="2）凝聚层次特点"></a>2）凝聚层次特点</h4><h5 id="①-优点-5"><a href="#①-优点-5" class="headerlink" title="① 优点"></a>① 优点</h5><ul>
+<li>没有聚类中心，不依赖于中心点的选择；</li>
+<li>对于中心不明显的样本聚类性能更稳定。</li>
+</ul>
+<h5 id="②-缺点-5"><a href="#②-缺点-5" class="headerlink" title="② 缺点"></a>② 缺点</h5><ul>
+<li>事先给定期望划分的聚类数（k），来自业务或指标优化。</li>
+</ul>
+<h1 id="深度学习部分"><a href="#深度学习部分" class="headerlink" title="深度学习部分"></a>深度学习部分</h1><h2 id="一、基本理论"><a href="#一、基本理论" class="headerlink" title="一、基本理论"></a>一、基本理论</h2><h3 id="1-什么是前馈神经网络"><a href="#1-什么是前馈神经网络" class="headerlink" title="1. 什么是前馈神经网络"></a>1. 什么是前馈神经网络</h3><p>前馈神经网络（feedforward neural network）又称多层感知机（multilayer perceptron,  MLP），是典型的深度学习模型。它是一种单向多层结构，其中每一层包含若干个神经元。在此种神经网络中，各神经元可以接收前一层神经元的信号，并产生输出到下一层。第0层叫<strong>输入层</strong>，最后一层叫<strong>输出层</strong>，其他中间层叫做隐含层（或隐藏层、隐层），隐含层可以是一层，也可以是多层。整个网络中无反馈，信号从输入层向输出层<strong>单向传播</strong>，可用一个有向无环图表示。</p>
+<p><img src="https://image.discover304.top/ai/qc/%E5%89%8D%E9%A6%88%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C.png" alt="深度神经网络"></p>
+<p>前馈神经网络使用数学公式可以表示为：<br>$$<br>f(x) &#x3D; f^{(3)}(f^{(2)}(f^{(1)}(x)))<br>$$<br>其中，$f^{(1)}$ 被称为网络的 第一层（first layer）， $f^{(2)} $被称为 第二层（second layer），以此类推。链的全长称为模型的深度（depth）。 </p>
+<h3 id="2-深度学习有什么优缺点"><a href="#2-深度学习有什么优缺点" class="headerlink" title="2. 深度学习有什么优缺点"></a>2. 深度学习有什么优缺点</h3><p>1）优点</p>
+<ul>
+<li>性能更优异</li>
+<li>不需要特征工程</li>
+<li>在大数据样本下有更好的性能</li>
+<li>能解决某些传统机器学习无法解决的问题</li>
+</ul>
+<p>2）缺点</p>
+<ul>
+<li>小数据样本下性能不如机器学习</li>
+<li>模型复杂</li>
+<li>过程不可解释</li>
+</ul>
+<h3 id="3-什么是激活函数，为什么要使用激活函数"><a href="#3-什么是激活函数，为什么要使用激活函数" class="headerlink" title="3. 什么是激活函数，为什么要使用激活函数"></a>3. 什么是激活函数，为什么要使用激活函数</h3><p>激活函数（activation function），指神经网络中将输入信号的总和转换为输出信号的函数，激活函数将多层感知机输出转换为非线性，使得神经网络可以任意逼近任何非线性函数，这样神经网络就可以应用到众多的非线性模型中。</p>
+<h3 id="4-神经网络中常用的激活函数有哪些，各自有什么特点"><a href="#4-神经网络中常用的激活函数有哪些，各自有什么特点" class="headerlink" title="4. 神经网络中常用的激活函数有哪些，各自有什么特点"></a>4. 神经网络中常用的激活函数有哪些，各自有什么特点</h3><p>1）sigmoid</p>
+<p>① 定义：sigmoid函数也叫Logistic函数，用于隐层神经元输出，能将$(-\infty,+\infty)$的数值映射到(0,1)的区间，可以用来做二分类。表达式为：<br>$$<br>f(x) &#x3D; \frac{1}{1+e^{-x}}<br>$$</p>
+<p>② 特点</p>
+<ul>
+<li>优点：平滑、易于求导</li>
+<li>缺点：激活函数计算量大，反向传播求误差梯度时，求导涉及除法；反向传播时，很容易就会出现梯度消失</li>
+</ul>
+<p>2）tanh</p>
+<p>① 定义：双曲正切函数，表达式为：<br>$$<br>f(x) &#x3D; \frac{1-e^{-2x}}{1+e^{-2x}}<br>$$<br>② 特点</p>
+<ul>
+<li>优点：平滑、易于求导；输出均值为0，收敛速度要比sigmoid快，从而可以减少迭代次数</li>
+<li>缺点：很容易就会出现梯度消失</li>
+</ul>
+<p>3）relu</p>
+<p>① 定义：修正线性单元，其表达式为：<br>$$<br>f(x) &#x3D;\begin{cases}<br>x &amp; (x&gt;0) \<br>0 &amp; (x&lt;&#x3D;0)<br>\end{cases}<br>$$<br>② 特点：</p>
+<ul>
+<li>优点：计算过程简单；避免了梯度爆炸和梯度消失问题</li>
+<li>缺点：小于等于0时无输出</li>
+</ul>
+<h3 id="5-什么是softmax函数，其主要作用是什么"><a href="#5-什么是softmax函数，其主要作用是什么" class="headerlink" title="5. 什么是softmax函数，其主要作用是什么"></a>5. 什么是softmax函数，其主要作用是什么</h3><p>1）定义：Softmax函数就可以将多分类的输出数值转化为相对概率，而这些值的累和为1。表达式为：<br>$$<br>S_i &#x3D; \frac{e^{V_i}}{\sum_i^Ce^{V_i}}<br>$$<br>其中$V_i$ 是分类器前级输出单元的输出。i 表示类别索引，总的类别个数为 C。$S_i$表示的是当前元素的指数与所有元素指数和的比值。</p>
+<p>2）作用：softmax一般用于分类输出层，计算属于每个类别的概率。</p>
+<h3 id="6-什么是损失函数，损失函数的作用是什么"><a href="#6-什么是损失函数，损失函数的作用是什么" class="headerlink" title="6. 什么是损失函数，损失函数的作用是什么"></a>6. 什么是损失函数，损失函数的作用是什么</h3><p>损失函数（Loss Function），也有称之为代价函数（Cost Function），用来度量预测值和实际值之间的差异，从而作为模型性能参考依据。损失函数值越小，说明预测输出和实际结果（也称期望输出）之间的差值就越小，也就说明我们构建的模型越好，反之说明模型越差。</p>
+<h3 id="7-什么是交叉熵，其作用是什么"><a href="#7-什么是交叉熵，其作用是什么" class="headerlink" title="7. 什么是交叉熵，其作用是什么"></a>7. 什么是交叉熵，其作用是什么</h3><p>交叉熵（Cross Entropy）主要用于度量两个概率分布间的差异性信息，在机器学习中用来作为分类问题的损失函数。当预测概率越接近真实概率，该函数值越小，反之越大。</p>
+<h3 id="8-解释什么是梯度"><a href="#8-解释什么是梯度" class="headerlink" title="8. 解释什么是梯度"></a>8. 解释什么是梯度</h3><p>梯度（gradient）是一个向量，表示某一函数在该点处的方向导数沿着该方向取得最大值，即函数在该点处沿着该方向（此梯度的方向）变化最快，变化率最大。</p>
+<h3 id="9-什么是梯度下降"><a href="#9-什么是梯度下降" class="headerlink" title="9. 什么是梯度下降"></a>9. 什么是梯度下降</h3><p>梯度下降是一个最优化算法，常用于机器学习和人工智能当中用来递归性地逼近最小偏差模型，核心思想是按照梯度相反的方向，不停地调整函数权值。其步骤为：</p>
+<p>1）求损失函数值</p>
+<p>2）损失是否足够小？如果不是，计算损失函数的梯度</p>
+<p>3）按梯度的反方向走一小步（调整权重，$w_i &#x3D; w_i + \delta w_i$）</p>
+<p>4）循环到第2步，迭代执行</p>
+<h3 id="10-激活函数出现梯度消失会有什么后果"><a href="#10-激活函数出现梯度消失会有什么后果" class="headerlink" title="10. 激活函数出现梯度消失会有什么后果"></a>10. 激活函数出现梯度消失会有什么后果</h3><p>机器学习中，如果模型的优化依赖于梯度下降，梯度消失会导致模型无法进一步进行优化。</p>
+<h3 id="11-如何解决梯度消失问题"><a href="#11-如何解决梯度消失问题" class="headerlink" title="11. 如何解决梯度消失问题"></a>11. 如何解决梯度消失问题</h3><p>1）更换激活函数：如更滑为relu, leakrelu</p>
+<p>2）批量规范化处理：通过规范化操作将输出信号x规范化到均值为0，方差为1保证网络的稳定性</p>
+<p>3）使用残差结构：通过引入残差结构，能有效避免梯度消失问题</p>
+<h3 id="12-什么是梯度爆炸，如何解决梯度爆炸问题"><a href="#12-什么是梯度爆炸，如何解决梯度爆炸问题" class="headerlink" title="12. 什么是梯度爆炸，如何解决梯度爆炸问题"></a>12. 什么是梯度爆炸，如何解决梯度爆炸问题</h3><p>1）梯度爆炸。梯度消失是在计算中出现了梯度过小的值，梯度爆炸则相反，梯度计算出现了过大的值。梯度过大，可能使参数更新幅度过大，超出了合理范围。</p>
+<p>2）解决梯度爆炸的方法</p>
+<ul>
+<li>梯度裁剪：把沿梯度下降方向的步长限制在一个范围之内，计算出来的梯度的步长的范数大于这个阈值的话，就以这个范数为基准做归一化，使这个新的的梯度的范数等于这个阈值</li>
+<li>权重正则化：通过正则化，可以部分限制梯度爆炸的发生</li>
+</ul>
+<h3 id="13-什么是批量梯度下降、随机梯度下降，分别有何特点"><a href="#13-什么是批量梯度下降、随机梯度下降，分别有何特点" class="headerlink" title="13. 什么是批量梯度下降、随机梯度下降，分别有何特点"></a>13. 什么是批量梯度下降、随机梯度下降，分别有何特点</h3><h4 id="1）批量梯度下降"><a href="#1）批量梯度下降" class="headerlink" title="1）批量梯度下降"></a>1）批量梯度下降</h4><p>① 定义：批量梯度下降（Batch Gradient Descent，BGD）是指在每一次迭代时使用所有样本来进行梯度的更新<br>② 特点</p>
+<ul>
+<li>优点：收敛比较稳定</li>
+<li>缺点：当样本数目很大时，每迭代一步都需要对所有样本计算，训练过程会很慢</li>
+</ul>
+<h4 id="2）随机梯度下降"><a href="#2）随机梯度下降" class="headerlink" title="2）随机梯度下降"></a>2）随机梯度下降</h4><p>① 定义：随机梯度下降法（Stochastic Gradient Descent，SGD）每次迭代使用一个样本来对参数进行更新，使得训练速度加快<br>② 特点</p>
+<ul>
+<li>优点：计算量小，每一轮训练更新速度快</li>
+<li>缺点：收敛不稳定</li>
+</ul>
+<h3 id="14-什么是学习率，作用是什么"><a href="#14-什么是学习率，作用是什么" class="headerlink" title="14. 什么是学习率，作用是什么"></a>14. 什么是学习率，作用是什么</h3><p>在梯度下降法中，都是给定的统一的学习率，整个优化过程中都以确定的步长进行更新， 在迭代优化的前期中，学习率较大，则前进的步长就会较长，这时便能以较快的速度进行梯度下降，而在迭代优化的后期，逐步减小学习率的值，减小步长，这样将有助于算法的收敛，更容易接近最优解。</p>
+<h3 id="15-学习率过大或过小会导致什么问题"><a href="#15-学习率过大或过小会导致什么问题" class="headerlink" title="15. 学习率过大或过小会导致什么问题"></a>15. 学习率过大或过小会导致什么问题</h3><p>学习率过大可能导致模型无法收敛，过小导致收敛速度过慢</p>
+<h3 id="16-什么是反向传播算法，为什么要使用反向传播算法"><a href="#16-什么是反向传播算法，为什么要使用反向传播算法" class="headerlink" title="16. 什么是反向传播算法，为什么要使用反向传播算法"></a>16. 什么是反向传播算法，为什么要使用反向传播算法</h3><p>1）定义</p>
+<p>反向传播（Backpropagation algorithm）全称“误差反向传播”，是在深度神经网络中，根据输出层输出值，来反向调整隐藏层权重的一种方法</p>
+<p>2）对于多个隐藏层的神经网络，输出层可以直接求出误差来更新参数，但隐藏层的误差是不存在的，因此不能对它直接应用梯度下降，而是先将误差反向传播至隐藏层，然后再应用梯度下降</p>
+<h3 id="17-请说明Momentum、AdaGrad、Adam梯度下降法的特点"><a href="#17-请说明Momentum、AdaGrad、Adam梯度下降法的特点" class="headerlink" title="17. 请说明Momentum、AdaGrad、Adam梯度下降法的特点"></a>17. 请说明Momentum、AdaGrad、Adam梯度下降法的特点</h3><p>Momentum、AdaGrad、Adam是针对SGD梯度下降算法的缺点的改进算法。在SGD算法中，如果函数的形状非均向（参数大小差异较大），SGD的搜索路径会呈“之字形”移动，搜索效率较低。如下图所示：</p>
+<p><img src="https://image.discover304.top/ai/qc/SGD%E8%B7%AF%E5%BE%84.png" alt="SGD路径"></p>
+<h4 id="1）Momentum"><a href="#1）Momentum" class="headerlink" title="1）Momentum"></a>1）Momentum</h4><p>Momentum是“动量”的意思，和物理有关。用数学式表示Momentum方法，如下所示：<br>$$<br>v ← \alpha v - \eta \frac{\partial L}{\partial W} \<br>W ← W + v<br>$$<br>其中，W表示要更新的权重参数，$\frac{\partial L}{\partial W}$表示W的梯度，$\eta$表示学习率，v对应物理上的速度。在物体不受任何力时，该项承担使物体逐渐减速的任务（α设定为0.9之类的值），对应物理上的地面摩擦或空气阻力。和SGD相比，我们发现“之”字形的“程度”减轻了。这是因为，虽然x轴方向上受到的力非常小，但是一直在同一方向上受力，所以朝同一个方向会有一定的加速。反过来，虽然y轴方向上受到的力很大，但是因为交互地受到正方向和反方向的力，它们会互相抵消，所以y轴方向上的速度不稳定。因此，和SGD时的情形相比，可以更快地朝x轴方向靠近，减弱“之”字形的变动程度。如下图所示：</p>
+<p><img src="https://image.discover304.top/ai/qc/Momentum%E8%B7%AF%E5%BE%84.png" alt="Momentum路径"></p>
+<h4 id="2）AdaGrad"><a href="#2）AdaGrad" class="headerlink" title="2）AdaGrad"></a>2）AdaGrad</h4><p>AdaGrad会为参数的每个元素适当地调整学习率，与此同时进行学习（AdaGrad的Ada来自英文单词Adaptive，即“适当的”的意思），其表达式为：<br>$$<br>h ← h + \frac{\partial L} {\partial W} \bigodot \frac{\partial L} {\partial W} \<br>W ← W - \eta \frac{1}{\sqrt h} \frac{\partial L}{\partial W}<br>$$<br>其中，W表示要更新的权重参数，$\frac{\partial L}{\partial W}$表示W的梯度，$\eta$表示学习率，$\frac{\partial L} {\partial W} \bigodot \frac{\partial L} {\partial W}$表示所有梯度值的平方和。在参数更新时，通过乘以$\frac{1}{\sqrt h}$就可以调整学习的尺度。这意味着，参数的元素中变动较大（被大幅更新）的元素的学习率将变小。也就是说，可以按参数的元素进行学习率衰减，使变动大的参数的学习率逐渐减小。其收敛路径如下图所示：</p>
+<p><img src="https://image.discover304.top/ai/qc/AdaGrad%E8%B7%AF%E5%BE%84.png" alt="AdaGrad路径"></p>
+<h4 id="3）Adam"><a href="#3）Adam" class="headerlink" title="3）Adam"></a>3）Adam</h4><p>Adam是2015年提出的新方法。它的理论有些复杂，直观地讲，就是融合了Momentum和AdaGrad的方法。通过组合前面两个方法的优点，有望实现参数空间的高效搜索。其收敛路径如下图所示：</p>
+<p><img src="https://image.discover304.top/ai/qc/Adam%E8%B7%AF%E5%BE%84.png" alt="Adam路径"></p>
+<p>以下是几种梯度下降算法的收敛情况对比：</p>
+<p><img src="https://image.discover304.top/ai/qc/AdaAdamMomSGD%E5%AF%B9%E6%AF%94.png" alt="AdaAdamMomSGD对比"></p>
+<h3 id="18-什么是卷积函数"><a href="#18-什么是卷积函数" class="headerlink" title="18. 什么是卷积函数"></a>18. 什么是卷积函数</h3><p>卷积函数指一个函数和另一个函数在某个维度上的加权“叠加”作用，其表达式为：<br>$$<br>s(t) &#x3D; \int ^{+\infty}<em>{-\infty}f(a)*g(t-a)da<br>$$<br>离散化卷积函数表示为：<br>$$<br>s(t) &#x3D;f(t)*g(t)&#x3D; \sum</em>{n&#x3D;-\infty}^{\infty}f(a)g(t-a)<br>$$</p>
+<h3 id="19-二维卷积运算中，输出矩阵大小与输入矩阵、卷积核大小、步幅、填充的关系？"><a href="#19-二维卷积运算中，输出矩阵大小与输入矩阵、卷积核大小、步幅、填充的关系？" class="headerlink" title="19. 二维卷积运算中，输出矩阵大小与输入矩阵、卷积核大小、步幅、填充的关系？"></a>19. 二维卷积运算中，输出矩阵大小与输入矩阵、卷积核大小、步幅、填充的关系？</h3><p>$$<br>OH &#x3D; \frac{H+2P-FH}{S} + 1 \<br>OW &#x3D; \frac{W+2P-FW}{S} + 1<br>$$</p>
+<h3 id="20-什么是池化，池化层的作用是什么"><a href="#20-什么是池化，池化层的作用是什么" class="headerlink" title="20. 什么是池化，池化层的作用是什么"></a>20. 什么是池化，池化层的作用是什么</h3><p>也称子采样层或下采样层（Subsampling Layer），目的是缩小高、长方向上的空间的运算，以降低计算量，提高泛化能力。</p>
+<h3 id="21-什么是最大池化、平均池化"><a href="#21-什么是最大池化、平均池化" class="headerlink" title="21. 什么是最大池化、平均池化"></a>21. 什么是最大池化、平均池化</h3><p>最大池化：取池化区域内的最大值作为池化输出</p>
+<p>平均池化：取池化区域内的平均值作为池化输出</p>
+<h3 id="22-池化层有什么特征"><a href="#22-池化层有什么特征" class="headerlink" title="22. 池化层有什么特征"></a>22. 池化层有什么特征</h3><p>1）没有要学习的参数</p>
+<p>2）通道数不发生变化</p>
+<p>3）对微小的变化具有鲁棒性</p>
+<h3 id="23-什么是归一化，-为什么要进行归一化"><a href="#23-什么是归一化，-为什么要进行归一化" class="headerlink" title="23. 什么是归一化， 为什么要进行归一化"></a>23. 什么是归一化， 为什么要进行归一化</h3><p>1）归一化的含义。归一化是指归纳统一样本的统计分布性。归一化在 $ 0-1$ 之间是统计的概率分布，归一化在$ -1–+1$ 之间是统计的坐标分布。</p>
+<p>2）归一化处理的目的</p>
+<ul>
+<li>为了后面数据处理的方便，归一化的确可以避免一些不必要的数值问题。</li>
+<li>为了程序运行时收敛加快。 </li>
+<li>同一量纲。样本数据的评价标准不一样，需要对其量纲化，统一评价标准。</li>
+<li>避免神经元饱和。当神经元的激活在接近 0 或者 1 时会饱和，在这些区域，梯度几乎为 0，这样，在反向传播过程中，局部梯度就会接近 0，这会有效地“杀死”梯度。</li>
+</ul>
+<h3 id="24-什么是批量归一化，其优点是什么"><a href="#24-什么是批量归一化，其优点是什么" class="headerlink" title="24. 什么是批量归一化，其优点是什么"></a>24. 什么是批量归一化，其优点是什么</h3><p>1）批量归一化（Batch Normalization，简写BN）指在神经网络中间层也进行归一化处理，使训练效果更好的方法，就是批归一化。</p>
+<p>2）优点</p>
+<ul>
+<li><p>减少了人为选择参数。在某些情况下可以取消 dropout 和 L2 正则项参数,或者采取更小的 L2 正则项约束参数； </p>
+</li>
+<li><p>减少了对学习率的要求。现在我们可以使用初始很大的学习率或者选择了较小的学习率，算法也能够快速训练收敛； </p>
+</li>
+<li><p>可以不再使用局部响应归一化（BN 本身就是归一化网络) ；</p>
+</li>
+<li><p>破坏原来的数据分布，一定程度上缓解过拟合；</p>
+</li>
+<li><p>减少梯度消失，加快收敛速度，提高训练精度。</p>
+</li>
+</ul>
+<h3 id="25-请列举AlexNet的特点"><a href="#25-请列举AlexNet的特点" class="headerlink" title="25. 请列举AlexNet的特点"></a>25. 请列举AlexNet的特点</h3><ul>
+<li>使用ReLU作为激活函数，并验证其效果在较深的网络超过了Sigmoid，成功解决了Sigmoid在网络较深时的梯度消失问题</li>
+<li>使用Dropout（丢弃学习）随机忽略一部分神经元防止过拟合</li>
+<li>在CNN中使用重叠的最大池化。此前CNN中普遍使用平均池化，AlexNet全部使用最大池化，避免平均池化的模糊化效果</li>
+<li>提出了LRN（Local Response Normalization，局部正规化）层，对局部神经元的活动创建竞争机制，使得其中响应比较大的值变得相对更大，并抑制其他反馈较小的神经元，增强了模型的泛化能力</li>
+<li>使用CUDA加速深度卷积网络的训练，利用GPU强大的并行计算能力，处理神经网络训练时大量的矩阵运算</li>
+</ul>
+<h3 id="26-什么是dropout操作，dropout的工作原理？"><a href="#26-什么是dropout操作，dropout的工作原理？" class="headerlink" title="26. 什么是dropout操作，dropout的工作原理？"></a>26. 什么是dropout操作，dropout的工作原理？</h3><h4 id="1）定义"><a href="#1）定义" class="headerlink" title="1）定义"></a>1）定义</h4><p>Dropout是用于深度神经网络防止过拟合的一种方式，在神经网络训练过程中，通过忽略一定比例的特征检测器（让一半的隐层节点值为0），可以明显地减少过拟合现象。这种方式可以减少特征检测器（隐层节点）间的相互作用，检测器相互作用是指某些检测器依赖其他检测器才能发挥作用。简单来说，在前向传播的时候，让某个神经元的激活值以一定的概率p停止工作，这样可以使模型泛化性更强，因为它不会太依赖某些局部的特征。</p>
+<h4 id="2）dropout工作原理"><a href="#2）dropout工作原理" class="headerlink" title="2）dropout工作原理"></a>2）dropout工作原理</h4><p>假设我们要训练这样一个网络，结构如下图所示：</p>
+<p><img src="https://image.discover304.top/ai/qc/standard_cnn.png" alt="standard_cnn"></p>
+<p>输入是x输出是y，正常的流程是：我们首先把x通过网络前向传播，然后把误差反向传播以决定如何更新参数让网络进行学习。使用Dropout之后，过程变成如下：</p>
+<p><img src="https://image.discover304.top/ai/qc/standard_cnn_dropout.png" alt="standard_cnn_dropout"></p>
+<p>（1）首先随机（临时）删掉网络中一半的隐藏神经元，输入输出神经元保持不变（上图中虚线表示临时被删除的神经元）</p>
+<p>（2） 然后把输入x通过修改后的网络前向传播，然后把得到的损失结果通过修改的网络反向传播。一小批训练样本执行完这个过程后，在没有被删除的神经元上按照随机梯度下降法更新对应的参数（w，b）</p>
+<p>（3）然后继续重复以下过程：</p>
+<ul>
+<li>恢复被删掉的神经元（此时被删除的神经元保持原样，而没有被删除的神经元已经有所更新）</li>
+<li>从隐藏层神经元中随机选择一定比率子集临时删除掉（备份被删除神经元的参数）</li>
+<li>对一小批训练样本，先前向传播然后反向传播损失并根据随机梯度下降法更新参数（w，b） （没有被删除的那一部分参数得到更新，删除的神经元参数保持被删除前的结果）</li>
+</ul>
+<h4 id="3）为什么dropout能避免过拟合"><a href="#3）为什么dropout能避免过拟合" class="headerlink" title="3）为什么dropout能避免过拟合"></a>3）为什么dropout能避免过拟合</h4><p>（1）取平均作用。不同的网络可能产生不同的过拟合，取平均则有可能让一些“相反的”拟合互相抵消。</p>
+<p>（2）减少神经元之间复杂的共适应关系。因为dropout程序导致两个神经元不一定每次都在一个dropout网络中出现。这样权值的更新不再依赖于有固定关系的隐含节点的共同作用，阻止了某些特征仅仅在其它特定特征下才有效果的情况 。迫使网络去学习更加鲁棒的特征 ，这些特征在其它的神经元的随机子集中也存在。</p>
+<h3 id="27-卷积层和池化层有什么区别"><a href="#27-卷积层和池化层有什么区别" class="headerlink" title="27. 卷积层和池化层有什么区别"></a>27. 卷积层和池化层有什么区别</h3><p>卷积层核池化层在结构上具有一定的相似性，都是对感受域内的特征进行提取，并且根据步长设置获取到不同维度的输出，但是其内在操作是有本质区别的，如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">卷积层</th>
+<th align="center">池化层</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>结构</strong></td>
+<td align="center">通道数改变</td>
+<td align="center">通常特征维度会降低，通道数不变</td>
+</tr>
+<tr>
+<td align="center"><strong>稳定性</strong></td>
+<td align="center">输入特征发生细微改变时，输出结果会改变</td>
+<td align="center">感受域内的细微变化不影响输出结果</td>
+</tr>
+<tr>
+<td align="center"><strong>作用</strong></td>
+<td align="center">感受域内提取局部关联特征</td>
+<td align="center">感受域内提取泛化特征，降低维度</td>
+</tr>
+<tr>
+<td align="center"><strong>参数量</strong></td>
+<td align="center">与卷积核尺寸、卷积核个数相关</td>
+<td align="center">不引入额外参数</td>
+</tr>
+</tbody></table>
+<h3 id="28-如何选择卷积核大小"><a href="#28-如何选择卷积核大小" class="headerlink" title="28. 如何选择卷积核大小"></a>28. 如何选择卷积核大小</h3><p>在早期的卷积神经网络中（如LeNet-5、AlexNet），用到了一些较大的卷积核（$11\times11$），受限于当时的计算能力和模型结构的设计，无法将网络叠加得很深，因此卷积网络中的卷积层需要设置较大的卷积核以获取更大的感受域。但是这种大卷积核反而会导致计算量大幅增加，不利于训练更深层的模型，相应的计算性能也会降低。后来的卷积神经网络（VGG、GoogLeNet等），发现通过堆叠2个$3\times 3$卷积核可以获得与$5\times 5$卷积核相同的感受视野，同时参数量会更少（$3×3×2+1$ &lt; $ 5×5×1+1$），$3\times 3$卷积核被广泛应用在许多卷积神经网络中。因此可以认为，在大多数情况下通过堆叠较小的卷积核比直接采用单个更大的卷积核会更加有效。</p>
+<h3 id="29-如何提高图像分类的准确率"><a href="#29-如何提高图像分类的准确率" class="headerlink" title="29. 如何提高图像分类的准确率"></a>29. 如何提高图像分类的准确率</h3><p>1）样本优化</p>
+<ul>
+<li>增大样本数量</li>
+<li>数据增强：形态、色彩、噪声扰动</li>
+</ul>
+<p>2）参数优化</p>
+<ul>
+<li>批量正则化</li>
+<li>变化学习率</li>
+<li>权重衰减</li>
+</ul>
+<p>3）模型优化</p>
+<ul>
+<li>增加网络模型深度</li>
+<li>更换更复杂的模型</li>
+</ul>
+<h1 id="自然语言处理"><a href="#自然语言处理" class="headerlink" title="自然语言处理"></a>自然语言处理</h1><h2 id="一、基本理论-1"><a href="#一、基本理论-1" class="headerlink" title="一、基本理论"></a>一、基本理论</h2><h3 id="1-什么是分词，分词的作用是什么"><a href="#1-什么是分词，分词的作用是什么" class="headerlink" title="1. 什么是分词，分词的作用是什么"></a>1. 什么是分词，分词的作用是什么</h3><p>该任务将文本语料库分隔成原子单元（例如，单词或词组），分词是自然语言处理的一项重要任务，直接关系到对语义的正确理解。</p>
+<h3 id="2-中文分词有哪些方法"><a href="#2-中文分词有哪些方法" class="headerlink" title="2. 中文分词有哪些方法"></a>2. 中文分词有哪些方法</h3><h4 id="1）正向最大匹配法（FMM）"><a href="#1）正向最大匹配法（FMM）" class="headerlink" title="1）正向最大匹配法（FMM）"></a>1）正向最大匹配法（FMM）</h4><p>FMM的步骤是：</p>
+<ul>
+<li>从左向右取待分汉语句的m个字作为匹配字段，m为词典中最长词的长度；</li>
+<li>查找词典进行匹配；</li>
+<li>若匹配成功，则将该字段作为一个词切分出去；</li>
+<li>若匹配不成功，则将该字段最后一个字去掉，剩下的字作为新匹配字段，进行再次匹配；</li>
+<li>重复上述过程，直到切分所有词为止。</li>
+</ul>
+<h4 id="2）逆向最大匹配法（RMM）"><a href="#2）逆向最大匹配法（RMM）" class="headerlink" title="2）逆向最大匹配法（RMM）"></a>2）逆向最大匹配法（RMM）</h4><p>RMM的基本原理与FMM基本相同，不同的是分词的方向与FMM相反。RMM是从待分词句子的末端开始，也就是从右向左开始匹配扫描，每次取末端m个字作为匹配字段，匹配失败，则去掉匹配字段前面的一个字，继续匹配。</p>
+<h4 id="3）双向最大匹配法（Bi-MM）"><a href="#3）双向最大匹配法（Bi-MM）" class="headerlink" title="3）双向最大匹配法（Bi-MM）"></a>3）双向最大匹配法（Bi-MM）</h4><p>Bi-MM是将正向最大匹配法得到的分词结果和逆向最大匹配法得到的结果进行比较，然后按照最大匹配原则，选取词数切分最少的作为结果。</p>
+<p>据SunM.S.和Benjamin K.T.（1995）的研究表明，中文中90.0%左右的句子，正向最大匹配法和逆向最大匹配法完全重合且正确，只有大概9.0%的句子两种切分方法得到的结果不一样，但其中必有一个是正确的（歧义检测成功），只有不到1.0%的句子，使用正向最大匹配法和逆向最大匹配法的切分虽然重合但是错的，或者两种方法切分不同但结果都不对（歧义检测失败）。双向最大匹配的规则是：</p>
+<p>（1）如果正反向分词结果词数不同，则取分词数量少的那个；</p>
+<p>（2）如果分词结果词数相同：</p>
+<ul>
+<li>分词结果相同，没有歧义，返回任意一个；</li>
+<li>分词结果不同，返回其中单字数量较少的那个。</li>
+</ul>
+<h3 id="3-什么是词性标记"><a href="#3-什么是词性标记" class="headerlink" title="3. 什么是词性标记"></a>3. 什么是词性标记</h3><p>词性标记（Part-Of-Speech tagging, POS tagging）是将单词分配到各自对应词性的任务。它既可以是名词、动词、形容词、副词、介词等基本词、也可以是专有名词、普通名词、短语动词、动词等。</p>
+<h3 id="4-什么是词干提取"><a href="#4-什么是词干提取" class="headerlink" title="4. 什么是词干提取"></a>4. 什么是词干提取</h3><p>词干提取（stemming）是抽取词的词干或词根形式（不一定能够表达完整语义），文本样本中的单词的词性与时态对于语义分析并无太大影响，所以需要对单词进行词干提取。</p>
+<h3 id="5-词干提取主要有哪些方法"><a href="#5-词干提取主要有哪些方法" class="headerlink" title="5. 词干提取主要有哪些方法"></a>5. 词干提取主要有哪些方法</h3><p>（1）查找算法。一个简单的词干提取器从查找表中查找词尾变化。这种方法的优势是简单、速度快并容易控制异常情况。但它的缺点是所有的词尾变化的形式必须明确地包含在查询表中：一个新的或者是陌生的词是没办法控制的，即使是具有完整的规则（如iPads ~ iPad），并且表会变得非常大。对于具有简单形态的语言，像英文，表的大小比较适中，但对于变化较大语言，如土耳其语，对于每个词根都可能有几百个潜在的变化形式。 一个查找算法初步词性标注来避免过度词干化。</p>
+<p>（2）后缀去除法。后缀去除算法不依赖于包含词形变换和词根的查询表，而是使用一个普遍性规则小列表提取词根形式。如，其中的一些规则包括：去掉结尾是”ed”,”ing”,”ly”等后缀。</p>
+<p>（3）lemmatization算法。一种更加复杂的确定一个词汇停顿词的方法是lemmatisation。这种处理方式包括首先确定词汇的发音部分，接着，根据发音的部分确定词汇的根。停顿词规则随着单词的发声部分的改变而改变。</p>
+<p>（4）混合法。混合方法同时使用上述的方法中的两种或更多种。</p>
+<h3 id="6-什么是词形还原"><a href="#6-什么是词形还原" class="headerlink" title="6. 什么是词形还原"></a>6. 什么是词形还原</h3><p>词形还原就是去掉单词的词缀，提取单词的主干部分，通常提取后的单词会是字典中的单词，不同于词干提取（stemming），提取后的单词不一定会出现在单词中。词形还原是基于词典，将单词的复杂形态转变成最基础的形态。词形还原不是简单地将前后缀去掉，而是会根据词典将单词进行转换。比如drove会转换为drive。词形还原可以将复数还原为单数，也可将带时态的分词还原为原型。</p>
+<h3 id="7-什么是词袋模型？词袋模型的缺点是什么"><a href="#7-什么是词袋模型？词袋模型的缺点是什么" class="headerlink" title="7. 什么是词袋模型？词袋模型的缺点是什么"></a>7. 什么是词袋模型？词袋模型的缺点是什么</h3><p>词袋模型（Bag-of-words model，简称 BoW ）假设我们不考虑文本中词与词之间的上下文关系，一句话的语义很大程度取决于某个单词出现的次数，所以可以把句子中所有可能出现的单词作为特征名，每一个句子为一个样本，单词在句子中出现的次数为特征值构建数学模型，称为词袋模型。可以理解为用词频作为每个样本的特征。</p>
+<p>词袋模型仅仅考虑了词频，没有考虑上下文的关系（即词语间的顺序），因此会丢失一部分文本的语义。</p>
+<h3 id="8-什么是词频、文档频率、逆文档频率"><a href="#8-什么是词频、文档频率、逆文档频率" class="headerlink" title="8. 什么是词频、文档频率、逆文档频率"></a>8. 什么是词频、文档频率、逆文档频率</h3><h4 id="1）词频"><a href="#1）词频" class="headerlink" title="1）词频"></a>1）词频</h4><p>词频（Term Frequency）是指单词在句子中出现的次数除以句子的总词数，即一个单词在一个句子中出现的频率。词频相比单词的出现次数可以更加客观的评估单词对一句话的语义的贡献度。词频越高，对语义的贡献度越大。</p>
+<h4 id="2）文档频率"><a href="#2）文档频率" class="headerlink" title="2）文档频率"></a>2）文档频率</h4><p>$$<br>DF &#x3D; \frac{含有某个单词的文档样本数}{总文档样本数}<br>$$</p>
+<h4 id="3）逆文档频率"><a href="#3）逆文档频率" class="headerlink" title="3）逆文档频率"></a>3）逆文档频率</h4><p>逆文档频率是一个词语普遍重要性的度量。某一特定词语的IDF，可以由总文件数目除以包含该词语之文件的数目，再将得到的商取对数得到。即文档总数n与词w所出现文件数docs(w, D)比值的对数。<br>$$<br>IDF &#x3D; \log(\frac{n}{docs(w, D) + 1})<br>$$</p>
+<h3 id="9-什么是词频-逆文档频率-TF-IDF"><a href="#9-什么是词频-逆文档频率-TF-IDF" class="headerlink" title="9. 什么是词频-逆文档频率(TF-IDF)"></a>9. 什么是词频-逆文档频率(TF-IDF)</h3><p>词频-逆文档频率(Term Frequency - Inverse Document Frequency)指词频矩阵中的每一个元素乘以相应单词的逆文档频率：<br>$$<br>TF-IDF &#x3D; TF * IDF<br>$$<br>其值越大说明该词对样本语义的贡献越大，根据每个词的贡献力度，构建学习模型。如果某个词或短语在一篇文章中出现的频率TF高，并且在其他文章中很少出现，则认为此词或者短语具有很好的类别区分能力，适合用来分类。</p>
+<h3 id="10-文本表示如何采用独热编码，其缺点是什么"><a href="#10-文本表示如何采用独热编码，其缺点是什么" class="headerlink" title="10. 文本表示如何采用独热编码，其缺点是什么"></a>10. 文本表示如何采用独热编码，其缺点是什么</h3><p>1）独热编码把每个词表示为一个长向量。这个向量的维度是词表大小，向量中只有一个维度的值为1，其余维度为0，这个维度就代表了当前的词。例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">减肥 [<span class="number">1</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>]</span><br><span class="line">瘦身 [<span class="number">0</span>，<span class="number">1</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>]</span><br><span class="line">减脂 [<span class="number">0</span>，<span class="number">0</span>，<span class="number">1</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>]</span><br><span class="line">降脂 [<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">1</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>]</span><br><span class="line">增肥 [<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">1</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>，<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+
+<p>2）独热编码的缺点：</p>
+<ul>
+<li><p>丢弃了词与词之间的联系，无法反映出词的距离关系</p>
+</li>
+<li><p>独热编码产生一个高纬度稀疏矩阵，会导致特征空间非常大</p>
+</li>
+</ul>
+<h3 id="11-什么是N-gram模型"><a href="#11-什么是N-gram模型" class="headerlink" title="11. 什么是N-gram模型"></a>11. 什么是N-gram模型</h3><p>1）定义：N-Gram模型是一种基于统计语言模型，语言模型是一个基于概率的判别模型，它的输入是个句子（由词构成的顺序序列），输出是这句话的概率，即这些单词的联合概率。</p>
+<p>N-Gram本身也指一个由N个单词组成的集合，各单词具有先后顺序，且不要求单词之间互不相同。常用的有Bi-gram(N&#x3D;2)和Tri-gram(N&#x3D;3)。例如：</p>
+<p>句子：L love deep learning</p>
+<p>Bi-gram: {I, love}, {love, deep}, {deep, learning}</p>
+<p>Tri-gram: {I, love, deep}, {love deep learning}</p>
+<p>2）基本思想：N-Gram基本思想是将文本里面的内容按照字节进行大小为n的滑动窗口操作，形成了长度是n的字节片段序列。每一个字节片段称为一个gram，对所有gram的出现频度进行统计，并按照事先设置好的频度阈值进行过滤，形成关键gram列表，也就是这个文本向量的特征空间，列表中的每一种gram就是一个特征向量维度。</p>
+<h3 id="12-语料库"><a href="#12-语料库" class="headerlink" title="12. 语料库"></a>12. 语料库</h3><h4 id="1）什么是语料库"><a href="#1）什么是语料库" class="headerlink" title="1）什么是语料库"></a>1）什么是语料库</h4><p>语料库（corpus）是指存放语言材料的仓库。现代的语料库是指存放在计算机里的原始语料文本或经过加工后带有语言学信息标注的语料文本。以语言的真实材料为基础来呈现语言知识，反映语言单位的用法和意义，基本以知识的原型形态表现——语言的原貌。</p>
+<h4 id="2）语料库的特征"><a href="#2）语料库的特征" class="headerlink" title="2）语料库的特征"></a>2）语料库的特征</h4><ul>
+<li><p>语料库中存放的是实际中真实出现过的语言材料</p>
+</li>
+<li><p>语料库是以计算机为载体承载语言知识的基础资源，但不等于语言知识</p>
+</li>
+<li><p>真实语料需要经过分析、处理和加工，才能成为有用的资源</p>
+</li>
+</ul>
+<h4 id="3）语料库的作用"><a href="#3）语料库的作用" class="headerlink" title="3）语料库的作用"></a>3）语料库的作用</h4><ul>
+<li><p>支持语言学研究和语言教学研究</p>
+</li>
+<li><p>支持NLP系统的开发</p>
+</li>
+</ul>
+<h4 id="4）语料库的类型"><a href="#4）语料库的类型" class="headerlink" title="4）语料库的类型"></a>4）语料库的类型</h4><h5 id="①-按照内容分类"><a href="#①-按照内容分类" class="headerlink" title="① 按照内容分类"></a>① 按照内容分类</h5><ul>
+<li>异质的：最简单的语料收集方法，没有事先规定和选材原则</li>
+<li>同质的：与异质的正好相反，比如美国的TIPSTER项目只收集军事方面的文本</li>
+<li>系统的：充分考虑语料动态和静态问题、代表性和平衡问题以及语料库规模等问题</li>
+<li>专用的：如北美人文科学语料库</li>
+</ul>
+<h5 id="②-按照语言分类"><a href="#②-按照语言分类" class="headerlink" title="② 按照语言分类"></a>② 按照语言分类</h5><ul>
+<li>单语</li>
+<li>双语或多语的。平行语料库： 篇章对齐&#x2F;句子对齐&#x2F;结构对齐</li>
+</ul>
+<h5 id="③-按是否加工"><a href="#③-按是否加工" class="headerlink" title="③ 按是否加工"></a>③ 按是否加工</h5><ul>
+<li>生语料库：未经过加工的，没有任何切分、标注标记的原始语料库</li>
+<li>熟语料库：经过加工的，带有切分、标注标记的语料库，包括词性标注、句法结构信息标注、语义信息标注</li>
+</ul>
+<h5 id="④-共时语料库与历时语料库"><a href="#④-共时语料库与历时语料库" class="headerlink" title="④ 共时语料库与历时语料库"></a>④ 共时语料库与历时语料库</h5><ul>
+<li>共时语料库：为了对语言进行同一时段研究而建立的语料库</li>
+<li>历时语料库：为了对语言进行历时研究建立的语料库</li>
+</ul>
+<h3 id="13-什么是共现矩阵，特点是什么"><a href="#13-什么是共现矩阵，特点是什么" class="headerlink" title="13. 什么是共现矩阵，特点是什么"></a>13. 什么是共现矩阵，特点是什么</h3><p>1）共现（co-occurrence）矩阵指通过统计一个事先指定大小的窗口内的word共现次数，以word周边的共现词的次数做为当前word的vector。具体来说，我们通过从大量的语料文本中构建一个共现矩阵来定义word representation。例如，有语料如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">I</span> like deep learning.</span><br><span class="line"><span class="selector-tag">I</span> like NLP.</span><br><span class="line"><span class="selector-tag">I</span> enjoy flying.</span><br></pre></td></tr></table></figure>
+
+<p>则其共现矩阵如下：</p>
+<p><img src="https://image.discover304.top/ai/qc/%E8%AF%8D%E7%9A%84%E5%85%B1%E7%8E%B0%E7%9F%A9%E9%98%B5.png"></p>
+<p>2）特点</p>
+<ul>
+<li>优点：矩阵定义的词向量在一定程度上缓解了one-hot向量相似度为0的问题；</li>
+<li>缺点：但没有解决数据稀疏性和维度灾难的问题。</li>
+</ul>
+<h3 id="14-Word2vec"><a href="#14-Word2vec" class="headerlink" title="14. Word2vec"></a>14. Word2vec</h3><h4 id="1）什么是Word2vec"><a href="#1）什么是Word2vec" class="headerlink" title="1）什么是Word2vec"></a>1）什么是Word2vec</h4><p>Word2vec是最近推出的分布式单词表示学习技术，目前被用作许多NLP任务的特征工程技术（例如，机器翻译、聊天机器人和图像标题生成）。从本质上讲，Word2vec通过查看所使用的单词的周围单词（即上下文）来学习单词表示。更具体地说，我们试图通过神经网络根据给定的一些单词来预测上下文单词（反之亦然），这使得神经网络被迫学习良好的词嵌入。</p>
+<p>Word2vec通过查看单词上下文并以数字方式表示它，来学习给定单词的含义。所谓“上下文”，指的是在感兴趣的单词的前面和后面的固定数量的单词。假设我们有一个包含N个单词的语料库，在数学上，这可以由以$w_0，w_1, …, w_i$和$w_N$表示的一系列单词表示，其中$w_i$是语料库中的第i个单词。</p>
+<p>如果我们想找到一个能够学习单词含义的好算法，那么，在给定一个单词之后，我们的算法应该能够正确地预测上下文单词。这意味着对于任何给定的单词wi，以下概率应该较高：</p>
+<p><img src="https://image.discover304.top/ai/qc/word2vec%E8%A1%A8%E8%BE%BE%E5%BC%8F.png" alt="word2vec表达式"></p>
+<p>为了得到等式右边，我们需要假设给定目标单词（wi）的上下文单词彼此独立（例如，wi-2和wi-1是独立的）。虽然不完全正确，但这种近似使得学习问题切合实际，并且在实际中效果良好。</p>
+<h4 id="2）Word2vec的优点"><a href="#2）Word2vec的优点" class="headerlink" title="2）Word2vec的优点"></a>2）Word2vec的优点</h4><ul>
+<li>Word2vec方法并不像基于WordNet的方法那样对于人类语言知识具有主观性。</li>
+<li>与独热编码表示或单词共现矩阵不同，Word2vec表示向量大小与词汇量大小无关。</li>
+<li>Word2vec是一种分布式表示。与表示向量取决于单个元素的激活状态的（例如，独热编码）局部表示不同，分布式表示取决于向量中所有元素的激活状态。这为Word2vec提供了比独热编码表示更强的表达能力。</li>
+</ul>
+<h4 id="3）示例"><a href="#3）示例" class="headerlink" title="3）示例"></a>3）示例</h4><p>考虑以下非常小的文本：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">There was a very rich king. He had a beautiful queen. She was very kind.</span><br></pre></td></tr></table></figure>
+
+<p>做一些预处理并删除标点符号和无信息的单词：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">was rich king he had beautiful queen she was kind</span><br></pre></td></tr></table></figure>
+
+<p>现在，让我们用其上下文单词为每个单词形成一组元组，其格式为：目标单词→上下文单词1，上下文单词2（目标是给出左侧的单词能够预测右侧的单词）。我们假设两边的上下文窗口大小为1：</p>
+<figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">was</span> --&gt;</span> rich</span><br><span class="line"><span class="function"><span class="title">rich</span> --&gt;</span> was, king</span><br><span class="line"><span class="function"><span class="title">king</span> --&gt;</span> rick, he</span><br><span class="line"><span class="function"><span class="title">he</span> --&gt;</span> king, had</span><br><span class="line"><span class="function"><span class="title">had</span> --&gt;</span> he, beautiful</span><br><span class="line"><span class="function"><span class="title">beautiful</span> --&gt;</span> had, queen</span><br><span class="line"><span class="function"><span class="title">she</span> --&gt;</span> queen, was</span><br><span class="line"><span class="function"><span class="title">was</span> --&gt;</span> she, kind</span><br><span class="line"><span class="function"><span class="title">kind</span> --&gt;</span> was</span><br></pre></td></tr></table></figure>
+
+<p>表示成词向量如下所示：</p>
+<p><img src="https://image.discover304.top/ai/qc/%E8%AF%8D%E5%90%91%E9%87%8F.png" alt="词向量"></p>
+<p>可以得到如下推导：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">queen = king - he + she</span><br><span class="line">      = [<span class="number">0</span>, <span class="number">0.8</span>] - [<span class="number">0.5</span>, <span class="number">0.8</span>] + [<span class="number">0.5</span>, <span class="number">0.6</span>]</span><br><span class="line">      = [<span class="number">0</span>, <span class="number">0.6</span>]</span><br></pre></td></tr></table></figure>
+
+<p>对于现实世界的语料库来说，这是一个不切实际的缩小规模之后的练习。因此，仅仅通过处理十几个数字是无法手工计算出这些词向量的值的。这是复杂的函数逼近方法，如神经网络为我们做的那样。实际任务中，词汇量也很容易超过10000个单词。因此，我们不能手动为大型文本语料库开发词向量，而需要设计一种方法来使用一些机器学习算法（例如，神经网络）自动找到好的词嵌入，以便有效地执行这项繁重的任务。</p>
+<h1 id="计算机视觉"><a href="#计算机视觉" class="headerlink" title="计算机视觉"></a>计算机视觉</h1><h2 id="一、基本理论-2"><a href="#一、基本理论-2" class="headerlink" title="一、基本理论"></a>一、基本理论</h2><h3 id="1-什么是图像采样"><a href="#1-什么是图像采样" class="headerlink" title="1. 什么是图像采样"></a>1. 什么是图像采样</h3><p>采样是按照某种时间间隔或空间间隔，将空间上连续的图像变换成离散点的操作称为图像采样。</p>
+<h3 id="2-什么是分图像辨率"><a href="#2-什么是分图像辨率" class="headerlink" title="2. 什么是分图像辨率"></a>2. 什么是分图像辨率</h3><p>采样后得到离散图像的尺寸称为图像分辨率。分辨率是数字图像可辨别的最小细节。分辨率由宽（width）和高（height）两个参数构成。宽表示水平方向的细节数，高表示垂直方向的细节数。例如：一副640*480分辨率的图像，表示这幅图像是由 640*480&#x3D;307200个点组成；一副1920*1080分辨率的图像，表示这幅图像是由1920*1080&#x3D; 2073600个点组成。</p>
+<h3 id="3-什么是RGB颜色空间"><a href="#3-什么是RGB颜色空间" class="headerlink" title="3. 什么是RGB颜色空间"></a>3. 什么是RGB颜色空间</h3><p>RGB颜色空间中每个像素点有三个维度，分别记录在红（Red）、绿（Green）、蓝（Blue）三原色的分量上的亮度。</p>
+<h3 id="4-什么是HSV颜色空间"><a href="#4-什么是HSV颜色空间" class="headerlink" title="4. 什么是HSV颜色空间"></a>4. 什么是HSV颜色空间</h3><p>HSV颜色空间是另一种常用的计算机中表示颜色的方法。HSV表示色相(hue)、饱和度(saturation)和亮度(value)。H表示颜色的相位角(hue) ，取值范围是0—360；S表示颜色的饱和度(saturation) ，范围从0到1，它表示成所选颜色的纯度和该颜色最大的纯度之间的比率；V表示色彩的明亮程度(value) ，范围从0到1。</p>
+<p><img src="https://image.discover304.top/ai/qc/HSV.png" alt="HSV"></p>
+<h3 id="5-什么是图像灰度化处理"><a href="#5-什么是图像灰度化处理" class="headerlink" title="5. 什么是图像灰度化处理"></a>5. 什么是图像灰度化处理</h3><p>在RGB模型中，如果R&#x3D;G&#x3D;B时，则彩色表示一种灰度颜色，其中R&#x3D;G&#x3D;B的值叫灰度值，因此，灰度图像每个像素只需一个字节存放灰度值（又称强度值、亮度值），灰度范围为0-255。将RGB图像转换为灰度图像的过程称为图像灰度化处理。</p>
+<h3 id="6-图像灰度化处理有哪些方法"><a href="#6-图像灰度化处理有哪些方法" class="headerlink" title="6. 图像灰度化处理有哪些方法"></a>6. 图像灰度化处理有哪些方法</h3><p>1）分量法。将彩色图像中的三分量的亮度作为三个灰度图像的灰度值，可根据应用需要选取一种灰度图像。</p>
+<p>2）最大值法。将彩色图像中的三分量亮度的最大值作为灰度图的灰度值。</p>
+<p>3）将彩色图像中的三分量亮度求平均得到一个灰度值。</p>
+<p>4）根据重要性及其它指标，将三个分量以不同的权值进行加权平均。例如，由于人眼对绿色的敏感最高，对蓝色敏感最低，因此，按下式对RGB三分量进行加权平均能得到较合理的灰度图像。<br>$$<br>f(i,j)&#x3D;0.30R(i,j)+0.59G(i,j)+0.11B(i,j)<br>$$</p>
+<h3 id="7-图像加法运算有什么应用"><a href="#7-图像加法运算有什么应用" class="headerlink" title="7. 图像加法运算有什么应用"></a>7. 图像加法运算有什么应用</h3><p>1）图像加法可以用于多幅图像平均去除噪声。如下图：</p>
+<p><img src="https://image.discover304.top/ai/qc/%E5%9B%BE%E5%83%8F%E5%8A%A0%E6%B3%95.png" alt="图像加法"></p>
+<p>2）图像加法实现水印的叠加效果。</p>
+<h3 id="8-图像减法运算有什么应用"><a href="#8-图像减法运算有什么应用" class="headerlink" title="8. 图像减法运算有什么应用"></a>8. 图像减法运算有什么应用</h3><p>主要意义是增强图像间的差别，图像减法在连续图像中可以实现消除背景和运动检测。如下图：</p>
+<p><img src="https://image.discover304.top/ai/qc/%E5%9B%BE%E5%83%8F%E5%87%8F%E6%B3%95.png"></p>
+<h3 id="9-图像放大时，可以采用哪些插值法"><a href="#9-图像放大时，可以采用哪些插值法" class="headerlink" title="9. 图像放大时，可以采用哪些插值法"></a>9. 图像放大时，可以采用哪些插值法</h3><p>1）最邻近插值法。最邻近插值法使用点$(x’, y’)$最近的整数坐标处的灰度值作为$(x’,y’)$的值。这种插值方法计算量小，但精度不高，并且可能破坏图像中的线性关系。</p>
+<p>2）双线性插值法。双线性插值法使用点$(x’, y’)$最邻近的4个像素值进行插值计算，在两个方向上执行两次线性插值操作。</p>
+<h3 id="10-什么是直方图均衡化"><a href="#10-什么是直方图均衡化" class="headerlink" title="10. 什么是直方图均衡化"></a>10. 什么是直方图均衡化</h3><p>直方图均衡化将原始图像的直方图，即灰度概率分布图，进行调整，使之变化为均衡分布的样式，达到灰度级均衡的效果，可以有效增强图像的整体对比度。<br>直方图均衡化能够自动的计算变化函数，通过该方法自适应得产生有均衡直方图的输出图像。能够对图像过暗、过亮和细节不清晰的图像得到有效的增强。</p>
+<p><img src="https://image.discover304.top/ai/qc/%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E5%8C%96.png" alt="直方图均衡化"></p>
+<h3 id="11-什么是均值滤波"><a href="#11-什么是均值滤波" class="headerlink" title="11. 什么是均值滤波"></a>11. 什么是均值滤波</h3><p>均值滤波指模板权重都为1的滤波器。它将像素的邻域平均值作为输出结果，均值滤波可以起到图像平滑的效果，可以去除噪声，但随着模板尺寸的增加图像会变得更为模糊。经常被作为模糊化使用。</p>
+<p><img src="https://image.discover304.top/ai/qc/%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2.png" alt="均值滤波"></p>
+<h3 id="12-什么是高斯滤波"><a href="#12-什么是高斯滤波" class="headerlink" title="12. 什么是高斯滤波"></a>12. 什么是高斯滤波</h3><p>为了减少模板尺寸增加对图像的模糊化，可以使用高斯滤波器，高斯滤波的模板根据高斯分布来确定模板系数，接近中心的权重比边缘的大。大小为5的高斯滤波器及滤波效果如下所示：</p>
+<p><img src="https://image.discover304.top/ai/qc/%E9%AB%98%E6%96%AF%E6%BB%A4%E6%B3%A2.png" alt="高斯滤波"></p>
+<h3 id="13-什么是图像二值化处理，有什么优点"><a href="#13-什么是图像二值化处理，有什么优点" class="headerlink" title="13. 什么是图像二值化处理，有什么优点"></a>13. 什么是图像二值化处理，有什么优点</h3><p>1）图像二值化（Image Binarization）就是将图像上的像素点的灰度值全部设置为黑色(0)或白色(255)，也就是将整个图像分割成明显的黑白效果的过程。二值化的方法是通过设定一个阈值，大于阈值部分全部置成255，小于阈值部分全部置成0。</p>
+<p>2）优点</p>
+<ul>
+<li>二值图像在数字图像处理中占有非常重要的地位，可以方便得进行连通域提取、形态学变化、感兴趣区域分割等操作。</li>
+<li>图像的二值化使图像中数据量大为减少，并且能突显出目标的轮廓。二值化后的图像的集合性质只与像素值为0或255的点的位置有关，不再涉及像素的多级值，使处理变得简单，而且计算过程中数据的处理量减小。</li>
+</ul>
+<h3 id="14-什么是图像膨胀"><a href="#14-什么是图像膨胀" class="headerlink" title="14. 什么是图像膨胀"></a>14. 什么是图像膨胀</h3><p>图像膨胀(dilate)是指根据原图像的形状，向外进行扩充。</p>
+<p><img src="https://image.discover304.top/ai/qc/%E5%9B%BE%E5%83%8F%E8%86%A8%E8%83%80.png" alt="图像膨胀"></p>
+<h3 id="15-什么是图像腐蚀"><a href="#15-什么是图像腐蚀" class="headerlink" title="15. 什么是图像腐蚀"></a>15. 什么是图像腐蚀</h3><p>图像腐蚀(erode)是指根据原图像的形状，向内进行收缩。</p>
+<p><img src="https://image.discover304.top/ai/qc/%E5%9B%BE%E5%83%8F%E8%85%90%E8%9A%80.png" alt="图像腐蚀"></p>
+<h3 id="16-什么是图像开运算"><a href="#16-什么是图像开运算" class="headerlink" title="16. 什么是图像开运算"></a>16. 什么是图像开运算</h3><p>开运算就是先腐蚀再膨胀。开运算能够把比结构元素小的噪声和突刺过滤掉，并切断细长的连接起到分离的作用。例如将因噪声影响粘连在一起的区域分割开来。</p>
+<p><img src="https://image.discover304.top/ai/qc/%E5%9B%BE%E5%83%8F%E5%BC%80%E8%BF%90%E7%AE%97.png" alt="图像开运算"></p>
+<h3 id="17-什么是图像闭运算"><a href="#17-什么是图像闭运算" class="headerlink" title="17. 什么是图像闭运算"></a>17. 什么是图像闭运算</h3><p>闭运算就是先膨胀再腐蚀。闭运算可以把比结构元素小的缺憾或者空洞补上，将细小断裂的区域进行连通。例如将因图像质量而断裂的目标区域进行合并连通。</p>
+<p><img src="https://image.discover304.top/ai/qc/%E5%9B%BE%E5%83%8F%E9%97%AD%E8%BF%90%E7%AE%97.png" alt="图像闭运算"></p>
+<h3 id="18-什么是仿射变换"><a href="#18-什么是仿射变换" class="headerlink" title="18. 什么是仿射变换"></a>18. 什么是仿射变换</h3><p>仿射变换是指图像可以通过一系列的几何变换来实现平移、旋转等多种操作。该变换能够保持图像的平直性和平行性。平直性是指图像经过仿射变换后，直线仍然是直线；平行性是指图像在完成仿射变换后，平行线仍然是平行线。</p>
+<p><img src="https://image.discover304.top/ai/qc/%E5%9B%BE%E5%83%8F%E4%BB%BF%E5%B0%84%E5%8F%98%E6%8D%A2.png" alt="图像仿射变换"></p>
+<h3 id="19-什么是礼帽运算"><a href="#19-什么是礼帽运算" class="headerlink" title="19. 什么是礼帽运算"></a>19. 什么是礼帽运算</h3><p>礼帽运算是用原始图像减去其开运算图像的操作。礼帽运算能够获取图像的噪声信息，或者得到比原始图像的边缘更亮的边缘信息。</p>
+<p><img src="https://image.discover304.top/ai/qc/%E5%9B%BE%E5%83%8F%E7%A4%BC%E5%B8%BD%E8%BF%90%E7%AE%97.png" alt="图像礼帽运算"></p>
+<h3 id="20-什么是图像黑帽运算"><a href="#20-什么是图像黑帽运算" class="headerlink" title="20. 什么是图像黑帽运算"></a>20. 什么是图像黑帽运算</h3><p>黑帽运算是用闭运算图像减去原始图像的操作。黑帽运算能够获取图像内部的小孔，或前景色中的小黑点，或者得到比原始图像的边缘更暗的边缘部分。</p>
+<p><img src="https://image.discover304.top/ai/qc/%E5%9B%BE%E5%83%8F%E9%BB%91%E5%B8%BD%E8%BF%90%E7%AE%97.png" alt="图像礼帽运算"></p>
+<h3 id="21-什么是图像金字塔"><a href="#21-什么是图像金字塔" class="headerlink" title="21. 什么是图像金字塔"></a>21. 什么是图像金字塔</h3><p>图像金字塔是由一幅图像的多个不同分辨率的子图所构成的图像集合。该组图像是由单个图像通过不断地降采样所产生的，最小的图像可能仅仅有一个像素点。通常情况下，图像金字塔的底部是待处理的高分辨率图像（原始图像），而顶部则为其低分辨率的近似图像。向金字塔的顶部移动时，图像的尺寸和分辨率都不断地降低。通常情况下，每向上移动一级，图像的宽和高都降低为原来的二分之一。</p>
+<p>图像金子塔可以得到大小不同的图像，从而更方便进行图像处理、计算、识别以及特征提取。</p>
+<p><img src="https://image.discover304.top/ai/qc/%E5%9B%BE%E5%83%8F%E9%87%91%E5%AD%90%E5%A1%941.png" alt="图像金子塔1"></p>
+<p><img src="https://image.discover304.top/ai/qc/%E5%9B%BE%E5%83%8F%E9%87%91%E5%AD%97%E5%A1%94.png" alt="图像金字塔"></p>
+<h3 id="22-什么是霍夫变换"><a href="#22-什么是霍夫变换" class="headerlink" title="22. 什么是霍夫变换"></a>22. 什么是霍夫变换</h3><p>霍夫变换是一种在图像中寻找直线、圆形以及其他简单形状的方法。霍夫变换采用类似于投票的方式来获取当前图像内的形状集合，该变换由Paul Hough（霍夫）于1962年首次提出。最初的霍夫变换只能用于检测直线，经过发展后，霍夫变换不仅能够识别直线，还能识别其他简单的图形结构，常见的有圆、椭圆等。</p>
+<p><img src="https://image.discover304.top/ai/qc/%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A22.png" alt="霍夫变换2"></p>
+<h1 id="企业真题"><a href="#企业真题" class="headerlink" title="企业真题"></a>企业真题</h1><p>1）填空题：在SVM、逻辑回归等二分类模型中，在模型训练完成后，如果调高分类阈值，会导致模型的精准率（precision）【提高】，模型的召回率（recall）【降低】，模型的auc（Area Under Curve）【增大】。</p>
+<p>2）填空题：在模型训练过程中，一般情况下，增加batch size会导致模型的收敛速度【变慢】，减少学习率&#x2F;步长会导致模型的收敛速度【变慢】。</p>
+<p>3）填空题：LSTM对比原始RNN的最大改进是【解决了梯度消失，能处理更长的序列】；bi-LSTM对比LSTM最大的改进是【能够提取反向序列特征】</p>
+<p>4）问答题：用户的年龄是离散特征还是连续特征？在输入模型之前如何进行处理？</p>
+<p>答：年龄是连续特征。对连续特征处理有如下方式：</p>
+<ul>
+<li>模型接收的特征为离散：需要将年龄进行离散化处理，按不同数值进行分段</li>
+<li>模型可以接收连续特征，但要是用梯度下降法优化：该种情况下，需要对年龄进行归一化处理，归一化到0~1之间（例如神经网络模型）</li>
+<li>模型可以接收连续特征，但不需要梯度下降法优化：该种情况下，直接将年龄输入模型即可</li>
+</ul>
+<p>5）问答题：假如训练集正负样本比例为1:9，准确率（accuracy）为90%，验证集（测试集）正负样本比例为1:1，准确率为50%，能否肯定发生了过拟合现象？如何解决上述问题？</p>
+<p>答：该现象 为样本不均衡导致的欠拟合，由于样本不均衡，导致模型并没有学习到数据的真实分布规律。解决方法是对多数样本进行降采样，对少数样本进行升采样。</p>
+<p>6）问答题：经过下列卷积操作后，3*3 conv -&gt; 3*3 conv -&gt; 2*2  max pool -&gt; 3*3 conv，卷积步长为1，没有填充，输出神经元感受野是多大？</p>
+<p>答：例如输入是32*32的图像，经过第一层3*3卷积，特征图大小30*30（感受野大小 3*3），再经过 3*3卷积（感受野大小5*5），特征图大小28*28，2*2池化后特征图大小14*14（感受野大小10*10）</p>
+<p>7）神经网络加速训练方法有哪些？</p>
+<p>答：可以从多个层级对模型进行优化和加速：</p>
+<ul>
+<li>硬件层：使用GPU代替CPU训练，使用多GPU代替单GPU训练</li>
+<li>模型层：采用轻量级模型，对模型进行裁剪、知识蒸馏</li>
+<li>参数层：采用归一化、batch normal等方法</li>
+<li>代码层：采用变化学习率，开始时学习率调大，训练一些轮次逐渐调小；采用合适优化器，例如自动应梯度下降优化器</li>
+</ul>
+<p>8）解释一下BN层的作用，并简述其公式含义</p>
+<ul>
+<li><p>BN的作用：缓解梯度消失，缓解过拟合，加快模型收敛速度，增加模型稳定性</p>
+</li>
+<li><p>BN的计算公式</p>
+<p><img src="https://image.discover304.top/ai/qc/BN.png" alt="BN"></p>
+</li>
+</ul>
+<p>9）写出SVM中的硬间隔分类的loss</p>
+<p>答：硬间隔指分类误差为0（即所有的样本都分类正确），软间隔指允许有一定程度的较小分类误差。SVM损失函数的推导过程如下：</p>
+<p><img src="https://image.discover304.top/ai/qc/svm_loss.png" alt="svm_loss"></p>
+<p>根据SVM正负例都在间隔上或间隔外，样本需满足以下条件：<br>$$<br>\frac{\theta ^ T x^{(i)} + b}{||\theta||} \ge d,\ \ y^{(i)} &#x3D; 1 \<br>\frac{\theta ^ T x^{(i)} + b}{||\theta||} \le d,\ \ y^{(i)} &#x3D; -1<br>$$<br>不等式左右同时除以d得：<br>$$<br>\frac{\theta ^ T x^{(i)} + b}{||\theta||d} \ge 1,\ \ y^{(i)} &#x3D; 1 \<br>\frac{\theta ^ T x^{(i)} + b}{||\theta||d} \le 1,\ \ y^{(i)} &#x3D; -1<br>$$<br>上式中主要关注$\frac{\theta ^T}{||\theta||d}$和$\frac{b}{||\theta||d}$，可以发现，本质没有什么变化，只是在原基础上进行了一定程度的缩放，所以等式可简化为：<br>$$<br>\theta ^ T x^{(i)} + b \ge 1,\ \ y^{(i)} &#x3D; 1 \<br>\theta ^ T x^{(i)} + b \le 1,\ \ y^{(i)} &#x3D; -1<br>$$<br>综合上面两种情况，将$y^{(i)}$乘进去，可以写成一个不等式：<br>$$<br>y^{(i)}\theta ^ T x^{(i)} + b \ge 1<br>$$<br>同时，可以通过计算，求得支持向量到分类边界的间隔为：<br>$$<br>d &#x3D; \frac{\theta^Tx +b}{||\theta||} &#x3D; \frac{1}{||\theta||}<br>$$<br>所以，要想获得最大间隔的SVM，即要满足约束条件同时最大化几何间隔：<br>$$<br>max(\frac{1}{||\theta||}) \<br>s.t. \ \ y^{(i)}(\theta ^T x^{(i)} + b) \ge 1<br>$$</p>
+<p>10）问答题：TF-IDF与DF相比优势是什么？</p>
+<p>答：单词权重最为有效的实现方法就是TF-IDF, 其指导思想建立在这样一条基本假设之上: 在一个文本中出现很多次的单词, 在另一个同类文本中出现次数也会很多, 反之亦然。所以如果特征空间坐标系取TF 词频作为测度, 就可以体现同类文本的特点。另外还要考虑单词区别不同类别的能力, TF*IDF 法认为一个单词出现的文本频率越小, 它区别不同类别的能力就越大, 所以引入了逆文本频度IDF 的概念, 以TF 和IDF 的乘积作为特征空间坐标系的取值测度。</p>
+<p>文档频数(Document Frequency, DF)是最为简单的一种特征选择算法,它指的是在整个数据集中有多少个文本包含这个单词。在训练文本集中对每个特征计一算它的文档频次，并且根据预先设定的阑值去除那些文档频次特别低和特别高的特征。</p>
+<p>11）问答题：对于中文LDA、NER和文本分类任务，是字向量好一些还是词向量好一些？为什么？</p>
+<p>答：当使用机器学习的算法构建文本向量时，如词袋模型、TF-IDF和N-gram模型时，词向量算法会优于字向量，因为这些算法本身不能表示单词的语言信息，而机器学习算法通过分词后更能表达语句的含义，所以词向量优于字向量。<br>而采用深度学习算法构建文本向量时，字向量优于词向量，本质是指字向量在保持本身运算性能优越的同时，语义上可以表达词向量等级的更细腻语义。</p>
+<p>12）简述离散化的好处，并写出离散化的常用方法有哪些？</p>
+<ul>
+<li><p>离散化的好处：降维；非线性化；容易增加和减少特征；降低噪声值的影响</p>
+</li>
+<li><p>离散化的方法：</p>
+<ul>
+<li><p>区间划分法。如1-100岁可以划分为：（0-18）未成年、（18-50）中青年、（50-100）中老年。区间划分包括等距划分、按阶段划分、特殊点划分等</p>
+</li>
+<li><p>卡方检验。分裂方法，就是找到一个分裂点看，左右2个区间，在<strong>目标值上分布</strong>是否有显著差异，有显著差异就分裂，否则就忽略。这个点可以每次找差异最大的点。合并类似，先划分如果很小单元区间，按顺序合并在目标值上分布不显著的相邻区间，直到收敛。卡方值通常由χ2分布近似求得。 χ2表示观察值与理论值之问的偏离程度。</p>
+</li>
+<li><p>信息增益法。这个和决策树的学习很类似。分裂方法，就是找到一个分裂点看，左右2个区间，看分裂前后<strong>信息增益变化</strong>阈值，如果差值超过阈值（正值，分列前-分裂后信息熵），则分裂。每次找差值最大的点做分裂点，直到收敛。合并类似，先划分如果很小单元区间，按顺序合并信息增益小于阈值的相邻区间，直到收敛。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>13）利用梯度下降法优化目标函数ln(wx)，给定第一轮参数w&#x3D;2, x&#x3D;10，请写出第三轮优化后的参数值（学习率$\lambda$ &#x3D; 0.1）</p>
+<p>第一步：根据初始值计算梯度<br>$$<br>\frac{\partial y}{\partial w} &#x3D; (ln(w) + ln(x))’ &#x3D; (ln(w))’&#x3D; \frac{1}{w}<br>$$<br>所以w的初始梯度为 1 &#x2F; 2 &#x3D; 0.5.</p>
+<p>第二步：根据梯度更新公式计算更新w<br>$$<br>w &#x3D; w + \Delta w &#x3D; 2 - (0.1 * 0.5) &#x3D; 1.95<br>$$<br>第三步：继续计算第二轮梯度，并更新<br>$$<br>w &#x3D; w + \Delta w &#x3D; 1.95 - (0.1 * \frac{1}{1.95}) \approx 1.8987 \<br>$$<br>第四步：计算第三轮梯度，并更新<br>$$<br>w &#x3D; w + \Delta w &#x3D; 1.8987 - (0.1 * \frac{1}{1.8987}) \approx 1.846 \<br>$$<br>14）已知卷积层中输入尺寸32 * 32 *3，有10个大小为5*5的卷积核，stride&#x3D;1,pad&#x3D;2，输出大小为多少？</p>
+<p>输出特征图大小：OH &#x3D; OW &#x3D; (32 + 2 * 2 - 5 &#x2F; 1 ) + 1 &#x3D; 32</p>
+<p>10个卷积核输出10个通道，总特征数量：10 * 32 * 32 &#x3D; 10240</p>
+<p>15）在把神经网络用于N个类别的分类任务时，输出层一般采用N路softmax神经元和Cross Entropy误差函数。但是在只有两个类别时，一般直接用一个sigmoid神经元，请证明2路softmax神经元和1个sigmoid神经元是等价的</p>
+<p>16）Faster RCNN中，ROI pooling具体如何工作（怎么把不同大小的框，pooling到同样大小）？</p>
+<p>答：ROI pooling的主要作用，是将候选区域的特征图处理成同样大小输出。例如，输入8x8的特征图，输出2x2的特征图，其工作原理入下：</p>
+<p>输入：</p>
+<p><img src="https://image.discover304.top/ai/qc/ROI_pooling_input.png" alt="ROI_pooling_input"></p>
+<p>第一步：根据ROI projection算法计算候选区对应的特征图区域</p>
+<p><img src="https://image.discover304.top/ai/qc/ROI_pooling_projection.png" alt="ROI_pooling_projection"></p>
+<p>第二步：将其划分为2x2个区域，针对每个区域做max pooling</p>
+<p><img src="https://image.discover304.top/ai/qc/ROI_pooling_max.png" alt="ROI_pooling_projection"></p>
+<p>第三步：产生输出</p>
+<p><img src="https://image.discover304.top/ai/qc/ROI_pooling_out.png" alt="ROI_pooling_out"></p>
+<p>17）tensorflow[while_loop]和python[for]循环的区别，什么情况下for更优？</p>
+<p>答：tensorflow的流程控制，是执行在tensorflow平台上，python语言的for循环执行在Python解释器中。如果Python解释器能独立完成for循环中的计算（即不包含tensorflow中的operation），使用Python的for循环效率更高</p>
+<p>18）Sigmoid函数的求导过程</p>
+<p>答：根据分数求导公式<br>$$<br>（\frac {U}{V}）’ &#x3D; \frac {U’V - UV’} {V^2}<br>$$<br>Sigmoid函数表达式：$y &#x3D; \frac{1}{1+e^{-x}} $，先对分母部分求导：<br>$$<br>(1 + e^{-x})’ &#x3D; e^{-x} ln(e) &#x3D; e^{-x}<br>$$<br>再根据分数求导公式有：<br>$$<br>(\frac{1}{1+e^{-x}})’ &#x3D; \frac{0 * (1+e^{-x}) - 1 * e^{-x}}{(1+e^{-x})^2} \<br>&#x3D; \frac{1 + e^{-x} -1}{(1+e^{-x})^2} \<br>&#x3D; \frac{1 + e^{-x}}{(1+e^{-x})^2} - \frac{1}{(1+e^{-x})^2} \<br>&#x3D; \frac{1}{1+e^{-x}} (1- \frac{1}{1+e^{-x}}) \<br>&#x3D; f(x)(1 - f(x))<br>$$<br>推导完毕.</p>
+<p>19）Sigmoid函数为什么会出现梯度消失？Sigmoid函数导数最大值出现在哪个值？Relu为什么能解决梯度消失问题？</p>
+<p>答：Sigmoid函数当自变量大于某个值或小于某个值时，函数梯度接近于0，出现梯度消失。当自变量的值为0时，函数导数最大。Relu大于0的部分梯度均为1，所以避免了梯度消失情况。</p>
+<p>20）SSD和YOLO的区别？YOLOv2和YOLOv3的区别？</p>
+<p>答：（1）抛开具体实现上的差异， SSD检测精度优于YOLO3，YOLO3检测时间快于SSD</p>
+<p>（2）YOLOv2与YOLOv3的区别</p>
+<ul>
+<li>骨干网：YOLOv3采用更深的Darknet53，YOLOv2采用Darknet19</li>
+<li>分类器：YOLOv3采用逻辑分离器，YOLOv2采用softmax</li>
+<li>锚点：YOLOv3采用9个锚点，YOLOv2采用5个锚点</li>
+<li>多尺度融合：YOLOv3采用13x13, 26x26, 52x52三种特征图进行特征融合，YOLOv2采用13x13, 26x26进行特征融合</li>
+</ul>
+<p>21）测试集中有1000个样本，600个是A类，400个B类，模型预测结果700个判断为A类，其中正确有500个，300个判断为B类，其中正确有200个。请计算B类的查准率（Precision）和召回率（Recall）</p>
+<p>答：可以建立以下混淆矩阵</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>A</th>
+<th>B</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>500</td>
+<td>100</td>
+</tr>
+<tr>
+<td>B</td>
+<td>200</td>
+<td>200</td>
+</tr>
+</tbody></table>
+<p>类别B查准率：200 &#x2F; (200 + 100) &#x3D; 2&#x2F;3</p>
+<p>类别B召回率：200 &#x2F; (200 + 200) &#x3D; 1&#x2F;2 &#x3D; 0.5</p>
+<p>22）训练模型时，如果样本类别不均衡，有什么办法解决？如何判断模型是否过拟合？对于神经网络中有哪些方法解决过拟合问题？</p>
+<p>答：（1）对于类别不均衡问题，可以对样本多的类别采用降采样，对少的类别采用过采样</p>
+<p>（2）通过对比训练集和测试集准确率判断模型是否过拟合，如果训练集准确率较高、测试集准确率较低则判断为过拟合</p>
+<p>（3）见前面章节</p>
+<p>23）神经网络节点激活函数的作用是什么？Sigmoid，Relu和softmax函数的表达式是什么？各自作用的优缺点是什么？</p>
+<p>答案见前面章节</p>
+<p>24）下采样和上采样的理解</p>
+<p>答：对矩阵缩小称为下采样，对矩阵放大称为上采样</p>
+<p>25）深度可分离卷积是什么？</p>
+<p>答：深度可分离卷积由depthwise卷积和pointwise卷积两部分结合起来，在提取特征同时对数据进行降维</p>
+<p>普通卷积：输入5x5三通道图像，4个3x3三通道卷积核，总参数量为4 × 3 × 3 × 3 &#x3D; 108，如下图所示：</p>
+<p><img src="https://image.discover304.top/ai/qc/common_conv.png" alt="common_conv"></p>
+<p>采用深度可分离卷积时，先做逐通道卷积：</p>
+<p><img src="https://image.discover304.top/ai/qc/common_conv_1.png" alt="common_conv_1"></p>
+<p>再做逐点卷积：</p>
+<p><img src="https://image.discover304.top/ai/qc/pointwise_conv.png" alt="pointwise_conv"></p>
+<p>最终得到四个通道的特征图，但参数总量减少为：</p>
+<p>逐通道卷积：3 × 3 × 3 &#x3D; 27<br>逐点卷积：1 × 1 × 3 × 4 &#x3D; 12</p>
+<p>共39个参数。</p>
+<p>26）目标检测常用算法有哪些，简述对算法的理解</p>
+<p>答：目标检测可分为两阶段检测和一阶段检测，两阶段检测先产生候选区，再做分类和回归，分类问题确定目标物体的类别，回归问题确定目标物体的位置。</p>
+<p>（1）两阶段检测技术</p>
+<ul>
+<li><p>步骤：先产生候选区，再做分类和回归</p>
+</li>
+<li><p>特点：检测速度慢，检测精度高</p>
+</li>
+<li><p>代表性模型：R-CNN&#x2F;Fast R-CNN&#x2F;Faster R-CNN系列；SPP-Net</p>
+</li>
+</ul>
+<p>（2）一阶段检测技术</p>
+<ul>
+<li><p>步骤：直接在特征图上做分类和回归</p>
+</li>
+<li><p>特点：检测速度快，检测精度较低</p>
+</li>
+<li><p>代表性模型：YOLO1&#x2F;2&#x2F;3&#x2F;4&#x2F;5系列，SSD，RetinaNet</p>
+</li>
+</ul>
+<p>27）LSTM跟GRU的区别</p>
+<p>答：GRU是LSTM的简化版，GRU参数更少因此更容易收敛，但是数据集很大的情况下，LSTM表达性能更好。从结构上来说，GRU只有两个门（update和reset），LSTM有三个门（forget，input，output）</p>
+<p>28）用伪代码形式写出双线性插值的核心公式</p>
+<p>答：双线性插值，又称为双线性内插。在数学上，双线性插值是有两个变量的插值函数的线性插值扩展，其核心思想是在两个方向分别进行一次线性插值。其原理为：</p>
+<p><img src="https://image.discover304.top/ai/qc/blinear_insert.png" alt="blinear_insert"></p>
+<p>假如我们想得到未知函数<em>f</em>在点<em>P</em>&#x3D; (<em>x</em>,<em>y</em>) 的值，假设我们已知函数<em>f</em>在<em>Q</em>11 &#x3D; (<em>x</em>1,<em>y</em>1)、<em>Q</em>12 &#x3D; (<em>x</em>1,<em>y</em>2),<em>Q</em>21 &#x3D; (<em>x</em>2,<em>y</em>1) 以及<em>Q</em>22 &#x3D; (<em>x</em>2,<em>y</em>2) 四个点的值。首先在<em>x</em>方向进行线性插值，得到R1和R2，然后在<em>y</em>方向进行线性插值，得到P.</p>
+<ul>
+<li>第一步：X方向的线性插值，在Q12,Q22中插入蓝色点R2，Q11，Q21中插入蓝色点R1；</li>
+<li>第二步 ：Y方向的线性插值 ,通过第一步计算出的R1与R2在y方向上插值计算出P点。</li>
+</ul>
+<p>表示成公式：<br>$$<br>f(R_1) \approx \frac{x_2 - x}{x_2 - x_1} f(Q_{11}) + \frac{x - x_1}{x_2 - x_1} f({Q21}) \ \ where R_1 &#x3D;(x, y_1) \<br>f(R_2) \approx \frac{x_2 - x}{x_2 - x_1} f(Q_{12}) + \frac{x - x_1}{x_2 - x_1} f({Q22}) \ \ where R_1 &#x3D;(x, y_2)<br>$$</p>
+<p>29）介绍一种图像特征提取方法（如Sift特征、Hog特征、LBP特征等），从方法实现的过程原理、方法的用途、特征的特点，或其它你了解的方面任选一种介绍即可</p>
+<p>（1）Sift特征</p>
+<ul>
+<li>SIFT（全称是Scale Invariant Feature Transform，尺度不变特征变换）对旋转、尺度缩放、亮度变化等保持不变性，是一种非常稳定的局部特征</li>
+<li>算法特点<ul>
+<li>图像的局部特征，对旋转、尺度缩放、亮度变化保持不变，对视角变化、仿射变换、噪声也保持一定程度的稳定性</li>
+<li>独特性好，信息量丰富，适用于海量特征库进行快速、准确的匹配</li>
+<li>多量性，即使是很少几个物体也可以产生大量的SIFT特征</li>
+<li>高速性，经优化的SIFT匹配算法甚至可以达到实时性</li>
+<li>扩展性，可以很方便的与其他的特征向量进行联合</li>
+</ul>
+</li>
+<li>步骤<ul>
+<li><strong>尺度空间的极值检测</strong>：搜索所有尺度空间上的图像，通过高斯微分函数来识别潜在的对尺度和选择不变的兴趣点</li>
+<li><strong>特征点定位</strong>：在每个候选的位置上，通过一个拟合精细模型来确定位置尺度，关键点的选取依据他们的稳定程度</li>
+<li><strong>特征方向赋值</strong>：基于图像局部的梯度方向，分配给每个关键点位置一个或多个方向，后续的所有操作都是对于关键点的方向、尺度和位置进行变换，从而提供这些特征的不变性</li>
+<li><strong>特征点描述</strong>：在每个特征点周围的邻域内，在选定的尺度上测量图像的局部梯度，这些梯度被变换成一种表示，这种表示允许比较大的局部形状的变形和光照变换</li>
+<li>将图像image内的所有block的HOG特征descriptor串联起来就可以得到该image（你要检测的目标）的HOG特征descriptor了。这个就是最终的可供分类使用的特征向量了</li>
+</ul>
+</li>
+</ul>
+<p>（2）Hog特征</p>
+<ul>
+<li>方向梯度直方图（Histogram of Oriented Gradient, HOG）特征是一种在计算机视觉和图像处理中用来进行物体检测的特征描述子。它通过计算和统计图像局部区域的梯度方向直方图来构成特征。</li>
+<li>算法过程<ul>
+<li>灰度化</li>
+<li>采用Gamma校正法对输入图像进行颜色空间的标准化（归一化）；目的是调节图像的对比度，降低图像局部的阴影和光照变化所造成的影响，同时可以抑制噪音的干扰</li>
+<li>计算图像每个像素的梯度（包括大小和方向）；主要是为了捕获轮廓信息，同时进一步弱化光照的干扰</li>
+<li>将图像划分成小cells，统计每个cell的梯度直方图（不同梯度的个数）</li>
+<li>将每几个cell组成一个block（例如3*3个cell&#x2F;block），一个block内所有cell的特征descriptor串联起来便得到该block的HOG特征</li>
+</ul>
+</li>
+</ul>
+<p>（3）LBP特征</p>
+<ul>
+<li>LBP是Local Binary Pattern（局部二值模式）的缩写，具有灰度不变性和旋转不变性等显著优点</li>
+<li>原始的LBP算子定义为在3 ∗ 3的窗口内，以窗口中心像素为阈值，将相邻的8个像素的灰度值与其进行比较，若周围像素值大于等于中心像素值，则该像素点的位置被标记为1，否则为0。这样，3 ∗ 3 邻域内的8个点经比较可产生8位二进制数（通常转换为十进制数即LBP码，共256种），即得到该窗口中心像素点的LBP值，并用这个值来反映该区域的纹理信息。需要注意的是，LBP值是按照顺时针方向组成的二进制数</li>
+</ul>
+<p>30）求矩阵特征值、特征向量，或谈谈特征值分解（或奇异值分解）在图像中的应用<br>$$<br>A &#x3D; \left(<br>\begin{matrix}<br>1 &amp; 2 &amp; 3\<br>4 &amp; 5 &amp; 6 \<br>7 &amp; 8 &amp; 9<br>\end{matrix}<br>\right)<br>\tag{2}<br>$$</p>
+<p>31）写出一维傅里叶正、逆变换公式，或谈谈傅里叶变换在图像分析中有哪些作用？</p>
+<p>答：一维傅里叶变换：<br>$$<br>F(u) &#x3D; \sum_{M&#x3D;0}^{M-1} f(x)(e^{-jux \frac{2 \pi}{M}}), u &#x3D; 0,1,2,…,M-1 \<br>\Rightarrow F(u) &#x3D; \sum_{M&#x3D;0}^{M-1} f(x)(cos(ux \frac{2 \pi}{M}) - jsin(ux \frac{2 \pi}{M})), u &#x3D; 0,1,2,…,M-1<br>$$<br>一维傅里叶逆变换：<br>$$<br>F(u) &#x3D; \frac{1}{M}\sum_{u&#x3D;0}^{M-1} F(u)e^{jux \frac{2 \pi}{M}}, x &#x3D; 0,1,2,…,M-1 \<br>\Rightarrow F(u) &#x3D; \frac{1}{M} \sum_{u&#x3D;0}^{M-1} F(u)(cos(ux \frac{2 \pi}{M}) - jsin(ux \frac{2 \pi}{M})), x &#x3D; 0,1,2,…,M-1<br>$$<br>傅里叶变换用于在时域信号和频域信号之间进行转换，在图像处理中，能分离出图像高频部分和低频部分。</p>
+<p>32）常用图像分割算法有哪些？各有什么优缺点？</p>
+<p>答：（1）传统图像算法：分水岭算法</p>
+<p>（2）深度学习算法</p>
+<ul>
+<li>FCN模型，又称全卷积网络，去掉了CNN中的全连接层。对输入图像进行层层卷积、上采样，预测出每个像素所属的类别</li>
+<li>U-Net，该模型对输入图像进行层层卷积、上采样，预测出每个像素所属的类别。该模型简单、高效、容易理解、容易定制，针对样本较少的情况也能有较好分割效果</li>
+<li>Mask RCNN，将Faster RCNN 上增加了FCN来产生定位和分割信息</li>
+<li>DeepLab系列，引入了空洞卷积，条件随机场，多尺度空洞卷积等策略，使得分割效果更好</li>
+</ul>
+<p>33）简单介绍几种典型的传统人脸检测算法和基于深度学习的人脸检测算法</p>
+<p>答：（1）基于传统人脸检测算法：Haar级联人脸检测算法</p>
+<p>（2）深度学习人脸检测算法：MTCNN模型，Cascade CNN模型</p>
+<p>34）简单介绍几种具有代表性的人脸识别模型结构及算法，以及常用的损失函数</p>
+<p>答：（1）基于传统人脸识别算法：LBPH人脸识别算法，EigenFaces人脸识别算法</p>
+<p>（2）深度学习人脸检测算法：DeepFace模型，FaceNet模型，DeepID系列模型</p>
+<p>35）简单介绍常用人脸活体检测算法，可以从动作配合式和静默检测两个方面进行阐述</p>
+<p>答：所谓“活体检测”是指判断捕捉到的人脸是真实人脸，还是伪造的人脸攻击（如：彩色纸张打印人脸图，电子设备屏幕中的人脸数字图像 以及 面具 等）</p>
+<p>36）简单介绍几种常用的人脸属性及识别算法</p>
+<p>答：性别识别、年龄估计、种族识别、表情识别</p>
+<p>37）简单介绍几种典型传统文字行检测算法和基于深度学习的文字行检测算法</p>
+<p>答：文字检测是文字识别过程中的一个非常重要的环节，文字检测的主要目标是将图片中的文字区域位置检测出来，以便于进行后面的文字识别，只有找到了文本所在区域，才能对其内容进行识别。</p>
+<p>文字检测的场景主要分为两种，一种是简单场景，另一种是复杂场景。其中，简单场景的文字检测较为简单，例如像书本扫描、屏幕截图、或者清晰度高、规整的照片等；而复杂场景，主要是指自然场景，情况比较复杂，例如像街边的广告牌、产品包装盒、设备上的说明、商标等等，存在着背景复杂、光线忽明忽暗、角度倾斜、扭曲变形、清晰度不足等各种情况，文字检测的难度更大。</p>
+<p>传统检测方法 包括形态学操作、MSER+NMS等方法；深度学习文字检测主要包括CTPN、SegLink、EAST等方法。</p>
+<p>38）简单介绍CRNN+CTC和CRNN+Attention文字行识别方法</p>
+<p>答：（1）CRNN+CTC模型。该模型主要实现了端对端的文字识别，其主要流程为：输入 –&gt; 卷积（提取特征） –&gt; 特征图转序列 –&gt; 双向循环神经网络 –&gt; CTC。</p>
+<p>（2）CRNN+Attension模型。该模型在CRNN网络的输出层后面加上一层Attention（注意力）机制。Attention 机制在序列学习任务上具有巨大的提升作用，在编解码器框架内，通过在编码段加入Attention模型，对源数据序列进行数据加权变换，或者在解码端引入Attention 模型，对目标数据进行加权变化，可以有效提高序列对序列的自然方式下的系统表现。</p>
+<p>39）简述AdaBoost，BP神经网络基本原理</p>
+<p>答：（1）Boosting，也称为增强学习或提升法，是一种重要的集成学习技术，能够将预测精度仅比随机猜度略高的弱学习器增强为预测精度高的强学习器，这在直接构造强学习器非常困难的情况下，为学习算法的设计提供了一种有效的新思路和新方法。作为一种元算法框架，Boosting几乎可以应用于所有目前流行的机器学习算法以进一步加强原算法的预测精度，应用十分广泛，产生了极大的影响。AdaBoost正是其中最成功的代表，被评为数据挖掘十大算法之一，其主要思想为：</p>
+<ul>
+<li>先通过对N个训练样本的学习得到第一个弱分类器；</li>
+<li>将分错的样本和其他的新数据一起构成一个新的N个的训练样本，通过对这个样本的学习得到第二个弱分类器 ；</li>
+<li>将1和2都分错了的样本加上其他的新样本构成另一个新的N个的训练样本，通过对这个样本的学习得到第三个弱分类器；</li>
+<li>最终经过提升的强分类器。即某个数据被分为哪一类要由各分类器权值决定。</li>
+</ul>
+<p>Aadboost 算法系统具有较高的检测速率，且不易出现过适应现象。但是该算法在实现过程中为取得更高的检测精度则需要较大的训练样本集，在每次迭代过程中，训练一个弱分类器则对应该样本集中的每一个样本，每个样本具有很多特征，因此从庞大的特征中训练得到最优弱分类器的计算量增大。</p>
+<p>（2）BP神经网络。BP(back propagation)神经网络按照误差反向传播算法训练的多层前馈神经网络，是应用最广泛的神经网络。在神经网络训练过程中，使用梯度下降法对模型参数进行优化。因为深度神经网络存在隐藏层，隐藏层的误差或偏导数不容易求解，所以采用反向传播算法，根据输出层的误差（或参数偏导数）一次倒退每个隐藏层的每个参数的误差（或偏导数）的方式进行训练。</p>
+<p>40）贝叶斯公式（N++个公司都考到了）</p>
+<p>答：贝叶斯定义是通过先验概率计算后验的公式，公式定义为：<br>$$<br>P(A|B) &#x3D; \frac{P(A)P(B|A)}{P(B)}<br>$$<br>推导过程：$P(A)$和$P(B)$是A事件和B事件发生的概率. $P(A|B)$称为条件概率，表示B事件发生条件下，A事件发生的概率；$P(A,B)$为联合概率，即时间A和B同时发生的概率。则有：<br>$$<br>P(A,B) &#x3D;P(B)P(A|B)\<br>P(B,A) &#x3D;P(A)P(B|A)<br>$$<br>因为$P(A,B)&#x3D;P(B,A)$, 所以有：<br>$$<br>P(B)P(A|B)&#x3D;P(A)P(B|A)<br>$$<br>两边同时除以P(B)，则得到贝叶斯定理的表达式。</p>
+<p>41）使用过哪些图像算法库</p>
+<p>答：opencv，PIL</p>
+<p>42）在你以前有关图像信号的处理工作中，请列举你单独负责的项目，并简述你在项目中的职责；项目困难点在哪里，是如何解决的？</p>
+<p>答：参照关于项目问题的总结</p>
+<p>43）简述常用边沿检测算子，各有什么特性？</p>
+<p>答：（1）Sobel算子。Sobel算子是典型的基于一阶导数的边缘检测算子，由于该算子中引入了类似局部平均的运算，因此对噪声具有平滑作用，能很好的消除噪声的影响。Sobel算子对于象素的位置的影响做了加权，与Prewitt算子、Roberts算子相比因此效果更好。Sobel算子包含两组3x3的矩阵，分别为横向及纵向模板，将之与图像作平面卷积，即可分别得出横向及纵向的亮度差分近似值。实际使用中，常用如下两个模板来检测图像边缘：<br>$$<br>G_x &#x3D; \left[<br>\begin{matrix}<br>-1 \ \ 0 \ \  1 \<br>-2 \ \ 0 \ \  2 \<br>-1 \ \ 0 \ \  1 \<br>\end{matrix}<br>\right]  , \ \ \ \ G_y &#x3D; \left[<br>\begin{matrix}<br>1 \ \ 2 \ \  1 \<br>0 \ \ 0 \ \  0 \<br>-1 \ \ -2 \ \  1 \<br>\end{matrix}<br>\right]<br>$$<br>其中，第一个为水平边沿检测模板，第二个为垂直边沿检测模板。图像的每一个像素的横向及纵向梯度近似值可用以下的公式结合，来计算梯度的大小：<br>$$<br>G &#x3D; \sqrt{G_x^2 + G_y^2}<br>$$<br>（2）Prewitt算子。Prewitt算子是一种一阶微分算子的边缘检测，利用像素点上下、左右邻点的灰度差，在边缘处达到极值检测边缘，去掉部分伪边缘，对噪声具有平滑作用 。其原理是在图像空间利用两个方向模板与图像进行邻域卷积来完成的，这两个方向模板一个检测水平边缘，一个检测垂直边缘。对数字图像f(x，y)，Prewitt算子的定义如下：</p>
+<p>G(i)&#x3D;|[f(i-1,j-1)+f(i-1,j)+f(i-1，j+1)]-[f(i+1,j-1)+f(i+1，j)+f(i+1，j+1)]|</p>
+<p>G(j)&#x3D;|[f(i-1,j+1)+f(i,j+1)+f(i+1，j+1)]-[f(i-1,j-1)+f(i,j-1)+f(i+1，j-1)]|</p>
+<p>则 P(i,j)&#x3D;max[G(i),G(j)]或 P(i,j)&#x3D;G(i)+G(j)</p>
+<p>Prewitt梯度算子法就是先求平均，再求差分来求梯度。水平和垂直梯度模板分别为：<br>$$<br>G_x &#x3D; \left[<br>\begin{matrix}<br>-1 \ \ 0 \ \  1 \<br>-1 \ \ 0 \ \  1 \<br>-1 \ \ 0 \ \  1 \<br>\end{matrix}<br>\right]  , \ \ \ \ G_y &#x3D; \left[<br>\begin{matrix}<br>1 \ \ 1 \ \  1 \<br>0 \ \ 0 \ \  0 \<br>-1 \ \ -1 \ \  1 \<br>\end{matrix}<br>\right]<br>$$<br>该算子与Sobel算子类似，只是权值有所变化。</p>
+<p>（3）Laplace算子。 Laplace算子是一种各向同性算子，二阶微分算子，在只关心边缘的位置而不考虑其周围的象素灰度差值时比较合适。Laplace算子对孤立象素的响应要比对边缘或线的响应要更强烈，因此只适用于无噪声图象。存在噪声情况下，使用Laplacian算子检测边缘之前需要先进行低通滤波。所以，通常的分割算法都是把Laplacian算子和平滑算子结合起来生成一个新的模板。了更适合于数字图像处理，将拉式算子表示为离散形式：<br>$$<br>\bigtriangledown ^2f &#x3D; \frac{\partial ^2 f}{\partial x^2} + \frac{\partial ^2 f}{\partial  y^2}<br>$$<br>离散拉普拉斯算子的模板：<br>$$<br>G_x &#x3D; \left[<br>\begin{matrix}<br>0 \ \ 1 \ \  0 \<br>1 \ \ -4 \ \  1 \<br>0 \ \ 1 \ \  0 \<br>\end{matrix}<br>\right]  , \ \ \ \ G_y &#x3D; \left[<br>\begin{matrix}<br>1 \ \ 1 \ \  1 \<br>1 \ \ -8 \ \  1 \<br>1 \ \ 1 \ \  1 \<br>\end{matrix}<br>\right]<br>$$<br>（4）Canny算子。该算子功能比前面几种都要好，但是它实现起来较为麻烦，Canny算子是一个具有滤波，增强，检测的多阶段的优化算子，在进行处理前，Canny算子先利用高斯平滑滤波器来平滑图像以除去噪声，Canny分割算法采用一阶偏导的有限差分来计算梯度幅值和方向，在处理过程中，Canny算子还将经过一个非极大值抑制的过程，最后Canny算子还采用两个阈值来连接边缘。其步骤为：</p>
+<p>step1: 用高斯滤波器平滑图象；<br>step2: 用一阶偏导的有限差分来计算梯度的幅值和方向；<br>step3: 对梯度幅值进行非极大值抑制；<br>step4: 用双阈值算法检测和连接边缘。</p>
+<p>44）简述常用图像去噪方法，各有什么特性？（N个公司都考到了）</p>
+<p>答：（1）均值滤波。在N领域内求均值；</p>
+<p>（2）中值滤波。在N邻域内求终止，对椒盐噪声抑制效果较好，图像细节损失较大；</p>
+<p>（3）高斯滤波。采用满足高斯分布的滤波器进行滤波，大小、标准差可根据参数设置；</p>
+<p>（4）双边滤波。在保留轮廓清晰的情况下进行降噪处理。</p>
+<p>45）请列举几种常用的图像空间</p>
+<p>答：图像空间指图像的色彩表示方式，常用的有RBG，HSV，YUV等色彩空间</p>
+<p>47）常用插值算法有哪些？</p>
+<p>答：最邻近插值法、双线性插值法</p>
+<p>48）什么叫算子？请列举常用的边沿检测算子</p>
+<p>答：算子（Operator）是一个数学概念，它将一个元素在向量空间（或模）中转换为另一个元素的映射，简单来说就是独立的计算单元或规则。常用边沿检测算子有Sobel算子、Prewitt算子、Laplacian算子、Canny算子。</p>
+<p>49）【选择题】下列算法中属于图像锐化处理的是（B）</p>
+<p>A、低通滤波</p>
+<p>B、加权平均法</p>
+<p>C、高通滤波</p>
+<p>D、中值滤波</p>
+<p>解析：低通滤波指低频信号能正常通过，而高于设定临界值的高频信号则被阻隔、减弱；高通滤波高频信号能正常通过，而低于设定临界值的低频信号则被阻隔、减弱。在图像中，梯度较大的部分为图像高频部分，梯度较小的为图像低频部分。高通滤波是提取出边沿和轮廓，低通滤波是取出边沿轮廓以外的部分。中值滤波主要用于图像模糊及降噪。图像锐化是要加强边沿部分，增加像素差异，所以加权平均法可以实现。</p>
+<p>50）【选择题】图像与灰度直方图间的对应关系是（B）</p>
+<p>A、一一对应</p>
+<p>B、多对一</p>
+<p>C、一对多</p>
+<p>D、以上都不是</p>
+<p>答：图像灰度直方图反映的是图像像素值分布情况，一个图像只有一个直方图；但直方图相同的图像，可能有不同的像素排列，而呈现出不同的图像内容。</p>
+<p>51）【判断题】以下说法是否正确</p>
+<ul>
+<li>拉普拉斯算子可用于图像平滑处理（错误）</li>
+<li>高频加强滤波器可以有效增强图像边沿和灰度平滑区的对比度（正确）</li>
+<li>彩色图像增强时采用RGB模型进行直方图均衡化可以在不改变图像颜色的基础上对图像的亮度进行对比度增强（错误）</li>
+</ul>
+<p>52）将高频加强和直方图均衡相结合是得到边沿锐化和对比度增强的有效方法。上述两个操作先后顺序对结果有影响吗？为什么？</p>
+<p>54）HOUGH变换的原理是什么？HOUGH变换用在检测圆上应该怎么做？</p>
+<p>答：HOUGH（霍夫）变换主要用于检测图像中的简单几何形状，如直线&#x2F;线段、圆形、椭圆等。在使用HOUGH变换检测圆形时，实际是找边沿是否满足(x, y)为中心，R为半径的圆的方程式。在实际使用中，可以先对图像进行灰度化处理、二值化处理或求图像轮廓、梯度信息，再使用HOUGH变换，以获得更好的效果。</p>
+<p>55）简述傅里叶变换在图像处理中的应用</p>
+<p>答：傅里叶变换是将时域信号转换为频域信号的一种方式。简单来说，该变换能将一组周期信号转变为多个正弦信号的叠加。在图像处理中，利用傅里叶变换，可以分离出图像的高频部分、低频部分，从而提取出图像的轮廓边沿，或轮廓边沿以外的部分。</p>
+<p>56）什么是神经网络，有什么主要特点？选择神经网络应该考虑什么因素？</p>
+<p>答：见讲义部分</p>
+<p>57）解释线性判别</p>
+<p>答：LDA是一种监督学习的降维技术，也就是说它的数据集的每个样本是有类别输出的，其思想可以用一句话概括，就是“投影后类内方差最小，类间方差最大”，即将数据在低维度上进行投影，投影后希望每一种类别数据的投影点尽可能的接近，而不同类别的数据的类别中心之间的距离尽可能的大。如下图所示：</p>
+<p><img src="https://image.discover304.top/ai/qc/LDA_1.png" alt="LDA_1"></p>
+<p>例如，有以下两种投影方式，第二种投影方式更好，因为红色数据和蓝色数据各个较为集中，且类别之间的距离明显。</p>
+<p><img src="https://image.discover304.top/ai/qc/LDA_2.png" alt="LDA_1"></p>
+<p>在实际应用中，数据是多个类别的，我们的原始数据一般也是超过二维的，投影后的也一般不是直线，而是一个低维的超平面。</p>
+<p>58）深度学习中，常见的layer的类别有哪些？其作用分别是什么？</p>
+<p>答：常见的层有：</p>
+<ul>
+<li>卷积层：卷积运算，提取特征</li>
+<li>池化层：降维，提升模型泛化能力</li>
+<li>激活层：执行激活运算</li>
+<li>全连接层：充当分类器</li>
+<li>BN：Batch Normal层，缓解梯度消失，缓解过拟合，加快模型收敛速度和稳定性</li>
+<li>Dropout：丢弃学习层，缓解梯度消失。在有些模型中，使用BN则不使用dropout</li>
+</ul>
+<p>59）常用的图像二值化方法及使用示例</p>
+<p>答：设定一个阈值，用每个图像的像素值跟阈值进行比较，大于阈值设为最大值，小于阈值设为最小值，实现图像二值化。</p>
+<p>60）写出Sobel算子，拉普拉斯算子，以及它们梯度方向上的区别，并编程实现</p>
+<p>答：见前面</p>
+<p>61）列出机器学习中常见的分类算法，并比较各自的特点</p>
+<p>答：机器学习中常见的分类算法有：</p>
+<p>（1）线性分类器。使用线性模型计算连续值，然后进行离散化处理。特点是计算相对简单</p>
+<p>（2）支持向量机。二分类模型，寻找最优线性分类边界，所谓最优分类边界指支持向量间隔最大化。强分类器。</p>
+<p>（3）决策树。决策树根据样本属性，构建一个树状结构，将具有相同属性的样本划分到一个子节点下，通过投票法产生分类结果。弱分类器。</p>
+<p>（4）朴素贝叶斯。利用贝叶斯定理，计算样本属于某个类别的概率，分类到概率最高的类别中。所谓“朴素”，指假设特征之间是独立的。</p>
+<p>（5）KNN。找与这个待分类样本在特征空间中距离最近的K个已标注样本作为参考，做出分类决策。</p>
+<p>62）二值图、灰度图及RGB彩色图像的概念、表示及存储</p>
+<p>答：（1）二值图：图像灰度值只有两种颜色</p>
+<p>（2）灰度图：只有亮度信号，没有色彩信号，灰度图像表示一个单通道矩阵</p>
+<p>（3）彩色图像：包含彩色信号的图像，彩色图像表示一个三通道数组。RGB色彩空间三个通道分别存储红色、绿色、蓝色三原色信息，HSV色彩空间分别存储图像的色相、饱和度和亮度。</p>
+<p>63）实现对一彩色图像的灰度化算法，可以写多个</p>
+<p>答：（1）平均值法</p>
+<p>（2）最大值法</p>
+<p>（3）取单通道值</p>
+<p>（4）加权平均法</p>
+<p>64）数码相机大多使用jpg格式存储数字相片，如果一般情况下jpg格式的压缩比为5-10，请估计使用500万像素数码相机所拍摄到的彩色数字相片的高、宽，以及文件大小</p>
+<p>65）你是否学习或接触过数字图像技术？如果学习或接触过，试写一算法，实现将彩色图像旋转180度</p>
+<p>66）给定一个n*n的二维矩阵表示一个图像，将图像顺时针旋转90度，并在下方写出代码。（说明：必须在原地旋转，这意味着需要直接修改输入二维矩阵，不要使用另一个矩阵来旋转图像）</p>
+<p>原矩阵：</p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">[[1, 2, 3],</span></span><br><span class="line"><span class="string"> [4, 5, 6],</span></span><br><span class="line"><span class="string"> [7, 8, 9]]</span></span><br></pre></td></tr></table></figure>
+
+<p>旋转后：</p>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">[[7, 4, 1],</span></span><br><span class="line"><span class="string"> [8, 5, 2],</span></span><br><span class="line"><span class="string"> [9, 6, 3]]</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>67）朴素贝叶斯分析的关键假设是什么？基于几点需要做这样的假设？</p>
+<p>答：假设样本特征是独立的、不相互影响。在计算中，如果不引入该假设，可能某些先验概率无法计算出来。</p>
+<p>68）简述k-means算法的输入、输出及聚类过程</p>
+<p>答：见前面章节</p>
+<p>69）基于用户协同过滤的算法思想是什么？</p>
+<p>70）我们想要减少数据集中的特征，即降维，选择以下合适的方案（ABCD）</p>
+<p>A、使用前向特征选择方法</p>
+<p>B、使用后向特征选择方法</p>
+<p>C、先把所有特征都使用，去训练一个模型，得到测试集上的表现，然后去掉一个特征，再去训练，用交叉验证看看测试集上的表现。如果表现比原来好，可以去除这个特性</p>
+<p>D、查看相关性表，去除相关性高的一些特征</p>
+<p>解析：特征选择 ( Feature Selection )也称特征子集选择( Feature Subset Selection , FSS ) ，或属性选择( Attribute Selection ) ，是指从全部特征中选取一个特征子集，使构造出来的模型更好。特征越多，维度越高，模型分析、训练越复杂，且容易引起过拟合。选择特征方法有：</p>
+<ul>
+<li>序列前向选择( SFS , Sequential Forward Selection )：特征子集X从空集开始，每次选择一个特征x加入特征子集X，使得特征函数J( X)最优。简单说就是，每次都选择一个使得评价函数的取值达到最优的特征加入，其实就是一种简单的贪心算法。</li>
+<li>序列后向选择( SBS , Sequential Backward Selection )：从特征全集O开始，每次从特征集O中剔除一个特征x，使得剔除特征x后评价函数值达到最优。</li>
+<li>双向搜索( BDS , Bidirectional Search )：使用序列前向选择(SFS)从空集开始，同时使用序列后向选择(SBS)从全集开始搜索，当两者搜索到一个相同的特征子集C时停止搜索。</li>
+<li>增L去R选择算法 ( LRS , Plus-L Minus-R Selection )：算法从空集开始，每轮先加入L个特征，然后从中去除R个特征，使得评价函数值最优( L &gt; R )； 算法从全集开始，每轮先去除R个特征，然后加入L个特征，使得评价函数值最优( L &lt; R )。</li>
+<li>决策树。利用决策树进行特征筛选。</li>
+</ul>
+<p>71）ResNet网络最后两层是什么？</p>
+<p>答：ResNet最后三层为平均池化层、全连接层、softmax，产生1000路输出。</p>
+<p>72）【选择题】以下说法正确的是（ABC）</p>
+<p>A、语义分割需要区分到图中每一点像素点，而不仅仅是矩形框中的部分。但是同一个物体不同实例不需要单独分割出来</p>
+<p>B、实例分割只对图像中object进行检测，并对检测到的object进行分割</p>
+<p>C、全景分割是对图中所有物体包括背景都要进行检测和分割</p>
+<p>D、Unet是可以不反向传播的，它的网络结构是基于多尺度的</p>
+<p>73）【选择题】以下说法中正确的是（A）</p>
+<p>A、SVM对噪声（如来自其他分部的噪声样本）鲁棒</p>
+<p>B、在AdaBoost中，所有被分错的样本的权重更新比例相同</p>
+<p>C、Boosting和Bagging都是组合多个分类器投票的方法，二者都是根据单个分类器正确率决定其权重</p>
+<p>D、给定N个数据点，如果其中一半用于训练，一半用于测试，则训练误差和测试误差之间的差别会随着N的增加而减少</p>
+<p>74）【选择题】假定某同学使用朴素贝叶斯分类模型时，不小心将训练数据两个维度搞重了，那么以下说法正确对的是（A）</p>
+<p>A、这个被重复的特征在模型中决定的作用会被加强</p>
+<p>B、模型效果相比无重复特征情况下精度会降低</p>
+<p>C、如果所有特征都被重复一遍，得到的模型预测结果相对于不重复的情况下的模型预测结果一样</p>
+<p>D、当两列特征高度相关时，无法用两列特征相同时所得到的结论来分析问题</p>
+<p>E、NB可以用来做最小二乘回复</p>
+<p>F、以上说法都不正确</p>
+<p>75）【选择题】机器学习中L1正则化和L2正则化的区别是（AD）</p>
+<p>A、使用L1可以得到稀疏的权值</p>
+<p>B、使用L1可以得到平滑的权值</p>
+<p>C、使用L2可以得到稀疏的权值</p>
+<p>D、使用L2可以得到平滑的权值</p>
+<p>76）【选择题】关于线性回归的描述，以下正确的有（BC）</p>
+<p>A、基本假设包括随机干扰项是均值为0，方差为1的标准正态分布</p>
+<p>B、基本假设包括随机干扰项是均值为0的同方差正态分布</p>
+<p>C、在违背基本假设时，普通最小二乘估计量不再是最佳线性无偏估计量</p>
+<p>D、在违背基本假设时，模型不再可以估计</p>
+<p>E、可以用DW检验残差是否存在序列相关性</p>
+<p>F、多重共线会使得参数估计方差减小</p>
+<p>解析：线性回归有五个基本假设：</p>
+<ul>
+<li>线性性&amp;可加性。线性性指X1每变动一个单位，Y相应变动a1个单位，与X1的绝对数值大小无关。可加性指X1对Y的影响是独立于其他自变量（如X2）的。</li>
+<li>误差项之间的相互独立，不满足该项假设，我们称模型具有自相关性（Autocorrelation）</li>
+<li>自变量之间的相互独立，若不满足这一特性，我们称模型具有多重共线性性（Multicollinearity）</li>
+<li>误差项方差为常数（误差项具有恒定的方差），若不满足，则为<strong>异方差性</strong>（Heteroskedasticity）</li>
+<li>误差项呈正态分布</li>
+</ul>
+<p>假设失效带来的影响：</p>
+<ul>
+<li>线性性&amp;可加性失效：模型将无法很好的描述变量之间的关系，极有可能导致很大的泛化误差</li>
+<li>自相关性：自相关性经常发生于时间序列数据集上，后项会受到前项的影响。当自相关性发生的时候，我们测得的标准差往往会偏小，进而会导致置信区间变窄</li>
+<li>多重共线性性：如果我们发现本应相互独立的自变量们出现了一定程度（甚至高度）的相关性，那我们就很难得知自变量与因变量之间真正的关系了。当多重共线性性出现的时候，变量之间的联动关系会导致我们测得的标准差<strong>偏大</strong></li>
+<li>异方差性的出现意味着误差项的方差不恒定，这常常出现在有异常值（Outlier）的数据集上，如果使用标准的回归模型，这些异常值的重要性往往被高估。在这种情况下，标准差和置信区间不一定会变大还是变小</li>
+<li>如果误差项不呈正态分布，意味着置信区间会变得很不稳定，我们往往需要重点关注一些异常的点（误差较大但出现频率较高），来得到更好的模型。</li>
+</ul>
+<p>77）【选择题】在分类问题中，我们经常会遇到正负样本数量不等的情况，比如正样本为10W条数据，负样本只有1W条数据，以下最合适的处理方法是（A）</p>
+<p>A、将负样本重复10次，生成10W样本量，打乱顺序参与分类</p>
+<p>B、直接进行分类，可以最大限度利用数据</p>
+<p>C、从10W正样本中随机抽取1W参与分类</p>
+<p>D、将负样本每个权重设置为10，正样本权重为1，参与训练过程</p>
+<p>78）假定目标变量的类别非常不平衡，即主要类别占据了训练数据的99%。现在你的模型在测试集上表现为99%的准确率，那么下面哪一项表述是正确的（AD）</p>
+<p>A、准确率并不适合与衡量不平衡类别问题</p>
+<p>B、准确率适合与衡量不平衡类别问题</p>
+<p>C、精确率和召回率适合于衡量不平衡类别问题</p>
+<p>D、精确率和召回率不适合于衡量不平衡类别问题</p>
+<p>79）其它条件不变的情况下，哪种做法容易引起过拟合（D）</p>
+<p>A、增加训练集量</p>
+<p>B、减少神经网络隐藏层节点数</p>
+<p>C、删除系数特征</p>
+<p>D、SVM算法中使用高斯核&#x2F;RBF核替代线性核</p>
+<p>80）以下选项属于梯度下降学习率设定的策略有（ABCD）</p>
+<p>A、固定学习率</p>
+<p>B、循环学习率</p>
+<p>C、余弦退火</p>
+<p>D、热重启随机梯度下降</p>
+<p>E、不同的网络层使用不同学习率</p>
+<p>81）以下选项中，叙述正确的是（DE）</p>
+<p>A、利用函数最优化算法，可以得到全局最优解</p>
+<p>B、卷积核可以设定为长方形</p>
+<p>C、池化核中的数值是自定义的</p>
+<p>D、卷积核的数据决定输出特征图的维度</p>
+<p>E、逻辑回归是线性分类器</p>
+<p>82）在深度学习中，涉及到大量的矩阵相乘，现在需要计算三个稠密矩阵A，B，C的乘积，假设三个矩阵尺寸分别为m*n, n*p, p*q，且m&lt;n&lt;p&lt;q，以下计算顺序效率最高的是（A）</p>
+<p>A、(AB)C</p>
+<p>B、AC（B）</p>
+<p>C、A（BC）</p>
+<p>D、效率都相同</p>
+<p>解析 ：AC不能相乘，所以B答案错误；</p>
+<p>A选项计算次数A选项的乘法计算次数，m*n*p+m*p*q，C选项计算次数n*p*q+m*n*q，因为m&lt;n&lt;p&lt;q，所以m*n*p&lt;m*n*q，m*p*q&lt;n*p*q</p>
+<p>83）L1与L2范数在Logistic Regression中，如果同时加入L1和L2范数，会产生什么效果（A）</p>
+<p>A、可以做特征选择，并一定程度防止过拟合</p>
+<p>B、能解决维度灾难问题</p>
+<p>C、能加快计算速度</p>
+<p>D、可以获得更准确的结果</p>
+<p>解析：L1范数是指向量中各个元素绝对值之和，用于特征选择。L2范数 是指向量各元素的平方和然后求平方根，用于 防止过拟合，提升模型的泛化能力。</p>
+<p>84）简述CNN、LSTM原理和两者适合应用的场合，叙述CNN如何进行特征提取、分类预测</p>
+<p>答：原理见讲义</p>
+<p>适用场景：CNN主要用于图像问题；LSTM主要用于序列问题，如NLP，语音识别</p>
+<p>sigmid与softmax的区别<br>网络模型都调什么参数<br>介绍一下项目模型的结构<br>梯度爆炸梯度消失<br>vgg16的特点 以及模型的结构<br>resnet模型结构与特点<br>残差网络的内容与特点<br>yolo3的输出是什么样的<br>交叉验证怎么工作的，以及如何提高模型精度<br>输入图片的大小？<br>照片上的图形是什么是怎么出来的？</p>
+<h1 id="附录一：常用求导公式"><a href="#附录一：常用求导公式" class="headerlink" title="附录一：常用求导公式"></a>附录一：常用求导公式</h1><table>
+<thead>
+<tr>
+<th>原函数</th>
+<th>导函数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$y&#x3D;c$</td>
+<td>$y’&#x3D;0$</td>
+</tr>
+<tr>
+<td>$y&#x3D;n^x$</td>
+<td>$y’&#x3D;n^x ln(n)$</td>
+</tr>
+<tr>
+<td>$y&#x3D;log_a x$</td>
+<td>$y’&#x3D; \frac{1}{x ln(a)}$</td>
+</tr>
+<tr>
+<td>$y&#x3D; ln (x)$</td>
+<td>$y’ &#x3D; \frac {1} {x}$</td>
+</tr>
+<tr>
+<td>$y&#x3D;x^n$</td>
+<td>$y’ &#x3D; n x^{n-1}$</td>
+</tr>
+<tr>
+<td>$y&#x3D; \frac{1}{x^n}$</td>
+<td>$y’&#x3D; - \frac {n} {x^{n+1}}$</td>
+</tr>
+<tr>
+<td>$y&#x3D;sin (x)$</td>
+<td>$y’&#x3D;cos (x)$</td>
+</tr>
+<tr>
+<td>$y&#x3D;cos (x)$</td>
+<td>$y’&#x3D;-sin (x)$</td>
+</tr>
+<tr>
+<td>$y&#x3D;tan (x)$</td>
+<td>$y’&#x3D; \frac{1}{cos^2x}$</td>
+</tr>
+<tr>
+<td>$\frac{U}{V}$</td>
+<td>$ \frac {U’V - UV’} {V^2}$</td>
+</tr>
+</tbody></table>
+<h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><p>[1] 赵卫东、董亮. 《机器学习》[M]. 北京：中国工信出版社, 人民邮电出版社，2018</p>
+<p>[2] 葫芦娃. 《百面机器学习》[M]. 北京：中国工信出版社, 人民邮电出版社，2018</p>
+<p>[3] Prateek Joshi. 《Python机器学习经典实例》[M]. 北京：中国工信出版社, 人民邮电出版社</p>
+<p>[4] Ian Goodfellow，Yoshua Bengio，Aaron Courville. 《深度学习》[M]. 北京：中国工信出版社, 人民邮电出版社，2017</p>
+<p>[5] 张玉宏. 《深度学习之美》[M]. 北京：中国工信出版社, 电子工业出版社，2018</p>
+<p>[6] Thushan Ganegedara. 《Tensorflow自然语言处理》[M]. 北京：机械工业出版社，2019</p>
+<p>[7] 李立宗. 《OpenCV轻松入门——面向Python》[M]. 北京：中国工信出版社, 电子工业出版社，2019</p>
+<p>[8] 斋藤康毅. 《深度学习入门——基于Python理论与实现》[M]. 北京：中国工信出版社, 人民邮电出版社，2018</p>
+<p>[9]《深度学习500问》</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:hobart.yang@qq.com">✨YangSier✨</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://discover304.top/2021/12/21/2021q4/123-ai-question-collection/">https://discover304.top/2021/12/21/2021q4/123-ai-question-collection/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0anime</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a><a class="post-meta__tags" href="/tags/%E6%95%B4%E7%90%86/">整理</a><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><a class="post-meta__tags" href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a></div><div class="post_share"><div class="social-share" data-image="https://image.discover304.top/pika_majiang.jpg?imageView2/2/h/300" data-sites="facebook,twitter,wechat,weibo,qzone,qq,linkedin"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/12/22/2021q4/124-js-advance/"><img class="prev-cover" src="https://image.discover304.top/jslogo.webp?imageView2/2/h/300" onerror="onerror=null;src='/img/404.png'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">【JavaScript】 进阶教程 施工中~</div></div></a></div><div class="next-post pull-right"><a href="/2021/12/21/2021q4/122-ai-summary/"><img class="next-cover" src="https://image.discover304.top/plane_moveing_neight.jpg?imageView2/2/h/300" onerror="onerror=null;src='/img/404.png'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">【人工智能】技术总结</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2021/12/21/2021q4/122-ai-summary/" title="【人工智能】技术总结"><img class="cover" src="https://image.discover304.top/plane_moveing_neight.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【人工智能】技术总结</div></div></a></div><div><a href="/2021/09/08/2021q3/047-draw-io-教程/" title="draw.io 开源矢量图作图神器的骚操作"><img class="cover" src="https://images.sftcdn.net/images/t_optimized,f_auto/p/80432565-d0ca-41a2-8a1d-b57fd53497c4/46033790/draw-io-gidq2wpM.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-08</div><div class="title">draw.io 开源矢量图作图神器的骚操作</div></div></a></div><div><a href="/2022/01/24/2022q1/137-plane-proj/" title="【项目实战】ROS Wifi 飞机控制项目（其一） 施工中~"><img class="cover" src="http://image.discover304.top/jiniang_robot_gaoda.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-09-16</div><div class="title">【项目实战】ROS Wifi 飞机控制项目（其一） 施工中~</div></div></a></div><div><a href="/2022/03/19/2022q1/151-mmdetection3dlab/" title="【开发框架】Mmdetection3dlab Docker 环境改良和制作"><img class="cover" src="https://image.discover304.top/blog-img/s17293303202022-2022320172935.png?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-03-22</div><div class="title">【开发框架】Mmdetection3dlab Docker 环境改良和制作</div></div></a></div><div><a href="/2022/03/20/2022q1/154-MMDetection3d-explain/" title="【星光04】Mmdetection3dlab 使用指南"><img class="cover" src="https://image.discover304.top/blog-img/s17293303202022-2022320172935.png?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-03-22</div><div class="title">【星光04】Mmdetection3dlab 使用指南</div></div></a></div><div><a href="/2022/03/22/2022q1/156-AP-mAP/" title="【AI】目标检测任务的评估指标：AP、mAP"><img class="cover" src="https://image.discover304.top/aimmingMolisha.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-03-30</div><div class="title">【AI】目标检测任务的评估指标：AP、mAP</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">✨YangSier✨</div><div class="author-info__description">Love Everything You Like.</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">243</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">88</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">23</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/98639326"><i class="fab fa-bilibili"></i><span>Bilibili Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Discover304" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://twitter.com/Discover304" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.youtube.com/channel/UCuQQr55i3VCQuCPMTQnpzDA" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a><a class="social-icon" href="mailto:hobart.yang@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">✨动态更新：<p style="text-align:center">享受精彩大学生活中。</p>✨聊天划水QQ群：<p style="text-align:center"><strong>兔叽の魔术工房</strong><br>942-848-525</p>✨我们的口号是：<p style="text-align:center; color:#39C5BB">人工降神，机械飞升！</p><a target="_blank" rel="noopener" href='https://space.bilibili.com/98639326'><img src='/img/mikulittletrans.png'></a></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E9%83%A8%E5%88%86"><span class="toc-text">机器学习部分</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B"><span class="toc-text">一、特征工程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%89%B9%E5%BE%81%E5%BD%92%E4%B8%80%E5%8C%96"><span class="toc-text">1. 特征归一化</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89%E4%BB%80%E4%B9%88%E6%98%AF%E7%89%B9%E5%BE%81%E5%BD%92%E4%B8%80%E5%8C%96"><span class="toc-text">1）什么是特征归一化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%89%B9%E5%BE%81%E5%BD%92%E4%B8%80%E5%8C%96"><span class="toc-text">2）为什么要特征归一化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%EF%BC%89%E7%89%B9%E5%BE%81%E5%BD%92%E4%B8%80%E5%8C%96%E5%B8%B8%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">3）特征归一化常用的方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%EF%BC%89%E5%BD%92%E4%B8%80%E5%8C%96%E5%A4%84%E7%90%86%E9%80%82%E7%94%A8%E6%A8%A1%E5%9E%8B"><span class="toc-text">4）归一化处理适用模型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%9B%BE%E5%83%8F%E6%A0%B7%E6%9C%AC%E5%A2%9E%E5%BC%BA"><span class="toc-text">2. 图像样本增强</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BB%80%E4%B9%88%E6%98%AF%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E3%80%81%E9%9D%9E%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0"><span class="toc-text">3. 什么是监督学习、非监督学习</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E3%80%81%E9%9D%9E%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E4%B8%BB%E8%A6%81%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">4. 监督学习、非监督学习主要应用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0"><span class="toc-text">二、模型评估</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%9B%9E%E5%BD%92%E9%97%AE%E9%A2%98%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87%EF%BC%9F"><span class="toc-text">1. 回归问题模型评估指标？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%88%86%E7%B1%BB%E9%97%AE%E9%A2%98%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87%EF%BC%9F"><span class="toc-text">2. 分类问题模型评估指标？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-A-x2F-B%E6%B5%8B%E8%AF%95"><span class="toc-text">3. A&#x2F;B测试</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89%E4%BB%80%E4%B9%88%E6%98%AFA-x2F-B%E6%B5%8B%E8%AF%95%EF%BC%9F"><span class="toc-text">1）什么是A&#x2F;B测试？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81A-x2F-B%E6%B5%8B%E8%AF%95%EF%BC%9F"><span class="toc-text">2）为什么需要A&#x2F;B测试？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%EF%BC%89%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%BA%BF%E4%B8%8AA-x2F-B%E6%B5%8B%E8%AF%95%EF%BC%9F"><span class="toc-text">3）如何进行线上A&#x2F;B测试？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%B6%85%E5%8F%82%E6%95%B0"><span class="toc-text">4. 超参数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89%E4%BB%80%E4%B9%88%E6%98%AF%E8%B6%85%E5%8F%82%E6%95%B0%EF%BC%9F"><span class="toc-text">1）什么是超参数？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89%E8%B6%85%E5%8F%82%E6%95%B0%E6%9C%89%E5%93%AA%E4%BA%9B%E8%B0%83%E4%BC%98%E6%89%8B%E6%AE%B5%EF%BC%9F"><span class="toc-text">2）超参数有哪些调优手段？</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0-%E7%BD%91%E6%A0%BC%E6%90%9C%E7%B4%A2"><span class="toc-text">① 网格搜索</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1-%E9%9A%8F%E6%9C%BA%E6%90%9C%E7%B4%A2"><span class="toc-text">② 随机搜索</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A2-%E9%AA%8C%E8%AF%81%E6%9B%B2%E7%BA%BF%E5%92%8C%E5%AD%A6%E4%B9%A0%E6%9B%B2%E7%BA%BF"><span class="toc-text">③ 验证曲线和学习曲线</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%EF%BC%89%E5%B8%B8%E7%94%A8%E8%B6%85%E5%8F%82%E6%95%B0%E5%AF%B9%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%80%A7%E8%83%BD%E5%BD%B1%E5%93%8D"><span class="toc-text">3）常用超参数对模型的性能影响</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0-%E5%AD%A6%E4%B9%A0%E7%8E%87"><span class="toc-text">① 学习率</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1-%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E9%83%A8%E5%88%86%E8%B6%85%E5%8F%82%E6%95%B0"><span class="toc-text">② 损失函数部分超参数</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A2-%E6%89%B9%E6%A0%B7%E6%9C%AC%E6%95%B0%E9%87%8F"><span class="toc-text">③ 批样本数量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A3-%E4%B8%A2%E5%BC%83%E7%8E%87"><span class="toc-text">④ 丢弃率</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A4-%E5%8D%B7%E7%A7%AF%E6%A0%B8%E5%A4%A7%E5%B0%8F"><span class="toc-text">⑤ 卷积核大小</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A5-%E6%A8%A1%E5%9E%8B%E6%B7%B1%E5%BA%A6"><span class="toc-text">⑥ 模型深度</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%AC%A0%E6%8B%9F%E5%90%88%E4%B8%8E%E8%BF%87%E6%8B%9F%E5%90%88"><span class="toc-text">5. 欠拟合与过拟合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89%E4%BB%80%E4%B9%88%E6%98%AF%E6%AC%A0%E6%8B%9F%E5%90%88%E3%80%81%E8%BF%87%E6%8B%9F%E5%90%88%EF%BC%9F"><span class="toc-text">1）什么是欠拟合、过拟合？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E8%BF%87%E6%8B%9F%E5%90%88%EF%BC%9F"><span class="toc-text">2）如何避免过拟合？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%EF%BC%89%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E6%AC%A0%E6%8B%9F%E5%90%88%EF%BC%9F"><span class="toc-text">3）如何避免欠拟合？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E4%BB%80%E4%B9%88%E6%98%AF%E7%BD%AE%E4%BF%A1%E6%A6%82%E7%8E%87%EF%BC%9F"><span class="toc-text">6. 什么是置信概率？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E4%BB%80%E4%B9%88%E6%98%AF%E4%BA%A4%E5%8F%89%E9%AA%8C%E8%AF%81"><span class="toc-text">7. 什么是交叉验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E5%88%97%E4%B8%BE%E8%A7%A3%E5%86%B3%E7%B1%BB%E5%88%AB%E4%B8%8D%E5%9D%87%E8%A1%A1%E9%97%AE%E9%A2%98%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-text">8. 列举解决类别不均衡问题的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E4%BB%80%E4%B9%88%E6%98%AFL1%EF%BC%8CL2%E6%AD%A3%E5%88%99%E5%8C%96"><span class="toc-text">9. 什么是L1，L2正则化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E6%9D%83%E9%87%8D%E5%88%9D%E5%A7%8B%E5%80%BC%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%EF%BC%9F"><span class="toc-text">10. 神经网络权重初始值如何设置？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89%E6%9D%83%E9%87%8D%E5%88%9D%E5%A7%8B%E5%80%BC%E4%B8%8D%E8%83%BD%E8%AE%BE%E7%BD%AE%E4%B8%BA0"><span class="toc-text">1）权重初始值不能设置为0</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89%E9%9A%90%E8%97%8F%E5%B1%82%E6%BF%80%E6%B4%BB%E5%80%BC%E7%9A%84%E5%88%86%E5%B8%83"><span class="toc-text">2）隐藏层激活值的分布</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%9B%9E%E5%BD%92%E9%97%AE%E9%A2%98"><span class="toc-text">三、回归问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92"><span class="toc-text">1. 线性回归</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89%E4%BB%80%E4%B9%88%E6%98%AF%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92"><span class="toc-text">1）什么是线性回归</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8B%E4%BD%BF%E7%94%A8%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92"><span class="toc-text">2）什么情况下使用线性回归</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%EF%BC%89%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-text">3）线性回归的特点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%EF%BC%89%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92"><span class="toc-text">4）多元回归</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%9B%9E%E5%BD%92"><span class="toc-text">2. 多项式回归</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89%E4%BB%80%E4%B9%88%E6%98%AF%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%9B%9E%E5%BD%92%EF%BC%9F"><span class="toc-text">1）什么是多项式回归？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8B%E4%BD%BF%E7%94%A8%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%9B%9E%E5%BD%92%EF%BC%9F"><span class="toc-text">2）什么情况下使用多项式回归？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%EF%BC%89%E5%A4%9A%E9%A1%B9%E5%BC%8F%E5%9B%9E%E5%BD%92%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-text">3）多项式回归的特点</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%86%B3%E7%AD%96%E6%A0%91%E5%9B%9E%E5%BD%92"><span class="toc-text">3. 决策树回归</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89%E4%BB%80%E4%B9%88%E6%98%AF%E5%86%B3%E7%AD%96%E6%A0%91"><span class="toc-text">1）什么是决策树</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89%E5%86%B3%E7%AD%96%E6%A0%91%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-text">2）决策树的特点</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0-%E4%BC%98%E7%82%B9"><span class="toc-text">① 优点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1-%E7%BC%BA%E7%82%B9"><span class="toc-text">② 缺点</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%EF%BC%89%E4%BB%80%E4%B9%88%E6%83%85%E5%86%B5%E4%B8%8B%E4%BD%BF%E7%94%A8%E5%86%B3%E7%AD%96%E6%A0%91"><span class="toc-text">3）什么情况下使用决策树</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%EF%BC%89%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97"><span class="toc-text">4）随机森林</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%88%86%E7%B1%BB%E9%97%AE%E9%A2%98"><span class="toc-text">四、分类问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BA%8C%E5%85%83%E5%88%86%E7%B1%BB"><span class="toc-text">1. 二元分类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89%E4%BB%80%E4%B9%88%E6%98%AF%E4%BA%8C%E5%85%83%E5%88%86%E7%B1%BB"><span class="toc-text">1）什么是二元分类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E4%BA%8C%E5%85%83%E5%88%86%E7%B1%BB"><span class="toc-text">2）如何实现二元分类</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB"><span class="toc-text">3. 朴素贝叶斯分类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86"><span class="toc-text">1）贝叶斯定理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB"><span class="toc-text">2）什么是朴素贝叶斯分类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%EF%BC%89%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-text">3）朴素贝叶斯分类的特点</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0-%E4%BC%98%E7%82%B9-1"><span class="toc-text">① 优点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1-%E7%BC%BA%E7%82%B9-1"><span class="toc-text">② 缺点</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%EF%BC%89%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E4%BD%BF%E7%94%A8%E6%9C%B4%E7%B4%A0%E8%B4%9D%E5%8F%B6%E6%96%AF"><span class="toc-text">4）什么时候使用朴素贝叶斯</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%86%B3%E7%AD%96%E6%A0%91%E5%88%86%E7%B1%BB"><span class="toc-text">4. 决策树分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA"><span class="toc-text">5. 支持向量机</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89%E4%BB%80%E4%B9%88%E6%98%AF%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA"><span class="toc-text">1）什么是支持向量机</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89SVM%E5%AF%BB%E6%89%BE%E6%9C%80%E4%BC%98%E8%BE%B9%E7%95%8C%E8%A6%81%E6%B1%82%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%9F"><span class="toc-text">2）SVM寻找最优边界要求有哪些？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%EF%BC%89%E4%BB%80%E4%B9%88%E6%98%AF%E7%BA%BF%E6%80%A7%E5%8F%AF%E5%88%86%E4%B8%8E%E7%BA%BF%E6%80%A7%E4%B8%8D%E5%8F%AF%E5%88%86%EF%BC%9F"><span class="toc-text">3）什么是线性可分与线性不可分？</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0-%E7%BA%BF%E6%80%A7%E5%8F%AF%E5%88%86"><span class="toc-text">① 线性可分</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1-%E7%BA%BF%E6%80%A7%E4%B8%8D%E5%8F%AF%E5%88%86"><span class="toc-text">② 线性不可分</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%EF%BC%89%E4%BB%80%E4%B9%88%E6%98%AF%E6%A0%B8%E5%87%BD%E6%95%B0%EF%BC%9F"><span class="toc-text">4）什么是核函数？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5%EF%BC%89SVM%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%9F"><span class="toc-text">5）SVM的特点？</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0-%E4%BC%98%E7%82%B9-2"><span class="toc-text">① 优点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1-%E7%BC%BA%E7%82%B9-2"><span class="toc-text">② 缺点</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E8%81%9A%E7%B1%BB%E9%97%AE%E9%A2%98"><span class="toc-text">五、聚类问题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">1. 基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89%E4%BB%80%E4%B9%88%E6%98%AF%E8%81%9A%E7%B1%BB%E9%97%AE%E9%A2%98"><span class="toc-text">1）什么是聚类问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89%E5%A5%BD%E7%9A%84%E8%81%9A%E7%B1%BB%E7%AE%97%E6%B3%95%E6%9C%89%E5%93%AA%E4%BA%9B%E7%89%B9%E5%BE%81%EF%BC%9F"><span class="toc-text">2）好的聚类算法有哪些特征？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%EF%BC%89%E8%81%9A%E7%B1%BB%E6%A8%A1%E5%9E%8B%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%EF%BC%9F"><span class="toc-text">3）聚类模型如何评价？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-K-Means%E8%81%9A%E7%B1%BB"><span class="toc-text">2. K-Means聚类</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89%E4%BB%80%E4%B9%88%E6%98%AFK-Means%E8%81%9A%E7%B1%BB"><span class="toc-text">1）什么是K-Means聚类</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89K-Means%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-text">2）K-Means的特点</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0-%E4%BC%98%E7%82%B9-3"><span class="toc-text">① 优点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1-%E7%BC%BA%E7%82%B9-3"><span class="toc-text">② 缺点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%9D%87%E5%80%BC%E6%BC%82%E7%A7%BB"><span class="toc-text">3. 均值漂移</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89%E4%BB%80%E4%B9%88%E6%98%AF%E5%9D%87%E5%80%BC%E6%BC%82%E7%A7%BB"><span class="toc-text">1）什么是均值漂移</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0-%E4%BC%98%E7%82%B9-4"><span class="toc-text">① 优点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1-%E7%BC%BA%E7%82%B9-4"><span class="toc-text">② 缺点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%99%AA%E5%A3%B0%E5%AF%86%E5%BA%A6"><span class="toc-text">4. 噪声密度</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89%E4%BB%80%E4%B9%88%E6%98%AF%E5%99%AA%E5%A3%B0%E5%AF%86%E5%BA%A6"><span class="toc-text">1）什么是噪声密度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89DBSCAN%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-text">2）DBSCAN的特点</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0-%E7%AE%97%E6%B3%95%E4%BC%98%E7%82%B9"><span class="toc-text">① 算法优点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1-%E7%AE%97%E6%B3%95%E7%BC%BA%E7%82%B9"><span class="toc-text">② 算法缺点</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%87%9D%E8%81%9A%E5%B1%82%E6%AC%A1"><span class="toc-text">5. 凝聚层次</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89%E4%BB%80%E4%B9%88%E6%98%AF%E5%87%9D%E8%81%9A%E5%B1%82%E6%AC%A1"><span class="toc-text">1）什么是凝聚层次</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89%E5%87%9D%E8%81%9A%E5%B1%82%E6%AC%A1%E7%89%B9%E7%82%B9"><span class="toc-text">2）凝聚层次特点</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0-%E4%BC%98%E7%82%B9-5"><span class="toc-text">① 优点</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1-%E7%BC%BA%E7%82%B9-5"><span class="toc-text">② 缺点</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E9%83%A8%E5%88%86"><span class="toc-text">深度学习部分</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E6%9C%AC%E7%90%86%E8%AE%BA"><span class="toc-text">一、基本理论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AF%E5%89%8D%E9%A6%88%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C"><span class="toc-text">1. 什么是前馈神经网络</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%9C%89%E4%BB%80%E4%B9%88%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="toc-text">2. 深度学习有什么优缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BB%80%E4%B9%88%E6%98%AF%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0"><span class="toc-text">3. 什么是激活函数，为什么要使用激活函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E6%9C%89%E5%93%AA%E4%BA%9B%EF%BC%8C%E5%90%84%E8%87%AA%E6%9C%89%E4%BB%80%E4%B9%88%E7%89%B9%E7%82%B9"><span class="toc-text">4. 神经网络中常用的激活函数有哪些，各自有什么特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E4%BB%80%E4%B9%88%E6%98%AFsoftmax%E5%87%BD%E6%95%B0%EF%BC%8C%E5%85%B6%E4%B8%BB%E8%A6%81%E4%BD%9C%E7%94%A8%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">5. 什么是softmax函数，其主要作用是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E4%BB%80%E4%B9%88%E6%98%AF%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%EF%BC%8C%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">6. 什么是损失函数，损失函数的作用是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E4%BB%80%E4%B9%88%E6%98%AF%E4%BA%A4%E5%8F%89%E7%86%B5%EF%BC%8C%E5%85%B6%E4%BD%9C%E7%94%A8%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">7. 什么是交叉熵，其作用是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E8%A7%A3%E9%87%8A%E4%BB%80%E4%B9%88%E6%98%AF%E6%A2%AF%E5%BA%A6"><span class="toc-text">8. 解释什么是梯度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E4%BB%80%E4%B9%88%E6%98%AF%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D"><span class="toc-text">9. 什么是梯度下降</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E5%87%BA%E7%8E%B0%E6%A2%AF%E5%BA%A6%E6%B6%88%E5%A4%B1%E4%BC%9A%E6%9C%89%E4%BB%80%E4%B9%88%E5%90%8E%E6%9E%9C"><span class="toc-text">10. 激活函数出现梯度消失会有什么后果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E6%A2%AF%E5%BA%A6%E6%B6%88%E5%A4%B1%E9%97%AE%E9%A2%98"><span class="toc-text">11. 如何解决梯度消失问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-%E4%BB%80%E4%B9%88%E6%98%AF%E6%A2%AF%E5%BA%A6%E7%88%86%E7%82%B8%EF%BC%8C%E5%A6%82%E4%BD%95%E8%A7%A3%E5%86%B3%E6%A2%AF%E5%BA%A6%E7%88%86%E7%82%B8%E9%97%AE%E9%A2%98"><span class="toc-text">12. 什么是梯度爆炸，如何解决梯度爆炸问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-%E4%BB%80%E4%B9%88%E6%98%AF%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E3%80%81%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%EF%BC%8C%E5%88%86%E5%88%AB%E6%9C%89%E4%BD%95%E7%89%B9%E7%82%B9"><span class="toc-text">13. 什么是批量梯度下降、随机梯度下降，分别有何特点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89%E6%89%B9%E9%87%8F%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D"><span class="toc-text">1）批量梯度下降</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89%E9%9A%8F%E6%9C%BA%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D"><span class="toc-text">2）随机梯度下降</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-%E4%BB%80%E4%B9%88%E6%98%AF%E5%AD%A6%E4%B9%A0%E7%8E%87%EF%BC%8C%E4%BD%9C%E7%94%A8%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">14. 什么是学习率，作用是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-%E5%AD%A6%E4%B9%A0%E7%8E%87%E8%BF%87%E5%A4%A7%E6%88%96%E8%BF%87%E5%B0%8F%E4%BC%9A%E5%AF%BC%E8%87%B4%E4%BB%80%E4%B9%88%E9%97%AE%E9%A2%98"><span class="toc-text">15. 学习率过大或过小会导致什么问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E7%AE%97%E6%B3%95%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8%E5%8F%8D%E5%90%91%E4%BC%A0%E6%92%AD%E7%AE%97%E6%B3%95"><span class="toc-text">16. 什么是反向传播算法，为什么要使用反向传播算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-%E8%AF%B7%E8%AF%B4%E6%98%8EMomentum%E3%80%81AdaGrad%E3%80%81Adam%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-text">17. 请说明Momentum、AdaGrad、Adam梯度下降法的特点</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89Momentum"><span class="toc-text">1）Momentum</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89AdaGrad"><span class="toc-text">2）AdaGrad</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%EF%BC%89Adam"><span class="toc-text">3）Adam</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18-%E4%BB%80%E4%B9%88%E6%98%AF%E5%8D%B7%E7%A7%AF%E5%87%BD%E6%95%B0"><span class="toc-text">18. 什么是卷积函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19-%E4%BA%8C%E7%BB%B4%E5%8D%B7%E7%A7%AF%E8%BF%90%E7%AE%97%E4%B8%AD%EF%BC%8C%E8%BE%93%E5%87%BA%E7%9F%A9%E9%98%B5%E5%A4%A7%E5%B0%8F%E4%B8%8E%E8%BE%93%E5%85%A5%E7%9F%A9%E9%98%B5%E3%80%81%E5%8D%B7%E7%A7%AF%E6%A0%B8%E5%A4%A7%E5%B0%8F%E3%80%81%E6%AD%A5%E5%B9%85%E3%80%81%E5%A1%AB%E5%85%85%E7%9A%84%E5%85%B3%E7%B3%BB%EF%BC%9F"><span class="toc-text">19. 二维卷积运算中，输出矩阵大小与输入矩阵、卷积核大小、步幅、填充的关系？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#20-%E4%BB%80%E4%B9%88%E6%98%AF%E6%B1%A0%E5%8C%96%EF%BC%8C%E6%B1%A0%E5%8C%96%E5%B1%82%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">20. 什么是池化，池化层的作用是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21-%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%80%E5%A4%A7%E6%B1%A0%E5%8C%96%E3%80%81%E5%B9%B3%E5%9D%87%E6%B1%A0%E5%8C%96"><span class="toc-text">21. 什么是最大池化、平均池化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#22-%E6%B1%A0%E5%8C%96%E5%B1%82%E6%9C%89%E4%BB%80%E4%B9%88%E7%89%B9%E5%BE%81"><span class="toc-text">22. 池化层有什么特征</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#23-%E4%BB%80%E4%B9%88%E6%98%AF%E5%BD%92%E4%B8%80%E5%8C%96%EF%BC%8C-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%BF%9B%E8%A1%8C%E5%BD%92%E4%B8%80%E5%8C%96"><span class="toc-text">23. 什么是归一化， 为什么要进行归一化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#24-%E4%BB%80%E4%B9%88%E6%98%AF%E6%89%B9%E9%87%8F%E5%BD%92%E4%B8%80%E5%8C%96%EF%BC%8C%E5%85%B6%E4%BC%98%E7%82%B9%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">24. 什么是批量归一化，其优点是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#25-%E8%AF%B7%E5%88%97%E4%B8%BEAlexNet%E7%9A%84%E7%89%B9%E7%82%B9"><span class="toc-text">25. 请列举AlexNet的特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#26-%E4%BB%80%E4%B9%88%E6%98%AFdropout%E6%93%8D%E4%BD%9C%EF%BC%8Cdropout%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86%EF%BC%9F"><span class="toc-text">26. 什么是dropout操作，dropout的工作原理？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89%E5%AE%9A%E4%B9%89"><span class="toc-text">1）定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89dropout%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-text">2）dropout工作原理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%EF%BC%89%E4%B8%BA%E4%BB%80%E4%B9%88dropout%E8%83%BD%E9%81%BF%E5%85%8D%E8%BF%87%E6%8B%9F%E5%90%88"><span class="toc-text">3）为什么dropout能避免过拟合</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#27-%E5%8D%B7%E7%A7%AF%E5%B1%82%E5%92%8C%E6%B1%A0%E5%8C%96%E5%B1%82%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB"><span class="toc-text">27. 卷积层和池化层有什么区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#28-%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%E5%8D%B7%E7%A7%AF%E6%A0%B8%E5%A4%A7%E5%B0%8F"><span class="toc-text">28. 如何选择卷积核大小</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#29-%E5%A6%82%E4%BD%95%E6%8F%90%E9%AB%98%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB%E7%9A%84%E5%87%86%E7%A1%AE%E7%8E%87"><span class="toc-text">29. 如何提高图像分类的准确率</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86"><span class="toc-text">自然语言处理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E6%9C%AC%E7%90%86%E8%AE%BA-1"><span class="toc-text">一、基本理论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AF%E5%88%86%E8%AF%8D%EF%BC%8C%E5%88%86%E8%AF%8D%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">1. 什么是分词，分词的作用是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8D%E6%9C%89%E5%93%AA%E4%BA%9B%E6%96%B9%E6%B3%95"><span class="toc-text">2. 中文分词有哪些方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89%E6%AD%A3%E5%90%91%E6%9C%80%E5%A4%A7%E5%8C%B9%E9%85%8D%E6%B3%95%EF%BC%88FMM%EF%BC%89"><span class="toc-text">1）正向最大匹配法（FMM）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89%E9%80%86%E5%90%91%E6%9C%80%E5%A4%A7%E5%8C%B9%E9%85%8D%E6%B3%95%EF%BC%88RMM%EF%BC%89"><span class="toc-text">2）逆向最大匹配法（RMM）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%EF%BC%89%E5%8F%8C%E5%90%91%E6%9C%80%E5%A4%A7%E5%8C%B9%E9%85%8D%E6%B3%95%EF%BC%88Bi-MM%EF%BC%89"><span class="toc-text">3）双向最大匹配法（Bi-MM）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BB%80%E4%B9%88%E6%98%AF%E8%AF%8D%E6%80%A7%E6%A0%87%E8%AE%B0"><span class="toc-text">3. 什么是词性标记</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%BB%80%E4%B9%88%E6%98%AF%E8%AF%8D%E5%B9%B2%E6%8F%90%E5%8F%96"><span class="toc-text">4. 什么是词干提取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E8%AF%8D%E5%B9%B2%E6%8F%90%E5%8F%96%E4%B8%BB%E8%A6%81%E6%9C%89%E5%93%AA%E4%BA%9B%E6%96%B9%E6%B3%95"><span class="toc-text">5. 词干提取主要有哪些方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E4%BB%80%E4%B9%88%E6%98%AF%E8%AF%8D%E5%BD%A2%E8%BF%98%E5%8E%9F"><span class="toc-text">6. 什么是词形还原</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E4%BB%80%E4%B9%88%E6%98%AF%E8%AF%8D%E8%A2%8B%E6%A8%A1%E5%9E%8B%EF%BC%9F%E8%AF%8D%E8%A2%8B%E6%A8%A1%E5%9E%8B%E7%9A%84%E7%BC%BA%E7%82%B9%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">7. 什么是词袋模型？词袋模型的缺点是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E4%BB%80%E4%B9%88%E6%98%AF%E8%AF%8D%E9%A2%91%E3%80%81%E6%96%87%E6%A1%A3%E9%A2%91%E7%8E%87%E3%80%81%E9%80%86%E6%96%87%E6%A1%A3%E9%A2%91%E7%8E%87"><span class="toc-text">8. 什么是词频、文档频率、逆文档频率</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89%E8%AF%8D%E9%A2%91"><span class="toc-text">1）词频</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89%E6%96%87%E6%A1%A3%E9%A2%91%E7%8E%87"><span class="toc-text">2）文档频率</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%EF%BC%89%E9%80%86%E6%96%87%E6%A1%A3%E9%A2%91%E7%8E%87"><span class="toc-text">3）逆文档频率</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E4%BB%80%E4%B9%88%E6%98%AF%E8%AF%8D%E9%A2%91-%E9%80%86%E6%96%87%E6%A1%A3%E9%A2%91%E7%8E%87-TF-IDF"><span class="toc-text">9. 什么是词频-逆文档频率(TF-IDF)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E6%96%87%E6%9C%AC%E8%A1%A8%E7%A4%BA%E5%A6%82%E4%BD%95%E9%87%87%E7%94%A8%E7%8B%AC%E7%83%AD%E7%BC%96%E7%A0%81%EF%BC%8C%E5%85%B6%E7%BC%BA%E7%82%B9%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">10. 文本表示如何采用独热编码，其缺点是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-%E4%BB%80%E4%B9%88%E6%98%AFN-gram%E6%A8%A1%E5%9E%8B"><span class="toc-text">11. 什么是N-gram模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-%E8%AF%AD%E6%96%99%E5%BA%93"><span class="toc-text">12. 语料库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89%E4%BB%80%E4%B9%88%E6%98%AF%E8%AF%AD%E6%96%99%E5%BA%93"><span class="toc-text">1）什么是语料库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89%E8%AF%AD%E6%96%99%E5%BA%93%E7%9A%84%E7%89%B9%E5%BE%81"><span class="toc-text">2）语料库的特征</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%EF%BC%89%E8%AF%AD%E6%96%99%E5%BA%93%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-text">3）语料库的作用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%EF%BC%89%E8%AF%AD%E6%96%99%E5%BA%93%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="toc-text">4）语料库的类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A0-%E6%8C%89%E7%85%A7%E5%86%85%E5%AE%B9%E5%88%86%E7%B1%BB"><span class="toc-text">① 按照内容分类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A1-%E6%8C%89%E7%85%A7%E8%AF%AD%E8%A8%80%E5%88%86%E7%B1%BB"><span class="toc-text">② 按照语言分类</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A2-%E6%8C%89%E6%98%AF%E5%90%A6%E5%8A%A0%E5%B7%A5"><span class="toc-text">③ 按是否加工</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%91%A3-%E5%85%B1%E6%97%B6%E8%AF%AD%E6%96%99%E5%BA%93%E4%B8%8E%E5%8E%86%E6%97%B6%E8%AF%AD%E6%96%99%E5%BA%93"><span class="toc-text">④ 共时语料库与历时语料库</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%B1%E7%8E%B0%E7%9F%A9%E9%98%B5%EF%BC%8C%E7%89%B9%E7%82%B9%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-text">13. 什么是共现矩阵，特点是什么</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-Word2vec"><span class="toc-text">14. Word2vec</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%BC%89%E4%BB%80%E4%B9%88%E6%98%AFWord2vec"><span class="toc-text">1）什么是Word2vec</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%BC%89Word2vec%E7%9A%84%E4%BC%98%E7%82%B9"><span class="toc-text">2）Word2vec的优点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%EF%BC%89%E7%A4%BA%E4%BE%8B"><span class="toc-text">3）示例</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89"><span class="toc-text">计算机视觉</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%9F%BA%E6%9C%AC%E7%90%86%E8%AE%BA-2"><span class="toc-text">一、基本理论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%BE%E5%83%8F%E9%87%87%E6%A0%B7"><span class="toc-text">1. 什么是图像采样</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BB%80%E4%B9%88%E6%98%AF%E5%88%86%E5%9B%BE%E5%83%8F%E8%BE%A8%E7%8E%87"><span class="toc-text">2. 什么是分图像辨率</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BB%80%E4%B9%88%E6%98%AFRGB%E9%A2%9C%E8%89%B2%E7%A9%BA%E9%97%B4"><span class="toc-text">3. 什么是RGB颜色空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%BB%80%E4%B9%88%E6%98%AFHSV%E9%A2%9C%E8%89%B2%E7%A9%BA%E9%97%B4"><span class="toc-text">4. 什么是HSV颜色空间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%BE%E5%83%8F%E7%81%B0%E5%BA%A6%E5%8C%96%E5%A4%84%E7%90%86"><span class="toc-text">5. 什么是图像灰度化处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%9B%BE%E5%83%8F%E7%81%B0%E5%BA%A6%E5%8C%96%E5%A4%84%E7%90%86%E6%9C%89%E5%93%AA%E4%BA%9B%E6%96%B9%E6%B3%95"><span class="toc-text">6. 图像灰度化处理有哪些方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E5%9B%BE%E5%83%8F%E5%8A%A0%E6%B3%95%E8%BF%90%E7%AE%97%E6%9C%89%E4%BB%80%E4%B9%88%E5%BA%94%E7%94%A8"><span class="toc-text">7. 图像加法运算有什么应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E5%9B%BE%E5%83%8F%E5%87%8F%E6%B3%95%E8%BF%90%E7%AE%97%E6%9C%89%E4%BB%80%E4%B9%88%E5%BA%94%E7%94%A8"><span class="toc-text">8. 图像减法运算有什么应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E5%9B%BE%E5%83%8F%E6%94%BE%E5%A4%A7%E6%97%B6%EF%BC%8C%E5%8F%AF%E4%BB%A5%E9%87%87%E7%94%A8%E5%93%AA%E4%BA%9B%E6%8F%92%E5%80%BC%E6%B3%95"><span class="toc-text">9. 图像放大时，可以采用哪些插值法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E4%BB%80%E4%B9%88%E6%98%AF%E7%9B%B4%E6%96%B9%E5%9B%BE%E5%9D%87%E8%A1%A1%E5%8C%96"><span class="toc-text">10. 什么是直方图均衡化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-%E4%BB%80%E4%B9%88%E6%98%AF%E5%9D%87%E5%80%BC%E6%BB%A4%E6%B3%A2"><span class="toc-text">11. 什么是均值滤波</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-%E4%BB%80%E4%B9%88%E6%98%AF%E9%AB%98%E6%96%AF%E6%BB%A4%E6%B3%A2"><span class="toc-text">12. 什么是高斯滤波</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%BE%E5%83%8F%E4%BA%8C%E5%80%BC%E5%8C%96%E5%A4%84%E7%90%86%EF%BC%8C%E6%9C%89%E4%BB%80%E4%B9%88%E4%BC%98%E7%82%B9"><span class="toc-text">13. 什么是图像二值化处理，有什么优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%BE%E5%83%8F%E8%86%A8%E8%83%80"><span class="toc-text">14. 什么是图像膨胀</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%BE%E5%83%8F%E8%85%90%E8%9A%80"><span class="toc-text">15. 什么是图像腐蚀</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%BE%E5%83%8F%E5%BC%80%E8%BF%90%E7%AE%97"><span class="toc-text">16. 什么是图像开运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%BE%E5%83%8F%E9%97%AD%E8%BF%90%E7%AE%97"><span class="toc-text">17. 什么是图像闭运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18-%E4%BB%80%E4%B9%88%E6%98%AF%E4%BB%BF%E5%B0%84%E5%8F%98%E6%8D%A2"><span class="toc-text">18. 什么是仿射变换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19-%E4%BB%80%E4%B9%88%E6%98%AF%E7%A4%BC%E5%B8%BD%E8%BF%90%E7%AE%97"><span class="toc-text">19. 什么是礼帽运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#20-%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%BE%E5%83%8F%E9%BB%91%E5%B8%BD%E8%BF%90%E7%AE%97"><span class="toc-text">20. 什么是图像黑帽运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21-%E4%BB%80%E4%B9%88%E6%98%AF%E5%9B%BE%E5%83%8F%E9%87%91%E5%AD%97%E5%A1%94"><span class="toc-text">21. 什么是图像金字塔</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#22-%E4%BB%80%E4%B9%88%E6%98%AF%E9%9C%8D%E5%A4%AB%E5%8F%98%E6%8D%A2"><span class="toc-text">22. 什么是霍夫变换</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%81%E4%B8%9A%E7%9C%9F%E9%A2%98"><span class="toc-text">企业真题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%99%84%E5%BD%95%E4%B8%80%EF%BC%9A%E5%B8%B8%E7%94%A8%E6%B1%82%E5%AF%BC%E5%85%AC%E5%BC%8F"><span class="toc-text">附录一：常用求导公式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="toc-text">参考文献</span></a></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/2022q4/172-design-idea/" title="【思考】创新点子"><img src="https://image.discover304.top/blog-img/s19313212112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【思考】创新点子"/></a><div class="content"><a class="title" href="/2022/12/11/2022q4/172-design-idea/" title="【思考】创新点子">【思考】创新点子</a><time datetime="2022-12-11T11:08:37.000Z" title="Created 2022-12-11 19:08:37">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/2022q4/171-other-thought/" title="【思考】其他思考"><img src="https://image.discover304.top/blog-img/s19305112112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【思考】其他思考"/></a><div class="content"><a class="title" href="/2022/12/11/2022q4/171-other-thought/" title="【思考】其他思考">【思考】其他思考</a><time datetime="2022-12-11T11:08:17.000Z" title="Created 2022-12-11 19:08:17">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/2022q4/170-key-thought/" title="【思考】核心思考"><img src="https://image.discover304.top/blog-img/s19294112112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【思考】核心思考"/></a><div class="content"><a class="title" href="/2022/12/11/2022q4/170-key-thought/" title="【思考】核心思考">【思考】核心思考</a><time datetime="2022-12-11T11:08:06.000Z" title="Created 2022-12-11 19:08:06">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/09/2022q4/169-new-r/" title="R: Getting Into Project of R"><img src="https://image.discover304.top/blog-img/s18350812112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="R: Getting Into Project of R"/></a><div class="content"><a class="title" href="/2022/12/09/2022q4/169-new-r/" title="R: Getting Into Project of R">R: Getting Into Project of R</a><time datetime="2022-12-09T09:44:06.000Z" title="Created 2022-12-09 17:44:06">2022-12-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/08/000-some-words/" title="【整理】一些思考"><img src="https://image.discover304.top/blog-img/s18365512112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【整理】一些思考"/></a><div class="content"><a class="title" href="/2022/12/08/000-some-words/" title="【整理】一些思考">【整理】一些思考</a><time datetime="2022-12-08T04:27:28.000Z" title="Created 2022-12-08 12:27:28">2022-12-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/28/2022q3/167-2-sp-review/" title="SP Modules Review Contents (3)"><img src="https://image.discover304.top/blog-img/s11220010012022.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="SP Modules Review Contents (3)"/></a><div class="content"><a class="title" href="/2022/11/28/2022q3/167-2-sp-review/" title="SP Modules Review Contents (3)">SP Modules Review Contents (3)</a><time datetime="2022-11-28T07:24:39.000Z" title="Created 2022-11-28 15:24:39">2022-11-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/17/2022q3/166-10-connected-speech-hidden-markov-model/" title="SP Module 10 Connected Speech &amp; HMM Training"><img src="https://image.discover304.top/blog-img/s11220010012022.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="SP Module 10 Connected Speech &amp; HMM Training"/></a><div class="content"><a class="title" href="/2022/11/17/2022q3/166-10-connected-speech-hidden-markov-model/" title="SP Module 10 Connected Speech &amp; HMM Training">SP Module 10 Connected Speech &amp; HMM Training</a><time datetime="2022-11-17T01:47:12.000Z" title="Created 2022-11-17 09:47:12">2022-11-17</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://image.discover304.top/pika_majiang.jpg?imageView2/2/h/300)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By ✨YangSier✨</div><div><a target="_blank" href="https://beian.miit.gov.cn/" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;"> 冀ICP备2021025381号-1</p></a></div><div><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=13060602001430" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/img/beian.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">冀公网安备 13060602001430号</p></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.spacingElementById('content-inner')
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.spacingElementById('content-inner')
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css"><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', '', 'katex-wrap')
+  })
+})()</script><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'neutral',
+      })
+      false && mermaid.init()
+    })
+  }
+}</script><script>function loadValine () {
+  function initValine () {
+    let initData = {
+      el: '#vcomment',
+      appId: 'A9RWVELPcIotgfbpp9KLGXQM-gzGzoHsz',
+      appKey: 'MLgPQW5h0DPgE8jNkeREKubU',
+      placeholder: '欢迎留言呀。（网址是选填，可以留空）',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: true,
+      serverURLs: 'https://a9rwvelp.lc-cn-n1-shared.com',
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/',
+      emojiMaps: {"QQ1":"QQ/aini.gif","QQ2":"QQ/aixin.gif","QQ3":"QQ/aoman.gif","QQ4":"QQ/baiyan.gif","QQ5":"QQ/bangbangtang.gif","QQ6":"QQ/baojin.gif","QQ7":"QQ/baoquan.gif","QQ8":"QQ/bishi.gif","QQ9":"QQ/bizui.gif","QQ11":"QQ/cahan.gif","QQ12":"QQ/caidao.gif","QQ13":"QQ/chi.gif","QQ14":"QQ/ciya.gif","QQ15":"QQ/dabing.gif","QQ16":"QQ/daku.gif","QQ17":"QQ/dan.gif","QQ18":"QQ/deyi.gif","QQ19":"QQ/doge.gif","QQ20":"QQ/fadai.gif","QQ21":"QQ/fanu.gif","QQ22":"QQ/fendou.gif","QQ23":"QQ/ganga.gif","QQ24":"QQ/gouyin.gif","QQ25":"QQ/guzhang.gif","QQ26":"QQ/haixiu.gif","QQ27":"QQ/hanxiao.gif","QQ28":"QQ/haobang.gif","QQ29":"QQ/haqian.gif","QQ30":"QQ/hecai.gif","QQ31":"QQ/hexie.gif","QQ32":"QQ/huaixiao.gif","QQ33":"QQ/jie.gif","QQ34":"QQ/jingkong.gif","QQ35":"QQ/jingxi.gif","QQ36":"QQ/jingya.gif","QQ37":"QQ/juhua.gif","QQ38":"QQ/keai.gif","QQ39":"QQ/kelian.gif","QQ40":"QQ/koubi.gif","QQ41":"QQ/ku.gif","QQ42":"QQ/kuaikule.gif","QQ43":"QQ/kulou.gif","QQ44":"QQ/kun.gif","QQ45":"QQ/lanqiu.gif","QQ46":"QQ/leiben.gif","QQ47":"QQ/lenghan.gif","QQ48":"QQ/liuhan.gif","QQ49":"QQ/liulei.gif","QQ50":"QQ/nanguo.gif","QQ51":"QQ/OK.gif","QQ52":"QQ/penxue.gif","QQ53":"QQ/piezui.gif","QQ54":"QQ/pijiu.gif","QQ55":"QQ/qiang.gif","QQ56":"QQ/qiaoda.gif","QQ57":"QQ/qinqin.gif","QQ58":"QQ/qiudale.gif","QQ59":"QQ/quantou.gif","QQ60":"QQ/saorao.gif","QQ61":"QQ/se.gif","QQ62":"QQ/shengli.gif","QQ63":"QQ/shouqiang.gif","QQ64":"QQ/shuai.gif","QQ65":"QQ/shui.gif","QQ66":"QQ/tiaopi.gif","QQ67":"QQ/touxiao.gif","QQ68":"QQ/tu.gif","QQ69":"QQ/tuosai.gif","QQ70":"QQ/weiqu.gif","QQ71":"QQ/weixiao.gif","QQ72":"QQ/woshou.gif","QQ73":"QQ/wozuimei.gif","QQ74":"QQ/wunai.gif","QQ75":"QQ/xia.gif","QQ76":"QQ/xiaojiujie.gif","QQ77":"QQ/xiaoku.gif","QQ78":"QQ/xiaoyanger.gif","QQ79":"QQ/xieyanxiao.gif","QQ80":"QQ/xigua.gif","QQ81":"QQ/xu.gif","QQ82":"QQ/yangtuo.gif","QQ83":"QQ/yinxian.gif","QQ84":"QQ/yiwen.gif","QQ85":"QQ/youhengheng.gif","QQ86":"QQ/youling.gif","QQ87":"QQ/yun.gif","QQ88":"QQ/zaijian.gif","QQ89":"QQ/zhayanjian.gif","QQ90":"QQ/zhemo.gif","QQ91":"QQ/zhouma.gif","QQ92":"QQ/zhuakuang.gif","QQ93":"QQ/zuohengheng.gif","bilibiliHotKey1":"bilibiliHotKey/1.jpg","bilibiliHotKey2":"bilibiliHotKey/10.jpg","bilibiliHotKey3":"bilibiliHotKey/11.jpg","bilibiliHotKey4":"bilibiliHotKey/12.jpg","bilibiliHotKey5":"bilibiliHotKey/13.jpg","bilibiliHotKey6":"bilibiliHotKey/14.jpg","bilibiliHotKey7":"bilibiliHotKey/15.jpg","bilibiliHotKey8":"bilibiliHotKey/16.jpg","bilibiliHotKey9":"bilibiliHotKey/17.jpg","bilibiliHotKey10":"bilibiliHotKey/18.jpg","bilibiliHotKey11":"bilibiliHotKey/19.jpg","bilibiliHotKey12":"bilibiliHotKey/2.jpg","bilibiliHotKey13":"bilibiliHotKey/20.jpg","bilibiliHotKey14":"bilibiliHotKey/21.jpg","bilibiliHotKey15":"bilibiliHotKey/22.jpg","bilibiliHotKey16":"bilibiliHotKey/23.jpg","bilibiliHotKey17":"bilibiliHotKey/24.jpg","bilibiliHotKey18":"bilibiliHotKey/25.jpg","bilibiliHotKey19":"bilibiliHotKey/26.jpg","bilibiliHotKey20":"bilibiliHotKey/27.jpg","bilibiliHotKey21":"bilibiliHotKey/28.jpg","bilibiliHotKey22":"bilibiliHotKey/29.jpg","bilibiliHotKey23":"bilibiliHotKey/3.jpg","bilibiliHotKey24":"bilibiliHotKey/30.jpg","bilibiliHotKey25":"bilibiliHotKey/31.jpg","bilibiliHotKey26":"bilibiliHotKey/32.jpg","bilibiliHotKey27":"bilibiliHotKey/4.jpg","bilibiliHotKey28":"bilibiliHotKey/5.jpg","bilibiliHotKey29":"bilibiliHotKey/6.jpg","bilibiliHotKey30":"bilibiliHotKey/7.jpg","bilibiliHotKey31":"bilibiliHotKey/8.jpg","bilibiliHotKey32":"bilibiliHotKey/9.jpg","Menhera-chan1":"Menhera-chan/1.jpg","Menhera-chan2":"Menhera-chan/10.jpg","Menhera-chan3":"Menhera-chan/100.jpg","Menhera-chan4":"Menhera-chan/101.jpg","Menhera-chan5":"Menhera-chan/102.jpg","Menhera-chan6":"Menhera-chan/103.jpg","Menhera-chan7":"Menhera-chan/104.jpg","Menhera-chan8":"Menhera-chan/105.jpg","Menhera-chan9":"Menhera-chan/106.jpg","Menhera-chan10":"Menhera-chan/107.jpg","Menhera-chan11":"Menhera-chan/108.jpg","Menhera-chan12":"Menhera-chan/109.jpg","Menhera-chan13":"Menhera-chan/11.jpg","Menhera-chan14":"Menhera-chan/110.jpg","Menhera-chan15":"Menhera-chan/111.jpg","Menhera-chan16":"Menhera-chan/112.jpg","Menhera-chan17":"Menhera-chan/113.jpg","Menhera-chan18":"Menhera-chan/114.jpg","Menhera-chan19":"Menhera-chan/115.jpg","Menhera-chan20":"Menhera-chan/116.jpg","Menhera-chan21":"Menhera-chan/117.jpg","Menhera-chan22":"Menhera-chan/118.jpg","Menhera-chan23":"Menhera-chan/119.jpg","Menhera-chan24":"Menhera-chan/12.jpg","Menhera-chan25":"Menhera-chan/120.jpg","Menhera-chan26":"Menhera-chan/13.jpg","Menhera-chan27":"Menhera-chan/14.jpg","Menhera-chan28":"Menhera-chan/15.jpg","Menhera-chan29":"Menhera-chan/16.jpg","Menhera-chan30":"Menhera-chan/17.jpg","Menhera-chan31":"Menhera-chan/18.jpg","Menhera-chan32":"Menhera-chan/19.jpg","Menhera-chan33":"Menhera-chan/2.jpg","Menhera-chan34":"Menhera-chan/20.jpg","Menhera-chan35":"Menhera-chan/21.jpg","Menhera-chan36":"Menhera-chan/22.jpg","Menhera-chan37":"Menhera-chan/23.jpg","Menhera-chan38":"Menhera-chan/24.jpg","Menhera-chan39":"Menhera-chan/25.jpg","Menhera-chan40":"Menhera-chan/26.jpg","Menhera-chan41":"Menhera-chan/27.jpg","Menhera-chan42":"Menhera-chan/28.jpg","Menhera-chan43":"Menhera-chan/29.jpg","Menhera-chan44":"Menhera-chan/3.jpg","Menhera-chan45":"Menhera-chan/30.jpg","Menhera-chan46":"Menhera-chan/31.jpg","Menhera-chan47":"Menhera-chan/32.jpg","Menhera-chan48":"Menhera-chan/33.jpg","Menhera-chan49":"Menhera-chan/34.jpg","Menhera-chan50":"Menhera-chan/35.jpg","Menhera-chan51":"Menhera-chan/36.jpg","Menhera-chan52":"Menhera-chan/37.jpg","Menhera-chan53":"Menhera-chan/38.jpg","Menhera-chan54":"Menhera-chan/39.jpg","Menhera-chan55":"Menhera-chan/4.jpg","Menhera-chan56":"Menhera-chan/40.jpg","Menhera-chan57":"Menhera-chan/41.jpg","Menhera-chan58":"Menhera-chan/42.jpg","Menhera-chan59":"Menhera-chan/43.jpg","Menhera-chan60":"Menhera-chan/44.jpg","Menhera-chan61":"Menhera-chan/45.jpg","Menhera-chan62":"Menhera-chan/46.jpg","Menhera-chan63":"Menhera-chan/47.jpg","Menhera-chan64":"Menhera-chan/48.jpg","Menhera-chan65":"Menhera-chan/49.jpg","Menhera-chan66":"Menhera-chan/5.jpg","Menhera-chan67":"Menhera-chan/50.jpg","Menhera-chan68":"Menhera-chan/51.jpg","Menhera-chan69":"Menhera-chan/52.jpg","Menhera-chan70":"Menhera-chan/53(1).jpg","Menhera-chan71":"Menhera-chan/53.jpg","Menhera-chan72":"Menhera-chan/54.jpg","Menhera-chan73":"Menhera-chan/55.jpg","Menhera-chan74":"Menhera-chan/56.jpg","Menhera-chan75":"Menhera-chan/57.jpg","Menhera-chan76":"Menhera-chan/58.jpg","Menhera-chan77":"Menhera-chan/59.jpg","Menhera-chan78":"Menhera-chan/6.jpg","Menhera-chan79":"Menhera-chan/60.jpg","Menhera-chan80":"Menhera-chan/61.jpg","Menhera-chan81":"Menhera-chan/62.jpg","Menhera-chan82":"Menhera-chan/63.jpg","Menhera-chan83":"Menhera-chan/64.jpg","Menhera-chan84":"Menhera-chan/65.jpg","Menhera-chan85":"Menhera-chan/66.jpg","Menhera-chan86":"Menhera-chan/67.jpg","Menhera-chan87":"Menhera-chan/68.jpg","Menhera-chan88":"Menhera-chan/69.jpg","Menhera-chan89":"Menhera-chan/7.jpg","Menhera-chan90":"Menhera-chan/70.jpg","Menhera-chan91":"Menhera-chan/71.jpg","Menhera-chan92":"Menhera-chan/72.jpg","Menhera-chan93":"Menhera-chan/73.jpg","Menhera-chan94":"Menhera-chan/74.jpg","Menhera-chan95":"Menhera-chan/75.jpg","Menhera-chan96":"Menhera-chan/76.jpg","Menhera-chan97":"Menhera-chan/77.jpg","Menhera-chan98":"Menhera-chan/78.jpg","Menhera-chan99":"Menhera-chan/79.jpg","Menhera-chan100":"Menhera-chan/8.jpg","Menhera-chan101":"Menhera-chan/80.jpg","Menhera-chan102":"Menhera-chan/81.jpg","Menhera-chan103":"Menhera-chan/82.jpg","Menhera-chan104":"Menhera-chan/83.jpg","Menhera-chan105":"Menhera-chan/84.jpg","Menhera-chan106":"Menhera-chan/85.jpg","Menhera-chan107":"Menhera-chan/86.jpg","Menhera-chan108":"Menhera-chan/87.jpg","Menhera-chan109":"Menhera-chan/88.jpg","Menhera-chan110":"Menhera-chan/89.jpg","Menhera-chan111":"Menhera-chan/9.jpg","Menhera-chan112":"Menhera-chan/90.jpg","Menhera-chan113":"Menhera-chan/91.jpg","Menhera-chan114":"Menhera-chan/92.jpg","Menhera-chan115":"Menhera-chan/93.jpg","Menhera-chan116":"Menhera-chan/94.jpg","Menhera-chan117":"Menhera-chan/95.jpg","Menhera-chan118":"Menhera-chan/96.jpg","Menhera-chan119":"Menhera-chan/97.jpg","Menhera-chan120":"Menhera-chan/98.jpg","Menhera-chan121":"Menhera-chan/99.jpg","Sweetie-Bunny1":"Sweetie-Bunny/12311678.png","Sweetie-Bunny2":"Sweetie-Bunny/12311679.png","Sweetie-Bunny3":"Sweetie-Bunny/12311680.png","Sweetie-Bunny4":"Sweetie-Bunny/12311681.png","Sweetie-Bunny5":"Sweetie-Bunny/12311682.png","Sweetie-Bunny6":"Sweetie-Bunny/12311683.png","Sweetie-Bunny7":"Sweetie-Bunny/12311684.png","Sweetie-Bunny8":"Sweetie-Bunny/12311685.png","Sweetie-Bunny9":"Sweetie-Bunny/12311686.png","Sweetie-Bunny10":"Sweetie-Bunny/12311687.png","Sweetie-Bunny11":"Sweetie-Bunny/12311688.png","Sweetie-Bunny12":"Sweetie-Bunny/12311689.png","Sweetie-Bunny13":"Sweetie-Bunny/12311690.png","Sweetie-Bunny14":"Sweetie-Bunny/12311691.png","Sweetie-Bunny15":"Sweetie-Bunny/12311692.png","Sweetie-Bunny16":"Sweetie-Bunny/12311693.png","Sweetie-Bunny17":"Sweetie-Bunny/12311694.png","Sweetie-Bunny18":"Sweetie-Bunny/12311695.png","Sweetie-Bunny19":"Sweetie-Bunny/12311696.png","Sweetie-Bunny20":"Sweetie-Bunny/12311697.png","Sweetie-Bunny21":"Sweetie-Bunny/12311698.png","Sweetie-Bunny22":"Sweetie-Bunny/12311699.png","Sweetie-Bunny23":"Sweetie-Bunny/12311700.png","Sweetie-Bunny24":"Sweetie-Bunny/12311701.png","Sweetie-Bunny25":"Sweetie-Bunny/12311702.png","Sweetie-Bunny26":"Sweetie-Bunny/12311703.png","Sweetie-Bunny27":"Sweetie-Bunny/12311704.png","Sweetie-Bunny28":"Sweetie-Bunny/12311705.png","Sweetie-Bunny29":"Sweetie-Bunny/12311706.png","Sweetie-Bunny30":"Sweetie-Bunny/12311707.png","Sweetie-Bunny31":"Sweetie-Bunny/12311708.png","Sweetie-Bunny32":"Sweetie-Bunny/12311709.png","Sweetie-Bunny33":"Sweetie-Bunny/12311710.png","Sweetie-Bunny34":"Sweetie-Bunny/12311711.png","Sweetie-Bunny35":"Sweetie-Bunny/12311712.png","Sweetie-Bunny36":"Sweetie-Bunny/12311713.png","Sweetie-Bunny37":"Sweetie-Bunny/12311714.png","Sweetie-Bunny38":"Sweetie-Bunny/12311715.png","Sweetie-Bunny39":"Sweetie-Bunny/12311716.png","Sweetie-Bunny40":"Sweetie-Bunny/12311717.png","Majotabi1":"Majotabi/367516718.png","Majotabi2":"Majotabi/367516719.png","Majotabi3":"Majotabi/367516720.png","Majotabi4":"Majotabi/367516721.png","Majotabi5":"Majotabi/367516722.png","Majotabi6":"Majotabi/367516723.png","Majotabi7":"Majotabi/367516724.png","Majotabi8":"Majotabi/367516725.png","Majotabi9":"Majotabi/367516726.png","Majotabi10":"Majotabi/367516727.png","Majotabi11":"Majotabi/367516728.png","Majotabi12":"Majotabi/367516729.png","Majotabi13":"Majotabi/367516730.png","Majotabi14":"Majotabi/367516731.png","Majotabi15":"Majotabi/367516732.png","Majotabi16":"Majotabi/367516733.png","Majotabi17":"Majotabi/367516734.png","Majotabi18":"Majotabi/367516735.png","Majotabi19":"Majotabi/367516736.png","Majotabi20":"Majotabi/367516737.png","Majotabi21":"Majotabi/367516738.png","Majotabi22":"Majotabi/367516739.png","Majotabi23":"Majotabi/367516740.png","Majotabi24":"Majotabi/367516741.png","Majotabi25":"Majotabi/367516742.png","Majotabi26":"Majotabi/367516743.png","Majotabi27":"Majotabi/367516744.png","Majotabi28":"Majotabi/367516745.png","Majotabi29":"Majotabi/367516746.png","Majotabi30":"Majotabi/367516747.png","Majotabi31":"Majotabi/367516748.png","Majotabi32":"Majotabi/367516749.png","Majotabi33":"Majotabi/367516750.png","Majotabi34":"Majotabi/367516751.png","Majotabi35":"Majotabi/367516752.png","Majotabi36":"Majotabi/367516753.png","Majotabi37":"Majotabi/367516754.png","Majotabi38":"Majotabi/367516755.png","Majotabi39":"Majotabi/367516756.png","Majotabi40":"Majotabi/367516757.png","Snow-Miku1":"Snow-Miku/3583066@2x.png","Snow-Miku2":"Snow-Miku/3583067@2x.png","Snow-Miku3":"Snow-Miku/3583068@2x.png","Snow-Miku4":"Snow-Miku/3583069@2x.png","Snow-Miku5":"Snow-Miku/3583070@2x.png","Snow-Miku6":"Snow-Miku/3583071@2x.png","Snow-Miku7":"Snow-Miku/3583072@2x.png","Snow-Miku8":"Snow-Miku/3583073@2x.png","Snow-Miku9":"Snow-Miku/3583074@2x.png","Snow-Miku10":"Snow-Miku/3583075@2x.png","Snow-Miku11":"Snow-Miku/3583076@2x.png","Snow-Miku12":"Snow-Miku/3583077@2x.png","Snow-Miku13":"Snow-Miku/3583078@2x.png","Snow-Miku14":"Snow-Miku/3583079@2x.png","Snow-Miku15":"Snow-Miku/3583080@2x.png","Snow-Miku16":"Snow-Miku/3583081@2x.png","Snow-Miku17":"Snow-Miku/3583082@2x.png","Snow-Miku18":"Snow-Miku/3583083@2x.png","Snow-Miku19":"Snow-Miku/3583084@2x.png","Snow-Miku20":"Snow-Miku/3583085@2x.png","Snow-Miku21":"Snow-Miku/3583086@2x.png","Snow-Miku22":"Snow-Miku/3583087@2x.png","Snow-Miku23":"Snow-Miku/3583088@2x.png","Snow-Miku24":"Snow-Miku/3583089@2x.png","Snow-Miku25":"Snow-Miku/3583090@2x.png","Snow-Miku26":"Snow-Miku/3583091@2x.png","Snow-Miku27":"Snow-Miku/3583092@2x.png","Snow-Miku28":"Snow-Miku/3583093@2x.png","Snow-Miku29":"Snow-Miku/3583094@2x.png","Snow-Miku30":"Snow-Miku/3583095@2x.png","Snow-Miku31":"Snow-Miku/3583096@2x.png","Snow-Miku32":"Snow-Miku/3583097@2x.png","Snow-Miku33":"Snow-Miku/3583098@2x.png","Snow-Miku34":"Snow-Miku/3583099@2x.png","Snow-Miku35":"Snow-Miku/3583100@2x.png","Snow-Miku36":"Snow-Miku/3583101@2x.png","Snow-Miku37":"Snow-Miku/3583102@2x.png","Snow-Miku38":"Snow-Miku/3583103@2x.png","Snow-Miku39":"Snow-Miku/3583104@2x.png","Snow-Miku40":"Snow-Miku/3583105@2x.png"},
+      enableQQ: true,
+      path: window.location.pathname,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+    
+    if (false) {
+      const otherData = false
+      initData = Object.assign({}, initData, otherData)
+    }
+    
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script>(function(){
+  const bp = document.createElement('script');
+  const curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  bp.dataset.pjax = ''
+  const s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})()</script></div></body></html>
