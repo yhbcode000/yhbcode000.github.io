@@ -1,0 +1,653 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Yang's Harbor</title><meta name="keywords" content="技术,笔记,见解,生活"><meta name="author" content="✨YangSier✨,hobart.yang@qq.com"><meta name="copyright" content="✨YangSier✨"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="Space of Tech, Love and Thought">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yang&#39;s Harbor">
+<meta property="og:url" content="https://discover304.top/page/3/index.html">
+<meta property="og:site_name" content="Yang&#39;s Harbor">
+<meta property="og:description" content="Space of Tech, Love and Thought">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://discover304.top/img/head.jpg">
+<meta property="article:author" content="✨YangSier✨">
+<meta property="article:tag" content="技术">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="见解">
+<meta property="article:tag" content="生活">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://discover304.top/img/head.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://discover304.top/page/3/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><meta name="google-site-verification" content="ilqpfk3vkgzDNNikz_V37-DOvRyi5wv4Hoi_eyBqvTg"/><meta name="msvalidate.01" content="49D9A50CCF9744E17274791468EDB517"/><meta name="baidu-site-verification" content="code-V24KosyVh1"/><meta name="360-site-verification" content="bd8859c3d74dfa3e8aeee9db30c94bd2"/><meta name="yandex-verification" content="f28ec9bbd50c56f5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?8030f6052f2fed6a4704d96619f090d6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="stylesheet" href="/css/font.css" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":200,"languages":{"author":"Author: ✨YangSier✨","link":"Link: ","source":"Source: Yang's Harbor","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#ffc910","bgDark":"#02c3f6","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: true
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
+
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2023-03-13 21:24:49'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Yang's Harbor" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">243</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">88</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">23</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Links</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Articles</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://image.discover304.top/wallpaper/anime-anime-girls-original-characters-short-hair-wallpaper-preview.jpg?imageView2/2/h/600)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Yang's Harbor</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Links</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Articles</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="drone"><div class="container"><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="trigger"></div><div class="monitor"><div class="opening"><div class="camera o-x"><div class="camera o-y"><div class="camera o-z"><div class="awing"><div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div><div class="fly o-x"><div class="fly o-y"><div class="fly o-z"><div class="free_bounce"><div class="free_rotate"><div class="body"><div class="cockpit"><div class="under"></div><div class="back"></div><div class="left"></div><div class="right"></div><div class="edge_left"></div><div class="edge_right"></div><div class="boosts"><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div><div class="boost"></div></div></div><div class="wing_left"><div class="under"></div><div class="back"></div><div class="left"></div><div class="right"></div></div><div class="wing_right"><div class="under"></div><div class="back"></div><div class="left"></div><div class="right"> </div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div id="site-info"><h1 id="site-title">Yang's Harbor</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/Discover304" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://twitter.com/Discover304" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.youtube.com/channel/UCuQQr55i3VCQuCPMTQnpzDA" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a><a class="social-icon" href="mailto:hobart.yang@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="0"></use></g></svg></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item" style="width:100%;height:auto;float:left;padding:5px;flex-wrap:wrap;justify-content : center;flex-direction: row; "><figure class="gallery-group" id="color-card"><img class="gallery-group-img loaded" src="https://image.discover304.top/ai/dl/space_work.jpg?imageView2/2/h/300" data-ll-status="loaded"><figcaption style="background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.618) 25%,rgba(16,16,16,0) 100%"><div class="gallery-group-name" style="font-size: 1rem;">🔥人工智能</div><p>笔记和资料，涉及到深度学习、自动驾驶等领域。</p><a href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"></a></figcaption></figure><figure class="gallery-group" id="color-card"><img class="gallery-group-img loaded" src="https://image.discover304.top/NEKOYA_S.S.S. Doll [Pallas].jfif?imageView2/2/h/300" data-ll-status="loaded"><figcaption style="background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.618) 25%,rgba(16,16,16,0) 100%"><div class="gallery-group-name" style="font-size: 1rem;">🔥ROS笔记</div><p>ROS机器人框架笔记。Beginer Friendly</p><a href="/tags/ROS/"></a></figcaption></figure><figure class="gallery-group" id="color-card"><img class="gallery-group-img loaded" src="https://image.discover304.top/python_future.jpg?imageView2/2/h/300" data-ll-status="loaded"><figcaption style="background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.618) 25%,rgba(16,16,16,0) 100%"><div class="gallery-group-name" style="font-size: 1rem;">✅Python教程</div><p>从0到1，在深入人工智能的全套Python笔记。</p><a href="/tags/Python/"></a></figcaption></figure><figure class="gallery-group" id="color-card"><img class="gallery-group-img loaded" src="https://image.discover304.top/miku-king-white-theme.jpg?imageView2/2/h/300" data-ll-status="loaded"><figcaption style="background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.618) 25%,rgba(16,16,16,0) 100%"><div class="gallery-group-name" style="font-size: 1rem;">❤️经验经历</div><p>过往的感悟和思考。</p><a href="/tags/%E7%BB%8F%E9%AA%8C/"></a></figcaption></figure><figure class="gallery-group" id="color-card"><img class="gallery-group-img loaded" src="https://image.discover304.top/factory.jpg?imageView2/2/h/300" data-ll-status="loaded"><figcaption style="background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.618) 25%,rgba(16,16,16,0) 100%"><div class="gallery-group-name" style="font-size: 1rem;">✨碎片技术</div><p>学习工作中遇到的很赞的技术碎片，整理好了。</p><a href="/tags/%E6%8A%80%E6%9C%AF/"></a></figcaption></figure><figure class="gallery-group" id="color-card"><img class="gallery-group-img loaded" src="https://image.discover304.top/gaoda.jpg?imageView2/2/h/300" data-ll-status="loaded"><figcaption style="background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.618) 25%,rgba(16,16,16,0) 100%"><div class="gallery-group-name" style="font-size: 1rem;">✨学习积累</div><p>相对于碎片技术的，已经沉淀为自己的资本的内容。</p><a href="/tags/学习/"></a></figcaption></figure></div><div class="recent-post-item" style="height:0px;clear:both;margin-top: 0px;"></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2022/01/24/2022q1/138-cuda-prog/" title="【扫盲】Cuda编程 施工中~">     <img class="post_bg" src="http://image.discover304.top/arknight_cp_wolf_cake.jpg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【扫盲】Cuda编程 施工中~"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/24/2022q1/138-cuda-prog/" title="【扫盲】Cuda编程 施工中~">【扫盲】Cuda编程 施工中~</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-01-24T03:48:02.000Z" title="Created 2022-01-24 11:48:02">2022-01-24</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%85%A5%E9%97%A8/">入门</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%9F%A5%E8%AF%86/">知识</a></span></div><div class="content">Clion需要VS2017-2019 inclusive！
+使用clion搭建CUDA开发环境_QAQ-程序员ITS201_clion cuda
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2022/01/24/2022q1/137-plane-proj/" title="【项目实战】ROS Wifi 飞机控制项目（其一） 施工中~">     <img class="post_bg" src="http://image.discover304.top/jiniang_robot_gaoda.jpg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【项目实战】ROS Wifi 飞机控制项目（其一） 施工中~"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/24/2022q1/137-plane-proj/" title="【项目实战】ROS Wifi 飞机控制项目（其一） 施工中~">【项目实战】ROS Wifi 飞机控制项目（其一） 施工中~</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-01-24T03:11:27.000Z" title="Created 2022-01-24 11:11:27">2022-01-24</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%B5%84%E6%96%99/">资料</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%AE%B0%E5%BD%95/">记录</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E6%95%B4%E7%90%86/">整理</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/ROS/">ROS</a></span></div><div class="content">
+技术储备：Arduino单片机、ROS机器人框架、网络通信、电子电路、人工智能编程语言：C、Python、C++
+
+从高中开始，笔者就有一个一直期望做的项目：飞机跟随。奈何当年的从知识储备到项目经验都存在不足，没有完成。临近年关，时间充沛，经过了超过3年的准备，我想是时候实现我这个小梦想了。
+目标确定
+在【TED】闪耀未来光芒的无人机Meet the dazzling flying machines of the futu演讲的第2分钟，提到了一个叫做tail-sitter的飞机，它可以做到像直升机一样悬停和垂直起降，也可以像固定翼一样高效飞行。
+
+
+这是我期望的飞行器的模式，我希望我的飞机像狗狗一样，灵活的同时又乖乖的。这样的飞行器结构简单，但是他的控制模块采用了强化学习还有很多现代控制理论，需要大量的学习和设计工作。
+当然，心急吃不了热豆腐，都拿出来展示的东西，肯定要经过大量的失败的实验才能造出来。这一篇先来制作一台原型机，把信号通信打通，强化学习还有控制的问题之后一点一点增加。
+原型机设计因为我们的飞机需要依赖强大的算力支撑，小飞机上的边缘计算已经无法满足需求，所以我们把所有的 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2022/01/14/2022q1/136-apt-fast-intro/" title="【Linux】apt-Fast 感受闪电般的下载速度吧 施工中~">     <img class="post_bg" src="https://image.discover304.top/lightning_girl.jpg?imageView2/2/h/500" onerror="this.onerror=null;this.src='/img/404.png'" alt="【Linux】apt-Fast 感受闪电般的下载速度吧 施工中~"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/14/2022q1/136-apt-fast-intro/" title="【Linux】apt-Fast 感受闪电般的下载速度吧 施工中~">【Linux】apt-Fast 感受闪电般的下载速度吧 施工中~</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-01-14T08:47:03.000Z" title="Created 2022-01-14 16:47:03">2022-01-14</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%8F%82%E8%80%83/">参考</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%B5%84%E6%96%99/">资料</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/Linux/">Linux</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2022/01/07/2022q1/135-docker-recup/" title="【扫盲】Docker常用命令使用">     <img class="post_bg" src="https://image.discover304.top/docker_illus.jpeg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【扫盲】Docker常用命令使用"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/07/2022q1/135-docker-recup/" title="【扫盲】Docker常用命令使用">【扫盲】Docker常用命令使用</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-01-07T06:24:01.000Z" title="Created 2022-01-07 14:24:01">2022-01-07</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%AE%B0%E5%BD%95/">记录</a></span></div><div class="content">
+:four_leaf_clover:碎碎念:four_leaf_clover:Hello米娜桑，这里是英国留学中的杨丝儿。我的博客的关键词集中在算法、机器人、人工智能、数学等等，点个关注吧，持续高质量输出中。:cherry_blossom:唠嗑QQ群：兔叽的魔术工房 (942848525):star:B站账号：杨丝儿今天也在科学修仙（UP主跨站求个关注）
+
+
+:star2:docker中容器和镜像的关系Docker 包括三个基本概念:
+
+镜像（Image）：Docker 镜像（Image），就相当于是一个 root 文件系统。比如官方镜像 ubuntu:16.04 就包含了完整的一套 Ubuntu16.04 最小系统的 root 文件系统。
+容器（Container）：镜像（Image）和容器（Container）的关系，就像是面向对象程序设计中的类和实例一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等。
+仓库（Repository）：仓库可看成一个代码控制中心，用来保存镜像。
+
+
+
+:star2:镜像操作12345678910111213#  ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2022/01/06/2022q1/134-autoware-nore/" title="【自动驾驶】AutoWare笔记 施工中~">     <img class="post_bg" src="https://image.discover304.top/autodrive/cover/car_black_white.jpg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【自动驾驶】AutoWare笔记 施工中~"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/06/2022q1/134-autoware-nore/" title="【自动驾驶】AutoWare笔记 施工中~">【自动驾驶】AutoWare笔记 施工中~</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-01-06T03:04:16.000Z" title="Created 2022-01-06 11:04:16">2022-01-06</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%8F%82%E8%80%83/">参考</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%B5%84%E6%96%99/">资料</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/">机器人</a></span></div><div class="content">安装指令
+安装ros-noetic-full
+安装显卡驱动
+从Source安装：
+
+123456789101112131415mkdir -p autoware.ai/srccd autoware.ai/wget -O autoware.ai.repos &quot;https://raw.githubusercontent.com/Autoware-AI/autoware.ai/1.14.0/autoware.ai.repos&quot;wget -O autoware.ai.repos &quot;https://raw.githubusercontent.com/Autoware-AI/autoware.ai/master/autoware.ai.repos&quot;vcs import src &lt; autoware.ai.reposrosdep update# sudo apt-get install ros-noetic-jsk-recognition-msgs ros-noetic-jsk-rviz-plugins ros-noetic-lanelet2* ros- ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2022/01/05/2022q1/133-multi-sensor-fusion-localization/" title="【机器人】多传感器融合定位前沿技术小笔记">     <img class="post_bg" src="https://image.discover304.top/autodrive/cover/car_black_white.jpg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【机器人】多传感器融合定位前沿技术小笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/05/2022q1/133-multi-sensor-fusion-localization/" title="【机器人】多传感器融合定位前沿技术小笔记">【机器人】多传感器融合定位前沿技术小笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-01-05T05:57:53.000Z" title="Created 2022-01-05 13:57:53">2022-01-05</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%8F%82%E8%80%83/">参考</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%B5%84%E6%96%99/">资料</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/">机器人</a></span></div><div class="content">
+碎碎念：Hello米娜桑，这里是英国留学中的杨丝儿。我的博客技术点集中在机器人、人工智能可解释性、数学、物理等等，感兴趣地点个关注吧，持续高质量输出中。唠嗑QQ群：兔叽的魔术工房 (942848525)B站账号：杨丝儿今天也在科学修仙（UP主跨站求个关注）
+
+:star:参考
+[草稿] X. Zhang, H. Liu, Z. Zou, and M. Zhou, Multi-sensor Fusion for Autonomous Driving.
+
+
+:star:关键观点
+前人的研究把定位和建图任务（SLAM）从实验室带到了现实场景。实验室场景和现实场景最大的区别是灵活度的提升。
+自定位任务（self-positioning）现阶段有两个方向：
+基于内部传感器（GPS、IMU等）根据车辆的运动信息进行定位的任务，具有累积误差的问题。
+基于激光雷达等通过采样环境数据进行定位的SLAM技术，受限于环境，不适宜在低特征环境（如空旷地域）进行定位任务。
+
+
+
+
+:star:关键词整理real-time posioning problems, coarse-and-fine hybrid p ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2022/01/05/2022q1/132-multisensor-calicration/" title="【机器人】多传感器标定前沿技术小笔记">     <img class="post_bg" src="https://image.discover304.top/autodrive/cover/car_black_white.jpg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【机器人】多传感器标定前沿技术小笔记"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/05/2022q1/132-multisensor-calicration/" title="【机器人】多传感器标定前沿技术小笔记">【机器人】多传感器标定前沿技术小笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-01-05T01:44:40.000Z" title="Created 2022-01-05 09:44:40">2022-01-05</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%8F%82%E8%80%83/">参考</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%B5%84%E6%96%99/">资料</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/">机器人</a></span></div><div class="content">
+碎碎念：Hello米娜桑，这里是英国留学中的杨丝儿。我的博客技术点集中在机器人、人工智能可解释性、数学、物理等等，感兴趣地点个关注吧，持续高质量输出中。唠嗑QQ群：兔叽的魔术工房 (942848525)B站账号：杨丝儿今天也在科学修仙（UP主跨站求个关注）
+
+:star:参考
+[草稿] X. Zhang, H. Liu, Z. Zou, and M. Zhou, Multi-sensor Fusion for Autonomous Driving.
+
+
+:star:关键观点
+因为传感器融合可以起到优势互补的作用，所以多传感器标定是不可或缺的一步。
+因为使用标定板或者人工标定的传统方法不能解决使用中误差累积等一系列问题，所以一个在线的实时的标定策略是必要的。
+激光雷达提取出来的线特征和相机提取出来的线特征可以很好的进行匹配，进而实现标定任务。
+虽然线特征是一种很可靠的几何特征，但是实际使用也存在一些问题，例如在行人极多的情况，或者说在复杂环境中，线特征就显得没有那么可靠了。
+
+
+在大环境信息（像是GPS信号）缺失的情况下进行一个主动的切换，实现自适应感知&#x2F;定位。（从GF-SL ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2022/01/04/2022q1/128-ros-messaging-method-comparing/" title="【机器人】ROS消息机制横向对比，到底该如何进行选择？精简解释">     <img class="post_bg" src="https://image.discover304.top/leishen_play.jpg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【机器人】ROS消息机制横向对比，到底该如何进行选择？精简解释"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/04/2022q1/128-ros-messaging-method-comparing/" title="【机器人】ROS消息机制横向对比，到底该如何进行选择？精简解释">【机器人】ROS消息机制横向对比，到底该如何进行选择？精简解释</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-01-04T02:25:55.000Z" title="Created 2022-01-04 10:25:55">2022-01-04</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%9F%A5%E8%AF%86/">知识</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/ROS/">ROS</a></span></div><div class="content">
+每一种消息机制都有自己的应用场景。
+
+
+
+
+类型
+使用场景
+
+
+
+话题Topic
+:star:单工通信，适用于一对多场景（如传感器数据流）。
+
+
+服务Service
+:star:适合同步任务，节点函数调用。:star:可以是简单请求&#x2F;响应式交互场景，如询问节点当前状态
+
+
+动作Action
+:star:适合异步任务，:star:可以是大量请求&#x2F;响应式交互场景（如实时通信），:star:尤其是执行过程不能立即完成的（如导航前往某一地点），:star:也可以是后台任务分配的场景下使用。
+
+
+
+每一种通信方式都有自己的应用场景。在消息是第一公民的ROS中，我们在设计软件的时候首先就要想到每一种消息采用的通信方式是怎样的，并且通过ROS节点图的方式画出来，以指导软件开发工作。
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2022/01/04/2022q1/127-ros-note-plus/" title="【机器人】满级码农入门ROS1机器人编程QA">     <img class="post_bg" src="https://image.discover304.top/leishen_play.jpg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【机器人】满级码农入门ROS1机器人编程QA"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/04/2022q1/127-ros-note-plus/" title="【机器人】满级码农入门ROS1机器人编程QA">【机器人】满级码农入门ROS1机器人编程QA</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-01-04T01:18:13.000Z" title="Created 2022-01-04 09:18:13">2022-01-04</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%9F%A5%E8%AF%86/">知识</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/ROS/">ROS</a></span></div><div class="content">
+
+编程思想：消息是ROS程序的一等公民。
+
+
+碎碎念：Hello米娜桑，这里是英国留学中的杨丝儿。我的博客技术点集中在机器人、人工智能可解释性、数学、物理等等，感兴趣地点个关注吧，持续高质量输出中。唠嗑QQ群：兔叽的魔术工房 (942848525)B站账号：杨丝儿今天也在科学修仙（UP主跨站求个关注）
+
+:star:知识点整理
+【机器人】开发系统镜像制作指南
+【机器人】ROS1学习笔记：架构部分
+【机器人】ROS1工程案例：最简单的信息传递
+【机器人】ROS1工程案例：自定义消息类型
+【机器人】ROS1程序运行实用技巧
+【机器人】ROS1程序中的服务Service：精简解析
+【机器人】ROS1工程案例：服务和动作
+
+
+:question:问：ROS框架的设计理念是怎么样的？
+ROS2采用分布式架构，采用自发现的方式进行节点间的通信建立。
+ROS1相对就显得不伦不类，因为rosmaster，也就是主节点的存在，ROS1的架构介于分布式系统和客户端&#x2F;服务端系统之间。
+主节点负责命名，起到和地址字典类似的作用。
+
+
+:o:答：ROS1关键词域graph TB
+    subgra ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2022/01/03/2022q1/131-inner-net-break/" title="【随记】内网穿透记录">     <img class="post_bg" src="https://image.discover304.top/huashi6-shichen.jpeg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【随记】内网穿透记录"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/03/2022q1/131-inner-net-break/" title="【随记】内网穿透记录">【随记】内网穿透记录</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-01-03T09:11:28.000Z" title="Created 2022-01-03 17:11:28">2022-01-03</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%AE%B0%E5%BD%95/">记录</a></span></div><div class="content">NatsApp 解决一切，参照手册。
+需要注意，使用TCP连接的是远程桌面，使用Web连接的是网页内容。
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2022/01/03/2021q4/121-robot-dev-docker-building-guide/" title="【机器人】开发系统Docker制作指南 施工中~">     <img class="post_bg" src="https://image.discover304.top/2021-12-25%2014-18-46%20%E7%9A%84%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【机器人】开发系统Docker制作指南 施工中~"></a></div><div class="recent-post-info"><a class="article-title" href="/2022/01/03/2021q4/121-robot-dev-docker-building-guide/" title="【机器人】开发系统Docker制作指南 施工中~">【机器人】开发系统Docker制作指南 施工中~</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-01-03T03:45:14.000Z" title="Created 2022-01-03 11:45:14">2022-01-03</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%9F%A5%E8%AF%86/">知识</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/ROS/">ROS</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/Docker/">Docker</a></span></div><div class="content">
+接上文： 机器人开发系统镜像制作指南
+
+Docker的优势</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/12/31/2021q4/130-2021-data-summary-and-review/" title="【随记】2021年数据收集整理和总结">     <img class="post_bg" src="https://image.discover304.top/genshin_yunjin.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【随记】2021年数据收集整理和总结"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/12/31/2021q4/130-2021-data-summary-and-review/" title="【随记】2021年数据收集整理和总结">【随记】2021年数据收集整理和总结</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-12-31T04:20:50.000Z" title="Created 2021-12-31 12:20:50">2021-12-31</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E8%AE%B0%E5%BD%95/">记录</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%A7%AF%E7%B4%AF/">积累</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%BB%8F%E9%AA%8C/">经验</a></span></div><div class="content">
+比起粉丝数和播放数，我更关心的是帮到了多少人，有多少人从我这里受益。如果这个数字是1，我我也会很满足。
+
+
+:star:自省吾日三省吾身，到了年末，也该是总结一下的时候了，今年还是说了挺多金句的。
+
+:sparkles:关于自省有些人叫做这种自省是内耗，我认为这么想是不对的。思考自己之前的做法是否有差错，是在为未来考虑，避免出现同样的差错。
+就算是不断地自省在我现在这个阶段也是正确的。孔子不也说了，三十不惑，00后明天才刚刚22，正是天天烦恼的年纪。
+每天把自己的烦恼自己的思考整理下来，慢慢就能够达到那种大人的境界了。
+
+:sparkles:关于内卷卷，都可以卷。但是，要有计划的“摆烂”。不会休息的人，不会学习。
+我之前有个访谈，直接给了我个称号，卷王中王，我头都笑掉了。确实，这个时代大伙都在卷，在，用标准一些的定义讲，在把更多的精力投入在没有价值的地方。
+但是这里，这个所谓的标准解释其实漏掉了一点，那就是“盲目”。你不能说一个科学家在一个课题上每天比同事拼命就叫做卷，另一个更合适的词叫做敬业。你更不能说以前的防疫志愿者，竞争着每天的在岗时长是卷，那是负责。只有盲目的付出，不知道自己 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/12/31/2021q4/129-book-reading-thinking/" title="【随记】怎样阅读一本书-杨丝儿Ver.">     <img class="post_bg" src="https://image.discover304.top/book_gilr_shy.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【随记】怎样阅读一本书-杨丝儿Ver."></a></div><div class="recent-post-info"><a class="article-title" href="/2021/12/31/2021q4/129-book-reading-thinking/" title="【随记】怎样阅读一本书-杨丝儿Ver.">【随记】怎样阅读一本书-杨丝儿Ver.</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-12-31T04:00:39.000Z" title="Created 2021-12-31 12:00:39">2021-12-31</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/Markdown/">Markdown</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%AE%B0%E5%BD%95/">记录</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="content">
+书面向的读者群体存在差异，理解这部分群体的问题，洞悉作者的文意，寻找自己的不同。
+
+</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/12/29/2021q4/114-paper-management-tools/" title="【研究】论文管理工具调研">     <img class="post_bg" src="https://image.discover304.top/lan_didi_qver.jpg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【研究】论文管理工具调研"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/12/29/2021q4/114-paper-management-tools/" title="【研究】论文管理工具调研">【研究】论文管理工具调研</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-12-29T01:14:39.000Z" title="Created 2021-12-29 09:14:39">2021-12-29</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%8F%82%E8%80%83/">参考</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%B5%84%E6%96%99/">资料</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a></span></div><div class="content">详见文末参考链接。
+:star:横向比较
+
+
+索引
+名称
+可靠性
+易用性
+云备份
+PDF阅读&#x2F;编辑
+跨平台
+中文支持
+免费
+
+
+
+1
+EndNote
+8
+5
+:black_circle:
+:red_circle:
+:black_circle:
+:black_circle:
+:red_circle:
+
+
+2
+Citavi
+5
+8
+:red_circle:
+:black_circle:
+:red_circle:
+:white_circle:
+:black_circle:
+
+
+3
+Mendeley
+6
+6
+:black_circle:
+:red_circle:
+:black_circle:
+:white_circle:
+:black_circle:
+
+
+4
+Readcube
+
+
+:black_circle:
+:black_circle:
+:white_circle:
+:white_circle:
+:black_circle:
+
+
+5
+Zotero
+
+
+:black_circle:
+:white_circle:
+:black_circle:
+:white_circle:
+:black ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/12/27/2021q4/126-markdown-slides/" title="【Markdown】幻灯片制作 施工中~">     <img class="post_bg" src="https://image.discover304.top/book_gilr_shy.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【Markdown】幻灯片制作 施工中~"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/12/27/2021q4/126-markdown-slides/" title="【Markdown】幻灯片制作 施工中~">【Markdown】幻灯片制作 施工中~</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-12-27T00:50:27.000Z" title="Created 2021-12-27 08:50:27">2021-12-27</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/Markdown/">Markdown</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%AE%B0%E5%BD%95/">记录</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/12/22/2021q4/125-linux-source-command/" title="【Linux】Source 命令解释">     <img class="post_bg" src="https://image.discover304.top/sky_whale.jpg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【Linux】Source 命令解释"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/12/22/2021q4/125-linux-source-command/" title="【Linux】Source 命令解释">【Linux】Source 命令解释</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-12-22T07:43:49.000Z" title="Created 2021-12-22 15:43:49">2021-12-22</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/Linux/">Linux</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%9F%A5%E8%AF%86/">知识</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="content">source filename 与 sh filename 及./filename执行脚本的区别：
+
+当shell脚本具有可执行权限时，用sh filename与./filename执行脚本是没有区别得。./filename是因为当前目录没有在PATH中，所有”.”是用来表示当前目录的。
+sh filename 重新建立一个子shell，在子shell中执行脚本里面的语句，该子shell继承父shell的环境变量，但子shell新建的、改变的变量不会被带回父shell，除非使用export。
+source filename：这个命令其实只是简单地读取脚本里面的语句依次在当前shell里面执行，没有建立新的子shell。那么脚本里面所有新建、改变变量的语句都会保存在当前shell里面。
+
+注：常用的bash属于shell的一种，其他的还包括zsh和byobu。
+</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/12/22/2021q4/124-js-advance/" title="【JavaScript】 进阶教程 施工中~">     <img class="post_bg" src="https://image.discover304.top/jslogo.webp?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【JavaScript】 进阶教程 施工中~"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/12/22/2021q4/124-js-advance/" title="【JavaScript】 进阶教程 施工中~">【JavaScript】 进阶教程 施工中~</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-12-22T02:39:42.000Z" title="Created 2021-12-22 10:39:42">2021-12-22</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%9F%A5%E8%AF%86/">知识</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/JavaScript/">JavaScript</a></span></div><div class="content">一、原型与原先链原型（prototype）1、函数的prototype属性每个函数都有一个prototype属性。它默认指向一个Object空对象（即成为：原型对象）
+原型对象中有一个属性constructor，它指向函数对象
+2、给原型对象添加属性（一般都是方法）作用：函数的所有实例对象自动拥有原型中的属性（方法）
+123456789101112131415161718// 每个函数都有一个prototype属性。它默认指向一个Object空对象（即成为：原型对象）console.log(Date.prototype, typeof Date.prototype);function fun()&#123;    &#125;console.log(fun.prototype);// 默认指向一个object空对象（没有我们定义的属性）// 原型对象中有一个属性constructor，它指向函数对象console.log(Date.prototype.constructor === Date); // trueconsole.log(fun.prototype.constructor  ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/12/21/2021q4/123-ai-question-collection/" title="【人工智能】面试问题整理">     <img class="post_bg" src="https://image.discover304.top/pika_majiang.jpg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【人工智能】面试问题整理"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/12/21/2021q4/123-ai-question-collection/" title="【人工智能】面试问题整理">【人工智能】面试问题整理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-12-21T06:17:49.000Z" title="Created 2021-12-21 14:17:49">2021-12-21</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E6%95%B4%E7%90%86/">整理</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a></span></div><div class="content">机器学习部分一、特征工程1. 特征归一化1）什么是特征归一化对数值类型的特征做归一化可以将所有的特征都统一到一个大致相同的数值区间内。
+2）为什么要特征归一化为了消除数据特征之间的量纲影响，我们需要对特征进行归一化处理，使得不同指标之间具有可比性。例如，分析一个人的身高和体重对健康的影响，如果使用米（m）和千克（kg）作为单位，那么身高特征会在1.6～1.8m的数值范围内，体重特征会在50～100kg的范围内，分析出来的结果显然会倾向于数值差别比较大的体重特征。想要得到更为准确的结果，就需要进行特征归一化（Normalization）处理，使各指标处于同一数值量级，以便进行分析。
+3）特征归一化常用的方法
+线性函数归一化（Min-Max Scaling）。它对原始数据进行线性变换，使结果映射到[0，1]的范围，实现对原始数据的等比缩放。
+零均值归一化（Z-Score Normalization）。它会将原始数据映射到均值为0、标准差为1的分布上。
+
+4）归一化处理适用模型
+应用归一化的模型。在实际应用中，通过梯度下降法求解的模型通常是需要归一化的，包括线性回归、逻辑回归、支持向量机、神 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/12/21/2021q4/122-ai-summary/" title="【人工智能】技术总结">     <img class="post_bg" src="https://image.discover304.top/plane_moveing_neight.jpg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【人工智能】技术总结"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/12/21/2021q4/122-ai-summary/" title="【人工智能】技术总结">【人工智能】技术总结</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-12-21T06:17:06.000Z" title="Created 2021-12-21 14:17:06">2021-12-21</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E6%80%BB%E7%BB%93/">总结</a></span></div><div class="content">一、机器学习1. 基本概念1）机器学习的分类
+有监督学习、无监督学习、半监督学习
+
+有监督学习：数据做标注，模型同时接受输入+输出，主要包括回归、分类问题
+无监督学习：数据不做标注，模型只接收输入，主要包括聚类
+半监督学习：有监督、无监督学习结合
+
+
+基于模型的学习、基于实例的学习
+
+批量学习、增量学习
+
+
+2）机器学习的基本问题
+回归问题：预测结果是连续的
+分类问题：预测结果是离散的
+聚类问题：无监督学习，根据样本的相似程度，将相似度高的划分到同一个聚簇中
+降维问题：缩小数据的维度、规模
+
+3）机器学习的一般过程
+数据收集 → 数据清洗 → 选择模型 → 训练 → 评估 → 测试 → 应用及维护
+
+2. 数据预处理1）标准化：将样本处理为每列均值为0、标准差为1
+2）范围缩放：将每列最小值转换为0，最大值转换为1
+3）归一化：将数据转换为0~1之间的百分比（按行）
+4）二值化：将数据转换为0&#x2F;1两个值
+5）独热编码：将数据转换为一个1和一串0
+6）标签编码：字符串转换为数字
+3. 回归问题1）线性回归
+线性模型：$y &#x3D; w^T x + b$​
+
+线性回归：利用线 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/12/20/2021q4/120-robot-dev-mirror-building-process/" title="【机器人】开发系统镜像制作指南">     <img class="post_bg" src="https://image.discover304.top/leishen_sama_cover.jpg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【机器人】开发系统镜像制作指南"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/12/20/2021q4/120-robot-dev-mirror-building-process/" title="【机器人】开发系统镜像制作指南">【机器人】开发系统镜像制作指南</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-12-20T03:40:39.000Z" title="Created 2021-12-20 11:40:39">2021-12-20</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E6%8A%80%E6%9C%AF/">技术</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%9F%A5%E8%AF%86/">知识</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/ROS/">ROS</a></span></div><div class="content">
+
+授之以鱼不如授之以渔
+
+注意：以下的操作均在虚拟机上完成。虚拟机可以使用免费的Virtual Box或者相对高级的VMare。
+构建系统镜像使用Ubuntu Server
+安装GUI桌面
+1234567sudo apt updatesudo apt upgradesudo add-apt-repository universesudo add-apt-repository multiversesudo apt install taskselsudo taskselreboot
+
+软件列表系统必备
+apt-fast：替换apt或者apt-get指令，提供高效的多线程并行下载。
+
+ROS软件
+ROS1：虽然官方教程中提到，可以更换ROS的国内镜像源，但是因为之后需要使用github的验证，所以就算是换了国内的，还是需要能上github才行。这里还是建议科学上网。
+ROS2：一定要确认每一次的安装指令无报错。
+
+测试安装ROS1
+1234567# rosrunrosmasterrosrun rospy_tutorials talkerrosrun rospy_tutorials list ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/12/17/2021q4/118-ros-note-code-serv/" title="【机器人】ROS1工程案例：服务和动作">     <img class="post_bg" src="https://image.discover304.top/bai_gu_gu_head.jpg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【机器人】ROS1工程案例：服务和动作"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/12/17/2021q4/118-ros-note-code-serv/" title="【机器人】ROS1工程案例：服务和动作">【机器人】ROS1工程案例：服务和动作</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-12-17T03:16:53.000Z" title="Created 2021-12-17 11:16:53">2021-12-17</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%9F%A5%E8%AF%86/">知识</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/ROS/">ROS</a></span></div><div class="content">
+我们这一部分模拟一个低能的阶乘计算器，来比较Service和Action的差异。
+
+
+碎碎念：Hello米娜桑，这里是英国留学中的杨丝儿。我的博客技术点集中在机器人、人工智能可解释性、数学、物理等等，感兴趣地点个关注吧，持续高质量输出中。唠嗑QQ群：兔叽的魔术工房 (942848525)B站账号：杨丝儿今天也在科学修仙（UP主跨站求个关注）
+
+本系列用时9天，博主也是从零开始，尽力去写的，如果发现了错误一定要私信告诉我呀。这么努力的博主，关注一下吧。
+
+:star:案例目标说明以下问题
+
+ROS中message，action，service的定义方式大同小异。
+在消息作为一等公民的ROS软件中，灵活使用面向对象思想。
+文件的命名问题，很多文件的命名是很有讲究的，节点名也是。
+ROS使用大量多线程并行的思想，需要理解并行与并发、python的主锁以及阻塞和上锁的区别。
+
+
+:star:准备工作
+基础步骤参见：【机器人】ROS程序框架：架构部分
+创建factorial_calculator包
+
+
+:star:服务部分:sparkles:定义文件创建一个名为FactorialService ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/12/17/2021q4/118-ros-note2/" title="【机器人】ROS1程序中的服务Service：精简解析">     <img class="post_bg" src="https://image.discover304.top/bai_gu_gu_head.jpg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【机器人】ROS1程序中的服务Service：精简解析"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/12/17/2021q4/118-ros-note2/" title="【机器人】ROS1程序中的服务Service：精简解析">【机器人】ROS1程序中的服务Service：精简解析</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-12-17T03:16:52.000Z" title="Created 2021-12-17 11:16:52">2021-12-17</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%9F%A5%E8%AF%86/">知识</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/ROS/">ROS</a></span></div><div class="content">
+基础部分参见：【机器人】ROS程序框架：架构部分
+
+
+本系列用时8天，博主也是从零开始，尽力去写的，如果发现了错误一定要私信告诉我呀。这么努力的博主，关注一下吧。
+作者：杨丝儿座右铭：始于兴趣，源于热爱，成于投入。介绍：爱丁堡大学 人工智能专业。技术兴趣点集中在机器人、人工智能可解释性、数学、物理等等。聊天吹水QQ群：兔叽的魔术工房 (942848525)个人博客：discover304.top个人B站账号：杨丝儿今天也在科学修仙（UP主跨站求个三连加关注）
+
+在ROS中有三个主要的通信方式：话题、服务和动作。我们之前已经完成话题的学习，并且参考工程案例（【机器人】ROS工程案例：基础部分）完成了最简单的ROS程序。
+接下来，我们对服务和动作相关的知识点进行整理，包括提出契机，定义方法及其流程，执行方法。
+关于代码以及使用部分，参见：【机器人】ROS工程案例：服务和动作。通信方法间的对比，参见：【机器人】ROS消息机制横向对比，到底该如何进行选择？
+
+:star:服务有人说：服务调用非常适合只需要偶尔去做并且会在有限时间完成的事情。确实运行服务的场景是这样的，但是这是表象，服务的价值 ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/12/17/2021q4/118-ros-note-code-naming/" title="【机器人】ROS1程序运行指北：启动、重命名、launch">     <img class="post_bg" src="https://image.discover304.top/bai_gu_gu_head.jpg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【机器人】ROS1程序运行指北：启动、重命名、launch"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/12/17/2021q4/118-ros-note-code-naming/" title="【机器人】ROS1程序运行指北：启动、重命名、launch">【机器人】ROS1程序运行指北：启动、重命名、launch</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-12-17T03:16:51.000Z" title="Created 2021-12-17 11:16:51">2021-12-17</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%9F%A5%E8%AF%86/">知识</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/ROS/">ROS</a></span></div><div class="content">
+本案例采用ROS1提供的示例，程序进行演示。
+
+
+本系列用时7天，博主也是从零开始，尽力去写的，如果发现了错误一定要私信告诉我呀。这么努力的博主，关注一下吧。
+作者：杨丝儿座右铭：始于兴趣，源于热爱，成于投入。介绍：爱丁堡大学 人工智能专业。技术兴趣点集中在机器人、人工智能可解释性、数学、物理等等。聊天吹水QQ群：兔叽的魔术工房 (942848525)个人博客：discover304.top个人B站账号：杨丝儿今天也在科学修仙（UP主跨站求个三连加关注）
+
+:star:运行方法
+执行$roscore来启动roscore
+包下执行运行：$rosrun &lt;包名&gt; &lt;包内可执行程序/python脚本&gt; [&lt;其他参数&gt;]
+
+
+:star:重命名
+本来我以为重命名是个多么困难的任务，实践之后发现，这是个超级简单的小技巧。
+
+一个机器人总会有很多重复的组件，像是两条手臂或者两对轮子，亦或是前后左右四个摄像头。我们可以采用重命名的方式对每一个组件上运行的程序进行整理，便于软件的开发和管理。
+ROS中的重命名有三种，修改命名空间、修改节点名、修改主题&#x2F;消 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/12/17/2021q4/118-ros-note-code-type/" title="【机器人】ROS1工程案例：自定义消息类型">     <img class="post_bg" src="https://image.discover304.top/bai_gu_gu_head.jpg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【机器人】ROS1工程案例：自定义消息类型"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/12/17/2021q4/118-ros-note-code-type/" title="【机器人】ROS1工程案例：自定义消息类型">【机器人】ROS1工程案例：自定义消息类型</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-12-17T03:16:50.000Z" title="Created 2021-12-17 11:16:50">2021-12-17</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%9F%A5%E8%AF%86/">知识</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/ROS/">ROS</a></span></div><div class="content">
+本案例在之前的基础上进行扩展，传递一个自定义的复数类消息。
+
+
+本系列用时7天，博主也是从零开始，尽力去写的，如果发现了错误一定要私信告诉我呀。这么努力的博主，关注一下吧。
+作者：杨丝儿座右铭：始于兴趣，源于热爱，成于投入。介绍：爱丁堡大学 人工智能专业。技术兴趣点集中在机器人、人工智能可解释性、数学、物理等等。聊天吹水QQ群：兔叽的魔术工房 (942848525)个人博客：discover304.top个人B站账号：杨丝儿今天也在科学修仙（UP主跨站求个三连加关注）
+
+:sparkles:注意
+本文只提供在Linux平台上的代码演示和最基本的注释，不进行逻辑的解释。
+相关解释以及需要用到的基础知识参见：【机器人】ROS程序框架：架构部分
+本案例的前置任务包括环境搭建，工作区创建，基本软件（消息传递communicate_bot）代码，参见：【机器人】ROS1工程案例：基础部分
+
+
+:sparkles:定义消息我们设计一个传递复数类型，复数类。
+在包下新建msg文件夹，并在文件夹内新建Complex.msg文件
+12mkdir msgtouch Complex.msg
+
+编辑Comp ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/12/17/2021q4/118-ros-note-code/" title="【机器人】ROS1工程案例：基础部分">     <img class="post_bg" src="https://image.discover304.top/bai_gu_gu_head.jpg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【机器人】ROS1工程案例：基础部分"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/12/17/2021q4/118-ros-note-code/" title="【机器人】ROS1工程案例：基础部分">【机器人】ROS1工程案例：基础部分</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-12-17T03:16:48.000Z" title="Created 2021-12-17 11:16:48">2021-12-17</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%9F%A5%E8%AF%86/">知识</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/ROS/">ROS</a></span></div><div class="content">
+手把手教你搭建一个传递数字消息的机器人程序。
+
+
+:sparkles:注意本文只提供在Linux平台上的代码演示和最基本的注释，不进行逻辑的解释。
+相关解释以及需要用到的基础知识参见：【机器人】ROS程序框架：架构部分
+
+:sparkles:安装ROS1环境需要用到的技术以及流程参见：【机器人】开发系统镜像制作指南
+
+:sparkles:搭建环境12345cd ~/Desktop# 在桌面上新建工作区，方便观看过程mkdir -p rob_dev_ws/srccd rob_dev_ws/srccatkin_init_workspace
+
+:sparkles:创建包在src路径下执行
+12# 这里使用python，所以我们依赖 rospycatkin_create_pkg communicate_bot rospy
+
+:sparkles:开始编程包内src路径下放置我们的代码。
+首先是发送端，文件名叫做：topic_publisher.py
+1234567891011121314151617181920212223242526#!/usr/bin/env python3import r ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/12/17/2021q4/118-ros-note/" title="【机器人】ROS1程序框架：架构部分">     <img class="post_bg" src="https://image.discover304.top/bai_gu_gu_head.jpg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【机器人】ROS1程序框架：架构部分"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/12/17/2021q4/118-ros-note/" title="【机器人】ROS1程序框架：架构部分">【机器人】ROS1程序框架：架构部分</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-12-17T03:16:47.000Z" title="Created 2021-12-17 11:16:47">2021-12-17</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E7%9F%A5%E8%AF%86/">知识</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/ROS/">ROS</a></span></div><div class="content">描述
+ROS是一个开发机器人软件的框架，软件被设计成许多互相之间高速传递信息的小程序。
+ROS是一个介于典型客户端&#x2F;服务器系统和完全分布式系统之间，因为有一个处于中央角色的roscore在为点对点信息服务提供命名服务。
+ROS节点交换信息的渠道叫做话题（topic），一个定义了类型的消息流。
+ROS对大量的底层实现进行了封装，很多网络编程中常见的概念在这里被封装成了高级接口。
+ROS图中的节点表示的是独立运行的程序，而图中的边表示数据流。这些数据可以是传感器的数据、执行器的命令、规划器的状态等信息。
+
+辅助工具
+介绍：catkin是ROS的构建系统：ROS用于可执行程序、库、脚本和其他代码可以用的接口的一系列工具。
+技巧：使用rqt_graph可以清晰看到当前启动节点的ROS图。
+技巧：使用rostopic检查当前系统状态。相关帮助使用$rostopic -h进行查看
+技巧：可以使用rosmsg来查看是否有已经满足你的需求的类型
+
+
+软件结构ROS以包括代码、数据和文档在内的包的形式进行管理。
+核心结构graph BT
+    roscore(roscore)
+    nod ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/12/15/2021q4/116-2-autodrive-terms-collection/" title="【自动驾驶】技术笔记：模拟器专题">     <img class="post_bg" src="https://image.discover304.top/autodrive/cover/car_black_white.jpg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【自动驾驶】技术笔记：模拟器专题"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/12/15/2021q4/116-2-autodrive-terms-collection/" title="【自动驾驶】技术笔记：模拟器专题">【自动驾驶】技术笔记：模拟器专题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-12-15T01:19:00.000Z" title="Created 2021-12-15 09:19:00">2021-12-15</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%8F%82%E8%80%83/">参考</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%B5%84%E6%96%99/">资料</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/">自动驾驶</a></span></div><div class="content">
+如何在无人驾驶的各个模块高速迭代的同时保持整体系统的能够完全应对当前的环境场景？模拟器（又称仿真器）就是为了解决这一问题而诞生的。
+
+模拟器的必要性随着车辆及测试场景的增多，我们得到的一个实际经验是：“No Simulation, No Scalability”（没有模拟仿真，就没有可扩展性）。
+模拟器的优势：
+
+极大地提高开发效率
+测试和验证极端场景
+最大化发挥沉淀数据的作用
+孵化人工智能和场景驱动的重要先决条件
+
+模拟器平台将以两种方式处理每个模块的输出数据，一种是进行多方位多角度的显示，便于开发人员对模块的输出结果进行校验和调试。另一种是基于某种评价标准，自动对输出数据进行评判和打分，并且将评判和打分的结果以详细数据报告的形式呈现。
+对模拟器系统的要求数据信息在车与外部环境的相互作用中产生了一个闭环。无人车的仿真系统就是寻求在软件环境中重塑这样的一个数据闭环，以测试车上的主要软件算法模块。
+
+模拟器系统有一个比较好的前端，从而更好地与后期的云端大规模模拟兼容。
+模拟器后端由四个部分组成：模块调度（调度引擎根据输入数据时序，调用各个软件模块，生成输出的数据包）、打分系统（根据数据 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/12/14/2021q4/116-1-autodrive-terms-collection/" title="【自动驾驶】技术笔记：ROS系统">     <img class="post_bg" src="https://image.discover304.top/autodrive/cover/car_black_white.jpg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【自动驾驶】技术笔记：ROS系统"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/12/14/2021q4/116-1-autodrive-terms-collection/" title="【自动驾驶】技术笔记：ROS系统">【自动驾驶】技术笔记：ROS系统</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-12-14T04:00:26.000Z" title="Created 2021-12-14 12:00:26">2021-12-14</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%8F%82%E8%80%83/">参考</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%B5%84%E6%96%99/">资料</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/">自动驾驶</a></span></div><div class="content">要求
+软硬件模块数据增加，运行期间难免有些模块会出现异常退出，或者导致系统崩溃。如何为系统提供自我修复能力？
+模块之间有很强的联系，如何管理模块间的有效通信？对于关键模块间的通信，信息不可丢失，不可有过大的延时。
+每个功能模块间如何进行资源的隔离，如何分配计算与内存资源，当资源不足时如何确认更高的优先级执行？
+
+边缘计算（用户端系统）ROS介绍注意：ROS并不是真正意义上的操作系统，只能算是中间件。
+ROS具有很强的代码可复用性和硬件抽象性能，采用分布式架构，通过各功能独立的节点实现消息传递任务的分层次运行，从而减轻实时计算的压力。同时ROS为常用的机器人和传感器提供了硬件驱动接口。
+ROS 本身是基于消息机制的，这样的做法使得开发者可以根据软件的功能把软件拆分成各个模块。ROS底层会识别某一个消息的使用者，然后把消息数据分发给他们。
+
+节点：实现运算功能的进程，ROS机器人仿真架构由功能独立的节点组成。
+节点管理器：Master 主要用来管理节点，每个节点都需要通过节点管理器实现节点名字的注册，节点之间相互查找也需要在节点管理器内进行。
+参数服务器：Parameter Server  ...</div></div></div><div class="recent-post-item"><div class="post_cover left_radius"><a href="/2021/12/14/2021q4/116-0-autodrive-terms-collection/" title="【自动驾驶】技术笔记：传感器专题">     <img class="post_bg" src="https://image.discover304.top/autodrive/cover/car_black_white.jpg?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【自动驾驶】技术笔记：传感器专题"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/12/14/2021q4/116-0-autodrive-terms-collection/" title="【自动驾驶】技术笔记：传感器专题">【自动驾驶】技术笔记：传感器专题</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-12-14T04:00:00.000Z" title="Created 2021-12-14 12:00:00">2021-12-14</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%8F%82%E8%80%83/">参考</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%B5%84%E6%96%99/">资料</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/">人工智能</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/">自动驾驶</a></span></div><div class="content">基础设备GPS
+使用三角测量法的定位原理，需要3个及以上的卫星位置数据。
+GPS精准定位的条件很苛刻，需要精准的时间戳，以及比较空旷的环境。
+复杂的城市环境会造成信号的反射与折射，产生多路径问题。同时GPS的更新频率低，不足以满足自动驾驶的需要。
+为了提高GPS的准确度，我们引入了差分GPS技术，对误差进行一个修正。
+
+IMU
+检测和测量加速度与旋转运动的传感器。
+常用的MEMS（Micro Electro-Mechanical Systems）的六轴惯性传感器，使用三个加速度传感器和是三个陀螺仪构成。
+无人车上采用的一般是中低级的MEMS，频率高，误差会随着时间累加，所以只可以在很短的时间内依赖惯性传感器进行定位。
+因为制作工艺的问题，IMU的测量会有一定的误差。主要是三种：偏移误差（零偏移）、比例误差（输入输出比）和背景白噪声。
+
+LiDAR
+激光雷达，准确率很高，计算难度相较于图像要低，作为无人车设计中的主传感器使用。
+点云：Point Cloud，收集到的数据是很多点的3维极坐标。基于点云和GPS的定位是采用的是贝叶斯法则，计算汽车所处位置的可能性。
+受到空气悬浮物的影响，极限 ...</div></div></div><div class="recent-post-item"><div class="post_cover right_radius"><a href="/2021/12/14/2021q4/117-tuopu/" title="【数学】到底什么是拓扑？">     <img class="post_bg" src="https://image.discover304.top/hutao_little_humo.jfif?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【数学】到底什么是拓扑？"></a></div><div class="recent-post-info"><a class="article-title" href="/2021/12/14/2021q4/117-tuopu/" title="【数学】到底什么是拓扑？">【数学】到底什么是拓扑？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2021-12-14T02:50:16.000Z" title="Created 2021-12-14 10:50:16">2021-12-14</time></span><span class="article-meta tags"><span class="article-meta__separator">|</span><i class="fas fa-tag article-meta__icon"></i><a class="article-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E5%8F%82%E8%80%83/">参考</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E8%B5%84%E6%96%99/">资料</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E7%A7%AF%E7%B4%AF/">积累</a><span class="article-meta__link">•</span><a class="article-meta__tags" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a></span></div><div class="content">
+目录@[TOC]
+
+定义注意：以下内容来自百度百科：拓扑
+拓扑（Topology）是研究几何图形或空间在连续改变形状后还能保持不变的一些性质的一个学科。它只考虑物体间的位置关系而不考虑它们的形状和大小。
+概念解释注意：以下内容大部分来自知乎：硬核科普：什么是拓扑？
+即使这两个对象在几何形状上有所不同，但它们在拓扑上完全等价。我们可以将橡皮泥拉伸成可以想象的任何奇怪形状，但在拓扑结构世界中，所有这些形状都完全相同。也许你对拉伸的形状没有什么概念，但是关于如何拉伸橡皮泥的游戏有一些规则：
+
+不允许在橡皮泥上打洞；
+不允许将橡皮泥上的两点捏合在一起（我们没法将球形的橡皮泥做成甜甜圈的形状）。
+
+如果我们在拉伸时违反了这些规则，那么这两个对象在拓扑上将不再等价。拓扑学家称这种不破坏既定规则的拉伸为同胚，这只是一种数学上精确地描述如何让橡皮泥的形状保持相同拓扑性质的方法。因此，如果我们可以得出两个拓扑空间之间的同胚性，则这些空间具有相同的拓扑，这就说到了咖啡杯和甜甜圈动画。
+
+在拓扑上区分三维对象的另一种常用方法是，想象在三维对象上面行走。例如，在球体上行走。假设你从某个点开始，一直绕着球体上 ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/4/"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">✨YangSier✨</div><div class="author-info__description">Love Everything You Like.</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">243</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">88</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">23</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/98639326"><i class="fab fa-bilibili"></i><span>Bilibili Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Discover304" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://twitter.com/Discover304" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.youtube.com/channel/UCuQQr55i3VCQuCPMTQnpzDA" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a><a class="social-icon" href="mailto:hobart.yang@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">✨动态更新：<p style="text-align:center">享受精彩大学生活中。</p>✨聊天划水QQ群：<p style="text-align:center"><strong>兔叽の魔术工房</strong><br>942-848-525</p>✨我们的口号是：<p style="text-align:center; color:#39C5BB">人工降神，机械飞升！</p><a target="_blank" rel="noopener" href='https://space.bilibili.com/98639326'><img src='/img/mikulittletrans.png'></a></div></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/2022q4/172-design-idea/" title="【思考】创新点子"><img src="https://image.discover304.top/blog-img/s19313212112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【思考】创新点子"/></a><div class="content"><a class="title" href="/2022/12/11/2022q4/172-design-idea/" title="【思考】创新点子">【思考】创新点子</a><time datetime="2022-12-11T11:08:37.000Z" title="Created 2022-12-11 19:08:37">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/2022q4/171-other-thought/" title="【思考】其他思考"><img src="https://image.discover304.top/blog-img/s19305112112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【思考】其他思考"/></a><div class="content"><a class="title" href="/2022/12/11/2022q4/171-other-thought/" title="【思考】其他思考">【思考】其他思考</a><time datetime="2022-12-11T11:08:17.000Z" title="Created 2022-12-11 19:08:17">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/2022q4/170-key-thought/" title="【思考】核心思考"><img src="https://image.discover304.top/blog-img/s19294112112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【思考】核心思考"/></a><div class="content"><a class="title" href="/2022/12/11/2022q4/170-key-thought/" title="【思考】核心思考">【思考】核心思考</a><time datetime="2022-12-11T11:08:06.000Z" title="Created 2022-12-11 19:08:06">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/09/2022q4/169-new-r/" title="R: Getting Into Project of R"><img src="https://image.discover304.top/blog-img/s18350812112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="R: Getting Into Project of R"/></a><div class="content"><a class="title" href="/2022/12/09/2022q4/169-new-r/" title="R: Getting Into Project of R">R: Getting Into Project of R</a><time datetime="2022-12-09T09:44:06.000Z" title="Created 2022-12-09 17:44:06">2022-12-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/08/000-some-words/" title="【整理】一些思考"><img src="https://image.discover304.top/blog-img/s18365512112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【整理】一些思考"/></a><div class="content"><a class="title" href="/2022/12/08/000-some-words/" title="【整理】一些思考">【整理】一些思考</a><time datetime="2022-12-08T04:27:28.000Z" title="Created 2022-12-08 12:27:28">2022-12-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/28/2022q3/167-2-sp-review/" title="SP Modules Review Contents (3)"><img src="https://image.discover304.top/blog-img/s11220010012022.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="SP Modules Review Contents (3)"/></a><div class="content"><a class="title" href="/2022/11/28/2022q3/167-2-sp-review/" title="SP Modules Review Contents (3)">SP Modules Review Contents (3)</a><time datetime="2022-11-28T07:24:39.000Z" title="Created 2022-11-28 15:24:39">2022-11-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/17/2022q3/166-10-connected-speech-hidden-markov-model/" title="SP Module 10 Connected Speech &amp; HMM Training"><img src="https://image.discover304.top/blog-img/s11220010012022.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="SP Module 10 Connected Speech &amp; HMM Training"/></a><div class="content"><a class="title" href="/2022/11/17/2022q3/166-10-connected-speech-hidden-markov-model/" title="SP Module 10 Connected Speech &amp; HMM Training">SP Module 10 Connected Speech &amp; HMM Training</a><time datetime="2022-11-17T01:47:12.000Z" title="Created 2022-11-17 09:47:12">2022-11-17</time></div></div></div></div></div><div class="card-widget card-webinfo"><div class="card-content"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">243</div></div><div class="webinfo-item"><div class="item-name">Run time :</div><div class="item-count" id="runtimeshow" data-publishDate="2020-05-21T23:00:00.000Z"></div></div><div class="webinfo-item"><div class="item-name">Total Count :</div><div class="item-count">393.1k</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-03-13T13:24:47.304Z"></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://image.discover304.top/wallpaper/anime-anime-girls-original-characters-short-hair-wallpaper-preview.jpg?imageView2/2/h/600)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By ✨YangSier✨</div><div><a target="_blank" href="https://beian.miit.gov.cn/" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;"> 冀ICP备2021025381号-1</p></a></div><div><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=13060602001430" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/img/beian.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">冀公网安备 13060602001430号</p></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.spacingElementById('content-inner')
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.spacingElementById('content-inner')
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>function subtitleType () {
+  if (false) { 
+    var typed = new Typed("#subtitle", {
+      strings: "Space of Tech, Love and Thought.".split(","),
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50
+    })
+  } else {
+    document.getElementById("subtitle").innerHTML = 'Space of Tech, Love and Thought.'
+  }
+}
+
+if (false) {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.jsdelivr.net/npm/typed.js/lib/typed.min.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}</script><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'neutral',
+      })
+      false && mermaid.init()
+    })
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script>(function(){
+  const bp = document.createElement('script');
+  const curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  bp.dataset.pjax = ''
+  const s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})()</script></div></body></html>

@@ -1,0 +1,578 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>【Python】从基础变量类型到各种容器（列表、字典、元组、集合、字符串） | Yang's Harbor</title><meta name="keywords" content="学习,记录,Python,笔记"><meta name="author" content="✨YangSier✨,hobart.yang@qq.com"><meta name="copyright" content="✨YangSier✨"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="【Python】笔记第二部分全系列导航见：Python教程整理    :four_leaf_clover:碎碎念:four_leaf_clover:Hello米娜桑，这里是英国留学中的杨丝儿。我的博客的关键词集中在算法、机器人、人工智能、数学等等，点个关注吧，持续高质量输出中。:cherry_blossom:唠嗑QQ群：兔叽的魔术工房 (942848525):star:B站账号：杨丝儿今天也在科">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【Python】从基础变量类型到各种容器（列表、字典、元组、集合、字符串）">
+<meta property="og:url" content="https://discover304.top/2021/09/03/2021q3/043-python-note/index.html">
+<meta property="og:site_name" content="Yang&#39;s Harbor">
+<meta property="og:description" content="【Python】笔记第二部分全系列导航见：Python教程整理    :four_leaf_clover:碎碎念:four_leaf_clover:Hello米娜桑，这里是英国留学中的杨丝儿。我的博客的关键词集中在算法、机器人、人工智能、数学等等，点个关注吧，持续高质量输出中。:cherry_blossom:唠嗑QQ群：兔叽的魔术工房 (942848525):star:B站账号：杨丝儿今天也在科">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://image.discover304.top/python900-500.jpg?imageView2/2/h/300">
+<meta property="article:published_time" content="2021-09-03T00:44:16.000Z">
+<meta property="article:modified_time" content="2022-01-06T09:12:32.000Z">
+<meta property="article:author" content="✨YangSier✨">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="记录">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://image.discover304.top/python900-500.jpg?imageView2/2/h/300"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://discover304.top/2021/09/03/2021q3/043-python-note/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><meta name="google-site-verification" content="ilqpfk3vkgzDNNikz_V37-DOvRyi5wv4Hoi_eyBqvTg"/><meta name="msvalidate.01" content="49D9A50CCF9744E17274791468EDB517"/><meta name="baidu-site-verification" content="code-V24KosyVh1"/><meta name="360-site-verification" content="bd8859c3d74dfa3e8aeee9db30c94bd2"/><meta name="yandex-verification" content="f28ec9bbd50c56f5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?8030f6052f2fed6a4704d96619f090d6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="stylesheet" href="/css/font.css" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":200,"languages":{"author":"Author: ✨YangSier✨","link":"Link: ","source":"Source: Yang's Harbor","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#ffc910","bgDark":"#02c3f6","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: true
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
+
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-01-06 17:12:32'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Yang's Harbor" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">243</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">88</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">23</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Links</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Articles</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://image.discover304.top/python900-500.jpg?imageView2/2/h/300)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Yang's Harbor</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Links</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Articles</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">【Python】从基础变量类型到各种容器（列表、字典、元组、集合、字符串）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-09-03T00:44:16.000Z" title="Created 2021-09-03 08:44:16">2021-09-03</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-01-06T09:12:32.000Z" title="Updated 2022-01-06 17:12:32">2022-01-06</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/NoteBook/">NoteBook</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/NoteBook/PythonNote/">PythonNote</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word count:</span><span class="word-count">3.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading time:</span><span>13min</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>【Python】笔记第二部分<br>全系列导航见：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Discover304/article/details/122347824">Python教程整理</a></p>
+</blockquote>
+<hr>
+<blockquote>
+<p><strong>:four_leaf_clover:碎碎念:four_leaf_clover:</strong><br>Hello米娜桑，这里是英国留学中的杨丝儿。我的博客的关键词集中在算法、机器人、人工智能、数学等等，点个关注吧，持续高质量输出中。<br><strong>:cherry_blossom:唠嗑QQ群</strong>：<a target="_blank" rel="noopener" href="https://jq.qq.com/?_wv=1027&k=EaGddTQg">兔叽的魔术工房</a> (942848525)<br><strong>:star:B站账号</strong>：<a target="_blank" rel="noopener" href="https://space.bilibili.com/98639326">杨丝儿今天也在科学修仙</a>（UP主跨站求个关注）</p>
+</blockquote>
+<hr>
+<p><strong>在不知道怎么写的时候先不要开始敲代码，可以先把思路写下来。</strong></p>
+<hr>
+<h2 id="star2-容器"><a href="#star2-容器" class="headerlink" title=":star2:容器"></a>:star2:容器</h2><table>
+<thead>
+<tr>
+<th>种类</th>
+<th>名称</th>
+<th>存储</th>
+<th>可变性</th>
+<th>结构</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>字符串</td>
+<td>str</td>
+<td>存储字符编码</td>
+<td>不可变</td>
+<td>序列</td>
+</tr>
+<tr>
+<td>列表</td>
+<td>list</td>
+<td>存储变量</td>
+<td>可变</td>
+<td>序列</td>
+</tr>
+<tr>
+<td>元组</td>
+<td>tuple</td>
+<td>存储变量</td>
+<td>不可变</td>
+<td>序列</td>
+</tr>
+<tr>
+<td>字典</td>
+<td>dict</td>
+<td>存储键*值对</td>
+<td>可变</td>
+<td>散列</td>
+</tr>
+<tr>
+<td>集合</td>
+<td>set</td>
+<td>存储键*</td>
+<td>可变</td>
+<td>散列</td>
+</tr>
+</tbody></table>
+<p>*注：能充当键的数据必须是不可变数据类型。</p>
+<hr>
+<h3 id="star-容器的操作"><a href="#star-容器的操作" class="headerlink" title=":star:容器的操作"></a>:star:容器的操作</h3><h4 id="sparkles-数学运算符"><a href="#sparkles-数学运算符" class="headerlink" title=":sparkles:数学运算符"></a>:sparkles:数学运算符</h4><p><code>+</code>：用于拼接两个容器。</p>
+<p><code>+=</code>：用原容器与右侧容器拼接,并重新绑定变量。</p>
+<p><code>*</code>：重复生成容器元素。</p>
+<p><code>*=</code>：用原容器生成重复元素, 并重新绑定变量。</p>
+<p><code>&lt; &lt;= &gt; &gt;= == !=</code>：依次比较两个容器中元素,一但不同则返回比较结果。</p>
+<!-- endtab -->
+
+<h4 id="sparkles-成员运算符"><a href="#sparkles-成员运算符" class="headerlink" title=":sparkles:成员运算符"></a>:sparkles:成员运算符</h4><p>成员运算符：如果在指定的序列中找到值，返回bool类型。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">数据 <span class="keyword">in</span> 序列</span><br><span class="line">数据 <span class="keyword">not</span> <span class="keyword">in</span> 序列</span><br></pre></td></tr></table></figure>
+
+<!-- endtab -->
+
+<h4 id="sparkles-索引"><a href="#sparkles-索引" class="headerlink" title=":sparkles:索引"></a>:sparkles:索引</h4><p>索引：定位单个容器元素。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">容器[整数]</span><br></pre></td></tr></table></figure>
+
+<p>正向索引：从0开始，第二个索引为1，最后一个为len(s)-1。</p>
+<p>反向索引：从-1开始，-1代表最后一个，-2代表倒数第二个，以此类推,第一个是-len(s)。</p>
+<!-- endtab -->
+
+<h4 id="sparkles-切片"><a href="#sparkles-切片" class="headerlink" title=":sparkles:切片"></a>:sparkles:切片</h4><p>切片：定位多个容器元素。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">容器[开始索引:结束索引:步长]</span><br></pre></td></tr></table></figure>
+
+<p>前闭后开，结束索引不包含该位置元素。</p>
+<p>步长是切片每次获取完当前元素后移动的偏移量。</p>
+<p>开始、结束和步长默认值分别为 0，-1，1。</p>
+<!-- endtab -->
+
+<h4 id="sparkles-序列拆包"><a href="#sparkles-序列拆包" class="headerlink" title=":sparkles:序列拆包"></a>:sparkles:序列拆包</h4><p>序列拆包：多个变量 &#x3D; 容器。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a,b,c = tuple03</span><br><span class="line">a,b,c = [<span class="string">&quot;A&quot;</span>,<span class="string">&quot;B&quot;</span>,<span class="string">&quot;C&quot;</span>]</span><br></pre></td></tr></table></figure>
+
+<p>需要变量个数等于容器长度。</p>
+<!-- endtab -->
+
+<hr>
+<h3 id="star-str-字符串"><a href="#star-str-字符串" class="headerlink" title=":star:str 字符串"></a>:star:str 字符串</h3><p>由一系列字符组成的不可变序列容器，存储的是字符的编码值。</p>
+<p>str 类型的字面值：’ ‘、” “、””” “””（三引号，可见即所得）、’’’ ‘’’。引号冲突的时候可以换着用。</p>
+<p>转义字符可以改变字符的原始含义。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\<span class="string">&#x27;   \&quot;   \n   \\   \t </span></span><br></pre></td></tr></table></figure>
+
+<p>原始字符串：取消转义。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">r&quot;C:\newfile\test.py&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="sparkles-格式化"><a href="#sparkles-格式化" class="headerlink" title=":sparkles:%格式化"></a>:sparkles:%格式化</h4><p>字符串格式化就是将一个字符串以某种格式显示。占位符&#x2F;类型码：%s、%f、%d</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&#x27;%s字符串%s&#x27;</span> % (<span class="built_in">str</span> 变量<span class="number">1</span>,<span class="built_in">str</span> 变量<span class="number">2</span>) <span class="comment"># 可以有多个</span></span><br><span class="line">a = <span class="string">&#x27;%.2f字符串&#x27;</span> % (<span class="built_in">float</span> 变量) <span class="comment"># 保留两位小数</span></span><br><span class="line">a = <span class="string">&#x27;%.2f字符串&#x27;</span> % <span class="built_in">float</span> 变量 <span class="comment"># 只有一个变量的时候可以不要括号</span></span><br><span class="line">a = <span class="string">&#x27;%.2d字符串&#x27;</span> % <span class="built_in">int</span> 变量 <span class="comment"># 补全两位整数，像是打印时间</span></span><br></pre></td></tr></table></figure>
+<p>需要注意的是一般来说百分号不需要转义，但如果使用了上面的这个语法，那么百分号是需要转义的，但是格式特殊要用 %%。</p>
+<h4 id="sparkles-f-string格式化"><a href="#sparkles-f-string格式化" class="headerlink" title=":sparkles:f-string格式化"></a>:sparkles:f-string格式化</h4><p>f-string 使用 f 开头，字符串中的表达式用 {} 括起来。表达式是python代码，最后显示的是表达式的返回值。其他的类型码&#x2F;占位符&#x2F;格式的描述符放在表达式的冒号<code>:</code>之后。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">f&#x27;String words and codes <span class="subst">&#123;content : <span class="built_in">format</span>&#125;</span>&#x27;</span></span><br><span class="line"><span class="string">f&#x27;输出是<span class="subst">&#123;<span class="number">1</span>+<span class="number">1</span>&#125;</span>&#x27;</span> <span class="comment">#&#x27;输出是&#x27; + str(2)</span></span><br><span class="line">a = <span class="number">10</span></span><br><span class="line"><span class="string">f&#x27;输出是<span class="subst">&#123;a:<span class="number">.2</span>f&#125;</span>&#x27;</span> <span class="comment">#&#x27;输出是&#x27; + str(10.00)</span></span><br></pre></td></tr></table></figure>
+<p>类型码&#x2F;占位符&#x2F;格式的描述符有很多很多，需要查。</p>
+<h4 id="sparkle-f-string格式化-v-s-格式化"><a href="#sparkle-f-string格式化-v-s-格式化" class="headerlink" title=":sparkle:f-string格式化 v.s. %格式化"></a>:sparkle:f-string格式化 v.s. %格式化</h4><p>%格式化相较于f-string格式化不够自由。但是%格式化把所有需要填入的信息放到待格式化字符串的后面，在一些时候是更加合适的方式。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># f-string混在一起</span></span><br><span class="line"><span class="string">f&#x27;aivdndaiunfosaid;fna;osidfnas;ofidasfd;oi<span class="subst">&#123;<span class="number">2</span>&#125;</span>asdfadfsdfsafasdfasdfsadfas&#x27;</span></span><br><span class="line"><span class="comment"># %更容易找到位置</span></span><br><span class="line"><span class="string">&#x27;aivdndaiunfosaid;fna;osidfnas;ofidasfd;oi%asdfadfsdfsafasdfasdfsadfas&#x27;</span> % <span class="number">2</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="star-list-列表"><a href="#star-list-列表" class="headerlink" title=":star:list 列表"></a>:star:list 列表</h3><hr>
+<h4 id="sparkles-列表的基础知识"><a href="#sparkles-列表的基础知识" class="headerlink" title=":sparkles:列表的基础知识"></a>:sparkles:列表的基础知识</h4><p>由一系列变量组成的<strong>可变</strong>序列容器。（字符串是不可变的序列容器）</p>
+<p>因为存的是变量，变量是一系列相同长度的地址，所以变化地址是允许的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建</span></span><br><span class="line">列表名 = [元素<span class="number">1</span>, 元素<span class="number">2</span>]</span><br><span class="line">列表名 = [元素<span class="number">1</span>, 元素<span class="number">2</span>, ] <span class="comment"># 最后加一个逗号是允许的。</span></span><br><span class="line">列表名 = <span class="built_in">list</span>(可迭代对象)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 增加</span></span><br><span class="line">列表名.append(追加的元素) <span class="comment"># 追加至末尾</span></span><br><span class="line">列表名.insert(插入位置的索引, 追加的元素) <span class="comment"># 追加至索引位置，注意索引为-1时的运行结果</span></span><br></pre></td></tr></table></figure>
+
+<p>只要是容器就有容器的一般操作，也就是索引和定位。因为列表的索引和定位和一般的容器操作相同。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查询</span></span><br><span class="line">data = 列表名 <span class="comment"># 传递列表的地址</span></span><br><span class="line">data = 列表名[<span class="number">0</span>] <span class="comment"># 传递第0位数据的地址</span></span><br><span class="line">data = 列表名[:<span class="number">2</span>] <span class="comment"># 传递一个新列表的地址，新列表内包含原列表前两个变量存的地址</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改</span></span><br><span class="line">列表名[替换位置索引] = 替换的元素</span><br><span class="line">列表名[替换位置索引开头: 替换位置索引结尾] = [替换的元素<span class="number">1</span>, 替换的元素<span class="number">2</span> ...]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除</span></span><br><span class="line">列表名.remove(数据) <span class="comment"># 先循环查找要删除的数据/元素</span></span><br><span class="line"><span class="keyword">del</span> 列表名[删除位置索引]</span><br><span class="line"><span class="keyword">del</span> 列表名[替换位置索引开头: 替换位置索引结尾]</span><br></pre></td></tr></table></figure>
+
+<p>注意：要做什么操作就用什么方法，不要总是想着另辟蹊径。像是下面这种看上去结果相同的操作，其实是不同的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">list_re = <span class="built_in">list</span>(<span class="built_in">range</span>(<span class="number">5</span>))</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(list_re[-<span class="number">1</span>::-<span class="number">1</span>]) <span class="comment"># [4, 3, 2, 1, 0]</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(<span class="built_in">reversed</span>(list_re))) <span class="comment"># [4, 3, 2, 1, 0]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 第一个会直接生成一个列表</span></span><br><span class="line"><span class="comment"># 第二个会先生成迭代器对象，然后转型列表</span></span><br></pre></td></tr></table></figure>
+
+<p>使用for循环遍历列表中的所有元素。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> 变量名 <span class="keyword">in</span> 容器:</span><br><span class="line">       变量名是列表的元素</span><br></pre></td></tr></table></figure>
+
+<p>注意：item 和 i 是不同的，遍历容器的时候使用 item 而在计数循环的时候使用 i &#x2F; index。</p>
+<hr>
+<h4 id="sparkles-列表的复制操作"><a href="#sparkles-列表的复制操作" class="headerlink" title=":sparkles:列表的复制操作"></a>:sparkles:列表的复制操作</h4><p>拷贝：将一份数据复制、备份为两份,一份意外改变不影响另外一份.</p>
+<table>
+<thead>
+<tr>
+<th>浅拷贝</th>
+<th>深拷贝</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>复制第一层数据</td>
+<td>复制所有层数据</td>
+</tr>
+<tr>
+<td>优点：占用内存较小</td>
+<td>缺点：占用内存过多</td>
+</tr>
+<tr>
+<td>缺点：深层变化互相影响</td>
+<td>优点：数据绝对互不影响</td>
+</tr>
+<tr>
+<td>适用性：优先</td>
+<td>适用性：深层数据会发生改变</td>
+</tr>
+</tbody></table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">新列表名 = 列表名 <span class="comment"># 仅仅复制变量的待拷贝列表的地址</span></span><br><span class="line">新列表名 = 列表名[:] <span class="comment"># 浅拷贝，CPU 寻址一次，第一层数据拷贝/2份，深层数据共享/1份。深层数据互相影响。</span></span><br><span class="line">新列表名 = copy.deepcopy(列表名) <span class="comment"># 复制所有层的数据。占用内存。</span></span><br></pre></td></tr></table></figure>
+
+<p>接下来我们来看几个例子。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">list01 = [<span class="string">&quot;北京&quot;</span>, <span class="string">&quot;上海&quot;</span>, <span class="string">&quot;深圳&quot;</span>]</span><br><span class="line">list02 = list01 </span><br><span class="line">list01.insert(<span class="number">0</span>,<span class="string">&quot;天津&quot;</span>)</span><br><span class="line"><span class="keyword">del</span> list01[<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/b4ae8eb59c8f4c5e98862e60fafe8b30.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5p2o5Lid5YS_,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">list01 = [<span class="string">&quot;北京&quot;</span>, <span class="string">&quot;上海&quot;</span>]</span><br><span class="line">list02 = list01</span><br><span class="line">list01[<span class="number">0</span>] = <span class="string">&quot;广东&quot;</span></span><br><span class="line">list03 = list01[:]</span><br><span class="line">list03[-<span class="number">1</span>] = <span class="string">&quot;深圳&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/4366f5c63a674af6a35e7df50cd7daf6.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5p2o5Lid5YS_,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> copy</span><br><span class="line">list01 = [<span class="string">&quot;北京&quot;</span>,[<span class="string">&quot;上海&quot;</span>,<span class="string">&quot;深圳&quot;</span>]]</span><br><span class="line">list04 = copy.deepcopy(list01)</span><br><span class="line">list04[<span class="number">0</span>] = <span class="string">&quot;北京04&quot;</span></span><br><span class="line">list04[<span class="number">1</span>][<span class="number">1</span>] = <span class="string">&quot;深圳04&quot;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/437dac11236f4ab28ccd46f1698d9506.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5p2o5Lid5YS_,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
+<hr>
+<h4 id="sparkles-列表推倒式"><a href="#sparkles-列表推倒式" class="headerlink" title=":sparkles:列表推倒式"></a>:sparkles:列表推倒式</h4><p>英文：List Comprehensions</p>
+<p>使用简易方法，将可迭代对象转换为列表。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">变量 = [表达式 <span class="keyword">for</span> 变量 <span class="keyword">in</span> 可迭代对象]</span><br><span class="line">变量 = [表达式 <span class="keyword">for</span> 变量 <span class="keyword">in</span> 可迭代对象 <span class="keyword">if</span> 条件]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 列表推导式嵌套</span></span><br><span class="line">变量 = [表达式 <span class="keyword">for</span> 变量<span class="number">1</span> <span class="keyword">in</span> 可迭代对象<span class="number">1</span> <span class="keyword">for</span> 变量<span class="number">2</span> <span class="keyword">in</span>可迭代对象<span class="number">2</span>]</span><br></pre></td></tr></table></figure>
+
+<p>如果if真值表达式的布尔值为False,则可迭代对象生成的数据将被丢弃。</p>
+<hr>
+<h4 id="sparkle-补充内容"><a href="#sparkle-补充内容" class="headerlink" title=":sparkle:补充内容"></a>:sparkle:补充内容</h4><p>list -&gt; str: <code>填充字符串.join(字符串列表)</code>。其他的方法还有很多，但是我们要注意的是内存的使用。</p>
+<p>只有把不可变的数据类型构建成可变的数据类型（list），才能解决对不可变数据（str）进行频繁修改会产生大量的垃圾的问题。</p>
+<p>str -&gt; list: <code>list_result = &quot;唐僧,孙悟空,八戒&quot;.split(&quot;,&quot;)</code>。使用一个字符串存储多个信息。</p>
+<hr>
+<h3 id="star-元组"><a href="#star-元组" class="headerlink" title=":star:元组"></a>:star:元组</h3><p>由一系列变量组成的 <strong>不可变</strong> 序列容器。不可变是指一但创建，不可以再添加&#x2F;删除&#x2F;修改元素。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 创建 -- 容器的基本操作</span></span><br><span class="line">元组名 = (元素<span class="number">1</span>, 元素<span class="number">2</span>, 元素<span class="number">3</span>)</span><br><span class="line">元组名 = <span class="built_in">tuple</span>( 可迭代对象 ) <span class="comment"># 在可变类型的数据有了结果后，我们可以转成元组，节省空间。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 定位 -- 容器的基本操作</span></span><br><span class="line">元组名[索引]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 遍历 -- 容器的基本操作</span></span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> tuple01:</span><br><span class="line">    代码块</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. 特殊</span></span><br><span class="line"><span class="comment"># 注意1：在没有歧义的情况下可以省略小括号。</span></span><br><span class="line">tuple03 = <span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 注意2：变量交换操作借助的东西就是元组。</span></span><br><span class="line">x, y = y, x <span class="comment"># 这里的 y,x 就是一个省略了括号的 (y, x) 元组。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 注意3：如果元组中只有一个元素，必须有逗号。</span></span><br><span class="line">tuple04 = (<span class="number">10</span>,)</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="sparkle-可变与不可变讨论"><a href="#sparkle-可变与不可变讨论" class="headerlink" title=":sparkle:可变与不可变讨论"></a>:sparkle:可变与不可变讨论</h4><p>列表和元组最大的区别是内存存储机制的不同，而不是一个可变，一个不可变。</p>
+<table>
+<thead>
+<tr>
+<th>列表</th>
+<th>元组</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>预留内存空间</td>
+<td>空间按需分配</td>
+</tr>
+<tr>
+<td>内存不够时自动扩容</td>
+<td>每次都要开辟新的空间</td>
+</tr>
+<tr>
+<td>优点：元素可以变化</td>
+<td>缺点：元素不能变化</td>
+</tr>
+<tr>
+<td>缺点：内存使用过多</td>
+<td>优点：节省内存空间</td>
+</tr>
+<tr>
+<td>适用性：针对性使用</td>
+<td>适用性：优先</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>自动扩容：在预留内存空间不够的时候，扩大使用的内存空间。</p>
+<ol>
+<li>开辟一块更大的内存空间。</li>
+<li>拷贝原始列表的数据。</li>
+<li>替换原始列表变量的内存地址。</li>
+<li>副作用：原来的列表被放弃，成为垃圾。</li>
+</ol>
+</blockquote>
+<p>可变和不可变的分类规则是python中类型的顶层分类。</p>
+<table>
+<thead>
+<tr>
+<th>可变</th>
+<th>不可变</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>list 就是 可变的</td>
+<td>tuple&#x2F;int&#x2F;floar&#x2F;str&#x2F;bool 是不可变的</td>
+</tr>
+<tr>
+<td>可变的类型操作灵活，能够方便表达</td>
+<td>优先使用不可变的，因为占位空间小</td>
+</tr>
+</tbody></table>
+<p>注意：元组不能像是列表一样直接使用<code>[ ]</code>推倒式，因为 for 的部分会被当做一个生成器，作为元组的一个元素。如果要使用推倒式类似的形式，我们可以用tuple转型，即 <code>tuple( xxx for x in xxx)</code>，把生成器对象转型为元组。</p>
+<hr>
+<h3 id="star-字典"><a href="#star-字典" class="headerlink" title=":star:字典"></a>:star:字典</h3><p>由一系列 <strong>键值对</strong> 组成的 <strong>可变</strong> <strong>散列</strong> 容器。</p>
+<p>散列：对键进行哈希运算，确定在内存中的存储位置，每条数据存储无先后顺序。</p>
+<table>
+<thead>
+<tr>
+<th>序列</th>
+<th>散列</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>有顺序</td>
+<td>没有顺序</td>
+</tr>
+<tr>
+<td>占用空间小</td>
+<td>占用空间大</td>
+</tr>
+<tr>
+<td>支持索引切片</td>
+<td>定位迅速</td>
+</tr>
+</tbody></table>
+<p>键必须唯一且不可变(字符串&#x2F;数字&#x2F;元组)，值没有限制。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建字典</span></span><br><span class="line">字典名 = &#123;键<span class="number">1</span>：值<span class="number">1</span>，键<span class="number">2</span>：值<span class="number">2</span>&#125;</span><br><span class="line">字典名 = <span class="built_in">dict</span> (可迭代对象) <span class="comment"># 转换为字典的格式要求：可迭代对象中的元素必须能够&quot;一分为二&quot;。</span></span><br><span class="line"></span><br><span class="line">list01 = [<span class="string">&quot;八戒&quot;</span>, (<span class="string">&quot;ts&quot;</span>, <span class="string">&quot;唐僧&quot;</span>), [<span class="number">1001</span>, <span class="string">&quot;齐天大圣&quot;</span>]]</span><br><span class="line">dict01 = <span class="built_in">dict</span>(list01)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加/修改元素：</span></span><br><span class="line">字典名[键] = 数据 <span class="comment"># 键不存在，创建记录。键存在，修改值。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取元素：</span></span><br><span class="line">变量 = 字典名[键]  <span class="comment"># 没有键则错误。可以读取数据前，通过 in 判断键在不在。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 遍历字典：</span></span><br><span class="line"><span class="keyword">for</span> 键名 <span class="keyword">in</span> 字典名: <span class="comment"># 遍历字典的键</span></span><br><span class="line">​       字典名[键名]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> 值名 <span class="keyword">in</span> 字典名.values(): <span class="comment"># 遍历字典的值</span></span><br><span class="line">       值名</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> 键名,值名 <span class="keyword">in</span> 字典名.items(): <span class="comment"># 遍历返回的一个元组的列表。</span></span><br><span class="line">​       语句</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除元素：</span></span><br><span class="line"><span class="keyword">del</span> 字典名[键]</span><br></pre></td></tr></table></figure>
+
+<p>注意：字典不能使用索引和切片操作。</p>
+<p>因为字典是根据哈希运算的结果进行存储的，是一种用空间换时间的设计理念。所以在索引的时候相较于其他的容器，字典是 <strong>最快的</strong>。</p>
+<p>列表适合储存单一维度的数据，当我们要存储多维度的数据时，我们可以使用字典。</p>
+<p>字典推倒式和列表推倒式类似，使用花括号 <code>&#123; &#125;</code>  里面是带冒号的 for 循环。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ks = list_ks</span><br><span class="line">vs = list_vs</span><br><span class="line"></span><br><span class="line">dict_01 = &#123;ks[i]: vs[i] <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(ks)) &#125;</span><br><span class="line">dict_02 = &#123;k: v <span class="keyword">for</span> k,v <span class="keyword">in</span> dict_01.items()&#125;</span><br><span class="line"></span><br><span class="line">dict_01 == dict_02 <span class="comment"># True</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="star-集合"><a href="#star-集合" class="headerlink" title=":star:集合"></a>:star:集合</h3><p>由一系列不重复的不可变类型变量(元组&#x2F;数&#x2F;字符串)组成的可变散列容器。</p>
+<p>相当于只有键没有值的字典(键则是集合的数据)。</p>
+<p>集合可以去重，而且相较于使用 in 遍历判断，效率极高。哈希计算内存位置，直接判断重复。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建</span></span><br><span class="line">集合名 = &#123;元素<span class="number">1</span>,元素<span class="number">2</span>,元素<span class="number">3</span>&#125;</span><br><span class="line">集合名 = <span class="built_in">set</span>(可迭代对象)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加</span></span><br><span class="line">集合名.add(元素)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定位</span></span><br><span class="line"><span class="comment"># 因为无序不能使用索引切片。</span></span><br><span class="line"><span class="comment"># 因为不是键值对不能使用键查找键。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 遍历</span></span><br><span class="line"><span class="keyword">for</span> item <span class="keyword">in</span> set01:</span><br><span class="line">       <span class="built_in">print</span>(item)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 删除</span></span><br><span class="line"><span class="keyword">if</span> 待删数据 <span class="keyword">in</span> 集合:</span><br><span class="line">    集合.remove(待删数据)</span><br></pre></td></tr></table></figure>
+
+<p>集合的数学运算，交集并集补集：</p>
+<blockquote>
+<p>(1) 交集<code>&amp;</code>：返回共同元素。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line">s2 = &#123;<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">s3 = s1 &amp; s2 <span class="comment"># &#123;2, 3&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>(2) 并集<code>|</code>：返回不重复元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line">s2 = &#123;<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">s3 = s1 | s2 <span class="comment"># &#123;1, 2, 3, 4&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>(3) 补集<code>^</code>：返回不同的的元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line">s2 = &#123;<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">s3 = s1 ^ s2 <span class="comment"># &#123;1, 4&#125;  等同于(s1-s2 | s2-s1)</span></span><br></pre></td></tr></table></figure>
+
+<p>(3) 差<code>-</code>：返回只属于其中之一的元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line">s2 = &#123;<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">s1 - s2 <span class="comment"># &#123;1&#125; 属于s1但不属于s2</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>判断两个集合之间的关系：</p>
+<blockquote>
+<p>(1) 子集<code>&lt;</code>：判断一个集合的所有元素是否完全在另一个集合中</p>
+<p>(2) 超集<code>&gt;</code>：判断一个集合是否具有另一个集合的所有元素</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line">s2 = &#123;<span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line">s2 &lt; s1 <span class="comment"># True</span></span><br><span class="line">s1 &gt; s2 <span class="comment"># True </span></span><br></pre></td></tr></table></figure>
+
+<p>(3) 相同或不同<code>==</code> <code>!=</code>：判断集合中的所有元素是否和另一个集合相同。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line">s2 = &#123;<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>&#125;</span><br><span class="line">s1 == s2 <span class="comment"># True</span></span><br><span class="line">s1 != s2 <span class="comment"># False</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<hr>
+<h2 id="star2-编码"><a href="#star2-编码" class="headerlink" title=":star2:编码"></a>:star2:编码</h2><p>容器中的数据是不可变的。因为在原有基础上修改，有可能破坏其他数据的内存空间。变量可以变化其中的指向信息，原因是地址是固定长度的，不会干扰相邻的数据。</p>
+<hr>
+<h3 id="star-基础编码"><a href="#star-基础编码" class="headerlink" title=":star:基础编码"></a>:star:基础编码</h3><ul>
+<li>字节byte：计算机最小存储单位，等于8 位bit.</li>
+<li>字符：单个的数字，文字与符号。</li>
+<li>字符集(码表)：存储字符与二进制序列的对应关系。</li>
+<li>编码<code>ord(字符)</code>：将字符转换为对应的二进制序列的过程。</li>
+<li>解码<code>chr(编码)</code>：将二进制序列转换为对应的字符的过程。</li>
+</ul>
+<hr>
+<h3 id="star-编码方式"><a href="#star-编码方式" class="headerlink" title=":star:编码方式"></a>:star:编码方式</h3><ul>
+<li>ASCII编码：包含英文、数字等字符，每个字符1个字节。</li>
+<li>GBK编码：兼容ASCII编码，包含21003个中文；英文1个字节，汉字2个字节。</li>
+<li>Unicode字符集：国际统一编码，旧字符集每个字符2字节，新字符集4字节。</li>
+<li>UTF-8编码：Unicode的存储与传输方式，英文1字节，中文3字节。</li>
+</ul>
+<hr>
+<h2 id="star2-注意"><a href="#star2-注意" class="headerlink" title=":star2:注意"></a>:star2:注意</h2><ul>
+<li>代码密度太大会降低代码的复用性，会使功能添加有困难。</li>
+<li>在商业项目的时候该加判断就要加判断，防止程序出问题。</li>
+</ul>
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><a class="post-meta__tags" href="/tags/%E8%AE%B0%E5%BD%95/">记录</a><a class="post-meta__tags" href="/tags/Python/">Python</a><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a></div><div class="post_share"><div class="social-share" data-image="https://image.discover304.top/python900-500.jpg?imageView2/2/h/300" data-sites="facebook,twitter,wechat,weibo,qzone,qq,linkedin"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/09/03/2021q3/044-%E5%88%A9%E7%94%A8%E5%89%AF%E4%BD%9C%E7%94%A8%E7%90%86%E8%A7%A3pyhton/"><img class="prev-cover" src="https://thumbs.dreamstime.com/z/function-technology-logo-linear-cog-gear-icon-stock-vector-illustration-isolated-white-background-163147035.jpg" onerror="onerror=null;src='/img/404.png'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">利用函数式编程思想理解 Python</div></div></a></div><div class="next-post pull-right"><a href="/2021/09/01/2021q3/042-python-note/"><img class="next-cover" src="https://image.discover304.top/python900-500.jpg?imageView2/2/h/300" onerror="onerror=null;src='/img/404.png'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">【Python】第一部分：第一段代码</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2021/08/31/2021q3/041-python-note/" title="【Python】人工智能入门须知"><img class="cover" src="https://thumbs.dreamstime.com/z/ai-artificial-intelligence-programming-languages-type-message-sticky-note-computer-keyboard-ai-artificial-intelligence-187103540.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【Python】人工智能入门须知</div></div></a></div><div><a href="/2021/09/01/2021q3/042-python-note/" title="【Python】第一部分：第一段代码"><img class="cover" src="https://image.discover304.top/python900-500.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-01-07</div><div class="title">【Python】第一部分：第一段代码</div></div></a></div><div><a href="/2021/09/08/2021q3/048-pyhton-note/" title="【Python】笔记第三部分：函数"><img class="cover" src="https://image.discover304.top/python900-500.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-01-07</div><div class="title">【Python】笔记第三部分：函数</div></div></a></div><div><a href="/2021/09/13/2021q3/056-1-python-note/" title="【Python】笔记第四部分下：黑盒子的三大特征"><img class="cover" src="https://image.discover304.top/python900-500.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-01-08</div><div class="title">【Python】笔记第四部分下：黑盒子的三大特征</div></div></a></div><div><a href="/2021/09/13/2021q3/056-python-note/" title="【Python】笔记第四部分上：类和封装"><img class="cover" src="https://image.discover304.top/python900-500.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-01-07</div><div class="title">【Python】笔记第四部分上：类和封装</div></div></a></div><div><a href="/2021/09/17/2021q3/062-python-note/" title="【Python】笔记第五部分：盒子的箱子，异常"><img class="cover" src="https://image.discover304.top/python900-500.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-01-08</div><div class="title">【Python】笔记第五部分：盒子的箱子，异常</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">✨YangSier✨</div><div class="author-info__description">Love Everything You Like.</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">243</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">88</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">23</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/98639326"><i class="fab fa-bilibili"></i><span>Bilibili Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Discover304" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://twitter.com/Discover304" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.youtube.com/channel/UCuQQr55i3VCQuCPMTQnpzDA" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a><a class="social-icon" href="mailto:hobart.yang@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">✨动态更新：<p style="text-align:center">享受精彩大学生活中。</p>✨聊天划水QQ群：<p style="text-align:center"><strong>兔叽の魔术工房</strong><br>942-848-525</p>✨我们的口号是：<p style="text-align:center; color:#39C5BB">人工降神，机械飞升！</p><a target="_blank" rel="noopener" href='https://space.bilibili.com/98639326'><img src='/img/mikulittletrans.png'></a></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#star2-%E5%AE%B9%E5%99%A8"><span class="toc-text">:star2:容器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#star-%E5%AE%B9%E5%99%A8%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-text">:star:容器的操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sparkles-%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">:sparkles:数学运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sparkles-%E6%88%90%E5%91%98%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">:sparkles:成员运算符</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sparkles-%E7%B4%A2%E5%BC%95"><span class="toc-text">:sparkles:索引</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sparkles-%E5%88%87%E7%89%87"><span class="toc-text">:sparkles:切片</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sparkles-%E5%BA%8F%E5%88%97%E6%8B%86%E5%8C%85"><span class="toc-text">:sparkles:序列拆包</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-str-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-text">:star:str 字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sparkles-%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-text">:sparkles:%格式化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sparkles-f-string%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-text">:sparkles:f-string格式化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sparkle-f-string%E6%A0%BC%E5%BC%8F%E5%8C%96-v-s-%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-text">:sparkle:f-string格式化 v.s. %格式化</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-list-%E5%88%97%E8%A1%A8"><span class="toc-text">:star:list 列表</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sparkles-%E5%88%97%E8%A1%A8%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-text">:sparkles:列表的基础知识</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sparkles-%E5%88%97%E8%A1%A8%E7%9A%84%E5%A4%8D%E5%88%B6%E6%93%8D%E4%BD%9C"><span class="toc-text">:sparkles:列表的复制操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sparkles-%E5%88%97%E8%A1%A8%E6%8E%A8%E5%80%92%E5%BC%8F"><span class="toc-text">:sparkles:列表推倒式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#sparkle-%E8%A1%A5%E5%85%85%E5%86%85%E5%AE%B9"><span class="toc-text">:sparkle:补充内容</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-%E5%85%83%E7%BB%84"><span class="toc-text">:star:元组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sparkle-%E5%8F%AF%E5%8F%98%E4%B8%8E%E4%B8%8D%E5%8F%AF%E5%8F%98%E8%AE%A8%E8%AE%BA"><span class="toc-text">:sparkle:可变与不可变讨论</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-%E5%AD%97%E5%85%B8"><span class="toc-text">:star:字典</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-%E9%9B%86%E5%90%88"><span class="toc-text">:star:集合</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#star2-%E7%BC%96%E7%A0%81"><span class="toc-text">:star2:编码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#star-%E5%9F%BA%E7%A1%80%E7%BC%96%E7%A0%81"><span class="toc-text">:star:基础编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-%E7%BC%96%E7%A0%81%E6%96%B9%E5%BC%8F"><span class="toc-text">:star:编码方式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#star2-%E6%B3%A8%E6%84%8F"><span class="toc-text">:star2:注意</span></a></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/2022q4/172-design-idea/" title="【思考】创新点子"><img src="https://image.discover304.top/blog-img/s19313212112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【思考】创新点子"/></a><div class="content"><a class="title" href="/2022/12/11/2022q4/172-design-idea/" title="【思考】创新点子">【思考】创新点子</a><time datetime="2022-12-11T11:08:37.000Z" title="Created 2022-12-11 19:08:37">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/2022q4/171-other-thought/" title="【思考】其他思考"><img src="https://image.discover304.top/blog-img/s19305112112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【思考】其他思考"/></a><div class="content"><a class="title" href="/2022/12/11/2022q4/171-other-thought/" title="【思考】其他思考">【思考】其他思考</a><time datetime="2022-12-11T11:08:17.000Z" title="Created 2022-12-11 19:08:17">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/2022q4/170-key-thought/" title="【思考】核心思考"><img src="https://image.discover304.top/blog-img/s19294112112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【思考】核心思考"/></a><div class="content"><a class="title" href="/2022/12/11/2022q4/170-key-thought/" title="【思考】核心思考">【思考】核心思考</a><time datetime="2022-12-11T11:08:06.000Z" title="Created 2022-12-11 19:08:06">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/09/2022q4/169-new-r/" title="R: Getting Into Project of R"><img src="https://image.discover304.top/blog-img/s18350812112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="R: Getting Into Project of R"/></a><div class="content"><a class="title" href="/2022/12/09/2022q4/169-new-r/" title="R: Getting Into Project of R">R: Getting Into Project of R</a><time datetime="2022-12-09T09:44:06.000Z" title="Created 2022-12-09 17:44:06">2022-12-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/08/000-some-words/" title="【整理】一些思考"><img src="https://image.discover304.top/blog-img/s18365512112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【整理】一些思考"/></a><div class="content"><a class="title" href="/2022/12/08/000-some-words/" title="【整理】一些思考">【整理】一些思考</a><time datetime="2022-12-08T04:27:28.000Z" title="Created 2022-12-08 12:27:28">2022-12-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/28/2022q3/167-2-sp-review/" title="SP Modules Review Contents (3)"><img src="https://image.discover304.top/blog-img/s11220010012022.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="SP Modules Review Contents (3)"/></a><div class="content"><a class="title" href="/2022/11/28/2022q3/167-2-sp-review/" title="SP Modules Review Contents (3)">SP Modules Review Contents (3)</a><time datetime="2022-11-28T07:24:39.000Z" title="Created 2022-11-28 15:24:39">2022-11-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/17/2022q3/166-10-connected-speech-hidden-markov-model/" title="SP Module 10 Connected Speech &amp; HMM Training"><img src="https://image.discover304.top/blog-img/s11220010012022.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="SP Module 10 Connected Speech &amp; HMM Training"/></a><div class="content"><a class="title" href="/2022/11/17/2022q3/166-10-connected-speech-hidden-markov-model/" title="SP Module 10 Connected Speech &amp; HMM Training">SP Module 10 Connected Speech &amp; HMM Training</a><time datetime="2022-11-17T01:47:12.000Z" title="Created 2022-11-17 09:47:12">2022-11-17</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://image.discover304.top/python900-500.jpg?imageView2/2/h/300)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By ✨YangSier✨</div><div><a target="_blank" href="https://beian.miit.gov.cn/" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;"> 冀ICP备2021025381号-1</p></a></div><div><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=13060602001430" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/img/beian.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">冀公网安备 13060602001430号</p></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.spacingElementById('content-inner')
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.spacingElementById('content-inner')
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'neutral',
+      })
+      false && mermaid.init()
+    })
+  }
+}</script><script>function loadValine () {
+  function initValine () {
+    let initData = {
+      el: '#vcomment',
+      appId: 'A9RWVELPcIotgfbpp9KLGXQM-gzGzoHsz',
+      appKey: 'MLgPQW5h0DPgE8jNkeREKubU',
+      placeholder: '欢迎留言呀。（网址是选填，可以留空）',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: true,
+      serverURLs: 'https://a9rwvelp.lc-cn-n1-shared.com',
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/',
+      emojiMaps: {"QQ1":"QQ/aini.gif","QQ2":"QQ/aixin.gif","QQ3":"QQ/aoman.gif","QQ4":"QQ/baiyan.gif","QQ5":"QQ/bangbangtang.gif","QQ6":"QQ/baojin.gif","QQ7":"QQ/baoquan.gif","QQ8":"QQ/bishi.gif","QQ9":"QQ/bizui.gif","QQ11":"QQ/cahan.gif","QQ12":"QQ/caidao.gif","QQ13":"QQ/chi.gif","QQ14":"QQ/ciya.gif","QQ15":"QQ/dabing.gif","QQ16":"QQ/daku.gif","QQ17":"QQ/dan.gif","QQ18":"QQ/deyi.gif","QQ19":"QQ/doge.gif","QQ20":"QQ/fadai.gif","QQ21":"QQ/fanu.gif","QQ22":"QQ/fendou.gif","QQ23":"QQ/ganga.gif","QQ24":"QQ/gouyin.gif","QQ25":"QQ/guzhang.gif","QQ26":"QQ/haixiu.gif","QQ27":"QQ/hanxiao.gif","QQ28":"QQ/haobang.gif","QQ29":"QQ/haqian.gif","QQ30":"QQ/hecai.gif","QQ31":"QQ/hexie.gif","QQ32":"QQ/huaixiao.gif","QQ33":"QQ/jie.gif","QQ34":"QQ/jingkong.gif","QQ35":"QQ/jingxi.gif","QQ36":"QQ/jingya.gif","QQ37":"QQ/juhua.gif","QQ38":"QQ/keai.gif","QQ39":"QQ/kelian.gif","QQ40":"QQ/koubi.gif","QQ41":"QQ/ku.gif","QQ42":"QQ/kuaikule.gif","QQ43":"QQ/kulou.gif","QQ44":"QQ/kun.gif","QQ45":"QQ/lanqiu.gif","QQ46":"QQ/leiben.gif","QQ47":"QQ/lenghan.gif","QQ48":"QQ/liuhan.gif","QQ49":"QQ/liulei.gif","QQ50":"QQ/nanguo.gif","QQ51":"QQ/OK.gif","QQ52":"QQ/penxue.gif","QQ53":"QQ/piezui.gif","QQ54":"QQ/pijiu.gif","QQ55":"QQ/qiang.gif","QQ56":"QQ/qiaoda.gif","QQ57":"QQ/qinqin.gif","QQ58":"QQ/qiudale.gif","QQ59":"QQ/quantou.gif","QQ60":"QQ/saorao.gif","QQ61":"QQ/se.gif","QQ62":"QQ/shengli.gif","QQ63":"QQ/shouqiang.gif","QQ64":"QQ/shuai.gif","QQ65":"QQ/shui.gif","QQ66":"QQ/tiaopi.gif","QQ67":"QQ/touxiao.gif","QQ68":"QQ/tu.gif","QQ69":"QQ/tuosai.gif","QQ70":"QQ/weiqu.gif","QQ71":"QQ/weixiao.gif","QQ72":"QQ/woshou.gif","QQ73":"QQ/wozuimei.gif","QQ74":"QQ/wunai.gif","QQ75":"QQ/xia.gif","QQ76":"QQ/xiaojiujie.gif","QQ77":"QQ/xiaoku.gif","QQ78":"QQ/xiaoyanger.gif","QQ79":"QQ/xieyanxiao.gif","QQ80":"QQ/xigua.gif","QQ81":"QQ/xu.gif","QQ82":"QQ/yangtuo.gif","QQ83":"QQ/yinxian.gif","QQ84":"QQ/yiwen.gif","QQ85":"QQ/youhengheng.gif","QQ86":"QQ/youling.gif","QQ87":"QQ/yun.gif","QQ88":"QQ/zaijian.gif","QQ89":"QQ/zhayanjian.gif","QQ90":"QQ/zhemo.gif","QQ91":"QQ/zhouma.gif","QQ92":"QQ/zhuakuang.gif","QQ93":"QQ/zuohengheng.gif","bilibiliHotKey1":"bilibiliHotKey/1.jpg","bilibiliHotKey2":"bilibiliHotKey/10.jpg","bilibiliHotKey3":"bilibiliHotKey/11.jpg","bilibiliHotKey4":"bilibiliHotKey/12.jpg","bilibiliHotKey5":"bilibiliHotKey/13.jpg","bilibiliHotKey6":"bilibiliHotKey/14.jpg","bilibiliHotKey7":"bilibiliHotKey/15.jpg","bilibiliHotKey8":"bilibiliHotKey/16.jpg","bilibiliHotKey9":"bilibiliHotKey/17.jpg","bilibiliHotKey10":"bilibiliHotKey/18.jpg","bilibiliHotKey11":"bilibiliHotKey/19.jpg","bilibiliHotKey12":"bilibiliHotKey/2.jpg","bilibiliHotKey13":"bilibiliHotKey/20.jpg","bilibiliHotKey14":"bilibiliHotKey/21.jpg","bilibiliHotKey15":"bilibiliHotKey/22.jpg","bilibiliHotKey16":"bilibiliHotKey/23.jpg","bilibiliHotKey17":"bilibiliHotKey/24.jpg","bilibiliHotKey18":"bilibiliHotKey/25.jpg","bilibiliHotKey19":"bilibiliHotKey/26.jpg","bilibiliHotKey20":"bilibiliHotKey/27.jpg","bilibiliHotKey21":"bilibiliHotKey/28.jpg","bilibiliHotKey22":"bilibiliHotKey/29.jpg","bilibiliHotKey23":"bilibiliHotKey/3.jpg","bilibiliHotKey24":"bilibiliHotKey/30.jpg","bilibiliHotKey25":"bilibiliHotKey/31.jpg","bilibiliHotKey26":"bilibiliHotKey/32.jpg","bilibiliHotKey27":"bilibiliHotKey/4.jpg","bilibiliHotKey28":"bilibiliHotKey/5.jpg","bilibiliHotKey29":"bilibiliHotKey/6.jpg","bilibiliHotKey30":"bilibiliHotKey/7.jpg","bilibiliHotKey31":"bilibiliHotKey/8.jpg","bilibiliHotKey32":"bilibiliHotKey/9.jpg","Menhera-chan1":"Menhera-chan/1.jpg","Menhera-chan2":"Menhera-chan/10.jpg","Menhera-chan3":"Menhera-chan/100.jpg","Menhera-chan4":"Menhera-chan/101.jpg","Menhera-chan5":"Menhera-chan/102.jpg","Menhera-chan6":"Menhera-chan/103.jpg","Menhera-chan7":"Menhera-chan/104.jpg","Menhera-chan8":"Menhera-chan/105.jpg","Menhera-chan9":"Menhera-chan/106.jpg","Menhera-chan10":"Menhera-chan/107.jpg","Menhera-chan11":"Menhera-chan/108.jpg","Menhera-chan12":"Menhera-chan/109.jpg","Menhera-chan13":"Menhera-chan/11.jpg","Menhera-chan14":"Menhera-chan/110.jpg","Menhera-chan15":"Menhera-chan/111.jpg","Menhera-chan16":"Menhera-chan/112.jpg","Menhera-chan17":"Menhera-chan/113.jpg","Menhera-chan18":"Menhera-chan/114.jpg","Menhera-chan19":"Menhera-chan/115.jpg","Menhera-chan20":"Menhera-chan/116.jpg","Menhera-chan21":"Menhera-chan/117.jpg","Menhera-chan22":"Menhera-chan/118.jpg","Menhera-chan23":"Menhera-chan/119.jpg","Menhera-chan24":"Menhera-chan/12.jpg","Menhera-chan25":"Menhera-chan/120.jpg","Menhera-chan26":"Menhera-chan/13.jpg","Menhera-chan27":"Menhera-chan/14.jpg","Menhera-chan28":"Menhera-chan/15.jpg","Menhera-chan29":"Menhera-chan/16.jpg","Menhera-chan30":"Menhera-chan/17.jpg","Menhera-chan31":"Menhera-chan/18.jpg","Menhera-chan32":"Menhera-chan/19.jpg","Menhera-chan33":"Menhera-chan/2.jpg","Menhera-chan34":"Menhera-chan/20.jpg","Menhera-chan35":"Menhera-chan/21.jpg","Menhera-chan36":"Menhera-chan/22.jpg","Menhera-chan37":"Menhera-chan/23.jpg","Menhera-chan38":"Menhera-chan/24.jpg","Menhera-chan39":"Menhera-chan/25.jpg","Menhera-chan40":"Menhera-chan/26.jpg","Menhera-chan41":"Menhera-chan/27.jpg","Menhera-chan42":"Menhera-chan/28.jpg","Menhera-chan43":"Menhera-chan/29.jpg","Menhera-chan44":"Menhera-chan/3.jpg","Menhera-chan45":"Menhera-chan/30.jpg","Menhera-chan46":"Menhera-chan/31.jpg","Menhera-chan47":"Menhera-chan/32.jpg","Menhera-chan48":"Menhera-chan/33.jpg","Menhera-chan49":"Menhera-chan/34.jpg","Menhera-chan50":"Menhera-chan/35.jpg","Menhera-chan51":"Menhera-chan/36.jpg","Menhera-chan52":"Menhera-chan/37.jpg","Menhera-chan53":"Menhera-chan/38.jpg","Menhera-chan54":"Menhera-chan/39.jpg","Menhera-chan55":"Menhera-chan/4.jpg","Menhera-chan56":"Menhera-chan/40.jpg","Menhera-chan57":"Menhera-chan/41.jpg","Menhera-chan58":"Menhera-chan/42.jpg","Menhera-chan59":"Menhera-chan/43.jpg","Menhera-chan60":"Menhera-chan/44.jpg","Menhera-chan61":"Menhera-chan/45.jpg","Menhera-chan62":"Menhera-chan/46.jpg","Menhera-chan63":"Menhera-chan/47.jpg","Menhera-chan64":"Menhera-chan/48.jpg","Menhera-chan65":"Menhera-chan/49.jpg","Menhera-chan66":"Menhera-chan/5.jpg","Menhera-chan67":"Menhera-chan/50.jpg","Menhera-chan68":"Menhera-chan/51.jpg","Menhera-chan69":"Menhera-chan/52.jpg","Menhera-chan70":"Menhera-chan/53(1).jpg","Menhera-chan71":"Menhera-chan/53.jpg","Menhera-chan72":"Menhera-chan/54.jpg","Menhera-chan73":"Menhera-chan/55.jpg","Menhera-chan74":"Menhera-chan/56.jpg","Menhera-chan75":"Menhera-chan/57.jpg","Menhera-chan76":"Menhera-chan/58.jpg","Menhera-chan77":"Menhera-chan/59.jpg","Menhera-chan78":"Menhera-chan/6.jpg","Menhera-chan79":"Menhera-chan/60.jpg","Menhera-chan80":"Menhera-chan/61.jpg","Menhera-chan81":"Menhera-chan/62.jpg","Menhera-chan82":"Menhera-chan/63.jpg","Menhera-chan83":"Menhera-chan/64.jpg","Menhera-chan84":"Menhera-chan/65.jpg","Menhera-chan85":"Menhera-chan/66.jpg","Menhera-chan86":"Menhera-chan/67.jpg","Menhera-chan87":"Menhera-chan/68.jpg","Menhera-chan88":"Menhera-chan/69.jpg","Menhera-chan89":"Menhera-chan/7.jpg","Menhera-chan90":"Menhera-chan/70.jpg","Menhera-chan91":"Menhera-chan/71.jpg","Menhera-chan92":"Menhera-chan/72.jpg","Menhera-chan93":"Menhera-chan/73.jpg","Menhera-chan94":"Menhera-chan/74.jpg","Menhera-chan95":"Menhera-chan/75.jpg","Menhera-chan96":"Menhera-chan/76.jpg","Menhera-chan97":"Menhera-chan/77.jpg","Menhera-chan98":"Menhera-chan/78.jpg","Menhera-chan99":"Menhera-chan/79.jpg","Menhera-chan100":"Menhera-chan/8.jpg","Menhera-chan101":"Menhera-chan/80.jpg","Menhera-chan102":"Menhera-chan/81.jpg","Menhera-chan103":"Menhera-chan/82.jpg","Menhera-chan104":"Menhera-chan/83.jpg","Menhera-chan105":"Menhera-chan/84.jpg","Menhera-chan106":"Menhera-chan/85.jpg","Menhera-chan107":"Menhera-chan/86.jpg","Menhera-chan108":"Menhera-chan/87.jpg","Menhera-chan109":"Menhera-chan/88.jpg","Menhera-chan110":"Menhera-chan/89.jpg","Menhera-chan111":"Menhera-chan/9.jpg","Menhera-chan112":"Menhera-chan/90.jpg","Menhera-chan113":"Menhera-chan/91.jpg","Menhera-chan114":"Menhera-chan/92.jpg","Menhera-chan115":"Menhera-chan/93.jpg","Menhera-chan116":"Menhera-chan/94.jpg","Menhera-chan117":"Menhera-chan/95.jpg","Menhera-chan118":"Menhera-chan/96.jpg","Menhera-chan119":"Menhera-chan/97.jpg","Menhera-chan120":"Menhera-chan/98.jpg","Menhera-chan121":"Menhera-chan/99.jpg","Sweetie-Bunny1":"Sweetie-Bunny/12311678.png","Sweetie-Bunny2":"Sweetie-Bunny/12311679.png","Sweetie-Bunny3":"Sweetie-Bunny/12311680.png","Sweetie-Bunny4":"Sweetie-Bunny/12311681.png","Sweetie-Bunny5":"Sweetie-Bunny/12311682.png","Sweetie-Bunny6":"Sweetie-Bunny/12311683.png","Sweetie-Bunny7":"Sweetie-Bunny/12311684.png","Sweetie-Bunny8":"Sweetie-Bunny/12311685.png","Sweetie-Bunny9":"Sweetie-Bunny/12311686.png","Sweetie-Bunny10":"Sweetie-Bunny/12311687.png","Sweetie-Bunny11":"Sweetie-Bunny/12311688.png","Sweetie-Bunny12":"Sweetie-Bunny/12311689.png","Sweetie-Bunny13":"Sweetie-Bunny/12311690.png","Sweetie-Bunny14":"Sweetie-Bunny/12311691.png","Sweetie-Bunny15":"Sweetie-Bunny/12311692.png","Sweetie-Bunny16":"Sweetie-Bunny/12311693.png","Sweetie-Bunny17":"Sweetie-Bunny/12311694.png","Sweetie-Bunny18":"Sweetie-Bunny/12311695.png","Sweetie-Bunny19":"Sweetie-Bunny/12311696.png","Sweetie-Bunny20":"Sweetie-Bunny/12311697.png","Sweetie-Bunny21":"Sweetie-Bunny/12311698.png","Sweetie-Bunny22":"Sweetie-Bunny/12311699.png","Sweetie-Bunny23":"Sweetie-Bunny/12311700.png","Sweetie-Bunny24":"Sweetie-Bunny/12311701.png","Sweetie-Bunny25":"Sweetie-Bunny/12311702.png","Sweetie-Bunny26":"Sweetie-Bunny/12311703.png","Sweetie-Bunny27":"Sweetie-Bunny/12311704.png","Sweetie-Bunny28":"Sweetie-Bunny/12311705.png","Sweetie-Bunny29":"Sweetie-Bunny/12311706.png","Sweetie-Bunny30":"Sweetie-Bunny/12311707.png","Sweetie-Bunny31":"Sweetie-Bunny/12311708.png","Sweetie-Bunny32":"Sweetie-Bunny/12311709.png","Sweetie-Bunny33":"Sweetie-Bunny/12311710.png","Sweetie-Bunny34":"Sweetie-Bunny/12311711.png","Sweetie-Bunny35":"Sweetie-Bunny/12311712.png","Sweetie-Bunny36":"Sweetie-Bunny/12311713.png","Sweetie-Bunny37":"Sweetie-Bunny/12311714.png","Sweetie-Bunny38":"Sweetie-Bunny/12311715.png","Sweetie-Bunny39":"Sweetie-Bunny/12311716.png","Sweetie-Bunny40":"Sweetie-Bunny/12311717.png","Majotabi1":"Majotabi/367516718.png","Majotabi2":"Majotabi/367516719.png","Majotabi3":"Majotabi/367516720.png","Majotabi4":"Majotabi/367516721.png","Majotabi5":"Majotabi/367516722.png","Majotabi6":"Majotabi/367516723.png","Majotabi7":"Majotabi/367516724.png","Majotabi8":"Majotabi/367516725.png","Majotabi9":"Majotabi/367516726.png","Majotabi10":"Majotabi/367516727.png","Majotabi11":"Majotabi/367516728.png","Majotabi12":"Majotabi/367516729.png","Majotabi13":"Majotabi/367516730.png","Majotabi14":"Majotabi/367516731.png","Majotabi15":"Majotabi/367516732.png","Majotabi16":"Majotabi/367516733.png","Majotabi17":"Majotabi/367516734.png","Majotabi18":"Majotabi/367516735.png","Majotabi19":"Majotabi/367516736.png","Majotabi20":"Majotabi/367516737.png","Majotabi21":"Majotabi/367516738.png","Majotabi22":"Majotabi/367516739.png","Majotabi23":"Majotabi/367516740.png","Majotabi24":"Majotabi/367516741.png","Majotabi25":"Majotabi/367516742.png","Majotabi26":"Majotabi/367516743.png","Majotabi27":"Majotabi/367516744.png","Majotabi28":"Majotabi/367516745.png","Majotabi29":"Majotabi/367516746.png","Majotabi30":"Majotabi/367516747.png","Majotabi31":"Majotabi/367516748.png","Majotabi32":"Majotabi/367516749.png","Majotabi33":"Majotabi/367516750.png","Majotabi34":"Majotabi/367516751.png","Majotabi35":"Majotabi/367516752.png","Majotabi36":"Majotabi/367516753.png","Majotabi37":"Majotabi/367516754.png","Majotabi38":"Majotabi/367516755.png","Majotabi39":"Majotabi/367516756.png","Majotabi40":"Majotabi/367516757.png","Snow-Miku1":"Snow-Miku/3583066@2x.png","Snow-Miku2":"Snow-Miku/3583067@2x.png","Snow-Miku3":"Snow-Miku/3583068@2x.png","Snow-Miku4":"Snow-Miku/3583069@2x.png","Snow-Miku5":"Snow-Miku/3583070@2x.png","Snow-Miku6":"Snow-Miku/3583071@2x.png","Snow-Miku7":"Snow-Miku/3583072@2x.png","Snow-Miku8":"Snow-Miku/3583073@2x.png","Snow-Miku9":"Snow-Miku/3583074@2x.png","Snow-Miku10":"Snow-Miku/3583075@2x.png","Snow-Miku11":"Snow-Miku/3583076@2x.png","Snow-Miku12":"Snow-Miku/3583077@2x.png","Snow-Miku13":"Snow-Miku/3583078@2x.png","Snow-Miku14":"Snow-Miku/3583079@2x.png","Snow-Miku15":"Snow-Miku/3583080@2x.png","Snow-Miku16":"Snow-Miku/3583081@2x.png","Snow-Miku17":"Snow-Miku/3583082@2x.png","Snow-Miku18":"Snow-Miku/3583083@2x.png","Snow-Miku19":"Snow-Miku/3583084@2x.png","Snow-Miku20":"Snow-Miku/3583085@2x.png","Snow-Miku21":"Snow-Miku/3583086@2x.png","Snow-Miku22":"Snow-Miku/3583087@2x.png","Snow-Miku23":"Snow-Miku/3583088@2x.png","Snow-Miku24":"Snow-Miku/3583089@2x.png","Snow-Miku25":"Snow-Miku/3583090@2x.png","Snow-Miku26":"Snow-Miku/3583091@2x.png","Snow-Miku27":"Snow-Miku/3583092@2x.png","Snow-Miku28":"Snow-Miku/3583093@2x.png","Snow-Miku29":"Snow-Miku/3583094@2x.png","Snow-Miku30":"Snow-Miku/3583095@2x.png","Snow-Miku31":"Snow-Miku/3583096@2x.png","Snow-Miku32":"Snow-Miku/3583097@2x.png","Snow-Miku33":"Snow-Miku/3583098@2x.png","Snow-Miku34":"Snow-Miku/3583099@2x.png","Snow-Miku35":"Snow-Miku/3583100@2x.png","Snow-Miku36":"Snow-Miku/3583101@2x.png","Snow-Miku37":"Snow-Miku/3583102@2x.png","Snow-Miku38":"Snow-Miku/3583103@2x.png","Snow-Miku39":"Snow-Miku/3583104@2x.png","Snow-Miku40":"Snow-Miku/3583105@2x.png"},
+      enableQQ: true,
+      path: window.location.pathname,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+    
+    if (false) {
+      const otherData = false
+      initData = Object.assign({}, initData, otherData)
+    }
+    
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script>(function(){
+  const bp = document.createElement('script');
+  const curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  bp.dataset.pjax = ''
+  const s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})()</script></div></body></html>
