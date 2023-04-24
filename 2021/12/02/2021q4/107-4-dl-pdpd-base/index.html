@@ -61,7 +61,7 @@
     }
   },
   isPhotoFigcaption: true,
-  islazyload: false,
+  islazyload: true,
   isanchor: true
 };
 
@@ -177,7 +177,7 @@ if (asideStatus !== undefined) {
      document.documentElement.classList.remove('hide-aside')
    }
 }})()</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Yang's Harbor" type="application/atom+xml">
-</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">243</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">88</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">23</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Links</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Articles</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://image.discover304.top/ai/dl/02/dog-end-world.jpg?imageView2/2/h/300)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Yang's Harbor</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Links</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Articles</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">【深度学习】框架：PaddlePaddle基础</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-12-02T07:53:26.000Z" title="Created 2021-12-02 15:53:26">2021-12-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-12-25T06:48:18.000Z" title="Updated 2021-12-25 14:48:18">2021-12-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/NoteBook/">NoteBook</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/NoteBook/PythonNote/">PythonNote</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word count:</span><span class="word-count">2.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading time:</span><span>9min</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">243</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">88</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">23</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Links</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Articles</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://image.discover304.top/ai/dl/02/dog-end-world.jpg?imageView2/2/h/300)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Yang's Harbor</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Links</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Articles</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">【深度学习】框架：PaddlePaddle基础</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-12-02T07:53:26.000Z" title="Created 2021-12-02 15:53:26">2021-12-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-12-25T06:48:18.000Z" title="Updated 2021-12-25 14:48:18">2021-12-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/NoteBook/">NoteBook</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/NoteBook/PythonNote/">PythonNote</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word count:</span><span class="word-count">2.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading time:</span><span>9min</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
 <li>本页面无手机端适配，强制缩放阅读。</li>
 <li>使用纯html格式，保存教学用ppt，添加了部分个人笔记。</li>
 <li>目录工作正常，可以跳转。</li>
@@ -205,7 +205,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page2-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target002.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target002.png" alt="background image"/>
 <p style="position:absolute;top:35px;left:54px;white-space:nowrap" class="ft20">PaddlePaddle概述</p>
 <p style="position:absolute;top:275px;left:78px;white-space:nowrap" class="ft21">PaddlePaddle概述</p>
 <p style="position:absolute;top:88px;left:403px;white-space:nowrap" class="ft22">PaddlePaddle简介</p>
@@ -264,7 +264,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page4-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target004.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target004.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft43">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft41">什么是PaddlePaddle</p>
 <p style="position:absolute;top:147px;left:66px;white-space:nowrap" class="ft42">Ø</p>
@@ -302,7 +302,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page5-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target005.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target005.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft53">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft51">为什么学习PaddlePaddle</p>
 <p style="position:absolute;top:147px;left:66px;white-space:nowrap" class="ft52">Ø</p>
@@ -339,7 +339,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page6-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target006.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target006.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft63">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft61">PaddlePaddle优点</p>
 <p style="position:absolute;top:145px;left:66px;white-space:nowrap" class="ft62">Ø</p>
@@ -379,7 +379,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page7-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target007.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target007.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft73">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft71">PaddlePaddle缺点</p>
 <p style="position:absolute;top:145px;left:66px;white-space:nowrap" class="ft72">Ø</p>
@@ -414,7 +414,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page8-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target008.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target008.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft82">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft81">国际竞赛获奖情况</p>
 </div>
@@ -445,7 +445,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page9-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target009.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target009.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft92">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft91">行业应用</p>
 </div>
@@ -479,7 +479,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page10-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target010.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target010.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft105">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft101">学习资源</p>
 <p style="position:absolute;top:138px;left:94px;white-space:nowrap" class="ft102">Ø</p>
@@ -524,7 +524,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page11-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target011.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target011.png" alt="background image"/>
 <p style="position:absolute;top:31px;left:104px;white-space:nowrap" class="ft110">体系结构</p>
 <p style="position:absolute;top:275px;left:126px;white-space:nowrap" class="ft111">体系结构</p>
 <p style="position:absolute;top:88px;left:445px;white-space:nowrap" class="ft112">体系结构</p>
@@ -567,7 +567,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page13-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target013.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target013.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft135">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft131">总体架构</p>
 <p style="position:absolute;top:159px;left:181px;white-space:nowrap" class="ft132">组网模块</p>
@@ -615,7 +615,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page14-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target014.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target014.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft143">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft141">编译与执行过程</p>
 <p style="position:absolute;top:126px;left:95px;white-space:nowrap" class="ft144">1.&#160;用户编写的python程序通过调用&#160;Paddle&#160;提供的算子，向Program&#160;中添加变量<br/>（Tensor）以及对变量的操作（Operators&#160;或者&#160;Layers）<br/>2.&#160;原始Program在框架内部转换为中间描述语言：&#160;ProgramDesc<br/>3.&#160;Transpiler&#160;接受一段&#160;ProgramDesc&#160;，输出一段变化后的&#160;ProgramDesc&#160;，作为后端&#160;<br/>Executor&#160;最终需要执行的&#160;Program<br/>4.&#160;执行&#160;ProgramDesc&#160;中定义的&#160;Operator（可以类比为程序语言中的指令），在执行<br/>过程中会为&#160;Operator&#160;创建所需的输入输出并进行管理</p>
@@ -647,7 +647,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page15-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target015.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target015.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft152">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft151">编译与执行过程（续）</p>
 </div>
@@ -679,7 +679,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page16-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target016.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target016.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft163">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft161">三个重要术语</p>
 <p style="position:absolute;top:138px;left:94px;white-space:nowrap" class="ft162">Ø</p>
@@ -716,7 +716,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page17-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target017.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target017.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft172">课<br/>堂<br/>练<br/>习</p>
 <p style="position:absolute;top:75px;left:78px;white-space:nowrap" class="ft171">案例1：快速开始</p>
 </div>
@@ -743,7 +743,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page18-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target018.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target018.png" alt="background image"/>
 <p style="position:absolute;top:43px;left:69px;white-space:nowrap" class="ft180">基本概念与操作</p>
 <p style="position:absolute;top:275px;left:90px;white-space:nowrap" class="ft181">基本概念与操作</p>
 <p style="position:absolute;top:88px;left:445px;white-space:nowrap" class="ft182">基本概念</p>
@@ -789,7 +789,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page20-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target020.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target020.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft204">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft201">张量</p>
 <p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft202">•&#160;什么是张量</p>
@@ -824,7 +824,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page21-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target021.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target021.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft214">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft211">张量（续1）</p>
 <p style="position:absolute;top:102px;left:66px;white-space:nowrap" class="ft212">•&#160;张量示例</p>
@@ -859,7 +859,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page22-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target022.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target022.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft223">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft221">LoDTensor</p>
 <p style="position:absolute;top:126px;left:118px;white-space:nowrap" class="ft222">Ø</p>
@@ -896,7 +896,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page23-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target023.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target023.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft233">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft231">LoDTensor（续）</p>
 <p style="position:absolute;top:124px;left:118px;white-space:nowrap" class="ft232">Ø</p>
@@ -933,7 +933,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page24-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target024.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target024.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft243">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft241">Layer</p>
 <p style="position:absolute;top:148px;left:96px;white-space:nowrap" class="ft242">Ø</p>
@@ -969,7 +969,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page25-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target025.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target025.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft254">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft251">Variable</p>
 <p style="position:absolute;top:148px;left:96px;white-space:nowrap" class="ft252">Ø</p>
@@ -1009,7 +1009,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page26-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target026.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target026.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft266">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft261">Variable（续）</p>
 <p style="position:absolute;top:148px;left:96px;white-space:nowrap" class="ft262">Ø</p>
@@ -1056,7 +1056,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page27-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target027.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target027.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft274">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft271">Program</p>
 <p style="position:absolute;top:114px;left:96px;white-space:nowrap" class="ft272">Ø</p>
@@ -1095,7 +1095,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page28-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target028.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target028.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft286">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft281">Program（续）</p>
 <p style="position:absolute;top:114px;left:96px;white-space:nowrap" class="ft282">Ø</p>
@@ -1139,7 +1139,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page29-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target029.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target029.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft294">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft291">Scope</p>
 <p style="position:absolute;top:114px;left:90px;white-space:nowrap" class="ft292">Ø</p>
@@ -1179,7 +1179,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page30-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target030.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target030.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft303">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft301">Executor</p>
 <p style="position:absolute;top:148px;left:96px;white-space:nowrap" class="ft302">Ø</p>
@@ -1214,7 +1214,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page31-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target031.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target031.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft313">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft311">Place</p>
 <p style="position:absolute;top:148px;left:96px;white-space:nowrap" class="ft312">Ø</p>
@@ -1249,7 +1249,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page32-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target032.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target032.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft323">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft321">Optimizer</p>
 <p style="position:absolute;top:148px;left:96px;white-space:nowrap" class="ft322">Ø</p>
@@ -1282,7 +1282,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page33-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target033.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target033.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft332">课<br/>堂<br/>练<br/>习</p>
 <p style="position:absolute;top:33px;left:78px;white-space:nowrap" class="ft331">案例2：执行两个张量计算</p>
 </div>
@@ -1315,7 +1315,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page34-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target034.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target034.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft344">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft341">程序执行步骤</p>
 <p style="position:absolute;top:229px;left:146px;white-space:nowrap" class="ft342">定</p>
@@ -1385,7 +1385,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page35-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target035.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target035.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft356">课<br/>堂<br/>练<br/>习</p>
 <p style="position:absolute;top:75px;left:78px;white-space:nowrap" class="ft351">案例3：编写简单线性回归</p>
 <p style="position:absolute;top:148px;left:96px;white-space:nowrap" class="ft352">Ø</p>
@@ -1443,7 +1443,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page36-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target036.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target036.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft367">课<br/>堂<br/>练<br/>习</p>
 <p style="position:absolute;top:75px;left:78px;white-space:nowrap" class="ft361">案例3：编写简单线性回归（续）</p>
 <p style="position:absolute;top:157px;left:96px;white-space:nowrap" class="ft362">Ø</p>
@@ -1494,7 +1494,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page37-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target037.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target037.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft372">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft371">fluid&#160;API结构图</p>
 </div>
@@ -1520,7 +1520,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page38-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target038.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target038.png" alt="background image"/>
 <p style="position:absolute;top:35px;left:114px;white-space:nowrap" class="ft380">数据准备</p>
 <p style="position:absolute;top:275px;left:126px;white-space:nowrap" class="ft381">数据准备</p>
 <p style="position:absolute;top:88px;left:464px;white-space:nowrap" class="ft382">数据准备</p>
@@ -1566,7 +1566,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page40-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target040.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target040.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft405">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft401">深度学习数据读取要求</p>
 <p style="position:absolute;top:148px;left:96px;white-space:nowrap" class="ft402">Ø</p>
@@ -1610,7 +1610,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page41-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target041.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target041.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft413">课<br/>堂<br/>练<br/>习</p>
 <p style="position:absolute;top:75px;left:78px;white-space:nowrap" class="ft411">案例4：使用reader</p>
 <p style="position:absolute;top:131px;left:96px;white-space:nowrap" class="ft412">Ø</p>
@@ -1644,7 +1644,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page42-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target042.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target042.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft423">课<br/>堂<br/>练<br/>习</p>
 <p style="position:absolute;top:75px;left:78px;white-space:nowrap" class="ft421">案例4：使用reader（续1）</p>
 <p style="position:absolute;top:131px;left:96px;white-space:nowrap" class="ft422">Ø</p>
@@ -1678,7 +1678,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page43-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target043.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target043.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft433">课<br/>堂<br/>练<br/>习</p>
 <p style="position:absolute;top:75px;left:78px;white-space:nowrap" class="ft431">案例4：使用reader（续2）</p>
 <p style="position:absolute;top:131px;left:96px;white-space:nowrap" class="ft432">Ø</p>
@@ -1714,7 +1714,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page45-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target045.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target045.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft454">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft451">数据集及任务</p>
 <p style="position:absolute;top:148px;left:96px;white-space:nowrap" class="ft452">Ø</p>
@@ -1758,7 +1758,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page46-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target046.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target046.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft464">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft461">思路</p>
 <p style="position:absolute;top:141px;left:161px;white-space:nowrap" class="ft462">数据准备</p>
@@ -1799,7 +1799,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page47-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target047.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target047.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft473">知<br/>识<br/>讲<br/>解</p>
 <p style="position:absolute;top:30px;left:66px;white-space:nowrap" class="ft471">执行结果</p>
 <p style="position:absolute;top:498px;left:224px;white-space:nowrap" class="ft472">损失函数收敛过程</p>
@@ -1833,7 +1833,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page48-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target048.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target048.png" alt="background image"/>
 <p style="position:absolute;top:238px;left:16px;white-space:nowrap" class="ft483">课<br/>堂<br/>练<br/>习</p>
 <p style="position:absolute;top:75px;left:78px;white-space:nowrap" class="ft481">案例5：波士顿房价预测</p>
 <p style="position:absolute;top:146px;left:92px;white-space:nowrap" class="ft482">Ø</p>
@@ -1867,7 +1867,7 @@ if (asideStatus !== undefined) {
 </head>
 <body bgcolor="#A0A0A0" vlink="blue" link="blue">
 <div id="page49-div" style="position:relative;width:1080px;height:607px;">
-<img width="1080" height="607" src="https://image.discover304.top/ai/dl/06/target049.png" alt="background image"/>
+<img width="1080" height="607" src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ai/dl/06/target049.png" alt="background image"/>
 <p style="position:absolute;top:112px;left:456px;white-space:nowrap" class="ft490">今日总结</p>
 <p style="position:absolute;top:201px;left:100px;white-space:nowrap" class="ft491">•&#160;PaddlePaddle体系结构与基本概念</p>
 <p style="position:absolute;top:260px;left:141px;white-space:nowrap" class="ft493">–&#160;Tensor,&#160;Layer,&#160;Program,&#160;Variable,&#160;Executor,Place<br/>–&#160;Fluid&#160;API组织结构&#160;</p>
@@ -1877,7 +1877,7 @@ if (asideStatus !== undefined) {
 </body>
 </html>
 
-</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><a class="post-meta__tags" href="/tags/%E8%AE%B0%E5%BD%95/">记录</a><a class="post-meta__tags" href="/tags/Python/">Python</a><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><a class="post-meta__tags" href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a></div><div class="post_share"><div class="social-share" data-image="https://image.discover304.top/ai/dl/02/dog-end-world.jpg?imageView2/2/h/300" data-sites="facebook,twitter,wechat,weibo,qzone,qq,linkedin"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/12/07/2021q4/085-data-pool/"><img class="prev-cover" src="https://image.discover304.top/foglaketohou.webp?imageView2/2/h/300" onerror="onerror=null;src='/img/404.png'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">【数据湖】扫盲</div></div></a></div><div class="next-post pull-right"><a href="/2021/12/02/2021q4/107-3-dl-tf/"><img class="next-cover" src="https://image.discover304.top/ai/dl/02/dog-end-world.jpg?imageView2/2/h/300" onerror="onerror=null;src='/img/404.png'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">【深度学习】框架：TensorFlow1</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2021/11/30/2021q4/107-0-dl/" title="【深度学习】概述"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】概述</div></div></a></div><div><a href="/2021/11/30/2021q4/107-1-dl-back/" title="【深度学习】基础 叁：反向传播算法"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】基础 叁：反向传播算法</div></div></a></div><div><a href="/2021/11/30/2021q4/107-1-dl-loss-gd/" title="【深度学习】基础 贰：损失函数与梯度下降"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】基础 贰：损失函数与梯度下降</div></div></a></div><div><a href="/2021/11/30/2021q4/107-1-dl-cnn/" title="【深度学习】基础 肆：卷积神经网络"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】基础 肆：卷积神经网络</div></div></a></div><div><a href="/2021/11/30/2021q4/107-1-dl-perceptron/" title="【深度学习】基础 壹：感知机与神经网络"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】基础 壹：感知机与神经网络</div></div></a></div><div><a href="/2021/12/02/2021q4/107-2-dl/" title="【深度学习】图像操作：OpenCV"><img class="cover" src="https://image.discover304.top/ai/dl/02/dog-end-world.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】图像操作：OpenCV</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">✨YangSier✨</div><div class="author-info__description">Love Everything You Like.</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">243</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">88</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">23</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/98639326"><i class="fab fa-bilibili"></i><span>Bilibili Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Discover304" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://twitter.com/Discover304" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://www.youtube.com/channel/UCuQQr55i3VCQuCPMTQnpzDA" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a><a class="social-icon" href="mailto:hobart.yang@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">✨动态更新：<p style="text-align:center">享受精彩大学生活中。</p>✨聊天划水QQ群：<p style="text-align:center"><strong>兔叽の魔术工房</strong><br>942-848-525</p>✨我们的口号是：<p style="text-align:center; color:#39C5BB">人工降神，机械飞升！</p><a target="_blank" rel="noopener" href='https://space.bilibili.com/98639326'><img src='/img/mikulittletrans.png'></a></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E"><span class="toc-text">说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PaddlePaddle%E6%A6%82%E8%BF%B0"><span class="toc-text">PaddlePaddle概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="toc-text">体系结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%93%8D%E4%BD%9C"><span class="toc-text">基本概念与操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">基本概念</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%87%86%E5%A4%87"><span class="toc-text">数据准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92"><span class="toc-text">实现多元回归</span></a></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/04/24/2023q1/173-nginx-docker-blog-page-depoly/" title="【模板】Hexo Docker Nginx 个人博客服务器部署"><img src="https://image.discover304.top/s16001804242023.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【模板】Hexo Docker Nginx 个人博客服务器部署"/></a><div class="content"><a class="title" href="/2023/04/24/2023q1/173-nginx-docker-blog-page-depoly/" title="【模板】Hexo Docker Nginx 个人博客服务器部署">【模板】Hexo Docker Nginx 个人博客服务器部署</a><time datetime="2023-04-24T06:39:24.000Z" title="Created 2023-04-24 14:39:24">2023-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/2022q4/172-design-idea/" title="【思考】创新点子"><img src="https://image.discover304.top/blog-img/s19313212112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【思考】创新点子"/></a><div class="content"><a class="title" href="/2022/12/11/2022q4/172-design-idea/" title="【思考】创新点子">【思考】创新点子</a><time datetime="2022-12-11T11:08:37.000Z" title="Created 2022-12-11 19:08:37">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/2022q4/171-other-thought/" title="【思考】其他思考"><img src="https://image.discover304.top/blog-img/s19305112112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【思考】其他思考"/></a><div class="content"><a class="title" href="/2022/12/11/2022q4/171-other-thought/" title="【思考】其他思考">【思考】其他思考</a><time datetime="2022-12-11T11:08:17.000Z" title="Created 2022-12-11 19:08:17">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/2022q4/170-key-thought/" title="【思考】核心思考"><img src="https://image.discover304.top/blog-img/s19294112112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【思考】核心思考"/></a><div class="content"><a class="title" href="/2022/12/11/2022q4/170-key-thought/" title="【思考】核心思考">【思考】核心思考</a><time datetime="2022-12-11T11:08:06.000Z" title="Created 2022-12-11 19:08:06">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/09/2022q4/169-new-r/" title="R: Getting Into Project of R"><img src="https://image.discover304.top/blog-img/s18350812112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="R: Getting Into Project of R"/></a><div class="content"><a class="title" href="/2022/12/09/2022q4/169-new-r/" title="R: Getting Into Project of R">R: Getting Into Project of R</a><time datetime="2022-12-09T09:44:06.000Z" title="Created 2022-12-09 17:44:06">2022-12-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/28/2022q3/167-2-sp-review/" title="SP Modules Review Contents (3)"><img src="https://image.discover304.top/blog-img/s11220010012022.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="SP Modules Review Contents (3)"/></a><div class="content"><a class="title" href="/2022/11/28/2022q3/167-2-sp-review/" title="SP Modules Review Contents (3)">SP Modules Review Contents (3)</a><time datetime="2022-11-28T07:24:39.000Z" title="Created 2022-11-28 15:24:39">2022-11-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/17/2022q3/166-10-connected-speech-hidden-markov-model/" title="SP Module 10 Connected Speech &amp; HMM Training"><img src="https://image.discover304.top/blog-img/s11220010012022.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="SP Module 10 Connected Speech &amp; HMM Training"/></a><div class="content"><a class="title" href="/2022/11/17/2022q3/166-10-connected-speech-hidden-markov-model/" title="SP Module 10 Connected Speech &amp; HMM Training">SP Module 10 Connected Speech &amp; HMM Training</a><time datetime="2022-11-17T01:47:12.000Z" title="Created 2022-11-17 09:47:12">2022-11-17</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://image.discover304.top/ai/dl/02/dog-end-world.jpg?imageView2/2/h/300)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By ✨YangSier✨</div><div><a target="_blank" href="https://beian.miit.gov.cn/" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;"> 冀ICP备2021025381号-1</p></a></div><div><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=13060602001430" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/img/beian.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">冀公网安备 13060602001430号</p></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><a class="post-meta__tags" href="/tags/%E8%AE%B0%E5%BD%95/">记录</a><a class="post-meta__tags" href="/tags/Python/">Python</a><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><a class="post-meta__tags" href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a></div><div class="post_share"><div class="social-share" data-image="https://image.discover304.top/ai/dl/02/dog-end-world.jpg?imageView2/2/h/300" data-sites="facebook,twitter,wechat,weibo,qzone,qq,linkedin"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" data-lazy-src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" data-lazy-src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/12/07/2021q4/085-data-pool/"><img class="prev-cover" data-lazy-src="https://image.discover304.top/foglaketohou.webp?imageView2/2/h/300" onerror="onerror=null;src='/img/404.png'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">【数据湖】扫盲</div></div></a></div><div class="next-post pull-right"><a href="/2021/12/02/2021q4/107-3-dl-tf/"><img class="next-cover" data-lazy-src="https://image.discover304.top/ai/dl/02/dog-end-world.jpg?imageView2/2/h/300" onerror="onerror=null;src='/img/404.png'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">【深度学习】框架：TensorFlow1</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2021/11/30/2021q4/107-0-dl/" title="【深度学习】概述"><img class="cover" data-lazy-src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】概述</div></div></a></div><div><a href="/2021/11/30/2021q4/107-1-dl-back/" title="【深度学习】基础 叁：反向传播算法"><img class="cover" data-lazy-src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】基础 叁：反向传播算法</div></div></a></div><div><a href="/2021/11/30/2021q4/107-1-dl-loss-gd/" title="【深度学习】基础 贰：损失函数与梯度下降"><img class="cover" data-lazy-src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】基础 贰：损失函数与梯度下降</div></div></a></div><div><a href="/2021/11/30/2021q4/107-1-dl-cnn/" title="【深度学习】基础 肆：卷积神经网络"><img class="cover" data-lazy-src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】基础 肆：卷积神经网络</div></div></a></div><div><a href="/2021/11/30/2021q4/107-1-dl-perceptron/" title="【深度学习】基础 壹：感知机与神经网络"><img class="cover" data-lazy-src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】基础 壹：感知机与神经网络</div></div></a></div><div><a href="/2021/12/01/2021q4/108-1-dl-ex/" title="【深度学习】实例第二部分：OpenCV"><img class="cover" data-lazy-src="https://image.discover304.top/ai/dl/space_work.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】实例第二部分：OpenCV</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">✨YangSier✨</div><div class="author-info__description">Love Everything You Like.</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">243</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">88</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">23</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/98639326"><i class="fab fa-bilibili"></i><span>Bilibili Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Discover304" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://blog.csdn.net/Discover304" target="_blank" title="CSDN"><i class="fa-solid fa-c"></i></a><a class="social-icon" href="https://www.zhihu.com/people/discover-56-86-75" target="_blank" title="知乎"><i class="fa-brands fa-zhihu"></i></a><a class="social-icon" href="mailto:hobart.yang@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://jq.qq.com/?_wv=1027&amp;k=EaGddTQg" target="_blank" title="QQ"><i class="fa-brands fa-qq"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">✨动态更新：<p style="text-align:center">享受精彩大学生活中。</p>✨聊天划水QQ群：<p style="text-align:center"><a target="_blank" rel="noopener" href="https://jq.qq.com/?_wv=1027&k=EaGddTQg"><strong>兔叽の魔术工房</strong></a><br>942-848-525</p>✨我们的口号是：<p style="text-align:center; color:#39C5BB">人工降神，机械飞升！</p><a target="_blank" rel="noopener" href='https://space.bilibili.com/98639326'><img src='/img/mikulittletrans.png'></a></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E"><span class="toc-text">说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PaddlePaddle%E6%A6%82%E8%BF%B0"><span class="toc-text">PaddlePaddle概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="toc-text">体系结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%93%8D%E4%BD%9C"><span class="toc-text">基本概念与操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">基本概念</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%87%86%E5%A4%87"><span class="toc-text">数据准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92"><span class="toc-text">实现多元回归</span></a></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/04/24/2023q1/173-nginx-docker-blog-page-depoly/" title="【模板】Hexo Docker Nginx 个人博客服务器部署"><img data-lazy-src="https://image.discover304.top/s16001804242023.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="【模板】Hexo Docker Nginx 个人博客服务器部署"/></a><div class="content"><a class="title" href="/2023/04/24/2023q1/173-nginx-docker-blog-page-depoly/" title="【模板】Hexo Docker Nginx 个人博客服务器部署">【模板】Hexo Docker Nginx 个人博客服务器部署</a><time datetime="2023-04-24T06:39:24.000Z" title="Created 2023-04-24 14:39:24">2023-04-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/2022q4/172-design-idea/" title="【思考】创新点子"><img data-lazy-src="https://image.discover304.top/blog-img/s19313212112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【思考】创新点子"/></a><div class="content"><a class="title" href="/2022/12/11/2022q4/172-design-idea/" title="【思考】创新点子">【思考】创新点子</a><time datetime="2022-12-11T11:08:37.000Z" title="Created 2022-12-11 19:08:37">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/2022q4/171-other-thought/" title="【思考】其他思考"><img data-lazy-src="https://image.discover304.top/blog-img/s19305112112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【思考】其他思考"/></a><div class="content"><a class="title" href="/2022/12/11/2022q4/171-other-thought/" title="【思考】其他思考">【思考】其他思考</a><time datetime="2022-12-11T11:08:17.000Z" title="Created 2022-12-11 19:08:17">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/11/2022q4/170-key-thought/" title="【思考】核心思考"><img data-lazy-src="https://image.discover304.top/blog-img/s19294112112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="【思考】核心思考"/></a><div class="content"><a class="title" href="/2022/12/11/2022q4/170-key-thought/" title="【思考】核心思考">【思考】核心思考</a><time datetime="2022-12-11T11:08:06.000Z" title="Created 2022-12-11 19:08:06">2022-12-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/09/2022q4/169-new-r/" title="R: Getting Into Project of R"><img data-lazy-src="https://image.discover304.top/blog-img/s18350812112022.png" onerror="this.onerror=null;this.src='/img/404.png'" alt="R: Getting Into Project of R"/></a><div class="content"><a class="title" href="/2022/12/09/2022q4/169-new-r/" title="R: Getting Into Project of R">R: Getting Into Project of R</a><time datetime="2022-12-09T09:44:06.000Z" title="Created 2022-12-09 17:44:06">2022-12-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/28/2022q3/167-2-sp-review/" title="SP Modules Review Contents (3)"><img data-lazy-src="https://image.discover304.top/blog-img/s11220010012022.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="SP Modules Review Contents (3)"/></a><div class="content"><a class="title" href="/2022/11/28/2022q3/167-2-sp-review/" title="SP Modules Review Contents (3)">SP Modules Review Contents (3)</a><time datetime="2022-11-28T07:24:39.000Z" title="Created 2022-11-28 15:24:39">2022-11-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/17/2022q3/166-10-connected-speech-hidden-markov-model/" title="SP Module 10 Connected Speech &amp; HMM Training"><img data-lazy-src="https://image.discover304.top/blog-img/s11220010012022.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="SP Module 10 Connected Speech &amp; HMM Training"/></a><div class="content"><a class="title" href="/2022/11/17/2022q3/166-10-connected-speech-hidden-markov-model/" title="SP Module 10 Connected Speech &amp; HMM Training">SP Module 10 Connected Speech &amp; HMM Training</a><time datetime="2022-11-17T01:47:12.000Z" title="Created 2022-11-17 09:47:12">2022-11-17</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://image.discover304.top/ai/dl/02/dog-end-world.jpg?imageView2/2/h/300)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By ✨YangSier✨</div><div><a target="_blank" href="https://beian.miit.gov.cn/" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;"> 冀ICP备2021025381号-1</p></a></div><div><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=13060602001430" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/img/beian.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">冀公网安备 13060602001430号</p></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
   if (typeof pangu === 'object') pangu.spacingElementById('content-inner')
   else {
     getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
@@ -1895,7 +1895,18 @@ function panguInit () {
   }
 }
 
-document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
   if (window.mermaidJsLoad) mermaid.init()
   else {
     getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
