@@ -6,7 +6,7 @@
   <link href="https://discover304.top/atom.xml" rel="self"/>
   
   <link href="https://discover304.top/"/>
-  <updated>2023-04-24T15:58:55.942Z</updated>
+  <updated>2023-10-23T19:10:46.096Z</updated>
   <id>https://discover304.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Paper Reading List</title>
+    <link href="https://discover304.top/2023/10/23/2023q4/174-0-hp-papers/"/>
+    <id>https://discover304.top/2023/10/23/2023q4/174-0-hp-papers/</id>
+    <published>2023-10-23T11:35:40.000Z</published>
+    <updated>2023-10-23T19:10:46.096Z</updated>
+    
+    
+    
+    
+    <category term="University" scheme="https://discover304.top/categories/University/"/>
+    
+    <category term="Honours Project" scheme="https://discover304.top/categories/University/Honours-Project/"/>
+    
+    
+    <category term="学习" scheme="https://discover304.top/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="知识" scheme="https://discover304.top/tags/%E7%9F%A5%E8%AF%86/"/>
+    
+    <category term="积累" scheme="https://discover304.top/tags/%E7%A7%AF%E7%B4%AF/"/>
+    
+    <category term="笔记" scheme="https://discover304.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>【模板】Hexo Docker Nginx 个人博客服务器部署</title>
@@ -302,8 +327,8 @@
   
   <entry>
     <title>SP Module 7 Pattern Matching</title>
-    <link href="https://discover304.top/2022/11/10/2022q3/166-7-sp-pattern-matching/"/>
-    <id>https://discover304.top/2022/11/10/2022q3/166-7-sp-pattern-matching/</id>
+    <link href="https://discover304.top/2022/11/09/2022q3/166-7-sp-pattern-matching/"/>
+    <id>https://discover304.top/2022/11/09/2022q3/166-7-sp-pattern-matching/</id>
     <published>2022-11-09T18:19:56.000Z</published>
     <updated>2023-04-24T15:04:57.995Z</updated>
     
@@ -569,38 +594,6 @@
       
       
     <summary type="html">&lt;h2 id=&quot;Prerequisite-knowledge&quot;&gt;&lt;a href=&quot;#Prerequisite-knowledge&quot; class=&quot;headerlink&quot; title=&quot;Prerequisite knowledge&quot;&gt;&lt;/a&gt;Prerequisite knowled</summary>
-      
-    
-    
-    
-    <category term="University" scheme="https://discover304.top/categories/University/"/>
-    
-    <category term="Introduction to Mobile Robotics" scheme="https://discover304.top/categories/University/Introduction-to-Mobile-Robotics/"/>
-    
-    
-    <category term="学习" scheme="https://discover304.top/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="知识" scheme="https://discover304.top/tags/%E7%9F%A5%E8%AF%86/"/>
-    
-    <category term="积累" scheme="https://discover304.top/tags/%E7%A7%AF%E7%B4%AF/"/>
-    
-    <category term="笔记" scheme="https://discover304.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MOB LEC7 Semantic Segmentation</title>
-    <link href="https://discover304.top/2022/10/20/2022q3/164-7-Semantic-Segmentation/"/>
-    <id>https://discover304.top/2022/10/20/2022q3/164-7-Semantic-Segmentation/</id>
-    <published>2022-10-20T03:17:27.000Z</published>
-    <updated>2023-04-24T15:05:38.617Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Problem-Formulation"><a href="#Problem-Formulation" class="headerlink" title="Problem Formulation"></a>Problem Formulation</h2><p>pixel-level prediction<br><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/blog-img/s15400110242022.png" alt="s15400110242022"></p><h2 id="Challenge-of-Semantic-Segmentation"><a href="#Challenge-of-Semantic-Segmentation" class="headerlink" title="Challenge of Semantic Segmentation"></a>Challenge of Semantic Segmentation</h2><blockquote><p><strong>General vision challenges</strong>: occlusion, truncation, scale and illumination changes</p><p><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/blog-img/s15405210242022.png" alt="s15405210242022"></p></blockquote><blockquote><p><strong>Challenges specific to segmentation</strong>: smooth boundaries are hard to obtain due to the intrinsic ambiguity and resolution limitation in the image space.</p><p><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/blog-img/s15413110242022.png" alt="s15413110242022"></p></blockquote><h2 id="Segmentation-with-DNN"><a href="#Segmentation-with-DNN" class="headerlink" title="Segmentation with DNN"></a>Segmentation with DNN</h2><p><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/blog-img/s15444910242022.png" alt="s15444910242022"></p><p><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/blog-img/s15450410242022.png" alt="s15450410242022"></p><p><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/blog-img/s15451610242022.png" alt="s15451610242022"></p><h2 id="Semantic-Segmentation-for-Scene-Understanding"><a href="#Semantic-Segmentation-for-Scene-Understanding" class="headerlink" title="Semantic Segmentation for Scene Understanding"></a>Semantic Segmentation for Scene Understanding</h2><p><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/blog-img/s15474910242022.png" alt="s15474910242022"></p><p>RANSAC algorithm<br><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/blog-img/s15481410242022.png" alt="s15481410242022"></p><p>boundaries<br><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/blog-img/s15482610242022.png" alt="s15482610242022"></p><h2 id="Additional-material"><a href="#Additional-material" class="headerlink" title="Additional material"></a>Additional material</h2><p>True Positive, False Positive, False Negative<br><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/blog-img/s15422310242022.png" alt="s15422310242022"></p><p>individual object<br><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/blog-img/s15490210242022.png" alt="s15490210242022"></p><p>help object detection<br><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/blog-img/s15491410242022.png" alt="s15491410242022"></p><h2 id="Supplementary-Material"><a href="#Supplementary-Material" class="headerlink" title="Supplementary Material"></a>Supplementary Material</h2><ol><li><a href="https://arxiv.org/pdf/1511.00561.pdf">SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation.</a></li><li><a href="https://docs.opencv.org/3.4.3/d9/db0/tutorial_hough_lines.html">Hough Transform Line Detection.</a></li><li><a href="https://www.v7labs.com/blog/panoptic-segmentation-guide#h1">The Complete Guide to Panoptic Segmentation</a></li><li><a href="https://arxiv.org/pdf/1703.06870.pdf">Mask R-CNN (optional)</a></li></ol><hr><p>Origin: Dr. Chris Lu (<a href="https://christopherlu.github.io/">Homepage</a>)<br>Translate + Edit: YangSier (<a href="https://discover304.top/">Homepage</a>)</p><blockquote><p><strong>:four_leaf_clover:碎碎念:four_leaf_clover:</strong><br>Hello米娜桑，这里是英国留学中的杨丝儿。我的博客的关键词集中在编程、算法、机器人、人工智能、数学等等，点个关注吧，持续高质量输出中。<br><strong>:cherry_blossom:唠嗑QQ群</strong>：<a href="https://jq.qq.com/?_wv=1027&k=EaGddTQg">兔叽的魔术工房</a> (942848525)<br><strong>:star:B站账号</strong>：<a href="https://space.bilibili.com/98639326">杨丝儿Online</a>（活跃于知识区和动画区）</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;Problem-Formulation&quot;&gt;&lt;a href=&quot;#Problem-Formulation&quot; class=&quot;headerlink&quot; title=&quot;Problem Formulation&quot;&gt;&lt;/a&gt;Problem Formulation&lt;/h2&gt;&lt;p&gt;pi</summary>
       
     
     
