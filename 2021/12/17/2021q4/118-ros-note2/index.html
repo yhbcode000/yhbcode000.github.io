@@ -188,7 +188,7 @@ if (asideStatus !== undefined) {
 <hr>
 <h2 id="star-服务"><a href="#star-服务" class="headerlink" title=":star:服务"></a>:star:服务</h2><p>有人说：<em>服务调用非常适合<strong>只需要偶尔去做</strong>并且会在有限时间完成的事情</em>。确实运行服务的场景是这样的，但是这是表象，服务的价值是分布式计算，能够把一个迫切需要的（接下来就要用到的）计算任务交给性能更好的服务端，而不需要在客户端进行计算。例如某某节点希望获取历史记录图片数据，那就可以调用一个数据库服务节点获取相关数据。</p>
 <p>服务其实就是<strong>同步的</strong>跨进程函数调用；他们能够让一个节点调用运行在另一个节点中的函数。</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ros_service_graph.png" alt="ros_service_graph"></p>
+<p><img src="https://image.discover304.top/ros_service_graph.png" alt="ros_service_graph"></p>
 <hr>
 <h3 id="sparkles-提出契机"><a href="#sparkles-提出契机" class="headerlink" title=":sparkles:提出契机"></a>:sparkles:提出契机</h3><ul>
 <li>话题机制针对的是一对多，且不需要对进程上锁的情况，例如传感器广播信息。</li>
@@ -218,7 +218,7 @@ if (asideStatus !== undefined) {
 <hr>
 <h2 id="star-动作"><a href="#star-动作" class="headerlink" title=":star:动作"></a>:star:动作</h2><p>动作动作，顾名思义就是机器的一个行为，需要去执行。这种行为往往是很复杂的，像是机器人跳舞或者执行一个后台计算。</p>
 <p>动作机制会在执行过程中向客户端发送执行进度，并且支持被客户端中断和实时反馈等特性。</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/ros_action_graph.png" alt="ros_action_graph"></p>
+<p><img src="https://image.discover304.top/ros_action_graph.png" alt="ros_action_graph"></p>
 <hr>
 <h3 id="sparkles-提出契机-1"><a href="#sparkles-提出契机-1" class="headerlink" title=":sparkles:提出契机"></a>:sparkles:提出契机</h3><p>因为服务机制是同步的（这是服务的性质决定的），所以完全不可以进行异步的行为（后台计算）。为了实现异步执行，ROS引入了动作机制。</p>
 <hr>

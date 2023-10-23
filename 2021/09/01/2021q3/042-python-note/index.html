@@ -194,7 +194,7 @@ if (asideStatus !== undefined) {
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建变量</span></span><br><span class="line">name_of_hunan =<span class="string">&#x27;湖南&#x27;</span></span><br><span class="line">name_of_hubei=<span class="string">&#x27;湖北&#x27;</span></span><br><span class="line"><span class="comment"># 修改变量</span></span><br><span class="line">name_of_hunan=<span class="string">&#x27;湖南省&#x27;</span></span><br><span class="line">name_of_hunan=name_of_hubei</span><br></pre></td></tr></table></figure>
 
 <p>理解上面这段代码最好方法就是构造 <strong>内存图</strong>。</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://img-blog.csdnimg.cn/img_convert/bedfe2487b1fbe35b64d790d31c4eec2.png" alt="2022-01-06 16-35-53 的屏幕截图"></p>
+<p><img src="https://img-blog.csdnimg.cn/img_convert/bedfe2487b1fbe35b64d790d31c4eec2.png" alt="2022-01-06 16-35-53 的屏幕截图"></p>
 <hr>
 <h3 id="sparkle-引用计数"><a href="#sparkle-引用计数" class="headerlink" title=":sparkle:引用计数"></a>:sparkle:引用计数</h3><p>引用计数 技术，每一个数据有一个计数，记录的是和它关联的变量的数量。如果没有关联变量了，也就是计数等于0了，数据就会被销毁，内存空间被释放。<code>del</code> 关键字就是用来删除变量的，形象一点就是上图中的小叉叉。</p>
 <blockquote>

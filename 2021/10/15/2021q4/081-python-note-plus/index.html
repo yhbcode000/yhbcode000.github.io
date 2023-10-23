@@ -194,16 +194,16 @@ if (asideStatus !== undefined) {
 </ul>
 <blockquote>
 <ul>
-<li>在任务中无阻塞时只有并行状态才能提高效率<br><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/networkPython/17.jpg"></li>
-<li>在任务中有阻塞时并行并发都能提高效率<br><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/networkPython/18.jpg"></li>
+<li>在任务中无阻塞时只有并行状态才能提高效率<br><img src="https://image.discover304.top/networkPython/17.jpg"></li>
+<li>在任务中有阻塞时并行并发都能提高效率<br><img src="https://image.discover304.top/networkPython/18.jpg"></li>
 </ul>
 </blockquote>
 <blockquote>
 <p><strong>计算机原理</strong> </p>
 <ul>
-<li>CPU：计算机硬件的核心部件，用于对任务进行执行运算。<br><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/networkPython/14.jpg"></li>
-<li>操作系统调用CPU执行任务<br><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/networkPython/15.png"></li>
-<li>cpu轮询机制 ： cpu都在多个任务之间快速的切换执行，切换速度在微秒级别，其实cpu同时只执行一个任务，但是因为切换太快了，从应用层看好像所有任务同时在执行。<br>  <img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/networkPython/16.gif"></li>
+<li>CPU：计算机硬件的核心部件，用于对任务进行执行运算。<br><img src="https://image.discover304.top/networkPython/14.jpg"></li>
+<li>操作系统调用CPU执行任务<br><img src="https://image.discover304.top/networkPython/15.png"></li>
+<li>cpu轮询机制 ： cpu都在多个任务之间快速的切换执行，切换速度在微秒级别，其实cpu同时只执行一个任务，但是因为切换太快了，从应用层看好像所有任务同时在执行。<br>  <img src="https://image.discover304.top/networkPython/16.gif"></li>
 <li>多核CPU：现在的计算机一般都是多核CPU，比如四核，八核，我们可以理解为由多个单核CPU的集合。这时候在执行任务时就有了选择，可以将多个任务分配给某一个cpu核心，也可以将多个任务分配给多个cpu核心，操作系统会自动根据任务的复杂程度选择最优的分配方案。</li>
 <li>并发 ： 多个任务如果被分配给了一个cpu内核，那么这多个任务之间就是并发关系，并发关系的多个任务之间并不是真正的”同时”。</li>
 <li>并行 ： 多个任务如果被分配给了不同的cpu内核，那么这多个任务之间执行时就是并行关系，并行关系的多个任务时真正的“同时”执行。</li>
@@ -252,17 +252,17 @@ if (asideStatus !== undefined) {
 <h3 id="star-进程概述"><a href="#star-进程概述" class="headerlink" title=":star:进程概述"></a>:star:进程概述</h3><ul>
 <li>定义： 程序在计算机中的一次执行过程。<ul>
 <li>程序是一个可执行的文件，是静态的占有磁盘。</li>
-<li>进程是一个动态的过程描述，占有计算机运行资源，有一定的生命周期。<br><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/networkPython/19.jpg"></li>
+<li>进程是一个动态的过程描述，占有计算机运行资源，有一定的生命周期。<br><img src="https://image.discover304.top/networkPython/19.jpg"></li>
 </ul>
 </li>
 <li>进程状态<ul>
-<li>三态<br>    就绪态 ： 进程具备执行条件，等待系统调度分配cpu资源<br>    运行态 ： 进程占有cpu正在运行<br>    等待态 ： 进程阻塞等待，此时会让出cpu<br> <img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/networkPython/4_3.png"></li>
-<li>五态 (在三态基础上增加新建和终止)<br>    新建 ： 创建一个进程，获取资源的过程<br>    终止 ： 进程结束，释放资源的过程<br> <img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/networkPython/4_5.png"></li>
+<li>三态<br>    就绪态 ： 进程具备执行条件，等待系统调度分配cpu资源<br>    运行态 ： 进程占有cpu正在运行<br>    等待态 ： 进程阻塞等待，此时会让出cpu<br> <img src="https://image.discover304.top/networkPython/4_3.png"></li>
+<li>五态 (在三态基础上增加新建和终止)<br>    新建 ： 创建一个进程，获取资源的过程<br>    终止 ： 进程结束，释放资源的过程<br> <img src="https://image.discover304.top/networkPython/4_5.png"></li>
 </ul>
 </li>
 <li>进程命令<ul>
 <li>查看进程信息<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -aux</span><br></pre></td></tr></table></figure>
-<img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/networkPython/20.png"><ul>
+<img src="https://image.discover304.top/networkPython/20.png"><ul>
 <li>USER ： 进程的创建者</li>
 <li>PID  :  操作系统分配给进程的编号,大于0的整数，系统中每个进程的PID都不重复。PID也是重要的区分进程的标志。</li>
 <li>%CPU,%MEM : 占有的CPU和内存</li>
@@ -372,7 +372,7 @@ if (asideStatus !== undefined) {
 </ol>
 </li>
 </ul>
-<p><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/networkPython/21.jpg"></p>
+<p><img src="https://image.discover304.top/networkPython/21.jpg"></p>
 <ul>
 <li>线程特征<ul>
 <li>一个进程中可以包含多个线程</li>
@@ -383,7 +383,7 @@ if (asideStatus !== undefined) {
 </ul>
 </li>
 </ul>
-<p><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/networkPython/22.jpg"></p>
+<p><img src="https://image.discover304.top/networkPython/22.jpg"></p>
 <hr>
 <h3 id="star-多线程编程"><a href="#star-多线程编程" class="headerlink" title=":star:多线程编程"></a>:star:多线程编程</h3><blockquote>
 <p>注：类似于 multiprocessing 模块</p>
@@ -422,8 +422,8 @@ if (asideStatus !== undefined) {
 </ul>
 </li>
 <li>同步互斥机制<ul>
-<li>同步 ： 同步是一种协作关系，为完成操作，线程间形成一种协调，按照必要的步骤有序执行操作。<br><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/networkPython/7_tb.png"></li>
-<li>互斥 ： 互斥是一种制约关系，当一个进程或者线程占有资源时会进行加锁处理，此时其他进程线程就无法操作该资源，直到解锁后才能操作。<br><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/networkPython/7_hc.png"></li>
+<li>同步 ： 同步是一种协作关系，为完成操作，线程间形成一种协调，按照必要的步骤有序执行操作。<br><img src="https://image.discover304.top/networkPython/7_tb.png"></li>
+<li>互斥 ： 互斥是一种制约关系，当一个进程或者线程占有资源时会进行加锁处理，此时其他进程线程就无法操作该资源，直到解锁后才能操作。<br><img src="https://image.discover304.top/networkPython/7_hc.png"></li>
 </ul>
 </li>
 </ul>
@@ -446,7 +446,7 @@ if (asideStatus !== undefined) {
 <h3 id="star-死锁"><a href="#star-死锁" class="headerlink" title=":star:死锁"></a>:star:死锁</h3><ul>
 <li><p>什么是死锁</p>
 <p>死锁是指两个或两个以上的线程在执行过程中，由于 <strong>竞争资源</strong> 或者由于 <strong>彼此通信</strong> 而造成的一种阻塞的现象，<strong>若无外力作用</strong>，它们都将无法推进下去。此时称系统处于死锁状态或系统产生了死锁。</p>
-<p><img src= "/img/loading.gif" data-lazy-src="https://image.discover304.top/networkPython/ss.jpg"></p>
+<p><img src="https://image.discover304.top/networkPython/ss.jpg"></p>
 </li>
 </ul>
 <blockquote>
