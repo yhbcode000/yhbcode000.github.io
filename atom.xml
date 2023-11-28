@@ -6,7 +6,7 @@
   <link href="https://discover304.top/atom.xml" rel="self"/>
   
   <link href="https://discover304.top/"/>
-  <updated>2023-10-23T19:17:03.971Z</updated>
+  <updated>2023-11-28T14:16:41.356Z</updated>
   <id>https://discover304.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>174-1-Hp-Checklist</title>
+    <link href="https://discover304.top/2023/11/28/2023q4/174-1-hp-checklist/"/>
+    <id>https://discover304.top/2023/11/28/2023q4/174-1-hp-checklist/</id>
+    <published>2023-11-28T02:14:10.000Z</published>
+    <updated>2023-11-28T14:16:41.356Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="Notice"><a href="#Notice" class="headerlink" title="Notice"></a>Notice</h2><ol><li>Use CUE as baseline.</li></ol><h2 id="Ideas"><a href="#Ideas" class="headerlink" title="Ideas"></a>Ideas</h2><ol><li>Use information theory to explain the process.</li></ol><h2 id="Plan"><a href="#Plan" class="headerlink" title="Plan"></a>Plan</h2><ol><li><input disabled="" type="checkbox"> Use uncertainty estimation method in CUE.<ol><li><input disabled="" type="checkbox"> Evaluate CUE on semantic kitti (outdoor), or scannet v2 (indoor).</li><li><input disabled="" type="checkbox"> Extract uncertainty estimation method of CUE.</li></ol></li><li><input disabled="" type="checkbox"> Achieve socket communication for model inference for CUE model.<ol><li><input disabled="" type="checkbox"> Socket communication.</li><li><input disabled="" type="checkbox"> Local small model training, calculate uncertainty information.</li><li><input disabled="" type="checkbox"> Cloud large model training, with global feature map and compressed point cloud input.</li></ol></li><li><input disabled="" type="checkbox"> Deploy to edge device.<ol><li><input disabled="" type="checkbox"> Select proper device.</li></ol></li><li><input disabled="" type="checkbox"> Evaluate performance in simulated setting.<ol><li><input disabled="" type="checkbox"> Latency.</li><li><input disabled="" type="checkbox"> Accuracy.</li></ol></li></ol><h2 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h2><dl><dt>Why use outdoor data, instead of indoor data?</dt><dd>In door first, everything. Cloud dummy model.</dd></dl><dl><dt>The server disk is full, no space left.</dt><dd>Waiting for free space. Today.</dd></dl><dl><dt>What suppose to be the edge device? Is raspberry pi sounds good?</dt><dd>I have a respberry pi, and can use it to do the task. xavier, arin, raspberry pi, desktop as edge device.</dd></dl>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;Notice&quot;&gt;&lt;a href=&quot;#Notice&quot; class=&quot;headerlink&quot; title=&quot;Notice&quot;&gt;&lt;/a&gt;Notice&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;Use CUE as baseline.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;Ideas&quot;&gt;&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Paper Reading List</title>
@@ -576,38 +599,6 @@
     <category term="University" scheme="https://discover304.top/categories/University/"/>
     
     <category term="Speech Processing" scheme="https://discover304.top/categories/University/Speech-Processing/"/>
-    
-    
-    <category term="学习" scheme="https://discover304.top/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="知识" scheme="https://discover304.top/tags/%E7%9F%A5%E8%AF%86/"/>
-    
-    <category term="积累" scheme="https://discover304.top/tags/%E7%A7%AF%E7%B4%AF/"/>
-    
-    <category term="笔记" scheme="https://discover304.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MOB LEC8 Recursive and Kalman Filter</title>
-    <link href="https://discover304.top/2022/10/20/2022q3/164-8-Recursive-and-Kalman-filter/"/>
-    <id>https://discover304.top/2022/10/20/2022q3/164-8-Recursive-and-Kalman-filter/</id>
-    <published>2022-10-20T03:18:00.000Z</published>
-    <updated>2023-04-24T15:05:36.744Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Prerequisite-knowledge"><a href="#Prerequisite-knowledge" class="headerlink" title="Prerequisite knowledge"></a>Prerequisite knowledge</h2><p>states of mobile robot, motion model, position orientation and velocity,<br><img src="https://image.discover304.top/blog-img/s13471010242022.png" alt="s13471010242022"></p><p>More challenge see: <a href="164-9-reference-frames-and-GPS.md#gnss">GPS</a><br><img src="https://image.discover304.top/blog-img/s13480810242022.png" alt="s13480810242022"></p><h2 id="Kalman-Filter"><a href="#Kalman-Filter" class="headerlink" title="Kalman Filter"></a>Kalman Filter</h2><p>Predict, measure, combining<br><img src="https://image.discover304.top/blog-img/s14002110242022.png" alt="s14002110242022"></p><p>Prediction and correction<br><img src="https://image.discover304.top/blog-img/s14005710242022.png" alt="s14005710242022"></p><h3 id="Linear-Kalman-Filter"><a href="#Linear-Kalman-Filter" class="headerlink" title="Linear Kalman Filter"></a>Linear Kalman Filter</h3><p><img src="https://image.discover304.top/blog-img/s14024710242022.png" alt="s14024710242022"></p><p>Recursive Least Squares + Process Model<br><img src="https://image.discover304.top/blog-img/s14094510242022.png" alt="s14094510242022"></p><h3 id="Extended-Kalman-Filter"><a href="#Extended-Kalman-Filter" class="headerlink" title="Extended Kalman Filter"></a>Extended Kalman Filter</h3><p>Linear approximation, first-order term, still linear.<br><img src="https://image.discover304.top/blog-img/s14164210242022.png" alt="s14164210242022"></p><p>Linearized motion model, Linearized measurement model.<br><img src="https://image.discover304.top/blog-img/s14175210242022.png" alt="s14175210242022"></p><p>Jacobian matrix<br><img src="https://image.discover304.top/blog-img/s14241310242022.png" alt="s14241310242022"></p><p><img src="https://image.discover304.top/blog-img/s14233210242022.png" alt="s14233210242022"></p><h3 id="Limitation-of-Kalman-Filter"><a href="#Limitation-of-Kalman-Filter" class="headerlink" title="Limitation of Kalman Filter"></a>Limitation of Kalman Filter</h3><p><img src="https://image.discover304.top/blog-img/s14590910242022.png" alt="s14590910242022"></p><p><img src="https://image.discover304.top/blog-img/s15001410242022.png" alt="s15001410242022"></p><p><img src="https://image.discover304.top/blog-img/s15004710242022.png" alt="s15004710242022"></p><h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ul><li>The Kalman Filter is very similar to RLS but includes a motion model that tells us how the state evolves over time.</li><li>The Kalman Filter updates a state estimate through two stages: i. prediction and ii. correction.</li><li>The EKF uses linearization to adapt the Kalman filter to nonlinear systems.</li><li>Linearization relies on computing Jacobian matrices, which contain all the first-order partial derivatives of a function.</li><li>The EKF uses analytical local linearization and, as a result, is sensitive to linearization errors.</li></ul><h2 id="Supplementary-Readings"><a href="#Supplementary-Readings" class="headerlink" title="Supplementary Readings"></a>Supplementary Readings</h2><ol><li><a href="https://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/#mjx-eqn-statevars">How a Kalman filter works, in pictures</a></li><li><a href="https://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/#mjx-eqn-statevars">Extended Kalman Filter: Why do we need an Extended Version?</a></li><li>PR, Section 3.1, 3.2, 3.3. (Optional)</li><li><a href="https://ieeexplore.ieee.org/abstract/document/978374">A Tutorial on Particle Filters for Online Nonlinear&#x2F;Non-Gaussian Bayesian Tracking (Optional)</a></li><li><a href="https://www.quora.com/What-is-the-difference-between-a-particle-filter-and-a-Kalman-filter">What is the difference between a particle filter and a Kalman filter?</a></li></ol><p>Use approximate nonlinear Bayesian filters include EKF, approximate grid-based methods and particle filters for non linear cases.<br><img src="https://image.discover304.top/blog-img/s15164110242022.png" alt="s15164110242022"></p><p>Use approximate grid-based filters and particle filters for non-Gaussian cases.<br><img src="https://image.discover304.top/blog-img/s15121810242022.png" alt="s15121810242022"></p><hr><p>Origin: Dr. Chris Lu (<a href="https://christopherlu.github.io/">Homepage</a>)<br>Translate + Edit: YangSier (<a href="https://discover304.top/">Homepage</a>)</p><blockquote><p><strong>:four_leaf_clover:碎碎念:four_leaf_clover:</strong><br>Hello米娜桑，这里是英国留学中的杨丝儿。我的博客的关键词集中在编程、算法、机器人、人工智能、数学等等，点个关注吧，持续高质量输出中。<br><strong>:cherry_blossom:唠嗑QQ群</strong>：<a href="https://jq.qq.com/?_wv=1027&k=EaGddTQg">兔叽的魔术工房</a> (942848525)<br><strong>:star:B站账号</strong>：<a href="https://space.bilibili.com/98639326">杨丝儿Online</a>（活跃于知识区和动画区）</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;Prerequisite-knowledge&quot;&gt;&lt;a href=&quot;#Prerequisite-knowledge&quot; class=&quot;headerlink&quot; title=&quot;Prerequisite knowledge&quot;&gt;&lt;/a&gt;Prerequisite knowled</summary>
-      
-    
-    
-    
-    <category term="University" scheme="https://discover304.top/categories/University/"/>
-    
-    <category term="Introduction to Mobile Robotics" scheme="https://discover304.top/categories/University/Introduction-to-Mobile-Robotics/"/>
     
     
     <category term="学习" scheme="https://discover304.top/tags/%E5%AD%A6%E4%B9%A0/"/>
