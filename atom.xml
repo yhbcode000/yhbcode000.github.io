@@ -6,7 +6,7 @@
   <link href="https://discover304.top/atom.xml" rel="self"/>
   
   <link href="https://discover304.top/"/>
-  <updated>2023-11-28T14:16:41.356Z</updated>
+  <updated>2023-12-05T13:21:37.640Z</updated>
   <id>https://discover304.top/</id>
   
   <author>
@@ -15,6 +15,47 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Enhanced Workflow for Managing Files in Qiniu Cloud Storage</title>
+    <link href="https://discover304.top/2023/12/05/2023q4/175-qiniu-fix-archieve/"/>
+    <id>https://discover304.top/2023/12/05/2023q4/175-qiniu-fix-archieve/</id>
+    <published>2023-12-05T04:42:10.000Z</published>
+    <updated>2023-12-05T13:21:37.640Z</updated>
+    
+    <content type="html"><![CDATA[<div class="tabs" id=""><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#-1">English Version</button></li><li class="tab"><button type="button" data-href="#-2">中文版本</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="-1"><h2 id="Step-1-Listing-Bucket-Contents-Helper-Function"><a href="#Step-1-Listing-Bucket-Contents-Helper-Function" class="headerlink" title="Step 1: Listing Bucket Contents (Helper Function)"></a>Step 1: Listing Bucket Contents (Helper Function)</h2><p>Before restoring files, it’s beneficial to list the contents of the bucket to identify the files to be restored.</p><h3 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\qshell.exe listbucket2 &lt;bucket-name&gt; --file-types 2,3 --show-fields Key,FileType</span><br></pre></td></tr></table></figure><h3 id="Explanation"><a href="#Explanation" class="headerlink" title="Explanation"></a>Explanation</h3><ul><li><strong>Purpose</strong>: Lists the contents of a specified bucket.</li><li><strong>Parameters</strong>:<ul><li><code>&lt;bucket-name&gt;</code>: Replace with the name of your bucket.</li><li><code>--file-types 2,3</code>: Specifies the types of files to list.</li><li><code>--show-fields Key,FileType</code>: Displays the file key and file type.</li></ul></li></ul><h2 id="Step-2-Restoring-Archived-Files"><a href="#Step-2-Restoring-Archived-Files" class="headerlink" title="Step 2: Restoring Archived Files"></a>Step 2: Restoring Archived Files</h2><p>Next, we restore files from an archived state.</p><h3 id="Command-1"><a href="#Command-1" class="headerlink" title="Command"></a>Command</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\qshell.exe batchrestorear &lt;bucket-name&gt; &lt;FreezeAfterDays&gt; --force -i restorear.txt</span><br></pre></td></tr></table></figure><h3 id="Explanation-1"><a href="#Explanation-1" class="headerlink" title="Explanation"></a>Explanation</h3><ul><li><strong>Purpose</strong>: Batch restores archived files in a bucket.</li><li><strong>Parameters</strong>:<ul><li><code>&lt;bucket-name&gt;</code>: The name of the bucket.</li><li><code>&lt;FreezeAfterDays&gt;</code>: The number of days the restored files remain active.</li><li><code>--force</code>: Executes without confirmation.</li><li><code>-i restorear.txt</code>: Input file with files to be restored.</li></ul></li></ul><h2 id="Step-3-Changing-File-Types"><a href="#Step-3-Changing-File-Types" class="headerlink" title="Step 3: Changing File Types"></a>Step 3: Changing File Types</h2><p>After restoration, change the file types.</p><h3 id="Command-2"><a href="#Command-2" class="headerlink" title="Command"></a>Command</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\qshell.exe batchchtype --force &lt;bucket-name&gt; -i tochangetype.txt</span><br></pre></td></tr></table></figure><h3 id="Explanation-2"><a href="#Explanation-2" class="headerlink" title="Explanation"></a>Explanation</h3><ul><li><strong>Purpose</strong>: Changes the type of multiple files in a bucket.</li><li><strong>Parameters</strong>:<ul><li><code>&lt;bucket-name&gt;</code>: The bucket name.</li><li><code>-i tochangetype.txt</code>: Input file with files for type change.</li></ul></li></ul><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>This workflow is an effective method for managing files in Qiniu Cloud, especially for restoring and changing file types. It’s essential to prepare the correct file lists (<code>restorear.txt</code> and <code>tochangetype.txt</code>) and understand the functions of each command. The addition of <code>listbucket2</code> as a helper function aids in identifying files for restoration and type change. For more detailed instructions, users should refer to the official Qiniu documentation.</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-2"><h2 id="第1步：列出存储桶内容（辅助功能）"><a href="#第1步：列出存储桶内容（辅助功能）" class="headerlink" title="第1步：列出存储桶内容（辅助功能）"></a>第1步：列出存储桶内容（辅助功能）</h2><p>在恢复文件之前，列出存储桶的内容有助于识别要恢复的文件。</p><h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\qshell.exe listbucket2 &lt;bucket-name&gt; --file-types 2,3 --show-fields Key,FileType</span><br></pre></td></tr></table></figure><h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><ul><li><strong>目的</strong>：列出指定存储桶的内容。</li><li><strong>参数</strong>：<ul><li><code>&lt;bucket-name&gt;</code>：替换为您的存储桶名称。</li><li><code>--file-types 2,3</code>：指定要列出的文件类型。</li><li><code>--show-fields Key,FileType</code>：显示文件键和文件类型。</li></ul></li></ul><h2 id="第2步：恢复归档文件"><a href="#第2步：恢复归档文件" class="headerlink" title="第2步：恢复归档文件"></a>第2步：恢复归档文件</h2><p>接下来，我们从归档状态恢复文件。</p><h3 id="命令-1"><a href="#命令-1" class="headerlink" title="命令"></a>命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\qshell.exe batchrestorear &lt;bucket-name&gt; &lt;FreezeAfterDays&gt; --force -i restorear.txt</span><br></pre></td></tr></table></figure><h3 id="说明-1"><a href="#说明-1" class="headerlink" title="说明"></a>说明</h3><ul><li><strong>目的</strong>：批量恢复存储桶中的归档文件。</li><li><strong>参数</strong>：<ul><li><code>&lt;bucket-name&gt;</code>：存储桶的名称。</li><li><code>&lt;FreezeAfterDays&gt;</code>：恢复的文件保持活动状态的天数。</li><li><code>--force</code>：无需确认即可执行。</li><li><code>-i restorear.txt</code>：要恢复的文件列表输入文件。</li></ul></li></ul><h2 id="第3步：更改文件类型"><a href="#第3步：更改文件类型" class="headerlink" title="第3步：更改文件类型"></a>第3步：更改文件类型</h2><p>恢复文件后，更改文件类型。</p><h3 id="命令-2"><a href="#命令-2" class="headerlink" title="命令"></a>命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\qshell.exe batchchtype --force &lt;bucket-name&gt; -i tochangetype.txt</span><br></pre></td></tr></table></figure><h3 id="说明-2"><a href="#说明-2" class="headerlink" title="说明"></a>说明</h3><ul><li><strong>目的</strong>：更改存储桶中多个文件的类型。</li><li><strong>参数</strong>：<ul><li><code>&lt;bucket-name&gt;</code>：存储桶的名称。</li><li><code>-i tochangetype.txt</code>：要更改类型的文件列表输入文件。</li></ul></li></ul><h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>这个工作流程是在七牛云中管理文件的有效方法，尤其适用于恢复和更改文件类型。准备正确的文件列表（<code>restorear.txt</code> 和 <code>tochangetype.txt</code>）并理解每个命令的功能非常重要。引入 <code>listbucket2</code> 作为辅助功能，有助于识别需要恢复和类型更改的文件。有关更详细的指令，用户应参考官方七牛文档。</p><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div><h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul><li><a href="https://developer.qiniu.com/kodo/1302/qshell">命令行工具(qshell)</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;div class=&quot;tabs&quot; id=&quot;&quot;&gt;&lt;ul class=&quot;nav-tabs&quot;&gt;&lt;li class=&quot;tab active&quot;&gt;&lt;button type=&quot;button&quot; data-href=&quot;#-1&quot;&gt;English Version&lt;/button&gt;&lt;/li&gt;&lt;li c</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>174-2-Coding</title>
+    <link href="https://discover304.top/2023/11/29/2023q4/174-2-coding/"/>
+    <id>https://discover304.top/2023/11/29/2023q4/174-2-coding/</id>
+    <published>2023-11-29T08:21:23.000Z</published>
+    <updated>2023-11-29T18:09:51.723Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/NVIDIA/MinkowskiEngine/issues/300#issuecomment-803528102"></a></p><p><code>apt install libopenblas-dev</code></p><p>bash setup.sh cue server</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/NVIDIA/MinkowskiEngine/issues/300#issuecomment-803528102&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;apt install libopenblas-dev&lt;/code</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>174-1-Hp-Checklist</title>
@@ -544,70 +585,6 @@
     <category term="University" scheme="https://discover304.top/categories/University/"/>
     
     <category term="Speech Processing" scheme="https://discover304.top/categories/University/Speech-Processing/"/>
-    
-    
-    <category term="学习" scheme="https://discover304.top/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="积累" scheme="https://discover304.top/tags/%E7%A7%AF%E7%B4%AF/"/>
-    
-    <category term="知识" scheme="https://discover304.top/tags/%E7%9F%A5%E8%AF%86/"/>
-    
-    <category term="笔记" scheme="https://discover304.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SP Module 5 Speech Synthesis – Phonemes and the Front End</title>
-    <link href="https://discover304.top/2022/10/20/2022q3/166-5-speech-synthesis%E2%80%93phonemes-and-the-front-end/"/>
-    <id>https://discover304.top/2022/10/20/2022q3/166-5-speech-synthesis%E2%80%93phonemes-and-the-front-end/</id>
-    <published>2022-10-20T03:43:13.000Z</published>
-    <updated>2023-04-24T15:05:05.539Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Tokenisation-amp-normalisation"><a href="#Tokenisation-amp-normalisation" class="headerlink" title="Tokenisation &amp; normalisation"></a>Tokenisation &amp; normalisation</h2><p>标签化 &amp; 正则化</p><p>When processing almost any text, we need to find the words. This involves splitting the input character sequence into tokens and normalising each token into words.</p><p><img src="https://image.discover304.top/blog-img/s13262010222022.png" alt="s13262010222022"></p><p><img src="https://image.discover304.top/blog-img/s13271410222022.png" alt="s13271410222022"></p><h2 id="Handwritten-rules"><a href="#Handwritten-rules" class="headerlink" title="Handwritten rules"></a>Handwritten rules</h2><p>Every user of a language holds a lot of knowledge about that language in their mind. One way to capture and make use of that knowledge is in the form of rules.</p><h2 id="Finite-state-transducer"><a href="#Finite-state-transducer" class="headerlink" title="Finite state transducer"></a>Finite state transducer</h2><p>Finite State Transducers provide general-purpose machinery for rewriting an input sequence as an output sequence. They have many uses, including verbalising NSWs into natural language.</p><h2 id="Phonemes-and-allophones"><a href="#Phonemes-and-allophones" class="headerlink" title="Phonemes and allophones"></a>Phonemes and allophones</h2><p>This video introduces the notion of phoneme as a basic unit of phonological analysis.</p><p>Allophones: 同音异位,  allophones are predictable</p><p><a href="https://zh.wikipedia.org/wiki/%E9%9F%B3%E4%BD%8D"><img src="https://image.discover304.top/blog-img/s20492410312022.png" alt="s20492410312022"></a></p><p><img src="https://image.discover304.top/blog-img/s20521710312022.png" alt="s20521710312022"></p><blockquote><p>Difference between Phonetics and Phonology.<br><img src="https://image.discover304.top/blog-img/s13401210222022.png" alt="s13401210222022"></p></blockquote><blockquote><p><img src="https://image.discover304.top/blog-img/s13410710222022.png" alt="s13410710222022"></p><ul><li>two levels of representation<ul><li>surface or allophonic level<ul><li>represents something close to articulation</li><li>the phonetic descriptions that we’ve been learning so far.</li></ul></li><li>underlying or phonemic level<ul><li>represents abstract categories that are something like our perceptual judgments about which sounds are and are not similar to each other.</li></ul></li></ul></li><li>Somewhat confusingly, both of these levels use symbols from the IPA. <ul><li>In order to distinguish between the two levels of representation, we use two types of brackets. <ul><li>For the surface forms, we use square brackets, <ul><li><code>[ ]</code> can indicate varying degrees of detail</li></ul></li><li>for the underlying forms, we use slashes. <ul><li><code>/ /</code> can only indicate abstract categories of phonemic contrast</li></ul></li></ul></li></ul></li></ul></blockquote><blockquote><p>Easy to recognize the difference in underlying level.<br><img src="https://image.discover304.top/blog-img/s13444310222022.png" alt="s13444310222022"><br>Hard to recognize the difference in underlying level, for English.<br><img src="https://image.discover304.top/blog-img/s13450110222022.png" alt="s13450110222022"></p></blockquote><blockquote><p>These surface representations, represented between square brackets are known as allophones and they are <strong>language specific</strong>.<br><img src="https://image.discover304.top/blog-img/s13455710222022.png" alt="s13455710222022"></p></blockquote><blockquote><p>In Mapudungun, we can recognize the difference.<br><img src="https://image.discover304.top/blog-img/s13452810222022.png" alt="s13452810222022"><br>The language specific allophones, in English 2 surface representation with 1 underlying representation, and in Mapudungun 2 surface representations with 2 different underlying representations separately.<br><img src="https://image.discover304.top/blog-img/s13461710222022.png" alt="s13461710222022"></p></blockquote><blockquote><p><img src="https://image.discover304.top/blog-img/s13513610222022.png" alt="s13513610222022"></p><p><img src="https://image.discover304.top/blog-img/s13511910222022.png" alt="s13511910222022"></p><ul><li>Phonologists sometimes formalize this relationship between the phoneme and its allophones in a rule.<ul><li>The arrow is read as “is realized as” </li><li>the slash stands for “in the environment of”. </li><li>The blank shows where the phoneme occurs in order for the rule to apply.</li></ul></li><li>In order to fully define a phoneme, <ul><li>we first need to observe the surface forms that occur, along with their environments. </li><li>Then, we need to describe the patterns that we see with respect to the surface forms and their phonetic environments, looking for generalizations along the way.</li></ul></li><li>The types of generalizations that we typically mean are those having to do with <strong>shared features</strong> across the predictive environments.</li></ul></blockquote><blockquote><p>More examples<br><img src="https://image.discover304.top/blog-img/s13583010222022.png" alt="s13583010222022"></p></blockquote><h2 id="Pronunciation"><a href="#Pronunciation" class="headerlink" title="Pronunciation"></a>Pronunciation</h2><p>The phoneme inventory is a design choice when we build a TTS or ASR system. The IPA is a helpful guide when making this choice, but we don’t have to obey it, and are free to make different choices.</p><p><img src="https://image.discover304.top/blog-img/s16155010222022.png" alt="s16155010222022"></p><h2 id="Prosody"><a href="#Prosody" class="headerlink" title="Prosody"></a>Prosody</h2><p>Prosody for Text-To-Speech can be reduced the the problem of predicting pausing, duration, and F0.</p><p><a href="https://zh.wikipedia.org/wiki/%E9%9F%B5%E5%BE%8B_(%E8%AF%AD%E8%A8%80%E5%AD%A6)"><img src="https://image.discover304.top/blog-img/s20410610312022.png" alt="s20410610312022"></a></p><p><img src="https://image.discover304.top/blog-img/s16233110222022.png" alt="s16233110222022"></p><h2 id="Decision-tree"><a href="#Decision-tree" class="headerlink" title="Decision tree"></a>Decision tree</h2><p>Because a decision tree only asks simple ‘yes or no’ questions about predictors, it works for both categorical and continuous predictors, or a mixture of both.</p><p><img src="https://image.discover304.top/blog-img/s16292810222022.png" alt="s16292810222022"></p><h2 id="Learning-decision-trees"><a href="#Learning-decision-trees" class="headerlink" title="Learning decision trees"></a>Learning decision trees</h2><p>Having defined the model, we now need an algorithm to estimate it from data. For a Decision Tree, this is a simple greedy algorithm.</p><blockquote><p>Training data: a pronunciation lexicon<br><img src="https://image.discover304.top/blog-img/s23245310222022.png" alt="s23245310222022"></p></blockquote><blockquote><p>Goal: making query and reducing entropy of the probability distribution.<br><img src="https://image.discover304.top/blog-img/s23263710222022.png" alt="s23263710222022"></p></blockquote><blockquote><p>Stop condition: result data set is small or result is acceptable or the depth of tree is reach the limit.</p></blockquote><h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><p><img src="https://image.discover304.top/blog-img/s16465410222022.png" alt="s16465410222022"></p><p><img src="https://image.discover304.top/blog-img/s16471410222022.png" alt="s16471410222022"></p><hr><p>Origin: <a href="https://speech.zone/courses/speech-processing/module-5-speech-synthesis/">Module 5 speech synthesis – phonemes and the front end</a><br>Translate + Edit: YangSier (<a href="https://discover304.top/">Homepage</a>)</p><blockquote><p><strong>:four_leaf_clover:碎碎念:four_leaf_clover:</strong><br>Hello米娜桑，这里是英国留学中的杨丝儿。我的博客的关键词集中在编程、算法、机器人、人工智能、数学等等，点个关注吧，持续高质量输出中。<br><strong>:cherry_blossom:唠嗑QQ群</strong>：<a href="https://jq.qq.com/?_wv=1027&k=EaGddTQg">兔叽的魔术工房</a> (942848525)<br><strong>:star:B站账号</strong>：<a href="https://space.bilibili.com/98639326">杨丝儿Online</a>（活跃于知识区和动画区）</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;Tokenisation-amp-normalisation&quot;&gt;&lt;a href=&quot;#Tokenisation-amp-normalisation&quot; class=&quot;headerlink&quot; title=&quot;Tokenisation &amp;amp; normalisation</summary>
-      
-    
-    
-    
-    <category term="University" scheme="https://discover304.top/categories/University/"/>
-    
-    <category term="Speech Processing" scheme="https://discover304.top/categories/University/Speech-Processing/"/>
-    
-    
-    <category term="学习" scheme="https://discover304.top/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="积累" scheme="https://discover304.top/tags/%E7%A7%AF%E7%B4%AF/"/>
-    
-    <category term="知识" scheme="https://discover304.top/tags/%E7%9F%A5%E8%AF%86/"/>
-    
-    <category term="笔记" scheme="https://discover304.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MOB LEC8 Recursive and Kalman Filter</title>
-    <link href="https://discover304.top/2022/10/20/2022q3/164-8-Recursive-and-Kalman-filter/"/>
-    <id>https://discover304.top/2022/10/20/2022q3/164-8-Recursive-and-Kalman-filter/</id>
-    <published>2022-10-20T03:18:00.000Z</published>
-    <updated>2023-04-24T15:05:36.744Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Prerequisite-knowledge"><a href="#Prerequisite-knowledge" class="headerlink" title="Prerequisite knowledge"></a>Prerequisite knowledge</h2><p>states of mobile robot, motion model, position orientation and velocity,<br><img src="https://image.discover304.top/blog-img/s13471010242022.png" alt="s13471010242022"></p><p>More challenge see: <a href="164-9-reference-frames-and-GPS.md#gnss">GPS</a><br><img src="https://image.discover304.top/blog-img/s13480810242022.png" alt="s13480810242022"></p><h2 id="Kalman-Filter"><a href="#Kalman-Filter" class="headerlink" title="Kalman Filter"></a>Kalman Filter</h2><p>Predict, measure, combining<br><img src="https://image.discover304.top/blog-img/s14002110242022.png" alt="s14002110242022"></p><p>Prediction and correction<br><img src="https://image.discover304.top/blog-img/s14005710242022.png" alt="s14005710242022"></p><h3 id="Linear-Kalman-Filter"><a href="#Linear-Kalman-Filter" class="headerlink" title="Linear Kalman Filter"></a>Linear Kalman Filter</h3><p><img src="https://image.discover304.top/blog-img/s14024710242022.png" alt="s14024710242022"></p><p>Recursive Least Squares + Process Model<br><img src="https://image.discover304.top/blog-img/s14094510242022.png" alt="s14094510242022"></p><h3 id="Extended-Kalman-Filter"><a href="#Extended-Kalman-Filter" class="headerlink" title="Extended Kalman Filter"></a>Extended Kalman Filter</h3><p>Linear approximation, first-order term, still linear.<br><img src="https://image.discover304.top/blog-img/s14164210242022.png" alt="s14164210242022"></p><p>Linearized motion model, Linearized measurement model.<br><img src="https://image.discover304.top/blog-img/s14175210242022.png" alt="s14175210242022"></p><p>Jacobian matrix<br><img src="https://image.discover304.top/blog-img/s14241310242022.png" alt="s14241310242022"></p><p><img src="https://image.discover304.top/blog-img/s14233210242022.png" alt="s14233210242022"></p><h3 id="Limitation-of-Kalman-Filter"><a href="#Limitation-of-Kalman-Filter" class="headerlink" title="Limitation of Kalman Filter"></a>Limitation of Kalman Filter</h3><p><img src="https://image.discover304.top/blog-img/s14590910242022.png" alt="s14590910242022"></p><p><img src="https://image.discover304.top/blog-img/s15001410242022.png" alt="s15001410242022"></p><p><img src="https://image.discover304.top/blog-img/s15004710242022.png" alt="s15004710242022"></p><h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ul><li>The Kalman Filter is very similar to RLS but includes a motion model that tells us how the state evolves over time.</li><li>The Kalman Filter updates a state estimate through two stages: i. prediction and ii. correction.</li><li>The EKF uses linearization to adapt the Kalman filter to nonlinear systems.</li><li>Linearization relies on computing Jacobian matrices, which contain all the first-order partial derivatives of a function.</li><li>The EKF uses analytical local linearization and, as a result, is sensitive to linearization errors.</li></ul><h2 id="Supplementary-Readings"><a href="#Supplementary-Readings" class="headerlink" title="Supplementary Readings"></a>Supplementary Readings</h2><ol><li><a href="https://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/#mjx-eqn-statevars">How a Kalman filter works, in pictures</a></li><li><a href="https://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/#mjx-eqn-statevars">Extended Kalman Filter: Why do we need an Extended Version?</a></li><li>PR, Section 3.1, 3.2, 3.3. (Optional)</li><li><a href="https://ieeexplore.ieee.org/abstract/document/978374">A Tutorial on Particle Filters for Online Nonlinear&#x2F;Non-Gaussian Bayesian Tracking (Optional)</a></li><li><a href="https://www.quora.com/What-is-the-difference-between-a-particle-filter-and-a-Kalman-filter">What is the difference between a particle filter and a Kalman filter?</a></li></ol><p>Use approximate nonlinear Bayesian filters include EKF, approximate grid-based methods and particle filters for non linear cases.<br><img src="https://image.discover304.top/blog-img/s15164110242022.png" alt="s15164110242022"></p><p>Use approximate grid-based filters and particle filters for non-Gaussian cases.<br><img src="https://image.discover304.top/blog-img/s15121810242022.png" alt="s15121810242022"></p><hr><p>Origin: Dr. Chris Lu (<a href="https://christopherlu.github.io/">Homepage</a>)<br>Translate + Edit: YangSier (<a href="https://discover304.top/">Homepage</a>)</p><blockquote><p><strong>:four_leaf_clover:碎碎念:four_leaf_clover:</strong><br>Hello米娜桑，这里是英国留学中的杨丝儿。我的博客的关键词集中在编程、算法、机器人、人工智能、数学等等，点个关注吧，持续高质量输出中。<br><strong>:cherry_blossom:唠嗑QQ群</strong>：<a href="https://jq.qq.com/?_wv=1027&k=EaGddTQg">兔叽的魔术工房</a> (942848525)<br><strong>:star:B站账号</strong>：<a href="https://space.bilibili.com/98639326">杨丝儿Online</a>（活跃于知识区和动画区）</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;Prerequisite-knowledge&quot;&gt;&lt;a href=&quot;#Prerequisite-knowledge&quot; class=&quot;headerlink&quot; title=&quot;Prerequisite knowledge&quot;&gt;&lt;/a&gt;Prerequisite knowled</summary>
-      
-    
-    
-    
-    <category term="University" scheme="https://discover304.top/categories/University/"/>
-    
-    <category term="Introduction to Mobile Robotics" scheme="https://discover304.top/categories/University/Introduction-to-Mobile-Robotics/"/>
     
     
     <category term="学习" scheme="https://discover304.top/tags/%E5%AD%A6%E4%B9%A0/"/>
