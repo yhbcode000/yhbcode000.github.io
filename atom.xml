@@ -6,7 +6,7 @@
   <link href="https://discover304.top/atom.xml" rel="self"/>
   
   <link href="https://discover304.top/"/>
-  <updated>2023-12-19T19:15:32.670Z</updated>
+  <updated>2023-12-22T18:09:13.215Z</updated>
   <id>https://discover304.top/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>178-Nginx-Https-to-Local-Service</title>
+    <link href="https://discover304.top/2023/12/22/2023q4/178-nginx-https-to-local-service/"/>
+    <id>https://discover304.top/2023/12/22/2023q4/178-nginx-https-to-local-service/</id>
+    <published>2023-12-22T10:09:00.000Z</published>
+    <updated>2023-12-22T18:09:13.215Z</updated>
+    
+    <content type="html"><![CDATA[<hr><blockquote><p><strong>🍀后记🍀</strong><br>Hello米娜桑，这里是英国留学中的杨丝儿。我的博客的关键词集中在编程、算法、机器人、人工智能、数学等等，持续高质量输出中。<br><strong>🌸唠嗑QQ群</strong>：<a href="https://jq.qq.com/?_wv=1027&k=EaGddTQg">兔叽の魔术工房</a> (942848525)<br><strong>⭐B站账号</strong>：<a href="https://space.bilibili.com/98639326">白拾Official</a>（活跃于知识区和动画区）<br><strong>✨GitHub主页</strong>：<a href="https://github.com/YangSierCode000">YangSierCode000</a>(工程文件)<br><strong>⛳Discord社区</strong>：<a href="https://discord.gg/nn5NDXMgae">AIerLab</a>（科研社区，欢迎来玩）</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;🍀后记🍀&lt;/strong&gt;&lt;br&gt;Hello米娜桑，这里是英国留学中的杨丝儿。我的博客的关键词集中在编程、算法、机器人、人工智能、数学等等，持续高质量输出中。&lt;br&gt;&lt;strong&gt;🌸唠嗑QQ群&lt;/strong&gt;：&lt;</summary>
+      
+    
+    
+    
+    <category term="Draft" scheme="https://discover304.top/categories/Draft/"/>
+    
+    
+    <category term="待更新" scheme="https://discover304.top/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>179-Template-Create</title>
+    <link href="https://discover304.top/2023/12/22/2023q4/179-template-create/"/>
+    <id>https://discover304.top/2023/12/22/2023q4/179-template-create/</id>
+    <published>2023-12-22T10:07:00.000Z</published>
+    <updated>2023-12-22T18:08:49.036Z</updated>
+    
+    <content type="html"><![CDATA[<hr><blockquote><p><strong>🍀后记🍀</strong><br>Hello米娜桑，这里是英国留学中的杨丝儿。我的博客的关键词集中在编程、算法、机器人、人工智能、数学等等，持续高质量输出中。<br><strong>🌸唠嗑QQ群</strong>：<a href="https://jq.qq.com/?_wv=1027&k=EaGddTQg">兔叽の魔术工房</a> (942848525)<br><strong>⭐B站账号</strong>：<a href="https://space.bilibili.com/98639326">白拾Official</a>（活跃于知识区和动画区）<br><strong>✨GitHub主页</strong>：<a href="https://github.com/YangSierCode000">YangSierCode000</a>(工程文件)<br><strong>⛳Discord社区</strong>：<a href="https://discord.gg/nn5NDXMgae">AIerLab</a>（科研社区，欢迎来玩）</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;🍀后记🍀&lt;/strong&gt;&lt;br&gt;Hello米娜桑，这里是英国留学中的杨丝儿。我的博客的关键词集中在编程、算法、机器人、人工智能、数学等等，持续高质量输出中。&lt;br&gt;&lt;strong&gt;🌸唠嗑QQ群&lt;/strong&gt;：&lt;</summary>
+      
+    
+    
+    
+    <category term="Draft" scheme="https://discover304.top/categories/Draft/"/>
+    
+    
+    <category term="待更新" scheme="https://discover304.top/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>ARO Additional Knowledge</title>
@@ -545,70 +597,6 @@
     <category term="University" scheme="https://discover304.top/categories/University/"/>
     
     <category term="Speech Processing" scheme="https://discover304.top/categories/University/Speech-Processing/"/>
-    
-    
-    <category term="学习" scheme="https://discover304.top/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="知识" scheme="https://discover304.top/tags/%E7%9F%A5%E8%AF%86/"/>
-    
-    <category term="积累" scheme="https://discover304.top/tags/%E7%A7%AF%E7%B4%AF/"/>
-    
-    <category term="笔记" scheme="https://discover304.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SP Module 8 Feature Engineering</title>
-    <link href="https://discover304.top/2022/11/16/2022q3/166-8-sp-feature-engineering/"/>
-    <id>https://discover304.top/2022/11/16/2022q3/166-8-sp-feature-engineering/</id>
-    <published>2022-11-16T12:24:39.000Z</published>
-    <updated>2023-12-19T17:53:34.483Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Gaussian-distributions-in-models"><a href="#Gaussian-distributions-in-models" class="headerlink" title="Gaussian distributions in models"></a>Gaussian distributions in models</h2><p>Classification model</p><p>If features are highly correlate with each other, we can solve this correlation by rotating the axis, by PCA.</p><p>Gaussian distribution of classification result of feature vector</p><p>Decision boundary</p><h2 id="Cepstral-Analysis-Mel-Filterbanks"><a href="#Cepstral-Analysis-Mel-Filterbanks" class="headerlink" title="Cepstral Analysis, Mel-Filterbanks"></a>Cepstral Analysis, Mel-Filterbanks</h2><p>We now start thinking about what a good representation of the acoustic signal should be, motivating the use Mel-Frequency Cepstral Coefficients (MFCCs).</p><blockquote><p>Since the feature in a feature vector is correlated, if we want to use gaussian, we have to solve this correlation problem.<br><img src="https://image.discover304.top/blog-img/s22000611162022.png" alt="s22000611162022"></p></blockquote><blockquote><p>In TTS<br><img src="https://image.discover304.top/blog-img/s22014711162022.png" alt="s22014711162022"></p><p>In ASR, we can decompose the input further<br><img src="https://image.discover304.top/blog-img/s22015711162022.png" alt="s22015711162022"></p></blockquote><blockquote><p><img src="https://image.discover304.top/blog-img/s22062511162022.png" alt="s22062511162022"></p><p><a href="https://zh.wikipedia.org/zh-cn/%E5%80%92%E9%A0%BB%E8%AD%9C"><img src="https://image.discover304.top/blog-img/s22180711162022.png" alt="s22180711162022"></a></p><p>The independent variable of a <strong>cepstral</strong> graph is called the <strong>quefrency</strong>.</p><p>The <strong>quefrency</strong> is a measure of time, though not in the sense of a signal in the time domain.</p><p>Then the first 12 value in cepstrum is our result feature vector, after feature engineering.<br><img src="https://image.discover304.top/blog-img/s22130811162022.png" alt="s22130811162022"></p></blockquote><p>Then we can solve the correlation problem discussed in previous, by using MFCCs.</p><h2 id="MFCCs"><a href="#MFCCs" class="headerlink" title="MFCCs"></a>MFCCs</h2><p>Overview of steps required to derive MFCCs, moving towards modelling MFCCs with Gaussians and Hidden Markov Models</p><p><img src="https://image.discover304.top/blog-img/s22405911162022.png" alt="s22405911162022"></p><hr><p>Origin: <a href="https://speech.zone/courses/speech-processing/module-8-speech-recognition-feature-engineering/">Module 8 – Speech Recognition – Feature engineering</a><br>Translate + Edit: YangSier (<a href="https://discover304.top/">Homepage</a>)</p><blockquote><p><strong>:four_leaf_clover:碎碎念:four_leaf_clover:</strong><br>Hello米娜桑，这里是英国留学中的杨丝儿。我的博客的关键词集中在编程、算法、机器人、人工智能、数学等等，点个关注吧，持续高质量输出中。<br><strong>:cherry_blossom:唠嗑QQ群</strong>：<a href="https://jq.qq.com/?_wv=1027&k=EaGddTQg">兔叽的魔术工房</a> (942848525)<br><strong>:star:B站账号</strong>：<a href="https://space.bilibili.com/98639326">白拾Official</a>（活跃于知识区和动画区）</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;Gaussian-distributions-in-models&quot;&gt;&lt;a href=&quot;#Gaussian-distributions-in-models&quot; class=&quot;headerlink&quot; title=&quot;Gaussian distributions in mo</summary>
-      
-    
-    
-    
-    <category term="University" scheme="https://discover304.top/categories/University/"/>
-    
-    <category term="Speech Processing" scheme="https://discover304.top/categories/University/Speech-Processing/"/>
-    
-    
-    <category term="学习" scheme="https://discover304.top/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="知识" scheme="https://discover304.top/tags/%E7%9F%A5%E8%AF%86/"/>
-    
-    <category term="积累" scheme="https://discover304.top/tags/%E7%A7%AF%E7%B4%AF/"/>
-    
-    <category term="笔记" scheme="https://discover304.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MOB LEC12 Motion Planning</title>
-    <link href="https://discover304.top/2022/11/10/2022q3/164-12-motion-planing-problem/"/>
-    <id>https://discover304.top/2022/11/10/2022q3/164-12-motion-planing-problem/</id>
-    <published>2022-11-10T03:14:39.000Z</published>
-    <updated>2023-12-19T17:53:34.483Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Mission-scenarios-and-behaviors"><a href="#Mission-scenarios-and-behaviors" class="headerlink" title="Mission, scenarios and behaviors"></a>Mission, scenarios and behaviors</h2><p>Task: Navigate the robot itself from the <strong>current</strong> position to <strong>final</strong> destination on the map, without human intervention.</p><p>Goal: find most efficient path (trajectory) in terms of time or distance travelled.</p><blockquote><p><img src="https://image.discover304.top/blog-img/s11172411102022.png" alt="s11172411102022"></p><p><img src="https://image.discover304.top/blog-img/s11173011102022.png" alt="s11173011102022"></p></blockquote><blockquote><p><img src="https://image.discover304.top/blog-img/s11173811102022.png" alt="s11173811102022"></p><p><img src="https://image.discover304.top/blog-img/s11175511102022.png" alt="s11175511102022"></p></blockquote><p>Example Common Behavior Sets</p><ul><li>Speed tracking</li><li>Deceleration to stop</li><li>Stay stopped</li><li>Yield</li><li>Emergency stop</li></ul><p><img src="https://image.discover304.top/blog-img/s11244911102022.png" alt="s11244911102022"></p><h2 id="Motion-planning-constraints"><a href="#Motion-planning-constraints" class="headerlink" title="Motion planning constraints"></a>Motion planning constraints</h2><blockquote><p><img src="https://image.discover304.top/blog-img/s11265111102022.png" alt="s11265111102022"></p><p><a href="https://thef1clan.com/2020/12/23/vehicle-dynamics-the-dynamic-bicycle-model/">Read more</a> about vehicle dynamic.</p></blockquote><blockquote><p><img src="https://image.discover304.top/blog-img/s11291611102022.png" alt="s11291611102022"></p><p><img src="https://image.discover304.top/blog-img/s11292911102022.png" alt="s11292911102022"></p><p><img src="https://image.discover304.top/blog-img/s11315411102022.png" alt="s11315411102022"></p><p><img src="https://image.discover304.top/blog-img/s11351911102022.png" alt="s11351911102022"></p></blockquote><p><img src="https://image.discover304.top/blog-img/s11365511102022.png" alt="s11365511102022"></p><p><img src="https://image.discover304.top/blog-img/s11375711102022.png" alt="s11375711102022"></p><p><img src="https://image.discover304.top/blog-img/s11404311102022.png" alt="s11404311102022"></p><p><img src="https://image.discover304.top/blog-img/s11411311102022.png" alt="s11411311102022"></p><p><img src="https://image.discover304.top/blog-img/s11412111102022.png" alt="s11412111102022"></p><h2 id="Objective-functions-in-planning"><a href="#Objective-functions-in-planning" class="headerlink" title="Objective functions in planning"></a>Objective functions in planning</h2><p><img src="https://image.discover304.top/blog-img/s11413711102022.png" alt="s11413711102022"></p><p><img src="https://image.discover304.top/blog-img/s11463011102022.png" alt="s11463011102022"></p><p><img src="https://image.discover304.top/blog-img/s11465011102022.png" alt="s11465011102022"></p><p><img src="https://image.discover304.top/blog-img/s11483111102022.png" alt="s11483111102022"></p><p><img src="https://image.discover304.top/blog-img/s11495011102022.png" alt="s11495011102022"></p><h2 id="Supplementary-Readings"><a href="#Supplementary-Readings" class="headerlink" title="Supplementary Readings"></a>Supplementary Readings</h2><ol><li><a href="https://www.wevolver.com/article/motion-planning-for-autonomous-vehicles-based-on-sequential-optimization">Motion Planning For Autonomous Vehicles Based On Sequential Optimization.</a></li><li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7995816">The kinematic bicycle model: A consistent model for planning feasible trajectories for autonomous vehicles</a>, 2017 IEEE Intelligent Vehicles Symposium (IV), 2017. Gives an overview of the kinematic<br>bicycle model.</li><li>Steven M Lavalle, <a href="http://lavalle.pl/planning/">Planning Algorithms</a>, 2006, Cambridge University Press. Chapter 2 covers discrete planning over graphs including Dijkstra’s, A* and STRIPS etc.</li></ol><hr><p>Origin: Dr. Chris Lu (<a href="https://christopherlu.github.io/">Homepage</a>)<br>Translate + Edit: YangSier (<a href="https://discover304.top/">Homepage</a>)</p><blockquote><p><strong>:four_leaf_clover:碎碎念:four_leaf_clover:</strong><br>Hello米娜桑，这里是英国留学中的杨丝儿。我的博客的关键词集中在编程、算法、机器人、人工智能、数学等等，点个关注吧，持续高质量输出中。<br><strong>:cherry_blossom:唠嗑QQ群</strong>：<a href="https://jq.qq.com/?_wv=1027&k=EaGddTQg">兔叽的魔术工房</a> (942848525)<br><strong>:star:B站账号</strong>：<a href="https://space.bilibili.com/98639326">白拾Official</a>（活跃于知识区和动画区）</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;Mission-scenarios-and-behaviors&quot;&gt;&lt;a href=&quot;#Mission-scenarios-and-behaviors&quot; class=&quot;headerlink&quot; title=&quot;Mission, scenarios and behavio</summary>
-      
-    
-    
-    
-    <category term="University" scheme="https://discover304.top/categories/University/"/>
-    
-    <category term="Introduction to Mobile Robotics" scheme="https://discover304.top/categories/University/Introduction-to-Mobile-Robotics/"/>
     
     
     <category term="学习" scheme="https://discover304.top/tags/%E5%AD%A6%E4%B9%A0/"/>

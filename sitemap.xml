@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://discover304.top/2023/12/22/2023q4/178-nginx-https-to-local-service/</loc>
+    
+    <lastmod>2023-12-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/2023/12/22/2023q4/179-template-create/</loc>
+    
+    <lastmod>2023-12-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://discover304.top/2022/02/21/000-intresting-things/</loc>
     
     <lastmod>2023-12-22</lastmod>
@@ -2939,6 +2957,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://discover304.top/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/</loc>
+    <lastmod>2023-12-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -3111,6 +3136,13 @@
   
   <url>
     <loc>https://discover304.top/categories/University/Advanced-Robotics/</loc>
+    <lastmod>2023-12-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/categories/Draft/</loc>
     <lastmod>2023-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
