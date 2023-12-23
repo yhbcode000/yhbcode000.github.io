@@ -45,11 +45,11 @@
     <lastmod>2023-12-19</lastmod>
   </url>
   <url>
-    <loc>https://discover304.top/2022/10/10/2022q4/168-0-responsibility/</loc>
+    <loc>https://discover304.top/2022/10/11/2022q4/168-2-data-justice/</loc>
     <lastmod>2023-12-19</lastmod>
   </url>
   <url>
-    <loc>https://discover304.top/2022/10/11/2022q4/168-2-data-justice/</loc>
+    <loc>https://discover304.top/2022/10/10/2022q4/168-0-responsibility/</loc>
     <lastmod>2023-12-19</lastmod>
   </url>
   <url>
@@ -73,15 +73,15 @@
     <lastmod>2023-12-19</lastmod>
   </url>
   <url>
+    <loc>https://discover304.top/2022/11/10/2022q3/164-12-motion-planing-problem/</loc>
+    <lastmod>2023-12-19</lastmod>
+  </url>
+  <url>
     <loc>https://discover304.top/2022/09/26/2022q3/164-2-hardware-and-software-atchitectures/</loc>
     <lastmod>2023-12-19</lastmod>
   </url>
   <url>
     <loc>https://discover304.top/2022/10/03/2022q3/164-3-camera-and-images/</loc>
-    <lastmod>2023-12-19</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2022/11/10/2022q3/164-12-motion-planing-problem/</loc>
     <lastmod>2023-12-19</lastmod>
   </url>
   <url>
@@ -109,11 +109,11 @@
     <lastmod>2023-12-19</lastmod>
   </url>
   <url>
-    <loc>https://discover304.top/2022/10/22/2022q3/166-6-1-speech-synthesis-waveform-generation-and-connected-speech/</loc>
+    <loc>https://discover304.top/2022/10/20/2022q3/166-5-speech-synthesis%E2%80%93phonemes-and-the-front-end/</loc>
     <lastmod>2023-12-19</lastmod>
   </url>
   <url>
-    <loc>https://discover304.top/2022/10/20/2022q3/166-5-speech-synthesis%E2%80%93phonemes-and-the-front-end/</loc>
+    <loc>https://discover304.top/2022/10/22/2022q3/166-6-1-speech-synthesis-waveform-generation-and-connected-speech/</loc>
     <lastmod>2023-12-19</lastmod>
   </url>
   <url>
@@ -133,11 +133,11 @@
     <lastmod>2023-12-19</lastmod>
   </url>
   <url>
-    <loc>https://discover304.top/2022/10/31/2022q3/167-1-sp-review/</loc>
+    <loc>https://discover304.top/2022/10/19/2022q3/167-0-sp-review/</loc>
     <lastmod>2023-12-19</lastmod>
   </url>
   <url>
-    <loc>https://discover304.top/2022/10/19/2022q3/167-0-sp-review/</loc>
+    <loc>https://discover304.top/2022/10/31/2022q3/167-1-sp-review/</loc>
     <lastmod>2023-12-19</lastmod>
   </url>
   <url>
@@ -149,15 +149,15 @@
     <lastmod>2023-12-19</lastmod>
   </url>
   <url>
-    <loc>https://discover304.top/2022/10/20/2022q3/164-7-Semantic-Segmentation/</loc>
-    <lastmod>2023-12-19</lastmod>
-  </url>
-  <url>
     <loc>https://discover304.top/2022/10/06/2022q3/164-5-FNN/</loc>
     <lastmod>2023-12-19</lastmod>
   </url>
   <url>
     <loc>https://discover304.top/2022/10/10/2022q3/164-6-object-detection/</loc>
+    <lastmod>2023-12-19</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2022/10/20/2022q3/164-7-Semantic-Segmentation/</loc>
     <lastmod>2023-12-19</lastmod>
   </url>
   <url>
@@ -617,6 +617,10 @@
     <lastmod>2021-12-25</lastmod>
   </url>
   <url>
+    <loc>https://discover304.top/2021/11/20/2021q4/096-Django-dev-03/</loc>
+    <lastmod>2021-12-25</lastmod>
+  </url>
+  <url>
     <loc>https://discover304.top/2021/11/16/2021q4/095-Django-dev-02/</loc>
     <lastmod>2021-12-25</lastmod>
   </url>
@@ -633,10 +637,6 @@
     <lastmod>2021-12-25</lastmod>
   </url>
   <url>
-    <loc>https://discover304.top/2021/11/20/2021q4/096-Django-dev-03/</loc>
-    <lastmod>2021-12-25</lastmod>
-  </url>
-  <url>
     <loc>https://discover304.top/2021/11/25/2021q4/103-0-ml/</loc>
     <lastmod>2021-12-25</lastmod>
   </url>
@@ -645,19 +645,7 @@
     <lastmod>2021-12-25</lastmod>
   </url>
   <url>
-    <loc>https://discover304.top/2021/11/25/2021q4/103-1-ml-dt/</loc>
-    <lastmod>2021-12-25</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2021/11/25/2021q4/103-2-ml-dt/</loc>
-    <lastmod>2021-12-25</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2021/11/25/2021q4/103-2-ml-lo/</loc>
-    <lastmod>2021-12-25</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2021/11/25/2021q4/103-3-ml-clus/</loc>
+    <loc>https://discover304.top/2021/11/25/2021q4/103-2-ml-bays/</loc>
     <lastmod>2021-12-25</lastmod>
   </url>
   <url>
@@ -665,11 +653,19 @@
     <lastmod>2021-12-25</lastmod>
   </url>
   <url>
+    <loc>https://discover304.top/2021/11/25/2021q4/103-2-ml-lo/</loc>
+    <lastmod>2021-12-25</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2021/11/25/2021q4/103-2-ml-dt/</loc>
+    <lastmod>2021-12-25</lastmod>
+  </url>
+  <url>
     <loc>https://discover304.top/2021/11/25/2021q4/103-4-ml-pca/</loc>
     <lastmod>2021-12-25</lastmod>
   </url>
   <url>
-    <loc>https://discover304.top/2021/11/25/2021q4/103-2-ml-bays/</loc>
+    <loc>https://discover304.top/2021/11/25/2021q4/103-3-ml-clus/</loc>
     <lastmod>2021-12-25</lastmod>
   </url>
   <url>
@@ -681,11 +677,11 @@
     <lastmod>2021-12-25</lastmod>
   </url>
   <url>
-    <loc>https://discover304.top/2021/11/30/2021q4/107-0-dl/</loc>
+    <loc>https://discover304.top/2021/11/25/2021q4/103-1-ml-dt/</loc>
     <lastmod>2021-12-25</lastmod>
   </url>
   <url>
-    <loc>https://discover304.top/2021/11/30/2021q4/107-1-dl-cnn/</loc>
+    <loc>https://discover304.top/2021/11/30/2021q4/107-0-dl/</loc>
     <lastmod>2021-12-25</lastmod>
   </url>
   <url>
@@ -693,15 +689,11 @@
     <lastmod>2021-12-25</lastmod>
   </url>
   <url>
+    <loc>https://discover304.top/2021/11/30/2021q4/107-1-dl-cnn/</loc>
+    <lastmod>2021-12-25</lastmod>
+  </url>
+  <url>
     <loc>https://discover304.top/2021/11/30/2021q4/107-1-dl-loss-gd/</loc>
-    <lastmod>2021-12-25</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2021/11/30/2021q4/107-1-dl-perceptron/</loc>
-    <lastmod>2021-12-25</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2021/12/02/2021q4/107-4-dl-pdpd-base/</loc>
     <lastmod>2021-12-25</lastmod>
   </url>
   <url>
@@ -709,7 +701,15 @@
     <lastmod>2021-12-25</lastmod>
   </url>
   <url>
-    <loc>https://discover304.top/2021/12/01/2021q4/108-0-dl-ex/</loc>
+    <loc>https://discover304.top/2021/11/30/2021q4/107-1-dl-perceptron/</loc>
+    <lastmod>2021-12-25</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2021/12/02/2021q4/107-3-dl-tf/</loc>
+    <lastmod>2021-12-25</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2021/12/02/2021q4/107-4-dl-pdpd-base/</loc>
     <lastmod>2021-12-25</lastmod>
   </url>
   <url>
@@ -717,11 +717,11 @@
     <lastmod>2021-12-25</lastmod>
   </url>
   <url>
-    <loc>https://discover304.top/2021/12/01/2021q4/108-3-dl-ex/</loc>
+    <loc>https://discover304.top/2021/12/01/2021q4/108-0-dl-ex/</loc>
     <lastmod>2021-12-25</lastmod>
   </url>
   <url>
-    <loc>https://discover304.top/2021/12/02/2021q4/107-3-dl-tf/</loc>
+    <loc>https://discover304.top/2021/12/01/2021q4/108-3-dl-ex/</loc>
     <lastmod>2021-12-25</lastmod>
   </url>
   <url>
