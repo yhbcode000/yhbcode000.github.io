@@ -6,7 +6,7 @@
   <link href="https://discover304.top/atom.xml" rel="self"/>
   
   <link href="https://discover304.top/"/>
-  <updated>2023-12-22T18:12:36.888Z</updated>
+  <updated>2024-01-22T06:49:28.397Z</updated>
   <id>https://discover304.top/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PMR Introduction &amp; Assumptions for Efficient Representation</title>
+    <link href="https://discover304.top/2024/01/22/2024q1/181-1-introduction/"/>
+    <id>https://discover304.top/2024/01/22/2024q1/181-1-introduction/</id>
+    <published>2024-01-22T02:16:15.000Z</published>
+    <updated>2024-01-22T06:49:28.397Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-Course-Structure"><a href="#1-Course-Structure" class="headerlink" title="1. Course Structure"></a>1. Course Structure</h2><p>Assumptions with reasons and learning&#x2F;reasoning.</p><blockquote><p>Half half.</p></blockquote><p><img src="https://image.discover304.top/s06100201222024.png" alt="s06100201222024"><br><img src="https://image.discover304.top/s06101801222024.png" alt="s06101801222024"><br><img src="https://image.discover304.top/s06103701222024.png" alt="s06103701222024"></p><h2 id="2-Basic-Assumptions-for-Efficient-Model-Representation"><a href="#2-Basic-Assumptions-for-Efficient-Model-Representation" class="headerlink" title="2. Basic Assumptions for Efficient Model Representation"></a>2. Basic Assumptions for Efficient Model Representation</h2><ul><li>Independence: limit the <strong>number</strong> of interaction.</li><li>Interaction: restrict the <strong>way</strong> things interact with each other.</li></ul><h3 id="2-1-Independence"><a href="#2-1-Independence" class="headerlink" title="2.1. Independence"></a>2.1. Independence</h3><p><img src="https://image.discover304.top/s06154101222024.png" alt="s06154101222024"><br><img src="https://image.discover304.top/s06164401222024.png" alt="s06164401222024"><br><img src="https://image.discover304.top/s06302201222024.png" alt="s06302201222024"></p><h3 id="2-2-Interaction"><a href="#2-2-Interaction" class="headerlink" title="2.2. Interaction"></a>2.2. Interaction</h3><p><img src="https://image.discover304.top/s06310101222024.png" alt="s06310101222024"></p><h2 id="3-Additional-Material"><a href="#3-Additional-Material" class="headerlink" title="3. Additional Material"></a>3. Additional Material</h2><h3 id="3-1-Sensitivityu-and-Specificity"><a href="#3-1-Sensitivityu-and-Specificity" class="headerlink" title="3.1. Sensitivityu and Specificity"></a>3.1. Sensitivityu and Specificity</h3><ul><li>Sensitivity: True Positive</li><li>Specificity: False Positive</li></ul><blockquote><p>Simply another way saying the same thing.</p></blockquote><p><a href="https://zhuanlan.zhihu.com/p/585001157">敏感性(Sensitivity)与特异性(Specificity)</a></p><h3 id="3-2-Bayes’-rule"><a href="#3-2-Bayes’-rule" class="headerlink" title="3.2. Bayes’ rule"></a>3.2. Bayes’ rule</h3><p>$$<br>P(A|B) &#x3D; \frac{P(B|A) \cdot P(A)}{P(B)}<br>$$</p><p>$$<br>P(y&#x3D;1|x&#x3D;1) &#x3D; \frac{P(x&#x3D;1|y&#x3D;1) \cdot P(y&#x3D;1)}{P(x&#x3D;1)}<br>$$</p><p><img src="https://image.discover304.top/s05580801222024.png" alt="s05580801222024"></p><hr><blockquote><p><strong>🍀后记🍀</strong><br>Hello米娜桑，这里是英国留学中的杨丝儿。我的博客的关键词集中在编程、算法、机器人、人工智能、数学等等，持续高质量输出中。<br><strong>🌸唠嗑QQ群</strong>：<a href="https://jq.qq.com/?_wv=1027&k=EaGddTQg">兔叽の魔术工房</a> (942848525)<br><strong>⭐B站账号</strong>：<a href="https://space.bilibili.com/98639326">白拾Official</a>（活跃于知识区和动画区）<br><strong>✨GitHub主页</strong>：<a href="https://github.com/YangSierCode000">YangSierCode000</a>(工程文件)<br><strong>⛳Discord社区</strong>：<a href="https://discord.gg/nn5NDXMgae">AIerLab</a>（科研社区，欢迎来玩）</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;1-Course-Structure&quot;&gt;&lt;a href=&quot;#1-Course-Structure&quot; class=&quot;headerlink&quot; title=&quot;1. Course Structure&quot;&gt;&lt;/a&gt;1. Course Structure&lt;/h2&gt;&lt;p&gt;Assu</summary>
+      
+    
+    
+    
+    <category term="University" scheme="https://discover304.top/categories/University/"/>
+    
+    <category term="Probabilistic Modelling and Reasoning" scheme="https://discover304.top/categories/University/Probabilistic-Modelling-and-Reasoning/"/>
+    
+    
+    <category term="笔记" scheme="https://discover304.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NLU Introduction</title>
+    <link href="https://discover304.top/2024/01/15/2024q1/180-1-introduction/"/>
+    <id>https://discover304.top/2024/01/15/2024q1/180-1-introduction/</id>
+    <published>2024-01-15T02:16:15.000Z</published>
+    <updated>2024-01-22T06:46:13.086Z</updated>
+    
+    <content type="html"><![CDATA[<hr><blockquote><p><strong>🍀后记🍀</strong><br>Hello米娜桑，这里是英国留学中的杨丝儿。我的博客的关键词集中在编程、算法、机器人、人工智能、数学等等，持续高质量输出中。<br><strong>🌸唠嗑QQ群</strong>：<a href="https://jq.qq.com/?_wv=1027&k=EaGddTQg">兔叽の魔术工房</a> (942848525)<br><strong>⭐B站账号</strong>：<a href="https://space.bilibili.com/98639326">白拾Official</a>（活跃于知识区和动画区）<br><strong>✨GitHub主页</strong>：<a href="https://github.com/YangSierCode000">YangSierCode000</a>(工程文件)<br><strong>⛳Discord社区</strong>：<a href="https://discord.gg/nn5NDXMgae">AIerLab</a>（科研社区，欢迎来玩）</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;🍀后记🍀&lt;/strong&gt;&lt;br&gt;Hello米娜桑，这里是英国留学中的杨丝儿。我的博客的关键词集中在编程、算法、机器人、人工智能、数学等等，持续高质量输出中。&lt;br&gt;&lt;strong&gt;🌸唠嗑QQ群&lt;/strong&gt;：&lt;</summary>
+      
+    
+    
+    
+    <category term="University" scheme="https://discover304.top/categories/University/"/>
+    
+    <category term="Natural Language Understanding, Generation, and Machine Translation" scheme="https://discover304.top/categories/University/Natural-Language-Understanding-Generation-and-Machine-Translation/"/>
+    
+    
+    <category term="笔记" scheme="https://discover304.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>178-Nginx-Https-to-Local-Service</title>
@@ -527,70 +581,6 @@
     <published>2022-11-28T07:24:39.000Z</published>
     <updated>2023-10-23T23:09:20.812Z</updated>
     
-    
-    
-    
-    <category term="University" scheme="https://discover304.top/categories/University/"/>
-    
-    <category term="Speech Processing" scheme="https://discover304.top/categories/University/Speech-Processing/"/>
-    
-    
-    <category term="学习" scheme="https://discover304.top/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="知识" scheme="https://discover304.top/tags/%E7%9F%A5%E8%AF%86/"/>
-    
-    <category term="积累" scheme="https://discover304.top/tags/%E7%A7%AF%E7%B4%AF/"/>
-    
-    <category term="笔记" scheme="https://discover304.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SP Module 10 Connected Speech &amp; HMM Training</title>
-    <link href="https://discover304.top/2022/11/17/2022q3/166-10-connected-speech-hidden-markov-model/"/>
-    <id>https://discover304.top/2022/11/17/2022q3/166-10-connected-speech-hidden-markov-model/</id>
-    <published>2022-11-17T01:47:12.000Z</published>
-    <updated>2023-12-19T17:53:34.482Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="From-subword-units-to-n-grams-hierarchy-of-models"><a href="#From-subword-units-to-n-grams-hierarchy-of-models" class="headerlink" title="From subword units to n-grams: hierarchy of models"></a>From subword units to n-grams: hierarchy of models</h2><p>Defining a hierarchy of models: we can compile different HMMs to create models of utterances</p><blockquote><p><img src="https://image.discover304.top/blog-img/s11243611272022.png" alt="s11243611272022"></p><p><img src="https://image.discover304.top/blog-img/s11201111272022.png" alt="s11201111272022"> </p></blockquote><blockquote><p><img src="https://image.discover304.top/blog-img/s11241211272022.png" alt="s11241211272022"></p><p><img src="https://image.discover304.top/blog-img/s11250411272022.png" alt="s11250411272022"></p></blockquote><p><img src="https://image.discover304.top/blog-img/s11270611272022.png" alt="s11270611272022"></p><blockquote><p><img src="https://image.discover304.top/blog-img/s11275311272022.png" alt="s11275311272022"></p><p><img src="https://image.discover304.top/blog-img/s11285111272022.png" alt="s11285111272022"></p><p><img src="https://image.discover304.top/blog-img/s11295011272022.png" alt="s11295011272022"></p></blockquote><p>We can do some pruning, remove some tokens while proceeding, reduce computation cost (Maybe Heuristic is also can be helpful in such case.)</p><h2 id="Conditional-independence-and-the-forward-algorithm"><a href="#Conditional-independence-and-the-forward-algorithm" class="headerlink" title="Conditional independence and the forward algorithm"></a>Conditional independence and the forward algorithm</h2><p>We use the Markov property of HMMs (i.e. conditional independence assumptions) to make computing probabilities of observation sequences easier</p><p><img src="https://image.discover304.top/blog-img/s14114011282022.png" alt="s14114011282022"></p><p><img src="https://image.discover304.top/blog-img/s14145911282022.png" alt="s14145911282022"></p><h2 id="HMM-training-with-the-Baum-Welch-algorithm"><a href="#HMM-training-with-the-Baum-Welch-algorithm" class="headerlink" title="HMM training with the Baum-Welch algorithm"></a>HMM training with the Baum-Welch algorithm</h2><p>HMM training using the Baum-Welch algorithm. This gives a very high level overview of forward and backward probability calculation on HMMs and Expectation-Maximization as a way to optimise model parameters. The maths is in the readings (but not examinable).</p><p><img src="https://image.discover304.top/blog-img/s14164611282022.png" alt="s14164611282022"></p><p><img src="https://image.discover304.top/blog-img/s14293011282022.png" alt="s14293011282022"></p><hr><p>Origin: <a href="https://speech.zone/courses/speech-processing/module-10-speech-recognition-connected-speech-hmm-training/">Module 10 – Speech Recognition – Connected speech &amp; HMM training</a><br>Translate + Edit: YangSier (<a href="https://discover304.top/">Homepage</a>)</p><blockquote><p><strong>:four_leaf_clover:碎碎念:four_leaf_clover:</strong><br>Hello米娜桑，这里是英国留学中的杨丝儿。我的博客的关键词集中在编程、算法、机器人、人工智能、数学等等，点个关注吧，持续高质量输出中。<br><strong>:cherry_blossom:唠嗑QQ群</strong>：<a href="https://jq.qq.com/?_wv=1027&k=EaGddTQg">兔叽的魔术工房</a> (942848525)<br><strong>:star:B站账号</strong>：<a href="https://space.bilibili.com/98639326">白拾Official</a>（活跃于知识区和动画区）</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;From-subword-units-to-n-grams-hierarchy-of-models&quot;&gt;&lt;a href=&quot;#From-subword-units-to-n-grams-hierarchy-of-models&quot; class=&quot;headerlink&quot; t</summary>
-      
-    
-    
-    
-    <category term="University" scheme="https://discover304.top/categories/University/"/>
-    
-    <category term="Speech Processing" scheme="https://discover304.top/categories/University/Speech-Processing/"/>
-    
-    
-    <category term="学习" scheme="https://discover304.top/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="知识" scheme="https://discover304.top/tags/%E7%9F%A5%E8%AF%86/"/>
-    
-    <category term="积累" scheme="https://discover304.top/tags/%E7%A7%AF%E7%B4%AF/"/>
-    
-    <category term="笔记" scheme="https://discover304.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SP Module 9 the Hidden Markov Model</title>
-    <link href="https://discover304.top/2022/11/17/2022q3/166-9-The-hidden-markov-model/"/>
-    <id>https://discover304.top/2022/11/17/2022q3/166-9-The-hidden-markov-model/</id>
-    <published>2022-11-17T01:46:44.000Z</published>
-    <updated>2023-12-19T17:53:34.483Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="Hidden-Markov-Models-for-ASR"><a href="#Hidden-Markov-Models-for-ASR" class="headerlink" title="Hidden Markov Models for ASR"></a>Hidden Markov Models for ASR</h2><p>Intro to Hidden Markov Models, comparison to DTW.</p><p>dynamic time warping (DTW)</p><h2 id="Hidden-state-sequences-and-alignment"><a href="#Hidden-state-sequences-and-alignment" class="headerlink" title="Hidden state sequences and alignment"></a>Hidden state sequences and alignment</h2><p>Hidden state sequence, Trellis (i.e. lattice) representation of an HMM, aligning observations to states</p><p><img src="https://image.discover304.top/blog-img/s10460611272022.png" alt="s10460611272022"></p><p>grid and lattice</p><p><img src="https://image.discover304.top/blog-img/s10504611272022.png" alt="s10504611272022"></p><h2 id="The-Viterbi-algorithm-and-token-passing"><a href="#The-Viterbi-algorithm-and-token-passing" class="headerlink" title="The Viterbi algorithm and token passing"></a>The Viterbi algorithm and token passing</h2><p>The Viterbi algorithm can be computed on different data structures. The token passing version turns out to be very convenient for ASR.<br>Tthese two different implementations are simply two different ways to perform dynamic programming.</p><p><img src="https://image.discover304.top/blog-img/s11025811272022.png" alt="s11025811272022"></p><p><img src="https://image.discover304.top/blog-img/s10593711272022.png" alt="s10593711272022"></p><hr><p>Origin: <a href="https://speech.zone/courses/speech-processing/module-9-speech-recognition-the-hidden-markov-model/">Module 9 – Speech Recognition – the Hidden Markov Model</a><br>Translate + Edit: YangSier (<a href="https://discover304.top/">Homepage</a>)</p><blockquote><p><strong>:four_leaf_clover:碎碎念:four_leaf_clover:</strong><br>Hello米娜桑，这里是英国留学中的杨丝儿。我的博客的关键词集中在编程、算法、机器人、人工智能、数学等等，点个关注吧，持续高质量输出中。<br><strong>:cherry_blossom:唠嗑QQ群</strong>：<a href="https://jq.qq.com/?_wv=1027&k=EaGddTQg">兔叽的魔术工房</a> (942848525)<br><strong>:star:B站账号</strong>：<a href="https://space.bilibili.com/98639326">白拾Official</a>（活跃于知识区和动画区）</p></blockquote>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;Hidden-Markov-Models-for-ASR&quot;&gt;&lt;a href=&quot;#Hidden-Markov-Models-for-ASR&quot; class=&quot;headerlink&quot; title=&quot;Hidden Markov Models for ASR&quot;&gt;&lt;/a&gt;Hi</summary>
-      
     
     
     
