@@ -1,8 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://discover304.top/2021/12/17/2021q4/118-ros-note-code-naming/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2021/12/17/2021q4/118-ros-note-code-serv/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2021/12/17/2021q4/118-ros-note-code-type/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2021/12/17/2021q4/118-ros-note-code/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2021/12/17/2021q4/118-ros-note/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2021/12/17/2021q4/118-ros-note2/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2021/12/20/2021q4/120-robot-dev-mirror-building-process/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2022/01/03/2021q4/121-robot-dev-docker-building-guide/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2022/01/04/2022q1/127-ros-note-plus/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2022/01/04/2022q1/128-ros-messaging-method-comparing/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
     <loc>https://discover304.top/2024/02/22/182-ns3-simulation/</loc>
-    <lastmod>2024-02-22</lastmod>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2022/12/09/2022q4/169-new-r/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2023/12/05/2023q4/175-qiniu-fix-archieve/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2022/10/01/2022q3/166-0-getting-started/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2022/09/19/2022q3/164-1-introduction/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2023/12/19/2023q4/176-1-aro-note/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2022/10/11/2022q4/168-4-The-human-element/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2022/10/11/2022q4/168-3-bias-and-fairness/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2022/10/11/2022q4/168-2-data-justice/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2022/10/11/2022q4/168-1-power/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2022/10/10/2022q4/168-0-responsibility/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2023/12/19/2023q4/177-6-aro-other/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2023/12/19/2023q4/176-5-aro-controller/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2023/12/19/2023q4/176-4-aro-dynamics/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2023/12/19/2023q4/176-3-aro-planning/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2023/12/19/2023q4/176-2-aro-kinematics/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2023/12/22/179-template-create/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2023/12/22/178-nginx-https-to-local-service/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2024/01/22/181/</loc>
+    <lastmod>2024-03-10</lastmod>
+  </url>
+  <url>
+    <loc>https://discover304.top/2024/01/15/180/</loc>
+    <lastmod>2024-03-10</lastmod>
   </url>
   <url>
     <loc>https://discover304.top/2024/02/05/180-2/</loc>
@@ -77,75 +193,11 @@
     <lastmod>2024-02-05</lastmod>
   </url>
   <url>
-    <loc>https://discover304.top/2024/01/15/180/</loc>
-    <lastmod>2024-01-23</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2024/01/22/181/</loc>
-    <lastmod>2024-01-22</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2023/12/22/2023q4/178-nginx-https-to-local-service/</loc>
-    <lastmod>2023-12-22</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2023/12/22/2023q4/179-template-create/</loc>
-    <lastmod>2023-12-22</lastmod>
-  </url>
-  <url>
     <loc>https://discover304.top/2022/02/21/000/</loc>
     <lastmod>2023-12-22</lastmod>
   </url>
   <url>
-    <loc>https://discover304.top/2023/12/19/2023q4/177-6-aro-other/</loc>
-    <lastmod>2023-12-19</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2023/12/19/2023q4/176-5-aro-controller/</loc>
-    <lastmod>2023-12-19</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2023/12/19/2023q4/176-4-aro-dynamics/</loc>
-    <lastmod>2023-12-19</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2023/12/19/2023q4/176-3-aro-planning/</loc>
-    <lastmod>2023-12-19</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2023/12/19/2023q4/176-2-aro-kinematics/</loc>
-    <lastmod>2023-12-19</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2023/12/19/2023q4/176-1-aro-note/</loc>
-    <lastmod>2023-12-19</lastmod>
-  </url>
-  <url>
     <loc>https://discover304.top/2020/08/20/2020/007-Windows-%E5%BE%AE%E7%97%9B%E8%BD%AC-Linux-%E4%B8%87%E4%B8%87%E6%B2%A1%E6%83%B3%E5%88%B0%E8%82%AF%E5%BE%B7%E5%9F%BA%E7%9A%84%E7%BD%91%E7%AB%9F%E7%84%B6%E8%BF%99%E4%B9%88%E5%A5%BD/</loc>
-    <lastmod>2023-12-19</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2022/10/11/2022q4/168-1-power/</loc>
-    <lastmod>2023-12-19</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2022/10/11/2022q4/168-2-data-justice/</loc>
-    <lastmod>2023-12-19</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2022/10/10/2022q4/168-0-responsibility/</loc>
-    <lastmod>2023-12-19</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2022/10/11/2022q4/168-3-bias-and-fairness/</loc>
-    <lastmod>2023-12-19</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2022/10/11/2022q4/168-4-The-human-element/</loc>
-    <lastmod>2023-12-19</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2022/09/19/2022q3/164-1-introduction/</loc>
     <lastmod>2023-12-19</lastmod>
   </url>
   <url>
@@ -245,15 +297,7 @@
     <lastmod>2023-12-19</lastmod>
   </url>
   <url>
-    <loc>https://discover304.top/2022/10/01/2022q3/166-0-getting-started/</loc>
-    <lastmod>2023-12-19</lastmod>
-  </url>
-  <url>
     <loc>https://discover304.top/2023/04/24/2023q1/173-nginx-docker-blog-page-depoly/</loc>
-    <lastmod>2023-12-19</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2023/12/05/2023q4/175-qiniu-fix-archieve/</loc>
     <lastmod>2023-12-19</lastmod>
   </url>
   <url>
@@ -291,10 +335,6 @@
   <url>
     <loc>https://discover304.top/2022/03/01/2022q1/145-%E5%A4%9A%E5%85%83%E9%AB%98%E6%96%AF%E5%88%86%E5%B8%83%E7%9A%84%E7%86%B5/</loc>
     <lastmod>2023-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2022/12/09/2022q4/169-new-r/</loc>
-    <lastmod>2022-12-11</lastmod>
   </url>
   <url>
     <loc>https://discover304.top/2022/09/22/2022q3/165-clubnotice/</loc>
@@ -577,10 +617,6 @@
     <lastmod>2022-01-06</lastmod>
   </url>
   <url>
-    <loc>https://discover304.top/2022/01/04/2022q1/128-ros-messaging-method-comparing/</loc>
-    <lastmod>2022-01-06</lastmod>
-  </url>
-  <url>
     <loc>https://discover304.top/2022/01/05/2022q1/132-multisensor-calicration/</loc>
     <lastmod>2022-01-05</lastmod>
   </url>
@@ -597,44 +633,12 @@
     <lastmod>2022-01-05</lastmod>
   </url>
   <url>
-    <loc>https://discover304.top/2022/01/04/2022q1/127-ros-note-plus/</loc>
-    <lastmod>2022-01-04</lastmod>
-  </url>
-  <url>
     <loc>https://discover304.top/2021/12/27/2021q4/126-markdown-slides/</loc>
-    <lastmod>2022-01-04</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2022/01/03/2021q4/121-robot-dev-docker-building-guide/</loc>
-    <lastmod>2022-01-04</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2021/12/17/2021q4/118-ros-note2/</loc>
-    <lastmod>2022-01-04</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2021/12/17/2021q4/118-ros-note/</loc>
-    <lastmod>2022-01-04</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2021/12/17/2021q4/118-ros-note-code-naming/</loc>
-    <lastmod>2022-01-04</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2021/12/17/2021q4/118-ros-note-code-serv/</loc>
-    <lastmod>2022-01-04</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2021/12/17/2021q4/118-ros-note-code/</loc>
     <lastmod>2022-01-04</lastmod>
   </url>
   <url>
     <loc>https://discover304.top/2021/12/31/2021q4/130-2021-data-summary-and-review/</loc>
     <lastmod>2021-12-31</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2021/12/17/2021q4/118-ros-note-code-type/</loc>
-    <lastmod>2021-12-30</lastmod>
   </url>
   <url>
     <loc>https://discover304.top/2021/12/29/2021q4/114-paper-management-tools/</loc>
@@ -858,10 +862,6 @@
   </url>
   <url>
     <loc>https://discover304.top/2021/12/13/2021q4/116-autodrive-terms-collection/</loc>
-    <lastmod>2021-12-25</lastmod>
-  </url>
-  <url>
-    <loc>https://discover304.top/2021/12/20/2021q4/120-robot-dev-mirror-building-process/</loc>
     <lastmod>2021-12-25</lastmod>
   </url>
   <url>
