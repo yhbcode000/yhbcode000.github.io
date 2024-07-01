@@ -6,7 +6,7 @@
   <link href="https://discover304.top/atom.xml" rel="self"/>
   
   <link href="https://discover304.top/"/>
-  <updated>2024-06-29T14:40:59.528Z</updated>
+  <updated>2024-07-01T22:01:23.510Z</updated>
   <id>https://discover304.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【课题】Decifer音乐项目与LLM Repo Eval项目</title>
+    <link href="https://discover304.top/2024/07/02/187-music-x-lab-other-research/"/>
+    <id>https://discover304.top/2024/07/02/187-music-x-lab-other-research/</id>
+    <published>2024-07-01T21:58:10.000Z</published>
+    <updated>2024-07-01T22:01:23.510Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>注：AI 整理，仅作参考</p></blockquote><h2 id="1-Decifer音乐生成项目"><a href="#1-Decifer音乐生成项目" class="headerlink" title="1. Decifer音乐生成项目"></a>1. Decifer音乐生成项目</h2><h3 id="1-1-项目概述"><a href="#1-1-项目概述" class="headerlink" title="1.1. 项目概述"></a>1.1. 项目概述</h3><p>Decifer项目致力于开发一个利用音频语言模型（Y）指导MIDI语言模型（X）的跨模态音乐生成模型。</p><h3 id="1-2-技术细节"><a href="#1-2-技术细节" class="headerlink" title="1.2. 技术细节"></a>1.2. 技术细节</h3><ul><li><strong>数据收集</strong>：收集大量的MIDI和相应的音频数据。</li><li><strong>模型蒸馏</strong>：音频模型作为导师模型，将知识传递给MIDI模型。</li><li><strong>跨模态学习</strong>：实现音频输出到MIDI输入的映射，促进两个模型的互动学习。</li></ul><h2 id="2-LLM-Repo-Eval项目：GitHub仓库评估"><a href="#2-LLM-Repo-Eval项目：GitHub仓库评估" class="headerlink" title="2. LLM Repo Eval项目：GitHub仓库评估"></a>2. LLM Repo Eval项目：GitHub仓库评估</h2><h3 id="2-1-项目目标"><a href="#2-1-项目目标" class="headerlink" title="2.1. 项目目标"></a>2.1. 项目目标</h3><p>利用大型语言模型评估GitHub仓库的效率、资源开销、部署或开发难易程度。</p><h3 id="2-2-实施步骤"><a href="#2-2-实施步骤" class="headerlink" title="2.2. 实施步骤"></a>2.2. 实施步骤</h3><ul><li><strong>确定评估标准</strong>：包括代码质量、工程质量、使用体验、部署和配置等。</li><li><strong>设计评估工具和方法</strong>：选择合适的代码分析和性能分析工具。</li><li><strong>收集数据</strong>：运行和测试GitHub仓库，收集性能数据和用户反馈。</li><li><strong>数据分析</strong>：分析收集到的数据，评估GitHub仓库的综合表现。</li></ul><h2 id="3-总结"><a href="#3-总结" class="headerlink" title="3. 总结"></a>3. 总结</h2><p>这两个项目通过使用先进的AI技术解决特定领域问题，展示了AI在音乐生成和软件工程质量评估中的应用潜力。</p><hr><blockquote><p><strong>🍀后记🍀</strong><br>博客的关键词集中在编程、算法、机器人、人工智能、数学等等，持续高质量输出中。<br><strong>🌸唠嗑QQ群</strong>：<a href="https://jq.qq.com/?_wv=1027&k=EaGddTQg">兔叽の魔术工房</a> (942848525)<br><strong>⭐B站账号</strong>：<a href="https://space.bilibili.com/98639326">白拾Official</a>（活跃于知识区和动画区）<br><strong>✨GitHub主页</strong>：<a href="https://github.com/YangSierCode000">YangSierCode000</a>（工程文件）<br><strong>⛳Discord社区</strong>：<a href="https://discord.g/nn5NDXMgae">AierLab</a>（人工智能社区）</p></blockquote>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;注：AI 整理，仅作参考&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;1-Decifer音乐生成项目&quot;&gt;&lt;a href=&quot;#1-Decifer音乐生成项目&quot; class=&quot;headerlink&quot; title=&quot;1. Decifer音乐生成项</summary>
+      
+    
+    
+    
+    <category term="Draft" scheme="https://discover304.top/categories/Draft/"/>
+    
+    
+    <category term="待更新" scheme="https://discover304.top/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Vector Store: Similarity and Indexing</title>
@@ -559,39 +586,6 @@
     <category term="技术" scheme="https://discover304.top/tags/%E6%8A%80%E6%9C%AF/"/>
     
     <category term="记录" scheme="https://discover304.top/tags/%E8%AE%B0%E5%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Coding Note</title>
-    <link href="https://discover304.top/2023/11/29/2023q4/174-2-hp-coding/"/>
-    <id>https://discover304.top/2023/11/29/2023q4/174-2-hp-coding/</id>
-    <published>2023-11-29T08:21:23.000Z</published>
-    <updated>2023-12-19T16:50:08.568Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://github.com/NVIDIA/MinkowskiEngine/issues/300#issuecomment-803528102"></a></p><p><code>apt install libopenblas-dev</code></p><p>bash setup.sh cue server</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/NVIDIA/MinkowskiEngine/issues/300#issuecomment-803528102&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;apt install libopenblas-dev&lt;/code</summary>
-      
-    
-    
-    
-    <category term="University" scheme="https://discover304.top/categories/University/"/>
-    
-    <category term="Honours Project" scheme="https://discover304.top/categories/University/Honours-Project/"/>
-    
-    
-    <category term="学习" scheme="https://discover304.top/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="知识" scheme="https://discover304.top/tags/%E7%9F%A5%E8%AF%86/"/>
-    
-    <category term="积累" scheme="https://discover304.top/tags/%E7%A7%AF%E7%B4%AF/"/>
-    
-    <category term="笔记" scheme="https://discover304.top/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
