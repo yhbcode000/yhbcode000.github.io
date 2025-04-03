@@ -364,13 +364,13 @@
     
     <category term="AI" scheme="https://discover304.top/tags/AI/"/>
     
-    <category term="Large Language Models" scheme="https://discover304.top/tags/Large-Language-Models/"/>
-    
     <category term="Multi-Agent Systems" scheme="https://discover304.top/tags/Multi-Agent-Systems/"/>
     
     <category term="Generative Agents" scheme="https://discover304.top/tags/Generative-Agents/"/>
     
     <category term="Emergent Behavior" scheme="https://discover304.top/tags/Emergent-Behavior/"/>
+    
+    <category term="Large Language Models" scheme="https://discover304.top/tags/Large-Language-Models/"/>
     
   </entry>
   
@@ -564,9 +564,9 @@
     
     <category term="Python" scheme="https://discover304.top/tags/Python/"/>
     
-    <category term="Data Science" scheme="https://discover304.top/tags/Data-Science/"/>
-    
     <category term="NumPy" scheme="https://discover304.top/tags/NumPy/"/>
+    
+    <category term="Data Science" scheme="https://discover304.top/tags/Data-Science/"/>
     
     <category term="Linear Algebra" scheme="https://discover304.top/tags/Linear-Algebra/"/>
     
