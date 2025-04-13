@@ -4,6 +4,41 @@
   
     
     <entry>
+      <title>Copilot AI 使用注意事项</title>
+      <link href="/2025/04/13/2025q1/197-copilot-usage/"/>
+      <url>/2025/04/13/2025q1/197-copilot-usage/</url>
+      
+        <content type="html"><![CDATA[<p>Copilot AI 是现代开发者非常依赖的工具，它在提高编码效率、辅助思考方面有显著效果。但要真正高效、稳定地使用 Copilot AI，仍需注意一些关键事项，尤其是在复杂项目中。以下是使用过程中需要特别留意的几点。</p><hr><h2 id="一、模块必须独立，确定后不能随意更改"><a href="#一、模块必须独立，确定后不能随意更改" class="headerlink" title="一、模块必须独立，确定后不能随意更改"></a>一、模块必须独立，确定后不能随意更改</h2><p>Copilot 的强项在于“局部智能”，即在当前上下文中进行逻辑补全或推演。但 AI 的<strong>上下文容量有限</strong>，一旦模块过于复杂、相互依赖过多，就会超出其理解范围，导致建议不准确甚至出现逻辑错误。</p><h3 id="✅-推荐做法："><a href="#✅-推荐做法：" class="headerlink" title="✅ 推荐做法："></a>✅ 推荐做法：</h3><ul><li>将系统<strong>划分为多个独立的子模块</strong>，每个模块功能单一、职责明确。</li><li><strong>模块接口定义清晰</strong>，只通过接口交互，避免跨模块强耦合。</li><li><strong>一旦模块确定，不随意更改其内部逻辑</strong>，避免因改动一个模块导致全局混乱。</li></ul><blockquote><p>模块越独立，AI 的建议就越可靠。</p></blockquote><hr><h2 id="二、上下文有限，无法获得全局视野"><a href="#二、上下文有限，无法获得全局视野" class="headerlink" title="二、上下文有限，无法获得全局视野"></a>二、上下文有限，无法获得全局视野</h2><p>Copilot AI 无法理解整个大型项目的结构或长时间保持复杂逻辑链，它只看得见你当前打开的窗口或正在编辑的几千行代码。</p><h3 id="❗-风险举例："><a href="#❗-风险举例：" class="headerlink" title="❗ 风险举例："></a>❗ 风险举例：</h3><ul><li>对多个文件间交互逻辑的推断容易出错</li><li>接口调用顺序、参数格式不一致</li><li>某些依赖项未能正确加载</li></ul><h3 id="✅-应对策略："><a href="#✅-应对策略：" class="headerlink" title="✅ 应对策略："></a>✅ 应对策略：</h3><ul><li>每次使用 AI 编写代码时，<strong>给足上下文提示</strong>，包括函数说明、注释、模块结构等。</li><li>将复杂逻辑<strong>前置定义或写入注释中</strong>，帮助 AI 理解你的意图。</li><li>对跨模块的逻辑<strong>多写文档，少依赖 AI 自行拼接逻辑链</strong>。</li></ul><hr><h2 id="三、功能开发一定要记录、跟进"><a href="#三、功能开发一定要记录、跟进" class="headerlink" title="三、功能开发一定要记录、跟进"></a>三、功能开发一定要<strong>记录、跟进</strong></h2><p>虽然 Copilot 的代码建议很强，但它不会自动帮你做版本控制或开发日志。项目一旦变复杂，如果没有良好的记录习惯，很容易丢失关键思路或忘记某个功能是如何实现的。</p><h3 id="✅-建议做法："><a href="#✅-建议做法：" class="headerlink" title="✅ 建议做法："></a>✅ 建议做法：</h3><ul><li><strong>每个功能点建立开发记录</strong>，如 <code>CHANGELOG.md</code> 或 <code>开发日志表</code>。</li><li>对每次由 AI 生成的重要代码，<strong>写下生成时间、上下文、修改内容与用途</strong>。</li><li>每开发一个模块，<strong>立刻归档：文档 + 用例 + 核心逻辑说明</strong>。</li><li>使用 Git 等工具，<strong>配合 PR 和 commit message 写清楚变更内容</strong>。</li></ul><hr><h2 id="四、总结建议"><a href="#四、总结建议" class="headerlink" title="四、总结建议"></a>四、总结建议</h2><table><thead><tr><th>事项</th><th>建议</th></tr></thead><tbody><tr><td>模块设计</td><td>拆分清晰，职责单一，定义之后尽量不动</td></tr><tr><td>AI 使用</td><td>给足上下文提示，控制好输入范围</td></tr><tr><td>项目管理</td><td>开发记录齐全，代码变更有迹可循</td></tr><tr><td>跨模块协作</td><td>接口清晰、交互透明、保持文档同步更新</td></tr></tbody></table><p>合理使用 Copilot AI，可以显著提升你的开发效率。但要想构建一个稳定、长期可维护的系统，还需靠清晰的架构设计和严格的开发规范来支撑。</p><hr><blockquote><p>记住：AI 是优秀的“副驾驶”，但方向盘仍掌握在你手中。</p></blockquote><hr><blockquote><p><strong>🍀后记🍀</strong><br>博客的关键词集中在编程、算法、机器人、人工智能、数学等等，持续高质量输出中。<br><strong>🌸唠嗑QQ群</strong>：<a href="https://jq.qq.com/?_wv=1027&k=EaGddTQg">兔叽の魔术工房</a> (942848525)<br><strong>⭐B站账号</strong>：<a href="https://space.bilibili.com/98639326">白拾ShiroX</a>（活跃于知识区和动画区）<br><strong>✨GitHub主页</strong>：<a href="https://github.com/yhbcode000">yhbcode000</a>（工程文件）<br><strong>⛳Discord社区</strong>：<a href="https://discord.g/nn5NDXMgae">AierLab</a>（人工智能社区）</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> NoteBook </category>
+          
+          <category> TechNote </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Copilot </tag>
+            
+            <tag> AI 编程助手 </tag>
+            
+            <tag> 编码规范 </tag>
+            
+            <tag> 项目管理 </tag>
+            
+            <tag> 模块化设计 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>无人机降噪展望（下）：主动降噪、AI与球面音波发生器</title>
       <link href="/2025/02/08/2025q1/20250208-%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%99%8D%E5%99%AA%E5%B1%95%E6%9C%9B%EF%BC%88%E4%B8%8B%EF%BC%89%EF%BC%9A%E4%B8%BB%E5%8A%A8%E9%99%8D%E5%99%AA%E3%80%81AI%E4%B8%8E%E7%90%83%E9%9D%A2%E9%9F%B3%E6%B3%A2%E5%8F%91%E7%94%9F%E5%99%A8/"/>
       <url>/2025/02/08/2025q1/20250208-%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%99%8D%E5%99%AA%E5%B1%95%E6%9C%9B%EF%BC%88%E4%B8%8B%EF%BC%89%EF%BC%9A%E4%B8%BB%E5%8A%A8%E9%99%8D%E5%99%AA%E3%80%81AI%E4%B8%8E%E7%90%83%E9%9D%A2%E9%9F%B3%E6%B3%A2%E5%8F%91%E7%94%9F%E5%99%A8/</url>
