@@ -329,6 +329,8 @@
     
     <category term="AI与科研" scheme="https://discover304.top/tags/AI%E4%B8%8E%E7%A7%91%E7%A0%94/"/>
     
+    <category term="科研自动化" scheme="https://discover304.top/tags/%E7%A7%91%E7%A0%94%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
     <category term="知识边界" scheme="https://discover304.top/tags/%E7%9F%A5%E8%AF%86%E8%BE%B9%E7%95%8C/"/>
     
     <category term="AGI" scheme="https://discover304.top/tags/AGI/"/>
@@ -336,8 +338,6 @@
     <category term="具身智能" scheme="https://discover304.top/tags/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD/"/>
     
     <category term="自组织系统" scheme="https://discover304.top/tags/%E8%87%AA%E7%BB%84%E7%BB%87%E7%B3%BB%E7%BB%9F/"/>
-    
-    <category term="科研自动化" scheme="https://discover304.top/tags/%E7%A7%91%E7%A0%94%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
     
   </entry>
   
@@ -400,13 +400,13 @@
     
     <category term="AI" scheme="https://discover304.top/tags/AI/"/>
     
+    <category term="Large Language Models" scheme="https://discover304.top/tags/Large-Language-Models/"/>
+    
     <category term="Multi-Agent Systems" scheme="https://discover304.top/tags/Multi-Agent-Systems/"/>
     
     <category term="Generative Agents" scheme="https://discover304.top/tags/Generative-Agents/"/>
     
     <category term="Emergent Behavior" scheme="https://discover304.top/tags/Emergent-Behavior/"/>
-    
-    <category term="Large Language Models" scheme="https://discover304.top/tags/Large-Language-Models/"/>
     
   </entry>
   
@@ -600,9 +600,9 @@
     
     <category term="Python" scheme="https://discover304.top/tags/Python/"/>
     
-    <category term="NumPy" scheme="https://discover304.top/tags/NumPy/"/>
-    
     <category term="Data Science" scheme="https://discover304.top/tags/Data-Science/"/>
+    
+    <category term="NumPy" scheme="https://discover304.top/tags/NumPy/"/>
     
     <category term="Linear Algebra" scheme="https://discover304.top/tags/Linear-Algebra/"/>
     

@@ -318,6 +318,8 @@
             
             <tag> AI与科研 </tag>
             
+            <tag> 科研自动化 </tag>
+            
             <tag> 知识边界 </tag>
             
             <tag> AGI </tag>
@@ -325,8 +327,6 @@
             <tag> 具身智能 </tag>
             
             <tag> 自组织系统 </tag>
-            
-            <tag> 科研自动化 </tag>
             
         </tags>
       
@@ -394,13 +394,13 @@
             
             <tag> AI </tag>
             
+            <tag> Large Language Models </tag>
+            
             <tag> Multi-Agent Systems </tag>
             
             <tag> Generative Agents </tag>
             
             <tag> Emergent Behavior </tag>
-            
-            <tag> Large Language Models </tag>
             
         </tags>
       
@@ -596,9 +596,9 @@
             
             <tag> Python </tag>
             
-            <tag> NumPy </tag>
-            
             <tag> Data Science </tag>
+            
+            <tag> NumPy </tag>
             
             <tag> Linear Algebra </tag>
             
@@ -788,11 +788,11 @@
             
             <tag> AI </tag>
             
-            <tag> Large Language Models </tag>
-            
             <tag> Music Generation </tag>
             
             <tag> Cross-modal Learning </tag>
+            
+            <tag> Large Language Models </tag>
             
             <tag> GitHub Evaluation </tag>
             
@@ -992,19 +992,19 @@
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 学习 </tag>
+            
+            <tag> 积累 </tag>
             
             <tag> 参考 </tag>
             
-            <tag> 学习 </tag>
+            <tag> Python </tag>
+            
+            <tag> 技术 </tag>
             
             <tag> 笔记 </tag>
             
             <tag> 人工智能 </tag>
-            
-            <tag> Python </tag>
-            
-            <tag> 积累 </tag>
             
             <tag> 网络 </tag>
             
@@ -1195,11 +1195,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -1228,11 +1228,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -1261,11 +1261,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -1294,11 +1294,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -1327,11 +1327,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -1360,11 +1360,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -1391,9 +1391,9 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 记录 </tag>
+            
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -1422,11 +1422,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -1455,11 +1455,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -1488,11 +1488,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -1519,11 +1519,11 @@
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 资料 </tag>
             
             <tag> 参考 </tag>
             
-            <tag> 资料 </tag>
+            <tag> 技术 </tag>
             
             <tag> 模板 </tag>
             
@@ -1633,11 +1633,11 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 学习 </tag>
             
             <tag> 扫盲 </tag>
+            
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -1666,11 +1666,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -1699,11 +1699,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -1732,11 +1732,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -1765,11 +1765,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -1798,11 +1798,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -1831,11 +1831,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -1864,11 +1864,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -1897,11 +1897,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -1930,11 +1930,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -1963,11 +1963,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -1996,11 +1996,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2029,11 +2029,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2062,11 +2062,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2095,11 +2095,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2128,11 +2128,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2161,11 +2161,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2194,11 +2194,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2227,11 +2227,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2260,11 +2260,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2293,11 +2293,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2326,11 +2326,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2359,11 +2359,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2392,11 +2392,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2425,11 +2425,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2458,11 +2458,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2491,11 +2491,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2524,11 +2524,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2557,11 +2557,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2590,11 +2590,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2623,11 +2623,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2656,11 +2656,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2716,11 +2716,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 积累 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 积累 </tag>
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -2813,13 +2813,13 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
-            <tag> 经历 </tag>
-            
             <tag> 积累 </tag>
             
             <tag> 整理 </tag>
+            
+            <tag> 技术 </tag>
+            
+            <tag> 经历 </tag>
             
         </tags>
       
@@ -2881,11 +2881,11 @@
             
             <tag> 学习 </tag>
             
+            <tag> 思考 </tag>
+            
             <tag> GNN </tag>
             
             <tag> 深度学习 </tag>
-            
-            <tag> 思考 </tag>
             
         </tags>
       
@@ -2912,11 +2912,11 @@
       
         <tags>
             
+            <tag> Python </tag>
+            
             <tag> 技术 </tag>
             
             <tag> 人工智能 </tag>
-            
-            <tag> Python </tag>
             
             <tag> Docker </tag>
             
@@ -2947,11 +2947,11 @@
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 学习 </tag>
             
             <tag> 参考 </tag>
             
-            <tag> 学习 </tag>
+            <tag> 技术 </tag>
             
             <tag> 人工智能 </tag>
             
@@ -2980,13 +2980,13 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 学习 </tag>
+            
+            <tag> 积累 </tag>
             
             <tag> Python </tag>
             
-            <tag> 积累 </tag>
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -3013,11 +3013,11 @@
       
         <tags>
             
+            <tag> Python </tag>
+            
             <tag> 技术 </tag>
             
             <tag> 人工智能 </tag>
-            
-            <tag> Python </tag>
             
             <tag> Docker </tag>
             
@@ -3048,11 +3048,11 @@
       
         <tags>
             
+            <tag> Python </tag>
+            
             <tag> 技术 </tag>
             
             <tag> 人工智能 </tag>
-            
-            <tag> Python </tag>
             
             <tag> Docker </tag>
             
@@ -3083,13 +3083,13 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 学习 </tag>
+            
+            <tag> 积累 </tag>
             
             <tag> Python </tag>
             
-            <tag> 积累 </tag>
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -3116,13 +3116,13 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 积累 </tag>
             
-            <tag> PowerShell </tag>
+            <tag> 技术 </tag>
             
             <tag> 经验 </tag>
+            
+            <tag> PowerShell </tag>
             
         </tags>
       
@@ -3151,9 +3151,9 @@
             
             <tag> 资料 </tag>
             
-            <tag> 记录 </tag>
-            
             <tag> 入门 </tag>
+            
+            <tag> 记录 </tag>
             
         </tags>
       
@@ -3180,13 +3180,13 @@
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 积累 </tag>
             
             <tag> Python </tag>
             
-            <tag> 积累 </tag>
-            
             <tag> 基础 </tag>
+            
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -3259,19 +3259,6 @@
     
     
     <entry>
-      <title>【整理】有趣的资料和网站</title>
-      <link href="/2022/02/21/000/"/>
-      <url>/2022/02/21/000/</url>
-      
-        <content type="html"><![CDATA[<h2 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h2><ul><li><a href="https://www.sphinx-doc.org/en/master/index.html">Sphinx</a>: Sphinx is a tool that makes it easy to create intelligent and beautiful documentation, written by Georg Brandl and licensed under the BSD license.</li><li><a href="https://taichi.graphics/">Taichi</a>: Build world-class open-source graphics infrastructure and cloud platforms, making graphics computing benefit everyone.</li><li><a href="https://taitopia.net/">Taitopia</a>: The world’s first cloud-native 3D DCC platform. Create and share inspiring artworks with anyone, from anywhere, at any time.</li><li><a href="https://dasher.acecentre.net/">Dasher v6</a>：An information-efficient text-entry interface driven by natural continuous pointing gestures, or alternative input methods such as headmouse, gaze and switch input.</li><li><a href="https://www.nsfc.gov.cn/">国家自然科学基金委员会</a>：简称自然科学基金委，英文名称为National Natural Science Foundation of China，缩写为NSFC。</li><li><a href="http://www.inference.org.uk/is/">Cavendish Laboratory, Cambridge. The Inference Group.</a></li><li>https://yuc.wiki/</li></ul><h2 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h2><ul><li><a href="https://zhuanlan.zhihu.com/p/29486013">超轻量级“虚拟机”—— Docker 初识</a></li></ul><h2 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h2><ul><li><a href="https://zfe.space/post/15655.html">基于 Butterfly 主题的分类磁铁</a></li></ul><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ul><li><a href="http://www.get-youtube-thumbnail.com/">Get YouTube Video Thumbnail Image</a>：获取youtube视频的封面缩略图。</li><li><a href="https://downsub.com/">DownSub</a>: str字幕下载工具。</li><li><a href="https://bilicover.magecorn.com/">Bilibili封面提取</a>：获取bilibili视频的封面缩略图。</li><li><a href="https://dblp.uni-trier.de/">Computer Science bibliography (dblp)</a></li><li><a href="https://www.myhuiban.com/">Conference Partner (会伴)</a></li><li><a href="https://letpub.com.cn/">LetPub 论文润色</a></li><li><a href="https://distill.pub/">Distill: Machine Learning Blogs</a></li></ul><p>https://www.overleaf.com/latex/templates/my-resume/rqzfybxqvpny</p><blockquote><p>E:\Program Files\Genshin Impact\Genshin Impact Game\config.ini</p><p>14&#x3D;bilibili<br>1&#x3D;official</p></blockquote><p>https://uoepsy.github.io/</p><p>https://www.rdocumentation.org/</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>【论文】论文写作结构分析</title>
       <link href="/2022/02/19/2022q1/143-paper-structure/"/>
       <url>/2022/02/19/2022q1/143-paper-structure/</url>
@@ -3292,9 +3279,9 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> Markdown </tag>
             
@@ -3323,11 +3310,11 @@
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 资料 </tag>
             
             <tag> 参考 </tag>
             
-            <tag> 资料 </tag>
+            <tag> 技术 </tag>
             
             <tag> 模板 </tag>
             
@@ -3356,9 +3343,9 @@
       
         <tags>
             
-            <tag> 纪念 </tag>
-            
             <tag> 记录 </tag>
+            
+            <tag> 纪念 </tag>
             
             <tag> 合作 </tag>
             
@@ -3387,9 +3374,9 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> 知识 </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 数学 </tag>
             
@@ -3441,11 +3428,11 @@
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 资料 </tag>
             
             <tag> 参考 </tag>
             
-            <tag> 资料 </tag>
+            <tag> 技术 </tag>
             
             <tag> Docker </tag>
             
@@ -3474,13 +3461,13 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 学习 </tag>
+            
+            <tag> 入门 </tag>
             
             <tag> 知识 </tag>
             
-            <tag> 入门 </tag>
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -3507,13 +3494,13 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 记录 </tag>
             
             <tag> 整理 </tag>
+            
+            <tag> 技术 </tag>
             
             <tag> ROS </tag>
             
@@ -3542,11 +3529,11 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
+            
+            <tag> 参考 </tag>
             
             <tag> 笔记 </tag>
             
@@ -3577,9 +3564,9 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 记录 </tag>
+            
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -3606,11 +3593,11 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
+            
+            <tag> 参考 </tag>
             
             <tag> 人工智能 </tag>
             
@@ -3641,11 +3628,11 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
+            
+            <tag> 参考 </tag>
             
             <tag> 人工智能 </tag>
             
@@ -3676,11 +3663,11 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
+            
+            <tag> 参考 </tag>
             
             <tag> 人工智能 </tag>
             
@@ -3711,13 +3698,13 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> 知识 </tag>
             
-            <tag> 机器人 </tag>
+            <tag> 笔记 </tag>
             
             <tag> ROS </tag>
+            
+            <tag> 机器人 </tag>
             
         </tags>
       
@@ -3744,13 +3731,13 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> 知识 </tag>
             
-            <tag> 机器人 </tag>
+            <tag> 笔记 </tag>
             
             <tag> ROS </tag>
+            
+            <tag> 机器人 </tag>
             
         </tags>
       
@@ -3777,9 +3764,9 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 记录 </tag>
+            
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -3806,15 +3793,15 @@
       
         <tags>
             
+            <tag> 知识 </tag>
+            
             <tag> 技术 </tag>
             
             <tag> 笔记 </tag>
             
-            <tag> 知识 </tag>
+            <tag> ROS </tag>
             
             <tag> 机器人 </tag>
-            
-            <tag> ROS </tag>
             
             <tag> Docker </tag>
             
@@ -3843,9 +3830,9 @@
       
         <tags>
             
-            <tag> 记录 </tag>
-            
             <tag> 积累 </tag>
+            
+            <tag> 记录 </tag>
             
             <tag> 经验 </tag>
             
@@ -3876,9 +3863,9 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> Markdown </tag>
             
@@ -3907,11 +3894,11 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
+            
+            <tag> 参考 </tag>
             
             <tag> 人工智能 </tag>
             
@@ -3942,9 +3929,9 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> Markdown </tag>
             
@@ -3973,11 +3960,11 @@
       
         <tags>
             
+            <tag> 知识 </tag>
+            
             <tag> 笔记 </tag>
             
             <tag> Linux </tag>
-            
-            <tag> 知识 </tag>
             
         </tags>
       
@@ -4004,9 +3991,9 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> 知识 </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> JavaScript </tag>
             
@@ -4035,13 +4022,13 @@
       
         <tags>
             
+            <tag> 整理 </tag>
+            
             <tag> 技术 </tag>
             
             <tag> 笔记 </tag>
             
             <tag> 人工智能 </tag>
-            
-            <tag> 整理 </tag>
             
         </tags>
       
@@ -4101,15 +4088,15 @@
       
         <tags>
             
+            <tag> 知识 </tag>
+            
             <tag> 技术 </tag>
             
             <tag> 笔记 </tag>
             
-            <tag> 知识 </tag>
+            <tag> ROS </tag>
             
             <tag> 机器人 </tag>
-            
-            <tag> ROS </tag>
             
         </tags>
       
@@ -4136,13 +4123,13 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> 知识 </tag>
             
-            <tag> 机器人 </tag>
+            <tag> 笔记 </tag>
             
             <tag> ROS </tag>
+            
+            <tag> 机器人 </tag>
             
         </tags>
       
@@ -4169,13 +4156,13 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> 知识 </tag>
             
-            <tag> 机器人 </tag>
+            <tag> 笔记 </tag>
             
             <tag> ROS </tag>
+            
+            <tag> 机器人 </tag>
             
         </tags>
       
@@ -4202,13 +4189,13 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> 知识 </tag>
             
-            <tag> 机器人 </tag>
+            <tag> 笔记 </tag>
             
             <tag> ROS </tag>
+            
+            <tag> 机器人 </tag>
             
         </tags>
       
@@ -4235,13 +4222,13 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> 知识 </tag>
             
-            <tag> 机器人 </tag>
+            <tag> 笔记 </tag>
             
             <tag> ROS </tag>
+            
+            <tag> 机器人 </tag>
             
         </tags>
       
@@ -4268,13 +4255,13 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> 知识 </tag>
             
-            <tag> 机器人 </tag>
+            <tag> 笔记 </tag>
             
             <tag> ROS </tag>
+            
+            <tag> 机器人 </tag>
             
         </tags>
       
@@ -4301,13 +4288,13 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> 知识 </tag>
             
-            <tag> 机器人 </tag>
+            <tag> 笔记 </tag>
             
             <tag> ROS </tag>
+            
+            <tag> 机器人 </tag>
             
         </tags>
       
@@ -4334,11 +4321,11 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
+            
+            <tag> 参考 </tag>
             
             <tag> 人工智能 </tag>
             
@@ -4369,11 +4356,11 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
+            
+            <tag> 参考 </tag>
             
             <tag> 人工智能 </tag>
             
@@ -4404,11 +4391,11 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
+            
+            <tag> 参考 </tag>
             
             <tag> 人工智能 </tag>
             
@@ -4439,13 +4426,13 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
             
             <tag> 积累 </tag>
+            
+            <tag> 参考 </tag>
             
             <tag> 数学 </tag>
             
@@ -4474,11 +4461,11 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
+            
+            <tag> 参考 </tag>
             
             <tag> 人工智能 </tag>
             
@@ -4511,11 +4498,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 深度学习 </tag>
             
@@ -4546,11 +4533,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 深度学习 </tag>
             
@@ -4581,11 +4568,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 深度学习 </tag>
             
@@ -4616,11 +4603,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 深度学习 </tag>
             
@@ -4651,11 +4638,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 深度学习 </tag>
             
@@ -4717,11 +4704,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 深度学习 </tag>
             
@@ -4750,11 +4737,11 @@
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 学习 </tag>
             
             <tag> 参考 </tag>
             
-            <tag> 学习 </tag>
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -4783,9 +4770,9 @@
             
             <tag> 积累 </tag>
             
-            <tag> 数学 </tag>
-            
             <tag> 知识点 </tag>
+            
+            <tag> 数学 </tag>
             
             <tag> 概念 </tag>
             
@@ -4814,11 +4801,11 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
+            
+            <tag> 参考 </tag>
             
             <tag> 人工智能 </tag>
             
@@ -4851,11 +4838,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 深度学习 </tag>
             
@@ -4884,11 +4871,11 @@
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 学习 </tag>
             
             <tag> 参考 </tag>
             
-            <tag> 学习 </tag>
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -4917,11 +4904,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 深度学习 </tag>
             
@@ -4952,11 +4939,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 深度学习 </tag>
             
@@ -4987,11 +4974,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 深度学习 </tag>
             
@@ -5020,11 +5007,11 @@
       
         <tags>
             
+            <tag> 记录 </tag>
+            
             <tag> 技术 </tag>
             
             <tag> 人工智能 </tag>
-            
-            <tag> 记录 </tag>
             
             <tag> 维度 </tag>
             
@@ -5055,11 +5042,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 深度学习 </tag>
             
@@ -5090,11 +5077,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 深度学习 </tag>
             
@@ -5125,11 +5112,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 深度学习 </tag>
             
@@ -5160,11 +5147,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 深度学习 </tag>
             
@@ -5195,11 +5182,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 深度学习 </tag>
             
@@ -5230,11 +5217,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 深度学习 </tag>
             
@@ -5265,11 +5252,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 深度学习 </tag>
             
@@ -5300,11 +5287,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 深度学习 </tag>
             
@@ -5335,11 +5322,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 深度学习 </tag>
             
@@ -5370,11 +5357,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 机器学习 </tag>
             
@@ -5405,11 +5392,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 机器学习 </tag>
             
@@ -5440,11 +5427,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 机器学习 </tag>
             
@@ -5475,11 +5462,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 机器学习 </tag>
             
@@ -5510,11 +5497,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 机器学习 </tag>
             
@@ -5545,11 +5532,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 机器学习 </tag>
             
@@ -5580,11 +5567,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 机器学习 </tag>
             
@@ -5615,11 +5602,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 机器学习 </tag>
             
@@ -5650,11 +5637,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 机器学习 </tag>
             
@@ -5685,11 +5672,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 机器学习 </tag>
             
@@ -5720,11 +5707,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 机器学习 </tag>
             
@@ -5755,11 +5742,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -5786,9 +5773,9 @@
       
         <tags>
             
-            <tag> 记录 </tag>
-            
             <tag> 积累 </tag>
+            
+            <tag> 记录 </tag>
             
             <tag> 经验 </tag>
             
@@ -5821,11 +5808,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -5854,11 +5841,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -5887,11 +5874,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -5918,15 +5905,15 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 参考 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> Web </tag>
             
@@ -5957,15 +5944,15 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 参考 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> Web </tag>
             
@@ -5996,15 +5983,15 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 参考 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> Web </tag>
             
@@ -6035,15 +6022,15 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 参考 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> Web </tag>
             
@@ -6074,15 +6061,15 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 参考 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> Web </tag>
             
@@ -6113,11 +6100,11 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
+            
+            <tag> 参考 </tag>
             
             <tag> 笔记 </tag>
             
@@ -6152,11 +6139,11 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
+            
+            <tag> 参考 </tag>
             
             <tag> 笔记 </tag>
             
@@ -6189,15 +6176,15 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 参考 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> Web </tag>
             
@@ -6228,15 +6215,15 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
+            <tag> 参考 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> Web </tag>
             
@@ -6267,11 +6254,11 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
+            
+            <tag> 参考 </tag>
             
             <tag> 笔记 </tag>
             
@@ -6304,11 +6291,11 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
+            
+            <tag> 参考 </tag>
             
             <tag> 笔记 </tag>
             
@@ -6341,17 +6328,17 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
             
+            <tag> 参考 </tag>
+            
             <tag> 笔记 </tag>
             
-            <tag> CSS </tag>
-            
             <tag> Web </tag>
+            
+            <tag> CSS </tag>
             
         </tags>
       
@@ -6378,17 +6365,17 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
             
+            <tag> 参考 </tag>
+            
             <tag> 笔记 </tag>
             
-            <tag> Web </tag>
-            
             <tag> HTML </tag>
+            
+            <tag> Web </tag>
             
         </tags>
       
@@ -6417,9 +6404,9 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> git </tag>
             
@@ -6448,13 +6435,13 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 学习 </tag>
+            
+            <tag> 积累 </tag>
             
             <tag> Python </tag>
             
-            <tag> 积累 </tag>
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -6483,11 +6470,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 网络 </tag>
             
@@ -6518,11 +6505,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 网络 </tag>
             
@@ -6553,11 +6540,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -6584,13 +6571,13 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 学习 </tag>
+            
+            <tag> 积累 </tag>
             
             <tag> Python </tag>
             
-            <tag> 积累 </tag>
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -6619,11 +6606,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 网络 </tag>
             
@@ -6654,11 +6641,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> MySQL </tag>
             
@@ -6689,11 +6676,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> MySQL </tag>
             
@@ -6722,11 +6709,11 @@
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 学习 </tag>
             
             <tag> 参考 </tag>
             
-            <tag> 学习 </tag>
+            <tag> 技术 </tag>
             
             <tag> 人工智能 </tag>
             
@@ -6755,11 +6742,11 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
+            
+            <tag> 参考 </tag>
             
             <tag> 人工智能 </tag>
             
@@ -6790,11 +6777,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> MySQL </tag>
             
@@ -6825,11 +6812,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -6856,11 +6843,11 @@
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 资料 </tag>
             
             <tag> 参考 </tag>
             
-            <tag> 资料 </tag>
+            <tag> 技术 </tag>
             
             <tag> Linux </tag>
             
@@ -6889,9 +6876,9 @@
       
         <tags>
             
-            <tag> 读书 </tag>
-            
             <tag> 积累 </tag>
+            
+            <tag> 读书 </tag>
             
             <tag> 管理学 </tag>
             
@@ -6945,11 +6932,11 @@
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 积累 </tag>
             
             <tag> Python </tag>
             
-            <tag> 积累 </tag>
+            <tag> 技术 </tag>
             
             <tag> 施工中~ </tag>
             
@@ -7001,11 +6988,11 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 对比 </tag>
             
             <tag> 调查 </tag>
+            
+            <tag> 技术 </tag>
             
             <tag> 思考 </tag>
             
@@ -7038,15 +7025,15 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 积累 </tag>
             
+            <tag> 参考 </tag>
+            
             <tag> 调查 </tag>
+            
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -7094,11 +7081,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -7125,13 +7112,13 @@
       
         <tags>
             
-            <tag> 资料 </tag>
-            
             <tag> 笔记整理 </tag>
             
-            <tag> 知识 </tag>
+            <tag> 资料 </tag>
             
             <tag> 积累 </tag>
+            
+            <tag> 知识 </tag>
             
             <tag> 基础 </tag>
             
@@ -7162,9 +7149,9 @@
       
         <tags>
             
-            <tag> 记录 </tag>
-            
             <tag> 积累 </tag>
+            
+            <tag> 记录 </tag>
             
             <tag> 经验 </tag>
             
@@ -7193,15 +7180,15 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
             
+            <tag> 参考 </tag>
+            
             <tag> 记录 </tag>
+            
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -7230,11 +7217,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -7261,9 +7248,9 @@
       
         <tags>
             
-            <tag> 记录 </tag>
-            
             <tag> 积累 </tag>
+            
+            <tag> 记录 </tag>
             
             <tag> 经验 </tag>
             
@@ -7330,9 +7317,9 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 积累 </tag>
+            
+            <tag> 技术 </tag>
             
             <tag> 思考 </tag>
             
@@ -7353,11 +7340,11 @@
       
         <tags>
             
-            <tag> 纪念 </tag>
+            <tag> 记录 </tag>
             
             <tag> 笔记 </tag>
             
-            <tag> 记录 </tag>
+            <tag> 纪念 </tag>
             
             <tag> 经验 </tag>
             
@@ -7388,11 +7375,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -7421,11 +7408,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -7444,13 +7431,13 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 积累 </tag>
+            
+            <tag> 参考 </tag>
+            
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -7522,15 +7509,15 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 资料 </tag>
             
             <tag> 学习 </tag>
             
-            <tag> Python </tag>
+            <tag> 参考 </tag>
             
             <tag> 调查 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -7559,11 +7546,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -7621,9 +7608,9 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 记录 </tag>
+            
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -7650,9 +7637,9 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
             <tag> 知识点 </tag>
             
@@ -7681,9 +7668,9 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> Python </tag>
+            
+            <tag> 技术 </tag>
             
             <tag> 新方法 </tag>
             
@@ -7718,11 +7705,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -7751,11 +7738,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -7784,11 +7771,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 笔记 </tag>
-            
             <tag> 记录 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 笔记 </tag>
             
         </tags>
       
@@ -7815,13 +7802,13 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 学习 </tag>
             
-            <tag> 经验 </tag>
+            <tag> 技术 </tag>
             
             <tag> 培训 </tag>
+            
+            <tag> 经验 </tag>
             
         </tags>
       
@@ -7848,17 +7835,17 @@
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 学习 </tag>
             
             <tag> 参考 </tag>
             
-            <tag> 学习 </tag>
-            
             <tag> 记录 </tag>
             
-            <tag> 模板 </tag>
-            
             <tag> Python </tag>
+            
+            <tag> 技术 </tag>
+            
+            <tag> 模板 </tag>
             
         </tags>
       
@@ -7885,11 +7872,11 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 学习 </tag>
             
             <tag> 记录 </tag>
+            
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -7947,9 +7934,9 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 参考 </tag>
+            
+            <tag> 技术 </tag>
             
             <tag> 纪念 </tag>
             
@@ -7978,13 +7965,13 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
-            <tag> 参考 </tag>
+            <tag> 算法 </tag>
             
             <tag> 资料 </tag>
             
-            <tag> 算法 </tag>
+            <tag> 参考 </tag>
+            
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -8071,11 +8058,11 @@
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 资料 </tag>
             
             <tag> 参考 </tag>
             
-            <tag> 资料 </tag>
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -8102,13 +8089,13 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
-            <tag> 参考 </tag>
+            <tag> 算法 </tag>
             
             <tag> 资料 </tag>
             
-            <tag> 算法 </tag>
+            <tag> 参考 </tag>
+            
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -8135,13 +8122,13 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
-            <tag> 参考 </tag>
+            <tag> 算法 </tag>
             
             <tag> 资料 </tag>
             
-            <tag> 算法 </tag>
+            <tag> 参考 </tag>
+            
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -8170,13 +8157,13 @@
             
             <tag> 学习 </tag>
             
-            <tag> 系统 </tag>
-            
             <tag> 积累 </tag>
             
-            <tag> 整理 </tag>
-            
             <tag> 软件工程 </tag>
+            
+            <tag> 系统 </tag>
+            
+            <tag> 整理 </tag>
             
         </tags>
       
@@ -8207,9 +8194,9 @@
             
             <tag> 知识 </tag>
             
-            <tag> 基础 </tag>
-            
             <tag> 整理 </tag>
+            
+            <tag> 基础 </tag>
             
         </tags>
       
@@ -8329,13 +8316,13 @@
       
         <tags>
             
-            <tag> 参考 </tag>
-            
             <tag> 学习 </tag>
             
-            <tag> Python </tag>
+            <tag> 参考 </tag>
             
             <tag> 整理 </tag>
+            
+            <tag> Python </tag>
             
             <tag> 仓库 </tag>
             
@@ -8368,9 +8355,9 @@
             
             <tag> 知识 </tag>
             
-            <tag> 基础 </tag>
-            
             <tag> 整理 </tag>
+            
+            <tag> 基础 </tag>
             
         </tags>
       
@@ -8401,9 +8388,9 @@
             
             <tag> 知识 </tag>
             
-            <tag> 基础 </tag>
-            
             <tag> 整理 </tag>
+            
+            <tag> 基础 </tag>
             
         </tags>
       
@@ -8434,9 +8421,9 @@
             
             <tag> 知识 </tag>
             
-            <tag> 基础 </tag>
-            
             <tag> 整理 </tag>
+            
+            <tag> 基础 </tag>
             
         </tags>
       
@@ -8465,13 +8452,13 @@
             
             <tag> 学习 </tag>
             
-            <tag> 系统 </tag>
-            
             <tag> 积累 </tag>
             
-            <tag> 整理 </tag>
-            
             <tag> 软件工程 </tag>
+            
+            <tag> 系统 </tag>
+            
+            <tag> 整理 </tag>
             
         </tags>
       
@@ -8500,9 +8487,9 @@
             
             <tag> 学习 </tag>
             
-            <tag> 系统 </tag>
-            
             <tag> 积累 </tag>
+            
+            <tag> 系统 </tag>
             
             <tag> 整理 </tag>
             
@@ -8535,13 +8522,13 @@
             
             <tag> 学习 </tag>
             
-            <tag> 系统 </tag>
-            
             <tag> 积累 </tag>
             
-            <tag> 整理 </tag>
-            
             <tag> 软件工程 </tag>
+            
+            <tag> 系统 </tag>
+            
+            <tag> 整理 </tag>
             
         </tags>
       
@@ -8570,13 +8557,13 @@
             
             <tag> 学习 </tag>
             
-            <tag> 系统 </tag>
-            
             <tag> 积累 </tag>
             
-            <tag> 整理 </tag>
-            
             <tag> 软件工程 </tag>
+            
+            <tag> 系统 </tag>
+            
+            <tag> 整理 </tag>
             
         </tags>
       
@@ -8605,13 +8592,13 @@
             
             <tag> 学习 </tag>
             
-            <tag> 系统 </tag>
-            
             <tag> 积累 </tag>
             
-            <tag> 整理 </tag>
-            
             <tag> 软件工程 </tag>
+            
+            <tag> 系统 </tag>
+            
+            <tag> 整理 </tag>
             
         </tags>
       
@@ -8651,9 +8638,9 @@
       
         <tags>
             
-            <tag> 知识 </tag>
-            
             <tag> 答案 </tag>
+            
+            <tag> 知识 </tag>
             
         </tags>
       
@@ -8682,9 +8669,9 @@
             
             <tag> 记录 </tag>
             
-            <tag> Python </tag>
-            
             <tag> 整理 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -8711,9 +8698,9 @@
       
         <tags>
             
-            <tag> 学习 </tag>
-            
             <tag> 笔记整理 </tag>
+            
+            <tag> 学习 </tag>
             
             <tag> 知识 </tag>
             
@@ -8775,11 +8762,11 @@
       
         <tags>
             
-            <tag> 数据科学 </tag>
-            
             <tag> 小创意 </tag>
             
             <tag> 游戏 </tag>
+            
+            <tag> 数据科学 </tag>
             
         </tags>
       
@@ -8808,11 +8795,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> 入门 </tag>
-            
             <tag> 积累 </tag>
             
             <tag> 扫盲 </tag>
+            
+            <tag> 入门 </tag>
             
         </tags>
       
@@ -8852,37 +8839,6 @@
     
     
     <entry>
-      <title>IADS Revision Note: Asymptotic Notations</title>
-      <link href="/2021/01/05/2021q1/017-0-IADS-revision-note/"/>
-      <url>/2021/01/05/2021q1/017-0-IADS-revision-note/</url>
-      
-        <content type="html"><![CDATA[<p><strong>our main character</strong>: o, ω, O, Ω and Θ</p><h2 id="DEFINITION"><a href="#DEFINITION" class="headerlink" title="DEFINITION"></a>DEFINITION</h2><dl><dt><strong>Asymptotic Notation</strong></dt><dd>Asymptotic notations are the mathematical notations used to describe the running time of an algorithm when the input tends towards a particular value or a limiting value.</dd></dl><h2 id="Why-we-use-asymptotic-notation-instead-of-detailed-run-time-function"><a href="#Why-we-use-asymptotic-notation-instead-of-detailed-run-time-function" class="headerlink" title="Why we use asymptotic notation instead of detailed run-time function?"></a>Why we use asymptotic notation instead of detailed run-time function?</h2><ol><li>:fire: TRIGGER:<ul><li>The function describe algorithm is too complicate to see how an algorithm performs.</li><li>We’re only interested in the broad headlines of how some function behaves。</li></ul></li><li>:star: MOTIVATION:<ul><li>We find it is possible to classify these ‘complicate’ functions via ‘simple’ ones.</li></ul></li><li>:boom: ATTAMPTS:<ul><li>Asymptotic Notation :heavy_check_mark:</li></ul></li><li>:sparkles: CONSEQUENCE:<ul><li>Reduce clutter and simplify calculation.</li><li>Way of making precise, quantitative statements about efficiency properties of algorithms themselves.</li></ul></li></ol><h2 id="How-to-use-asymptotic-notation"><a href="#How-to-use-asymptotic-notation" class="headerlink" title="How to use asymptotic notation?"></a>How to use asymptotic notation?</h2><p>There are 5 different asymptotic notation: o, ω, O, Ω and Θ. And they share some PROPERTIES.</p><ol><li>$x(g) &#x3D; {f : N → R≥0 | {<del>definition</del>} {<del>of</del>} x}$ , where x is one of these five.</li><li>So, <code>f is x(g)</code> technically means <code>f ∈ x(g)</code>.</li></ol><p>Then let’s see how to use each of them</p><div class="tabs" id=""><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#-1">o</button></li><li class="tab"><button type="button" data-href="#-2">ω</button></li><li class="tab"><button type="button" data-href="#-3">O</button></li><li class="tab"><button type="button" data-href="#-4">Ω</button></li><li class="tab"><button type="button" data-href="#-5">Θ</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="-1"><ul><li>Example case<ul><li>f &#x3D; o(g)</li></ul></li><li>How to say<ul><li>f is asymptotically smaller than &#x2F; grows slower than g</li><li>In the limit, f is vanishingly small relative to g</li></ul></li><li>Definition<ul><li>∀c &gt; 0. ∃N. ∀n ≥ N. f (n) &lt; cg(n)</li></ul></li><li>Property<ul><li>A robust statement about f and g. E.g. unaffected by scaling: f &#x3D; o(g) ⇔ 3f &#x3D; o(0.2g)</li></ul></li><li>Memory tips<ul><li>Little o</li><li>g 在增长级数上碾压 f</li></ul></li></ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-2"><ul><li>Example case<ul><li>f &#x3D; ω(g)</li></ul></li><li>How to say<ul><li>g is asymptotically larger than &#x2F; grows faster than f</li></ul></li><li>Definition<ul><li>∀C &gt; 0. ∃N. ∀n ≥ N. f (n) &gt; Cg(n)</li></ul></li><li>Property<ul><li>A robust statement about f , g. Same as Little o.</li><li>f &#x3D; o(g) ⇔ g &#x3D; ω(f )</li></ul></li><li>Memory tips<ul><li>Think ‘C &#x3D; 1&#x2F;c’</li><li>Compare: x &lt; y if and only if y &gt; x.</li><li>g 增长级数上永远小于 f</li></ul></li></ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-3"><ul><li>Example case<ul><li>f &#x3D; O(g)</li></ul></li><li>How to say<ul><li>f is O(g) ‘f grows no faster than g’</li><li>call g an asymptotic upper bound for f</li></ul></li><li>Definition</li><li>∃c &gt; 0. ∃N. ∀n ≥ N. f (n) ≤ cg(n)</li><li>Property</li><li>f &#x3D; o(g) implies f &#x3D; O(g)</li><li>Notice<ul><li>Different with Little o:<ul><li>For o we require that any multiple of g eventually overtakes f . </li><li>For O it’s enough that some multiple of g does.</li><li>∀c compare with ∃C</li></ul></li><li>If f &#x3D; O(n^2) is a tight upper bound,  f &#x3D; O(n^3) is true but not a - tight upper bound.</li></ul></li><li>Memory tips<ul><li>Big O</li><li>Loosely, can think of o as like &lt;, O as like ≤.</li><li>g 在增长级数上和 f 类似，但会存在 g 的增长率大于 f 的情况</li></ul></li></ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-4"><ul><li>Example case<ul><li>f &#x3D; Ω(g)</li></ul></li><li>How to say<ul><li>f is Ω(g) ‘f grows no slower than g’</li><li>g is an asymptotic lower bound for f</li></ul></li><li>Definition<ul><li>∃C &gt; 0. ∃N. ∀n ≥ N. f (n) ≥ Cg(n)</li></ul></li><li>Property<ul><li>f &#x3D; O(g) ⇔ g &#x3D; Ω(f )</li></ul></li><li>Memory tips<ul><li>Ω(g) ≤ Θ(g) ≤ O(g)</li><li>g 在增长级数上和 f 类似，但会存在 g 的增长率小于 f 的情况</li></ul></li></ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-5"><ul><li>Example case</li><li>f &#x3D; Θ(g)</li><li>How to say<ul><li>f and g have ‘essentially the same growth rate’</li><li>g is an asymptotically tight bound for f</li></ul></li><li>Definition</li><li>∃c1, c2 &gt; 0. ∃N. ∀n ≥ N. c1g(n) ≤ f (n) ≤ c2g(n)</li><li>Property<ul><li>f &#x3D; Θ(g) ⇔ g &#x3D; Θ(f )</li><li>f is Θ(g) ⇔ f is O(g) and f is Ω(g)</li></ul></li><li>Memory tips<br><img src="https://image.discover304.top/memorytip.png" alt="Memory tip"></li></ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div><h2 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h2><ul><li>for some runtime function T(n): <ul><li>T(n) &#x3D; O(g) says runtime is not essentially worse than g(n),</li><li>T(n) &#x3D; Ω(g) says runtime is not essentially better than g(n).</li></ul></li></ul><blockquote><p>If you have better memory tips, tell my in the comment. It will be great.</p></blockquote><!-- ## [question]1. :fire: TRIGGER: 2. :star: MOTIVATION: 3. :boom: ATTAMPTS: :x: :heavy_check_mark: 4. :sparkles: CONSEQUENCE: 5. :question: FOLLOW-UP QUESTION:  -->]]></content>
-      
-      
-      <categories>
-          
-          <category> University </category>
-          
-          <category> Introduction to Algorithms and Data Structures </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 笔记整理 </tag>
-            
-            <tag> 算法 </tag>
-            
-            <tag> 渐近分析 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>IADS Revision Note 1: Asymptotic Notations</title>
       <link href="/2021/01/05/2021q1/017-lecture-note-1-asymptotic-notations/"/>
       <url>/2021/01/05/2021q1/017-lecture-note-1-asymptotic-notations/</url>
@@ -8903,9 +8859,40 @@
             
             <tag> 笔记整理 </tag>
             
+            <tag> 渐近分析 </tag>
+            
             <tag> 算法 </tag>
             
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IADS Revision Note: Asymptotic Notations</title>
+      <link href="/2021/01/05/2021q1/017-0-IADS-revision-note/"/>
+      <url>/2021/01/05/2021q1/017-0-IADS-revision-note/</url>
+      
+        <content type="html"><![CDATA[<p><strong>our main character</strong>: o, ω, O, Ω and Θ</p><h2 id="DEFINITION"><a href="#DEFINITION" class="headerlink" title="DEFINITION"></a>DEFINITION</h2><dl><dt><strong>Asymptotic Notation</strong></dt><dd>Asymptotic notations are the mathematical notations used to describe the running time of an algorithm when the input tends towards a particular value or a limiting value.</dd></dl><h2 id="Why-we-use-asymptotic-notation-instead-of-detailed-run-time-function"><a href="#Why-we-use-asymptotic-notation-instead-of-detailed-run-time-function" class="headerlink" title="Why we use asymptotic notation instead of detailed run-time function?"></a>Why we use asymptotic notation instead of detailed run-time function?</h2><ol><li>:fire: TRIGGER:<ul><li>The function describe algorithm is too complicate to see how an algorithm performs.</li><li>We’re only interested in the broad headlines of how some function behaves。</li></ul></li><li>:star: MOTIVATION:<ul><li>We find it is possible to classify these ‘complicate’ functions via ‘simple’ ones.</li></ul></li><li>:boom: ATTAMPTS:<ul><li>Asymptotic Notation :heavy_check_mark:</li></ul></li><li>:sparkles: CONSEQUENCE:<ul><li>Reduce clutter and simplify calculation.</li><li>Way of making precise, quantitative statements about efficiency properties of algorithms themselves.</li></ul></li></ol><h2 id="How-to-use-asymptotic-notation"><a href="#How-to-use-asymptotic-notation" class="headerlink" title="How to use asymptotic notation?"></a>How to use asymptotic notation?</h2><p>There are 5 different asymptotic notation: o, ω, O, Ω and Θ. And they share some PROPERTIES.</p><ol><li>$x(g) &#x3D; {f : N → R≥0 | {<del>definition</del>} {<del>of</del>} x}$ , where x is one of these five.</li><li>So, <code>f is x(g)</code> technically means <code>f ∈ x(g)</code>.</li></ol><p>Then let’s see how to use each of them</p><div class="tabs" id=""><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#-1">o</button></li><li class="tab"><button type="button" data-href="#-2">ω</button></li><li class="tab"><button type="button" data-href="#-3">O</button></li><li class="tab"><button type="button" data-href="#-4">Ω</button></li><li class="tab"><button type="button" data-href="#-5">Θ</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="-1"><ul><li>Example case<ul><li>f &#x3D; o(g)</li></ul></li><li>How to say<ul><li>f is asymptotically smaller than &#x2F; grows slower than g</li><li>In the limit, f is vanishingly small relative to g</li></ul></li><li>Definition<ul><li>∀c &gt; 0. ∃N. ∀n ≥ N. f (n) &lt; cg(n)</li></ul></li><li>Property<ul><li>A robust statement about f and g. E.g. unaffected by scaling: f &#x3D; o(g) ⇔ 3f &#x3D; o(0.2g)</li></ul></li><li>Memory tips<ul><li>Little o</li><li>g 在增长级数上碾压 f</li></ul></li></ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-2"><ul><li>Example case<ul><li>f &#x3D; ω(g)</li></ul></li><li>How to say<ul><li>g is asymptotically larger than &#x2F; grows faster than f</li></ul></li><li>Definition<ul><li>∀C &gt; 0. ∃N. ∀n ≥ N. f (n) &gt; Cg(n)</li></ul></li><li>Property<ul><li>A robust statement about f , g. Same as Little o.</li><li>f &#x3D; o(g) ⇔ g &#x3D; ω(f )</li></ul></li><li>Memory tips<ul><li>Think ‘C &#x3D; 1&#x2F;c’</li><li>Compare: x &lt; y if and only if y &gt; x.</li><li>g 增长级数上永远小于 f</li></ul></li></ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-3"><ul><li>Example case<ul><li>f &#x3D; O(g)</li></ul></li><li>How to say<ul><li>f is O(g) ‘f grows no faster than g’</li><li>call g an asymptotic upper bound for f</li></ul></li><li>Definition</li><li>∃c &gt; 0. ∃N. ∀n ≥ N. f (n) ≤ cg(n)</li><li>Property</li><li>f &#x3D; o(g) implies f &#x3D; O(g)</li><li>Notice<ul><li>Different with Little o:<ul><li>For o we require that any multiple of g eventually overtakes f . </li><li>For O it’s enough that some multiple of g does.</li><li>∀c compare with ∃C</li></ul></li><li>If f &#x3D; O(n^2) is a tight upper bound,  f &#x3D; O(n^3) is true but not a - tight upper bound.</li></ul></li><li>Memory tips<ul><li>Big O</li><li>Loosely, can think of o as like &lt;, O as like ≤.</li><li>g 在增长级数上和 f 类似，但会存在 g 的增长率大于 f 的情况</li></ul></li></ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-4"><ul><li>Example case<ul><li>f &#x3D; Ω(g)</li></ul></li><li>How to say<ul><li>f is Ω(g) ‘f grows no slower than g’</li><li>g is an asymptotic lower bound for f</li></ul></li><li>Definition<ul><li>∃C &gt; 0. ∃N. ∀n ≥ N. f (n) ≥ Cg(n)</li></ul></li><li>Property<ul><li>f &#x3D; O(g) ⇔ g &#x3D; Ω(f )</li></ul></li><li>Memory tips<ul><li>Ω(g) ≤ Θ(g) ≤ O(g)</li><li>g 在增长级数上和 f 类似，但会存在 g 的增长率小于 f 的情况</li></ul></li></ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="-5"><ul><li>Example case</li><li>f &#x3D; Θ(g)</li><li>How to say<ul><li>f and g have ‘essentially the same growth rate’</li><li>g is an asymptotically tight bound for f</li></ul></li><li>Definition</li><li>∃c1, c2 &gt; 0. ∃N. ∀n ≥ N. c1g(n) ≤ f (n) ≤ c2g(n)</li><li>Property<ul><li>f &#x3D; Θ(g) ⇔ g &#x3D; Θ(f )</li><li>f is Θ(g) ⇔ f is O(g) and f is Ω(g)</li></ul></li><li>Memory tips<br><img src="https://image.discover304.top/memorytip.png" alt="Memory tip"></li></ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div><h2 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h2><ul><li>for some runtime function T(n): <ul><li>T(n) &#x3D; O(g) says runtime is not essentially worse than g(n),</li><li>T(n) &#x3D; Ω(g) says runtime is not essentially better than g(n).</li></ul></li></ul><blockquote><p>If you have better memory tips, tell my in the comment. It will be great.</p></blockquote><!-- ## [question]1. :fire: TRIGGER: 2. :star: MOTIVATION: 3. :boom: ATTAMPTS: :x: :heavy_check_mark: 4. :sparkles: CONSEQUENCE: 5. :question: FOLLOW-UP QUESTION:  -->]]></content>
+      
+      
+      <categories>
+          
+          <category> University </category>
+          
+          <category> Introduction to Algorithms and Data Structures </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 笔记整理 </tag>
+            
             <tag> 渐近分析 </tag>
+            
+            <tag> 算法 </tag>
             
         </tags>
       
@@ -8934,11 +8921,11 @@
             
             <tag> 参考 </tag>
             
-            <tag> Json </tag>
-            
             <tag> 项目 </tag>
             
             <tag> 文本 </tag>
+            
+            <tag> Json </tag>
             
         </tags>
       
@@ -8967,11 +8954,11 @@
             
             <tag> 学习 </tag>
             
-            <tag> Python </tag>
-            
             <tag> 积累 </tag>
             
             <tag> 数据科学 </tag>
+            
+            <tag> Python </tag>
             
             <tag> 图像 </tag>
             
@@ -9000,19 +8987,19 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 学习 </tag>
+            
+            <tag> 积累 </tag>
             
             <tag> Python </tag>
             
-            <tag> 积累 </tag>
+            <tag> 基础 </tag>
+            
+            <tag> 技术 </tag>
             
             <tag> 多进程 </tag>
             
             <tag> 并行 </tag>
-            
-            <tag> 基础 </tag>
             
         </tags>
       
@@ -9039,17 +9026,17 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 学习 </tag>
+            
+            <tag> Json </tag>
             
             <tag> 对比 </tag>
             
             <tag> Python </tag>
             
-            <tag> XML </tag>
+            <tag> 技术 </tag>
             
-            <tag> Json </tag>
+            <tag> XML </tag>
             
         </tags>
       
@@ -9076,13 +9063,13 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 学习 </tag>
+            
+            <tag> 积累 </tag>
             
             <tag> Python </tag>
             
-            <tag> 积累 </tag>
+            <tag> 技术 </tag>
             
         </tags>
       
@@ -9109,13 +9096,13 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 学习 </tag>
+            
+            <tag> 积累 </tag>
             
             <tag> Python </tag>
             
-            <tag> 积累 </tag>
+            <tag> 技术 </tag>
             
             <tag> XML </tag>
             
@@ -9144,11 +9131,11 @@
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 资料 </tag>
             
             <tag> 参考 </tag>
             
-            <tag> 资料 </tag>
+            <tag> 技术 </tag>
             
             <tag> 模板 </tag>
             
@@ -9177,11 +9164,11 @@
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 学习 </tag>
             
             <tag> 参考 </tag>
             
-            <tag> 学习 </tag>
+            <tag> 技术 </tag>
             
             <tag> 模板 </tag>
             
@@ -9212,17 +9199,17 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> 知识 </tag>
             
             <tag> 对比 </tag>
             
+            <tag> Python </tag>
+            
+            <tag> 技术 </tag>
+            
             <tag> 答疑 </tag>
             
             <tag> 误区 </tag>
-            
-            <tag> Python </tag>
             
         </tags>
       
@@ -9249,11 +9236,11 @@
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 资料 </tag>
             
             <tag> 参考 </tag>
             
-            <tag> 资料 </tag>
+            <tag> 技术 </tag>
             
             <tag> 模板 </tag>
             
@@ -9282,13 +9269,13 @@
       
         <tags>
             
-            <tag> 经历 </tag>
-            
             <tag> 记录 </tag>
             
-            <tag> Linux </tag>
-            
             <tag> 系统 </tag>
+            
+            <tag> 经历 </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -9315,17 +9302,17 @@
       
         <tags>
             
-            <tag> 技术 </tag>
+            <tag> 入门 </tag>
             
             <tag> Python </tag>
+            
+            <tag> 技术 </tag>
             
             <tag> 读书 </tag>
             
             <tag> 新方法 </tag>
             
             <tag> 数据分析 </tag>
-            
-            <tag> 入门 </tag>
             
         </tags>
       
@@ -9352,11 +9339,11 @@
       
         <tags>
             
+            <tag> 记录 </tag>
+            
             <tag> 技术 </tag>
             
             <tag> 经历 </tag>
-            
-            <tag> 记录 </tag>
             
             <tag> Java </tag>
             
@@ -9385,11 +9372,11 @@
       
         <tags>
             
+            <tag> 记录 </tag>
+            
             <tag> 技术 </tag>
             
             <tag> 经历 </tag>
-            
-            <tag> 记录 </tag>
             
             <tag> Java </tag>
             

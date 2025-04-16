@@ -153,7 +153,7 @@ const btf = {
 
     let start = null
     time = time || 500
-    window.requestAnimationFrame(function step (currentTime) {
+    window.requestAnimationFrame(function step(currentTime) {
       start = !start ? currentTime : start
       if (currentPos < pos) {
         const progress = currentTime - start
@@ -180,7 +180,7 @@ const btf = {
   },
 
   fadeOut: (ele, time) => {
-    ele.addEventListener('animationend', function f () {
+    ele.addEventListener('animationend', function f() {
       ele.style.cssText = "display: none; animation: '' "
       ele.removeEventListener('animationend', f)
     })
