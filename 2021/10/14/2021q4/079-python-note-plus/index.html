@@ -1,16 +1,16 @@
-<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>【Python】高级笔记第五部分：网络编程 | 白拾的笔记本</title><meta name="keywords" content="学习,记录,Python,笔记,网络"><meta name="author" content="✨白拾ShiroX✨,hobart.yang@qq.com"><meta name="copyright" content="✨白拾ShiroX✨"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="@ 作者：达内 Python 教学部，吕泽@ 编辑：博主，Discover304   :star2:网络基础知识 :star:什么是网络计算机网络功能主要包括实现资源共享，实现数据信息的快速传递。         :star:网络通信标准网络的普及需要标准。不同的国家和公司都建立自己的通信标准不利于网络互连，同时多种标准并行情况下不利于技术的发展融合。 而一个统一 的通信标准不仅可以实现万物互联，">
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>【Python】高级笔记第五部分：网络编程 | 白拾的笔记本</title><meta name="keywords" content="记录,学习,Python,笔记,网络"><meta name="author" content="✨白拾ShiroX✨,hobart.yang@qq.com"><meta name="copyright" content="✨白拾ShiroX✨"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="@ 作者：达内 Python 教学部，吕泽 @ 编辑：博主，Discover304   :star2:网络基础知识  :star:什么是网络 计算机网络功能主要包括实现资源共享，实现数据信息的快速传递。      :star:网络通信标准 网络的普及需要标准。不同的国家和公司都建立自己的通信标准不利于网络互连，同时多种标准并行情况下不利于技术的发展融合。 而一个统一 的通信标准不仅可以实现万物互联">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【Python】高级笔记第五部分：网络编程">
 <meta property="og:url" content="https://discover304.top/2021/10/14/2021q4/079-python-note-plus/index.html">
 <meta property="og:site_name" content="白拾的笔记本">
-<meta property="og:description" content="@ 作者：达内 Python 教学部，吕泽@ 编辑：博主，Discover304   :star2:网络基础知识 :star:什么是网络计算机网络功能主要包括实现资源共享，实现数据信息的快速传递。         :star:网络通信标准网络的普及需要标准。不同的国家和公司都建立自己的通信标准不利于网络互连，同时多种标准并行情况下不利于技术的发展融合。 而一个统一 的通信标准不仅可以实现万物互联，">
+<meta property="og:description" content="@ 作者：达内 Python 教学部，吕泽 @ 编辑：博主，Discover304   :star2:网络基础知识  :star:什么是网络 计算机网络功能主要包括实现资源共享，实现数据信息的快速传递。      :star:网络通信标准 网络的普及需要标准。不同的国家和公司都建立自己的通信标准不利于网络互连，同时多种标准并行情况下不利于技术的发展融合。 而一个统一 的通信标准不仅可以实现万物互联">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://image.discover304.top/python-logo-4k-i6-1152x864.jpg?imageView2/2/h/300">
 <meta property="article:published_time" content="2021-10-14T13:00:50.000Z">
-<meta property="article:modified_time" content="2022-01-11T10:39:20.000Z">
+<meta property="article:modified_time" content="2025-10-09T18:30:57.491Z">
 <meta property="article:author" content="✨白拾ShiroX✨">
-<meta property="article:tag" content="学习">
 <meta property="article:tag" content="记录">
+<meta property="article:tag" content="学习">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="网络">
@@ -114,7 +114,7 @@ const getScript = url => new Promise((resolve, reject) => {
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2022-01-11 18:39:20'
+  postUpdate: '2025-10-10 02:30:57'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -182,19 +182,24 @@ if (asideStatus !== undefined) {
 }const fontSizeVal = saveToLocal.get('global-font-size')
 if (fontSizeVal !== undefined) {
   document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
-}})()</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="白拾的笔记本" type="application/atom+xml">
-</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">287</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">203</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">29</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> Connection</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/friend/"><i class="fa-fw fas fa-address-book"></i><span> Friend</span></a></li><li><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://aierlab.tech"><i class="fa-fw fas fa-sitemap"></i><span> GroupSite</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-wrench"></i><span> Tools</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://wandb.ai/"><i class="fa-fw fas fa-newspaper"></i><span> WandB</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Article</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://image.discover304.top/python-logo-4k-i6-1152x864.jpg?imageView2/2/h/300)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">白拾的笔记本</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> Connection</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/friend/"><i class="fa-fw fas fa-address-book"></i><span> Friend</span></a></li><li><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://aierlab.tech"><i class="fa-fw fas fa-sitemap"></i><span> GroupSite</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-wrench"></i><span> Tools</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://wandb.ai/"><i class="fa-fw fas fa-newspaper"></i><span> WandB</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Article</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">【Python】高级笔记第五部分：网络编程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-10-14T13:00:50.000Z" title="Created 2021-10-14 21:00:50">2021-10-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-01-11T10:39:20.000Z" title="Updated 2022-01-11 18:39:20">2022-01-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/NoteBook/">NoteBook</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/NoteBook/PythonNote/">PythonNote</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word count:</span><span class="word-count">3.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading time:</span><span>9min</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>@ 作者：达内 Python 教学部，吕泽<br>@ 编辑：博主，Discover304</p>
+}})()</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="白拾的笔记本" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">298</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">203</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">30</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> Connection</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/friend/"><i class="fa-fw fas fa-address-book"></i><span> Friend</span></a></li><li><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://aierlab.tech"><i class="fa-fw fas fa-sitemap"></i><span> GroupSite</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-wrench"></i><span> Tools</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://wandb.ai/"><i class="fa-fw fas fa-newspaper"></i><span> WandB</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Article</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://image.discover304.top/python-logo-4k-i6-1152x864.jpg?imageView2/2/h/300)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">白拾的笔记本</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> Connection</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/friend/"><i class="fa-fw fas fa-address-book"></i><span> Friend</span></a></li><li><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://aierlab.tech"><i class="fa-fw fas fa-sitemap"></i><span> GroupSite</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-wrench"></i><span> Tools</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://wandb.ai/"><i class="fa-fw fas fa-newspaper"></i><span> WandB</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Article</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">【Python】高级笔记第五部分：网络编程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-10-14T13:00:50.000Z" title="Created 2021-10-14 21:00:50">2021-10-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-10-09T18:30:57.491Z" title="Updated 2025-10-10 02:30:57">2025-10-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/NoteBook/">NoteBook</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/NoteBook/PythonNote/">PythonNote</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word count:</span><span class="word-count">3.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading time:</span><span>9min</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>@ 作者：达内 Python 教学部，吕泽<br>
+@ 编辑：博主，Discover304</p>
 <hr>
 <hr>
-<h2 id="star2-网络基础知识"><a href="#star2-网络基础知识" class="headerlink" title=":star2:网络基础知识"></a>:star2:网络基础知识</h2><hr>
-<h3 id="star-什么是网络"><a href="#star-什么是网络" class="headerlink" title=":star:什么是网络"></a>:star:什么是网络</h3><p>计算机网络功能主要包括实现资源共享，实现数据信息的快速传递。</p>
+<h2 id="star2-网络基础知识">:star2:网络基础知识</h2>
+<hr>
+<h3 id="star-什么是网络">:star:什么是网络</h3>
+<p>计算机网络功能主要包括实现资源共享，实现数据信息的快速传递。</p>
   <!-- ![](https://image.discover304.top/networkPython/1.jpg) -->
-
-<p>  <img src="https://image.discover304.top/networkPython/2.png"></p>
+<p><img src="https://image.discover304.top/networkPython/2.png" alt=""></p>
 <hr>
-<h3 id="star-网络通信标准"><a href="#star-网络通信标准" class="headerlink" title=":star:网络通信标准"></a>:star:网络通信标准</h3><p>网络的普及需要标准。不同的国家和公司都建立自己的通信标准不利于网络互连，同时多种标准并行情况下不利于技术的发展融合。</p>
+<h3 id="star-网络通信标准">:star:网络通信标准</h3>
+<p>网络的普及需要标准。不同的国家和公司都建立自己的通信标准不利于网络互连，同时多种标准并行情况下不利于技术的发展融合。</p>
 <p>而一个统一 的通信标准不仅可以实现万物互联，也可以降低开发难度。</p>
-<p><img src="https://image.discover304.top/networkPython/4.jpg"></p>
+<p><img src="https://image.discover304.top/networkPython/4.jpg" alt=""></p>
 <p>于是<strong>OSI7层模型</strong>被提出，并且被行业接受。</p>
 <table>
 <thead>
@@ -204,7 +209,8 @@ if (fontSizeVal !== undefined) {
 <th>说明</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><strong>7</strong></td>
 <td>应用层</td>
 <td>各种应用程序</td>
@@ -239,11 +245,11 @@ if (fontSizeVal !== undefined) {
 <td>物理层</td>
 <td>在介质上传输比特；提供物理的规约</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <!-- ![](https://image.discover304.top/networkPython/5.jpg) -->
-
 <p>OSI7层 模型因其每层功能明确，各司其职，也就是说实际规定了每一层的任务，该完成什么事情，可以很好的的降低开发难度。</p>
-<p>之后随着技术的进步和互联网的发展，OSI7层的模型因为过于理想的结构（也就是说结构细节太复杂）、在实际工作中实践难度大等原因，在实际工作中慢慢被<strong>TP&#x2F;IP模型</strong>取代。</p>
+<p>之后随着技术的进步和互联网的发展，OSI7层的模型因为过于理想的结构（也就是说结构细节太复杂）、在实际工作中实践难度大等原因，在实际工作中慢慢被<strong>TP/IP模型</strong>取代。</p>
 <table width="652" border="0" cellpadding="0" cellspacing="0" style="width:489.00pt;border-collapse:collapse;table-layout:fixed;">
    <colgroup><col width="72" style="width:54.00pt;">
    <col width="85" style="mso-width-source:userset;mso-width-alt:2720;">
@@ -299,32 +305,38 @@ if (fontSizeVal !== undefined) {
     </tr>
    <!--[endif]-->
   </tbody></table>
-
 <!-- ![](https://image.discover304.top/networkPython/6.jpg) -->
-<p>上表中提到，TCP&#x2F;IP是一种网络协议。什么是网络协议呢？在网络数据传输中，都遵循的执行规则，网络协议实际上规定了每一层在完成自己的任务时应该遵循什么规范。</p>
+<p>上表中提到，TCP/IP是一种网络协议。什么是网络协议呢？在网络数据传输中，都遵循的执行规则，网络协议实际上规定了每一层在完成自己的任务时应该遵循什么规范。</p>
 <p>需要应用工程师做的工作有以下几个：编写应用工功能，明确对方地址，选择传输服务。</p>
-<p><img src="https://image.discover304.top/networkPython/7.jpg"></p>
+<p><img src="https://image.discover304.top/networkPython/7.jpg" alt=""></p>
 <hr>
-<h3 id="star-通信地址"><a href="#star-通信地址" class="headerlink" title=":star:通信地址"></a>:star:通信地址</h3><p>通信地址有两个部分：IP地址和端口号。</p>
+<h3 id="star-通信地址">:star:通信地址</h3>
+<p>通信地址有两个部分：IP地址和端口号。</p>
 <blockquote>
 <p><strong>IP地址</strong>：网络中表示一台计算机的地址编号，下又分IPV4和IPV6两种。IPV6采用的地址格式可以解决IPV4地址紧缺的问题。IPV6号称可以给地球上每一粒沙子一个ip地址。</p>
 <ul>
-<li>IPv4 特点<ul>
+<li>IPv4 特点
+<ul>
 <li>分为4个部分，每部分是一个整数，取值分为0-255</li>
 <li>IPv4 ： 192.168.1.5</li>
 </ul>
 </li>
-<li>IPv6 特点<ul>
+<li>IPv6 特点
+<ul>
 <li>分为8个部分，每部分4个16进制数，如果出现连续的数字 0 则可以用 <code>::</code> 省略中间的0</li>
 <li>IPv6 ：fe80::80a:76cf:ab11:2d73</li>
 </ul>
 </li>
-<li>IP地址相关命令<ul>
-<li>ifconfig : 查看Linux系统下计算机的IP地址<!-- ![](https://image.discover304.top/networkPython/7.png) --></li>
-<li>ping  [ip]：查看计算机的连通性 <!-- ![](https://image.discover304.top/networkPython/8.png) --></li>
+<li>IP地址相关命令
+<ul>
+<li>ifconfig : 查看Linux系统下计算机的IP地址<!-- ![](https://image.discover304.top/networkPython/7.png) -->
+</li>
+<li>ping  [ip]：查看计算机的连通性<!-- ![](https://image.discover304.top/networkPython/8.png) -->
+</li>
 </ul>
 </li>
-<li>公网IP和内网IP<ul>
+<li>公网IP和内网IP
+<ul>
 <li>公网IP指的是连接到互联网上的公共IP地址，大家都可以访问。（将来进公司，公司会申请公网IP作为网络项目的被访问地址）</li>
 <li>内网IP指的是一个局域网络范围内由网络设备分配的IP地址。</li>
 </ul>
@@ -332,9 +344,11 @@ if (fontSizeVal !== undefined) {
 </ul>
 </blockquote>
 <blockquote>
-<p><strong>端口号</strong>：网络地址的一部分，在一台计算机上，每个网络程序对应一个端口。<br>  <!-- ![](https://image.discover304.top/networkPython/3.png) --></p>
+<p><strong>端口号</strong>：网络地址的一部分，在一台计算机上，每个网络程序对应一个端口。</p>
+  <!-- ![](https://image.discover304.top/networkPython/3.png) -->
 <ul>
-<li>端口号特点<ul>
+<li>端口号特点
+<ul>
 <li>取值范围： 0 ~ 65535 的整数</li>
 <li>一台计算机上的网络应用所使用的端口不会重复</li>
 <li>通常 0 ~ 1023 的端口会被一些有名的程序或者系统服务占用，个人一般使用 &gt; 1024的端口</li>
@@ -343,73 +357,97 @@ if (fontSizeVal !== undefined) {
 </ul>
 </blockquote>
 <hr>
-<h3 id="star-服务端与客户端"><a href="#star-服务端与客户端" class="headerlink" title=":star:服务端与客户端"></a>:star:服务端与客户端</h3><ul>
-<li><p>服务端（Server）：服务端是为客户端服务的，服务的内容诸如向客户端提供资源，保存客户端数据，处理客户端请求等。</p>
+<h3 id="star-服务端与客户端">:star:服务端与客户端</h3>
+<ul>
+<li>
+<p>服务端（Server）：服务端是为客户端服务的，服务的内容诸如向客户端提供资源，保存客户端数据，处理客户端请求等。</p>
 </li>
-<li><p>客户端（Client） ：也称为用户端，是指与服务端相对应，为客户提供一定应用功能的程序，我们平时使用的手机或者电脑上的程序基本都是客户端程序。</p>
-<p><img src="https://image.discover304.top/networkPython/10.jpg"></p>
+<li>
+<p>客户端（Client） ：也称为用户端，是指与服务端相对应，为客户提供一定应用功能的程序，我们平时使用的手机或者电脑上的程序基本都是客户端程序。</p>
+<p><img src="https://image.discover304.top/networkPython/10.jpg" alt=""></p>
 </li>
 </ul>
 <hr>
-<h2 id="star2-UDP-传输方法"><a href="#star2-UDP-传输方法" class="headerlink" title=":star2:UDP 传输方法"></a>:star2:UDP 传输方法</h2><hr>
-<h3 id="star-套接字简介"><a href="#star-套接字简介" class="headerlink" title=":star:套接字简介"></a>:star:套接字简介</h3><ul>
-<li>**套接字(Socket)**： 实现网络编程进行数据传输的一种技术手段,网络上各种各样的网络服务大多都是基于 Socket 来完成通信的。(注：socket是插座的意思，可以形象得理解为电脑上的网络插口)<!-- ![](https://image.discover304.top/networkPython/9.jpg) --></li>
+<h2 id="star2-UDP-传输方法">:star2:UDP 传输方法</h2>
+<hr>
+<h3 id="star-套接字简介">:star:套接字简介</h3>
+<ul>
+<li><strong>套接字(Socket)</strong>： 实现网络编程进行数据传输的一种技术手段,网络上各种各样的网络服务大多都是基于 Socket 来完成通信的。(注：socket是插座的意思，可以形象得理解为电脑上的网络插口)<!-- ![](https://image.discover304.top/networkPython/9.jpg) -->
+</li>
 <li><strong>Python套接字编程模块</strong>：<code>import  socket</code></li>
 </ul>
 <hr>
-<h3 id="star-UDP套接字编程"><a href="#star-UDP套接字编程" class="headerlink" title=":star:UDP套接字编程"></a>:star:UDP套接字编程</h3><ul>
-<li><p><strong>创建套接字</strong>：<code>sock = socket.socket(family,type)</code></p>
+<h3 id="star-UDP套接字编程">:star:UDP套接字编程</h3>
+<ul>
+<li>
+<p><strong>创建套接字</strong>：<code>sock = socket.socket(family,type)</code></p>
 <ul>
 <li>family  网络地址类型 <strong>AF_INET</strong>表示ipv4，<strong>AF_INET6</strong>表示ipv6</li>
-<li>type  套接字类型 <strong>SOCK_DGRAM</strong> 表示udp套接字 （也叫<strong>数据报</strong>套接字） </li>
+<li>type  套接字类型 <strong>SOCK_DGRAM</strong> 表示udp套接字 （也叫<strong>数据报</strong>套接字）</li>
 <li>返回一个套接字对象</li>
 </ul>
 </li>
-<li><p><strong>绑定本机网络地址</strong>：<code>sock.bind(ip,port)</code></p>
+<li>
+<p><strong>绑定本机网络地址</strong>：<code>sock.bind(ip,port)</code></p>
 <ul>
-<li><p>本地地址 ：<code>localhost</code> , <code>127.0.0.1</code></p>
+<li>
+<p>本地地址 ：<code>localhost</code> , <code>127.0.0.1</code></p>
 </li>
-<li><p>网络地址 ： 例：<code>172.40.91.185</code> （通过ifconfig查看，在没有分配公网ip时，本地网络地址是动态的。可以采用<strong>DDNS动态解析</strong>技术。）</p>
+<li>
+<p>网络地址 ： 例：<code>172.40.91.185</code> （通过ifconfig查看，在没有分配公网ip时，本地网络地址是动态的。可以采用<strong>DDNS动态解析</strong>技术。）</p>
 </li>
-<li><p>自动获取地址： ipv4使用 <code>0.0.0.0</code>，ipv6使用 <code>::</code></p>
+<li>
+<p>自动获取地址： ipv4使用 <code>0.0.0.0</code>，ipv6使用 <code>::</code></p>
 </li>
-<li><p>port为 接口<br><img src="https://image.discover304.top/networkPython/address.png"></p>
+<li>
+<p>port为 接口<br>
+<img src="https://image.discover304.top/networkPython/address.png" alt=""></p>
 <p>注：箭头意为访问。</p>
 </li>
 </ul>
 </li>
-<li><p><strong>UDP 消息接收</strong>：<code>data,addr = sock.recvfrom(buffersize)</code></p>
+<li>
+<p><strong>UDP 消息接收</strong>：<code>data,addr = sock.recvfrom(buffersize)</code></p>
 <ul>
-<li>buffersize：每次（<a href="#UDP%E5%A5%97%E6%8E%A5%E5%AD%97%E7%89%B9%E7%82%B9">每包</a>）最多接收多少字节 </li>
+<li>buffersize：每次（<a href="#UDP%E5%A5%97%E6%8E%A5%E5%AD%97%E7%89%B9%E7%82%B9">每包</a>）最多接收多少字节</li>
 <li>data  接收到的内容</li>
 <li>addr  消息发送方地址</li>
 </ul>
 </li>
-<li><p><strong>UDP 消息发送</strong>：<code>n = sock.sendto(data,addr)</code></p>
+<li>
+<p><strong>UDP 消息发送</strong>：<code>n = sock.sendto(data,addr)</code></p>
 <ul>
 <li>data  发送的内容 bytes格式</li>
 <li>addr  目标地址</li>
 <li>返回值：发送的字节数</li>
 </ul>
 </li>
-<li><p><strong>关闭套接字</strong>：<code>sock.close()</code></p>
+<li>
+<p><strong>关闭套接字</strong>：<code>sock.close()</code></p>
 </li>
-<li><p><strong>服务端客户端流程</strong><br><img src="https://image.discover304.top/networkPython/11.png"></p>
+<li>
+<p><strong>服务端客户端流程</strong><br>
+<img src="https://image.discover304.top/networkPython/11.png" alt=""></p>
 </li>
 </ul>
 <hr>
-<h3 id="star-UDP套接字特点"><a href="#star-UDP套接字特点" class="headerlink" title=":star:UDP套接字特点"></a>:star:UDP套接字特点</h3><ul>
+<h3 id="star-UDP套接字特点">:star:UDP套接字特点</h3>
+<ul>
 <li>可能会出现数据丢失的情况，不保证可靠</li>
 <li>传输过程简单，实现容易</li>
 <li>数据以数据包形式表达传输</li>
 <li>数据传输效率较高</li>
 </ul>
 <hr>
-<h2 id="star2-TCP-传输方法"><a href="#star2-TCP-传输方法" class="headerlink" title=":star2:TCP 传输方法"></a>:star2:TCP 传输方法</h2><hr>
-<h3 id="star-TCP传输特点"><a href="#star-TCP传输特点" class="headerlink" title=":star:TCP传输特点"></a>:star:TCP传输特点</h3><ul>
-<li>面向连接的传输服务<ul>
+<h2 id="star2-TCP-传输方法">:star2:TCP 传输方法</h2>
+<hr>
+<h3 id="star-TCP传输特点">:star:TCP传输特点</h3>
+<ul>
+<li>面向连接的传输服务
+<ul>
 <li>传输特征 ：提供了可靠的数据传输，可靠性指数据传输过程中无丢失，无失序，无差错，无重复。</li>
-<li>可靠性保障机制（都是操作系统网络服务自动帮应用完成的）： <ul>
+<li>可靠性保障机制（都是操作系统网络服务自动帮应用完成的）：
+<ul>
 <li>在通信前需要建立数据连接</li>
 <li>确认应答机制</li>
 <li>通信结束要正常断开连接</li>
@@ -417,16 +455,18 @@ if (fontSizeVal !== undefined) {
 </li>
 </ul>
 </li>
-<li>三次握手（建立连接）<ul>
+<li>三次握手（建立连接）
+<ul>
 <li>客户端向服务器发送消息报文请求连接</li>
 <li>服务器收到请求后，回复报文确定可以连接</li>
 <li>客户端收到回复，发送最终报文连接建立</li>
 </ul>
 </li>
 </ul>
-<p><img src="https://image.discover304.top/networkPython/tcp_three.png"></p>
+<p><img src="https://image.discover304.top/networkPython/tcp_three.png" alt=""></p>
 <ul>
-<li>四次挥手（断开连接）<ul>
+<li>四次挥手（断开连接）
+<ul>
 <li>主动方发送报文请求断开连接</li>
 <li>被动方收到请求后，立即回复，表示准备断开</li>
 <li>被动方准备就绪，再次发送报文表示可以断开</li>
@@ -434,55 +474,55 @@ if (fontSizeVal !== undefined) {
 </ul>
 </li>
 </ul>
-<p><img src="https://image.discover304.top/networkPython/tcp_four.png"></p>
+<p><img src="https://image.discover304.top/networkPython/tcp_four.png" alt=""></p>
 <hr>
-<h3 id="star-TCP服务端"><a href="#star-TCP服务端" class="headerlink" title=":star:TCP服务端"></a>:star:TCP服务端</h3><!-- ![](https://image.discover304.top/networkPython/1_TCP_Server.png) -->
-
+<h3 id="star-TCP服务端">:star:TCP服务端</h3>
+<!-- ![](https://image.discover304.top/networkPython/1_TCP_Server.png) -->
 <ul>
 <li>创建套接字</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sock=socket.socket(family,<span class="built_in">type</span>)</span><br><span class="line">功能：创建套接字</span><br><span class="line">参数：family  网络地址类型 AF_INET表示ipv4</span><br><span class="line">     <span class="built_in">type</span>  套接字类型 SOCK_STREAM 表示tcp套接字 （也叫流式套接字） </span><br><span class="line">返回值： 套接字对象</span><br></pre></td></tr></table></figure>
-
 <ul>
-<li><p>绑定地址 （与udp套接字相同）</p>
+<li>
+<p>绑定地址 （与udp套接字相同）</p>
 </li>
-<li><p>设置监听</p>
+<li>
+<p>设置监听</p>
 </li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sock.listen(n)</span><br><span class="line">功能 ： 将套接字设置为监听套接字，确定监听队列大小</span><br><span class="line">参数 ： 监听队列大小</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://image.discover304.top/networkPython/11.jpg"></p>
+<p><img src="https://image.discover304.top/networkPython/11.jpg" alt=""></p>
 <ul>
 <li>处理客户端连接请求</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conn,addr = sockfd.accept()</span><br><span class="line">功能： 阻塞等待处理客户端请求</span><br><span class="line">返回值： conn  客户端连接套接字</span><br><span class="line">        addr  连接的客户端地址</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>消息收发</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">data = conn.recv(buffersize)</span><br><span class="line">功能 : 接受客户端消息</span><br><span class="line">参数 ：每次最多接收消息的大小</span><br><span class="line">返回值： 接收到的内容</span><br><span class="line"></span><br><span class="line">n = conn.send(data)</span><br><span class="line">功能 : 发送消息</span><br><span class="line">参数 ：要发送的内容  <span class="built_in">bytes</span>格式</span><br><span class="line">返回值： 发送的字节数</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>关闭套接字 (与udp套接字相同)</li>
 </ul>
 <hr>
-<h3 id="star-TCP客户端"><a href="#star-TCP客户端" class="headerlink" title=":star:TCP客户端"></a>:star:TCP客户端</h3><!-- ![](https://image.discover304.top/networkPython/1_TCP_Client.png) -->
-
+<h3 id="star-TCP客户端">:star:TCP客户端</h3>
+<!-- ![](https://image.discover304.top/networkPython/1_TCP_Client.png) -->
 <ul>
 <li>创建TCP套接字</li>
 <li>请求连接</li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sock.connect(server_addr)</span><br><span class="line">功能：连接服务器</span><br><span class="line">参数：元组  服务器地址</span><br></pre></td></tr></table></figure>
-
 <ul>
-<li><p>收发消息：防止两端都阻塞，服务器和客户端的 recv send 要配合</p>
+<li>
+<p>收发消息：防止两端都阻塞，服务器和客户端的 recv send 要配合</p>
 </li>
-<li><p>关闭套接字</p>
+<li>
+<p>关闭套接字</p>
 </li>
 </ul>
-<p><img src="https://image.discover304.top/networkPython/12.png"></p>
+<p><img src="https://image.discover304.top/networkPython/12.png" alt=""></p>
 <hr>
-<h3 id="star-TCP套接字细节"><a href="#star-TCP套接字细节" class="headerlink" title=":star:TCP套接字细节"></a>:star:TCP套接字细节</h3><ul>
+<h3 id="star-TCP套接字细节">:star:TCP套接字细节</h3>
+<ul>
 <li>tcp连接中当一端退出，另一端如果阻塞在recv，此时recv会立即返回一个空字串。</li>
 <li>tcp连接中如果一端已经不存在，仍然试图通过send向其发送数据则会产生BrokenPipeError</li>
 <li>一个服务端可以同时连接多个客户端，也能够重复被连接</li>
@@ -490,26 +530,30 @@ if (fontSizeVal !== undefined) {
 <blockquote>
 <p><strong>tcp粘包问题</strong></p>
 <ul>
-<li>产生原因<ul>
+<li>产生原因
+<ul>
 <li>为了解决数据再传输过程中可能产生的速度不协调问题，操作系统设置了缓冲区</li>
 <li>实际网络工作过程比较复杂，导致消息收发速度不一致</li>
 <li>tcp以字节流方式进行数据传输，在接收时不区分消息边界</li>
 </ul>
 </li>
-<li>带来的影响<ul>
+<li>带来的影响
+<ul>
 <li>如果每次发送内容是一个独立的含义，需要接收端独立解析此时粘包会有影响。</li>
 </ul>
 </li>
-<li>处理方法<ul>
+<li>处理方法
+<ul>
 <li>消息格式化处理，如人为的添加消息边界，用作消息之间的分割</li>
 <li>控制发送的速度</li>
 </ul>
 </li>
 </ul>
-<p><img src="https://image.discover304.top/networkPython/13.jpg"></p>
+<p><img src="https://image.discover304.top/networkPython/13.jpg" alt=""></p>
 </blockquote>
 <hr>
-<h3 id="star-TCP与UDP对比"><a href="#star-TCP与UDP对比" class="headerlink" title=":star:TCP与UDP对比"></a>:star:TCP与UDP对比</h3><table width="751" border="0" cellpadding="0" cellspacing="0" style="width:563.25pt;border-collapse:collapse;table-layout:fixed;">
+<h3 id="star-TCP与UDP对比">:star:TCP与UDP对比</h3>
+<table width="751" border="0" cellpadding="0" cellspacing="0" style="width:563.25pt;border-collapse:collapse;table-layout:fixed;">
    <colgroup><col width="117" class="xl65" style="mso-width-source:userset;mso-width-alt:3744;">
    <col width="277" class="xl65" style="mso-width-source:userset;mso-width-alt:8864;">
    <col width="357" class="xl65" style="mso-width-source:userset;mso-width-alt:11424;">
@@ -566,26 +610,28 @@ if (fontSizeVal !== undefined) {
     </tr>
    <!--[endif]-->
   </tbody></table>
-
 <hr>
-<h2 id="star2-数据传输过程"><a href="#star2-数据传输过程" class="headerlink" title=":star2:数据传输过程"></a>:star2:数据传输过程</h2><hr>
-<h3 id="star-传输流程"><a href="#star-传输流程" class="headerlink" title=":star:传输流程"></a>:star:传输流程</h3><ul>
+<h2 id="star2-数据传输过程">:star2:数据传输过程</h2>
+<hr>
+<h3 id="star-传输流程">:star:传输流程</h3>
+<ul>
 <li>发送端由应用程序发送消息，逐层添加首部信息，最终在物理层发送消息包。</li>
 <li>发送的消息经过多个节点（交换机，路由器）传输，最终到达目标主机。</li>
 <li>目标主机由物理层逐层解析首部消息包，最终到应用程序呈现消息。</li>
 </ul>
-<p><img src="https://image.discover304.top/networkPython/14.png"></p>
+<p><img src="https://image.discover304.top/networkPython/14.png" alt=""></p>
 <hr>
-<h3 id="star-TCP协议首部信息"><a href="#star-TCP协议首部信息" class="headerlink" title=":star:TCP协议首部信息"></a>:star:TCP协议首部信息</h3><p><img src="https://image.discover304.top/networkPython/tcp_head.png"></p>
+<h3 id="star-TCP协议首部信息">:star:TCP协议首部信息</h3>
+<p><img src="https://image.discover304.top/networkPython/tcp_head.png" alt=""></p>
 <ul>
 <li>源端口和目的端口 各占2个字节，分别写入源端口和目的端口。</li>
 <li>序号 占4字节。TCP是面向字节流的。在一个TCP连接中传送的字节流中的每一个字节都按顺序编号。例如，一报文段的序号是301，而接待的数据共有100字节。这就表明本报文段的数据的第一个字节的序号是301，最后一个字节的序号是400。</li>
 <li>确认号 占4字节，是期望收到对方下一个报文段的第一个数据字节的序号。例如，B正确收到了A发送过来的一个报文段，其序号字段值是501，而数据长度是200字节（序号501~700），这表明B正确收到了A发送的到序号700为止的数据。因此，B期望收到A的下一个数据序号是701，于是B在发送给A的确认报文段中把确认号置为701。</li>
-<li>确认ACK（ACKnowledgment） 仅当ACK &#x3D; 1时确认号字段才有效，当ACK &#x3D; 0时确认号无效。TCP规定，在连接建立后所有的传送的报文段都必须把ACK置为1。</li>
-<li>同步SYN（SYNchronization） 在连接建立时用来同步序号。当SYN&#x3D;1而ACK&#x3D;0时，表明这是一个连接请求报文段。对方若同意建立连接，则应在响应的报文段中使SYN&#x3D;1和ACK&#x3D;1，因此SYN置为1就表示这是一个连接请求或连接接受报文。</li>
-<li>终止FIN（FINis，意思是“完”“终”） 用来释放一个连接。当FIN&#x3D;1时，表明此报文段的发送发的数据已发送完毕，并要求释放运输连接。</li>
+<li>确认ACK（ACKnowledgment） 仅当ACK = 1时确认号字段才有效，当ACK = 0时确认号无效。TCP规定，在连接建立后所有的传送的报文段都必须把ACK置为1。</li>
+<li>同步SYN（SYNchronization） 在连接建立时用来同步序号。当SYN=1而ACK=0时，表明这是一个连接请求报文段。对方若同意建立连接，则应在响应的报文段中使SYN=1和ACK=1，因此SYN置为1就表示这是一个连接请求或连接接受报文。</li>
+<li>终止FIN（FINis，意思是“完”“终”） 用来释放一个连接。当FIN=1时，表明此报文段的发送发的数据已发送完毕，并要求释放运输连接。</li>
 </ul>
-</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><a class="post-meta__tags" href="/tags/%E8%AE%B0%E5%BD%95/">记录</a><a class="post-meta__tags" href="/tags/Python/">Python</a><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><a class="post-meta__tags" href="/tags/%E7%BD%91%E7%BB%9C/">网络</a></div><div class="post_share"><div class="social-share" data-image="https://image.discover304.top/python-logo-4k-i6-1152x864.jpg?imageView2/2/h/300" data-sites="facebook,twitter,wechat,weibo,qzone,qq,linkedin"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/10/15/2021q4/080-ddns-code-example/"><img class="prev-cover" src="https://image.discover304.top/keqignqwhite.jpg?imageView2/2/h/300" onerror="onerror=null;src='/img/404.png'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">【Python】实现DDNS 动态解析到阿里</div></div></a></div><div class="next-post pull-right"><a href="/2021/10/14/2021q4/078-python-note-plus/"><img class="next-cover" src="https://image.discover304.top/python-logo-4k-i6-1152x864.jpg?imageView2/2/h/300" onerror="onerror=null;src='/img/404.png'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">【Python】高级笔记第四部分：使用Python操作数据库</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2021/10/16/2021q4/083-python-socket-3and4/" title="【Python】socket TCP 编程中的三次握手和四次挥手的过程分析"><img class="cover" src="https://image.discover304.top/python_lense.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-01-11</div><div class="title">【Python】socket TCP 编程中的三次握手和四次挥手的过程分析</div></div></a></div><div><a href="/2021/10/15/2021q4/082-python-note-plus/" title="【Python】高级笔记第七部分：网络并发编程"><img class="cover" src="https://image.discover304.top/python-logo-4k-i6-1152x864.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-01-11</div><div class="title">【Python】高级笔记第七部分：网络并发编程</div></div></a></div><div><a href="/2021/09/01/2021q3/042-python-note/" title="【Python】第一部分：第一段代码"><img class="cover" src="https://image.discover304.top/python900-500.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-01-07</div><div class="title">【Python】第一部分：第一段代码</div></div></a></div><div><a href="/2021/09/03/2021q3/043-python-note/" title="【Python】从基础变量类型到各种容器（列表、字典、元组、集合、字符串）"><img class="cover" src="https://image.discover304.top/python900-500.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-01-06</div><div class="title">【Python】从基础变量类型到各种容器（列表、字典、元组、集合、字符串）</div></div></a></div><div><a href="/2021/09/08/2021q3/048-pyhton-note/" title="【Python】笔记第三部分：函数"><img class="cover" src="https://image.discover304.top/python900-500.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2022-01-07</div><div class="title">【Python】笔记第三部分：函数</div></div></a></div><div><a href="/2021/08/31/2021q3/041-python-note/" title="【Python】人工智能入门须知"><img class="cover" src="https://thumbs.dreamstime.com/z/ai-artificial-intelligence-programming-languages-type-message-sticky-note-computer-keyboard-ai-artificial-intelligence-187103540.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【Python】人工智能入门须知</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">✨白拾ShiroX✨</div><div class="author-info__description">Love Everything You Like.</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">287</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">203</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">29</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/98639326"><i class="fab fa-bilibili"></i><span>Bilibili Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/YangSierCode000" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://x.com/ShiroHiro2024" target="_blank" title="X"><i class="fab fa-x"></i></a><a class="social-icon" href="https://www.youtube.com/channel/UCuQQr55i3VCQuCPMTQnpzDA" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a><a class="social-icon" href="https://blog.csdn.net/Discover304" target="_blank" title="CSDN"><i class="fa-solid fa-c"></i></a><a class="social-icon" href="https://www.zhihu.com/people/discover-56-86-75" target="_blank" title="知乎"><i class="fa-brands fa-zhihu"></i></a><a class="social-icon" href="mailto:hobart.yang@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://jq.qq.com/?_wv=1027&amp;k=EaGddTQg" target="_blank" title="QQ"><i class="fa-brands fa-qq"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">✨动态更新：<p style="text-align:center">享受奇迹般的和平日常！</p>✨聊天QQ群：<p style="text-align:center"><a target="_blank" rel="noopener" href="https://jq.qq.com/?_wv=1027&k=EaGddTQg"><strong>兔叽の魔术工房</strong></a><br>942-848-525</p>✨我们的口号是：<p style="text-align:center; color:#39C5BB">人工降神，机械飞升！</p><a target="_blank" rel="noopener" href='https://space.bilibili.com/98639326'><img src='/img/mikulittletrans.png'></a></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#star2-%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-text">:star2:网络基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#star-%E4%BB%80%E4%B9%88%E6%98%AF%E7%BD%91%E7%BB%9C"><span class="toc-text">:star:什么是网络</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%E6%A0%87%E5%87%86"><span class="toc-text">:star:网络通信标准</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-%E9%80%9A%E4%BF%A1%E5%9C%B0%E5%9D%80"><span class="toc-text">:star:通信地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%B8%8E%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-text">:star:服务端与客户端</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#star2-UDP-%E4%BC%A0%E8%BE%93%E6%96%B9%E6%B3%95"><span class="toc-text">:star2:UDP 传输方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#star-%E5%A5%97%E6%8E%A5%E5%AD%97%E7%AE%80%E4%BB%8B"><span class="toc-text">:star:套接字简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-UDP%E5%A5%97%E6%8E%A5%E5%AD%97%E7%BC%96%E7%A8%8B"><span class="toc-text">:star:UDP套接字编程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-UDP%E5%A5%97%E6%8E%A5%E5%AD%97%E7%89%B9%E7%82%B9"><span class="toc-text">:star:UDP套接字特点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#star2-TCP-%E4%BC%A0%E8%BE%93%E6%96%B9%E6%B3%95"><span class="toc-text">:star2:TCP 传输方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#star-TCP%E4%BC%A0%E8%BE%93%E7%89%B9%E7%82%B9"><span class="toc-text">:star:TCP传输特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-TCP%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="toc-text">:star:TCP服务端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-TCP%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-text">:star:TCP客户端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-TCP%E5%A5%97%E6%8E%A5%E5%AD%97%E7%BB%86%E8%8A%82"><span class="toc-text">:star:TCP套接字细节</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-TCP%E4%B8%8EUDP%E5%AF%B9%E6%AF%94"><span class="toc-text">:star:TCP与UDP对比</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#star2-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E8%BF%87%E7%A8%8B"><span class="toc-text">:star2:数据传输过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#star-%E4%BC%A0%E8%BE%93%E6%B5%81%E7%A8%8B"><span class="toc-text">:star:传输流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-TCP%E5%8D%8F%E8%AE%AE%E9%A6%96%E9%83%A8%E4%BF%A1%E6%81%AF"><span class="toc-text">:star:TCP协议首部信息</span></a></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/04/13/2025q1/197-copilot-usage/" title="Copilot AI 使用注意事项"><img src="https://image.discover304.top/1744518202571.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="Copilot AI 使用注意事项"/></a><div class="content"><a class="title" href="/2025/04/13/2025q1/197-copilot-usage/" title="Copilot AI 使用注意事项">Copilot AI 使用注意事项</a><time datetime="2025-04-13T04:24:52.376Z" title="Updated 2025-04-13 12:24:52">2025-04-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/07/2025q1/20250208-%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%99%8D%E5%99%AA%E5%B1%95%E6%9C%9B%EF%BC%88%E4%B8%8A%EF%BC%89%EF%BC%9A%E4%BB%8EMIT%E8%9E%BA%E6%97%8B%E6%A1%A8%E9%9D%99%E9%9F%B3%E5%88%B0%E8%B6%85%E5%A3%B0%E6%B3%A2%E9%9A%90%E8%BA%AB/" title="无人机降噪展望（上）：从MIT螺旋桨静音到超声波隐身"><img src="https://image.discover304.top/1743656448831.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="无人机降噪展望（上）：从MIT螺旋桨静音到超声波隐身"/></a><div class="content"><a class="title" href="/2025/02/07/2025q1/20250208-%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%99%8D%E5%99%AA%E5%B1%95%E6%9C%9B%EF%BC%88%E4%B8%8A%EF%BC%89%EF%BC%9A%E4%BB%8EMIT%E8%9E%BA%E6%97%8B%E6%A1%A8%E9%9D%99%E9%9F%B3%E5%88%B0%E8%B6%85%E5%A3%B0%E6%B3%A2%E9%9A%90%E8%BA%AB/" title="无人机降噪展望（上）：从MIT螺旋桨静音到超声波隐身">无人机降噪展望（上）：从MIT螺旋桨静音到超声波隐身</a><time datetime="2025-04-03T05:10:18.126Z" title="Updated 2025-04-03 13:10:18">2025-04-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/19/2024q3/188-1-mbzuai-help-link/" title="MBZUAI Quick Access Links"><img src="https://image.discover304.top/1726926639202.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="MBZUAI Quick Access Links"/></a><div class="content"><a class="title" href="/2024/08/19/2024q3/188-1-mbzuai-help-link/" title="MBZUAI Quick Access Links">MBZUAI Quick Access Links</a><time datetime="2025-04-03T05:09:01.452Z" title="Updated 2025-04-03 13:09:01">2025-04-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/08/2025q1/20250208-%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%99%8D%E5%99%AA%E5%B1%95%E6%9C%9B%EF%BC%88%E4%B8%8B%EF%BC%89%EF%BC%9A%E4%B8%BB%E5%8A%A8%E9%99%8D%E5%99%AA%E3%80%81AI%E4%B8%8E%E7%90%83%E9%9D%A2%E9%9F%B3%E6%B3%A2%E5%8F%91%E7%94%9F%E5%99%A8/" title="无人机降噪展望（下）：主动降噪、AI与球面音波发生器"><img src="https://image.discover304.top/1743656574051.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="无人机降噪展望（下）：主动降噪、AI与球面音波发生器"/></a><div class="content"><a class="title" href="/2025/02/08/2025q1/20250208-%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%99%8D%E5%99%AA%E5%B1%95%E6%9C%9B%EF%BC%88%E4%B8%8B%EF%BC%89%EF%BC%9A%E4%B8%BB%E5%8A%A8%E9%99%8D%E5%99%AA%E3%80%81AI%E4%B8%8E%E7%90%83%E9%9D%A2%E9%9F%B3%E6%B3%A2%E5%8F%91%E7%94%9F%E5%99%A8/" title="无人机降噪展望（下）：主动降噪、AI与球面音波发生器">无人机降噪展望（下）：主动降噪、AI与球面音波发生器</a><time datetime="2025-04-03T05:04:13.249Z" title="Updated 2025-04-03 13:04:13">2025-04-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/28/2025q1/20250128-%E7%AB%A0%E9%B1%BC%E7%9A%84%E4%B9%9D%E4%B8%AA%E8%84%91%E5%AD%90%E3%80%81%E8%9A%82%E8%9A%81%E7%9A%84%E7%A4%BE%E4%BC%9A%E4%B8%8E%E7%8C%A9%E7%8C%A9%E7%9A%84%E5%90%88%E4%BD%9C%EF%BC%9A%E4%B8%80%E5%9C%BA%E5%85%B3%E4%BA%8E%E9%9B%86%E7%BE%A4%E6%99%BA%E8%83%BD%E7%9A%84%E8%B7%A8%E7%89%A9%E7%A7%8D%E5%AF%B9%E8%AF%9D/" title="章鱼的九个脑子、蚂蚁的社会与猩猩的合作：一场关于集群智能的跨物种对话"><img src="https://image.discover304.top/1743656414823.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="章鱼的九个脑子、蚂蚁的社会与猩猩的合作：一场关于集群智能的跨物种对话"/></a><div class="content"><a class="title" href="/2025/01/28/2025q1/20250128-%E7%AB%A0%E9%B1%BC%E7%9A%84%E4%B9%9D%E4%B8%AA%E8%84%91%E5%AD%90%E3%80%81%E8%9A%82%E8%9A%81%E7%9A%84%E7%A4%BE%E4%BC%9A%E4%B8%8E%E7%8C%A9%E7%8C%A9%E7%9A%84%E5%90%88%E4%BD%9C%EF%BC%9A%E4%B8%80%E5%9C%BA%E5%85%B3%E4%BA%8E%E9%9B%86%E7%BE%A4%E6%99%BA%E8%83%BD%E7%9A%84%E8%B7%A8%E7%89%A9%E7%A7%8D%E5%AF%B9%E8%AF%9D/" title="章鱼的九个脑子、蚂蚁的社会与猩猩的合作：一场关于集群智能的跨物种对话">章鱼的九个脑子、蚂蚁的社会与猩猩的合作：一场关于集群智能的跨物种对话</a><time datetime="2025-04-03T05:04:06.739Z" title="Updated 2025-04-03 13:04:06">2025-04-03</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://image.discover304.top/python-logo-4k-i6-1152x864.jpg?imageView2/2/h/300)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By ✨白拾ShiroX✨</div><div><a target="_blank" href="https://beian.miit.gov.cn/" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;"> 冀ICP备2021025381号-1</p></a></div><div><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=13060602001430" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/img/beian.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">冀公网安备 13060602001430号</p></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="Increase font size"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="Decrease font size"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%B0%E5%BD%95/">记录</a><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><a class="post-meta__tags" href="/tags/Python/">Python</a><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><a class="post-meta__tags" href="/tags/%E7%BD%91%E7%BB%9C/">网络</a></div><div class="post_share"><div class="social-share" data-image="https://image.discover304.top/python-logo-4k-i6-1152x864.jpg?imageView2/2/h/300" data-sites="facebook,twitter,wechat,weibo,qzone,qq,linkedin"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/10/15/2021q4/080-ddns-code-example/"><img class="prev-cover" src="https://image.discover304.top/keqignqwhite.jpg?imageView2/2/h/300" onerror="onerror=null;src='/img/404.png'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">【Python】实现DDNS 动态解析到阿里</div></div></a></div><div class="next-post pull-right"><a href="/2021/10/14/2021q4/078-python-note-plus/"><img class="next-cover" src="https://image.discover304.top/python-logo-4k-i6-1152x864.jpg?imageView2/2/h/300" onerror="onerror=null;src='/img/404.png'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">【Python】高级笔记第四部分：使用Python操作数据库</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2021/10/16/2021q4/083-python-socket-3and4/" title="【Python】socket TCP 编程中的三次握手和四次挥手的过程分析"><img class="cover" src="https://image.discover304.top/python_lense.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-10-10</div><div class="title">【Python】socket TCP 编程中的三次握手和四次挥手的过程分析</div></div></a></div><div><a href="/2021/10/15/2021q4/082-python-note-plus/" title="【Python】高级笔记第七部分：网络并发编程"><img class="cover" src="https://image.discover304.top/python-logo-4k-i6-1152x864.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-10-10</div><div class="title">【Python】高级笔记第七部分：网络并发编程</div></div></a></div><div><a href="/2021/08/31/2021q3/041-python-note/" title="【Python】人工智能入门须知"><img class="cover" src="https://thumbs.dreamstime.com/z/ai-artificial-intelligence-programming-languages-type-message-sticky-note-computer-keyboard-ai-artificial-intelligence-187103540.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【Python】人工智能入门须知</div></div></a></div><div><a href="/2021/09/01/2021q3/042-python-note/" title="【Python】第一部分：第一段代码"><img class="cover" src="https://image.discover304.top/python900-500.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-10-10</div><div class="title">【Python】第一部分：第一段代码</div></div></a></div><div><a href="/2021/09/03/2021q3/043-python-note/" title="【Python】从基础变量类型到各种容器（列表、字典、元组、集合、字符串）"><img class="cover" src="https://image.discover304.top/python900-500.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-10-10</div><div class="title">【Python】从基础变量类型到各种容器（列表、字典、元组、集合、字符串）</div></div></a></div><div><a href="/2021/09/08/2021q3/048-pyhton-note/" title="【Python】笔记第三部分：函数"><img class="cover" src="https://image.discover304.top/python900-500.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-10-10</div><div class="title">【Python】笔记第三部分：函数</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">✨白拾ShiroX✨</div><div class="author-info__description">Love Everything You Like.</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">298</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">203</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">30</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/98639326"><i class="fab fa-bilibili"></i><span>Bilibili Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/yhbcode000" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://x.com/ShiroHiro2024" target="_blank" title="X"><i class="fab fa-x"></i></a><a class="social-icon" href="https://www.youtube.com/channel/UCuQQr55i3VCQuCPMTQnpzDA" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a><a class="social-icon" href="https://blog.csdn.net/Discover304" target="_blank" title="CSDN"><i class="fa-solid fa-c"></i></a><a class="social-icon" href="https://www.zhihu.com/people/discover-56-86-75" target="_blank" title="知乎"><i class="fa-brands fa-zhihu"></i></a><a class="social-icon" href="mailto:hobart.yang@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://jq.qq.com/?_wv=1027&amp;k=EaGddTQg" target="_blank" title="QQ"><i class="fa-brands fa-qq"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">✨动态更新：<p style="text-align:center">享受奇迹般的和平日常！</p>✨聊天QQ群：<p style="text-align:center"><a target="_blank" rel="noopener" href="https://jq.qq.com/?_wv=1027&k=EaGddTQg"><strong>兔叽の魔术工房</strong></a><br>942-848-525</p>✨我们的口号是：<p style="text-align:center; color:#39C5BB">人工降神，机械飞升！</p><a target="_blank" rel="noopener" href='https://space.bilibili.com/98639326'><img src='/img/mikulittletrans.png'></a></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#star2-%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-text">:star2:网络基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#star-%E4%BB%80%E4%B9%88%E6%98%AF%E7%BD%91%E7%BB%9C"><span class="toc-text">:star:什么是网络</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%E6%A0%87%E5%87%86"><span class="toc-text">:star:网络通信标准</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-%E9%80%9A%E4%BF%A1%E5%9C%B0%E5%9D%80"><span class="toc-text">:star:通信地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%B8%8E%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-text">:star:服务端与客户端</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#star2-UDP-%E4%BC%A0%E8%BE%93%E6%96%B9%E6%B3%95"><span class="toc-text">:star2:UDP 传输方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#star-%E5%A5%97%E6%8E%A5%E5%AD%97%E7%AE%80%E4%BB%8B"><span class="toc-text">:star:套接字简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-UDP%E5%A5%97%E6%8E%A5%E5%AD%97%E7%BC%96%E7%A8%8B"><span class="toc-text">:star:UDP套接字编程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-UDP%E5%A5%97%E6%8E%A5%E5%AD%97%E7%89%B9%E7%82%B9"><span class="toc-text">:star:UDP套接字特点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#star2-TCP-%E4%BC%A0%E8%BE%93%E6%96%B9%E6%B3%95"><span class="toc-text">:star2:TCP 传输方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#star-TCP%E4%BC%A0%E8%BE%93%E7%89%B9%E7%82%B9"><span class="toc-text">:star:TCP传输特点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-TCP%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="toc-text">:star:TCP服务端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-TCP%E5%AE%A2%E6%88%B7%E7%AB%AF"><span class="toc-text">:star:TCP客户端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-TCP%E5%A5%97%E6%8E%A5%E5%AD%97%E7%BB%86%E8%8A%82"><span class="toc-text">:star:TCP套接字细节</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-TCP%E4%B8%8EUDP%E5%AF%B9%E6%AF%94"><span class="toc-text">:star:TCP与UDP对比</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#star2-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E8%BF%87%E7%A8%8B"><span class="toc-text">:star2:数据传输过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#star-%E4%BC%A0%E8%BE%93%E6%B5%81%E7%A8%8B"><span class="toc-text">:star:传输流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#star-TCP%E5%8D%8F%E8%AE%AE%E9%A6%96%E9%83%A8%E4%BF%A1%E6%81%AF"><span class="toc-text">:star:TCP协议首部信息</span></a></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/10/09/2025q4/209-robotics-review/" title="【机器人】操作与运动控制原理"><img src="https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images" onerror="this.onerror=null;this.src='/img/404.png'" alt="【机器人】操作与运动控制原理"/></a><div class="content"><a class="title" href="/2025/10/09/2025q4/209-robotics-review/" title="【机器人】操作与运动控制原理">【机器人】操作与运动控制原理</a><time datetime="2025-10-09T21:09:31.734Z" title="Updated 2025-10-10 05:09:31">2025-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/05/31/2025q2/208-cloud-studio/" title="208-Cloud-Studio"><img src="https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images" onerror="this.onerror=null;this.src='/img/404.png'" alt="208-Cloud-Studio"/></a><div class="content"><a class="title" href="/2025/05/31/2025q2/208-cloud-studio/" title="208-Cloud-Studio">208-Cloud-Studio</a><time datetime="2025-10-09T18:31:08.632Z" title="Updated 2025-10-10 02:31:08">2025-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/29/2025q2/207-illusion-in-attention/" title="207-Illusion-in-Attention"><img src="https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images" onerror="this.onerror=null;this.src='/img/404.png'" alt="207-Illusion-in-Attention"/></a><div class="content"><a class="title" href="/2025/04/29/2025q2/207-illusion-in-attention/" title="207-Illusion-in-Attention">207-Illusion-in-Attention</a><time datetime="2025-10-09T18:31:08.577Z" title="Updated 2025-10-10 02:31:08">2025-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/27/2025q2/206-leetcode-and-hackerrank/" title="206-Leetcode_and_hackerrank"><img src="https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images" onerror="this.onerror=null;this.src='/img/404.png'" alt="206-Leetcode_and_hackerrank"/></a><div class="content"><a class="title" href="/2025/04/27/2025q2/206-leetcode-and-hackerrank/" title="206-Leetcode_and_hackerrank">206-Leetcode_and_hackerrank</a><time datetime="2025-10-09T18:31:08.549Z" title="Updated 2025-10-10 02:31:08">2025-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/27/2025q2/205-clash/" title="205-Clash"><img src="https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images" onerror="this.onerror=null;this.src='/img/404.png'" alt="205-Clash"/></a><div class="content"><a class="title" href="/2025/04/27/2025q2/205-clash/" title="205-Clash">205-Clash</a><time datetime="2025-10-09T18:31:08.523Z" title="Updated 2025-10-10 02:31:08">2025-10-10</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://image.discover304.top/python-logo-4k-i6-1152x864.jpg?imageView2/2/h/300)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By ✨白拾ShiroX✨</div><div><a target="_blank" href="https://beian.miit.gov.cn/" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;"> 冀ICP备2021025381号-1</p></a></div><div><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=13060602001430" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/img/beian.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">冀公网安备 13060602001430号</p></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="Increase font size"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="Decrease font size"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
   if (typeof pangu === 'object') pangu.spacingElementById('content-inner')
   else {
     getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
@@ -614,7 +660,52 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/j
 
   }
 }
-window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    loader: {
+      source: {
+        '[tex]/amsCd': '[tex]/amscd'
+      }
+    },
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        addClass: [200,() => {
+          document.querySelectorAll('mjx-container:not([display=\'true\']').forEach( node => {
+            const target = node.parentNode
+            if (!target.classList.contains('has-jax')) {
+              target.classList.add('mathjax-overflow')
+            }
+          })
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>if (document.getElementsByClassName('mermaid').length) {
   if (window.mermaidJsLoad) mermaid.init()
   else {
     getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {

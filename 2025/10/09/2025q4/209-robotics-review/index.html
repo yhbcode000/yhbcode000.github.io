@@ -1,0 +1,2576 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>【机器人】操作与运动控制原理 | 白拾的笔记本</title><meta name="keywords" content="机器人"><meta name="author" content="✨白拾ShiroX✨,hobart.yang@qq.com"><meta name="copyright" content="✨白拾ShiroX✨"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="引言 2025年，机器人技术迎来前所未有的发展机遇。随着人工智能、传感器技术和计算能力的不断进步，现代机器人系统正从传统的程序化执行向真正的智能自主系统演进。本文将全面回顾当前机器人技术的核心领域进展，涵盖感知、规划、控制和学习等方面。 1. 生物学中的操控能力 1.1 动物的操控能力 在众多动物类群中，操控能力与智力之间存在显著相关性。拥有特殊附肢（如灵长类的手、大象的长鼻、章鱼的触腕、鸦科鸟类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【机器人】操作与运动控制原理">
+<meta property="og:url" content="https://discover304.top/2025/10/09/2025q4/209-robotics-review/index.html">
+<meta property="og:site_name" content="白拾的笔记本">
+<meta property="og:description" content="引言 2025年，机器人技术迎来前所未有的发展机遇。随着人工智能、传感器技术和计算能力的不断进步，现代机器人系统正从传统的程序化执行向真正的智能自主系统演进。本文将全面回顾当前机器人技术的核心领域进展，涵盖感知、规划、控制和学习等方面。 1. 生物学中的操控能力 1.1 动物的操控能力 在众多动物类群中，操控能力与智力之间存在显著相关性。拥有特殊附肢（如灵长类的手、大象的长鼻、章鱼的触腕、鸦科鸟类">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images">
+<meta property="article:published_time" content="2025-10-09T11:41:47.000Z">
+<meta property="article:modified_time" content="2025-10-09T21:09:31.734Z">
+<meta property="article:author" content="✨白拾ShiroX✨">
+<meta property="article:tag" content="机器人">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://api.btstu.cn/sjbz/api.php?lx=dongman&format=images"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://discover304.top/2025/10/09/2025q4/209-robotics-review/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="preconnect" href="//zz.bdstatic.com"/><meta name="google-site-verification" content="ilqpfk3vkgzDNNikz_V37-DOvRyi5wv4Hoi_eyBqvTg"/><meta name="msvalidate.01" content="49D9A50CCF9744E17274791468EDB517"/><meta name="baidu-site-verification" content="code-V24KosyVh1"/><meta name="360-site-verification" content="bd8859c3d74dfa3e8aeee9db30c94bd2"/><meta name="yandex-verification" content="f28ec9bbd50c56f5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script async="async" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({
+  google_ad_client: 'ca-pub-1849044985266192',
+  enable_page_level_ads: 'true'
+});</script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?8030f6052f2fed6a4704d96619f090d6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><link rel="stylesheet" href="/css/font.css" media="print" onload="this.media='all'"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: {"limitDay":365,"position":"bottom","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":200,"languages":{"author":"Author: ✨白拾ShiroX✨","link":"Link: ","source":"Source: 白拾的笔记本","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"Traditional Chinese Activated Manually","cht_to_chs":"Simplified Chinese Activated Manually","day_to_night":"Dark Mode Activated Manually","night_to_day":"Light Mode Activated Manually","bgLight":"#ffc910","bgDark":"#02c3f6","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: true
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}
+
+// https://stackoverflow.com/questions/16839698/jquery-getscript-alternative-in-native-javascript
+const getScript = url => new Promise((resolve, reject) => {
+  const script = document.createElement('script')
+  script.src = url
+  script.async = true
+  script.onerror = reject
+  script.onload = script.onreadystatechange = function() {
+    const loadState = this.readyState
+    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+    script.onload = script.onreadystatechange = null
+    resolve()
+  }
+  document.head.appendChild(script)
+})</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-10-10 05:09:31'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}const fontSizeVal = saveToLocal.get('global-font-size')
+if (fontSizeVal !== undefined) {
+  document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+}})()</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="白拾的笔记本" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">298</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">203</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">30</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> Connection</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/friend/"><i class="fa-fw fas fa-address-book"></i><span> Friend</span></a></li><li><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://aierlab.tech"><i class="fa-fw fas fa-sitemap"></i><span> GroupSite</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-wrench"></i><span> Tools</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://wandb.ai/"><i class="fa-fw fas fa-newspaper"></i><span> WandB</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Article</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">白拾的笔记本</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> Connection</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/friend/"><i class="fa-fw fas fa-address-book"></i><span> Friend</span></a></li><li><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://aierlab.tech"><i class="fa-fw fas fa-sitemap"></i><span> GroupSite</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-wrench"></i><span> Tools</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://wandb.ai/"><i class="fa-fw fas fa-newspaper"></i><span> WandB</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Article</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">【机器人】操作与运动控制原理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-10-09T11:41:47.000Z" title="Created 2025-10-09 19:41:47">2025-10-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-10-09T21:09:31.734Z" title="Updated 2025-10-10 05:09:31">2025-10-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/">机器人</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word count:</span><span class="word-count">11.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading time:</span><span>42min</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="引言">引言</h2>
+<p>2025年，机器人技术迎来前所未有的发展机遇。随着人工智能、传感器技术和计算能力的不断进步，现代机器人系统正从传统的程序化执行向真正的智能自主系统演进。本文将全面回顾当前机器人技术的核心领域进展，涵盖感知、规划、控制和学习等方面。</p>
+<h2 id="1-生物学中的操控能力">1. 生物学中的操控能力</h2>
+<h3 id="1-1-动物的操控能力">1.1 动物的操控能力</h3>
+<p>在众多动物类群中，操控能力与智力之间存在显著相关性。拥有特殊附肢（如灵长类的手、大象的长鼻、章鱼的触腕、鸦科鸟类的喙）的物种通常表现出更高级的认知能力。</p>
+<p>尽管这种关系并非普遍存在，但复杂操控能力的形成常与更高的智力共同进化，二者在问题解决、工具使用及环境适应中相互强化。</p>
+<p><img src="https://image.discover304.top/1760025631256.png" alt="从左到右依次为使用树枝的黑猩猩、用树干的大象、实验中使用工具的章鱼、以及制作工具的乌鸦。"></p>
+<h3 id="1-2-最聪明的动物">1.2 最聪明的动物</h3>
+<p>以下动物被认为具有高度智能：</p>
+<ul>
+<li>黑猩猩（Chimpanzees）</li>
+<li>海豚（Dolphin）</li>
+<li>章鱼（Octopi）</li>
+<li>大象（Elephant）</li>
+<li>红猩猩（Orangutans）</li>
+<li>乌鸦（Crows）</li>
+</ul>
+<p>值得注意的是，章鱼的神经元约有 60–70% 分布在外周神经节中，而非集中在大脑，这使得其神经系统结构与其他动物截然不同。</p>
+<h3 id="1-3-大脑结构与操控能力">1.3 大脑结构与操控能力</h3>
+<p><img src="https://image.discover304.top/1760025791630.png" alt="脑容量与体重关系图"></p>
+<p><em>图说明：纵轴为脑容量（log brain volume），横轴为体重对数（log body weight）。图中展示了不同动物在脑容量与体重之间的分布关系：从鸽子、鹦鹉、鸦科鸟类、古人类（Australopithecus）、猿类、人类到海豚。章鱼被标注了一个问号，表示其脑结构与其他动物截然不同，尽管拥有高智能，但不遵循相同的脑-体比例规律。</em></p>
+<p><img src="https://image.discover304.top/1760025963502.png" alt=""></p>
+<p>大脑皮层中负责身体不同部位的区域被夸张地拟人化后形成了“脑小人”模型：</p>
+<ul>
+<li><strong>感觉小人（Sensory Homunculus）</strong>：表示身体各部位在躯体感觉皮层中所占比例。</li>
+<li><strong>运动小人（Motor Homunculus）</strong>：表示身体各部位在运动皮层中所占比例。</li>
+</ul>
+<p>这些模型突出了手、嘴唇、舌头等部位在感知与操控中的重要性。</p>
+<h2 id="2-刚体运动学基础">2. 刚体运动学基础</h2>
+<h3 id="2-1-旋转矩阵与姿态表示">2.1 旋转矩阵与姿态表示</h3>
+<p><img src="https://image.discover304.top/1760026185139.png" alt=""></p>
+<p>旋转矩阵 $ R \in SO(3) $ 表示刚体的姿态方向，是一个 $ 3 \times 3 $ 的正交矩阵，满足：</p>
+<p>$$<br>
+R^\top R = I, \quad \det® = 1<br>
+$$</p>
+<p>在三维空间中，旋转矩阵有 <strong>3 个自由度</strong>，分别对应绕 x、y、z 轴的旋转。</p>
+<h3 id="2-2-位置与速度关系">2.2 位置与速度关系</h3>
+<p>$$<br>
+\dot{p} = v<br>
+$$</p>
+<p>位置向量 $ p \in \mathbb{R}^3 $ 的时间导数是线速度向量 $ v $，表示刚体在惯性坐标系中的平移速度。</p>
+<h3 id="2-3-旋转与角速度关系">2.3 旋转与角速度关系</h3>
+<p>旋转矩阵随时间的变化由角速度向量 $ \omega \in \mathbb{R}^3 $ 描述：</p>
+<p>$$<br>
+\dot{R} = R [\omega]_\times<br>
+$$</p>
+<p>其中 $ [\omega]_\times $ 是由角速度构成的反对称矩阵：</p>
+<p>$$<br>
+[\omega]_\times =<br>
+\begin{bmatrix}<br>
+0 &amp; -\omega_z &amp; \omega_y \\<br>
+\omega_z &amp; 0 &amp; -\omega_x \\<br>
+-\omega_y &amp; \omega_x &amp; 0<br>
+\end{bmatrix}<br>
+$$</p>
+<h3 id="2-4-刚体位姿与速度扭量">2.4 刚体位姿与速度扭量</h3>
+<p>刚体在空间中的位姿由下式定义：</p>
+<p>$$<br>
+g = (R, p) \in SE(3)<br>
+$$</p>
+<p>其中：</p>
+<ul>
+<li>$ R $：姿态（Orientation）</li>
+<li>$ p $：位置（Position）</li>
+</ul>
+<p>线速度 $ v $ 与角速度 $ \omega $ 可组合成扭量向量：</p>
+<p>$$<br>
+V =<br>
+\begin{bmatrix}<br>
+v \<br>
+\omega<br>
+\end{bmatrix}<br>
+\in \mathbb{R}^6<br>
+$$</p>
+<p>扭量 $ V $ 描述了刚体在空间中的线性与旋转运动状态。</p>
+<p><strong>直观理解</strong></p>
+<ul>
+<li><strong>惯性坐标系</strong>：固定的空间参考系。</li>
+<li><strong>刚体坐标系</strong>：随刚体移动的参考系。</li>
+<li>位姿 $ g = (R, p) $：刚体相对于惯性系的位置与姿态。</li>
+<li>扭量 $ V = [v; \omega] $：刚体此刻的速度状态。</li>
+</ul>
+<h2 id="3-泊松公式">3. 泊松公式</h2>
+<p>泊松公式（Poisson Equation）如下：</p>
+<p>$$<br>
+\dot{e}_i = \omega \times e_i<br>
+$$</p>
+<p>该公式表明，刚体坐标系中每一个固定轴向量 $ e_i $ 的时间导数等于角速度向量 $ \omega $ 与该轴向量的叉积。</p>
+<h3 id="3-1-反求公式">3.1 反求公式</h3>
+<p>通过泊松公式可以反推出角速度向量：</p>
+<p>$$<br>
+\omega = (\dot{e}_2 \cdot e_3) e_1 + (\dot{e}_3 \cdot e_1) e_2 + (\dot{e}_1 \cdot e_2) e_3<br>
+$$</p>
+<p><strong>解释：</strong></p>
+<ul>
+<li>$ \dot{e}_i $：坐标轴的变化速率</li>
+<li>$ \omega $：整体角速度</li>
+<li>“·” 表示点积，“×” 表示叉积</li>
+</ul>
+<p>这个公式是连接旋转矩阵时间导数与角速度的关键桥梁之一。</p>
+<h2 id="4-机械臂类型">4. 机械臂类型</h2>
+<p><img src="https://image.discover304.top/1760026315443.png" alt="机械臂类型对比"></p>
+<h3 id="4-1-串联机械臂（Serial-Manipulator）">4.1 串联机械臂（Serial Manipulator）</h3>
+<p>典型代表：UR机械臂、协作机器人等。</p>
+<ul>
+<li><strong>特点</strong>：关节逐级连接，末端自由度由各关节叠加获得。</li>
+<li><strong>优点</strong>：
+<ul>
+<li>工作空间大</li>
+<li>结构灵活，适合复杂路径规划</li>
+</ul>
+</li>
+<li><strong>缺点</strong>：
+<ul>
+<li>刚度较低</li>
+<li>误差累积</li>
+<li>动态响应较慢</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-2-并联机械臂（Parallel-Manipulator）">4.2 并联机械臂（Parallel Manipulator）</h3>
+<p>典型代表：Delta 机器人、高速分拣机器人。</p>
+<ul>
+<li><strong>特点</strong>：末端由多个支链共同驱动，结构闭环。</li>
+<li><strong>优点</strong>：
+<ul>
+<li>刚度高</li>
+<li>质量轻，加速度高，适合高速作业</li>
+</ul>
+</li>
+<li><strong>缺点</strong>：
+<ul>
+<li>工作空间较小</li>
+<li>运动学分析复杂</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-3-混合型机械臂（Hybrid-Manipulator）">4.3 混合型机械臂（Hybrid Manipulator）</h3>
+<p>典型代表：ABB 工业机器人、装配/搬运机器人。</p>
+<ul>
+<li><strong>特点</strong>：综合串联与并联结构优点。</li>
+<li><strong>优点</strong>：
+<ul>
+<li>刚度与灵活性平衡</li>
+<li>能在较大空间内保持高负载能力</li>
+<li>实现高速、大范围搬运</li>
+</ul>
+</li>
+<li><strong>缺点</strong>：
+<ul>
+<li>结构复杂，成本高</li>
+<li>控制系统设计难度大</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-4-类型对比总结">4.4 类型对比总结</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>工作空间</th>
+<th>刚度</th>
+<th>加速度</th>
+<th>应用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>串联型</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐</td>
+<td>⭐⭐</td>
+<td>协作机器人、灵巧操作</td>
+</tr>
+<tr>
+<td>并联型</td>
+<td>⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>高速分拣、精密装配</td>
+</tr>
+<tr>
+<td>混合型</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>工业搬运、喷涂、焊接</td>
+</tr>
+</tbody>
+</table>
+<p>📌 <strong>一句话总结</strong>：</p>
+<blockquote>
+<p>串联系统“灵活但软”，并联系统“刚且快”，混合系统“折中且强”。</p>
+</blockquote>
+<h2 id="5-人体手臂与机械臂的类比">5. 人体手臂与机械臂的类比</h2>
+<p><img src="https://image.discover304.top/1760026371930.png" alt=""></p>
+<h3 id="5-1-单自由度旋转关节模型">5.1 单自由度旋转关节模型</h3>
+<p>人体的肘关节可抽象为一个典型的单自由度旋转关节（revolute joint），手臂运动等价于两段连杆绕同一旋转轴运动的机械臂模型。</p>
+<ul>
+<li>展示手臂在屈伸运动中的姿态变化</li>
+<li>关节角度记为 $ q_1 $</li>
+</ul>
+<h3 id="5-2-模型对应关系">5.2 模型对应关系</h3>
+<table>
+<thead>
+<tr>
+<th>人体部位</th>
+<th>机械臂模型元素</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>肩到肘的上臂</td>
+<td>第一根连杆（Link 1）</td>
+<td>固定部分</td>
+</tr>
+<tr>
+<td>肘到手的前臂</td>
+<td>第二根连杆（Link 2）</td>
+<td>运动部分</td>
+</tr>
+<tr>
+<td>肘关节</td>
+<td>旋转关节</td>
+<td>角度变化 $ q_1 $</td>
+</tr>
+<tr>
+<td>肘关节旋转轴</td>
+<td>$ z_0 $</td>
+<td>关节旋转方向</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-3-运动学解释">5.3 运动学解释</h3>
+<p>旋转关节的基本运动公式为：</p>
+<p>$$<br>
+\mathbf{R}(q_1) =<br>
+\begin{bmatrix}<br>
+\cos q_1 &amp; -\sin q_1 &amp; 0 \<br>
+\sin q_1 &amp; \cos q_1 &amp; 0 \<br>
+0 &amp; 0 &amp; 1<br>
+\end{bmatrix}<br>
+$$</p>
+<ul>
+<li>当角度 $ q_1 $ 改变时，前臂位置随之旋转</li>
+<li>这是刚体旋转运动的典型形式</li>
+<li>是 DH 参数法的基础步骤之一</li>
+</ul>
+<p><img src="https://image.discover304.top/1760026427920.png" alt="人体手臂与机械臂类比"><br>
+<img src="https://image.discover304.top/1760026441913.png" alt="人体手臂与机械臂类比"><br>
+<img src="https://image.discover304.top/1760026472413.png" alt="人体手臂与机械臂类比"></p>
+<h2 id="6-关节坐标与工作空间">6. 关节坐标与工作空间</h2>
+<h3 id="6-1-关节空间（Joint-Space）">6.1 关节空间（Joint Space）</h3>
+<p>符号：<br>
+$$<br>
+q_i, \ \theta_i, \ d_i<br>
+$$</p>
+<p>这些变量描述机械臂各关节的配置状态：</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>含义</th>
+<th>对应类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$ q_i $</td>
+<td>关节变量</td>
+<td>通用符号</td>
+</tr>
+<tr>
+<td>$ \theta_i $</td>
+<td>旋转角度</td>
+<td>旋转关节（Revolute）</td>
+</tr>
+<tr>
+<td>$ d_i $</td>
+<td>线位移</td>
+<td>移动关节（Prismatic）</td>
+</tr>
+</tbody>
+</table>
+<p>由所有 $ q_i $ 组成的向量 $ \mathbf{q} = [q_1, q_2, …, q_n]^\top $ 定义了关节空间中的姿态。</p>
+<h3 id="6-2-工作空间（Workspace）">6.2 工作空间（Workspace）</h3>
+<p>符号：<br>
+$$<br>
+p_i(x, y, z), \quad R_i(p_i, p_j, p_k)<br>
+$$</p>
+<p>这些变量描述机械臂末端在三维空间中的位置与姿态：</p>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>含义</th>
+<th>对应</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$ p_i(x,y,z) $</td>
+<td>末端位置向量</td>
+<td>位移</td>
+</tr>
+<tr>
+<td>$ R_i $</td>
+<td>旋转矩阵</td>
+<td>姿态</td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-3-正运动学关系">6.3 正运动学关系</h3>
+<p>$$<br>
+f: \text{Joint Space} \rightarrow \text{Workspace}<br>
+$$</p>
+<p>即：<br>
+$$<br>
+(p_i, R_i) = f(q_1, q_2, \dots, q_n)<br>
+$$</p>
+<p>这就是<strong>正运动学（Forward Kinematics）</strong>——将关节变量转换为末端执行器的位置和姿态。</p>
+<h3 id="6-4-图示说明">6.4 图示说明</h3>
+<p>将人体上肢建模为多关节系统（肩、肘、腕），对应机械臂的多自由度结构。</p>
+<ul>
+<li>$ O_0 $：基坐标系</li>
+<li>$ a, b, c $：表示上臂、前臂、手部的连杆长度</li>
+</ul>
+<p>展示了一个五关节机械臂的关节坐标系标定过程，各关节角度 $ \theta_1, \theta_2, \dots, \theta_5 $ 对应人体手臂的旋转自由度。</p>
+<p><img src="https://image.discover304.top/1760026608614.png" alt="关节坐标与工作空间"></p>
+<h3 id="6-5-总结">6.5 总结</h3>
+<table>
+<thead>
+<tr>
+<th>空间类型</th>
+<th>坐标符号</th>
+<th>含义</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>关节空间</td>
+<td>$ q_i, \theta_i, d_i $</td>
+<td>机械臂关节的旋转/位移</td>
+<td>肩关节角度、肘关节角度</td>
+</tr>
+<tr>
+<td>工作空间</td>
+<td>$ p_i(x,y,z), R_i $</td>
+<td>末端执行器的位置与姿态</td>
+<td>手部在空间中的位置与方向</td>
+</tr>
+</tbody>
+</table>
+<p>📌 <strong>一句话总结</strong>：</p>
+<blockquote>
+<p>关节空间描述“如何动”（内部角度变化），<br>
+工作空间描述“动到哪”（外部位置姿态）。</p>
+</blockquote>
+<h2 id="7-力闭合（Force-Closure）">7. 力闭合（Force Closure）</h2>
+<p><img src="https://image.discover304.top/1760028721563.png" alt="1760028721563.png"></p>
+<h3 id="7-1-定义">7.1 定义</h3>
+<p>当机械手（如手指或夹爪）与物体的接触能产生<strong>任意方向的力和力矩（wrench）</strong>，使物体能够抵抗所有外部干扰并保持稳定时，我们称该抓取具有<strong>力闭合（Force Closure）</strong>。</p>
+<h3 id="7-2-特性说明-✳️">7.2 特性说明 ✳️</h3>
+<ul>
+<li>抓取可<strong>抵抗任意外力与外力矩（external forces and torques）</strong>；</li>
+<li>物体在受到任何方向的扰动时仍<strong>不会移动</strong>；</li>
+<li>是否具备力闭合取决于：
+<ul>
+<li><strong>接触点的位置（contact locations）</strong>；</li>
+<li><strong>接触点的摩擦特性（friction properties）</strong>。</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-3-直观理解-🧠">7.3 直观理解 🧠</h3>
+<p>力闭合意味着：</p>
+<blockquote>
+<p>“无论外界怎么推、拉、扭，物体都牢牢固定。”</p>
+</blockquote>
+<p>图中展示了一个三指机械手包裹抓取球体的情况，<br>
+各接触点通过摩擦与力矩共同形成稳定闭合，使物体完全受控。</p>
+<h3 id="7-4-摩擦锥（Friction-Cones）">7.4 摩擦锥（Friction Cones）</h3>
+<p>在每个接触点处，接触力的方向受<strong>摩擦模型</strong>限制，只能存在于摩擦锥内部。<br>
+若要实现<strong>力闭合抓取（force closure grasp）</strong>，<br>
+所有接触点的摩擦锥所覆盖的力方向组合，<br>
+必须能够<strong>完全张成六维力矩空间（6D wrench space）</strong>：<br>
+即既能产生任意方向的<strong>力（force）</strong>，又能产生任意方向的<strong>力矩（torque）</strong>。</p>
+<h3 id="7-5-力闭合-vs-形闭合（Force-vs-Form-Closure）">7.5 力闭合 vs. 形闭合（Force vs. Form Closure）</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>特征</th>
+<th>摩擦</th>
+<th>是否可移动</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>形闭合（Form closure）</strong></td>
+<td>仅靠几何约束锁定物体（被卡住）</td>
+<td>不需要摩擦</td>
+<td>不能移动</td>
+</tr>
+<tr>
+<td><strong>力闭合（Force closure）</strong></td>
+<td>通过摩擦 + 接触力共同作用</td>
+<td>需要摩擦</td>
+<td>不会移动</td>
+</tr>
+</tbody>
+</table>
+<p>📘 <strong>总结：</strong><br>
+<strong>形闭合</strong>靠“几何限制”，<strong>力闭合</strong>靠“摩擦+力平衡”。</p>
+<h3 id="7-6-最小接触数（Minimal-Contacts）">7.6 最小接触数（Minimal Contacts）</h3>
+<ul>
+<li><strong>二维 (2D)</strong>：只需 <strong>2 个带摩擦的接触点</strong> 即可实现力闭合。</li>
+<li><strong>三维 (3D)</strong>：至少需要
+<ul>
+<li><strong>4 个带摩擦的接触点</strong>，或</li>
+<li><strong>7 个无摩擦的接触点</strong>，<br>
+才能保证对物体施加任意 6 维方向的力与力矩。</li>
+</ul>
+</li>
+</ul>
+<h3 id="7-7-为什么是-4-而不是-3？为什么是-7-而不是-6？">7.7 为什么是 4 而不是 3？为什么是 7 而不是 6？</h3>
+<ul>
+<li>在三维空间中，物体具有 <strong>6 个自由度（3 平移 + 3 旋转）</strong>。</li>
+<li>要实现力闭合，接触力系统必须能在 <strong>6D wrench 空间</strong> 内产生任意方向的组合。</li>
+</ul>
+<p><strong>当接触点太少（如 3 个）时：</strong></p>
+<ul>
+<li>虽能固定位置，但无法对抗任意旋转扰动；</li>
+<li>力矩空间未被完全张成。</li>
+</ul>
+<p><strong>4 个带摩擦点：</strong></p>
+<ul>
+<li>每点摩擦锥提供 3 个独立方向分量（切向 + 法向），</li>
+<li>足以覆盖 6D wrench 空间。</li>
+</ul>
+<p><strong>无摩擦情形：</strong></p>
+<ul>
+<li>每接触仅能产生法向力（1 维），</li>
+<li>因此至少要 <strong>7 个接触点</strong> 才能张满 6 维空间。</li>
+</ul>
+<h3 id="7-8-总结-✅">7.8 总结 ✅</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>摩擦</th>
+<th>最少接触数</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2D</td>
+<td>有摩擦</td>
+<td>2</td>
+<td>能抵抗平面内所有力与转矩</td>
+</tr>
+<tr>
+<td>3D</td>
+<td>有摩擦</td>
+<td>4</td>
+<td>能覆盖 6D 力矩空间</td>
+</tr>
+<tr>
+<td>3D</td>
+<td>无摩擦</td>
+<td>7</td>
+<td>仅靠法向力也能张满 6D 空间</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-刚体动力学（Rigid-Body-Dynamics）">8. 刚体动力学（Rigid Body Dynamics）</h2>
+<p><img src="https://image.discover304.top/1760028989739.png" alt="1760028989739.png"></p>
+<h3 id="8-1-牛顿–欧拉方程（Newton–Euler-Equations）">8.1 牛顿–欧拉方程（Newton–Euler Equations）</h3>
+<p>用于描述刚体（如机械臂连杆）的<strong>平动与转动动力学</strong>，<br>
+由 <strong>牛顿定律（平动）</strong> 与 <strong>欧拉方程（转动）</strong> 组合而成。</p>
+<h4 id="⚙️-平动方程（Translation-–-Newton）">⚙️ 平动方程（Translation – Newton）</h4>
+<p>$$<br>
+m \ddot{\mathbf{r}}_G = \sum \mathbf{F}_{\text{ext}}<br>
+$$</p>
+<ul>
+<li>$ m $：刚体质量</li>
+<li>$ \ddot{\mathbf{r}}_G $：质心加速度</li>
+<li>$ \sum \mathbf{F}_{\text{ext}} $：外力总和</li>
+</ul>
+<p>👉 表示：<strong>外力 = 质量 × 加速度</strong></p>
+<hr>
+<h4 id="🔁-转动方程（Rotation-–-Euler）">🔁 转动方程（Rotation – Euler）</h4>
+<p>$$<br>
+I_G \dot{\omega} + \omega \times (I_G \omega) = \sum \tau_{G,\mathrm{ext}}<br>
+$$</p>
+<ul>
+<li>$ \mathbf{I}_G $：质心处惯性张量</li>
+<li>$ \boldsymbol{\omega} $：角速度</li>
+<li>$ \sum \boldsymbol{\tau}_{G,\text{ext}} $：外力矩总和</li>
+</ul>
+<p>👉 表示：<strong>角动量的变化率 = 外力矩</strong></p>
+<hr>
+<h3 id="8-2-图示符号说明">8.2 图示符号说明</h3>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$ G_i $</td>
+<td>连杆 $ i $ 的质心</td>
+</tr>
+<tr>
+<td>$ O_i $</td>
+<td>连杆坐标系原点</td>
+</tr>
+<tr>
+<td>$ f_{i,eq}, \ \tau_{i,eq} $</td>
+<td>从相邻连杆传递的等效力与力矩</td>
+</tr>
+<tr>
+<td>$ V_i, \ \omega_i $</td>
+<td>线速度与角速度</td>
+</tr>
+<tr>
+<td>$ I_G $</td>
+<td>惯性矩阵</td>
+</tr>
+<tr>
+<td>$ f_{i,c}, \ \tau_{i,c} $</td>
+<td>关节处反作用力与力矩</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="8-3-物理意义总结">8.3 物理意义总结</h3>
+<table>
+<thead>
+<tr>
+<th>作用</th>
+<th>方程</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>平动</td>
+<td>$ m \ddot{\mathbf{r}}_G = \sum \mathbf{F}_{\text{ext}} $</td>
+<td>合力决定质心加速度</td>
+</tr>
+<tr>
+<td>转动</td>
+<td>$ \mathbf{I}_G \dot{\boldsymbol{\omega}} + \boldsymbol{\omega} \times (\mathbf{I}_G \boldsymbol{\omega}) = \sum \boldsymbol{\tau}_{\text{ext}} $</td>
+<td>合力矩决定角加速度</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>📘 <strong>结论：</strong><br>
+牛顿–欧拉方程是机械臂动力学的核心，用于逐连杆计算<strong>力与力矩传播</strong>，<br>
+并推导机器人动力学方程。</p>
+<h2 id="9-非模型控制方法（Non-model-Based-Control）">9. 非模型控制方法（Non-model Based Control）</h2>
+<p><img src="https://image.discover304.top/1760029107501.png" alt="1760029107501.png"></p>
+<h3 id="9-1-概念">9.1 概念</h3>
+<p>非模型控制依赖<strong>数据与学习</strong>，而非精确的物理建模。<br>
+特别适用于 <strong>软体机器人</strong> 或 <strong>复杂非线性系统</strong>，这些系统难以建立解析模型但可通过数据观测。</p>
+<h3 id="9-2-案例：RNN-运动学混合控制器">9.2 案例：RNN + 运动学混合控制器</h3>
+<p><strong>论文来源：</strong> <em>IEEE RA-L, IROS 2024</em><br>
+<strong>研究团队：</strong> EPFL Dr. Josie Hughes（博士生 Zixi Chen）</p>
+<p>该方法结合 <strong>循环神经网络 (RNN/LSTM)</strong> 与 <strong>运动学控制</strong>，<br>
+实现对复杂系统的在线控制。</p>
+<p><strong>结构组成：</strong></p>
+<ol>
+<li><strong>输入：</strong> 期望轨迹 (desired trajectory)</li>
+<li><strong>核心模块：</strong>
+<ul>
+<li><strong>LSTM 模型：</strong> 学习动态与非线性行为</li>
+<li><strong>运动学模块：</strong> 保证几何约束与可达性</li>
+</ul>
+</li>
+<li><strong>输出：</strong> 加权融合后的控制信号（位置 + 驱动），直接作用于机器人系统。</li>
+</ol>
+<h3 id="9-3-特点与优势">9.3 特点与优势</h3>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>表现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>开环精度高</strong></td>
+<td>无需复杂建模即可精确轨迹跟踪</td>
+</tr>
+<tr>
+<td><strong>大工作空间</strong></td>
+<td>能实现柔顺大范围动作</td>
+</tr>
+<tr>
+<td><strong>高顺应性（Compliance）</strong></td>
+<td>自然适应外界干扰与接触</td>
+</tr>
+<tr>
+<td><strong>在线学习能力</strong></td>
+<td>LSTM 动态调整控制策略，提高鲁棒性</td>
+</tr>
+</tbody>
+</table>
+<p>📘 <strong>总结：</strong><br>
+非模型控制将<strong>学习算法与运动学</strong>结合，<br>
+使机器人在复杂环境中实现高精度与高柔顺度控制，<br>
+无需完整动力学方程。</p>
+<h2 id="10-模仿学习（Imitation-Learning-行为克隆）">10. 模仿学习（Imitation Learning / 行为克隆）</h2>
+<p><img src="https://image.discover304.top/1760029177785.png" alt="1760029177785.png"></p>
+<h3 id="10-1-核心概念">10.1 核心概念</h3>
+<p>模仿学习通过<strong>观察人类示范</strong>让机器人学会任务行为，<br>
+无需显式建模环境或定义奖励函数。</p>
+<p>机器人学习一个策略 ( \pi(a|s) )，<br>
+使其在相似状态 ( s ) 下执行与人类相同的动作 ( a )。</p>
+<h3 id="10-2-数据来源-📺">10.2 数据来源 📺</h3>
+<ul>
+<li><strong>YouTube / HowTo 视频：</strong> 从人类教学视频中提取动作序列；</li>
+<li><strong>Ego4D, R3M, MVP, Voltron（Meta, Stanford, Berkeley）：</strong><br>
+通过<strong>第一人称视角数据</strong>学习手部操作与视觉语义。</li>
+</ul>
+<h3 id="10-3-现实世界应用-🤖">10.3 现实世界应用 🤖</h3>
+<ul>
+<li><strong>ArmFarm, RT1, RT2</strong>（Google, DeepMind）：<br>
+大规模真实机械臂模仿数据集。</li>
+<li><strong>Open-X Embodiment / DROID：</strong><br>
+全球 20+ 机构合作，涵盖：
+<ul>
+<li>22 种机器人形态</li>
+<li>500+ 技能</li>
+<li>60+ 数据集</li>
+</ul>
+</li>
+</ul>
+<h3 id="10-4-仿真环境-🧩">10.4 仿真环境 🧩</h3>
+<ul>
+<li><strong>ManiSkill, Orbit, Isaac Sim</strong>（UCSD, NVIDIA）：<br>
+高保真仿真用于任务学习与评测。</li>
+<li><strong>RoboTurk, MimicGen</strong>（Stanford, NVIDIA）：<br>
+基于人类遥操作采集演示数据，<br>
+支持<strong>模仿学习 + 强化学习</strong>联合训练。</li>
+</ul>
+<h3 id="10-5-一句话总结-🧠">10.5 一句话总结 🧠</h3>
+<blockquote>
+<p>模仿学习让机器人“看人做事”后，学会“自己动手”。<br>
+数据可来自<strong>视频、真实操作或仿真演示</strong>，<br>
+是通向通用机器人智能的重要路径之一。</p>
+</blockquote>
+<p><strong>来源：</strong> Dr. Dieter Fox, NVIDIA</p>
+<h2 id="11-机器人微分运动学与雅可比矩阵（Differential-Kinematics-and-Jacobian）">11. 机器人微分运动学与雅可比矩阵（Differential Kinematics and Jacobian）</h2>
+<h3 id="11-1-微分运动学基本关系">11.1 微分运动学基本关系</h3>
+<p>在机器人学中，<strong>微分运动学（Differential Kinematics）<strong>描述了</strong>关节速度</strong>与<strong>末端执行器线速度/角速度</strong>之间的映射关系。</p>
+<p>数学表达为：</p>
+<p>$$<br>
+\mathbf{v} = \mathbf{J(q)} \cdot \dot{\mathbf{q}}<br>
+$$</p>
+<p>其中：</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\mathbf{q} \in \mathbb{R}^n$</td>
+<td>关节变量（Joint Angles / Displacements）</td>
+</tr>
+<tr>
+<td>$\dot{\mathbf{q}} \in \mathbb{R}^n$</td>
+<td>关节速度（Joint Velocities）</td>
+</tr>
+<tr>
+<td>$\mathbf{v} \in \mathbb{R}^6$</td>
+<td>末端速度（Twist: [Linear; Angular]）</td>
+</tr>
+<tr>
+<td>$\mathbf{J(q)} \in \mathbb{R}^{6 \times n}$</td>
+<td>雅可比矩阵（Jacobian Matrix）</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="11-2-雅可比矩阵的物理意义">11.2 雅可比矩阵的物理意义</h3>
+<p><img src="https://image.discover304.top/1760036574625.png" alt="1760036574625.png"></p>
+<p>雅可比矩阵的每一列，表示当单个关节以单位角速度运动时，末端线速度和角速度的贡献。</p>
+<blockquote>
+<p><strong>Jacobian 是“关节空间 → 工作空间”速度映射的核心桥梁。</strong></p>
+</blockquote>
+<ul>
+<li>上半部分（蓝框）表示<strong>线速度</strong>对关节速度的映射；</li>
+<li>下半部分（红框）表示<strong>角速度</strong>对关节速度的映射。</li>
+</ul>
+<hr>
+<h3 id="11-3-旋转部分的雅可比矩阵（Rotational-Part-of-Jacobian）">11.3 旋转部分的雅可比矩阵（Rotational Part of Jacobian）</h3>
+<p>旋转部分由各关节的角速度累积贡献组成：</p>
+<p>$$<br>
+{}^{0}\omega_{6/wrt,0} =<br>
+{}^{0}\mathbf{R}_1 \hat{\mathbf{z}}_1 \dot{q}_1 +<br>
+{}^{0}\mathbf{R}_2 \hat{\mathbf{z}}_2 \dot{q}_2 +<br>
+{}^{0}\mathbf{R}_3 \hat{\mathbf{z}}_3 \dot{q}_3 +<br>
+{}^{0}\mathbf{R}_4 \hat{\mathbf{z}}_4 \dot{q}_4 +<br>
+{}^{0}\mathbf{R}_5 \hat{\mathbf{z}}_5 \dot{q}_5 +<br>
+{}^{0}\mathbf{R}_6 \hat{\mathbf{z}}_6 \dot{q}_6<br>
+$$</p>
+<p>其中：</p>
+<ul>
+<li>$\hat{\mathbf{z}}_i$：第 $i$ 个关节的旋转轴方向</li>
+<li>${}^{0}\mathbf{R}_i$：从第 $i$ 坐标系到基坐标系的旋转矩阵</li>
+<li>$\dot{q}_i$：关节角速度</li>
+</ul>
+<hr>
+<h3 id="11-4-雅可比矩阵的结构分块">11.4 雅可比矩阵的结构分块</h3>
+<p>完整的雅可比矩阵可分为两部分：</p>
+<p>$$<br>
+\mathbf{J} =<br>
+\begin{bmatrix}<br>
+\mathbf{J}_v \\<br>
+\mathbf{J}_\omega<br>
+\end{bmatrix}<br>
+$$</p>
+<table>
+<thead>
+<tr>
+<th>部分</th>
+<th>含义</th>
+<th>对应方程</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\mathbf{J}_v$</td>
+<td>线速度部分</td>
+<td>$\dot{\mathbf{p}} = \mathbf{J}_v \dot{\mathbf{q}}$</td>
+</tr>
+<tr>
+<td>$\mathbf{J}_\omega$</td>
+<td>角速度部分</td>
+<td>$\boldsymbol{\omega} = \mathbf{J}_\omega \dot{\mathbf{q}}$</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="11-5-雅可比矩阵的应用">11.5 雅可比矩阵的应用</h3>
+<table>
+<thead>
+<tr>
+<th>应用场景</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>运动学控制</strong></td>
+<td>根据目标末端速度求解所需关节速度： $\dot{\mathbf{q}} = \mathbf{J}^{-1}\mathbf{v}$</td>
+</tr>
+<tr>
+<td><strong>力控制</strong></td>
+<td>雅可比矩阵可将力/力矩从末端映射到关节空间： $\boldsymbol{\tau} = \mathbf{J}^T \mathbf{F}$</td>
+</tr>
+<tr>
+<td><strong>奇异性分析</strong></td>
+<td>当 $\det(\mathbf{J}\mathbf{J}^T) = 0$ 时，系统失去某些方向的运动能力</td>
+</tr>
+<tr>
+<td><strong>冗余度控制</strong></td>
+<td>若 $n &gt; 6$，使用伪逆 $\mathbf{J}^+$ 实现最小范数或二级优化控制</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="11-6-直观理解-🧩">11.6 直观理解 🧩</h3>
+<ul>
+<li>雅可比矩阵像一个“齿轮系”：<br>
+每个关节转动一点，末端的线速度和角速度都被“放大或缩小”地传递。</li>
+<li>它连接了：
+<ul>
+<li><strong>运动学（位置）</strong></li>
+<li><strong>动力学（力）</strong></li>
+<li><strong>控制（反馈与规划）</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>📘 <strong>一句话总结：</strong></p>
+<blockquote>
+<p>雅可比矩阵是机器人控制的“核心导数”，<br>
+它连接了几何、运动与力学的三个世界。</p>
+</blockquote>
+<h2 id="12-雅可比逆与运动控制（Inverse-Jacobian-and-Motion-Control）">12. 雅可比逆与运动控制（Inverse Jacobian and Motion Control）</h2>
+<h3 id="12-1-从目标速度到关节速度的反向映射">12.1 从目标速度到关节速度的反向映射</h3>
+<p>在前一节中，我们看到雅可比矩阵用于描述<strong>关节速度 → 末端速度</strong>的正向映射：</p>
+<p>$$<br>
+\mathbf{v} = \mathbf{J(q)} , \dot{\mathbf{q}}<br>
+$$</p>
+<p>若已知末端执行器的速度 $\mathbf{v}$，我们希望反推出各关节应当以何种速度运动以实现该目标，则可使用<strong>雅可比逆（Inverse Jacobian）</strong>：</p>
+<p>$$<br>
+\dot{\mathbf{q}} = \mathbf{J}^{-1}(\mathbf{q}) , \mathbf{v}<br>
+$$</p>
+<blockquote>
+<p>即：通过逆雅可比矩阵，将末端速度映射回关节速度空间。</p>
+</blockquote>
+<hr>
+<h3 id="12-2-位置控制（Position-Control）">12.2 位置控制（Position Control）</h3>
+<p><img src="https://image.discover304.top/1760036985440.png" alt="Inverse Jacobian – from initial to target position"></p>
+<p>在执行<strong>从初始位置到目标位置的运动</strong>时，我们通常已知：</p>
+<ul>
+<li>方向（由起点和终点决定）与距离（路径长度）；</li>
+<li>期望执行时间（Desired execution time）；</li>
+<li>通过时间微分可得线速度 $\mathbf{v}$。</li>
+</ul>
+<p>因此，可以逐步迭代求解：</p>
+<p>$$<br>
+\dot{\mathbf{q}} = \mathbf{J}^{-1}(\mathbf{q}) , \mathbf{v}<br>
+$$</p>
+<p>通过积分 $\dot{\mathbf{q}}$，即可更新每个时刻的关节角度，实现末端沿目标方向平滑运动。</p>
+<hr>
+<h3 id="12-3-姿态控制（Orientation-Control）">12.3 姿态控制（Orientation Control）</h3>
+<p><img src="https://image.discover304.top/1760037008592.png" alt="Orientation Control – Inverse Jacobian"></p>
+<p>对于姿态控制，我们不仅关心位置变化，还要使末端的**方向矩阵（Orientation Matrix）**从初始朝向旋转到目标朝向。</p>
+<p>已知：</p>
+<ul>
+<li>初始旋转矩阵 $R_i$</li>
+<li>目标旋转矩阵 $R_f$</li>
+<li>期望执行时间 $t_f$</li>
+</ul>
+<p>则控制目标是求解旋转轴与角速度向量 $\boldsymbol{\omega}$，即：</p>
+<blockquote>
+<p>“以哪个方向旋转、以多快的速度旋转？”</p>
+</blockquote>
+<p>由雅可比逆关系：</p>
+<p>$$<br>
+\dot{\mathbf{q}} = \mathbf{J}^{-1}(\mathbf{q}) , \mathbf{v}<br>
+$$</p>
+<p>其中 $\mathbf{v}$ 的角速度分量由 $\boldsymbol{\omega}$ 提供。</p>
+<hr>
+<h3 id="12-4-从旋转矩阵计算旋转向量">12.4 从旋转矩阵计算旋转向量</h3>
+<p><img src="https://image.discover304.top/1760037023803.png" alt="Rotation Vector from Rotation Matrix"></p>
+<p>设旋转矩阵：</p>
+<p>$$<br>
+R =<br>
+\begin{bmatrix}<br>
+a &amp; b &amp; c \\<br>
+d &amp; e &amp; f \\<br>
+g &amp; h &amp; i<br>
+\end{bmatrix}<br>
+$$</p>
+<p>旋转向量 $\mathbf{u}$ 定义为：</p>
+<p>$$<br>
+\mathbf{u} =<br>
+\begin{bmatrix}<br>
+h - f \\<br>
+c - g \\<br>
+d - b<br>
+\end{bmatrix},<br>
+\quad |\mathbf{u}| = 2 \sin \theta<br>
+$$</p>
+<p>其中：</p>
+<ul>
+<li>$\mathbf{u}$ 的方向为旋转轴；</li>
+<li>$|\mathbf{u}|$ 的大小与旋转角度 $\theta$ 成正比。</li>
+</ul>
+<hr>
+<h3 id="12-5-雅可比伪逆（Jacobian-Pseudoinverse）">12.5 雅可比伪逆（Jacobian Pseudoinverse）</h3>
+<p>当机械臂<strong>冗余自由度 $n &gt; 6$</strong> 或存在奇异点时，$\mathbf{J}$ 不可逆。<br>
+此时可采用 <strong>广义逆（Moore–Penrose Pseudoinverse）</strong>：</p>
+<p>$$<br>
+\mathbf{J}^{+} = \mathbf{J}^T (\mathbf{J}\mathbf{J}^T)^{-1}<br>
+$$</p>
+<p>并使用：</p>
+<p>$$<br>
+\dot{\mathbf{q}} = \mathbf{J}^{+}(\mathbf{q}) , \mathbf{v}<br>
+$$</p>
+<p>该解满足最小范数条件，保证末端速度最优匹配。</p>
+<hr>
+<h2 id="13-雅可比矩阵的维度与形态分类（Jacobian-Dimension-and-Shape-Summary）">13. 雅可比矩阵的维度与形态分类（Jacobian Dimension and Shape Summary）</h2>
+<p>雅可比矩阵 $\mathbf{J(q)}$ 将关节速度 $\dot{\mathbf{q}}$ 与末端速度 $\mathbf{v}$ 联系起来：</p>
+<p>$$<br>
+\mathbf{v} = \mathbf{J(q)} , \dot{\mathbf{q}}<br>
+$$</p>
+<p>其矩阵维度为：</p>
+<p>$$<br>
+\mathbf{v} \in \mathbb{R}^{6 \times 1}, \quad<br>
+\mathbf{J(q)} \in \mathbb{R}^{6 \times n}, \quad<br>
+\dot{\mathbf{q}} \in \mathbb{R}^{n \times 1}<br>
+$$</p>
+<p>因此，系统的解空间取决于关节数 $n$ 与任务空间维度（6，自由移动与旋转）的关系：</p>
+<hr>
+<h3 id="13-1-三种情形（Three-Cases）">13.1 三种情形（Three Cases）</h3>
+<table>
+<thead>
+<tr>
+<th>情形</th>
+<th>说明</th>
+<th>解的数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$n &lt; 6$</td>
+<td>欠驱动（Under-actuated）系统，通常无精确解</td>
+<td>无解（No exact solution）</td>
+</tr>
+<tr>
+<td>$n = 6$</td>
+<td>完全驱动（Fully-actuated）系统，雅可比矩阵为方阵</td>
+<td>唯一解（One exact solution）</td>
+</tr>
+<tr>
+<td>$n &gt; 6$</td>
+<td>冗余驱动（Over-actuated）系统，末端可由多种关节组合实现</td>
+<td>无穷多解（Infinite solutions）</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="13-2-雅可比矩阵的形态分类（Jacobian-Shape-Summary）">13.2 雅可比矩阵的形态分类（Jacobian Shape Summary）</h3>
+<p><img src="https://image.discover304.top/1760037373982.png" alt="Illustration of Jacobian shape summary"></p>
+<p>不同的机械臂结构会导致雅可比矩阵 $\mathbf{J(q)}$ 的形态（shape）不同，<br>
+反映出系统的**可控性（actuation）<strong>与</strong>运动自由度（DoF）**特征。<br>
+根据关节数 $N$ 与任务空间维度（通常为 6，自由移动与旋转）之间的关系，<br>
+我们可以将雅可比矩阵分为三类：<strong>Square / Slim / Fat Jacobian</strong>。</p>
+<hr>
+<h4 id="①-方形雅可比矩阵（Square-Jacobian）">① 方形雅可比矩阵（Square Jacobian）</h4>
+<p><strong>条件：</strong><br>
+$$ N = 6 $$<br>
+$$ \mathbf{J(q)} \in \mathbb{R}^{6 \times 6} $$</p>
+<p><strong>特征：</strong></p>
+<ul>
+<li>完全驱动（Fully actuated）；</li>
+<li>对 $SE(3)$（三维刚体运动群）具有完整控制；</li>
+<li>雅可比矩阵可逆；</li>
+<li>典型代表：六轴工业机械臂（如 ABB、KUKA、UR）。</li>
+</ul>
+<p><strong>优点：</strong></p>
+<ul>
+<li>可以直接计算逆矩阵 $\mathbf{J}^{-1}$；</li>
+<li>运动学与动力学求解简洁。</li>
+</ul>
+<hr>
+<h4 id="②-瘦雅可比矩阵（Slim-Jacobian）">② 瘦雅可比矩阵（Slim Jacobian）</h4>
+<p><strong>条件：</strong><br>
+$$ N &lt; 6 $$<br>
+$$ \mathbf{J(q)} \in \mathbb{R}^{6 \times N}, \quad N &lt; 6 $$</p>
+<p><strong>特征：</strong></p>
+<ul>
+<li>欠驱动系统（Under-actuated）；</li>
+<li>对 $SE(3)$ 的访问受限；</li>
+<li>无法独立控制全部 6 个空间自由度；</li>
+<li>通常用于平面机械臂（如 SCARA 机械臂）。</li>
+</ul>
+<p><strong>结果：</strong></p>
+<ul>
+<li>系统丢失部分姿态或方向控制；</li>
+<li>某些任务空间方向上无法施加速度或力。</li>
+</ul>
+<hr>
+<h4 id="③-胖雅可比矩阵（Fat-Jacobian）">③ 胖雅可比矩阵（Fat Jacobian）</h4>
+<p><strong>条件：</strong><br>
+$$ N &gt; 6 $$<br>
+$$ \mathbf{J(q)} \in \mathbb{R}^{6 \times N}, \quad N &gt; 6 $$</p>
+<p><strong>特征：</strong></p>
+<ul>
+<li>冗余驱动系统（Over-actuated / Redundant manipulator）；</li>
+<li>对 $SE(3)$ 拥有完全访问能力；</li>
+<li>可使用<strong>伪逆</strong> $\mathbf{J}^{+}$ 来计算最优关节速度；</li>
+<li>存在<strong>冗余关节（spare joints）</strong>；</li>
+<li>可进行<strong>零空间运动（Null-space motion）</strong>。</li>
+</ul>
+<p><strong>应用：</strong></p>
+<ul>
+<li>避障控制（Obstacle avoidance）；</li>
+<li>能量最小化（Energy optimization）；</li>
+<li>次级任务规划（Secondary task planning）；</li>
+<li>柔性或蛇形机器人、连续体机械臂等。</li>
+</ul>
+<hr>
+<h4 id="📊-三种雅可比矩阵形态对比">📊 三种雅可比矩阵形态对比</h4>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>条件</th>
+<th>特征</th>
+<th>典型系统</th>
+<th>逆矩阵类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>方形（Square）</td>
+<td>$N = 6$</td>
+<td>完全驱动</td>
+<td>六轴机械臂</td>
+<td>$\mathbf{J}^{-1}$</td>
+</tr>
+<tr>
+<td>瘦型（Slim）</td>
+<td>$N &lt; 6$</td>
+<td>欠驱动</td>
+<td>SCARA、2D机械臂</td>
+<td>无逆（欠约束）</td>
+</tr>
+<tr>
+<td>胖型（Fat）</td>
+<td>$N &gt; 6$</td>
+<td>冗余驱动</td>
+<td>柔性、蛇形臂</td>
+<td>$\mathbf{J}^{+}$（伪逆）</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="13-3-伪逆（Pseudoinverse）与最优解">13.3 伪逆（Pseudoinverse）与最优解</h3>
+<p>当雅可比矩阵 $\mathbf{J(q)}$ 不可逆（例如 $N \neq 6$ 或奇异状态）时，<br>
+我们使用 <strong>Moore–Penrose 伪逆（Pseudoinverse）</strong> 来求得最优近似解：</p>
+<hr>
+<h4 id="1-欠约束系统（Under-constrained-N-6-）">(1) 欠约束系统（Under-constrained, $N &lt; 6$）</h4>
+<p>$$<br>
+\mathbf{J}^{+} = \mathbf{J}^{T} , (\mathbf{J}\mathbf{J}^{T})^{-1}<br>
+$$</p>
+<p>该形式最小化关节速度范数：</p>
+<p>$$<br>
+\min | \dot{\mathbf{q}} |<br>
+$$</p>
+<p>即找到使末端运动尽量匹配、同时关节速度最小的解。</p>
+<hr>
+<h4 id="2-过约束系统（Over-constrained-N-6-）">(2) 过约束系统（Over-constrained, $N &gt; 6$）</h4>
+<p>$$<br>
+\mathbf{J}^{+} = (\mathbf{J}^{T}\mathbf{J})^{-1} , \mathbf{J}^{T}<br>
+$$</p>
+<p>该形式最小化末端误差：</p>
+<p>$$<br>
+\min | \mathbf{J}\dot{\mathbf{q}} - \dot{\mathbf{x}} |<br>
+$$</p>
+<p>保证末端运动的最小均方误差（Least Squares Solution）。</p>
+<hr>
+<p>📘 <strong>总结：</strong></p>
+<table>
+<thead>
+<tr>
+<th>系统类型</th>
+<th>伪逆形式</th>
+<th>优化目标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>欠驱动 ($N &lt; 6$)</td>
+<td>$\mathbf{J}^{+} = \mathbf{J}^{T}(\mathbf{J}\mathbf{J}^{T})^{-1}$</td>
+<td>最小化 $|\dot{\mathbf{q}}|$</td>
+</tr>
+<tr>
+<td>冗余驱动 ($N &gt; 6$)</td>
+<td>$\mathbf{J}^{+} = (\mathbf{J}^{T}\mathbf{J})^{-1}\mathbf{J}^{T}$</td>
+<td>最小化 $|\mathbf{J}\dot{\mathbf{q}} - \dot{\mathbf{x}}|$</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>📖 <strong>一句话总结：</strong></p>
+<blockquote>
+<p>当雅可比矩阵不可逆时，伪逆提供了最“合理”的近似解，<br>
+欠约束系统追求最小关节运动，冗余系统追求最小误差。</p>
+</blockquote>
+<h2 id="14-状态空间表示（State-Space-Representation）">14. 状态空间表示（State Space Representation）</h2>
+<h3 id="14-1-定义与基本思想">14.1 定义与基本思想</h3>
+<p><strong>状态空间模型（State-Space Model）<strong>是一种以</strong>一阶微分方程组</strong>形式描述物理系统行为的数学模型。<br>
+它将系统的动态特性用<strong>状态变量（state variables）</strong>、**输入（inputs）<strong>和</strong>输出（outputs）**表示。</p>
+<p>系统状态空间方程一般写为：</p>
+<p>$$<br>
+\dot{x}(t) = A x(t) + B u(t)<br>
+$$<br>
+$$<br>
+y(t) = C x(t) + D u(t)<br>
+$$</p>
+<p>其中：</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$x(t)$</td>
+<td>状态向量（State Vector）</td>
+</tr>
+<tr>
+<td>$\dot{x}(t)$</td>
+<td>状态向量的一阶导数（随时间变化率）</td>
+</tr>
+<tr>
+<td>$u(t)$</td>
+<td>输入或控制向量（Input / Control Vector）</td>
+</tr>
+<tr>
+<td>$y(t)$</td>
+<td>输出向量（Output Vector）</td>
+</tr>
+<tr>
+<td>$A$</td>
+<td>系统矩阵（System Matrix）</td>
+</tr>
+<tr>
+<td>$B$</td>
+<td>输入矩阵（Input Matrix）</td>
+</tr>
+<tr>
+<td>$C$</td>
+<td>输出矩阵（Output Matrix）</td>
+</tr>
+<tr>
+<td>$D$</td>
+<td>直接传输矩阵（Feedforward Matrix）</td>
+</tr>
+</tbody>
+</table>
+<p>📘 <strong>直观理解：</strong></p>
+<ul>
+<li><strong>状态变量（State variables）</strong>：表示系统的记忆，例如位置、速度、电流等。</li>
+<li><strong>输入（Inputs）</strong>：表示外部激励，如力、转矩、电压信号。</li>
+<li><strong>输出（Outputs）</strong>：表示可测量的系统响应，如位移、速度、角度等。</li>
+</ul>
+<hr>
+<h3 id="14-2-单输入单输出系统（SISO-Single-Input-Single-Output）">14.2 单输入单输出系统（SISO, Single-Input Single-Output）</h3>
+<p><img src="https://image.discover304.top/1760039592864.png" alt="state space representation SISO"></p>
+<p>在 SISO 系统中，系统只有一个输入和一个输出：</p>
+<p>$$<br>
+\dot{x}(t) = A x(t) + B u(t)<br>
+$$<br>
+$$<br>
+y(t) = C x(t) + D u(t)<br>
+$$</p>
+<p>矩阵维度如下：</p>
+<table>
+<thead>
+<tr>
+<th>矩阵/变量</th>
+<th>维度</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$x(t)$</td>
+<td>$n \times 1$</td>
+<td>状态向量</td>
+</tr>
+<tr>
+<td>$\dot{x}(t)$</td>
+<td>$n \times 1$</td>
+<td>状态导数</td>
+</tr>
+<tr>
+<td>$u(t)$</td>
+<td>$1 \times 1$</td>
+<td>单输入</td>
+</tr>
+<tr>
+<td>$y(t)$</td>
+<td>$1 \times 1$</td>
+<td>单输出</td>
+</tr>
+<tr>
+<td>$A$</td>
+<td>$n \times n$</td>
+<td>系统矩阵</td>
+</tr>
+<tr>
+<td>$B$</td>
+<td>$n \times 1$</td>
+<td>输入矩阵</td>
+</tr>
+<tr>
+<td>$C$</td>
+<td>$1 \times n$</td>
+<td>输出矩阵</td>
+</tr>
+<tr>
+<td>$D$</td>
+<td>$1 \times 1$</td>
+<td>直接传输矩阵</td>
+</tr>
+</tbody>
+</table>
+<p>📖 <strong>理解要点：</strong></p>
+<ul>
+<li>状态方程决定系统的动态特性；</li>
+<li>输出方程描述状态与输出的映射；</li>
+<li>SISO 模型在机械臂单关节、单电机或单回路控制中广泛应用。</li>
+</ul>
+<hr>
+<h3 id="14-3-多输入多输出系统（MIMO-Multi-Input-Multi-Output）">14.3 多输入多输出系统（MIMO, Multi-Input Multi-Output）</h3>
+<p><img src="https://image.discover304.top/1760039623774.png" alt="state space representation MIMO"></p>
+<p>当系统具有多个输入与多个输出时，模型扩展为 MIMO 形式：</p>
+<p>$$<br>
+\dot{x}(t) = A x(t) + B u(t)<br>
+$$<br>
+$$<br>
+y(t) = C x(t) + D u(t)<br>
+$$</p>
+<p>矩阵维度如下：</p>
+<table>
+<thead>
+<tr>
+<th>矩阵/变量</th>
+<th>维度</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$x(t)$</td>
+<td>$n \times 1$</td>
+<td>状态向量</td>
+</tr>
+<tr>
+<td>$\dot{x}(t)$</td>
+<td>$n \times 1$</td>
+<td>状态导数</td>
+</tr>
+<tr>
+<td>$u(t)$</td>
+<td>$z \times 1$</td>
+<td>$z$ 个输入（多控制信号）</td>
+</tr>
+<tr>
+<td>$y(t)$</td>
+<td>$m \times 1$</td>
+<td>$m$ 个输出（多观测量）</td>
+</tr>
+<tr>
+<td>$A$</td>
+<td>$n \times n$</td>
+<td>系统矩阵</td>
+</tr>
+<tr>
+<td>$B$</td>
+<td>$n \times z$</td>
+<td>输入矩阵</td>
+</tr>
+<tr>
+<td>$C$</td>
+<td>$m \times n$</td>
+<td>输出矩阵</td>
+</tr>
+<tr>
+<td>$D$</td>
+<td>$m \times z$</td>
+<td>直接传输矩阵</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="14-4-状态空间模型的优势">14.4 状态空间模型的优势</h3>
+<p>✅ <strong>统一性：</strong><br>
+适用于线性与非线性系统、连续与离散系统。</p>
+<p>✅ <strong>可扩展性：</strong><br>
+易于扩展到高维、耦合系统。</p>
+<p>✅ <strong>分析便利：</strong><br>
+便于求解稳定性、可控性（Controllability）、可观性（Observability）。</p>
+<p>✅ <strong>现代控制基础：</strong><br>
+是 PID 控制、最优控制、LQR、状态反馈等方法的核心数学基础。</p>
+<hr>
+<p>📘 <strong>一句话总结：</strong></p>
+<blockquote>
+<p>状态空间模型是将系统动态从“输入-输出关系”推广到“内部状态演化”的现代控制理论核心形式，<br>
+为复杂机械臂与多自由度系统的建模与控制提供了统一框架。</p>
+</blockquote>
+<h2 id="15-非线性系统与线性化控制（Nonlinear-Systems-and-Linearization-Control）">15. 非线性系统与线性化控制（Nonlinear Systems and Linearization Control）</h2>
+<p><img src="https://image.discover304.top/1760040096231.png" alt="1760040096231.png"></p>
+<h3 id="15-1-非线性系统（Nonlinear-Systems）">15.1 非线性系统（Nonlinear Systems）</h3>
+<p>在现实世界中，大多数机械、电气、生物及机器人系统都是<strong>非线性（nonlinear）<strong>的。<br>
+这意味着它们的动态关系</strong>无法完全用线性方程描述</strong>。</p>
+<p><strong>示例：</strong></p>
+<ul>
+<li>单摆系统：<br>
+$$<br>
+m l^2 \ddot{\theta} + b \dot{\theta} + m g l \sin(\theta) = T<br>
+$$</li>
+<li>机械臂动力学（包含三角项和耦合项）；</li>
+<li>飞行器在湍流作用下的非线性运动。</li>
+</ul>
+<p><img src="https://image.discover304.top/1760040152646.png" alt="1760040152646.png"></p>
+<hr>
+<h3 id="15-2-为什么非线性是问题？（Why-is-this-a-Problem-）">15.2 为什么非线性是问题？（Why is this a Problem?）</h3>
+<ul>
+<li>非线性方程<strong>难以分析</strong>（稳定性 controllability、可控性 stability、可观性 observability 等）；</li>
+<li>许多标准工具（如传递函数 transfer functions、频率响应 frequency response、根轨迹法 root locus）<strong>仅适用于线性系统</strong>。</li>
+<li></li>
+</ul>
+<hr>
+<h3 id="15-3-解决方案：线性化（Linearization）">15.3 解决方案：线性化（Linearization）</h3>
+<p><strong>核心思想：</strong></p>
+<blockquote>
+<p>在某个工作点或平衡点附近，用线性系统近似原非线性系统。</p>
+</blockquote>
+<p>线性化后的模型可分为：</p>
+<ul>
+<li><strong>线性时变系统（LTV, Linear Time-Varying）</strong></li>
+<li><strong>线性时不变系统（LTI, Linear Time-Invariant）</strong></li>
+</ul>
+<p><strong>优点：</strong></p>
+<ul>
+<li>便于分析与控制；</li>
+<li>可使用经典线性控制工具（如 PID、LQR、Observer）。</li>
+</ul>
+<hr>
+<h3 id="15-4-线性化状态空间模型（Linearized-State-Space-Model）">15.4 线性化状态空间模型（Linearized State-Space Model）</h3>
+<p>对于一个非线性系统：</p>
+<p>$$<br>
+\dot{x}(t) = f(x(t), u(t)), \quad y(t) = g(x(t), u(t))<br>
+$$</p>
+<p>我们希望在某个工作点 $(x^{sol}, u^{sol})$ 附近用线性系统来近似它的动态。<br>
+这种近似允许我们在小扰动范围内分析系统的稳定性与控制特性。</p>
+<hr>
+<h4 id="🧩-最终线性化系统（Final-Linearized-System）">🧩 最终线性化系统（Final Linearized System）</h4>
+<p>$$<br>
+\delta \dot{x}(t) = A(t),\delta x(t) + B(t),\delta u(t)<br>
+$$<br>
+$$<br>
+\delta y(t) = C(t),\delta x(t) + D(t),\delta u(t)<br>
+$$</p>
+<p>其中：</p>
+<ul>
+<li>$\delta x(t)$ 表示状态变量相对于工作点的微小偏差；</li>
+<li>$\delta u(t)$ 表示输入的微小变化；</li>
+<li>$\delta y(t)$ 表示输出响应的变化。</li>
+</ul>
+<hr>
+<h4 id="📐-雅可比矩阵定义（Jacobian-Matrices）">📐 雅可比矩阵定义（Jacobian Matrices）</h4>
+<p>$$<br>
+A(t) = \frac{\partial f}{\partial x}(x^{sol}, u^{sol}), \quad<br>
+B(t) = \frac{\partial f}{\partial u}(x^{sol}, u^{sol})<br>
+$$</p>
+<p>$$<br>
+C(t) = \frac{\partial g}{\partial x}(x^{sol}, u^{sol}), \quad<br>
+D(t) = \frac{\partial g}{\partial u}(x^{sol}, u^{sol})<br>
+$$</p>
+<hr>
+<h4 id="🤖-与机器人系统的关系（Conceptual-Link-to-Robots）">🤖 与机器人系统的关系（Conceptual Link to Robots）</h4>
+<table>
+<thead>
+<tr>
+<th>矩阵</th>
+<th>含义</th>
+<th>对应物理解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$A(t)$</td>
+<td>状态对自身的影响</td>
+<td>关节角、角速度等状态如何相互作用</td>
+</tr>
+<tr>
+<td>$B(t)$</td>
+<td>输入对状态的影响</td>
+<td>控制输入（力矩、推力）如何驱动系统</td>
+</tr>
+<tr>
+<td>$C(t)$</td>
+<td>状态对输出的影响</td>
+<td>内部状态如何通过传感器体现</td>
+</tr>
+<tr>
+<td>$D(t)$</td>
+<td>输入对输出的直接影响</td>
+<td>一般在机械系统中近似为零</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="💡-工程意义（Practical-Meaning）">💡 工程意义（Practical Meaning）</h4>
+<p>在机器人学中，这种线性化状态空间模型的意义在于：</p>
+<ul>
+<li>它让我们能够<strong>设计线性控制器（如 LQR、PID、Observer）</strong>，<br>
+即使系统本质上是非线性的；</li>
+<li>该模型在局部范围内有效，能使机器人<strong>在小扰动下保持预期轨迹</strong>；</li>
+<li>这是分析机器人<strong>稳定性与轨迹跟踪误差</strong>的核心工具。</li>
+</ul>
+<hr>
+<p>📘 <strong>总结：</strong></p>
+<blockquote>
+<p>线性化状态空间模型通过在工作点附近的局部线性近似，<br>
+将复杂的非线性动力学系统转化为可控、可分析的形式，<br>
+从而奠定了现代机器人控制与状态估计的基础。</p>
+</blockquote>
+<hr>
+<h3 id="15-5-平衡点线性化（Linearization-about-an-Equilibrium-Point）">15.5 平衡点线性化（Linearization about an Equilibrium Point）</h3>
+<p>在线性系统理论中，我们经常需要将一个<strong>非线性系统</strong><br>
+在其<strong>平衡点（Equilibrium Point）<strong>附近进行线性化，以得到一个等效的</strong>线性时不变系统（LTI System）</strong>。</p>
+<hr>
+<h4 id="⚙️-非线性系统定义">⚙️ 非线性系统定义</h4>
+<p>考虑如下非线性状态方程：</p>
+<p>$$<br>
+\dot{x}(t) = f(x(t), u(t)), \quad y(t) = g(x(t), u(t))<br>
+$$</p>
+<p>其中：</p>
+<ul>
+<li>$x(t) \in \mathbb{R}^n$ —— 系统状态向量（如位置、速度、角度等）；</li>
+<li>$u(t) \in \mathbb{R}^k$ —— 控制输入（如力矩、电压等）；</li>
+<li>$y(t) \in \mathbb{R}^m$ —— 输出（传感器测量量或系统响应）。</li>
+</ul>
+<hr>
+<h4 id="⚖️-平衡点（Equilibrium-Point）">⚖️ 平衡点（Equilibrium Point）</h4>
+<p>若存在一对 $(x^{eq}, u^{eq})$ 满足：</p>
+<p>$$<br>
+f(x^{eq}, u^{eq}) = 0<br>
+$$</p>
+<p>则称该点为系统的<strong>平衡点</strong>。<br>
+此时系统满足：</p>
+<p>$$<br>
+u(t) = u^{eq}, \quad x(t) = x^{eq}, \quad y(t) = y^{eq} = g(x^{eq}, u^{eq})<br>
+$$</p>
+<p>这意味着在平衡点处，系统保持静止或匀速运动，状态不再随时间变化。</p>
+<hr>
+<h4 id="🔁-平衡点附近线性化（Linearizing-around-x-eq-u-eq-）">🔁 平衡点附近线性化（Linearizing around $(x^{eq}, u^{eq})$）</h4>
+<p>在平衡点附近进行泰勒展开，并忽略高阶项，可得线性近似系统：</p>
+<p>$$<br>
+\delta \dot{x}(t) = A \delta x(t) + B \delta u(t)<br>
+$$<br>
+$$<br>
+\delta y(t) = C \delta x(t) + D \delta u(t)<br>
+$$</p>
+<p>其中：</p>
+<p>$$<br>
+A = \frac{\partial f}{\partial x}(x^{eq}, u^{eq}), \quad<br>
+B = \frac{\partial f}{\partial u}(x^{eq}, u^{eq})<br>
+$$</p>
+<p>$$<br>
+C = \frac{\partial g}{\partial x}(x^{eq}, u^{eq}), \quad<br>
+D = \frac{\partial g}{\partial u}(x^{eq}, u^{eq})<br>
+$$</p>
+<hr>
+<h4 id="🧩-系统含义说明">🧩 系统含义说明</h4>
+<table>
+<thead>
+<tr>
+<th>矩阵</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$A$</td>
+<td>状态变化对自身动态的线性影响（系统固有动力学）</td>
+</tr>
+<tr>
+<td>$B$</td>
+<td>控制输入对系统状态的影响（外部控制作用）</td>
+</tr>
+<tr>
+<td>$C$</td>
+<td>状态变化对输出的影响（测量关系）</td>
+</tr>
+<tr>
+<td>$D$</td>
+<td>输入对输出的直接耦合（机械系统中通常为 0）</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="💡-工程意义（In-Robotics-Context）">💡 工程意义（In Robotics Context）</h4>
+<p>在机器人控制中，平衡点线性化是建立**线性时不变模型（LTI）**的基础步骤。<br>
+例如：</p>
+<ul>
+<li>在线性化平衡点（如机械臂的静止姿态）附近设计控制器；</li>
+<li>分析系统在局部扰动下的<strong>稳定性（Stability）</strong>；</li>
+<li>构造局部线性模型以实现 <strong>LQR、PID、Observer</strong> 等控制策略。</li>
+</ul>
+<hr>
+<p>📘 <strong>总结：</strong></p>
+<blockquote>
+<p>平衡点线性化将复杂的非线性动力学系统转化为局部线性形式，<br>
+便于应用经典线性控制理论，实现对系统局部稳定性的分析与控制。</p>
+</blockquote>
+<hr>
+<h3 id="15-6-反馈线性化（Feedback-Linearization）">15.6 反馈线性化（Feedback Linearization）</h3>
+<p>反馈线性化（Feedback Linearization）是一种强大的非线性控制技术，<br>
+通过<strong>设计非线性反馈控制律</strong>，将原始<strong>非线性系统转化为等效线性系统</strong>，<br>
+从而能够应用线性控制理论进行分析与设计。</p>
+<hr>
+<h4 id="🧩-定义（Definition）">🧩 定义（Definition）</h4>
+<blockquote>
+<p><strong>反馈线性化（Feedback Linearization）</strong> 是一种利用非线性反馈控制输入<br>
+来抵消系统内部非线性项，使其在输入输出关系上表现为线性系统的控制方法。</p>
+</blockquote>
+<p>数学上，它通过引入输入变换：</p>
+<p>$$<br>
+u = \alpha(x) + \beta(x)v<br>
+$$</p>
+<p>其中：</p>
+<ul>
+<li>$\alpha(x)$ —— 非线性补偿项，用于抵消系统的固有非线性；</li>
+<li>$\beta(x)$ —— 输入增益项，用于调整输入信号的作用比例；</li>
+<li>$v$ —— 新的控制输入，用于设计线性控制律。</li>
+</ul>
+<p>将系统</p>
+<p>$$<br>
+\dot{x} = f(x) + g(x)u, \quad y = h(x)<br>
+$$</p>
+<p>其中：</p>
+<ul>
+<li>$x \in \mathbb{R}^n$ —— 系统状态；</li>
+<li>$u \in \mathbb{R}$ 或 $\mathbb{R}^m$ —— 控制输入；</li>
+<li>$\dot{x}$ —— 状态的时间导数。</li>
+<li>$f(x)$：系统的<strong>自然动态项</strong>（或漂移项），反映系统在无输入时的自然演化；</li>
+<li>$g(x)$：系统的<strong>控制输入通道</strong>，决定输入 $u$ 如何影响状态；</li>
+<li>$h(x)$：输出函数，定义可测的系统输出。</li>
+</ul>
+<p>变换为线性系统形式：</p>
+<p>$$<br>
+\dot{x} = A x + B v<br>
+$$</p>
+<p>其中：</p>
+<ul>
+<li>$A$ 和 $B$ 是常数或局部线性矩阵；</li>
+<li>$v$ 是新的“等效线性输入”；</li>
+<li>系统在该形式下可以直接应用线性控制工具。</li>
+</ul>
+<p>此时，控制输入 $v$ 可以通过常规线性控制器（如 LQR、PID）设计得到。</p>
+<p>附：</p>
+<table>
+<thead>
+<tr>
+<th>控制方法</th>
+<th>核心思想</th>
+<th>优点</th>
+<th>缺点</th>
+<th>典型应用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PID</strong></td>
+<td>基于误差的比例-积分-微分反馈</td>
+<td>简单可靠，易实现</td>
+<td>难以最优，需调参</td>
+<td>工业过程控制、舵机控制</td>
+</tr>
+<tr>
+<td><strong>LQR</strong></td>
+<td>最小化状态与能量代价</td>
+<td>数学上最优控制</td>
+<td>需系统模型，线性假设</td>
+<td>飞行器姿态、机器人控制</td>
+</tr>
+</tbody>
+</table>
+<h4 id="📘-推导过程（Step-by-step-Derivation）">📘 推导过程（Step-by-step Derivation）</h4>
+<p>将 $u = \alpha(x) + \beta(x)v$ 代入原方程：</p>
+<p>$$<br>
+\dot{x} = f(x) + g(x)[\alpha(x) + \beta(x)v]<br>
+$$</p>
+<p>展开：</p>
+<p>$$<br>
+\dot{x} = [f(x) + g(x)\alpha(x)] + g(x)\beta(x)v<br>
+$$</p>
+<p>我们希望这个系统能写成线性形式：</p>
+<p>$$<br>
+\dot{x} = A x + B v<br>
+$$</p>
+<p>于是只需<strong>选择合适的 $\alpha(x)$ 和 $\beta(x)$</strong>，使得：</p>
+<ul>
+<li>第一项 $[f(x) + g(x)\alpha(x)]$ 成为线性函数 $A x$；</li>
+<li>第二项 $g(x)\beta(x)$ 等价于常数矩阵 $B$。</li>
+</ul>
+<p>这就意味着通过 $\alpha(x)$ 的选择，我们“抵消”掉系统中复杂的非线性项，<br>
+而通过 $\beta(x)$ 的选择，我们“线性化”输入通道。</p>
+<hr>
+<h4 id="💡-为什么需要反馈线性化（Why-is-it-Necessary-）">💡 为什么需要反馈线性化（Why is it Necessary?）</h4>
+<ul>
+<li>大多数真实系统（如单摆、机械臂、飞行器）本质上都是<strong>非线性系统</strong>；</li>
+<li>非线性方程难以进行稳定性分析与控制设计；</li>
+<li>通过反馈线性化：
+<ul>
+<li>使用反馈<strong>抵消系统中的非线性项</strong>；</li>
+<li>系统行为表现为<strong>线性时不变（LTI）形式</strong>；</li>
+<li>可以直接使用经典的线性控制工具。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="⚙️-优势（Key-Advantages）">⚙️ 优势（Key Advantages）</h4>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>优点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>分析方便</td>
+<td>系统线性化后便于稳定性与性能分析</td>
+</tr>
+<tr>
+<td>控制设计</td>
+<td>可使用线性控制器（如 LQR、Observer、Pole Placement）</td>
+</tr>
+<tr>
+<td>实际应用</td>
+<td>常用于机械臂控制、飞行器姿态控制、移动机器人动态补偿等</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="📘-示例一：机械臂动力学中的反馈线性化">📘 示例一：机械臂动力学中的反馈线性化</h4>
+<p>考虑一个机械臂的动力学模型：</p>
+<p>$$<br>
+M(q)\ddot{q} + B(q, \dot{q})\dot{q} + G(q) = F<br>
+$$</p>
+<p>其中：</p>
+<ul>
+<li>$q \in \mathbb{R}^k$ 为关节角向量；</li>
+<li>$F \in \mathbb{R}^k$ 为关节力矩；</li>
+<li>$M(q)$ 是质量惯量矩阵；</li>
+<li>$B(q, \dot{q})$ 表示科氏力与离心力；</li>
+<li>$G(q)$ 是重力项。</li>
+</ul>
+<hr>
+<h5 id="🧠-步骤-1：定义新的输入">🧠 步骤 1：定义新的输入</h5>
+<p>设控制输入为：</p>
+<p>$$<br>
+F = u = u_{nl}(q, \dot{q}) + M(q)v<br>
+$$</p>
+<p>其中非线性补偿项定义为：</p>
+<p>$$<br>
+u_{nl}(q, \dot{q}) = B(q, \dot{q})\dot{q} + G(q)<br>
+$$</p>
+<hr>
+<h5 id="⚙️-步骤-2：代入系统方程">⚙️ 步骤 2：代入系统方程</h5>
+<p>将其代入原动力学方程：</p>
+<p>$$<br>
+M(q)\ddot{q} + B(q, \dot{q})\dot{q} + G(q) = F<br>
+$$</p>
+<p>得到：</p>
+<p>$$<br>
+\ddot{q} = v<br>
+$$</p>
+<p>这意味着系统的复杂非线性动态被消除，变为简单的<strong>双积分系统</strong>（Double Integrator）。</p>
+<hr>
+<h5 id="🧾-步骤-3：状态空间形式">🧾 步骤 3：状态空间形式</h5>
+<p>定义状态向量：</p>
+<p>$$<br>
+x = \begin{bmatrix} q \ \dot{q} \end{bmatrix} \in \mathbb{R}^{2k}<br>
+$$</p>
+<p>则系统可以写为：</p>
+<p>$$<br>
+\dot{x} =<br>
+\begin{bmatrix}<br>
+0 &amp; I \<br>
+0 &amp; 0<br>
+\end{bmatrix}<br>
+x +<br>
+\begin{bmatrix}<br>
+0 \<br>
+1<br>
+\end{bmatrix}<br>
+v<br>
+$$</p>
+<hr>
+<h4 id="📘-示例二：严格反馈形式（Strict-Feedback-Form）">📘 示例二：严格反馈形式（Strict Feedback Form）</h4>
+<p>考虑非线性系统：</p>
+<p>$$<br>
+\dot{x}_1 = f_1(x_1) + x_2, \quad<br>
+\dot{x}_2 = f_2(x_1, x_2) + u<br>
+$$</p>
+<hr>
+<h5 id="步骤-1：引入新变量">步骤 1：引入新变量</h5>
+<p>定义新的状态变量：</p>
+<p>$$<br>
+z_2 := f_1(x_1) + x_2<br>
+$$</p>
+<p>则有：</p>
+<p>$$<br>
+\dot{x}_1 = z_2<br>
+$$</p>
+<p>对 $z_2$ 求导：</p>
+<p>$$<br>
+\dot{z}_2 = \frac{\partial f_1}{\partial x_1}(x_1) \dot{x}_1 + \dot{x}_2<br>
+$$<br>
+$$<br>
+= \frac{\partial f_1}{\partial x_1}(x_1)[f_1(x_1) + x_2] + f_2(x_1, x_2) + u<br>
+$$</p>
+<hr>
+<h5 id="步骤-2：设计反馈输入">步骤 2：设计反馈输入</h5>
+<p>选择控制律：</p>
+<p>$$<br>
+u = u_{nl}(x_1, x_2) + v<br>
+$$</p>
+<p>其中非线性补偿项为：</p>
+<p>$$<br>
+u_{nl}(x_1, x_2) = -\frac{\partial f_1}{\partial x_1}(x_1)[f_1(x_1) + x_2] - f_2(x_1, x_2)<br>
+$$</p>
+<hr>
+<h5 id="步骤-3：代入系统">步骤 3：代入系统</h5>
+<p>代入后得到简化系统：</p>
+<p>$$<br>
+\dot{x}_1 = z_2, \quad \dot{z}_2 = v<br>
+$$</p>
+<p>这就是一个<strong>线性时不变系统（LTI System）</strong>，<br>
+控制输入 $v$ 可以通过线性控制器（如 LQR 或 PID）来设计。</p>
+<hr>
+<h4 id="✅-总结">✅ 总结</h4>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1️⃣ 系统分析</td>
+<td>确定系统的非线性项 $f(x), g(x)$</td>
+</tr>
+<tr>
+<td>2️⃣ 反馈设计</td>
+<td>定义 $u = u_{nl}(x) + \beta(x)v$ 抵消非线性</td>
+</tr>
+<tr>
+<td>3️⃣ 状态变换</td>
+<td>构造线性等效模型</td>
+</tr>
+<tr>
+<td>4️⃣ 控制设计</td>
+<td>对 $v$ 使用线性控制方法</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>📘 <strong>一句话总结：</strong></p>
+<blockquote>
+<p>反馈线性化通过“补偿非线性 + 重新定义输入”，<br>
+将非线性系统等效转化为线性系统，<br>
+从而使复杂的机器人控制问题变得可分析、可设计、可实现。</p>
+</blockquote>
+<hr>
+<p>📖 <strong>总结：</strong></p>
+<blockquote>
+<p>非线性系统虽普遍存在，但通过平衡点线性化与反馈线性化，<br>
+我们能利用线性控制理论的成熟工具，让复杂系统在局部范围内表现出可预测、可控的行为。</p>
+</blockquote>
+<h2 id="16-稳定性分析（System-Stability-Analysis）">16. 稳定性分析（System Stability Analysis）</h2>
+<p>系统稳定性（System Stability）是控制理论中的核心概念，<br>
+它描述系统在受到扰动或输入信号时，是否能保持或回到平衡状态。</p>
+<p>稳定性决定了机器人或任何动态系统<strong>能否在控制下正常工作</strong>。<br>
+例如，一个稳定的机械臂能在停止施加力矩后保持静止，<br>
+而一个不稳定的机械臂则可能持续震荡或偏离目标。</p>
+<hr>
+<h3 id="16-1-稳定性的概念（Concept-of-Stability）">16.1 稳定性的概念（Concept of Stability）</h3>
+<p><strong>定义：</strong><br>
+若系统在有界输入（bounded input）下产生有界输出（bounded output），<br>
+则称该系统是<strong>BIBO 稳定（Bounded Input Bounded Output Stable）</strong>。</p>
+<p>数学定义如下：</p>
+<p>$$<br>
+|u(t)| &lt; \infty \quad \Rightarrow \quad |y(t)| &lt; \infty<br>
+$$</p>
+<hr>
+<h4 id="💡-为什么稳定性很重要（Why-Stability-Matters）">💡 为什么稳定性很重要（Why Stability Matters）</h4>
+<p>在机器人学中：</p>
+<ul>
+<li><strong>稳定的机器人</strong>能平稳移动、准确响应指令；</li>
+<li><strong>不稳定的机器人</strong>可能发生振荡、抖动或发散。</li>
+</ul>
+<p><strong>示例：</strong></p>
+<ul>
+<li>稳定：机械臂在停止施加力矩后保持位置；</li>
+<li>不稳定：机械臂在停止控制后仍剧烈摆动。</li>
+</ul>
+<hr>
+<h3 id="16-2-稳定性的类型（Types-of-Stability）">16.2 稳定性的类型（Types of Stability）</h3>
+<p>稳定性可从不同角度定义与分析：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>依据</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>BIBO 稳定性</strong></td>
+<td>输入输出关系</td>
+<td>使用传递函数（Transfer Function）分析系统输出是否有界</td>
+</tr>
+<tr>
+<td><strong>内部稳定性（Internal Stability）</strong></td>
+<td>状态空间模型</td>
+<td>通过状态矩阵的特征值分析系统内部状态是否收敛</td>
+</tr>
+<tr>
+<td><strong>李雅普诺夫稳定性（Lyapunov Stability）</strong></td>
+<td>能量函数（Energy Function）</td>
+<td>适用于非线性系统，通过能量函数变化判断稳定性</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>我们在第<a href="#17-%E4%BC%A0%E9%80%92%E5%87%BD%E6%95%B0%E4%B8%8E-bibo-%E7%A8%B3%E5%AE%9A%E6%80%A7transfer-function-and-bibo-stability">17部分</a>讨论BIBO</p>
+</blockquote>
+<hr>
+<h3 id="16-3-状态空间下的稳定性（Stability-in-State-Space）">16.3 状态空间下的稳定性（Stability in State-Space）</h3>
+<p>对于状态空间方程：</p>
+<p>$$<br>
+\dot{x}(t) = A x(t) + B u(t), \quad y(t) = C x(t) + D u(t)<br>
+$$</p>
+<p>系统的稳定性取决于矩阵 $A$ 的特征值（Eigenvalues）。</p>
+<hr>
+<h4 id="判据（Criterion）"><strong>判据（Criterion）</strong></h4>
+<p>系统稳定当且仅当所有特征值的实部为负：</p>
+<p>$$<br>
+\Re(\lambda_i(A)) &lt; 0 \quad \forall i<br>
+$$</p>
+<p>系统的稳定性取决于特征值在复平面上的位置，可以总结如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th>特征值实部情况</th>
+<th>系统类型</th>
+<th>动态特征</th>
+<th>稳定性描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\Re(\lambda_i) &lt; 0$</td>
+<td>渐近稳定（Asymptotically Stable）</td>
+<td>指数衰减</td>
+<td>状态随时间收敛到平衡点</td>
+</tr>
+<tr>
+<td>$\Re(\lambda_i) = 0$</td>
+<td>边界稳定（Marginally Stable）</td>
+<td>持续振荡</td>
+<td>不发散也不衰减，能量守恒</td>
+</tr>
+<tr>
+<td>$\Re(\lambda_i) &gt; 0$</td>
+<td>不稳定（Unstable）</td>
+<td>指数增长</td>
+<td>状态随时间发散</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="示例解释：">示例解释：</h4>
+<ul>
+<li>若 $A = \begin{bmatrix}-2 &amp; 0 \ 0 &amp; -3\end{bmatrix}$，则 $\lambda = {-2, -3}$ → 稳定；</li>
+<li>若 $A = \begin{bmatrix}1 &amp; 0 \ 0 &amp; -2\end{bmatrix}$，则 $\lambda = {1, -2}$ → 不稳定；</li>
+<li>若 $\lambda = {0, -2}$，则边界稳定。</li>
+</ul>
+<!-- ## 为什么只看实部而不看虚部？
+
+在分析线性系统稳定性时，我们常见判据为：
+
+$$
+\Re(\lambda_i(A)) < 0 \quad \forall i
+$$
+
+许多人会疑问：**为什么不考虑虚部？虚部不也影响系统吗？**
+
+下面详细解释这一点。
+
+---
+
+### 🧩 一、复特征值的物理意义
+
+假设系统矩阵的特征值为：
+
+$$
+\lambda = \alpha + j\omega
+$$
+
+则系统响应中对应的时间项为：
+
+$$
+e^{\lambda t} = e^{(\alpha + j\omega)t} = e^{\alpha t}(\cos \omega t + j \sin \omega t)
+$$
+
+其中：
+- **实部 $\alpha$**：决定“衰减或增长”的速度；
+- **虚部 $\omega$**：决定“振荡频率”。
+
+因此，虚部控制系统**如何振荡**，  
+但实部控制系统**是否收敛或发散**。
+
+---
+
+### ⚙️ 二、为什么只关心实部（Re(λ)）
+
+系统稳定的判据是：
+
+$$
+\lim_{t \to \infty} e^{\lambda t}
+$$
+
+代入展开式：
+
+$$
+e^{\lambda t} = e^{\alpha t}(\cos \omega t + j \sin \omega t)
+$$
+
+于是：
+- 当 $\alpha < 0$：指数项 $e^{\alpha t}$ 衰减 → 系统 **稳定（Stable）**；
+- 当 $\alpha = 0$：振幅不变 → 系统 **边界稳定（Marginally Stable）**；
+- 当 $\alpha > 0$：指数项发散 → 系统 **不稳定（Unstable）**。
+
+✅ 因此：
+> **稳定性只取决于实部 $\Re(\lambda)$ 的符号，虚部只影响振荡形式。**
+
+---
+
+### 🎯 三、物理类比：阻尼振子（Damped Oscillator）
+
+想象一个带阻尼的弹簧系统，其运动方程：
+
+$$
+m\ddot{x} + c\dot{x} + kx = 0
+$$
+
+解的形式取决于阻尼比：
+| 情况 | 数学特征值 | 物理现象 | 稳定性 |
+|------|--------------|-------------|----------|
+| 过阻尼 | 实数负特征值 | 缓慢衰减回原位 | 稳定 |
+| 欠阻尼 | 复数（实部负） | 振荡衰减 | 稳定 |
+| 临界阻尼 | 双重负实根 | 最快回稳 | 稳定 |
+| 无阻尼 | 纯虚数 | 振荡不衰减 | 边界稳定 |
+| 反阻尼 | 实部正 | 振幅发散 | 不稳定 |
+
+💬 结论：
+- 虚部 $\omega$ → 决定振荡速度；
+- 实部 $\alpha$ → 决定能量衰减或增长；
+- 能量是否衰减决定系统是否稳定。
+
+---
+
+### 📘 一句话总结
+
+> 虚部决定“系统怎么动”，  
+> 实部决定“系统能不能停”。  
+>  
+> 因此在稳定性分析中，我们只需关注特征值的实部。 -->
+<hr>
+<h3 id="16-4-李雅普诺夫稳定性（Lyapunov-Stability）">16.4 李雅普诺夫稳定性（Lyapunov Stability）</h3>
+<p>李雅普诺夫稳定性是分析<strong>非线性系统</strong>稳定性的基本方法，<br>
+核心思想是用一个能量函数 $V(x)$ 来判断系统状态随时间的变化。</p>
+<hr>
+<h4 id="🧠-直观理解（Explanation）">🧠 直观理解（Explanation）</h4>
+<p><img src="https://image.discover304.top/1760042446908.png" alt=""></p>
+<p>可以将系统状态想象为一个小球在不同地形上的运动：</p>
+<ul>
+<li>在碗底（能量最低点） → 小球会滚回 → <strong>稳定</strong>；</li>
+<li>在山顶 → 轻微扰动即滚下 → <strong>不稳定</strong>；</li>
+<li>在平面上 → 停在原地但不会回到原点 → <strong>边界稳定（Marginally Stable）</strong>。</li>
+</ul>
+<hr>
+<h4 id="📐-数学定义（Mathematical-Definition）">📐 数学定义（Mathematical Definition）</h4>
+<p>对于非线性系统：</p>
+<p>$$<br>
+\dot{x} = f(x), \quad x \in \mathbb{R}^n<br>
+$$</p>
+<p>若平衡点在 $x = 0$，则系统在该点<strong>李雅普诺夫稳定</strong>当且仅当：</p>
+<p>$$<br>
+\forall \epsilon &gt; 0, \ \exists \delta &gt; 0, \ \text{使得} \ ||x(0)|| &lt; \delta \Rightarrow ||x(t)|| &lt; \epsilon, \ \forall t \ge 0<br>
+$$</p>
+<p>即：系统从接近平衡点出发后，始终保持在有限邻域内。</p>
+<hr>
+<h3 id="16-5-李雅普诺夫函数法（Lyapunov-Function-Method）">16.5 李雅普诺夫函数法（Lyapunov Function Method）</h3>
+<p><img src="https://image.discover304.top/1760042474799.png" alt="简谐摆：非线性动力系统的典型示例——在最低点平衡位置稳定，在顶部倒立位置不稳定。"></p>
+<p>我们引入一个“能量型”函数 $V(x)$（称为李雅普诺夫函数）：</p>
+<p>$$<br>
+V(x) &gt; 0 \text{ for } x \ne 0, \quad V(0) = 0<br>
+$$</p>
+<p>并计算其导数：</p>
+<p>$$<br>
+\dot{V}(x) = \frac{dV}{dt}<br>
+$$</p>
+<hr>
+<h4 id="判断标准：">判断标准：</h4>
+<table>
+<thead>
+<tr>
+<th>条件</th>
+<th>稳定性类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$\dot{V}(x) &lt; 0$</td>
+<td>渐近稳定（Asymptotically Stable）</td>
+</tr>
+<tr>
+<td>$\dot{V}(x) = 0$</td>
+<td>稳定（但非渐近）</td>
+</tr>
+<tr>
+<td>$\dot{V}(x) &gt; 0$</td>
+<td>不稳定（Unstable）</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h4 id="💡-一维系统数值例子（1D-Example）">💡 一维系统数值例子（1D Example）</h4>
+<p>考虑系统：</p>
+<p>$$<br>
+\dot{x} = -x<br>
+$$</p>
+<p>选择李雅普诺夫函数：</p>
+<p>$$<br>
+V(x) = x^2<br>
+$$</p>
+<p>计算导数：</p>
+<p>$$<br>
+\dot{V}(x) = 2x\dot{x} = 2x(-x) = -2x^2 &lt; 0<br>
+$$</p>
+<p>因此，该系统是**渐近稳定（Asymptotically Stable）**的。</p>
+<hr>
+<h3 id="✅-小结（Summary）">✅ 小结（Summary）</h3>
+<table>
+<thead>
+<tr>
+<th>稳定性类型</th>
+<th>分析依据</th>
+<th>判据</th>
+<th>应用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>内部稳定性</strong></td>
+<td>状态矩阵 $A$ 特征值</td>
+<td>$\Re(\lambda_i(A)) &lt; 0$</td>
+<td>线性状态空间系统</td>
+</tr>
+<tr>
+<td><strong>李雅普诺夫稳定性</strong></td>
+<td>能量函数 $V(x)$</td>
+<td>$\dot{V}(x) &lt; 0$</td>
+<td>非线性系统、机器人控制</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>📘 <strong>一句话总结：</strong></p>
+<blockquote>
+<p>稳定性是控制系统的生命线。<br>
+线性系统依赖特征值判定稳定，非线性系统则依赖李雅普诺夫函数。<br>
+若系统能在扰动下回归平衡点，即可认为其“稳定”。</p>
+</blockquote>
+<h2 id="17-传递函数与-BIBO-稳定性（Transfer-Function-and-BIBO-Stability）">17. 传递函数与 BIBO 稳定性（Transfer Function and BIBO Stability）</h2>
+<hr>
+<h3 id="17-1-传递函数（Transfer-Function）">17.1 传递函数（Transfer Function）</h3>
+<p><img src="https://image.discover304.top/1760043576253.png" alt="1760043576253.png"></p>
+<p><strong>定义：</strong><br>
+传递函数（Transfer Function）描述了系统<strong>输入与输出</strong>之间的数学关系，通常定义在 <strong>拉普拉斯域（Laplace Domain）</strong>，适用于线性、时不变（LTI）系统。</p>
+<p>其一般形式为：</p>
+<p>$$<br>
+G(s) = \frac{Y(s)}{U(s)}<br>
+$$</p>
+<p>其中：</p>
+<ul>
+<li>$U(s)$：输入信号的拉普拉斯变换；</li>
+<li>$Y(s)$：输出信号的拉普拉斯变换；</li>
+<li>$G(s)$：系统的传递函数。</li>
+</ul>
+<p>📘 <strong>直观理解：</strong><br>
+传递函数是系统的“频域指纹”，帮助我们分析<strong>稳定性、频率响应、动态特性</strong>等。</p>
+<hr>
+<h3 id="17-2-拉普拉斯变换（Laplace-Transform）">17.2 拉普拉斯变换（Laplace Transform）</h3>
+<h4 id="定义："><strong>定义：</strong></h4>
+<p>拉普拉斯变换是一种将<strong>时域函数</strong>转换为**复频域函数（s 域）**的工具，用以简化微分方程求解。</p>
+<p>$$<br>
+\mathcal{L}[f(t)] = F(s) = \int_0^{\infty} f(t)e^{-st}dt<br>
+$$</p>
+<p>反变换为：</p>
+<p>$$<br>
+\mathcal{L}^{(-1)}[F(s)] = f(t) = \frac{1}{2\pi j} \int_{c-j\infty}^{c+j\infty} F(s)e^{st}ds, \quad t&gt;0<br>
+$$</p>
+<p>🧭 <strong>意义：</strong></p>
+<blockquote>
+<p>拉普拉斯变换是连接“微分方程”与“传递函数”的桥梁。</p>
+</blockquote>
+<hr>
+<h3 id="17-3-拉普拉斯变换性质（Properties）">17.3 拉普拉斯变换性质（Properties）</h3>
+<table>
+<thead>
+<tr>
+<th>性质</th>
+<th>数学表达</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>线性性</td>
+<td>$\mathcal{L}[a f(t) + b g(t)] = aF(s) + bG(s)$</td>
+<td>可线性叠加</td>
+</tr>
+<tr>
+<td>一阶微分</td>
+<td>$\mathcal{L}[\dot{f}(t)] = sF(s) - f(0^+)$</td>
+<td>导数变乘法</td>
+</tr>
+<tr>
+<td>二阶微分</td>
+<td>$\mathcal{L}[\ddot{f}(t)] = s^2 F(s) - s f(0^+) - \dot{f}(0^+)$</td>
+<td>高阶导数扩展</td>
+</tr>
+<tr>
+<td>积分</td>
+<td>$\mathcal{L}\left[\int_0^t f(\tau)d\tau\right] = \frac{F(s)}{s}$</td>
+<td>积分变除法</td>
+</tr>
+<tr>
+<td>时移</td>
+<td>$\mathcal{L}[f(t-T)] = e^{-sT}F(s)$</td>
+<td>延迟产生指数项</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="17-4-初值与终值定理（Initial-Final-Value-Theorems）">17.4 初值与终值定理（Initial &amp; Final Value Theorems）</h3>
+<table>
+<thead>
+<tr>
+<th>定理</th>
+<th>数学表达</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>初值定理</td>
+<td>$f(0^+) = \lim_{s\to\infty} sF(s)$</td>
+<td>求瞬时响应初值</td>
+</tr>
+<tr>
+<td>终值定理</td>
+<td>$\lim_{t\to\infty} f(t) = \lim_{s\to 0} sF(s)$</td>
+<td>求系统稳态响应</td>
+</tr>
+</tbody>
+</table>
+<p>⚠️ 注意：<br>
+若系统不稳定（极点在右半平面），终值定理不适用。</p>
+<hr>
+<h3 id="17-5-BIBO-稳定性（Bounded-Input-–-Bounded-Output）">17.5 BIBO 稳定性（Bounded Input – Bounded Output）</h3>
+<p><strong>定义：</strong><br>
+若系统在有界输入下产生有界输出，则称系统是 <strong>BIBO 稳定（Bounded Input Bounded Output Stable）</strong>：</p>
+<p>$$<br>
+|u(t)| &lt; \infty \Rightarrow |y(t)| &lt; \infty<br>
+$$</p>
+<hr>
+<h4 id="基于传递函数的判据："><strong>基于传递函数的判据：</strong></h4>
+<p>若系统传递函数为：</p>
+<p>$$<br>
+G(s) = \frac{N(s)}{D(s)}<br>
+$$</p>
+<p>系统的极点（Poles）定义为 $D(s) = 0$ 的根。</p>
+<p>系统 BIBO 稳定的条件是：</p>
+<p>$$<br>
+\Re(p_i) &lt; 0 \quad \forall \text{极点 } p_i<br>
+$$</p>
+<table>
+<thead>
+<tr>
+<th>极点位置</th>
+<th>系统状态</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>所有极点在左半平面</td>
+<td>稳定</td>
+<td>响应指数衰减</td>
+</tr>
+<tr>
+<td>极点在虚轴上</td>
+<td>边界稳定</td>
+<td>持续振荡</td>
+</tr>
+<tr>
+<td>任意极点在右半平面</td>
+<td>不稳定</td>
+<td>响应发散</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="17-6-对比：BIBO-vs-内部稳定（Internal-Stability）">17.6 对比：BIBO vs 内部稳定（Internal Stability）</h3>
+<table>
+<thead>
+<tr>
+<th>稳定性类型</th>
+<th>基于</th>
+<th>判据</th>
+<th>适用系统</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>BIBO 稳定</strong></td>
+<td>输入输出关系</td>
+<td>极点在左半平面</td>
+<td>传递函数模型</td>
+</tr>
+<tr>
+<td><strong>内部稳定（State Stability）</strong></td>
+<td>状态空间</td>
+<td>$\Re(\lambda_i(A)) &lt; 0$</td>
+<td>状态空间模型</td>
+</tr>
+<tr>
+<td><strong>Lyapunov 稳定</strong></td>
+<td>能量函数</td>
+<td>$\dot{V}(x) &lt; 0$</td>
+<td>非线性系统</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>📘 <strong>总结：</strong></p>
+<blockquote>
+<p>传递函数与拉普拉斯变换为我们提供了从“时域”到“频域”的分析工具。</p>
+<p>BIBO 稳定性判据帮助我们通过<strong>极点位置</strong>快速判断系统是否在外部输入下保持稳定。</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><strong>🍀后记🍀</strong><br>
+博客的关键词集中在编程、算法、机器人、人工智能、数学等等，持续高质量输出中。<br>
+<strong>🌸唠嗑QQ群</strong>：<a target="_blank" rel="noopener" href="https://jq.qq.com/?_wv=1027&amp;k=EaGddTQg">兔叽の魔术工房</a> (942848525)<br>
+<strong>⭐B站账号</strong>：<a target="_blank" rel="noopener" href="https://space.bilibili.com/98639326">白拾ShiroX</a>（活跃于知识区和动画区）<br>
+<strong>✨GitHub主页</strong>：<a target="_blank" rel="noopener" href="https://github.com/yhbcode000">yhbcode000</a>（工程文件）<br>
+<strong>⛳Discord社区</strong>：<a target="_blank" rel="noopener" href="https://discord.g/nn5NDXMgae">AierLab</a>（人工智能社区）</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:hobart.yang@qq.com">✨白拾ShiroX✨</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://discover304.top/2025/10/09/2025q4/209-robotics-review/">https://discover304.top/2025/10/09/2025q4/209-robotics-review/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0anime</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/">机器人</a></div><div class="post_share"><div class="social-share" data-image="https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images" data-sites="facebook,twitter,wechat,weibo,qzone,qq,linkedin"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2025/05/31/2025q2/208-cloud-studio/"><img class="next-cover" src="https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images" onerror="onerror=null;src='/img/404.png'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">208-Cloud-Studio</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2021/12/17/2021q4/118-ros-note-code-serv/" title="【机器人】ROS1工程案例：服务和动作"><img class="cover" src="https://image.discover304.top/bai_gu_gu_head.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-10-10</div><div class="title">【机器人】ROS1工程案例：服务和动作</div></div></a></div><div><a href="/2021/12/17/2021q4/118-ros-note-code-naming/" title="【机器人】ROS1程序运行指北：启动、重命名、launch"><img class="cover" src="https://image.discover304.top/bai_gu_gu_head.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-10-10</div><div class="title">【机器人】ROS1程序运行指北：启动、重命名、launch</div></div></a></div><div><a href="/2021/12/17/2021q4/118-ros-note-code-type/" title="【机器人】ROS1工程案例：自定义消息类型"><img class="cover" src="https://image.discover304.top/bai_gu_gu_head.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-10-10</div><div class="title">【机器人】ROS1工程案例：自定义消息类型</div></div></a></div><div><a href="/2021/12/17/2021q4/118-ros-note-code/" title="【机器人】ROS1工程案例：基础部分"><img class="cover" src="https://image.discover304.top/bai_gu_gu_head.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-10-10</div><div class="title">【机器人】ROS1工程案例：基础部分</div></div></a></div><div><a href="/2021/12/17/2021q4/118-ros-note2/" title="【机器人】ROS1程序中的服务Service：精简解析"><img class="cover" src="https://image.discover304.top/bai_gu_gu_head.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-10-10</div><div class="title">【机器人】ROS1程序中的服务Service：精简解析</div></div></a></div><div><a href="/2021/12/17/2021q4/118-ros-note/" title="【机器人】ROS1程序框架：架构部分"><img class="cover" src="https://image.discover304.top/bai_gu_gu_head.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-10-10</div><div class="title">【机器人】ROS1程序框架：架构部分</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">✨白拾ShiroX✨</div><div class="author-info__description">Love Everything You Like.</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">298</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">203</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">30</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/98639326"><i class="fab fa-bilibili"></i><span>Bilibili Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/yhbcode000" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://x.com/ShiroHiro2024" target="_blank" title="X"><i class="fab fa-x"></i></a><a class="social-icon" href="https://www.youtube.com/channel/UCuQQr55i3VCQuCPMTQnpzDA" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a><a class="social-icon" href="https://blog.csdn.net/Discover304" target="_blank" title="CSDN"><i class="fa-solid fa-c"></i></a><a class="social-icon" href="https://www.zhihu.com/people/discover-56-86-75" target="_blank" title="知乎"><i class="fa-brands fa-zhihu"></i></a><a class="social-icon" href="mailto:hobart.yang@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://jq.qq.com/?_wv=1027&amp;k=EaGddTQg" target="_blank" title="QQ"><i class="fa-brands fa-qq"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">✨动态更新：<p style="text-align:center">享受奇迹般的和平日常！</p>✨聊天QQ群：<p style="text-align:center"><a target="_blank" rel="noopener" href="https://jq.qq.com/?_wv=1027&k=EaGddTQg"><strong>兔叽の魔术工房</strong></a><br>942-848-525</p>✨我们的口号是：<p style="text-align:center; color:#39C5BB">人工降神，机械飞升！</p><a target="_blank" rel="noopener" href='https://space.bilibili.com/98639326'><img src='/img/mikulittletrans.png'></a></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E8%A8%80"><span class="toc-text">引言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%94%9F%E7%89%A9%E5%AD%A6%E4%B8%AD%E7%9A%84%E6%93%8D%E6%8E%A7%E8%83%BD%E5%8A%9B"><span class="toc-text">1. 生物学中的操控能力</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-%E5%8A%A8%E7%89%A9%E7%9A%84%E6%93%8D%E6%8E%A7%E8%83%BD%E5%8A%9B"><span class="toc-text">1.1 动物的操控能力</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-%E6%9C%80%E8%81%AA%E6%98%8E%E7%9A%84%E5%8A%A8%E7%89%A9"><span class="toc-text">1.2 最聪明的动物</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E5%A4%A7%E8%84%91%E7%BB%93%E6%9E%84%E4%B8%8E%E6%93%8D%E6%8E%A7%E8%83%BD%E5%8A%9B"><span class="toc-text">1.3 大脑结构与操控能力</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%88%9A%E4%BD%93%E8%BF%90%E5%8A%A8%E5%AD%A6%E5%9F%BA%E7%A1%80"><span class="toc-text">2. 刚体运动学基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E6%97%8B%E8%BD%AC%E7%9F%A9%E9%98%B5%E4%B8%8E%E5%A7%BF%E6%80%81%E8%A1%A8%E7%A4%BA"><span class="toc-text">2.1 旋转矩阵与姿态表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E4%BD%8D%E7%BD%AE%E4%B8%8E%E9%80%9F%E5%BA%A6%E5%85%B3%E7%B3%BB"><span class="toc-text">2.2 位置与速度关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E6%97%8B%E8%BD%AC%E4%B8%8E%E8%A7%92%E9%80%9F%E5%BA%A6%E5%85%B3%E7%B3%BB"><span class="toc-text">2.3 旋转与角速度关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E5%88%9A%E4%BD%93%E4%BD%8D%E5%A7%BF%E4%B8%8E%E9%80%9F%E5%BA%A6%E6%89%AD%E9%87%8F"><span class="toc-text">2.4 刚体位姿与速度扭量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%B3%8A%E6%9D%BE%E5%85%AC%E5%BC%8F"><span class="toc-text">3. 泊松公式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E5%8F%8D%E6%B1%82%E5%85%AC%E5%BC%8F"><span class="toc-text">3.1 反求公式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%9C%BA%E6%A2%B0%E8%87%82%E7%B1%BB%E5%9E%8B"><span class="toc-text">4. 机械臂类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E4%B8%B2%E8%81%94%E6%9C%BA%E6%A2%B0%E8%87%82%EF%BC%88Serial-Manipulator%EF%BC%89"><span class="toc-text">4.1 串联机械臂（Serial Manipulator）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E5%B9%B6%E8%81%94%E6%9C%BA%E6%A2%B0%E8%87%82%EF%BC%88Parallel-Manipulator%EF%BC%89"><span class="toc-text">4.2 并联机械臂（Parallel Manipulator）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%B7%B7%E5%90%88%E5%9E%8B%E6%9C%BA%E6%A2%B0%E8%87%82%EF%BC%88Hybrid-Manipulator%EF%BC%89"><span class="toc-text">4.3 混合型机械臂（Hybrid Manipulator）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-%E7%B1%BB%E5%9E%8B%E5%AF%B9%E6%AF%94%E6%80%BB%E7%BB%93"><span class="toc-text">4.4 类型对比总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E4%BA%BA%E4%BD%93%E6%89%8B%E8%87%82%E4%B8%8E%E6%9C%BA%E6%A2%B0%E8%87%82%E7%9A%84%E7%B1%BB%E6%AF%94"><span class="toc-text">5. 人体手臂与机械臂的类比</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E5%8D%95%E8%87%AA%E7%94%B1%E5%BA%A6%E6%97%8B%E8%BD%AC%E5%85%B3%E8%8A%82%E6%A8%A1%E5%9E%8B"><span class="toc-text">5.1 单自由度旋转关节模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E6%A8%A1%E5%9E%8B%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB"><span class="toc-text">5.2 模型对应关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E8%BF%90%E5%8A%A8%E5%AD%A6%E8%A7%A3%E9%87%8A"><span class="toc-text">5.3 运动学解释</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%85%B3%E8%8A%82%E5%9D%90%E6%A0%87%E4%B8%8E%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4"><span class="toc-text">6. 关节坐标与工作空间</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E5%85%B3%E8%8A%82%E7%A9%BA%E9%97%B4%EF%BC%88Joint-Space%EF%BC%89"><span class="toc-text">6.1 关节空间（Joint Space）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E5%B7%A5%E4%BD%9C%E7%A9%BA%E9%97%B4%EF%BC%88Workspace%EF%BC%89"><span class="toc-text">6.2 工作空间（Workspace）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-%E6%AD%A3%E8%BF%90%E5%8A%A8%E5%AD%A6%E5%85%B3%E7%B3%BB"><span class="toc-text">6.3 正运动学关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-4-%E5%9B%BE%E7%A4%BA%E8%AF%B4%E6%98%8E"><span class="toc-text">6.4 图示说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-5-%E6%80%BB%E7%BB%93"><span class="toc-text">6.5 总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E5%8A%9B%E9%97%AD%E5%90%88%EF%BC%88Force-Closure%EF%BC%89"><span class="toc-text">7. 力闭合（Force Closure）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E5%AE%9A%E4%B9%89"><span class="toc-text">7.1 定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E7%89%B9%E6%80%A7%E8%AF%B4%E6%98%8E-%E2%9C%B3%EF%B8%8F"><span class="toc-text">7.2 特性说明 ✳️</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-%E7%9B%B4%E8%A7%82%E7%90%86%E8%A7%A3-%F0%9F%A7%A0"><span class="toc-text">7.3 直观理解 🧠</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-4-%E6%91%A9%E6%93%A6%E9%94%A5%EF%BC%88Friction-Cones%EF%BC%89"><span class="toc-text">7.4 摩擦锥（Friction Cones）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-5-%E5%8A%9B%E9%97%AD%E5%90%88-vs-%E5%BD%A2%E9%97%AD%E5%90%88%EF%BC%88Force-vs-Form-Closure%EF%BC%89"><span class="toc-text">7.5 力闭合 vs. 形闭合（Force vs. Form Closure）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-6-%E6%9C%80%E5%B0%8F%E6%8E%A5%E8%A7%A6%E6%95%B0%EF%BC%88Minimal-Contacts%EF%BC%89"><span class="toc-text">7.6 最小接触数（Minimal Contacts）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-7-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF-4-%E8%80%8C%E4%B8%8D%E6%98%AF-3%EF%BC%9F%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF-7-%E8%80%8C%E4%B8%8D%E6%98%AF-6%EF%BC%9F"><span class="toc-text">7.7 为什么是 4 而不是 3？为什么是 7 而不是 6？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-8-%E6%80%BB%E7%BB%93-%E2%9C%85"><span class="toc-text">7.8 总结 ✅</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E5%88%9A%E4%BD%93%E5%8A%A8%E5%8A%9B%E5%AD%A6%EF%BC%88Rigid-Body-Dynamics%EF%BC%89"><span class="toc-text">8. 刚体动力学（Rigid Body Dynamics）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E7%89%9B%E9%A1%BF%E2%80%93%E6%AC%A7%E6%8B%89%E6%96%B9%E7%A8%8B%EF%BC%88Newton%E2%80%93Euler-Equations%EF%BC%89"><span class="toc-text">8.1 牛顿–欧拉方程（Newton–Euler Equations）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%9A%99%EF%B8%8F-%E5%B9%B3%E5%8A%A8%E6%96%B9%E7%A8%8B%EF%BC%88Translation-%E2%80%93-Newton%EF%BC%89"><span class="toc-text">⚙️ 平动方程（Translation – Newton）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%94%81-%E8%BD%AC%E5%8A%A8%E6%96%B9%E7%A8%8B%EF%BC%88Rotation-%E2%80%93-Euler%EF%BC%89"><span class="toc-text">🔁 转动方程（Rotation – Euler）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E5%9B%BE%E7%A4%BA%E7%AC%A6%E5%8F%B7%E8%AF%B4%E6%98%8E"><span class="toc-text">8.2 图示符号说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-%E7%89%A9%E7%90%86%E6%84%8F%E4%B9%89%E6%80%BB%E7%BB%93"><span class="toc-text">8.3 物理意义总结</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E9%9D%9E%E6%A8%A1%E5%9E%8B%E6%8E%A7%E5%88%B6%E6%96%B9%E6%B3%95%EF%BC%88Non-model-Based-Control%EF%BC%89"><span class="toc-text">9. 非模型控制方法（Non-model Based Control）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-%E6%A6%82%E5%BF%B5"><span class="toc-text">9.1 概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-%E6%A1%88%E4%BE%8B%EF%BC%9ARNN-%E8%BF%90%E5%8A%A8%E5%AD%A6%E6%B7%B7%E5%90%88%E6%8E%A7%E5%88%B6%E5%99%A8"><span class="toc-text">9.2 案例：RNN + 运动学混合控制器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-3-%E7%89%B9%E7%82%B9%E4%B8%8E%E4%BC%98%E5%8A%BF"><span class="toc-text">9.3 特点与优势</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E6%A8%A1%E4%BB%BF%E5%AD%A6%E4%B9%A0%EF%BC%88Imitation-Learning-%E8%A1%8C%E4%B8%BA%E5%85%8B%E9%9A%86%EF%BC%89"><span class="toc-text">10. 模仿学习（Imitation Learning &#x2F; 行为克隆）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#10-1-%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5"><span class="toc-text">10.1 核心概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-2-%E6%95%B0%E6%8D%AE%E6%9D%A5%E6%BA%90-%F0%9F%93%BA"><span class="toc-text">10.2 数据来源 📺</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-3-%E7%8E%B0%E5%AE%9E%E4%B8%96%E7%95%8C%E5%BA%94%E7%94%A8-%F0%9F%A4%96"><span class="toc-text">10.3 现实世界应用 🤖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-4-%E4%BB%BF%E7%9C%9F%E7%8E%AF%E5%A2%83-%F0%9F%A7%A9"><span class="toc-text">10.4 仿真环境 🧩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-5-%E4%B8%80%E5%8F%A5%E8%AF%9D%E6%80%BB%E7%BB%93-%F0%9F%A7%A0"><span class="toc-text">10.5 一句话总结 🧠</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%BE%AE%E5%88%86%E8%BF%90%E5%8A%A8%E5%AD%A6%E4%B8%8E%E9%9B%85%E5%8F%AF%E6%AF%94%E7%9F%A9%E9%98%B5%EF%BC%88Differential-Kinematics-and-Jacobian%EF%BC%89"><span class="toc-text">11. 机器人微分运动学与雅可比矩阵（Differential Kinematics and Jacobian）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#11-1-%E5%BE%AE%E5%88%86%E8%BF%90%E5%8A%A8%E5%AD%A6%E5%9F%BA%E6%9C%AC%E5%85%B3%E7%B3%BB"><span class="toc-text">11.1 微分运动学基本关系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-2-%E9%9B%85%E5%8F%AF%E6%AF%94%E7%9F%A9%E9%98%B5%E7%9A%84%E7%89%A9%E7%90%86%E6%84%8F%E4%B9%89"><span class="toc-text">11.2 雅可比矩阵的物理意义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-3-%E6%97%8B%E8%BD%AC%E9%83%A8%E5%88%86%E7%9A%84%E9%9B%85%E5%8F%AF%E6%AF%94%E7%9F%A9%E9%98%B5%EF%BC%88Rotational-Part-of-Jacobian%EF%BC%89"><span class="toc-text">11.3 旋转部分的雅可比矩阵（Rotational Part of Jacobian）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-4-%E9%9B%85%E5%8F%AF%E6%AF%94%E7%9F%A9%E9%98%B5%E7%9A%84%E7%BB%93%E6%9E%84%E5%88%86%E5%9D%97"><span class="toc-text">11.4 雅可比矩阵的结构分块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-5-%E9%9B%85%E5%8F%AF%E6%AF%94%E7%9F%A9%E9%98%B5%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-text">11.5 雅可比矩阵的应用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-6-%E7%9B%B4%E8%A7%82%E7%90%86%E8%A7%A3-%F0%9F%A7%A9"><span class="toc-text">11.6 直观理解 🧩</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-%E9%9B%85%E5%8F%AF%E6%AF%94%E9%80%86%E4%B8%8E%E8%BF%90%E5%8A%A8%E6%8E%A7%E5%88%B6%EF%BC%88Inverse-Jacobian-and-Motion-Control%EF%BC%89"><span class="toc-text">12. 雅可比逆与运动控制（Inverse Jacobian and Motion Control）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#12-1-%E4%BB%8E%E7%9B%AE%E6%A0%87%E9%80%9F%E5%BA%A6%E5%88%B0%E5%85%B3%E8%8A%82%E9%80%9F%E5%BA%A6%E7%9A%84%E5%8F%8D%E5%90%91%E6%98%A0%E5%B0%84"><span class="toc-text">12.1 从目标速度到关节速度的反向映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-2-%E4%BD%8D%E7%BD%AE%E6%8E%A7%E5%88%B6%EF%BC%88Position-Control%EF%BC%89"><span class="toc-text">12.2 位置控制（Position Control）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-3-%E5%A7%BF%E6%80%81%E6%8E%A7%E5%88%B6%EF%BC%88Orientation-Control%EF%BC%89"><span class="toc-text">12.3 姿态控制（Orientation Control）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-4-%E4%BB%8E%E6%97%8B%E8%BD%AC%E7%9F%A9%E9%98%B5%E8%AE%A1%E7%AE%97%E6%97%8B%E8%BD%AC%E5%90%91%E9%87%8F"><span class="toc-text">12.4 从旋转矩阵计算旋转向量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-5-%E9%9B%85%E5%8F%AF%E6%AF%94%E4%BC%AA%E9%80%86%EF%BC%88Jacobian-Pseudoinverse%EF%BC%89"><span class="toc-text">12.5 雅可比伪逆（Jacobian Pseudoinverse）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-%E9%9B%85%E5%8F%AF%E6%AF%94%E7%9F%A9%E9%98%B5%E7%9A%84%E7%BB%B4%E5%BA%A6%E4%B8%8E%E5%BD%A2%E6%80%81%E5%88%86%E7%B1%BB%EF%BC%88Jacobian-Dimension-and-Shape-Summary%EF%BC%89"><span class="toc-text">13. 雅可比矩阵的维度与形态分类（Jacobian Dimension and Shape Summary）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#13-1-%E4%B8%89%E7%A7%8D%E6%83%85%E5%BD%A2%EF%BC%88Three-Cases%EF%BC%89"><span class="toc-text">13.1 三种情形（Three Cases）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-2-%E9%9B%85%E5%8F%AF%E6%AF%94%E7%9F%A9%E9%98%B5%E7%9A%84%E5%BD%A2%E6%80%81%E5%88%86%E7%B1%BB%EF%BC%88Jacobian-Shape-Summary%EF%BC%89"><span class="toc-text">13.2 雅可比矩阵的形态分类（Jacobian Shape Summary）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A0-%E6%96%B9%E5%BD%A2%E9%9B%85%E5%8F%AF%E6%AF%94%E7%9F%A9%E9%98%B5%EF%BC%88Square-Jacobian%EF%BC%89"><span class="toc-text">① 方形雅可比矩阵（Square Jacobian）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A1-%E7%98%A6%E9%9B%85%E5%8F%AF%E6%AF%94%E7%9F%A9%E9%98%B5%EF%BC%88Slim-Jacobian%EF%BC%89"><span class="toc-text">② 瘦雅可比矩阵（Slim Jacobian）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%91%A2-%E8%83%96%E9%9B%85%E5%8F%AF%E6%AF%94%E7%9F%A9%E9%98%B5%EF%BC%88Fat-Jacobian%EF%BC%89"><span class="toc-text">③ 胖雅可比矩阵（Fat Jacobian）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%93%8A-%E4%B8%89%E7%A7%8D%E9%9B%85%E5%8F%AF%E6%AF%94%E7%9F%A9%E9%98%B5%E5%BD%A2%E6%80%81%E5%AF%B9%E6%AF%94"><span class="toc-text">📊 三种雅可比矩阵形态对比</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-3-%E4%BC%AA%E9%80%86%EF%BC%88Pseudoinverse%EF%BC%89%E4%B8%8E%E6%9C%80%E4%BC%98%E8%A7%A3"><span class="toc-text">13.3 伪逆（Pseudoinverse）与最优解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%AC%A0%E7%BA%A6%E6%9D%9F%E7%B3%BB%E7%BB%9F%EF%BC%88Under-constrained-N-6-%EF%BC%89"><span class="toc-text">(1) 欠约束系统（Under-constrained, $N &lt; 6$）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E8%BF%87%E7%BA%A6%E6%9D%9F%E7%B3%BB%E7%BB%9F%EF%BC%88Over-constrained-N-6-%EF%BC%89"><span class="toc-text">(2) 过约束系统（Over-constrained, $N &gt; 6$）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-%E7%8A%B6%E6%80%81%E7%A9%BA%E9%97%B4%E8%A1%A8%E7%A4%BA%EF%BC%88State-Space-Representation%EF%BC%89"><span class="toc-text">14. 状态空间表示（State Space Representation）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#14-1-%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3"><span class="toc-text">14.1 定义与基本思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-2-%E5%8D%95%E8%BE%93%E5%85%A5%E5%8D%95%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F%EF%BC%88SISO-Single-Input-Single-Output%EF%BC%89"><span class="toc-text">14.2 单输入单输出系统（SISO, Single-Input Single-Output）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-3-%E5%A4%9A%E8%BE%93%E5%85%A5%E5%A4%9A%E8%BE%93%E5%87%BA%E7%B3%BB%E7%BB%9F%EF%BC%88MIMO-Multi-Input-Multi-Output%EF%BC%89"><span class="toc-text">14.3 多输入多输出系统（MIMO, Multi-Input Multi-Output）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-4-%E7%8A%B6%E6%80%81%E7%A9%BA%E9%97%B4%E6%A8%A1%E5%9E%8B%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="toc-text">14.4 状态空间模型的优势</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%B3%BB%E7%BB%9F%E4%B8%8E%E7%BA%BF%E6%80%A7%E5%8C%96%E6%8E%A7%E5%88%B6%EF%BC%88Nonlinear-Systems-and-Linearization-Control%EF%BC%89"><span class="toc-text">15. 非线性系统与线性化控制（Nonlinear Systems and Linearization Control）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#15-1-%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%B3%BB%E7%BB%9F%EF%BC%88Nonlinear-Systems%EF%BC%89"><span class="toc-text">15.1 非线性系统（Nonlinear Systems）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-2-%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9D%9E%E7%BA%BF%E6%80%A7%E6%98%AF%E9%97%AE%E9%A2%98%EF%BC%9F%EF%BC%88Why-is-this-a-Problem-%EF%BC%89"><span class="toc-text">15.2 为什么非线性是问题？（Why is this a Problem?）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-3-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%EF%BC%9A%E7%BA%BF%E6%80%A7%E5%8C%96%EF%BC%88Linearization%EF%BC%89"><span class="toc-text">15.3 解决方案：线性化（Linearization）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-4-%E7%BA%BF%E6%80%A7%E5%8C%96%E7%8A%B6%E6%80%81%E7%A9%BA%E9%97%B4%E6%A8%A1%E5%9E%8B%EF%BC%88Linearized-State-Space-Model%EF%BC%89"><span class="toc-text">15.4 线性化状态空间模型（Linearized State-Space Model）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%A7%A9-%E6%9C%80%E7%BB%88%E7%BA%BF%E6%80%A7%E5%8C%96%E7%B3%BB%E7%BB%9F%EF%BC%88Final-Linearized-System%EF%BC%89"><span class="toc-text">🧩 最终线性化系统（Final Linearized System）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%93%90-%E9%9B%85%E5%8F%AF%E6%AF%94%E7%9F%A9%E9%98%B5%E5%AE%9A%E4%B9%89%EF%BC%88Jacobian-Matrices%EF%BC%89"><span class="toc-text">📐 雅可比矩阵定义（Jacobian Matrices）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%A4%96-%E4%B8%8E%E6%9C%BA%E5%99%A8%E4%BA%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%85%B3%E7%B3%BB%EF%BC%88Conceptual-Link-to-Robots%EF%BC%89"><span class="toc-text">🤖 与机器人系统的关系（Conceptual Link to Robots）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%92%A1-%E5%B7%A5%E7%A8%8B%E6%84%8F%E4%B9%89%EF%BC%88Practical-Meaning%EF%BC%89"><span class="toc-text">💡 工程意义（Practical Meaning）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-5-%E5%B9%B3%E8%A1%A1%E7%82%B9%E7%BA%BF%E6%80%A7%E5%8C%96%EF%BC%88Linearization-about-an-Equilibrium-Point%EF%BC%89"><span class="toc-text">15.5 平衡点线性化（Linearization about an Equilibrium Point）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%9A%99%EF%B8%8F-%E9%9D%9E%E7%BA%BF%E6%80%A7%E7%B3%BB%E7%BB%9F%E5%AE%9A%E4%B9%89"><span class="toc-text">⚙️ 非线性系统定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%9A%96%EF%B8%8F-%E5%B9%B3%E8%A1%A1%E7%82%B9%EF%BC%88Equilibrium-Point%EF%BC%89"><span class="toc-text">⚖️ 平衡点（Equilibrium Point）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%94%81-%E5%B9%B3%E8%A1%A1%E7%82%B9%E9%99%84%E8%BF%91%E7%BA%BF%E6%80%A7%E5%8C%96%EF%BC%88Linearizing-around-x-eq-u-eq-%EF%BC%89"><span class="toc-text">🔁 平衡点附近线性化（Linearizing around $(x^{eq}, u^{eq})$）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%A7%A9-%E7%B3%BB%E7%BB%9F%E5%90%AB%E4%B9%89%E8%AF%B4%E6%98%8E"><span class="toc-text">🧩 系统含义说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%92%A1-%E5%B7%A5%E7%A8%8B%E6%84%8F%E4%B9%89%EF%BC%88In-Robotics-Context%EF%BC%89"><span class="toc-text">💡 工程意义（In Robotics Context）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-6-%E5%8F%8D%E9%A6%88%E7%BA%BF%E6%80%A7%E5%8C%96%EF%BC%88Feedback-Linearization%EF%BC%89"><span class="toc-text">15.6 反馈线性化（Feedback Linearization）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%A7%A9-%E5%AE%9A%E4%B9%89%EF%BC%88Definition%EF%BC%89"><span class="toc-text">🧩 定义（Definition）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%93%98-%E6%8E%A8%E5%AF%BC%E8%BF%87%E7%A8%8B%EF%BC%88Step-by-step-Derivation%EF%BC%89"><span class="toc-text">📘 推导过程（Step-by-step Derivation）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%92%A1-%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%8F%8D%E9%A6%88%E7%BA%BF%E6%80%A7%E5%8C%96%EF%BC%88Why-is-it-Necessary-%EF%BC%89"><span class="toc-text">💡 为什么需要反馈线性化（Why is it Necessary?）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%9A%99%EF%B8%8F-%E4%BC%98%E5%8A%BF%EF%BC%88Key-Advantages%EF%BC%89"><span class="toc-text">⚙️ 优势（Key Advantages）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%93%98-%E7%A4%BA%E4%BE%8B%E4%B8%80%EF%BC%9A%E6%9C%BA%E6%A2%B0%E8%87%82%E5%8A%A8%E5%8A%9B%E5%AD%A6%E4%B8%AD%E7%9A%84%E5%8F%8D%E9%A6%88%E7%BA%BF%E6%80%A7%E5%8C%96"><span class="toc-text">📘 示例一：机械臂动力学中的反馈线性化</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%F0%9F%A7%A0-%E6%AD%A5%E9%AA%A4-1%EF%BC%9A%E5%AE%9A%E4%B9%89%E6%96%B0%E7%9A%84%E8%BE%93%E5%85%A5"><span class="toc-text">🧠 步骤 1：定义新的输入</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E2%9A%99%EF%B8%8F-%E6%AD%A5%E9%AA%A4-2%EF%BC%9A%E4%BB%A3%E5%85%A5%E7%B3%BB%E7%BB%9F%E6%96%B9%E7%A8%8B"><span class="toc-text">⚙️ 步骤 2：代入系统方程</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%F0%9F%A7%BE-%E6%AD%A5%E9%AA%A4-3%EF%BC%9A%E7%8A%B6%E6%80%81%E7%A9%BA%E9%97%B4%E5%BD%A2%E5%BC%8F"><span class="toc-text">🧾 步骤 3：状态空间形式</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%93%98-%E7%A4%BA%E4%BE%8B%E4%BA%8C%EF%BC%9A%E4%B8%A5%E6%A0%BC%E5%8F%8D%E9%A6%88%E5%BD%A2%E5%BC%8F%EF%BC%88Strict-Feedback-Form%EF%BC%89"><span class="toc-text">📘 示例二：严格反馈形式（Strict Feedback Form）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4-1%EF%BC%9A%E5%BC%95%E5%85%A5%E6%96%B0%E5%8F%98%E9%87%8F"><span class="toc-text">步骤 1：引入新变量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4-2%EF%BC%9A%E8%AE%BE%E8%AE%A1%E5%8F%8D%E9%A6%88%E8%BE%93%E5%85%A5"><span class="toc-text">步骤 2：设计反馈输入</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A4-3%EF%BC%9A%E4%BB%A3%E5%85%A5%E7%B3%BB%E7%BB%9F"><span class="toc-text">步骤 3：代入系统</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%9C%85-%E6%80%BB%E7%BB%93"><span class="toc-text">✅ 总结</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%88%86%E6%9E%90%EF%BC%88System-Stability-Analysis%EF%BC%89"><span class="toc-text">16. 稳定性分析（System Stability Analysis）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#16-1-%E7%A8%B3%E5%AE%9A%E6%80%A7%E7%9A%84%E6%A6%82%E5%BF%B5%EF%BC%88Concept-of-Stability%EF%BC%89"><span class="toc-text">16.1 稳定性的概念（Concept of Stability）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%92%A1-%E4%B8%BA%E4%BB%80%E4%B9%88%E7%A8%B3%E5%AE%9A%E6%80%A7%E5%BE%88%E9%87%8D%E8%A6%81%EF%BC%88Why-Stability-Matters%EF%BC%89"><span class="toc-text">💡 为什么稳定性很重要（Why Stability Matters）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-2-%E7%A8%B3%E5%AE%9A%E6%80%A7%E7%9A%84%E7%B1%BB%E5%9E%8B%EF%BC%88Types-of-Stability%EF%BC%89"><span class="toc-text">16.2 稳定性的类型（Types of Stability）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-3-%E7%8A%B6%E6%80%81%E7%A9%BA%E9%97%B4%E4%B8%8B%E7%9A%84%E7%A8%B3%E5%AE%9A%E6%80%A7%EF%BC%88Stability-in-State-Space%EF%BC%89"><span class="toc-text">16.3 状态空间下的稳定性（Stability in State-Space）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A4%E6%8D%AE%EF%BC%88Criterion%EF%BC%89"><span class="toc-text">判据（Criterion）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B%E8%A7%A3%E9%87%8A%EF%BC%9A"><span class="toc-text">示例解释：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-4-%E6%9D%8E%E9%9B%85%E6%99%AE%E8%AF%BA%E5%A4%AB%E7%A8%B3%E5%AE%9A%E6%80%A7%EF%BC%88Lyapunov-Stability%EF%BC%89"><span class="toc-text">16.4 李雅普诺夫稳定性（Lyapunov Stability）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%A7%A0-%E7%9B%B4%E8%A7%82%E7%90%86%E8%A7%A3%EF%BC%88Explanation%EF%BC%89"><span class="toc-text">🧠 直观理解（Explanation）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%93%90-%E6%95%B0%E5%AD%A6%E5%AE%9A%E4%B9%89%EF%BC%88Mathematical-Definition%EF%BC%89"><span class="toc-text">📐 数学定义（Mathematical Definition）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-5-%E6%9D%8E%E9%9B%85%E6%99%AE%E8%AF%BA%E5%A4%AB%E5%87%BD%E6%95%B0%E6%B3%95%EF%BC%88Lyapunov-Function-Method%EF%BC%89"><span class="toc-text">16.5 李雅普诺夫函数法（Lyapunov Function Method）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E6%A0%87%E5%87%86%EF%BC%9A"><span class="toc-text">判断标准：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%F0%9F%92%A1-%E4%B8%80%E7%BB%B4%E7%B3%BB%E7%BB%9F%E6%95%B0%E5%80%BC%E4%BE%8B%E5%AD%90%EF%BC%881D-Example%EF%BC%89"><span class="toc-text">💡 一维系统数值例子（1D Example）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%9C%85-%E5%B0%8F%E7%BB%93%EF%BC%88Summary%EF%BC%89"><span class="toc-text">✅ 小结（Summary）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-%E4%BC%A0%E9%80%92%E5%87%BD%E6%95%B0%E4%B8%8E-BIBO-%E7%A8%B3%E5%AE%9A%E6%80%A7%EF%BC%88Transfer-Function-and-BIBO-Stability%EF%BC%89"><span class="toc-text">17. 传递函数与 BIBO 稳定性（Transfer Function and BIBO Stability）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#17-1-%E4%BC%A0%E9%80%92%E5%87%BD%E6%95%B0%EF%BC%88Transfer-Function%EF%BC%89"><span class="toc-text">17.1 传递函数（Transfer Function）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-2-%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E5%8F%98%E6%8D%A2%EF%BC%88Laplace-Transform%EF%BC%89"><span class="toc-text">17.2 拉普拉斯变换（Laplace Transform）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89%EF%BC%9A"><span class="toc-text">定义：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-3-%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E5%8F%98%E6%8D%A2%E6%80%A7%E8%B4%A8%EF%BC%88Properties%EF%BC%89"><span class="toc-text">17.3 拉普拉斯变换性质（Properties）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-4-%E5%88%9D%E5%80%BC%E4%B8%8E%E7%BB%88%E5%80%BC%E5%AE%9A%E7%90%86%EF%BC%88Initial-Final-Value-Theorems%EF%BC%89"><span class="toc-text">17.4 初值与终值定理（Initial &amp; Final Value Theorems）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-5-BIBO-%E7%A8%B3%E5%AE%9A%E6%80%A7%EF%BC%88Bounded-Input-%E2%80%93-Bounded-Output%EF%BC%89"><span class="toc-text">17.5 BIBO 稳定性（Bounded Input – Bounded Output）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8E%E4%BC%A0%E9%80%92%E5%87%BD%E6%95%B0%E7%9A%84%E5%88%A4%E6%8D%AE%EF%BC%9A"><span class="toc-text">基于传递函数的判据：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-6-%E5%AF%B9%E6%AF%94%EF%BC%9ABIBO-vs-%E5%86%85%E9%83%A8%E7%A8%B3%E5%AE%9A%EF%BC%88Internal-Stability%EF%BC%89"><span class="toc-text">17.6 对比：BIBO vs 内部稳定（Internal Stability）</span></a></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/10/09/2025q4/209-robotics-review/" title="【机器人】操作与运动控制原理"><img src="https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images" onerror="this.onerror=null;this.src='/img/404.png'" alt="【机器人】操作与运动控制原理"/></a><div class="content"><a class="title" href="/2025/10/09/2025q4/209-robotics-review/" title="【机器人】操作与运动控制原理">【机器人】操作与运动控制原理</a><time datetime="2025-10-09T21:09:31.734Z" title="Updated 2025-10-10 05:09:31">2025-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/05/31/2025q2/208-cloud-studio/" title="208-Cloud-Studio"><img src="https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images" onerror="this.onerror=null;this.src='/img/404.png'" alt="208-Cloud-Studio"/></a><div class="content"><a class="title" href="/2025/05/31/2025q2/208-cloud-studio/" title="208-Cloud-Studio">208-Cloud-Studio</a><time datetime="2025-10-09T18:31:08.632Z" title="Updated 2025-10-10 02:31:08">2025-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/29/2025q2/207-illusion-in-attention/" title="207-Illusion-in-Attention"><img src="https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images" onerror="this.onerror=null;this.src='/img/404.png'" alt="207-Illusion-in-Attention"/></a><div class="content"><a class="title" href="/2025/04/29/2025q2/207-illusion-in-attention/" title="207-Illusion-in-Attention">207-Illusion-in-Attention</a><time datetime="2025-10-09T18:31:08.577Z" title="Updated 2025-10-10 02:31:08">2025-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/27/2025q2/206-leetcode-and-hackerrank/" title="206-Leetcode_and_hackerrank"><img src="https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images" onerror="this.onerror=null;this.src='/img/404.png'" alt="206-Leetcode_and_hackerrank"/></a><div class="content"><a class="title" href="/2025/04/27/2025q2/206-leetcode-and-hackerrank/" title="206-Leetcode_and_hackerrank">206-Leetcode_and_hackerrank</a><time datetime="2025-10-09T18:31:08.549Z" title="Updated 2025-10-10 02:31:08">2025-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/27/2025q2/205-clash/" title="205-Clash"><img src="https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images" onerror="this.onerror=null;this.src='/img/404.png'" alt="205-Clash"/></a><div class="content"><a class="title" href="/2025/04/27/2025q2/205-clash/" title="205-Clash">205-Clash</a><time datetime="2025-10-09T18:31:08.523Z" title="Updated 2025-10-10 02:31:08">2025-10-10</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By ✨白拾ShiroX✨</div><div><a target="_blank" href="https://beian.miit.gov.cn/" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;"> 冀ICP备2021025381号-1</p></a></div><div><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=13060602001430" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/img/beian.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">冀公网安备 13060602001430号</p></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="Increase font size"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="Decrease font size"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.spacingElementById('content-inner')
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
+      .then(() => {
+        pangu.spacingElementById('content-inner')
+      })
+  }
+}
+
+function panguInit () {
+  if (false){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    loader: {
+      source: {
+        '[tex]/amsCd': '[tex]/amscd'
+      }
+    },
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        addClass: [200,() => {
+          document.querySelectorAll('mjx-container:not([display=\'true\']').forEach( node => {
+            const target = node.parentNode
+            if (!target.classList.contains('has-jax')) {
+              target.classList.add('mathjax-overflow')
+            }
+          })
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>if (document.getElementsByClassName('mermaid').length) {
+  if (window.mermaidJsLoad) mermaid.init()
+  else {
+    getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
+      window.mermaidJsLoad = true
+      mermaid.initialize({
+        theme: 'neutral',
+      })
+      false && mermaid.init()
+    })
+  }
+}</script><script>function loadValine () {
+  function initValine () {
+    let initData = {
+      el: '#vcomment',
+      appId: 'A9RWVELPcIotgfbpp9KLGXQM-gzGzoHsz',
+      appKey: 'MLgPQW5h0DPgE8jNkeREKubU',
+      placeholder: '欢迎留言呀。（网址是选填，可以留空）',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: true,
+      serverURLs: 'https://a9rwvelp.lc-cn-n1-shared.com',
+      emojiCDN: 'https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/',
+      emojiMaps: {"QQ1":"QQ/aini.gif","QQ2":"QQ/aixin.gif","QQ3":"QQ/aoman.gif","QQ4":"QQ/baiyan.gif","QQ5":"QQ/bangbangtang.gif","QQ6":"QQ/baojin.gif","QQ7":"QQ/baoquan.gif","QQ8":"QQ/bishi.gif","QQ9":"QQ/bizui.gif","QQ11":"QQ/cahan.gif","QQ12":"QQ/caidao.gif","QQ13":"QQ/chi.gif","QQ14":"QQ/ciya.gif","QQ15":"QQ/dabing.gif","QQ16":"QQ/daku.gif","QQ17":"QQ/dan.gif","QQ18":"QQ/deyi.gif","QQ19":"QQ/doge.gif","QQ20":"QQ/fadai.gif","QQ21":"QQ/fanu.gif","QQ22":"QQ/fendou.gif","QQ23":"QQ/ganga.gif","QQ24":"QQ/gouyin.gif","QQ25":"QQ/guzhang.gif","QQ26":"QQ/haixiu.gif","QQ27":"QQ/hanxiao.gif","QQ28":"QQ/haobang.gif","QQ29":"QQ/haqian.gif","QQ30":"QQ/hecai.gif","QQ31":"QQ/hexie.gif","QQ32":"QQ/huaixiao.gif","QQ33":"QQ/jie.gif","QQ34":"QQ/jingkong.gif","QQ35":"QQ/jingxi.gif","QQ36":"QQ/jingya.gif","QQ37":"QQ/juhua.gif","QQ38":"QQ/keai.gif","QQ39":"QQ/kelian.gif","QQ40":"QQ/koubi.gif","QQ41":"QQ/ku.gif","QQ42":"QQ/kuaikule.gif","QQ43":"QQ/kulou.gif","QQ44":"QQ/kun.gif","QQ45":"QQ/lanqiu.gif","QQ46":"QQ/leiben.gif","QQ47":"QQ/lenghan.gif","QQ48":"QQ/liuhan.gif","QQ49":"QQ/liulei.gif","QQ50":"QQ/nanguo.gif","QQ51":"QQ/OK.gif","QQ52":"QQ/penxue.gif","QQ53":"QQ/piezui.gif","QQ54":"QQ/pijiu.gif","QQ55":"QQ/qiang.gif","QQ56":"QQ/qiaoda.gif","QQ57":"QQ/qinqin.gif","QQ58":"QQ/qiudale.gif","QQ59":"QQ/quantou.gif","QQ60":"QQ/saorao.gif","QQ61":"QQ/se.gif","QQ62":"QQ/shengli.gif","QQ63":"QQ/shouqiang.gif","QQ64":"QQ/shuai.gif","QQ65":"QQ/shui.gif","QQ66":"QQ/tiaopi.gif","QQ67":"QQ/touxiao.gif","QQ68":"QQ/tu.gif","QQ69":"QQ/tuosai.gif","QQ70":"QQ/weiqu.gif","QQ71":"QQ/weixiao.gif","QQ72":"QQ/woshou.gif","QQ73":"QQ/wozuimei.gif","QQ74":"QQ/wunai.gif","QQ75":"QQ/xia.gif","QQ76":"QQ/xiaojiujie.gif","QQ77":"QQ/xiaoku.gif","QQ78":"QQ/xiaoyanger.gif","QQ79":"QQ/xieyanxiao.gif","QQ80":"QQ/xigua.gif","QQ81":"QQ/xu.gif","QQ82":"QQ/yangtuo.gif","QQ83":"QQ/yinxian.gif","QQ84":"QQ/yiwen.gif","QQ85":"QQ/youhengheng.gif","QQ86":"QQ/youling.gif","QQ87":"QQ/yun.gif","QQ88":"QQ/zaijian.gif","QQ89":"QQ/zhayanjian.gif","QQ90":"QQ/zhemo.gif","QQ91":"QQ/zhouma.gif","QQ92":"QQ/zhuakuang.gif","QQ93":"QQ/zuohengheng.gif","bilibiliHotKey1":"bilibiliHotKey/1.jpg","bilibiliHotKey2":"bilibiliHotKey/10.jpg","bilibiliHotKey3":"bilibiliHotKey/11.jpg","bilibiliHotKey4":"bilibiliHotKey/12.jpg","bilibiliHotKey5":"bilibiliHotKey/13.jpg","bilibiliHotKey6":"bilibiliHotKey/14.jpg","bilibiliHotKey7":"bilibiliHotKey/15.jpg","bilibiliHotKey8":"bilibiliHotKey/16.jpg","bilibiliHotKey9":"bilibiliHotKey/17.jpg","bilibiliHotKey10":"bilibiliHotKey/18.jpg","bilibiliHotKey11":"bilibiliHotKey/19.jpg","bilibiliHotKey12":"bilibiliHotKey/2.jpg","bilibiliHotKey13":"bilibiliHotKey/20.jpg","bilibiliHotKey14":"bilibiliHotKey/21.jpg","bilibiliHotKey15":"bilibiliHotKey/22.jpg","bilibiliHotKey16":"bilibiliHotKey/23.jpg","bilibiliHotKey17":"bilibiliHotKey/24.jpg","bilibiliHotKey18":"bilibiliHotKey/25.jpg","bilibiliHotKey19":"bilibiliHotKey/26.jpg","bilibiliHotKey20":"bilibiliHotKey/27.jpg","bilibiliHotKey21":"bilibiliHotKey/28.jpg","bilibiliHotKey22":"bilibiliHotKey/29.jpg","bilibiliHotKey23":"bilibiliHotKey/3.jpg","bilibiliHotKey24":"bilibiliHotKey/30.jpg","bilibiliHotKey25":"bilibiliHotKey/31.jpg","bilibiliHotKey26":"bilibiliHotKey/32.jpg","bilibiliHotKey27":"bilibiliHotKey/4.jpg","bilibiliHotKey28":"bilibiliHotKey/5.jpg","bilibiliHotKey29":"bilibiliHotKey/6.jpg","bilibiliHotKey30":"bilibiliHotKey/7.jpg","bilibiliHotKey31":"bilibiliHotKey/8.jpg","bilibiliHotKey32":"bilibiliHotKey/9.jpg","Menhera-chan1":"Menhera-chan/1.jpg","Menhera-chan2":"Menhera-chan/10.jpg","Menhera-chan3":"Menhera-chan/100.jpg","Menhera-chan4":"Menhera-chan/101.jpg","Menhera-chan5":"Menhera-chan/102.jpg","Menhera-chan6":"Menhera-chan/103.jpg","Menhera-chan7":"Menhera-chan/104.jpg","Menhera-chan8":"Menhera-chan/105.jpg","Menhera-chan9":"Menhera-chan/106.jpg","Menhera-chan10":"Menhera-chan/107.jpg","Menhera-chan11":"Menhera-chan/108.jpg","Menhera-chan12":"Menhera-chan/109.jpg","Menhera-chan13":"Menhera-chan/11.jpg","Menhera-chan14":"Menhera-chan/110.jpg","Menhera-chan15":"Menhera-chan/111.jpg","Menhera-chan16":"Menhera-chan/112.jpg","Menhera-chan17":"Menhera-chan/113.jpg","Menhera-chan18":"Menhera-chan/114.jpg","Menhera-chan19":"Menhera-chan/115.jpg","Menhera-chan20":"Menhera-chan/116.jpg","Menhera-chan21":"Menhera-chan/117.jpg","Menhera-chan22":"Menhera-chan/118.jpg","Menhera-chan23":"Menhera-chan/119.jpg","Menhera-chan24":"Menhera-chan/12.jpg","Menhera-chan25":"Menhera-chan/120.jpg","Menhera-chan26":"Menhera-chan/13.jpg","Menhera-chan27":"Menhera-chan/14.jpg","Menhera-chan28":"Menhera-chan/15.jpg","Menhera-chan29":"Menhera-chan/16.jpg","Menhera-chan30":"Menhera-chan/17.jpg","Menhera-chan31":"Menhera-chan/18.jpg","Menhera-chan32":"Menhera-chan/19.jpg","Menhera-chan33":"Menhera-chan/2.jpg","Menhera-chan34":"Menhera-chan/20.jpg","Menhera-chan35":"Menhera-chan/21.jpg","Menhera-chan36":"Menhera-chan/22.jpg","Menhera-chan37":"Menhera-chan/23.jpg","Menhera-chan38":"Menhera-chan/24.jpg","Menhera-chan39":"Menhera-chan/25.jpg","Menhera-chan40":"Menhera-chan/26.jpg","Menhera-chan41":"Menhera-chan/27.jpg","Menhera-chan42":"Menhera-chan/28.jpg","Menhera-chan43":"Menhera-chan/29.jpg","Menhera-chan44":"Menhera-chan/3.jpg","Menhera-chan45":"Menhera-chan/30.jpg","Menhera-chan46":"Menhera-chan/31.jpg","Menhera-chan47":"Menhera-chan/32.jpg","Menhera-chan48":"Menhera-chan/33.jpg","Menhera-chan49":"Menhera-chan/34.jpg","Menhera-chan50":"Menhera-chan/35.jpg","Menhera-chan51":"Menhera-chan/36.jpg","Menhera-chan52":"Menhera-chan/37.jpg","Menhera-chan53":"Menhera-chan/38.jpg","Menhera-chan54":"Menhera-chan/39.jpg","Menhera-chan55":"Menhera-chan/4.jpg","Menhera-chan56":"Menhera-chan/40.jpg","Menhera-chan57":"Menhera-chan/41.jpg","Menhera-chan58":"Menhera-chan/42.jpg","Menhera-chan59":"Menhera-chan/43.jpg","Menhera-chan60":"Menhera-chan/44.jpg","Menhera-chan61":"Menhera-chan/45.jpg","Menhera-chan62":"Menhera-chan/46.jpg","Menhera-chan63":"Menhera-chan/47.jpg","Menhera-chan64":"Menhera-chan/48.jpg","Menhera-chan65":"Menhera-chan/49.jpg","Menhera-chan66":"Menhera-chan/5.jpg","Menhera-chan67":"Menhera-chan/50.jpg","Menhera-chan68":"Menhera-chan/51.jpg","Menhera-chan69":"Menhera-chan/52.jpg","Menhera-chan70":"Menhera-chan/53(1).jpg","Menhera-chan71":"Menhera-chan/53.jpg","Menhera-chan72":"Menhera-chan/54.jpg","Menhera-chan73":"Menhera-chan/55.jpg","Menhera-chan74":"Menhera-chan/56.jpg","Menhera-chan75":"Menhera-chan/57.jpg","Menhera-chan76":"Menhera-chan/58.jpg","Menhera-chan77":"Menhera-chan/59.jpg","Menhera-chan78":"Menhera-chan/6.jpg","Menhera-chan79":"Menhera-chan/60.jpg","Menhera-chan80":"Menhera-chan/61.jpg","Menhera-chan81":"Menhera-chan/62.jpg","Menhera-chan82":"Menhera-chan/63.jpg","Menhera-chan83":"Menhera-chan/64.jpg","Menhera-chan84":"Menhera-chan/65.jpg","Menhera-chan85":"Menhera-chan/66.jpg","Menhera-chan86":"Menhera-chan/67.jpg","Menhera-chan87":"Menhera-chan/68.jpg","Menhera-chan88":"Menhera-chan/69.jpg","Menhera-chan89":"Menhera-chan/7.jpg","Menhera-chan90":"Menhera-chan/70.jpg","Menhera-chan91":"Menhera-chan/71.jpg","Menhera-chan92":"Menhera-chan/72.jpg","Menhera-chan93":"Menhera-chan/73.jpg","Menhera-chan94":"Menhera-chan/74.jpg","Menhera-chan95":"Menhera-chan/75.jpg","Menhera-chan96":"Menhera-chan/76.jpg","Menhera-chan97":"Menhera-chan/77.jpg","Menhera-chan98":"Menhera-chan/78.jpg","Menhera-chan99":"Menhera-chan/79.jpg","Menhera-chan100":"Menhera-chan/8.jpg","Menhera-chan101":"Menhera-chan/80.jpg","Menhera-chan102":"Menhera-chan/81.jpg","Menhera-chan103":"Menhera-chan/82.jpg","Menhera-chan104":"Menhera-chan/83.jpg","Menhera-chan105":"Menhera-chan/84.jpg","Menhera-chan106":"Menhera-chan/85.jpg","Menhera-chan107":"Menhera-chan/86.jpg","Menhera-chan108":"Menhera-chan/87.jpg","Menhera-chan109":"Menhera-chan/88.jpg","Menhera-chan110":"Menhera-chan/89.jpg","Menhera-chan111":"Menhera-chan/9.jpg","Menhera-chan112":"Menhera-chan/90.jpg","Menhera-chan113":"Menhera-chan/91.jpg","Menhera-chan114":"Menhera-chan/92.jpg","Menhera-chan115":"Menhera-chan/93.jpg","Menhera-chan116":"Menhera-chan/94.jpg","Menhera-chan117":"Menhera-chan/95.jpg","Menhera-chan118":"Menhera-chan/96.jpg","Menhera-chan119":"Menhera-chan/97.jpg","Menhera-chan120":"Menhera-chan/98.jpg","Menhera-chan121":"Menhera-chan/99.jpg","Sweetie-Bunny1":"Sweetie-Bunny/12311678.png","Sweetie-Bunny2":"Sweetie-Bunny/12311679.png","Sweetie-Bunny3":"Sweetie-Bunny/12311680.png","Sweetie-Bunny4":"Sweetie-Bunny/12311681.png","Sweetie-Bunny5":"Sweetie-Bunny/12311682.png","Sweetie-Bunny6":"Sweetie-Bunny/12311683.png","Sweetie-Bunny7":"Sweetie-Bunny/12311684.png","Sweetie-Bunny8":"Sweetie-Bunny/12311685.png","Sweetie-Bunny9":"Sweetie-Bunny/12311686.png","Sweetie-Bunny10":"Sweetie-Bunny/12311687.png","Sweetie-Bunny11":"Sweetie-Bunny/12311688.png","Sweetie-Bunny12":"Sweetie-Bunny/12311689.png","Sweetie-Bunny13":"Sweetie-Bunny/12311690.png","Sweetie-Bunny14":"Sweetie-Bunny/12311691.png","Sweetie-Bunny15":"Sweetie-Bunny/12311692.png","Sweetie-Bunny16":"Sweetie-Bunny/12311693.png","Sweetie-Bunny17":"Sweetie-Bunny/12311694.png","Sweetie-Bunny18":"Sweetie-Bunny/12311695.png","Sweetie-Bunny19":"Sweetie-Bunny/12311696.png","Sweetie-Bunny20":"Sweetie-Bunny/12311697.png","Sweetie-Bunny21":"Sweetie-Bunny/12311698.png","Sweetie-Bunny22":"Sweetie-Bunny/12311699.png","Sweetie-Bunny23":"Sweetie-Bunny/12311700.png","Sweetie-Bunny24":"Sweetie-Bunny/12311701.png","Sweetie-Bunny25":"Sweetie-Bunny/12311702.png","Sweetie-Bunny26":"Sweetie-Bunny/12311703.png","Sweetie-Bunny27":"Sweetie-Bunny/12311704.png","Sweetie-Bunny28":"Sweetie-Bunny/12311705.png","Sweetie-Bunny29":"Sweetie-Bunny/12311706.png","Sweetie-Bunny30":"Sweetie-Bunny/12311707.png","Sweetie-Bunny31":"Sweetie-Bunny/12311708.png","Sweetie-Bunny32":"Sweetie-Bunny/12311709.png","Sweetie-Bunny33":"Sweetie-Bunny/12311710.png","Sweetie-Bunny34":"Sweetie-Bunny/12311711.png","Sweetie-Bunny35":"Sweetie-Bunny/12311712.png","Sweetie-Bunny36":"Sweetie-Bunny/12311713.png","Sweetie-Bunny37":"Sweetie-Bunny/12311714.png","Sweetie-Bunny38":"Sweetie-Bunny/12311715.png","Sweetie-Bunny39":"Sweetie-Bunny/12311716.png","Sweetie-Bunny40":"Sweetie-Bunny/12311717.png","Majotabi1":"Majotabi/367516718.png","Majotabi2":"Majotabi/367516719.png","Majotabi3":"Majotabi/367516720.png","Majotabi4":"Majotabi/367516721.png","Majotabi5":"Majotabi/367516722.png","Majotabi6":"Majotabi/367516723.png","Majotabi7":"Majotabi/367516724.png","Majotabi8":"Majotabi/367516725.png","Majotabi9":"Majotabi/367516726.png","Majotabi10":"Majotabi/367516727.png","Majotabi11":"Majotabi/367516728.png","Majotabi12":"Majotabi/367516729.png","Majotabi13":"Majotabi/367516730.png","Majotabi14":"Majotabi/367516731.png","Majotabi15":"Majotabi/367516732.png","Majotabi16":"Majotabi/367516733.png","Majotabi17":"Majotabi/367516734.png","Majotabi18":"Majotabi/367516735.png","Majotabi19":"Majotabi/367516736.png","Majotabi20":"Majotabi/367516737.png","Majotabi21":"Majotabi/367516738.png","Majotabi22":"Majotabi/367516739.png","Majotabi23":"Majotabi/367516740.png","Majotabi24":"Majotabi/367516741.png","Majotabi25":"Majotabi/367516742.png","Majotabi26":"Majotabi/367516743.png","Majotabi27":"Majotabi/367516744.png","Majotabi28":"Majotabi/367516745.png","Majotabi29":"Majotabi/367516746.png","Majotabi30":"Majotabi/367516747.png","Majotabi31":"Majotabi/367516748.png","Majotabi32":"Majotabi/367516749.png","Majotabi33":"Majotabi/367516750.png","Majotabi34":"Majotabi/367516751.png","Majotabi35":"Majotabi/367516752.png","Majotabi36":"Majotabi/367516753.png","Majotabi37":"Majotabi/367516754.png","Majotabi38":"Majotabi/367516755.png","Majotabi39":"Majotabi/367516756.png","Majotabi40":"Majotabi/367516757.png","Snow-Miku1":"Snow-Miku/3583066@2x.png","Snow-Miku2":"Snow-Miku/3583067@2x.png","Snow-Miku3":"Snow-Miku/3583068@2x.png","Snow-Miku4":"Snow-Miku/3583069@2x.png","Snow-Miku5":"Snow-Miku/3583070@2x.png","Snow-Miku6":"Snow-Miku/3583071@2x.png","Snow-Miku7":"Snow-Miku/3583072@2x.png","Snow-Miku8":"Snow-Miku/3583073@2x.png","Snow-Miku9":"Snow-Miku/3583074@2x.png","Snow-Miku10":"Snow-Miku/3583075@2x.png","Snow-Miku11":"Snow-Miku/3583076@2x.png","Snow-Miku12":"Snow-Miku/3583077@2x.png","Snow-Miku13":"Snow-Miku/3583078@2x.png","Snow-Miku14":"Snow-Miku/3583079@2x.png","Snow-Miku15":"Snow-Miku/3583080@2x.png","Snow-Miku16":"Snow-Miku/3583081@2x.png","Snow-Miku17":"Snow-Miku/3583082@2x.png","Snow-Miku18":"Snow-Miku/3583083@2x.png","Snow-Miku19":"Snow-Miku/3583084@2x.png","Snow-Miku20":"Snow-Miku/3583085@2x.png","Snow-Miku21":"Snow-Miku/3583086@2x.png","Snow-Miku22":"Snow-Miku/3583087@2x.png","Snow-Miku23":"Snow-Miku/3583088@2x.png","Snow-Miku24":"Snow-Miku/3583089@2x.png","Snow-Miku25":"Snow-Miku/3583090@2x.png","Snow-Miku26":"Snow-Miku/3583091@2x.png","Snow-Miku27":"Snow-Miku/3583092@2x.png","Snow-Miku28":"Snow-Miku/3583093@2x.png","Snow-Miku29":"Snow-Miku/3583094@2x.png","Snow-Miku30":"Snow-Miku/3583095@2x.png","Snow-Miku31":"Snow-Miku/3583096@2x.png","Snow-Miku32":"Snow-Miku/3583097@2x.png","Snow-Miku33":"Snow-Miku/3583098@2x.png","Snow-Miku34":"Snow-Miku/3583099@2x.png","Snow-Miku35":"Snow-Miku/3583100@2x.png","Snow-Miku36":"Snow-Miku/3583101@2x.png","Snow-Miku37":"Snow-Miku/3583102@2x.png","Snow-Miku38":"Snow-Miku/3583103@2x.png","Snow-Miku39":"Snow-Miku/3583104@2x.png","Snow-Miku40":"Snow-Miku/3583105@2x.png"},
+      enableQQ: true,
+      path: window.location.pathname,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+    
+    if (false) {
+      const otherData = false
+      initData = Object.assign({}, initData, otherData)
+    }
+    
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script>(function(){
+  const bp = document.createElement('script');
+  const curProtocol = window.location.protocol.split(':')[0];
+  if (curProtocol === 'https') {
+    bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+    bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+  bp.dataset.pjax = ''
+  const s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})()</script></div></body></html>

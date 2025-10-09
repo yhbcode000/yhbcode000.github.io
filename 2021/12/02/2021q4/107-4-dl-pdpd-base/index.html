@@ -1,16 +1,16 @@
-<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>【深度学习】框架：PaddlePaddle基础 | 白拾的笔记本</title><meta name="keywords" content="学习,记录,Python,笔记,深度学习"><meta name="author" content="✨白拾ShiroX✨,hobart.yang@qq.com"><meta name="copyright" content="✨白拾ShiroX✨"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="说明 本页面无手机端适配，强制缩放阅读。 使用纯html格式，保存教学用ppt，添加了部分个人笔记。 目录工作正常，可以跳转。       b{color:rgba(0,0,0,0.75)}     PaddlePaddle概述               PaddlePaddle概述 PaddlePaddle概述 PaddlePaddle简介 为什么要学PaddlePaddle 什么是Paddl">
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>【深度学习】框架：PaddlePaddle基础 | 白拾的笔记本</title><meta name="keywords" content="记录,学习,Python,笔记,深度学习"><meta name="author" content="✨白拾ShiroX✨,hobart.yang@qq.com"><meta name="copyright" content="✨白拾ShiroX✨"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="说明  本页面无手机端适配，强制缩放阅读。 使用纯html格式，保存教学用ppt，添加了部分个人笔记。 目录工作正常，可以跳转。   	b{color:rgba(0,0,0,0.75)}  PaddlePaddle概述               PaddlePaddle概述 PaddlePaddle概述 PaddlePaddle简介 为什么要学PaddlePaddle 什么是PaddlePadd">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【深度学习】框架：PaddlePaddle基础">
 <meta property="og:url" content="https://discover304.top/2021/12/02/2021q4/107-4-dl-pdpd-base/index.html">
 <meta property="og:site_name" content="白拾的笔记本">
-<meta property="og:description" content="说明 本页面无手机端适配，强制缩放阅读。 使用纯html格式，保存教学用ppt，添加了部分个人笔记。 目录工作正常，可以跳转。       b{color:rgba(0,0,0,0.75)}     PaddlePaddle概述               PaddlePaddle概述 PaddlePaddle概述 PaddlePaddle简介 为什么要学PaddlePaddle 什么是Paddl">
+<meta property="og:description" content="说明  本页面无手机端适配，强制缩放阅读。 使用纯html格式，保存教学用ppt，添加了部分个人笔记。 目录工作正常，可以跳转。   	b{color:rgba(0,0,0,0.75)}  PaddlePaddle概述               PaddlePaddle概述 PaddlePaddle概述 PaddlePaddle简介 为什么要学PaddlePaddle 什么是PaddlePadd">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://image.discover304.top/ai/dl/02/dog-end-world.jpg?imageView2/2/h/300">
 <meta property="article:published_time" content="2021-12-02T07:53:26.000Z">
-<meta property="article:modified_time" content="2021-12-25T06:48:18.000Z">
+<meta property="article:modified_time" content="2025-10-09T18:31:00.213Z">
 <meta property="article:author" content="✨白拾ShiroX✨">
-<meta property="article:tag" content="学习">
 <meta property="article:tag" content="记录">
+<meta property="article:tag" content="学习">
 <meta property="article:tag" content="Python">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="深度学习">
@@ -114,7 +114,7 @@ const getScript = url => new Promise((resolve, reject) => {
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2021-12-25 14:48:18'
+  postUpdate: '2025-10-10 02:31:00'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -182,30 +182,30 @@ if (asideStatus !== undefined) {
 }const fontSizeVal = saveToLocal.get('global-font-size')
 if (fontSizeVal !== undefined) {
   document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
-}})()</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="白拾的笔记本" type="application/atom+xml">
-</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">287</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">203</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">29</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> Connection</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/friend/"><i class="fa-fw fas fa-address-book"></i><span> Friend</span></a></li><li><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://aierlab.tech"><i class="fa-fw fas fa-sitemap"></i><span> GroupSite</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-wrench"></i><span> Tools</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://wandb.ai/"><i class="fa-fw fas fa-newspaper"></i><span> WandB</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Article</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://image.discover304.top/ai/dl/02/dog-end-world.jpg?imageView2/2/h/300)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">白拾的笔记本</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> Connection</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/friend/"><i class="fa-fw fas fa-address-book"></i><span> Friend</span></a></li><li><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://aierlab.tech"><i class="fa-fw fas fa-sitemap"></i><span> GroupSite</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-wrench"></i><span> Tools</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://wandb.ai/"><i class="fa-fw fas fa-newspaper"></i><span> WandB</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Article</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">【深度学习】框架：PaddlePaddle基础</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-12-02T07:53:26.000Z" title="Created 2021-12-02 15:53:26">2021-12-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2021-12-25T06:48:18.000Z" title="Updated 2021-12-25 14:48:18">2021-12-25</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/NoteBook/">NoteBook</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/NoteBook/PythonNote/">PythonNote</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word count:</span><span class="word-count">2.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading time:</span><span>9min</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><ul>
+}})()</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="白拾的笔记本" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">298</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">203</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">30</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> Connection</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/friend/"><i class="fa-fw fas fa-address-book"></i><span> Friend</span></a></li><li><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://aierlab.tech"><i class="fa-fw fas fa-sitemap"></i><span> GroupSite</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-wrench"></i><span> Tools</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://wandb.ai/"><i class="fa-fw fas fa-newspaper"></i><span> WandB</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Article</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://image.discover304.top/ai/dl/02/dog-end-world.jpg?imageView2/2/h/300)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">白拾的笔记本</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-link"></i><span> Connection</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/friend/"><i class="fa-fw fas fa-address-book"></i><span> Friend</span></a></li><li><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://aierlab.tech"><i class="fa-fw fas fa-sitemap"></i><span> GroupSite</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-wrench"></i><span> Tools</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://wandb.ai/"><i class="fa-fw fas fa-newspaper"></i><span> WandB</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> Article</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archive</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Category</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">【深度学习】框架：PaddlePaddle基础</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2021-12-02T07:53:26.000Z" title="Created 2021-12-02 15:53:26">2021-12-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-10-09T18:31:00.213Z" title="Updated 2025-10-10 02:31:00">2025-10-10</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/NoteBook/">NoteBook</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/NoteBook/PythonNote/">PythonNote</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">Word count:</span><span class="word-count">2.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">Reading time:</span><span>9min</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="说明">说明</h2>
+<ul>
 <li>本页面无手机端适配，强制缩放阅读。</li>
 <li>使用纯html格式，保存教学用ppt，添加了部分个人笔记。</li>
 <li>目录工作正常，可以跳转。</li>
 </ul>
 <style>
-    b{color:rgba(0,0,0,0.75)}
+	b{color:rgba(0,0,0,0.75)}
 </style>
-
-
-
-<h2 id="PaddlePaddle概述"><a href="#PaddlePaddle概述" class="headerlink" title="PaddlePaddle概述"></a>PaddlePaddle概述</h2><!DOCTYPE html>
+<h2 id="PaddlePaddle概述">PaddlePaddle概述</h2>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft20{font-size:28px;font-family:Times;color:#404040;}
-    .ft21{font-size:21px;font-family:Times;color:#ffffff;}
-    .ft22{font-size:19px;font-family:Times;color:#000000;}
+	p {margin: 0; padding: 0;}	.ft20{font-size:28px;font-family:Times;color:#404040;}
+	.ft21{font-size:21px;font-family:Times;color:#ffffff;}
+	.ft22{font-size:19px;font-family:Times;color:#000000;}
 -->
 </style>
 </head>
@@ -226,45 +226,19 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft40{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft41{font-size:46px;font-family:Times;color:#252525;}
-    .ft42{font-size:28px;font-family:Times;color:#252525;}
-    .ft43{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
-    .ft44{font-size:28px;line-height:54px;font-family:Times;color:#252525;}
+	p {margin: 0; padding: 0;}	.ft40{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft41{font-size:46px;font-family:Times;color:#252525;}
+	.ft42{font-size:28px;font-family:Times;color:#252525;}
+	.ft43{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	.ft44{font-size:28px;line-height:54px;font-family:Times;color:#252525;}
 -->
 </style>
 </head>
@@ -282,27 +256,18 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft50{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft51{font-size:46px;font-family:Times;color:#252525;}
-    .ft52{font-size:28px;font-family:Times;color:#252525;}
-    .ft53{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	p {margin: 0; padding: 0;}	.ft50{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft51{font-size:46px;font-family:Times;color:#252525;}
+	.ft52{font-size:28px;font-family:Times;color:#252525;}
+	.ft53{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
 -->
 </style>
 </head>
@@ -318,28 +283,19 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft60{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft61{font-size:46px;font-family:Times;color:#252525;}
-    .ft62{font-size:25px;font-family:Times;color:#000000;}
-    .ft63{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
-    .ft64{font-size:25px;line-height:48px;font-family:Times;color:#000000;}
+	p {margin: 0; padding: 0;}	.ft60{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft61{font-size:46px;font-family:Times;color:#252525;}
+	.ft62{font-size:25px;font-family:Times;color:#000000;}
+	.ft63{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	.ft64{font-size:25px;line-height:48px;font-family:Times;color:#000000;}
 -->
 </style>
 </head>
@@ -359,27 +315,18 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft70{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft71{font-size:46px;font-family:Times;color:#252525;}
-    .ft72{font-size:25px;font-family:Times;color:#252525;}
-    .ft73{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	p {margin: 0; padding: 0;}	.ft70{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft71{font-size:46px;font-family:Times;color:#252525;}
+	.ft72{font-size:25px;font-family:Times;color:#252525;}
+	.ft73{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
 -->
 </style>
 </head>
@@ -395,26 +342,17 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft80{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft81{font-size:46px;font-family:Times;color:#252525;}
-    .ft82{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	p {margin: 0; padding: 0;}	.ft80{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft81{font-size:46px;font-family:Times;color:#252525;}
+	.ft82{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
 -->
 </style>
 </head>
@@ -426,26 +364,17 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft90{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft91{font-size:46px;font-family:Times;color:#252525;}
-    .ft92{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	p {margin: 0; padding: 0;}	.ft90{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft91{font-size:46px;font-family:Times;color:#252525;}
+	.ft92{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
 -->
 </style>
 </head>
@@ -457,29 +386,20 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft100{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft101{font-size:46px;font-family:Times;color:#000000;}
-    .ft102{font-size:25px;font-family:Times;color:#252525;}
-    .ft103{font-size:25px;font-family:Times;color:#252525;}
-    .ft104{font-size:19px;font-family:Times;color:#000000;}
-    .ft105{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	p {margin: 0; padding: 0;}	.ft100{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft101{font-size:46px;font-family:Times;color:#000000;}
+	.ft102{font-size:25px;font-family:Times;color:#252525;}
+	.ft103{font-size:25px;font-family:Times;color:#252525;}
+	.ft104{font-size:19px;font-family:Times;color:#000000;}
+	.ft105{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
 -->
 </style>
 </head>
@@ -509,22 +429,18 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-<h2 id="体系结构"><a href="#体系结构" class="headerlink" title="体系结构"></a>体系结构</h2><!DOCTYPE html>
+<h2 id="体系结构">体系结构</h2>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft110{font-size:28px;font-family:Times;color:#404040;}
-    .ft111{font-size:21px;font-family:Times;color:#ffffff;}
-    .ft112{font-size:19px;font-family:Times;color:#000000;}
+	p {margin: 0; padding: 0;}	.ft110{font-size:28px;font-family:Times;color:#404040;}
+	.ft111{font-size:21px;font-family:Times;color:#ffffff;}
+	.ft112{font-size:19px;font-family:Times;color:#000000;}
 -->
 </style>
 </head>
@@ -541,33 +457,20 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft130{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft131{font-size:46px;font-family:Times;color:#252525;}
-    .ft132{font-size:21px;font-family:Times;color:#ffffff;}
-    .ft133{font-size:19px;font-family:Times;color:#ffffff;}
-    .ft134{font-size:25px;font-family:Times;color:#404040;}
-    .ft135{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	p {margin: 0; padding: 0;}	.ft130{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft131{font-size:46px;font-family:Times;color:#252525;}
+	.ft132{font-size:21px;font-family:Times;color:#ffffff;}
+	.ft133{font-size:19px;font-family:Times;color:#ffffff;}
+	.ft134{font-size:25px;font-family:Times;color:#404040;}
+	.ft135{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
 -->
 </style>
 </head>
@@ -594,28 +497,19 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft140{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft141{font-size:46px;font-family:Times;color:#252525;}
-    .ft142{font-size:21px;font-family:Times;color:#000000;}
-    .ft143{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
-    .ft144{font-size:21px;line-height:43px;font-family:Times;color:#000000;}
+	p {margin: 0; padding: 0;}	.ft140{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft141{font-size:46px;font-family:Times;color:#252525;}
+	.ft142{font-size:21px;font-family:Times;color:#000000;}
+	.ft143{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	.ft144{font-size:21px;line-height:43px;font-family:Times;color:#000000;}
 -->
 </style>
 </head>
@@ -628,26 +522,17 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft150{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft151{font-size:46px;font-family:Times;color:#252525;}
-    .ft152{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	p {margin: 0; padding: 0;}	.ft150{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft151{font-size:46px;font-family:Times;color:#252525;}
+	.ft152{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
 -->
 </style>
 </head>
@@ -659,27 +544,18 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft160{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft161{font-size:46px;font-family:Times;color:#252525;}
-    .ft162{font-size:25px;font-family:Times;color:#000000;}
-    .ft163{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	p {margin: 0; padding: 0;}	.ft160{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft161{font-size:46px;font-family:Times;color:#252525;}
+	.ft162{font-size:25px;font-family:Times;color:#000000;}
+	.ft163{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
 -->
 </style>
 </head>
@@ -697,26 +573,17 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft170{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft171{font-size:39px;font-family:Times;color:#252525;}
-    .ft172{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	p {margin: 0; padding: 0;}	.ft170{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft171{font-size:39px;font-family:Times;color:#252525;}
+	.ft172{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
 -->
 </style>
 </head>
@@ -728,22 +595,18 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-<h2 id="基本概念与操作"><a href="#基本概念与操作" class="headerlink" title="基本概念与操作"></a>基本概念与操作</h2><!DOCTYPE html>
+<h2 id="基本概念与操作">基本概念与操作</h2>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft180{font-size:28px;font-family:Times;color:#404040;}
-    .ft181{font-size:21px;font-family:Times;color:#ffffff;}
-    .ft182{font-size:19px;font-family:Times;color:#000000;}
+	p {margin: 0; padding: 0;}	.ft180{font-size:28px;font-family:Times;color:#404040;}
+	.ft181{font-size:21px;font-family:Times;color:#ffffff;}
+	.ft182{font-size:19px;font-family:Times;color:#000000;}
 -->
 </style>
 </head>
@@ -768,28 +631,21 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><!DOCTYPE html>
+<h3 id="基本概念">基本概念</h3>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft200{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft201{font-size:46px;font-family:Times;color:#252525;}
-    .ft202{font-size:34px;font-family:Times;color:#000000;}
-    .ft203{font-size:25px;font-family:Times;color:#252525;}
-    .ft204{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
-    .ft205{font-size:25px;line-height:48px;font-family:Times;color:#252525;}
+	p {margin: 0; padding: 0;}	.ft200{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft201{font-size:46px;font-family:Times;color:#252525;}
+	.ft202{font-size:34px;font-family:Times;color:#000000;}
+	.ft203{font-size:25px;font-family:Times;color:#252525;}
+	.ft204{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	.ft205{font-size:25px;line-height:48px;font-family:Times;color:#252525;}
 -->
 </style>
 </head>
@@ -803,28 +659,19 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft210{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft211{font-size:46px;font-family:Times;color:#252525;}
-    .ft212{font-size:34px;font-family:Times;color:#000000;}
-    .ft213{font-size:25px;font-family:Times;color:#252525;}
-    .ft214{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	p {margin: 0; padding: 0;}	.ft210{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft211{font-size:46px;font-family:Times;color:#252525;}
+	.ft212{font-size:34px;font-family:Times;color:#000000;}
+	.ft213{font-size:25px;font-family:Times;color:#252525;}
+	.ft214{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
 -->
 </style>
 </head>
@@ -838,28 +685,19 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft220{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft221{font-size:46px;font-family:Times;color:#000000;}
-    .ft222{font-size:25px;font-family:Times;color:#000000;}
-    .ft223{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
-    .ft224{font-size:25px;line-height:48px;font-family:Times;color:#000000;}
+	p {margin: 0; padding: 0;}	.ft220{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft221{font-size:46px;font-family:Times;color:#000000;}
+	.ft222{font-size:25px;font-family:Times;color:#000000;}
+	.ft223{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	.ft224{font-size:25px;line-height:48px;font-family:Times;color:#000000;}
 -->
 </style>
 </head>
@@ -875,28 +713,19 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft230{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft231{font-size:46px;font-family:Times;color:#000000;}
-    .ft232{font-size:21px;font-family:Times;color:#000000;}
-    .ft233{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
-    .ft234{font-size:21px;line-height:43px;font-family:Times;color:#000000;}
+	p {margin: 0; padding: 0;}	.ft230{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft231{font-size:46px;font-family:Times;color:#000000;}
+	.ft232{font-size:21px;font-family:Times;color:#000000;}
+	.ft233{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	.ft234{font-size:21px;line-height:43px;font-family:Times;color:#000000;}
 -->
 </style>
 </head>
@@ -912,28 +741,19 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft240{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft241{font-size:46px;font-family:Times;color:#252525;}
-    .ft242{font-size:25px;font-family:Times;color:#252525;}
-    .ft243{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
-    .ft244{font-size:25px;line-height:48px;font-family:Times;color:#252525;}
+	p {margin: 0; padding: 0;}	.ft240{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft241{font-size:46px;font-family:Times;color:#252525;}
+	.ft242{font-size:25px;font-family:Times;color:#252525;}
+	.ft243{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	.ft244{font-size:25px;line-height:48px;font-family:Times;color:#252525;}
 -->
 </style>
 </head>
@@ -947,29 +767,20 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft250{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft251{font-size:46px;font-family:Times;color:#252525;}
-    .ft252{font-size:25px;font-family:Times;color:#252525;}
-    .ft253{font-size:19px;font-family:Times;color:#000000;}
-    .ft254{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
-    .ft255{font-size:25px;line-height:48px;font-family:Times;color:#252525;}
+	p {margin: 0; padding: 0;}	.ft250{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft251{font-size:46px;font-family:Times;color:#252525;}
+	.ft252{font-size:25px;font-family:Times;color:#252525;}
+	.ft253{font-size:19px;font-family:Times;color:#000000;}
+	.ft254{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	.ft255{font-size:25px;line-height:48px;font-family:Times;color:#252525;}
 -->
 </style>
 </head>
@@ -985,31 +796,22 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft260{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft261{font-size:46px;font-family:Times;color:#252525;}
-    .ft262{font-size:25px;font-family:Times;color:#252525;}
-    .ft263{font-size:22px;font-family:Times;color:#2d16c3;}
-    .ft264{font-size:22px;font-family:Times;color:#2d16c3;}
-    .ft265{font-size:22px;font-family:Times;color:#252525;}
-    .ft266{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
-    .ft267{font-size:22px;line-height:44px;font-family:Times;color:#252525;}
+	p {margin: 0; padding: 0;}	.ft260{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft261{font-size:46px;font-family:Times;color:#252525;}
+	.ft262{font-size:25px;font-family:Times;color:#252525;}
+	.ft263{font-size:22px;font-family:Times;color:#2d16c3;}
+	.ft264{font-size:22px;font-family:Times;color:#2d16c3;}
+	.ft265{font-size:22px;font-family:Times;color:#252525;}
+	.ft266{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	.ft267{font-size:22px;line-height:44px;font-family:Times;color:#252525;}
 -->
 </style>
 </head>
@@ -1034,29 +836,20 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft270{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft271{font-size:46px;font-family:Times;color:#252525;}
-    .ft272{font-size:25px;font-family:Times;color:#252525;}
-    .ft273{font-size:25px;font-family:Times;color:#2d16c3;}
-    .ft274{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
-    .ft275{font-size:25px;line-height:48px;font-family:Times;color:#252525;}
+	p {margin: 0; padding: 0;}	.ft270{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft271{font-size:46px;font-family:Times;color:#252525;}
+	.ft272{font-size:25px;font-family:Times;color:#252525;}
+	.ft273{font-size:25px;font-family:Times;color:#2d16c3;}
+	.ft274{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	.ft275{font-size:25px;line-height:48px;font-family:Times;color:#252525;}
 -->
 </style>
 </head>
@@ -1071,31 +864,22 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft280{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft281{font-size:46px;font-family:Times;color:#252525;}
-    .ft282{font-size:25px;font-family:Times;color:#252525;}
-    .ft283{font-size:21px;font-family:Times;color:#2d16c3;}
-    .ft284{font-size:21px;font-family:Times;color:#2d16c3;}
-    .ft285{font-size:21px;font-family:Times;color:#252525;}
-    .ft286{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
-    .ft287{font-size:21px;line-height:43px;font-family:Times;color:#252525;}
+	p {margin: 0; padding: 0;}	.ft280{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft281{font-size:46px;font-family:Times;color:#252525;}
+	.ft282{font-size:25px;font-family:Times;color:#252525;}
+	.ft283{font-size:21px;font-family:Times;color:#2d16c3;}
+	.ft284{font-size:21px;font-family:Times;color:#2d16c3;}
+	.ft285{font-size:21px;font-family:Times;color:#252525;}
+	.ft286{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	.ft287{font-size:21px;line-height:43px;font-family:Times;color:#252525;}
 -->
 </style>
 </head>
@@ -1117,29 +901,20 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft290{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft291{font-size:46px;font-family:Times;color:#000000;}
-    .ft292{font-size:25px;font-family:Times;color:#252525;}
-    .ft293{font-size:25px;font-family:Times;color:#2d16c3;}
-    .ft294{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
-    .ft295{font-size:25px;line-height:48px;font-family:Times;color:#252525;}
+	p {margin: 0; padding: 0;}	.ft290{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft291{font-size:46px;font-family:Times;color:#000000;}
+	.ft292{font-size:25px;font-family:Times;color:#252525;}
+	.ft293{font-size:25px;font-family:Times;color:#2d16c3;}
+	.ft294{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	.ft295{font-size:25px;line-height:48px;font-family:Times;color:#252525;}
 -->
 </style>
 </head>
@@ -1158,28 +933,19 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft300{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft301{font-size:46px;font-family:Times;color:#252525;}
-    .ft302{font-size:25px;font-family:Times;color:#252525;}
-    .ft303{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
-    .ft304{font-size:25px;line-height:48px;font-family:Times;color:#252525;}
+	p {margin: 0; padding: 0;}	.ft300{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft301{font-size:46px;font-family:Times;color:#252525;}
+	.ft302{font-size:25px;font-family:Times;color:#252525;}
+	.ft303{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	.ft304{font-size:25px;line-height:48px;font-family:Times;color:#252525;}
 -->
 </style>
 </head>
@@ -1193,28 +959,19 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft310{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft311{font-size:46px;font-family:Times;color:#252525;}
-    .ft312{font-size:25px;font-family:Times;color:#252525;}
-    .ft313{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
-    .ft314{font-size:25px;line-height:48px;font-family:Times;color:#252525;}
+	p {margin: 0; padding: 0;}	.ft310{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft311{font-size:46px;font-family:Times;color:#252525;}
+	.ft312{font-size:25px;font-family:Times;color:#252525;}
+	.ft313{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	.ft314{font-size:25px;line-height:48px;font-family:Times;color:#252525;}
 -->
 </style>
 </head>
@@ -1228,28 +985,19 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft320{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft321{font-size:46px;font-family:Times;color:#252525;}
-    .ft322{font-size:25px;font-family:Times;color:#252525;}
-    .ft323{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
-    .ft324{font-size:25px;line-height:48px;font-family:Times;color:#252525;}
+	p {margin: 0; padding: 0;}	.ft320{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft321{font-size:46px;font-family:Times;color:#252525;}
+	.ft322{font-size:25px;font-family:Times;color:#252525;}
+	.ft323{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	.ft324{font-size:25px;line-height:48px;font-family:Times;color:#252525;}
 -->
 </style>
 </head>
@@ -1263,26 +1011,17 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft330{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft331{font-size:39px;font-family:Times;color:#252525;}
-    .ft332{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	p {margin: 0; padding: 0;}	.ft330{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft331{font-size:39px;font-family:Times;color:#252525;}
+	.ft332{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
 -->
 </style>
 </head>
@@ -1294,28 +1033,19 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft340{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft341{font-size:46px;font-family:Times;color:#252525;}
-    .ft342{font-size:21px;font-family:Times;color:#ffffff;}
-    .ft343{font-size:16px;font-family:Times;color:#ffffff;}
-    .ft344{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	p {margin: 0; padding: 0;}	.ft340{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft341{font-size:46px;font-family:Times;color:#252525;}
+	.ft342{font-size:21px;font-family:Times;color:#ffffff;}
+	.ft343{font-size:16px;font-family:Times;color:#ffffff;}
+	.ft344{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
 -->
 </style>
 </head>
@@ -1362,30 +1092,21 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft350{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft351{font-size:39px;font-family:Times;color:#252525;}
-    .ft352{font-size:25px;font-family:Times;color:#252525;}
-    .ft353{font-size:19px;font-family:Times;color:#252525;}
-    .ft354{font-size:19px;font-family:Times;color:#2a55db;}
-    .ft355{font-size:19px;font-family:Times;color:#252525;}
-    .ft356{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	p {margin: 0; padding: 0;}	.ft350{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft351{font-size:39px;font-family:Times;color:#252525;}
+	.ft352{font-size:25px;font-family:Times;color:#252525;}
+	.ft353{font-size:19px;font-family:Times;color:#252525;}
+	.ft354{font-size:19px;font-family:Times;color:#2a55db;}
+	.ft355{font-size:19px;font-family:Times;color:#252525;}
+	.ft356{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
 -->
 </style>
 </head>
@@ -1419,31 +1140,22 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft360{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft361{font-size:39px;font-family:Times;color:#252525;}
-    .ft362{font-size:25px;font-family:Times;color:#252525;}
-    .ft363{font-size:19px;font-family:Times;color:#252525;}
-    .ft364{font-size:21px;font-family:Times;color:#2a55db;}
-    .ft365{font-size:19px;font-family:Times;color:#2a55db;}
-    .ft366{font-size:21px;font-family:Times;color:#252525;}
-    .ft367{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	p {margin: 0; padding: 0;}	.ft360{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft361{font-size:39px;font-family:Times;color:#252525;}
+	.ft362{font-size:25px;font-family:Times;color:#252525;}
+	.ft363{font-size:19px;font-family:Times;color:#252525;}
+	.ft364{font-size:21px;font-family:Times;color:#2a55db;}
+	.ft365{font-size:19px;font-family:Times;color:#2a55db;}
+	.ft366{font-size:21px;font-family:Times;color:#252525;}
+	.ft367{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
 -->
 </style>
 </head>
@@ -1475,26 +1187,17 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft370{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft371{font-size:46px;font-family:Times;color:#252525;}
-    .ft372{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	p {margin: 0; padding: 0;}	.ft370{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft371{font-size:46px;font-family:Times;color:#252525;}
+	.ft372{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
 -->
 </style>
 </head>
@@ -1506,21 +1209,18 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-<h2 id="数据准备"><a href="#数据准备" class="headerlink" title="数据准备"></a>数据准备</h2><!DOCTYPE html>
+<h2 id="数据准备">数据准备</h2>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft380{font-size:28px;font-family:Times;color:#404040;}
-    .ft381{font-size:21px;font-family:Times;color:#ffffff;}
-    .ft382{font-size:19px;font-family:Times;color:#000000;}
+	p {margin: 0; padding: 0;}	.ft380{font-size:28px;font-family:Times;color:#404040;}
+	.ft381{font-size:21px;font-family:Times;color:#ffffff;}
+	.ft382{font-size:19px;font-family:Times;color:#000000;}
 -->
 </style>
 </head>
@@ -1541,32 +1241,20 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft400{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft401{font-size:46px;font-family:Times;color:#252525;}
-    .ft402{font-size:25px;font-family:Times;color:#000099;}
-    .ft403{font-size:25px;font-family:Times;color:#000099;}
-    .ft404{font-size:25px;font-family:Times;color:#252525;}
-    .ft405{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	p {margin: 0; padding: 0;}	.ft400{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft401{font-size:46px;font-family:Times;color:#252525;}
+	.ft402{font-size:25px;font-family:Times;color:#000099;}
+	.ft403{font-size:25px;font-family:Times;color:#000099;}
+	.ft404{font-size:25px;font-family:Times;color:#252525;}
+	.ft405{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
 -->
 </style>
 </head>
@@ -1590,27 +1278,18 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft410{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft411{font-size:39px;font-family:Times;color:#000000;}
-    .ft412{font-size:25px;font-family:Times;color:#252525;}
-    .ft413{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	p {margin: 0; padding: 0;}	.ft410{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft411{font-size:39px;font-family:Times;color:#000000;}
+	.ft412{font-size:25px;font-family:Times;color:#252525;}
+	.ft413{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
 -->
 </style>
 </head>
@@ -1624,27 +1303,18 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft420{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft421{font-size:39px;font-family:Times;color:#000000;}
-    .ft422{font-size:25px;font-family:Times;color:#252525;}
-    .ft423{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	p {margin: 0; padding: 0;}	.ft420{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft421{font-size:39px;font-family:Times;color:#000000;}
+	.ft422{font-size:25px;font-family:Times;color:#252525;}
+	.ft423{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
 -->
 </style>
 </head>
@@ -1658,27 +1328,18 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft430{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft431{font-size:39px;font-family:Times;color:#000000;}
-    .ft432{font-size:25px;font-family:Times;color:#252525;}
-    .ft433{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	p {margin: 0; padding: 0;}	.ft430{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft431{font-size:39px;font-family:Times;color:#000000;}
+	.ft432{font-size:25px;font-family:Times;color:#252525;}
+	.ft433{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
 -->
 </style>
 </head>
@@ -1692,29 +1353,22 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-<h3 id="实现多元回归"><a href="#实现多元回归" class="headerlink" title="实现多元回归"></a>实现多元回归</h3><!DOCTYPE html>
+<h3 id="实现多元回归">实现多元回归</h3>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft450{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft451{font-size:46px;font-family:Times;color:#000000;}
-    .ft452{font-size:25px;font-family:Times;color:#252525;}
-    .ft453{font-size:22px;font-family:Times;color:#252525;}
-    .ft454{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
-    .ft455{font-size:22px;line-height:44px;font-family:Times;color:#252525;}
-    .ft456{font-size:25px;line-height:48px;font-family:Times;color:#252525;}
+	p {margin: 0; padding: 0;}	.ft450{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft451{font-size:46px;font-family:Times;color:#000000;}
+	.ft452{font-size:25px;font-family:Times;color:#252525;}
+	.ft453{font-size:22px;font-family:Times;color:#252525;}
+	.ft454{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	.ft455{font-size:22px;line-height:44px;font-family:Times;color:#252525;}
+	.ft456{font-size:25px;line-height:48px;font-family:Times;color:#252525;}
 -->
 </style>
 </head>
@@ -1736,29 +1390,20 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft460{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft461{font-size:46px;font-family:Times;color:#000000;}
-    .ft462{font-size:21px;font-family:Times;color:#ffffff;}
-    .ft463{font-size:19px;font-family:Times;color:#000000;}
-    .ft464{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
-    .ft465{font-size:19px;line-height:37px;font-family:Times;color:#000000;}
+	p {margin: 0; padding: 0;}	.ft460{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft461{font-size:46px;font-family:Times;color:#000000;}
+	.ft462{font-size:21px;font-family:Times;color:#ffffff;}
+	.ft463{font-size:19px;font-family:Times;color:#000000;}
+	.ft464{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	.ft465{font-size:19px;line-height:37px;font-family:Times;color:#000000;}
 -->
 </style>
 </head>
@@ -1779,27 +1424,18 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft470{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft471{font-size:46px;font-family:Times;color:#252525;}
-    .ft472{font-size:19px;font-family:Times;color:#000000;}
-    .ft473{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	p {margin: 0; padding: 0;}	.ft470{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft471{font-size:46px;font-family:Times;color:#252525;}
+	.ft472{font-size:19px;font-family:Times;color:#000000;}
+	.ft473{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
 -->
 </style>
 </head>
@@ -1813,27 +1449,18 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft480{font-size:21px;font-family:Times;color:#f8f9fa;}
-    .ft481{font-size:39px;font-family:Times;color:#000000;}
-    .ft482{font-size:25px;font-family:Times;color:#252525;}
-    .ft483{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
+	p {margin: 0; padding: 0;}	.ft480{font-size:21px;font-family:Times;color:#f8f9fa;}
+	.ft481{font-size:39px;font-family:Times;color:#000000;}
+	.ft482{font-size:25px;font-family:Times;color:#252525;}
+	.ft483{font-size:21px;line-height:28px;font-family:Times;color:#f8f9fa;}
 -->
 </style>
 </head>
@@ -1847,27 +1474,18 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
 <title></title>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
  <br/>
 <style type="text/css">
 <!--
-    p {margin: 0; padding: 0;}	.ft490{font-size:39px;font-family:Times;color:#f1f1f1;}
-    .ft491{font-size:34px;font-family:Times;color:#000000;}
-    .ft492{font-size:30px;font-family:Times;color:#2a55db;}
-    .ft493{font-size:30px;line-height:55px;font-family:Times;color:#2a55db;}
+	p {margin: 0; padding: 0;}	.ft490{font-size:39px;font-family:Times;color:#f1f1f1;}
+	.ft491{font-size:34px;font-family:Times;color:#000000;}
+	.ft492{font-size:30px;font-family:Times;color:#2a55db;}
+	.ft493{font-size:30px;line-height:55px;font-family:Times;color:#2a55db;}
 -->
 </style>
 </head>
@@ -1882,8 +1500,7 @@ if (fontSizeVal !== undefined) {
 </div>
 </body>
 </html>
-
-</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><a class="post-meta__tags" href="/tags/%E8%AE%B0%E5%BD%95/">记录</a><a class="post-meta__tags" href="/tags/Python/">Python</a><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><a class="post-meta__tags" href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a></div><div class="post_share"><div class="social-share" data-image="https://image.discover304.top/ai/dl/02/dog-end-world.jpg?imageView2/2/h/300" data-sites="facebook,twitter,wechat,weibo,qzone,qq,linkedin"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/12/07/2021q4/085-data-pool/"><img class="prev-cover" src="https://image.discover304.top/foglaketohou.webp?imageView2/2/h/300" onerror="onerror=null;src='/img/404.png'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">【数据湖】扫盲</div></div></a></div><div class="next-post pull-right"><a href="/2021/12/02/2021q4/107-3-dl-tf/"><img class="next-cover" src="https://image.discover304.top/ai/dl/02/dog-end-world.jpg?imageView2/2/h/300" onerror="onerror=null;src='/img/404.png'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">【深度学习】框架：TensorFlow1</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2021/11/30/2021q4/107-0-dl/" title="【深度学习】概述"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】概述</div></div></a></div><div><a href="/2021/11/30/2021q4/107-1-dl-loss-gd/" title="【深度学习】基础 贰：损失函数与梯度下降"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】基础 贰：损失函数与梯度下降</div></div></a></div><div><a href="/2021/11/30/2021q4/107-1-dl-back/" title="【深度学习】基础 叁：反向传播算法"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】基础 叁：反向传播算法</div></div></a></div><div><a href="/2021/11/30/2021q4/107-1-dl-cnn/" title="【深度学习】基础 肆：卷积神经网络"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】基础 肆：卷积神经网络</div></div></a></div><div><a href="/2021/12/01/2021q4/108-0-dl-ex/" title="【深度学习】实例第一部分：基础理论"><img class="cover" src="https://image.discover304.top/ai/dl/space_work.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】实例第一部分：基础理论</div></div></a></div><div><a href="/2021/11/30/2021q4/107-1-dl-perceptron/" title="【深度学习】基础 壹：感知机与神经网络"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】基础 壹：感知机与神经网络</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">✨白拾ShiroX✨</div><div class="author-info__description">Love Everything You Like.</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">287</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">203</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">29</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/98639326"><i class="fab fa-bilibili"></i><span>Bilibili Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/YangSierCode000" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://x.com/ShiroHiro2024" target="_blank" title="X"><i class="fab fa-x"></i></a><a class="social-icon" href="https://www.youtube.com/channel/UCuQQr55i3VCQuCPMTQnpzDA" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a><a class="social-icon" href="https://blog.csdn.net/Discover304" target="_blank" title="CSDN"><i class="fa-solid fa-c"></i></a><a class="social-icon" href="https://www.zhihu.com/people/discover-56-86-75" target="_blank" title="知乎"><i class="fa-brands fa-zhihu"></i></a><a class="social-icon" href="mailto:hobart.yang@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://jq.qq.com/?_wv=1027&amp;k=EaGddTQg" target="_blank" title="QQ"><i class="fa-brands fa-qq"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">✨动态更新：<p style="text-align:center">享受奇迹般的和平日常！</p>✨聊天QQ群：<p style="text-align:center"><a target="_blank" rel="noopener" href="https://jq.qq.com/?_wv=1027&k=EaGddTQg"><strong>兔叽の魔术工房</strong></a><br>942-848-525</p>✨我们的口号是：<p style="text-align:center; color:#39C5BB">人工降神，机械飞升！</p><a target="_blank" rel="noopener" href='https://space.bilibili.com/98639326'><img src='/img/mikulittletrans.png'></a></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E"><span class="toc-text">说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PaddlePaddle%E6%A6%82%E8%BF%B0"><span class="toc-text">PaddlePaddle概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="toc-text">体系结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%93%8D%E4%BD%9C"><span class="toc-text">基本概念与操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">基本概念</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%87%86%E5%A4%87"><span class="toc-text">数据准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92"><span class="toc-text">实现多元回归</span></a></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/04/13/2025q1/197-copilot-usage/" title="Copilot AI 使用注意事项"><img src="https://image.discover304.top/1744518202571.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="Copilot AI 使用注意事项"/></a><div class="content"><a class="title" href="/2025/04/13/2025q1/197-copilot-usage/" title="Copilot AI 使用注意事项">Copilot AI 使用注意事项</a><time datetime="2025-04-13T04:24:52.376Z" title="Updated 2025-04-13 12:24:52">2025-04-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/07/2025q1/20250208-%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%99%8D%E5%99%AA%E5%B1%95%E6%9C%9B%EF%BC%88%E4%B8%8A%EF%BC%89%EF%BC%9A%E4%BB%8EMIT%E8%9E%BA%E6%97%8B%E6%A1%A8%E9%9D%99%E9%9F%B3%E5%88%B0%E8%B6%85%E5%A3%B0%E6%B3%A2%E9%9A%90%E8%BA%AB/" title="无人机降噪展望（上）：从MIT螺旋桨静音到超声波隐身"><img src="https://image.discover304.top/1743656448831.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="无人机降噪展望（上）：从MIT螺旋桨静音到超声波隐身"/></a><div class="content"><a class="title" href="/2025/02/07/2025q1/20250208-%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%99%8D%E5%99%AA%E5%B1%95%E6%9C%9B%EF%BC%88%E4%B8%8A%EF%BC%89%EF%BC%9A%E4%BB%8EMIT%E8%9E%BA%E6%97%8B%E6%A1%A8%E9%9D%99%E9%9F%B3%E5%88%B0%E8%B6%85%E5%A3%B0%E6%B3%A2%E9%9A%90%E8%BA%AB/" title="无人机降噪展望（上）：从MIT螺旋桨静音到超声波隐身">无人机降噪展望（上）：从MIT螺旋桨静音到超声波隐身</a><time datetime="2025-04-03T05:10:18.126Z" title="Updated 2025-04-03 13:10:18">2025-04-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/19/2024q3/188-1-mbzuai-help-link/" title="MBZUAI Quick Access Links"><img src="https://image.discover304.top/1726926639202.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="MBZUAI Quick Access Links"/></a><div class="content"><a class="title" href="/2024/08/19/2024q3/188-1-mbzuai-help-link/" title="MBZUAI Quick Access Links">MBZUAI Quick Access Links</a><time datetime="2025-04-03T05:09:01.452Z" title="Updated 2025-04-03 13:09:01">2025-04-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/02/08/2025q1/20250208-%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%99%8D%E5%99%AA%E5%B1%95%E6%9C%9B%EF%BC%88%E4%B8%8B%EF%BC%89%EF%BC%9A%E4%B8%BB%E5%8A%A8%E9%99%8D%E5%99%AA%E3%80%81AI%E4%B8%8E%E7%90%83%E9%9D%A2%E9%9F%B3%E6%B3%A2%E5%8F%91%E7%94%9F%E5%99%A8/" title="无人机降噪展望（下）：主动降噪、AI与球面音波发生器"><img src="https://image.discover304.top/1743656574051.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="无人机降噪展望（下）：主动降噪、AI与球面音波发生器"/></a><div class="content"><a class="title" href="/2025/02/08/2025q1/20250208-%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%99%8D%E5%99%AA%E5%B1%95%E6%9C%9B%EF%BC%88%E4%B8%8B%EF%BC%89%EF%BC%9A%E4%B8%BB%E5%8A%A8%E9%99%8D%E5%99%AA%E3%80%81AI%E4%B8%8E%E7%90%83%E9%9D%A2%E9%9F%B3%E6%B3%A2%E5%8F%91%E7%94%9F%E5%99%A8/" title="无人机降噪展望（下）：主动降噪、AI与球面音波发生器">无人机降噪展望（下）：主动降噪、AI与球面音波发生器</a><time datetime="2025-04-03T05:04:13.249Z" title="Updated 2025-04-03 13:04:13">2025-04-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/01/28/2025q1/20250128-%E7%AB%A0%E9%B1%BC%E7%9A%84%E4%B9%9D%E4%B8%AA%E8%84%91%E5%AD%90%E3%80%81%E8%9A%82%E8%9A%81%E7%9A%84%E7%A4%BE%E4%BC%9A%E4%B8%8E%E7%8C%A9%E7%8C%A9%E7%9A%84%E5%90%88%E4%BD%9C%EF%BC%9A%E4%B8%80%E5%9C%BA%E5%85%B3%E4%BA%8E%E9%9B%86%E7%BE%A4%E6%99%BA%E8%83%BD%E7%9A%84%E8%B7%A8%E7%89%A9%E7%A7%8D%E5%AF%B9%E8%AF%9D/" title="章鱼的九个脑子、蚂蚁的社会与猩猩的合作：一场关于集群智能的跨物种对话"><img src="https://image.discover304.top/1743656414823.png?imageView2/2/h/300" onerror="this.onerror=null;this.src='/img/404.png'" alt="章鱼的九个脑子、蚂蚁的社会与猩猩的合作：一场关于集群智能的跨物种对话"/></a><div class="content"><a class="title" href="/2025/01/28/2025q1/20250128-%E7%AB%A0%E9%B1%BC%E7%9A%84%E4%B9%9D%E4%B8%AA%E8%84%91%E5%AD%90%E3%80%81%E8%9A%82%E8%9A%81%E7%9A%84%E7%A4%BE%E4%BC%9A%E4%B8%8E%E7%8C%A9%E7%8C%A9%E7%9A%84%E5%90%88%E4%BD%9C%EF%BC%9A%E4%B8%80%E5%9C%BA%E5%85%B3%E4%BA%8E%E9%9B%86%E7%BE%A4%E6%99%BA%E8%83%BD%E7%9A%84%E8%B7%A8%E7%89%A9%E7%A7%8D%E5%AF%B9%E8%AF%9D/" title="章鱼的九个脑子、蚂蚁的社会与猩猩的合作：一场关于集群智能的跨物种对话">章鱼的九个脑子、蚂蚁的社会与猩猩的合作：一场关于集群智能的跨物种对话</a><time datetime="2025-04-03T05:04:06.739Z" title="Updated 2025-04-03 13:04:06">2025-04-03</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://image.discover304.top/ai/dl/02/dog-end-world.jpg?imageView2/2/h/300)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By ✨白拾ShiroX✨</div><div><a target="_blank" href="https://beian.miit.gov.cn/" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;"> 冀ICP备2021025381号-1</p></a></div><div><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=13060602001430" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/img/beian.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">冀公网安备 13060602001430号</p></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="Increase font size"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="Decrease font size"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+</article><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AE%B0%E5%BD%95/">记录</a><a class="post-meta__tags" href="/tags/%E5%AD%A6%E4%B9%A0/">学习</a><a class="post-meta__tags" href="/tags/Python/">Python</a><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><a class="post-meta__tags" href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a></div><div class="post_share"><div class="social-share" data-image="https://image.discover304.top/ai/dl/02/dog-end-world.jpg?imageView2/2/h/300" data-sites="facebook,twitter,wechat,weibo,qzone,qq,linkedin"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> Donate<div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/12/07/2021q4/085-data-pool/"><img class="prev-cover" src="https://image.discover304.top/foglaketohou.webp?imageView2/2/h/300" onerror="onerror=null;src='/img/404.png'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">【数据湖】扫盲</div></div></a></div><div class="next-post pull-right"><a href="/2021/12/02/2021q4/107-3-dl-tf/"><img class="next-cover" src="https://image.discover304.top/ai/dl/02/dog-end-world.jpg?imageView2/2/h/300" onerror="onerror=null;src='/img/404.png'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">【深度学习】框架：TensorFlow1</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2021/11/30/2021q4/107-0-dl/" title="【深度学习】概述"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】概述</div></div></a></div><div><a href="/2021/11/30/2021q4/107-1-dl-loss-gd/" title="【深度学习】基础 贰：损失函数与梯度下降"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2025-10-10</div><div class="title">【深度学习】基础 贰：损失函数与梯度下降</div></div></a></div><div><a href="/2021/11/30/2021q4/107-1-dl-back/" title="【深度学习】基础 叁：反向传播算法"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】基础 叁：反向传播算法</div></div></a></div><div><a href="/2021/12/02/2021q4/107-2-dl/" title="【深度学习】图像操作：OpenCV"><img class="cover" src="https://image.discover304.top/ai/dl/02/dog-end-world.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】图像操作：OpenCV</div></div></a></div><div><a href="/2021/11/30/2021q4/107-1-dl-perceptron/" title="【深度学习】基础 壹：感知机与神经网络"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】基础 壹：感知机与神经网络</div></div></a></div><div><a href="/2021/11/30/2021q4/107-1-dl-cnn/" title="【深度学习】基础 肆：卷积神经网络"><img class="cover" src="https://image.discover304.top/ai/dl/machine-girl.jpg?imageView2/2/h/300" alt="cover"><div class="content is-center"><div class="date"><i class="fas fa-history fa-fw"></i> 2021-12-25</div><div class="title">【深度学习】基础 肆：卷积神经网络</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> Comment</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">✨白拾ShiroX✨</div><div class="author-info__description">Love Everything You Like.</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">298</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">203</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">30</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/98639326"><i class="fab fa-bilibili"></i><span>Bilibili Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/yhbcode000" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="https://x.com/ShiroHiro2024" target="_blank" title="X"><i class="fab fa-x"></i></a><a class="social-icon" href="https://www.youtube.com/channel/UCuQQr55i3VCQuCPMTQnpzDA" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a><a class="social-icon" href="https://blog.csdn.net/Discover304" target="_blank" title="CSDN"><i class="fa-solid fa-c"></i></a><a class="social-icon" href="https://www.zhihu.com/people/discover-56-86-75" target="_blank" title="知乎"><i class="fa-brands fa-zhihu"></i></a><a class="social-icon" href="mailto:hobart.yang@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://jq.qq.com/?_wv=1027&amp;k=EaGddTQg" target="_blank" title="QQ"><i class="fa-brands fa-qq"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>Announcement</span></div><div class="announcement_content">✨动态更新：<p style="text-align:center">享受奇迹般的和平日常！</p>✨聊天QQ群：<p style="text-align:center"><a target="_blank" rel="noopener" href="https://jq.qq.com/?_wv=1027&k=EaGddTQg"><strong>兔叽の魔术工房</strong></a><br>942-848-525</p>✨我们的口号是：<p style="text-align:center; color:#39C5BB">人工降神，机械飞升！</p><a target="_blank" rel="noopener" href='https://space.bilibili.com/98639326'><img src='/img/mikulittletrans.png'></a></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E"><span class="toc-text">说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PaddlePaddle%E6%A6%82%E8%BF%B0"><span class="toc-text">PaddlePaddle概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="toc-text">体系结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%B8%8E%E6%93%8D%E4%BD%9C"><span class="toc-text">基本概念与操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">基本概念</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%87%86%E5%A4%87"><span class="toc-text">数据准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92"><span class="toc-text">实现多元回归</span></a></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/10/09/2025q4/209-robotics-review/" title="【机器人】操作与运动控制原理"><img src="https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images" onerror="this.onerror=null;this.src='/img/404.png'" alt="【机器人】操作与运动控制原理"/></a><div class="content"><a class="title" href="/2025/10/09/2025q4/209-robotics-review/" title="【机器人】操作与运动控制原理">【机器人】操作与运动控制原理</a><time datetime="2025-10-09T21:09:31.734Z" title="Updated 2025-10-10 05:09:31">2025-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/05/31/2025q2/208-cloud-studio/" title="208-Cloud-Studio"><img src="https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images" onerror="this.onerror=null;this.src='/img/404.png'" alt="208-Cloud-Studio"/></a><div class="content"><a class="title" href="/2025/05/31/2025q2/208-cloud-studio/" title="208-Cloud-Studio">208-Cloud-Studio</a><time datetime="2025-10-09T18:31:08.632Z" title="Updated 2025-10-10 02:31:08">2025-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/29/2025q2/207-illusion-in-attention/" title="207-Illusion-in-Attention"><img src="https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images" onerror="this.onerror=null;this.src='/img/404.png'" alt="207-Illusion-in-Attention"/></a><div class="content"><a class="title" href="/2025/04/29/2025q2/207-illusion-in-attention/" title="207-Illusion-in-Attention">207-Illusion-in-Attention</a><time datetime="2025-10-09T18:31:08.577Z" title="Updated 2025-10-10 02:31:08">2025-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/27/2025q2/206-leetcode-and-hackerrank/" title="206-Leetcode_and_hackerrank"><img src="https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images" onerror="this.onerror=null;this.src='/img/404.png'" alt="206-Leetcode_and_hackerrank"/></a><div class="content"><a class="title" href="/2025/04/27/2025q2/206-leetcode-and-hackerrank/" title="206-Leetcode_and_hackerrank">206-Leetcode_and_hackerrank</a><time datetime="2025-10-09T18:31:08.549Z" title="Updated 2025-10-10 02:31:08">2025-10-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/27/2025q2/205-clash/" title="205-Clash"><img src="https://api.btstu.cn/sjbz/api.php?lx=dongman&amp;format=images" onerror="this.onerror=null;this.src='/img/404.png'" alt="205-Clash"/></a><div class="content"><a class="title" href="/2025/04/27/2025q2/205-clash/" title="205-Clash">205-Clash</a><time datetime="2025-10-09T18:31:08.523Z" title="Updated 2025-10-10 02:31:08">2025-10-10</time></div></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(https://image.discover304.top/ai/dl/02/dog-end-world.jpg?imageView2/2/h/300)"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By ✨白拾ShiroX✨</div><div><a target="_blank" href="https://beian.miit.gov.cn/" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;"> 冀ICP备2021025381号-1</p></a></div><div><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=13060602001430" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="/img/beian.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">冀公网安备 13060602001430号</p></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="Increase font size"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="Decrease font size"><i class="fas fa-minus"></i></button><button id="translateLink" type="button" title="Switch Between Traditional Chinese And Simplified Chinese">繁</button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="Scroll To Comments"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
   if (typeof pangu === 'object') pangu.spacingElementById('content-inner')
   else {
     getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js')
@@ -1912,7 +1529,52 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><script src="/j
 
   }
 }
-window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
+window.addEventListener('load',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    loader: {
+      source: {
+        '[tex]/amsCd': '[tex]/amscd'
+      }
+    },
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        addClass: [200,() => {
+          document.querySelectorAll('mjx-container:not([display=\'true\']').forEach( node => {
+            const target = node.parentNode
+            if (!target.classList.contains('has-jax')) {
+              target.classList.add('mathjax-overflow')
+            }
+          })
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>if (document.getElementsByClassName('mermaid').length) {
   if (window.mermaidJsLoad) mermaid.init()
   else {
     getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {
