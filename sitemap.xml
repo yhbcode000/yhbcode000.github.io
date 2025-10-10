@@ -4,16 +4,7 @@
   <url>
     <loc>https://discover304.top/2025/10/09/2025q4/209-robotics-review/</loc>
     
-    <lastmod>2025-10-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/about/index.html</loc>
-    
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -21,6 +12,15 @@
   
   <url>
     <loc>https://discover304.top/2025/05/31/2025q2/208-cloud-studio/</loc>
+    
+    <lastmod>2025-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/about/index.html</loc>
     
     <lastmod>2025-10-09</lastmod>
     
@@ -2450,7 +2450,7 @@
   </url>
   
   <url>
-    <loc>https://discover304.top/2021/10/29/2021q4/092-js-note-web-html/</loc>
+    <loc>https://discover304.top/2021/11/16/2021q4/093-js-multi-threading/</loc>
     
     <lastmod>2021-12-25</lastmod>
     
@@ -2459,7 +2459,7 @@
   </url>
   
   <url>
-    <loc>https://discover304.top/2021/11/16/2021q4/093-js-multi-threading/</loc>
+    <loc>https://discover304.top/2021/10/29/2021q4/092-js-note-web-html/</loc>
     
     <lastmod>2021-12-25</lastmod>
     
@@ -2486,7 +2486,7 @@
   </url>
   
   <url>
-    <loc>https://discover304.top/2021/12/02/2021q4/107-2-dl/</loc>
+    <loc>https://discover304.top/2021/11/30/2021q4/107-1-dl-cnn/</loc>
     
     <lastmod>2021-12-25</lastmod>
     
@@ -2504,7 +2504,7 @@
   </url>
   
   <url>
-    <loc>https://discover304.top/2021/11/30/2021q4/107-1-dl-cnn/</loc>
+    <loc>https://discover304.top/2021/12/02/2021q4/107-2-dl/</loc>
     
     <lastmod>2021-12-25</lastmod>
     
@@ -2731,1429 +2731,1429 @@
 
   <url>
     <loc>https://discover304.top/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://discover304.top/tags/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E5%8F%82%E8%80%83/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E8%B5%84%E6%96%99/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E6%A8%A1%E6%9D%BF/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://discover304.top/tags/%E7%BA%AA%E5%BF%B5/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E7%BB%8F%E5%8E%86/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E8%AE%B0%E5%BD%95/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/Java/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E5%8F%82%E8%80%83/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E6%A8%A1%E6%9D%BF/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/Markdown/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E8%B5%84%E6%96%99/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E7%BB%8F%E5%8E%86/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/Java/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/Linux/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E8%AF%BB%E4%B9%A6/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E6%96%B0%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/Python/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E7%A7%AF%E7%B4%AF/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/XML/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/Json/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E5%AF%B9%E6%AF%94/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E5%A4%9A%E8%BF%9B%E7%A8%8B/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E5%B9%B6%E8%A1%8C/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E5%AF%B9%E6%AF%94/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E7%AD%94%E7%96%91/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E8%AF%AF%E5%8C%BA/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/XML/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/Json/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E7%A7%AF%E7%B4%AF/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E5%9B%BE%E5%83%8F/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E5%A4%9A%E8%BF%9B%E7%A8%8B/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E5%B9%B6%E8%A1%8C/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E8%B0%83%E6%9F%A5/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E7%BB%8F%E9%AA%8C/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E5%9F%B9%E8%AE%AD/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E6%96%BD%E5%B7%A5%E4%B8%AD/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E6%80%9D%E8%80%83/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E7%BA%A0%E5%81%8F/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E7%AE%A1%E7%90%86%E5%AD%A6/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E7%9B%AE%E6%A0%87/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E5%B7%A5%E4%BD%9C%E6%B3%95/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/OKR/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E7%BD%91%E9%A1%B5/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/MySQL/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E7%BD%91%E7%BB%9C/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/git/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/CSS/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/Web/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/HTML/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/Django/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/JavaScript/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E4%B8%AA%E4%BA%BA/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E7%BB%B4%E5%BA%A6/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E6%A6%82%E5%BF%B5/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E6%95%B0%E5%AD%A6/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E4%B9%A6%E7%B1%8D/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/ROS/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/SLAM/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/Docker/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E6%95%B4%E7%90%86/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E4%BF%A1%E6%81%AF%E8%AE%BA/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E5%90%88%E4%BD%9C/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/PowerShell/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/GNN/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E6%89%AB%E7%9B%B2/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E5%8F%AA%E6%98%AF/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E9%A1%B9%E7%9B%AE/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E6%96%87%E6%9C%AC/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E6%B8%90%E8%BF%91%E5%88%86%E6%9E%90/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E5%B0%8F%E5%88%9B%E6%84%8F/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E6%B8%B8%E6%88%8F/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E6%B8%90%E8%BF%91%E5%88%86%E6%9E%90/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E6%89%AB%E7%9B%B2/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E5%B0%8F%E5%88%9B%E6%84%8F/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E6%B8%B8%E6%88%8F/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E7%AD%94%E6%A1%88/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E8%B0%83%E6%9F%A5/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E6%95%B4%E7%90%86/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E8%AF%84%E8%AE%BA/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E4%BB%93%E5%BA%93/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E5%9F%B9%E8%AE%AD/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E7%BB%8F%E9%AA%8C/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E6%80%9D%E8%80%83/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E7%BA%A0%E5%81%8F/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E6%96%BD%E5%B7%A5%E4%B8%AD/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E7%BD%91%E9%A1%B5/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E7%AE%A1%E7%90%86%E5%AD%A6/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E7%9B%AE%E6%A0%87/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E5%B7%A5%E4%BD%9C%E6%B3%95/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/OKR/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/MySQL/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E7%BB%8F%E7%90%86/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E7%A7%91%E7%A0%94/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E7%AE%A1%E7%90%86/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/ICLR2024/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/ROS/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/Emergent-Communication/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/Conversational-Repair/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E5%90%88%E4%BD%9C/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/Reinforcement-Learning/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E4%BF%A1%E6%81%AF%E8%AE%BA/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/AI-Research/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E5%8F%AA%E6%98%AF/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E6%95%B0%E5%AD%A6/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/Docker/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/PowerShell/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/GNN/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E7%BD%91%E7%BB%9C/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/HTML/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/Web/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/CSS/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/JavaScript/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/git/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/Django/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E4%B8%AA%E4%BA%BA/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E7%BB%B4%E5%BA%A6/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E6%A6%82%E5%BF%B5/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E4%B9%A6%E7%B1%8D/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/SLAM/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E7%A4%BE%E5%8C%BA%E8%BF%90%E8%90%A5/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E5%A4%9A%E5%85%83%E5%8C%96%E5%8F%91%E5%B1%95/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E6%B2%BB%E7%90%86%E7%BB%93%E6%9E%84/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/ICLR2024/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/Emergent-Communication/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/Conversational-Repair/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/Reinforcement-Learning/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/AI-Research/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/ChuanhuChatbot/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/Multimodal-Input/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/AI-Development/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/Vector-Store/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/Similarity-Search/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/Indexing/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/Machine-Learning/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/AI/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/ChuanhuChatGPT/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/Embedding/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/FAISS/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/AI-Tools/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/C/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/Multi-Agent-Systems/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/Generative-Agents/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/Emergent-Behavior/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/Large-Language-Models/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/HPC/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/SSH/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/Slurm/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/Tmux/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/Resource-Management/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/Music-Generation/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/Cross-modal-Learning/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/GitHub-Evaluation/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/C/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/NumPy/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/Array-Slicing/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/Data-Manipulation/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/Music-Generation/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/Cross-modal-Learning/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/Large-Language-Models/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/GitHub-Evaluation/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/Data-Science/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/statsmodels/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/Statistical-Analysis/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/Conda/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/Environment-Management/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/Tutorial/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/Linear-Algebra/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/scikit-image/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/Image-Processing/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/Mixture-of-Experts/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/Multi-Modal-AI/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/LangChain/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/AI-Architecture/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/scikit-learn/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/Classification/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/Matplotlib/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/Conda/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/Data-Visualization/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/Environment-Management/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/Tutorial/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/scikit-image/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/Image-Processing/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/sustainability/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/space-migration/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/long-lasting-products/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/human-survival/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/future/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/Matplotlib/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/Data-Visualization/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/Copilot/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/AI-%E7%BC%96%E7%A8%8B%E5%8A%A9%E6%89%8B/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E6%A8%A1%E5%9D%97%E5%8C%96%E8%AE%BE%E8%AE%A1/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/AI%E4%B8%8E%E7%A7%91%E7%A0%94/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/Mixture-of-Experts/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E7%9F%A5%E8%AF%86%E8%BE%B9%E7%95%8C/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/Multi-Modal-AI/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/AGI/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/LangChain/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E8%87%AA%E7%BB%84%E7%BB%87%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E7%A7%91%E7%A0%94%E8%87%AA%E5%8A%A8%E5%8C%96/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/AI-Architecture/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E6%95%B0%E5%AD%A6%E5%93%B2%E5%AD%A6/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E5%93%A5%E5%BE%B7%E5%B0%94%E4%B8%8D%E5%AE%8C%E5%A4%87%E5%AE%9A%E7%90%86/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E9%9A%8F%E6%9C%BA%E6%80%A7/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E9%9B%B6%E6%A0%B7%E6%9C%AC%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/AI%E4%B8%8E%E9%80%BB%E8%BE%91/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E5%9F%BA%E5%9B%A0%E5%85%B1%E7%94%9F/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/AI%E4%B8%8E%E7%A7%91%E7%A0%94/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E6%A8%AA%E5%90%91%E5%9F%BA%E5%9B%A0%E8%BD%AC%E7%A7%BB/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E7%9F%A5%E8%AF%86%E8%BE%B9%E7%95%8C/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/AGI/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/AI%E6%BC%94%E5%8C%96/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E5%85%B7%E8%BA%AB%E6%99%BA%E8%83%BD/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E8%87%AA%E7%BB%84%E7%BB%87%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E9%9B%86%E7%BE%A4%E6%99%BA%E8%83%BD/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E8%A7%86%E8%A7%89%E9%94%99%E8%A7%89/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/AI%E8%A7%86%E8%A7%89/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E6%84%9F%E7%9F%A5%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E5%B9%BB%E8%A7%89%E7%8E%B0%E8%B1%A1/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/tags/%E5%A4%9A%E6%A8%A1%E6%80%81AI/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E7%A7%91%E7%A0%94%E8%87%AA%E5%8A%A8%E5%8C%96/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/NP-hard%E9%97%AE%E9%A2%98/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E8%84%91%E5%8A%9B%E8%A7%A3%E6%94%BE/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E8%A7%92%E8%89%B2/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E5%90%AF%E5%8F%91%E5%BC%8F%E7%AD%96%E7%95%A5/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E7%BE%A4%E4%BD%93%E6%99%BA%E8%83%BD/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E8%A7%86%E8%A7%89%E9%94%99%E8%A7%89/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E7%B3%BB%E7%BB%9F/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/AI%E8%A7%86%E8%A7%89/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E4%BB%BF%E7%94%9F%E5%AD%A6/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E6%84%9F%E7%9F%A5%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E9%9B%86%E7%BE%A4%E6%9C%BA%E5%99%A8%E4%BA%BA/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/AI%E5%8D%8F%E4%BD%9C/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E5%B9%BB%E8%A7%89%E7%8E%B0%E8%B1%A1/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E5%A4%9A%E6%A8%A1%E6%80%81AI/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E9%99%8D%E5%99%AA%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E5%9F%BA%E5%9B%A0%E5%85%B1%E7%94%9F/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E9%9D%99%E9%9F%B3%E8%9E%BA%E6%97%8B%E6%A1%A8/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E6%A8%AA%E5%90%91%E5%9F%BA%E5%9B%A0%E8%BD%AC%E7%A7%BB/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E8%B6%85%E5%A3%B0%E6%B3%A2/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E7%94%9F%E6%80%81%E5%BD%B1%E5%93%8D/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/AI%E6%BC%94%E5%8C%96/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/tags/%E5%A3%B0%E5%AD%A6%E5%B7%A5%E7%A8%8B/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/tags/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E9%9B%86%E7%BE%A4%E6%99%BA%E8%83%BD/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E6%83%85%E6%84%9FAI/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E5%85%B1%E6%83%85%E8%AE%A1%E7%AE%97/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E4%BA%BA%E6%9C%BA%E5%85%B3%E7%B3%BB/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E9%81%93%E5%BE%B7%E8%B4%A3%E4%BB%BB/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E5%B7%A5%E5%85%B7%E4%B8%8E%E9%99%AA%E4%BC%B4/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E4%BA%BA%E7%B1%BB%E6%83%85%E6%84%9F%E9%9C%80%E6%B1%82/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E7%BE%A4%E4%BD%93%E6%99%BA%E8%83%BD/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E4%BB%BF%E7%94%9F%E5%AD%A6/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E9%9B%86%E7%BE%A4%E6%9C%BA%E5%99%A8%E4%BA%BA/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/AI%E5%8D%8F%E4%BD%9C/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E9%99%8D%E5%99%AA%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E9%9D%99%E9%9F%B3%E8%9E%BA%E6%97%8B%E6%A1%A8/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E8%B6%85%E5%A3%B0%E6%B3%A2/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E7%94%9F%E6%80%81%E5%BD%B1%E5%93%8D/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/%E5%A3%B0%E5%AD%A6%E5%B7%A5%E7%A8%8B/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E4%B8%BB%E5%8A%A8%E9%99%8D%E5%99%AA/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/AI%E7%AE%97%E6%B3%95/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E7%90%83%E9%9D%A2%E5%A3%B0%E6%B3%A2/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E9%9D%99%E9%9F%B3%E9%A3%9E%E8%A1%8C/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/tags/%E7%8E%AF%E5%A2%83%E5%A3%B0%E5%AD%A6/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/Multi-Agent-Systems/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/Generative-Agents/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/tags/Emergent-Behavior/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -4161,211 +4161,211 @@
 
   
   <url>
-    <loc>https://discover304.top/categories/Library/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://discover304.top/categories/DailyLife/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/categories/Project/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/categories/Library/ToolBook/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/categories/Library/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/categories/DailyLife/Normal/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/categories/Project/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/categories/NoteBook/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/categories/Project/Collaboration/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/categories/Library/ToolBook/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/categories/Library/Collection/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/categories/Project/Collaboration/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/categories/University/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/categories/NoteBook/ReadingNote/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/categories/NoteBook/GeneralNote/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/categories/NoteBook/PythonNote/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/categories/NoteBook/OtherNote/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/categories/Project/Solo/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/categories/NoteBook/ReadingNote/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/categories/NoteBook/ThinkingNote/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/categories/University/Reasoning-and-Agent/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/categories/University/Introduction-to-Algorithms-and-Data-Structures/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/categories/NoteBook/GeneralNote/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/categories/DailyLife/BigEvent/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://discover304.top/categories/University/Professional-Issues/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <loc>https://discover304.top/categories/University/Introduction-to-Algorithms-and-Data-Structures/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/categories/NoteBook/PythonNote/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/categories/Project/Solo/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/categories/NoteBook/ThinkingNote/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/categories/University/Software-Engineering-And-Professional-Practice/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/categories/University/Cognitive-Science/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/categories/University/Honours-Project/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/categories/University/Advanced-Robotics/</loc>
-    <lastmod>2025-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://discover304.top/categories/Draft/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/categories/University/Introduction-to-Mobile-Robotics/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/categories/University/Reasoning-and-Agent/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/categories/University/Speech-Processing/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/categories/University/Professional-Issues/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/categories/University/Honours-Project/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/categories/University/Advanced-Robotics/</loc>
+    <lastmod>2025-10-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://discover304.top/categories/Draft/</loc>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/categories/NoteBook/TechNote/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/categories/University/Natural-Language-Understanding-Generation-and-Machine-Translation/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/categories/University/Probabilistic-Modelling-and-Reasoning/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://discover304.top/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2025-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
