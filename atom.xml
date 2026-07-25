@@ -3,11 +3,11 @@
   <title>白拾的笔记本</title>
   <icon>https://www.gravatar.com/avatar/ab3d855fe5c65deed5c8f765972aac7c</icon>
   
-  <link href="https://yhbcode000.tech/atom.xml" rel="self"/>
+  <link href="https://blog.yhbcode000.tech/atom.xml" rel="self"/>
   
-  <link href="https://yhbcode000.tech/"/>
+  <link href="https://blog.yhbcode000.tech/"/>
   <updated>2025-10-14T12:20:30.807Z</updated>
-  <id>https://yhbcode000.tech/</id>
+  <id>https://blog.yhbcode000.tech/</id>
   
   <author>
     <name>✨白拾ShiroX✨</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title></title>
-    <link href="https://yhbcode000.tech/2025/10/14/draft/"/>
-    <id>https://yhbcode000.tech/2025/10/14/draft/</id>
+    <link href="https://blog.yhbcode000.tech/2025/10/14/draft/"/>
+    <id>https://blog.yhbcode000.tech/2025/10/14/draft/</id>
     <published>2025-10-14T12:20:30.807Z</published>
     <updated>2025-10-14T12:20:30.807Z</updated>
     
@@ -41,8 +41,8 @@
   
   <entry>
     <title></title>
-    <link href="https://yhbcode000.tech/2025/10/14/draft/"/>
-    <id>https://yhbcode000.tech/2025/10/14/draft/</id>
+    <link href="https://blog.yhbcode000.tech/2025/10/14/draft/"/>
+    <id>https://blog.yhbcode000.tech/2025/10/14/draft/</id>
     <published>2025-10-14T11:15:00.346Z</published>
     <updated>2025-10-14T12:13:33.809Z</updated>
     
@@ -62,8 +62,8 @@
   
   <entry>
     <title>【机器人】操作与运动控制原理</title>
-    <link href="https://yhbcode000.tech/2025/10/09/2025q4/209-robotics-review/"/>
-    <id>https://yhbcode000.tech/2025/10/09/2025q4/209-robotics-review/</id>
+    <link href="https://blog.yhbcode000.tech/2025/10/09/2025q4/209-robotics-review/"/>
+    <id>https://blog.yhbcode000.tech/2025/10/09/2025q4/209-robotics-review/</id>
     <published>2025-10-09T11:41:47.000Z</published>
     <updated>2026-07-25T04:53:28.941Z</updated>
     
@@ -78,17 +78,17 @@
     
     
     
-    <category term="机器人" scheme="https://yhbcode000.tech/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
+    <category term="机器人" scheme="https://blog.yhbcode000.tech/categories/%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
     
     
-    <category term="机器人" scheme="https://yhbcode000.tech/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
+    <category term="机器人" scheme="https://blog.yhbcode000.tech/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
     
   </entry>
   
   <entry>
     <title>208-Cloud-Studio</title>
-    <link href="https://yhbcode000.tech/2025/05/31/2025q2/208-cloud-studio/"/>
-    <id>https://yhbcode000.tech/2025/05/31/2025q2/208-cloud-studio/</id>
+    <link href="https://blog.yhbcode000.tech/2025/05/31/2025q2/208-cloud-studio/"/>
+    <id>https://blog.yhbcode000.tech/2025/05/31/2025q2/208-cloud-studio/</id>
     <published>2025-05-31T03:19:40.000Z</published>
     <updated>2025-10-10T05:59:46.196Z</updated>
     
@@ -105,17 +105,17 @@
     
     
     
-    <category term="Draft" scheme="https://yhbcode000.tech/categories/Draft/"/>
+    <category term="Draft" scheme="https://blog.yhbcode000.tech/categories/Draft/"/>
     
     
-    <category term="待更新" scheme="https://yhbcode000.tech/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
+    <category term="待更新" scheme="https://blog.yhbcode000.tech/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
     
   </entry>
   
   <entry>
     <title>207-Illusion-in-Attention</title>
-    <link href="https://yhbcode000.tech/2025/04/29/2025q2/207-illusion-in-attention/"/>
-    <id>https://yhbcode000.tech/2025/04/29/2025q2/207-illusion-in-attention/</id>
+    <link href="https://blog.yhbcode000.tech/2025/04/29/2025q2/207-illusion-in-attention/"/>
+    <id>https://blog.yhbcode000.tech/2025/04/29/2025q2/207-illusion-in-attention/</id>
     <published>2025-04-29T12:53:40.000Z</published>
     <updated>2025-10-09T18:31:08.577Z</updated>
     
@@ -132,17 +132,17 @@
     
     
     
-    <category term="Draft" scheme="https://yhbcode000.tech/categories/Draft/"/>
+    <category term="Draft" scheme="https://blog.yhbcode000.tech/categories/Draft/"/>
     
     
-    <category term="待更新" scheme="https://yhbcode000.tech/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
+    <category term="待更新" scheme="https://blog.yhbcode000.tech/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
     
   </entry>
   
   <entry>
     <title>206-Leetcode_and_hackerrank</title>
-    <link href="https://yhbcode000.tech/2025/04/27/2025q2/206-leetcode-and-hackerrank/"/>
-    <id>https://yhbcode000.tech/2025/04/27/2025q2/206-leetcode-and-hackerrank/</id>
+    <link href="https://blog.yhbcode000.tech/2025/04/27/2025q2/206-leetcode-and-hackerrank/"/>
+    <id>https://blog.yhbcode000.tech/2025/04/27/2025q2/206-leetcode-and-hackerrank/</id>
     <published>2025-04-27T14:15:14.000Z</published>
     <updated>2025-10-09T18:31:08.549Z</updated>
     
@@ -161,17 +161,17 @@
     
     
     
-    <category term="Draft" scheme="https://yhbcode000.tech/categories/Draft/"/>
+    <category term="Draft" scheme="https://blog.yhbcode000.tech/categories/Draft/"/>
     
     
-    <category term="待更新" scheme="https://yhbcode000.tech/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
+    <category term="待更新" scheme="https://blog.yhbcode000.tech/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
     
   </entry>
   
   <entry>
     <title>205-Clash</title>
-    <link href="https://yhbcode000.tech/2025/04/27/2025q2/205-clash/"/>
-    <id>https://yhbcode000.tech/2025/04/27/2025q2/205-clash/</id>
+    <link href="https://blog.yhbcode000.tech/2025/04/27/2025q2/205-clash/"/>
+    <id>https://blog.yhbcode000.tech/2025/04/27/2025q2/205-clash/</id>
     <published>2025-04-26T21:19:29.000Z</published>
     <updated>2025-10-09T18:31:08.523Z</updated>
     
@@ -186,17 +186,17 @@
     
     
     
-    <category term="Draft" scheme="https://yhbcode000.tech/categories/Draft/"/>
+    <category term="Draft" scheme="https://blog.yhbcode000.tech/categories/Draft/"/>
     
     
-    <category term="待更新" scheme="https://yhbcode000.tech/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
+    <category term="待更新" scheme="https://blog.yhbcode000.tech/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
     
   </entry>
   
   <entry>
     <title>204-Illusion-Final</title>
-    <link href="https://yhbcode000.tech/2025/04/20/2025q2/204-illusion-final/"/>
-    <id>https://yhbcode000.tech/2025/04/20/2025q2/204-illusion-final/</id>
+    <link href="https://blog.yhbcode000.tech/2025/04/20/2025q2/204-illusion-final/"/>
+    <id>https://blog.yhbcode000.tech/2025/04/20/2025q2/204-illusion-final/</id>
     <published>2025-04-20T03:08:34.000Z</published>
     <updated>2026-07-25T04:53:28.933Z</updated>
     
@@ -211,17 +211,17 @@
     
     
     
-    <category term="Draft" scheme="https://yhbcode000.tech/categories/Draft/"/>
+    <category term="Draft" scheme="https://blog.yhbcode000.tech/categories/Draft/"/>
     
     
-    <category term="待更新" scheme="https://yhbcode000.tech/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
+    <category term="待更新" scheme="https://blog.yhbcode000.tech/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
     
   </entry>
   
   <entry>
     <title>203-Timm-Module-Tldr</title>
-    <link href="https://yhbcode000.tech/2025/04/19/2025q1/203-timm-module-tldr/"/>
-    <id>https://yhbcode000.tech/2025/04/19/2025q1/203-timm-module-tldr/</id>
+    <link href="https://blog.yhbcode000.tech/2025/04/19/2025q1/203-timm-module-tldr/"/>
+    <id>https://blog.yhbcode000.tech/2025/04/19/2025q1/203-timm-module-tldr/</id>
     <published>2025-04-19T15:30:19.000Z</published>
     <updated>2025-10-09T18:31:08.449Z</updated>
     
@@ -240,17 +240,17 @@
     
     
     
-    <category term="Draft" scheme="https://yhbcode000.tech/categories/Draft/"/>
+    <category term="Draft" scheme="https://blog.yhbcode000.tech/categories/Draft/"/>
     
     
-    <category term="待更新" scheme="https://yhbcode000.tech/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
+    <category term="待更新" scheme="https://blog.yhbcode000.tech/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
     
   </entry>
   
   <entry>
     <title>202-Runpod-vs-Autodl</title>
-    <link href="https://yhbcode000.tech/2025/04/18/2025q1/202-runpod-vs-autodl/"/>
-    <id>https://yhbcode000.tech/2025/04/18/2025q1/202-runpod-vs-autodl/</id>
+    <link href="https://blog.yhbcode000.tech/2025/04/18/2025q1/202-runpod-vs-autodl/"/>
+    <id>https://blog.yhbcode000.tech/2025/04/18/2025q1/202-runpod-vs-autodl/</id>
     <published>2025-04-18T14:33:29.000Z</published>
     <updated>2025-10-09T18:31:08.396Z</updated>
     
@@ -268,17 +268,17 @@
     
     
     
-    <category term="Draft" scheme="https://yhbcode000.tech/categories/Draft/"/>
+    <category term="Draft" scheme="https://blog.yhbcode000.tech/categories/Draft/"/>
     
     
-    <category term="待更新" scheme="https://yhbcode000.tech/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
+    <category term="待更新" scheme="https://blog.yhbcode000.tech/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
     
   </entry>
   
   <entry>
     <title>200-Monitoring-Log</title>
-    <link href="https://yhbcode000.tech/2025/04/18/2025q1/200-monitoring-log/"/>
-    <id>https://yhbcode000.tech/2025/04/18/2025q1/200-monitoring-log/</id>
+    <link href="https://blog.yhbcode000.tech/2025/04/18/2025q1/200-monitoring-log/"/>
+    <id>https://blog.yhbcode000.tech/2025/04/18/2025q1/200-monitoring-log/</id>
     <published>2025-04-18T14:26:58.000Z</published>
     <updated>2025-10-09T18:31:08.353Z</updated>
     
@@ -300,17 +300,17 @@ tail -c&lt;/p&gt;
     
     
     
-    <category term="Draft" scheme="https://yhbcode000.tech/categories/Draft/"/>
+    <category term="Draft" scheme="https://blog.yhbcode000.tech/categories/Draft/"/>
     
     
-    <category term="待更新" scheme="https://yhbcode000.tech/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
+    <category term="待更新" scheme="https://blog.yhbcode000.tech/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
     
   </entry>
   
   <entry>
     <title>199-Aria2-Intro</title>
-    <link href="https://yhbcode000.tech/2025/04/18/2025q1/199-aria2-intro/"/>
-    <id>https://yhbcode000.tech/2025/04/18/2025q1/199-aria2-intro/</id>
+    <link href="https://blog.yhbcode000.tech/2025/04/18/2025q1/199-aria2-intro/"/>
+    <id>https://blog.yhbcode000.tech/2025/04/18/2025q1/199-aria2-intro/</id>
     <published>2025-04-18T10:32:22.000Z</published>
     <updated>2025-10-09T18:31:08.300Z</updated>
     
@@ -329,17 +329,17 @@ tail -c&lt;/p&gt;
     
     
     
-    <category term="Draft" scheme="https://yhbcode000.tech/categories/Draft/"/>
+    <category term="Draft" scheme="https://blog.yhbcode000.tech/categories/Draft/"/>
     
     
-    <category term="待更新" scheme="https://yhbcode000.tech/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
+    <category term="待更新" scheme="https://blog.yhbcode000.tech/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
     
   </entry>
   
   <entry>
     <title>198-Huggingface-Datasets-Cache</title>
-    <link href="https://yhbcode000.tech/2025/04/18/2025q1/198-huggingface-datasets-cache/"/>
-    <id>https://yhbcode000.tech/2025/04/18/2025q1/198-huggingface-datasets-cache/</id>
+    <link href="https://blog.yhbcode000.tech/2025/04/18/2025q1/198-huggingface-datasets-cache/"/>
+    <id>https://blog.yhbcode000.tech/2025/04/18/2025q1/198-huggingface-datasets-cache/</id>
     <published>2025-04-18T07:50:01.000Z</published>
     <updated>2025-10-09T18:31:08.264Z</updated>
     
@@ -357,17 +357,17 @@ tail -c&lt;/p&gt;
     
     
     
-    <category term="Draft" scheme="https://yhbcode000.tech/categories/Draft/"/>
+    <category term="Draft" scheme="https://blog.yhbcode000.tech/categories/Draft/"/>
     
     
-    <category term="待更新" scheme="https://yhbcode000.tech/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
+    <category term="待更新" scheme="https://blog.yhbcode000.tech/tags/%E5%BE%85%E6%9B%B4%E6%96%B0/"/>
     
   </entry>
   
   <entry>
     <title>Copilot AI 使用注意事项</title>
-    <link href="https://yhbcode000.tech/2025/04/13/2025q1/197-copilot-usage/"/>
-    <id>https://yhbcode000.tech/2025/04/13/2025q1/197-copilot-usage/</id>
+    <link href="https://blog.yhbcode000.tech/2025/04/13/2025q1/197-copilot-usage/"/>
+    <id>https://blog.yhbcode000.tech/2025/04/13/2025q1/197-copilot-usage/</id>
     <published>2025-04-12T16:38:54.000Z</published>
     <updated>2026-07-25T04:53:28.918Z</updated>
     
@@ -383,27 +383,27 @@ tail -c&lt;/p&gt;
     
     
     
-    <category term="NoteBook" scheme="https://yhbcode000.tech/categories/NoteBook/"/>
+    <category term="NoteBook" scheme="https://blog.yhbcode000.tech/categories/NoteBook/"/>
     
-    <category term="TechNote" scheme="https://yhbcode000.tech/categories/NoteBook/TechNote/"/>
+    <category term="TechNote" scheme="https://blog.yhbcode000.tech/categories/NoteBook/TechNote/"/>
     
     
-    <category term="Copilot" scheme="https://yhbcode000.tech/tags/Copilot/"/>
+    <category term="Copilot" scheme="https://blog.yhbcode000.tech/tags/Copilot/"/>
     
-    <category term="AI 编程助手" scheme="https://yhbcode000.tech/tags/AI-%E7%BC%96%E7%A8%8B%E5%8A%A9%E6%89%8B/"/>
+    <category term="AI 编程助手" scheme="https://blog.yhbcode000.tech/tags/AI-%E7%BC%96%E7%A8%8B%E5%8A%A9%E6%89%8B/"/>
     
-    <category term="编码规范" scheme="https://yhbcode000.tech/tags/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/"/>
+    <category term="编码规范" scheme="https://blog.yhbcode000.tech/tags/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/"/>
     
-    <category term="项目管理" scheme="https://yhbcode000.tech/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    <category term="项目管理" scheme="https://blog.yhbcode000.tech/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
     
-    <category term="模块化设计" scheme="https://yhbcode000.tech/tags/%E6%A8%A1%E5%9D%97%E5%8C%96%E8%AE%BE%E8%AE%A1/"/>
+    <category term="模块化设计" scheme="https://blog.yhbcode000.tech/tags/%E6%A8%A1%E5%9D%97%E5%8C%96%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   
   <entry>
     <title>无人机降噪展望（下）：主动降噪、AI与球面音波发生器</title>
-    <link href="https://yhbcode000.tech/2025/02/08/2025q1/20250208-%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%99%8D%E5%99%AA%E5%B1%95%E6%9C%9B%EF%BC%88%E4%B8%8B%EF%BC%89%EF%BC%9A%E4%B8%BB%E5%8A%A8%E9%99%8D%E5%99%AA%E3%80%81AI%E4%B8%8E%E7%90%83%E9%9D%A2%E9%9F%B3%E6%B3%A2%E5%8F%91%E7%94%9F%E5%99%A8/"/>
-    <id>https://yhbcode000.tech/2025/02/08/2025q1/20250208-%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%99%8D%E5%99%AA%E5%B1%95%E6%9C%9B%EF%BC%88%E4%B8%8B%EF%BC%89%EF%BC%9A%E4%B8%BB%E5%8A%A8%E9%99%8D%E5%99%AA%E3%80%81AI%E4%B8%8E%E7%90%83%E9%9D%A2%E9%9F%B3%E6%B3%A2%E5%8F%91%E7%94%9F%E5%99%A8/</id>
+    <link href="https://blog.yhbcode000.tech/2025/02/08/2025q1/20250208-%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%99%8D%E5%99%AA%E5%B1%95%E6%9C%9B%EF%BC%88%E4%B8%8B%EF%BC%89%EF%BC%9A%E4%B8%BB%E5%8A%A8%E9%99%8D%E5%99%AA%E3%80%81AI%E4%B8%8E%E7%90%83%E9%9D%A2%E9%9F%B3%E6%B3%A2%E5%8F%91%E7%94%9F%E5%99%A8/"/>
+    <id>https://blog.yhbcode000.tech/2025/02/08/2025q1/20250208-%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%99%8D%E5%99%AA%E5%B1%95%E6%9C%9B%EF%BC%88%E4%B8%8B%EF%BC%89%EF%BC%9A%E4%B8%BB%E5%8A%A8%E9%99%8D%E5%99%AA%E3%80%81AI%E4%B8%8E%E7%90%83%E9%9D%A2%E9%9F%B3%E6%B3%A2%E5%8F%91%E7%94%9F%E5%99%A8/</id>
     <published>2025-02-07T16:00:00.000Z</published>
     <updated>2026-07-25T04:53:28.929Z</updated>
     
@@ -417,29 +417,29 @@ tail -c&lt;/p&gt;
     
     
     
-    <category term="NoteBook" scheme="https://yhbcode000.tech/categories/NoteBook/"/>
+    <category term="NoteBook" scheme="https://blog.yhbcode000.tech/categories/NoteBook/"/>
     
-    <category term="TechNote" scheme="https://yhbcode000.tech/categories/NoteBook/TechNote/"/>
+    <category term="TechNote" scheme="https://blog.yhbcode000.tech/categories/NoteBook/TechNote/"/>
     
     
-    <category term="主动降噪" scheme="https://yhbcode000.tech/tags/%E4%B8%BB%E5%8A%A8%E9%99%8D%E5%99%AA/"/>
+    <category term="主动降噪" scheme="https://blog.yhbcode000.tech/tags/%E4%B8%BB%E5%8A%A8%E9%99%8D%E5%99%AA/"/>
     
-    <category term="无人机技术" scheme="https://yhbcode000.tech/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E6%8A%80%E6%9C%AF/"/>
+    <category term="无人机技术" scheme="https://blog.yhbcode000.tech/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="AI算法" scheme="https://yhbcode000.tech/tags/AI%E7%AE%97%E6%B3%95/"/>
+    <category term="AI算法" scheme="https://blog.yhbcode000.tech/tags/AI%E7%AE%97%E6%B3%95/"/>
     
-    <category term="球面声波" scheme="https://yhbcode000.tech/tags/%E7%90%83%E9%9D%A2%E5%A3%B0%E6%B3%A2/"/>
+    <category term="球面声波" scheme="https://blog.yhbcode000.tech/tags/%E7%90%83%E9%9D%A2%E5%A3%B0%E6%B3%A2/"/>
     
-    <category term="静音飞行" scheme="https://yhbcode000.tech/tags/%E9%9D%99%E9%9F%B3%E9%A3%9E%E8%A1%8C/"/>
+    <category term="静音飞行" scheme="https://blog.yhbcode000.tech/tags/%E9%9D%99%E9%9F%B3%E9%A3%9E%E8%A1%8C/"/>
     
-    <category term="环境声学" scheme="https://yhbcode000.tech/tags/%E7%8E%AF%E5%A2%83%E5%A3%B0%E5%AD%A6/"/>
+    <category term="环境声学" scheme="https://blog.yhbcode000.tech/tags/%E7%8E%AF%E5%A2%83%E5%A3%B0%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>无人机降噪展望（上）：从MIT螺旋桨静音到超声波隐身</title>
-    <link href="https://yhbcode000.tech/2025/02/07/2025q1/20250208-%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%99%8D%E5%99%AA%E5%B1%95%E6%9C%9B%EF%BC%88%E4%B8%8A%EF%BC%89%EF%BC%9A%E4%BB%8EMIT%E8%9E%BA%E6%97%8B%E6%A1%A8%E9%9D%99%E9%9F%B3%E5%88%B0%E8%B6%85%E5%A3%B0%E6%B3%A2%E9%9A%90%E8%BA%AB/"/>
-    <id>https://yhbcode000.tech/2025/02/07/2025q1/20250208-%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%99%8D%E5%99%AA%E5%B1%95%E6%9C%9B%EF%BC%88%E4%B8%8A%EF%BC%89%EF%BC%9A%E4%BB%8EMIT%E8%9E%BA%E6%97%8B%E6%A1%A8%E9%9D%99%E9%9F%B3%E5%88%B0%E8%B6%85%E5%A3%B0%E6%B3%A2%E9%9A%90%E8%BA%AB/</id>
+    <link href="https://blog.yhbcode000.tech/2025/02/07/2025q1/20250208-%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%99%8D%E5%99%AA%E5%B1%95%E6%9C%9B%EF%BC%88%E4%B8%8A%EF%BC%89%EF%BC%9A%E4%BB%8EMIT%E8%9E%BA%E6%97%8B%E6%A1%A8%E9%9D%99%E9%9F%B3%E5%88%B0%E8%B6%85%E5%A3%B0%E6%B3%A2%E9%9A%90%E8%BA%AB/"/>
+    <id>https://blog.yhbcode000.tech/2025/02/07/2025q1/20250208-%E6%97%A0%E4%BA%BA%E6%9C%BA%E9%99%8D%E5%99%AA%E5%B1%95%E6%9C%9B%EF%BC%88%E4%B8%8A%EF%BC%89%EF%BC%9A%E4%BB%8EMIT%E8%9E%BA%E6%97%8B%E6%A1%A8%E9%9D%99%E9%9F%B3%E5%88%B0%E8%B6%85%E5%A3%B0%E6%B3%A2%E9%9A%90%E8%BA%AB/</id>
     <published>2025-02-06T16:00:00.000Z</published>
     <updated>2026-07-25T04:53:28.928Z</updated>
     
@@ -453,29 +453,29 @@ tail -c&lt;/p&gt;
     
     
     
-    <category term="NoteBook" scheme="https://yhbcode000.tech/categories/NoteBook/"/>
+    <category term="NoteBook" scheme="https://blog.yhbcode000.tech/categories/NoteBook/"/>
     
-    <category term="TechNote" scheme="https://yhbcode000.tech/categories/NoteBook/TechNote/"/>
+    <category term="TechNote" scheme="https://blog.yhbcode000.tech/categories/NoteBook/TechNote/"/>
     
     
-    <category term="无人机" scheme="https://yhbcode000.tech/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
+    <category term="无人机" scheme="https://blog.yhbcode000.tech/tags/%E6%97%A0%E4%BA%BA%E6%9C%BA/"/>
     
-    <category term="降噪技术" scheme="https://yhbcode000.tech/tags/%E9%99%8D%E5%99%AA%E6%8A%80%E6%9C%AF/"/>
+    <category term="降噪技术" scheme="https://blog.yhbcode000.tech/tags/%E9%99%8D%E5%99%AA%E6%8A%80%E6%9C%AF/"/>
     
-    <category term="静音螺旋桨" scheme="https://yhbcode000.tech/tags/%E9%9D%99%E9%9F%B3%E8%9E%BA%E6%97%8B%E6%A1%A8/"/>
+    <category term="静音螺旋桨" scheme="https://blog.yhbcode000.tech/tags/%E9%9D%99%E9%9F%B3%E8%9E%BA%E6%97%8B%E6%A1%A8/"/>
     
-    <category term="超声波" scheme="https://yhbcode000.tech/tags/%E8%B6%85%E5%A3%B0%E6%B3%A2/"/>
+    <category term="超声波" scheme="https://blog.yhbcode000.tech/tags/%E8%B6%85%E5%A3%B0%E6%B3%A2/"/>
     
-    <category term="生态影响" scheme="https://yhbcode000.tech/tags/%E7%94%9F%E6%80%81%E5%BD%B1%E5%93%8D/"/>
+    <category term="生态影响" scheme="https://blog.yhbcode000.tech/tags/%E7%94%9F%E6%80%81%E5%BD%B1%E5%93%8D/"/>
     
-    <category term="声学工程" scheme="https://yhbcode000.tech/tags/%E5%A3%B0%E5%AD%A6%E5%B7%A5%E7%A8%8B/"/>
+    <category term="声学工程" scheme="https://blog.yhbcode000.tech/tags/%E5%A3%B0%E5%AD%A6%E5%B7%A5%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>AI从工具到陪伴：当石头也能倾听你的烦恼</title>
-    <link href="https://yhbcode000.tech/2025/01/28/2025q1/20250128-AI%E4%BB%8E%E5%B7%A5%E5%85%B7%E5%88%B0%E9%99%AA%E4%BC%B4%EF%BC%9A%E5%BD%93%E7%9F%B3%E5%A4%B4%E4%B9%9F%E8%83%BD%E5%80%BE%E5%90%AC%E4%BD%A0%E7%9A%84%E7%83%A6%E6%81%BC/"/>
-    <id>https://yhbcode000.tech/2025/01/28/2025q1/20250128-AI%E4%BB%8E%E5%B7%A5%E5%85%B7%E5%88%B0%E9%99%AA%E4%BC%B4%EF%BC%9A%E5%BD%93%E7%9F%B3%E5%A4%B4%E4%B9%9F%E8%83%BD%E5%80%BE%E5%90%AC%E4%BD%A0%E7%9A%84%E7%83%A6%E6%81%BC/</id>
+    <link href="https://blog.yhbcode000.tech/2025/01/28/2025q1/20250128-AI%E4%BB%8E%E5%B7%A5%E5%85%B7%E5%88%B0%E9%99%AA%E4%BC%B4%EF%BC%9A%E5%BD%93%E7%9F%B3%E5%A4%B4%E4%B9%9F%E8%83%BD%E5%80%BE%E5%90%AC%E4%BD%A0%E7%9A%84%E7%83%A6%E6%81%BC/"/>
+    <id>https://blog.yhbcode000.tech/2025/01/28/2025q1/20250128-AI%E4%BB%8E%E5%B7%A5%E5%85%B7%E5%88%B0%E9%99%AA%E4%BC%B4%EF%BC%9A%E5%BD%93%E7%9F%B3%E5%A4%B4%E4%B9%9F%E8%83%BD%E5%80%BE%E5%90%AC%E4%BD%A0%E7%9A%84%E7%83%A6%E6%81%BC/</id>
     <published>2025-01-27T16:00:00.000Z</published>
     <updated>2026-07-25T04:53:28.925Z</updated>
     
@@ -489,29 +489,29 @@ tail -c&lt;/p&gt;
     
     
     
-    <category term="NoteBook" scheme="https://yhbcode000.tech/categories/NoteBook/"/>
+    <category term="NoteBook" scheme="https://blog.yhbcode000.tech/categories/NoteBook/"/>
     
-    <category term="ThinkingNote" scheme="https://yhbcode000.tech/categories/NoteBook/ThinkingNote/"/>
+    <category term="ThinkingNote" scheme="https://blog.yhbcode000.tech/categories/NoteBook/ThinkingNote/"/>
     
     
-    <category term="情感AI" scheme="https://yhbcode000.tech/tags/%E6%83%85%E6%84%9FAI/"/>
+    <category term="情感AI" scheme="https://blog.yhbcode000.tech/tags/%E6%83%85%E6%84%9FAI/"/>
     
-    <category term="共情计算" scheme="https://yhbcode000.tech/tags/%E5%85%B1%E6%83%85%E8%AE%A1%E7%AE%97/"/>
+    <category term="共情计算" scheme="https://blog.yhbcode000.tech/tags/%E5%85%B1%E6%83%85%E8%AE%A1%E7%AE%97/"/>
     
-    <category term="人机关系" scheme="https://yhbcode000.tech/tags/%E4%BA%BA%E6%9C%BA%E5%85%B3%E7%B3%BB/"/>
+    <category term="人机关系" scheme="https://blog.yhbcode000.tech/tags/%E4%BA%BA%E6%9C%BA%E5%85%B3%E7%B3%BB/"/>
     
-    <category term="道德责任" scheme="https://yhbcode000.tech/tags/%E9%81%93%E5%BE%B7%E8%B4%A3%E4%BB%BB/"/>
+    <category term="道德责任" scheme="https://blog.yhbcode000.tech/tags/%E9%81%93%E5%BE%B7%E8%B4%A3%E4%BB%BB/"/>
     
-    <category term="工具与陪伴" scheme="https://yhbcode000.tech/tags/%E5%B7%A5%E5%85%B7%E4%B8%8E%E9%99%AA%E4%BC%B4/"/>
+    <category term="工具与陪伴" scheme="https://blog.yhbcode000.tech/tags/%E5%B7%A5%E5%85%B7%E4%B8%8E%E9%99%AA%E4%BC%B4/"/>
     
-    <category term="人类情感需求" scheme="https://yhbcode000.tech/tags/%E4%BA%BA%E7%B1%BB%E6%83%85%E6%84%9F%E9%9C%80%E6%B1%82/"/>
+    <category term="人类情感需求" scheme="https://blog.yhbcode000.tech/tags/%E4%BA%BA%E7%B1%BB%E6%83%85%E6%84%9F%E9%9C%80%E6%B1%82/"/>
     
   </entry>
   
   <entry>
     <title>章鱼的九个脑子、蚂蚁的社会与猩猩的合作：一场关于集群智能的跨物种对话</title>
-    <link href="https://yhbcode000.tech/2025/01/28/2025q1/20250128-%E7%AB%A0%E9%B1%BC%E7%9A%84%E4%B9%9D%E4%B8%AA%E8%84%91%E5%AD%90%E3%80%81%E8%9A%82%E8%9A%81%E7%9A%84%E7%A4%BE%E4%BC%9A%E4%B8%8E%E7%8C%A9%E7%8C%A9%E7%9A%84%E5%90%88%E4%BD%9C%EF%BC%9A%E4%B8%80%E5%9C%BA%E5%85%B3%E4%BA%8E%E9%9B%86%E7%BE%A4%E6%99%BA%E8%83%BD%E7%9A%84%E8%B7%A8%E7%89%A9%E7%A7%8D%E5%AF%B9%E8%AF%9D/"/>
-    <id>https://yhbcode000.tech/2025/01/28/2025q1/20250128-%E7%AB%A0%E9%B1%BC%E7%9A%84%E4%B9%9D%E4%B8%AA%E8%84%91%E5%AD%90%E3%80%81%E8%9A%82%E8%9A%81%E7%9A%84%E7%A4%BE%E4%BC%9A%E4%B8%8E%E7%8C%A9%E7%8C%A9%E7%9A%84%E5%90%88%E4%BD%9C%EF%BC%9A%E4%B8%80%E5%9C%BA%E5%85%B3%E4%BA%8E%E9%9B%86%E7%BE%A4%E6%99%BA%E8%83%BD%E7%9A%84%E8%B7%A8%E7%89%A9%E7%A7%8D%E5%AF%B9%E8%AF%9D/</id>
+    <link href="https://blog.yhbcode000.tech/2025/01/28/2025q1/20250128-%E7%AB%A0%E9%B1%BC%E7%9A%84%E4%B9%9D%E4%B8%AA%E8%84%91%E5%AD%90%E3%80%81%E8%9A%82%E8%9A%81%E7%9A%84%E7%A4%BE%E4%BC%9A%E4%B8%8E%E7%8C%A9%E7%8C%A9%E7%9A%84%E5%90%88%E4%BD%9C%EF%BC%9A%E4%B8%80%E5%9C%BA%E5%85%B3%E4%BA%8E%E9%9B%86%E7%BE%A4%E6%99%BA%E8%83%BD%E7%9A%84%E8%B7%A8%E7%89%A9%E7%A7%8D%E5%AF%B9%E8%AF%9D/"/>
+    <id>https://blog.yhbcode000.tech/2025/01/28/2025q1/20250128-%E7%AB%A0%E9%B1%BC%E7%9A%84%E4%B9%9D%E4%B8%AA%E8%84%91%E5%AD%90%E3%80%81%E8%9A%82%E8%9A%81%E7%9A%84%E7%A4%BE%E4%BC%9A%E4%B8%8E%E7%8C%A9%E7%8C%A9%E7%9A%84%E5%90%88%E4%BD%9C%EF%BC%9A%E4%B8%80%E5%9C%BA%E5%85%B3%E4%BA%8E%E9%9B%86%E7%BE%A4%E6%99%BA%E8%83%BD%E7%9A%84%E8%B7%A8%E7%89%A9%E7%A7%8D%E5%AF%B9%E8%AF%9D/</id>
     <published>2025-01-27T16:00:00.000Z</published>
     <updated>2026-07-25T04:53:28.927Z</updated>
     
@@ -525,29 +525,29 @@ tail -c&lt;/p&gt;
     
     
     
-    <category term="NoteBook" scheme="https://yhbcode000.tech/categories/NoteBook/"/>
+    <category term="NoteBook" scheme="https://blog.yhbcode000.tech/categories/NoteBook/"/>
     
-    <category term="ThinkingNote" scheme="https://yhbcode000.tech/categories/NoteBook/ThinkingNote/"/>
+    <category term="ThinkingNote" scheme="https://blog.yhbcode000.tech/categories/NoteBook/ThinkingNote/"/>
     
     
-    <category term="自组织系统" scheme="https://yhbcode000.tech/tags/%E8%87%AA%E7%BB%84%E7%BB%87%E7%B3%BB%E7%BB%9F/"/>
+    <category term="自组织系统" scheme="https://blog.yhbcode000.tech/tags/%E8%87%AA%E7%BB%84%E7%BB%87%E7%B3%BB%E7%BB%9F/"/>
     
-    <category term="群体智能" scheme="https://yhbcode000.tech/tags/%E7%BE%A4%E4%BD%93%E6%99%BA%E8%83%BD/"/>
+    <category term="群体智能" scheme="https://blog.yhbcode000.tech/tags/%E7%BE%A4%E4%BD%93%E6%99%BA%E8%83%BD/"/>
     
-    <category term="多智能体系统" scheme="https://yhbcode000.tech/tags/%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E7%B3%BB%E7%BB%9F/"/>
+    <category term="多智能体系统" scheme="https://blog.yhbcode000.tech/tags/%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E7%B3%BB%E7%BB%9F/"/>
     
-    <category term="仿生学" scheme="https://yhbcode000.tech/tags/%E4%BB%BF%E7%94%9F%E5%AD%A6/"/>
+    <category term="仿生学" scheme="https://blog.yhbcode000.tech/tags/%E4%BB%BF%E7%94%9F%E5%AD%A6/"/>
     
-    <category term="集群机器人" scheme="https://yhbcode000.tech/tags/%E9%9B%86%E7%BE%A4%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
+    <category term="集群机器人" scheme="https://blog.yhbcode000.tech/tags/%E9%9B%86%E7%BE%A4%E6%9C%BA%E5%99%A8%E4%BA%BA/"/>
     
-    <category term="AI协作" scheme="https://yhbcode000.tech/tags/AI%E5%8D%8F%E4%BD%9C/"/>
+    <category term="AI协作" scheme="https://blog.yhbcode000.tech/tags/AI%E5%8D%8F%E4%BD%9C/"/>
     
   </entry>
   
   <entry>
     <title>AI也会被“看花眼”吗？——从视错觉看AI视觉的新可能</title>
-    <link href="https://yhbcode000.tech/2025/01/27/2025q1/20250127-AI%E4%B9%9F%E4%BC%9A%E8%A2%AB%E2%80%9C%E7%9C%8B%E8%8A%B1%E7%9C%BC%E2%80%9D%E5%90%97%EF%BC%9F%E2%80%94%E2%80%94%E4%BB%8E%E8%A7%86%E9%94%99%E8%A7%89%E7%9C%8BAI%E8%A7%86%E8%A7%89%E7%9A%84%E6%96%B0%E5%8F%AF%E8%83%BD/"/>
-    <id>https://yhbcode000.tech/2025/01/27/2025q1/20250127-AI%E4%B9%9F%E4%BC%9A%E8%A2%AB%E2%80%9C%E7%9C%8B%E8%8A%B1%E7%9C%BC%E2%80%9D%E5%90%97%EF%BC%9F%E2%80%94%E2%80%94%E4%BB%8E%E8%A7%86%E9%94%99%E8%A7%89%E7%9C%8BAI%E8%A7%86%E8%A7%89%E7%9A%84%E6%96%B0%E5%8F%AF%E8%83%BD/</id>
+    <link href="https://blog.yhbcode000.tech/2025/01/27/2025q1/20250127-AI%E4%B9%9F%E4%BC%9A%E8%A2%AB%E2%80%9C%E7%9C%8B%E8%8A%B1%E7%9C%BC%E2%80%9D%E5%90%97%EF%BC%9F%E2%80%94%E2%80%94%E4%BB%8E%E8%A7%86%E9%94%99%E8%A7%89%E7%9C%8BAI%E8%A7%86%E8%A7%89%E7%9A%84%E6%96%B0%E5%8F%AF%E8%83%BD/"/>
+    <id>https://blog.yhbcode000.tech/2025/01/27/2025q1/20250127-AI%E4%B9%9F%E4%BC%9A%E8%A2%AB%E2%80%9C%E7%9C%8B%E8%8A%B1%E7%9C%BC%E2%80%9D%E5%90%97%EF%BC%9F%E2%80%94%E2%80%94%E4%BB%8E%E8%A7%86%E9%94%99%E8%A7%89%E7%9C%8BAI%E8%A7%86%E8%A7%89%E7%9A%84%E6%96%B0%E5%8F%AF%E8%83%BD/</id>
     <published>2025-01-26T16:00:00.000Z</published>
     <updated>2026-07-25T04:53:28.924Z</updated>
     
@@ -561,29 +561,29 @@ tail -c&lt;/p&gt;
     
     
     
-    <category term="NoteBook" scheme="https://yhbcode000.tech/categories/NoteBook/"/>
+    <category term="NoteBook" scheme="https://blog.yhbcode000.tech/categories/NoteBook/"/>
     
-    <category term="ThinkingNote" scheme="https://yhbcode000.tech/categories/NoteBook/ThinkingNote/"/>
+    <category term="ThinkingNote" scheme="https://blog.yhbcode000.tech/categories/NoteBook/ThinkingNote/"/>
     
     
-    <category term="视觉错觉" scheme="https://yhbcode000.tech/tags/%E8%A7%86%E8%A7%89%E9%94%99%E8%A7%89/"/>
+    <category term="视觉错觉" scheme="https://blog.yhbcode000.tech/tags/%E8%A7%86%E8%A7%89%E9%94%99%E8%A7%89/"/>
     
-    <category term="AI视觉" scheme="https://yhbcode000.tech/tags/AI%E8%A7%86%E8%A7%89/"/>
+    <category term="AI视觉" scheme="https://blog.yhbcode000.tech/tags/AI%E8%A7%86%E8%A7%89/"/>
     
-    <category term="感知系统" scheme="https://yhbcode000.tech/tags/%E6%84%9F%E7%9F%A5%E7%B3%BB%E7%BB%9F/"/>
+    <category term="感知系统" scheme="https://blog.yhbcode000.tech/tags/%E6%84%9F%E7%9F%A5%E7%B3%BB%E7%BB%9F/"/>
     
-    <category term="人机交互" scheme="https://yhbcode000.tech/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/"/>
+    <category term="人机交互" scheme="https://blog.yhbcode000.tech/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/"/>
     
-    <category term="幻觉现象" scheme="https://yhbcode000.tech/tags/%E5%B9%BB%E8%A7%89%E7%8E%B0%E8%B1%A1/"/>
+    <category term="幻觉现象" scheme="https://blog.yhbcode000.tech/tags/%E5%B9%BB%E8%A7%89%E7%8E%B0%E8%B1%A1/"/>
     
-    <category term="多模态AI" scheme="https://yhbcode000.tech/tags/%E5%A4%9A%E6%A8%A1%E6%80%81AI/"/>
+    <category term="多模态AI" scheme="https://blog.yhbcode000.tech/tags/%E5%A4%9A%E6%A8%A1%E6%80%81AI/"/>
     
   </entry>
   
   <entry>
     <title>人类基因选择：从自私与共生中寻找AI进化的启示</title>
-    <link href="https://yhbcode000.tech/2025/01/22/2025q1/20250122-%E4%BA%BA%E7%B1%BB%E5%9F%BA%E5%9B%A0%E9%80%89%E6%8B%A9/"/>
-    <id>https://yhbcode000.tech/2025/01/22/2025q1/20250122-%E4%BA%BA%E7%B1%BB%E5%9F%BA%E5%9B%A0%E9%80%89%E6%8B%A9/</id>
+    <link href="https://blog.yhbcode000.tech/2025/01/22/2025q1/20250122-%E4%BA%BA%E7%B1%BB%E5%9F%BA%E5%9B%A0%E9%80%89%E6%8B%A9/"/>
+    <id>https://blog.yhbcode000.tech/2025/01/22/2025q1/20250122-%E4%BA%BA%E7%B1%BB%E5%9F%BA%E5%9B%A0%E9%80%89%E6%8B%A9/</id>
     <published>2025-01-21T16:00:00.000Z</published>
     <updated>2026-07-25T04:53:28.923Z</updated>
     
@@ -598,22 +598,22 @@ tail -c&lt;/p&gt;
     
     
     
-    <category term="NoteBook" scheme="https://yhbcode000.tech/categories/NoteBook/"/>
+    <category term="NoteBook" scheme="https://blog.yhbcode000.tech/categories/NoteBook/"/>
     
-    <category term="ThinkingNote" scheme="https://yhbcode000.tech/categories/NoteBook/ThinkingNote/"/>
+    <category term="ThinkingNote" scheme="https://blog.yhbcode000.tech/categories/NoteBook/ThinkingNote/"/>
     
     
-    <category term="基因共生" scheme="https://yhbcode000.tech/tags/%E5%9F%BA%E5%9B%A0%E5%85%B1%E7%94%9F/"/>
+    <category term="基因共生" scheme="https://blog.yhbcode000.tech/tags/%E5%9F%BA%E5%9B%A0%E5%85%B1%E7%94%9F/"/>
     
-    <category term="横向基因转移" scheme="https://yhbcode000.tech/tags/%E6%A8%AA%E5%90%91%E5%9F%BA%E5%9B%A0%E8%BD%AC%E7%A7%BB/"/>
+    <category term="横向基因转移" scheme="https://blog.yhbcode000.tech/tags/%E6%A8%AA%E5%90%91%E5%9F%BA%E5%9B%A0%E8%BD%AC%E7%A7%BB/"/>
     
-    <category term="遗传算法" scheme="https://yhbcode000.tech/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/"/>
+    <category term="遗传算法" scheme="https://blog.yhbcode000.tech/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/"/>
     
-    <category term="AI演化" scheme="https://yhbcode000.tech/tags/AI%E6%BC%94%E5%8C%96/"/>
+    <category term="AI演化" scheme="https://blog.yhbcode000.tech/tags/AI%E6%BC%94%E5%8C%96/"/>
     
-    <category term="自我认知" scheme="https://yhbcode000.tech/tags/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5/"/>
+    <category term="自我认知" scheme="https://blog.yhbcode000.tech/tags/%E8%87%AA%E6%88%91%E8%AE%A4%E7%9F%A5/"/>
     
-    <category term="集群智能" scheme="https://yhbcode000.tech/tags/%E9%9B%86%E7%BE%A4%E6%99%BA%E8%83%BD/"/>
+    <category term="集群智能" scheme="https://blog.yhbcode000.tech/tags/%E9%9B%86%E7%BE%A4%E6%99%BA%E8%83%BD/"/>
     
   </entry>
   
